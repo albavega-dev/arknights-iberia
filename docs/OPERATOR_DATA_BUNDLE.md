@@ -22,6 +22,34 @@ No descarga snapshots y verifica sus revisiones y SHA-256 esperados antes de gen
 
 ## Procedencia
 
-El bundle conserva las revisiones, rutas y hashes de los snapshots EN/CN utilizados. Las biografías regionales pueden faltar cuando no existen en la fuente; el generador no inventa contenido ni realiza traducciones automáticas.
+El bundle conserva las revisiones, rutas y hashes de los snapshots EN/CN utilizados. Para los operadores presentes únicamente en el snapshot CN, `name` usa el `nameEnglish` del manifiesto regional cuando existe, mientras `cnName` conserva literalmente el nombre chino del snapshot. Estos nombres están marcados como `community-listed`: no son traducciones oficiales y no se generan automáticamente. Las biografías regionales pueden faltar cuando no existen en la fuente; el generador no inventa contenido ni realiza traducciones automáticas.
 
 La validación y generación son operaciones offline. La importación a PostgreSQL es un proceso administrativo separado y no forma parte del build ni del arranque de la aplicación.
+## Sincronización de fechas CN
+
+El diagnóstico conectado, siempre de solo lectura, se ejecuta con:
+
+```text
+corepack pnpm run data:cn-sync -- --connected-dry-run
+```
+
+La futura escritura local exigirá además `--apply --confirm-local-cn-sync` y las
+variables `CN_SYNC_DB_*`. Antes de escribir se comprueba el conjunto exacto de
+432 operadores, se rechazan IDs ausentes, inesperados o duplicados y se bloquean
+fechas existentes diferentes. Las fechas desconocidas no borran valores
+existentes.
+
+El repositorio incluye `data:cn-sync` para preparar una sincronización limitada de
+`cn_release_date`. El comando es dry-run por defecto y solo considera fechas con
+procedencia conocida; las entradas sin fecha, como Clementia mientras no exista
+evidencia individual suficiente, permanecen desconocidas.
+
+La escritura futura requiere las variables locales `CN_SYNC_DB_HOST`,
+`CN_SYNC_DB_PORT`, `CN_SYNC_DB_NAME`, `CN_SYNC_DB_USER` y
+`CN_SYNC_DB_PASSWORD`, además de `--apply --confirm-local-cn-sync`. Solo se
+aceptan destinos localhost, `127.0.0.1` o `::1`. El sincronizador no ejecuta
+migraciones, no modifica `global_release_date`, nombres, facciones, relaciones ni
+biografías, y usa una transacción con verificación posterior.
+
+La herramienta no debe ejecutarse con el rol runtime ni contra Neon. La
+integración remota requiere autorización y una revisión de privilegios separadas.

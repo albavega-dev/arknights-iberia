@@ -29,7 +29,8 @@ export type NormalizedOperator = OperatorRecord & { sourceId: string };
 
 function mainPower(value: SourceCharacter): { nationId: string | null; groupId: string | null; teamId: string | null } {
   const power = value.mainPower;
-  if (!power || typeof power !== "object" || Array.isArray(power)) return { nationId: null, groupId: null, teamId: null };
+  if (!power || typeof power !== "object" || Array.isArray(power))
+    return { nationId: null, groupId: null, teamId: null };
   const record = power as Record<string, unknown>;
   return {
     nationId: typeof record.nationId === "string" ? record.nationId : null,
@@ -70,11 +71,13 @@ export function normalizeOperator(sourceId: string, value: SourceCharacter): Nor
 }
 
 export function normalizeCharacterTable(source: unknown): { operators: NormalizedOperator[]; skipped: number } {
-  if (!source || typeof source !== "object" || Array.isArray(source)) throw new Error("Source character table must be a JSON object");
+  if (!source || typeof source !== "object" || Array.isArray(source))
+    throw new Error("Source character table must be a JSON object");
   const operators: NormalizedOperator[] = [];
   let skipped = 0;
   for (const [sourceId, value] of Object.entries(source)) {
-    if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error(`Invalid source record: ${sourceId}`);
+    if (!value || typeof value !== "object" || Array.isArray(value))
+      throw new Error(`Invalid source record: ${sourceId}`);
     const normalized = normalizeOperator(sourceId, value as SourceCharacter);
     if (normalized) operators.push(normalized);
     else skipped += 1;

@@ -7,6 +7,27 @@ const source = { repository: "example/repo", revision: "a".repeat(40), path: "ch
 const make = (overrides: Partial<OperatorBundle> = {}): OperatorBundle => { const base = { contractVersion: "1" as const, sources: { en: source, cn: source }, biographySources: { en: source, cn: source }, operators: [op()], biographies: [], coverage: { operators: 1, biographies: { en: 0, cn: 0, total: 0 } } }; const body = { ...base, ...overrides }; return { ...body, integrity: { algorithm: "sha256" as const, sha256: bundleSha256(body) } }; };
 
 test("accepts a valid bundle with optional biographies absent", () => assert.equal(validateOperatorBundle(make()).ok, true));
+test("accepts CN release metadata without changing the v1 contract", () => {
+  const dated = { ...op(), cnReleaseDate: "2026-01-01", cnReleaseDateStatus: "verified" as const, cnReleaseDateSource: "https://example.test/releases" };
+  const base = Object.fromEntries(Object.entries(make()).filter(([key]) => key !== "integrity")) as Omit<OperatorBundle, "integrity">;
+  const body = { ...base, operators: [dated] };
+  assert.equal(validateOperatorBundle({ ...body, integrity: { algorithm: "sha256", sha256: bundleSha256(body) } }).ok, true);
+});
+test("accepts deterministic additional faction relationships in v1", () => {
+  const body = Object.fromEntries(Object.entries(make()).filter(([key]) => key !== "integrity")) as Omit<OperatorBundle, "integrity">;
+  const withRelation = { ...body, operators: [{ ...op(), additionalFactionIds: ["faction:a", "faction:b"] }] };
+  assert.equal(validateOperatorBundle({ ...withRelation, integrity: { algorithm: "sha256", sha256: bundleSha256(withRelation) } }).ok, true);
+});
+test("rejects unsorted additional faction relationships", () => {
+  const body = Object.fromEntries(Object.entries(make()).filter(([key]) => key !== "integrity")) as Omit<OperatorBundle, "integrity">;
+  const withRelation = { ...body, operators: [{ ...op(), additionalFactionIds: ["faction:b", "faction:a"] }] };
+  assert.equal(validateOperatorBundle({ ...withRelation, integrity: { algorithm: "sha256", sha256: bundleSha256(withRelation) } }).ok, false);
+});
+test("rejects a CN date without provenance metadata", () => {
+  const base = Object.fromEntries(Object.entries(make()).filter(([key]) => key !== "integrity")) as Omit<OperatorBundle, "integrity">;
+  const body = { ...base, operators: [{ ...op(), cnReleaseDate: "2026-01-01" }] };
+  assert.equal(validateOperatorBundle({ ...body, integrity: { algorithm: "sha256", sha256: bundleSha256(body) } }).ok, false);
+});
 for (const [name, mutate] of [
   ["unknown version", (b: OperatorBundle) => ({ ...b, contractVersion: "9" })],
   ["duplicate ID", (b: OperatorBundle) => ({ ...b, operators: [op(), op()] })],

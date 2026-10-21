@@ -7,6 +7,7 @@ import { filterOperators, getOperatorDisplayName, sortOperators } from "../src/g
 import { getOperatorPortraitAsset, getOperatorSubclassIconUrl } from "../src/game-data/operator-assets";
 import { mergeCnReleaseDate } from "../src/game-data/release-date";
 import { buildNameDryRun } from "../scripts/dry-run-operator-names";
+import { applyRegionalDisplayNames } from "../src/game-data/operator-regional-names";
 import { buildNameProposals, validateKnownLegacyCnNames, validateNameBackfill } from "../scripts/backfill-operator-names";
 
 const record = (overrides: Record<string, unknown> = {}) => ({
@@ -158,6 +159,48 @@ test("sorts by date with unknown values last in either direction", () => {
   assert.deepEqual(sortOperators(records, "cnReleaseDate", "asc").map((item) => item.id), ["char_early", "char_late", "char_unknown"]);
 });
 
+test("uses the documented community-listed English names for all CN-only operators", async () => {
+  const manifest = JSON.parse(await (await import("node:fs/promises")).readFile("data/operator-regional-manifest.json", "utf8")) as { operators: { id: string; nameEnglish: string }[] };
+  const records = manifest.operators.map((entry) => ({
+    ...normalizeOperator(entry.id, record({ name: `中文 ${entry.id}` }))!,
+    name: `中文 ${entry.id}`,
+    cnName: `中文 ${entry.id}`,
+    cnOnly: true,
+    availabilityStatus: "cn-snapshot-candidate" as const,
+  }));
+  const named = applyRegionalDisplayNames(records, manifest.operators);
+  assert.equal(named.length, 17);
+  assert.deepEqual(named.map((operator) => operator.name), manifest.operators.map((entry) => entry.nameEnglish));
+  assert.equal(named.find((operator) => operator.id === "char_4231_clemnt")?.name, "Clementia");
+  assert.equal(named.find((operator) => operator.id === "char_4231_clemnt")?.cnName, "中文 char_4231_clemnt");
+});
+
+test("places unknown CN dates first only for the default catalog order", () => {
+  const records = [
+    { ...normalizeOperator("char_dated", record({ name: "Dated" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: "2026-01-01", globalReleaseDate: null },
+    { ...normalizeOperator("char_clementia", record({ name: "Clementia" }))!, cnOnly: true, availabilityStatus: "cn-snapshot-candidate" as const, cnReleaseDate: null, globalReleaseDate: null },
+  ];
+  assert.deepEqual(sortOperators(records, "cnReleaseDate", "desc", false, true).map((item) => item.id), ["char_clementia", "char_dated"]);
+  assert.deepEqual(sortOperators(records, "cnReleaseDate", "desc").map((item) => item.id), ["char_dated", "char_clementia"]);
+});
+
+test("keeps descending CN dates after placing unknown values first", () => {
+  const records = [
+    { ...normalizeOperator("char_unknown_first", record({ name: "Zulu", rarity: "TIER_5" }))!, cnOnly: true, availabilityStatus: "cn-snapshot-candidate" as const, cnReleaseDate: null, globalReleaseDate: null },
+    { ...normalizeOperator("char_new", record({ name: "Newest", rarity: "TIER_4" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: "2026-09-01", globalReleaseDate: null },
+    { ...normalizeOperator("char_same_b", record({ name: "Beta", rarity: "TIER_6" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: "2026-01-01", globalReleaseDate: null },
+    { ...normalizeOperator("char_same_a", record({ name: "Alpha", rarity: "TIER_6" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: "2026-01-01", globalReleaseDate: null },
+    { ...normalizeOperator("char_old", record({ name: "Old", rarity: "TIER_6" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: "2025-01-01", globalReleaseDate: null },
+  ];
+  assert.deepEqual(sortOperators(records, "cnReleaseDate", "desc", false, true).map((item) => item.id), [
+    "char_unknown_first",
+    "char_new",
+    "char_same_a",
+    "char_same_b",
+    "char_old",
+  ]);
+});
+
 test("keeps rarity descending for equal release dates in both directions", () => {
   const records = [
     { ...normalizeOperator("char_low", record({ name: "Alpha", rarity: "TIER_4" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: "2024-01-01", globalReleaseDate: null },
@@ -166,6 +209,15 @@ test("keeps rarity descending for equal release dates in both directions", () =>
   ];
   assert.deepEqual(sortOperators(records, "cnReleaseDate", "desc").map((item) => item.id), ["char_same", "char_high", "char_low"]);
   assert.deepEqual(sortOperators(records, "cnReleaseDate", "asc").map((item) => item.id), ["char_same", "char_high", "char_low"]);
+});
+
+test("uses name and id as stable tie-breakers for CN release sorting", () => {
+  const records = [
+    { ...normalizeOperator("char_zeta", record({ name: "Same", rarity: "TIER_5" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: "2024-01-01", globalReleaseDate: null },
+    { ...normalizeOperator("char_alpha", record({ name: "Same", rarity: "TIER_5" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: "2024-01-01", globalReleaseDate: null },
+    { ...normalizeOperator("char_rare", record({ name: "Earlier name", rarity: "TIER_6" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: "2024-01-01", globalReleaseDate: null },
+  ];
+  assert.deepEqual(sortOperators(records, "cnReleaseDate", "desc").map((item) => item.id), ["char_rare", "char_alpha", "char_zeta"]);
 });
 
 test("preserves a verified date when ordinary input is null or missing", () => {

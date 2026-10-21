@@ -83,6 +83,10 @@ jobs:
         shell: bash
         run: corepack pnpm install --frozen-lockfile
 
+      - name: Dependency audit
+        shell: bash
+        run: corepack pnpm audit --audit-level high
+
       - name: TypeScript
         shell: bash
         run: corepack pnpm exec tsc --noEmit

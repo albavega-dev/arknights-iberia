@@ -1,4 +1,12 @@
-export type OperatorClass = "Guard" | "Vanguard" | "Defender" | "Sniper" | "Caster" | "Medic" | "Supporter" | "Specialist";
+export type OperatorClass =
+  | "Guard"
+  | "Vanguard"
+  | "Defender"
+  | "Sniper"
+  | "Caster"
+  | "Medic"
+  | "Supporter"
+  | "Specialist";
 
 export type OperatorRecord = Readonly<{
   id: string;
@@ -12,6 +20,8 @@ export type OperatorRecord = Readonly<{
   cnOnly: boolean;
   availabilityStatus: "global-snapshot" | "cn-snapshot-candidate";
   cnReleaseDate: string | null;
+  cnReleaseDateStatus?: "verified" | "community-listed" | null;
+  cnReleaseDateSource?: string | null;
   globalReleaseDate: string | null;
   mainPowerNationId: string | null;
   mainPowerGroupId: string | null;
@@ -44,19 +54,30 @@ function compareNullableDate(a: string | null, b: string | null, direction: Oper
   return direction === "asc" ? a.localeCompare(b) : b.localeCompare(a);
 }
 
-export function sortOperators(records: readonly OperatorRecord[], key: OperatorSortKey, direction: OperatorSortDirection, prioritizeCnOnly = false): OperatorRecord[] {
+export function sortOperators(
+  records: readonly OperatorRecord[],
+  key: OperatorSortKey,
+  direction: OperatorSortDirection,
+  prioritizeCnOnly = false,
+  prioritizeUnknownDates = false,
+): OperatorRecord[] {
   return [...records].sort((a, b) => {
     if (key === "cnReleaseDate") {
       if (prioritizeCnOnly && a.cnOnly !== b.cnOnly) return a.cnOnly ? -1 : 1;
-      const dateDifference = compareNullableDate(a.cnReleaseDate, b.cnReleaseDate, direction);
+      const dateDifference = prioritizeUnknownDates
+        ? a.cnReleaseDate === null && b.cnReleaseDate !== null
+          ? -1
+          : a.cnReleaseDate !== null && b.cnReleaseDate === null
+            ? 1
+            : compareNullableDate(a.cnReleaseDate, b.cnReleaseDate, direction)
+        : compareNullableDate(a.cnReleaseDate, b.cnReleaseDate, direction);
       if (dateDifference !== 0) return dateDifference;
       const rarityDifference = b.rarity - a.rarity;
       if (rarityDifference !== 0) return rarityDifference;
       return getOperatorDisplayName(a).localeCompare(getOperatorDisplayName(b), "en") || a.id.localeCompare(b.id, "en");
     }
-    const primary = key === "name"
-      ? getOperatorDisplayName(a).localeCompare(getOperatorDisplayName(b), "en")
-      : a.rarity - b.rarity;
+    const primary =
+      key === "name" ? getOperatorDisplayName(a).localeCompare(getOperatorDisplayName(b), "en") : a.rarity - b.rarity;
     const directed = direction === "asc" ? primary : -primary;
     if (directed !== 0) return directed;
     if (key === "rarity") {
@@ -71,12 +92,18 @@ export function sortOperators(records: readonly OperatorRecord[], key: OperatorS
 
 export function filterOperators(records: readonly OperatorRecord[], filters: OperatorFilters): OperatorRecord[] {
   const query = filters.query.trim().toLocaleLowerCase("en");
-  return records.filter((operator) =>
-    [operator.name, operator.cnName, operator.globalName].filter((name): name is string => Boolean(name)).some((name) => name.toLocaleLowerCase("en").includes(query)) &&
-    (!filters.className || operator.class === filters.className) &&
-    (!filters.subClassIds.length || (operator.subClassId !== null && filters.subClassIds.includes(operator.subClassId))) &&
-    (!filters.rarities.length || filters.rarities.includes(operator.rarity)) &&
-    (filters.includeCnOnly || !operator.cnOnly) &&
-    (filters.mainFactionId === "all" || operator.mainFactionId === filters.mainFactionId || operator.additionalFactionIds?.includes(filters.mainFactionId) === true)
+  return records.filter(
+    (operator) =>
+      [operator.name, operator.cnName, operator.globalName]
+        .filter((name): name is string => Boolean(name))
+        .some((name) => name.toLocaleLowerCase("en").includes(query)) &&
+      (!filters.className || operator.class === filters.className) &&
+      (!filters.subClassIds.length ||
+        (operator.subClassId !== null && filters.subClassIds.includes(operator.subClassId))) &&
+      (!filters.rarities.length || filters.rarities.includes(operator.rarity)) &&
+      (filters.includeCnOnly || !operator.cnOnly) &&
+      (filters.mainFactionId === "all" ||
+        operator.mainFactionId === filters.mainFactionId ||
+        operator.additionalFactionIds?.includes(filters.mainFactionId) === true),
   );
 }
