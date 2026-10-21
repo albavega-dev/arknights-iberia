@@ -13,7 +13,7 @@ corepack pnpm install --frozen-lockfile
 Copy-Item .env.example .env
 ```
 
-Completa las variables de `.env` con valores locales. No guardes credenciales en Git.
+Completar las variables de `.env` con valores locales. No guardar credenciales en Git.
 
 ## PostgreSQL
 
@@ -30,7 +30,7 @@ corepack pnpm exec drizzle-kit migrate
 corepack pnpm dev
 ```
 
-Las migraciones no se ejecutan durante `build` ni durante el arranque de Next.js. No uses credenciales remotas en desarrollo local.
+Las migraciones no se ejecutan durante `build` ni durante el arranque de Next.js. No utilizar credenciales remotas en desarrollo local.
 
 ## Comprobaciones
 

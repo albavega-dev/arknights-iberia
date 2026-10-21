@@ -19,7 +19,7 @@ Copy-Item .env.example .env
 corepack pnpm dev
 ```
 
-Configura `.env` únicamente con valores locales. No publiques credenciales ni archivos `.env`. La aplicación queda disponible en `http://localhost:3000`.
+Configurar `.env` únicamente con valores locales. No publicar credenciales ni archivos `.env`. La aplicación queda disponible en `http://localhost:3000`.
 
 Una base PostgreSQL vacía necesita las migraciones y un conjunto de datos compatible antes de mostrar el catálogo. No se incluyen snapshots ni bundles reales en este repositorio.
 
