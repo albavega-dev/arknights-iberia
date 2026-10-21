@@ -85,13 +85,6 @@ jobs:
         shell: bash
         run: corepack pnpm install --frozen-lockfile
 
-      - name: Cache SonarQube packages
-        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
-        with:
-          path: ~/.sonar/cache
-          key: ${{ runner.os }}-sonar
-          restore-keys: ${{ runner.os }}-sonar
-
       - name: Dependency audit
         shell: bash
         run: corepack pnpm audit --audit-level high
@@ -110,11 +103,61 @@ jobs:
 
       - name: Unit tests
         shell: bash
-        run: corepack pnpm test:unit
+        run: corepack pnpm test:unit:coverage
+
+      - name: Verify LCOV report
+        shell: bash
+        run: test -s coverage/lcov.info
+
+      - name: Upload LCOV coverage
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: coverage-lcov
+          path: coverage/lcov.info
+          if-no-files-found: error
 
       - name: Production build
         shell: bash
         run: corepack pnpm build
+
+      - name: Encoding
+        shell: bash
+        run: corepack pnpm check:encoding:all
+
+      - name: Git whitespace check
+        shell: bash
+        run: git diff --check
+
+  sonar:
+    name: SonarQube Analysis
+    needs: quality
+    runs-on: ubuntu-24.04
+    env:
+      CI: true
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Download LCOV coverage
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: coverage-lcov
+          path: coverage
+
+      - name: Verify LCOV report
+        shell: bash
+        run: test -s coverage/lcov.info
+
+      - name: Cache SonarQube packages
+        uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4.3.0
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@d209202bc7d53ff1cc128f7f907dac145c9d6ae9 # v6.0.0
@@ -125,13 +168,6 @@ jobs:
           args: >-
             -Dsonar.organization=alba-vega
             -Dsonar.projectKey=alba-vega_arknights-iberia
+            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
             -Dsonar.qualitygate.wait=true
             -Dsonar.qualitygate.timeout=300
-
-      - name: Encoding
-        shell: bash
-        run: corepack pnpm check:encoding:all
-
-      - name: Git whitespace check
-        shell: bash
-        run: git diff --check
