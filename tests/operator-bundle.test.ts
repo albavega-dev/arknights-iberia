@@ -42,6 +42,42 @@ for (const [name, mutate] of [
 ] as const) test(name, () => assert.equal(validateOperatorBundle(mutate(make()) as unknown).ok, false));
 test("rejects an orphan biography", () => assert.equal(validateOperatorBundle({ ...make(), biographies: [{ operatorId: "char_missing" }] }).ok, false));
 test("rejects non-deterministic operator order", () => assert.equal(validateOperatorBundle({ ...make(), operators: [op("char_z"), op("char_a")] }).ok, false));
+test("rejects malformed bundle roots and required collections", () => {
+  for (const value of [null, [], "bundle", 42]) assert.equal(validateOperatorBundle(value).ok, false);
+  assert.equal(validateOperatorBundle({}).ok, false);
+  assert.equal(validateOperatorBundle({ ...make(), sources: [] }).ok, false);
+  assert.equal(validateOperatorBundle({ ...make(), biographySources: [] }).ok, false);
+  assert.equal(validateOperatorBundle({ ...make(), operators: "bad" }).ok, false);
+  assert.equal(validateOperatorBundle({ ...make(), biographies: {} }).ok, false);
+});
+
+test("rejects invalid source, operator, date and coverage fields", () => {
+  const base = Object.fromEntries(Object.entries(make()).filter(([key]) => key !== "integrity")) as Omit<OperatorBundle, "integrity">;
+  const cases = [
+    { sources: { en: { ...source, revision: "" }, cn: source } },
+    { sources: { en: { ...source, sha256: "not-a-hash" }, cn: source } },
+    { operators: [{ ...op(), id: "operator" }] },
+    { operators: [{ ...op(), class: "Unknown" }] },
+    { operators: [{ ...op(), rarity: 7 }] },
+    { operators: [{ ...op(), cnReleaseDate: "yesterday" }] },
+    { operators: [{ ...op(), cnReleaseDate: "2026-01-01", cnReleaseDateStatus: "verified" }] },
+    { coverage: { operators: 99, biographies: { en: 0, cn: 0, total: 0 } } },
+  ];
+  for (const change of cases) {
+    const body = { ...base, ...change };
+    assert.equal(validateOperatorBundle({ ...body, integrity: { algorithm: "sha256", sha256: bundleSha256(body as Omit<OperatorBundle, "integrity">) } }).ok, false);
+  }
+});
+
+test("rejects biography revision, source, duplicate and ordering mismatches", () => {
+  const base = Object.fromEntries(Object.entries(make()).filter(([key]) => key !== "integrity")) as Omit<OperatorBundle, "integrity">;
+  const bio = { operatorId: "char_test", region: "en" as const, source: { ...source }, storyTitle: "Story", originalText: "text", fields: [], unrecognizedLines: [] };
+  const wrongRevision = { ...base, biographies: [{ ...bio, source: { ...source, revision: "wrong" } }] };
+  const wrongSource = { ...base, biographies: [{ ...bio, source: { ...source, sha256: "c".repeat(64) } }] };
+  const duplicate = { ...base, biographies: [bio, bio] };
+  const unsorted = { ...base, operators: [op("char_z"), op("char_a")] };
+  for (const body of [wrongRevision, wrongSource, duplicate, unsorted]) assert.equal(validateOperatorBundle({ ...body, integrity: { algorithm: "sha256", sha256: bundleSha256(body as Omit<OperatorBundle, "integrity">) } }).ok, false);
+});
 test("generator argument parsing rejects missing values and normalizes source hashes", async () => {
   assert.equal(arg("--out", ["node", "script", "--out", "bundle.json"]), "bundle.json");
   assert.throws(() => arg("--out", ["node", "script"]), /Missing --out/);

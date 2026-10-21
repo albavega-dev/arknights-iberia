@@ -159,6 +159,15 @@ test("sorts by date with unknown values last in either direction", () => {
   assert.deepEqual(sortOperators(records, "cnReleaseDate", "asc").map((item) => item.id), ["char_early", "char_late", "char_unknown"]);
 });
 
+test("requires community-listed names only for CN-only operators", () => {
+  const global = normalizeOperator("char_global_name", record({ name: "Global" }))!;
+  const cnOnly = { ...normalizeOperator("char_cn_name", record({ name: "中文" }))!, cnOnly: true, availabilityStatus: "cn-snapshot-candidate" as const };
+  assert.deepEqual(applyRegionalDisplayNames([global], []), [global]);
+  assert.throws(() => applyRegionalDisplayNames([cnOnly], []), /Missing community-listed English name/);
+  assert.deepEqual(applyRegionalDisplayNames([cnOnly], [{ id: cnOnly.id, nameEnglish: "Romanized" }])[0].name, "Romanized");
+  assert.throws(() => applyRegionalDisplayNames([cnOnly], [{ id: cnOnly.id, nameEnglish: null }]), /Missing community-listed English name/);
+});
+
 test("rejects every invalid playable-source boundary without producing an operator", () => {
   const invalid = [
     ["token_id", record()],

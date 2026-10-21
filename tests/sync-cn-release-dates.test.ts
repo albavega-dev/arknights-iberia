@@ -47,6 +47,21 @@ test("CN sync accepts only explicit local connection configuration", () => {
   assert.throws(() => localConfig({ CN_SYNC_DB_HOST: "localhost", CN_SYNC_DB_PORT: "not-a-port", CN_SYNC_DB_NAME: "local", CN_SYNC_DB_USER: "writer", CN_SYNC_DB_PASSWORD: "secret" }), /explicit local/);
 });
 
+test("CN synchronization rejects unknown flags, invalid dates and duplicate sources", () => {
+  assert.throws(() => parseArguments(["node", "script", "--unknown"]), /Unknown CN synchronization argument/);
+  assert.throws(() => buildProposal({ operators: [{ id: "char_a", cnReleaseDate: "not-a-date" }] }, {}), /Invalid CN release date/);
+  assert.throws(() => buildProposal({ operators: [{ id: "char_a", cnReleaseDate: "2026-01-01" }] }, { operators: [{ id: "char_a", cnReleaseDate: null }] }), /Duplicate CN manifest/);
+  assert.throws(() => buildPlan({ operators: [{ id: "char_a", cnReleaseDate: null }] }, {}), /Clementia/);
+});
+
+test("CN synchronization plans only known absent dates", () => {
+  const proposal = buildProposal({ operators: [{ id: "char_a", cnReleaseDate: "2026-01-01" }] }, {});
+  assert.deepEqual(planChanges([
+    { id: "char_a", current: "2026-01-01", proposed: null },
+    { id: "char_unknown", current: null, proposed: null },
+  ], proposal), []);
+});
+
 test("offline main reports the fixed manifests without connecting", async () => {
   const originalArgv = process.argv;
   const originalLog = console.log;
