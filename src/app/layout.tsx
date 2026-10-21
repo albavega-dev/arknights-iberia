@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Arknights Iberia — Archivo de navegación",
-  description: "Plataforma comunitaria no oficial en español para el Arknights original. Pública y de acceso libre.",
+  description: "Web de recursos de Arknights en español.",
   icons: {
     icon: "/assets/anchor.svg",
   },
