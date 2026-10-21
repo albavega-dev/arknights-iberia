@@ -125,6 +125,8 @@ jobs:
           args: >-
             -Dsonar.organization=alba-vega
             -Dsonar.projectKey=alba-vega_arknights-iberia
+            -Dsonar.qualitygate.wait=true
+            -Dsonar.qualitygate.timeout=300
 
       - name: Encoding
         shell: bash
