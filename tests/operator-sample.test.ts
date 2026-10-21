@@ -159,6 +159,37 @@ test("sorts by date with unknown values last in either direction", () => {
   assert.deepEqual(sortOperators(records, "cnReleaseDate", "asc").map((item) => item.id), ["char_early", "char_late", "char_unknown"]);
 });
 
+test("rejects every invalid playable-source boundary without producing an operator", () => {
+  const invalid = [
+    ["token_id", record()],
+    ["char_unavailable", record({ isNotObtainable: true })],
+    ["char_blank", record({ name: "   " })],
+    ["char_unknown_profession", record({ profession: "UNKNOWN" })],
+    ["char_no_phases", record({ phases: [] })],
+    ["char_bad_rarity", record({ rarity: "TIER_7" })],
+  ];
+  for (const [id, value] of invalid) assert.equal(normalizeOperator(String(id), value as never), null);
+});
+
+test("normalizes optional mainPower and subPower fields conservatively", () => {
+  assert.deepEqual(normalizeOperator("char_no_power", record({ mainPower: null, subPower: [] }))?.mainPowerNationId, null);
+  const normalized = normalizeOperator("char_power", record({ mainPower: { nationId: "kazimierz", groupId: 42, teamId: "pinus" }, subPower: ["a"] }));
+  assert.equal(normalized?.mainPowerNationId, "kazimierz");
+  assert.equal(normalized?.mainPowerGroupId, null);
+  assert.equal(normalized?.mainPowerTeamId, "pinus");
+  assert.equal(normalized?.hasSubPower, true);
+  assert.equal(normalizeOperator("char_array_power", record({ mainPower: [] }))?.mainPowerNationId, null);
+});
+
+test("rejects malformed character tables and slug collisions", () => {
+  assert.throws(() => normalizeCharacterTable(null), /JSON object/);
+  assert.throws(() => normalizeCharacterTable({ char_bad: [] }), /Invalid source record/);
+  assert.throws(
+    () => normalizeCharacterTable({ "char_a-b": record({ name: "First" }), "char_a_b": record({ name: "Second" }) }),
+    /colliding operator slugs/,
+  );
+});
+
 test("uses the documented community-listed English names for all CN-only operators", async () => {
   const manifest = JSON.parse(await (await import("node:fs/promises")).readFile("data/operator-regional-manifest.json", "utf8")) as { operators: { id: string; nameEnglish: string }[] };
   const records = manifest.operators.map((entry) => ({
