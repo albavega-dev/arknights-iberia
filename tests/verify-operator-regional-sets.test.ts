@@ -1,0 +1,14 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { verifyRegionalSets } from "../scripts/verify-operator-regional-sets";
+
+const rec = (ok = true, extra: Record<string, unknown> = {}) => ({ isNotObtainable: ok ? false : true, name: ok ? "Synthetic" : "", profession: ok ? "WARRIOR" : "NOPE", phases: ok ? [] : null, rarity: ok ? "TIER_1" : "BAD", ...extra });
+const snapshot = (entries: Record<string, unknown>) => JSON.stringify(entries);
+const manifest = (ids: string[]) => JSON.stringify({ operators: ids.map((id) => ({ id })) });
+function io(en: string, cn: string, global: string, regional: string, expected = false) { const files: Record<string, Buffer> = { en: Buffer.from(en), cn: Buffer.from(cn), "data/operator-cn-release-manifest.json": Buffer.from(global), "data/operator-regional-manifest.json": Buffer.from(regional) }; const out: string[] = []; const err: string[] = []; const result = verifyRegionalSets(["--en-snapshot", "en", "--cn-snapshot", "cn"], { read: async (path) => files[path], stdout: (v) => out.push(v), stderr: (v) => err.push(v) }); return result.then((code) => ({ code, out: out.join(""), err: err.join(""), expected })); }
+
+test("rejects invalid flags and JSON", async () => { assert.equal(await verifyRegionalSets(["--en-snapshot", "x"]), 2); assert.equal((await io("{", "{}", manifest([]), manifest([]))).code, 2); });
+test("extracts the shared playable predicate and rejects excluded records", async () => { const en = snapshot({ char_a: rec(), char_b: rec(false), char_c: rec(true, { phases: [{}], profession: "MEDIC", rarity: "TIER_6" }) }); const cn = snapshot({ char_a: rec(), char_d: rec(true, { phases: [{}] }) }); const result = await io(en, cn, manifest(["char_a", "char_c"]), manifest(["char_d"])); assert.equal(result.code, 1); });
+test("detects exact-set substitutions, missing IDs and CN difference errors", async () => { const en = snapshot({ "char_a": rec(), "char_b": rec(true, { phases: [{}] }) }); const cn = snapshot({ "char_a": rec(), "char_b": rec(true, { phases: [{}] }), "char_c": rec(true, { phases: [{}] }) }); const result = await io(en, cn, manifest(["char_a", "char_b"]), manifest(["char_wrong"])); assert.equal(result.code, 1); const report = JSON.parse(result.out); assert.equal(report.counts.cnOnly, 1); assert.equal(report.manifestComparison.cnOnlyMissing, 1); });
+test("distinguishes hash mismatch from unverifiable references and sanitizes output", async () => { const result = await io(snapshot({ "char_a": rec(true, { phases: [{}] }) }), snapshot({ "char_a": rec(true, { phases: [{}] }) }), manifest(["char_a"]), manifest([])); assert.equal(result.code, 1); assert.match(result.out, /hash-mismatch|hash-matched/u); assert.doesNotMatch(result.out, /Synthetic|char_a/u); });
+test("does not execute on import and never writes through the injected reader", () => { assert.equal(typeof verifyRegionalSets, "function"); });

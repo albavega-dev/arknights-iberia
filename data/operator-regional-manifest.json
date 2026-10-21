@@ -1,0 +1,62 @@
+{
+  "manifestVersion": "2026-10-16.1",
+  "status": "research-only",
+  "purpose": "Reviewed regional metadata for a future operator import. Not consumed by the application yet.",
+  "comparison": {
+    "sourceRepository": "https://github.com/ArknightsAssets/ArknightsGamedata",
+    "en": {
+      "path": "en/gamedata/excel/character_table.json",
+      "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+      "playableCount": 415,
+      "skippedCount": 739
+    },
+    "cn": {
+      "path": "cn/gamedata/excel/character_table.json",
+      "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+      "playableCount": 432,
+      "skippedCount": 950
+    },
+    "candidateCnOnlyCount": 17,
+    "candidateEnOnlyCount": 0,
+    "playableCriteria": [
+      "ID starts with char_",
+      "isNotObtainable is false",
+      "name is non-empty",
+      "profession is one of the eight known operator professions",
+      "phases is a non-empty array",
+      "rarity matches TIER_1 through TIER_6"
+    ],
+    "limitations": [
+      "CN-only is a regional snapshot difference, not an independent availability assertion.",
+      "The snapshots are community-maintained and may not be captured at exactly the same time.",
+      "Names and dates below are community metadata and must be rechecked before import.",
+      "A missing Global record does not establish that an operator will never release globally."
+    ]
+  },
+  "sources": {
+    "regionalSnapshots": "https://github.com/ArknightsAssets/ArknightsGamedata",
+    "englishNamesAndOperatorDates": "https://arknights.wiki.gg/wiki/Operator/List",
+    "releaseTable": "https://arknights.wiki.gg/wiki/Operator/List/Release",
+    "prtsReleaseTable": "https://prts.wiki/w/%E5%B9%B2%E5%91%98%E5%AE%9E%E8%A3%85%E6%97%B6%E9%97%B4",
+    "sourceCheckedAt": "2026-10-15"
+  },
+  "operators": [
+    { "id": "char_1015_aglna2", "nameEnglish": "Angelina the Mellow Wish", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-31", "globalReleaseDate": null },
+    { "id": "char_1048_orchd2", "nameEnglish": "Violet Mizutsune Orchid", "nameStatus": "community-listed", "cnReleaseDate": "2026-05-31", "globalReleaseDate": null },
+    { "id": "char_1049_catap2", "nameEnglish": "Zinogre S Catapult", "nameStatus": "community-listed", "cnReleaseDate": "2026-05-31", "globalReleaseDate": null },
+    { "id": "char_393_toledo", "nameEnglish": "De Toledo", "nameStatus": "community-listed", "cnReleaseDate": "2026-10-08", "globalReleaseDate": null },
+    { "id": "char_4215_buddy", "nameEnglish": "Rhodes Island Recon", "nameStatus": "community-listed", "cnReleaseDate": "2026-05-31", "globalReleaseDate": null },
+    { "id": "char_4217_makoto", "nameEnglish": "Makoto Yuki", "nameStatus": "community-listed", "cnReleaseDate": "2026-09-03", "globalReleaseDate": null },
+    { "id": "char_4218_aigis", "nameEnglish": "Aigis", "nameStatus": "community-listed", "cnReleaseDate": "2026-09-03", "globalReleaseDate": null },
+    { "id": "char_4219_yukari", "nameEnglish": "Yukari Takeba", "nameStatus": "community-listed", "cnReleaseDate": "2026-09-03", "globalReleaseDate": null },
+    { "id": "char_4220_kormr", "nameEnglish": "Koromaru", "nameStatus": "community-listed", "cnReleaseDate": "2026-09-03", "globalReleaseDate": null },
+    { "id": "char_4229_aphris", "nameEnglish": "Aphrissa", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-09", "globalReleaseDate": null },
+    { "id": "char_4230_mcnist", "nameEnglish": "Mechanist", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-16", "globalReleaseDate": null },
+    { "id": "char_4231_clemnt", "nameEnglish": "Clementia", "nameStatus": "community-listed", "cnReleaseDate": "2026-10-09", "globalReleaseDate": null },
+    { "id": "char_4232_hbound", "nameEnglish": "Homebound", "nameStatus": "community-listed", "cnReleaseDate": "2026-10-08", "globalReleaseDate": null },
+    { "id": "char_4234_pedro", "nameEnglish": "Pedro", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-09", "globalReleaseDate": null },
+    { "id": "char_4235_thumpy", "nameEnglish": "Thumpy", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-31", "globalReleaseDate": null },
+    { "id": "char_4236_tmslot", "nameEnglish": "Timeslot", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-31", "globalReleaseDate": null },
+    { "id": "char_4237_jcinta", "nameEnglish": "Jacinta", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-31", "globalReleaseDate": null }
+  ]
+}

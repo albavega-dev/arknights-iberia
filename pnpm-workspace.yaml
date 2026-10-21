@@ -1,0 +1,17 @@
+allowBuilds:
+  esbuild: true
+  sharp: false
+  unrs-resolver: false
+# Temporary: these exact Better Auth 1.7.9 releases were already in the
+# approved lockfile before the SMTP dependency was added. Remove after the
+# registry publication age exceeds pnpm's cutoff and frozen install passes.
+minimumReleaseAgeExclude:
+  - '@better-auth/core@1.7.9'
+  - '@better-auth/drizzle-adapter@1.7.9'
+  - '@better-auth/kysely-adapter@1.7.9'
+  - '@better-auth/memory-adapter@1.7.9'
+  - '@better-auth/mongo-adapter@1.7.9'
+  - '@better-auth/prisma-adapter@1.7.9'
+  - '@better-auth/telemetry@1.7.9'
+  - better-auth@1.7.9
+  - lucide-react@1.58.0

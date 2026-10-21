@@ -1,0 +1,13 @@
+import assert from "node:assert/strict";
+import test from "node:test";
+import { GlobalUpdatesManifestError, getNewOperatorIds } from "../src/game-data/operator-global-updates.js";
+import type { OperatorRecord } from "../src/game-data/operators.js";
+
+const operator = (id: string, cnOnly = false): OperatorRecord => ({ id, name: id, class: "Guard", subClassId: null, rarity: 6, slug: id, cnOnly, availabilityStatus: cnOnly ? "cn-snapshot-candidate" : "global-snapshot", cnReleaseDate: "2026-01-01", globalReleaseDate: null, mainPowerNationId: null, mainPowerGroupId: null, mainPowerTeamId: null, mainFactionId: null });
+const verified = { schemaVersion: 1, selectedUpdateId: "u", updates: [{ id: "u", name: "Update", startDate: "2026-10-14", operatorIds: ["char_new_1", "char_new_2", "char_new_3", "char_new_4", "char_new_5"], sourceUrl: "https://example.test/update", status: "verified" as const }] };
+
+test("returns exactly the selected update operators", () => { const ids = getNewOperatorIds([...verified.updates[0].operatorIds.map((id) => operator(id)), operator("char_old")], verified, new Date("2026-10-16T00:00:00Z")); assert.deepEqual([...ids], verified.updates[0].operatorIds); assert.equal(ids.has("char_old"), false); });
+test("selects the five confirmed Episode 17 IDs from the project manifest", () => { const ids = getNewOperatorIds(["char_4227_gallus", "char_4225_tanya", "char_4228_closur", "char_4226_veen", "char_1052_kalts2"].map((id) => operator(id)), undefined, new Date("2026-10-16T00:00:00Z")); assert.equal(ids.size, 5); });
+test("rejects CN-only and unknown IDs", () => { assert.throws(() => getNewOperatorIds(verified.updates[0].operatorIds.map((id, index) => operator(id, index === 0)), verified), GlobalUpdatesManifestError); assert.throws(() => getNewOperatorIds(verified.updates[0].operatorIds.slice(0, 4).map((id) => operator(id)), verified), /Unknown operator ID/); });
+test("rejects unverified, future and duplicate updates", () => { const records = verified.updates[0].operatorIds.map((id) => operator(id)); assert.throws(() => getNewOperatorIds(records, { ...verified, updates: [{ ...verified.updates[0], status: "unverified" }] }), /not verified/); assert.throws(() => getNewOperatorIds(records, { ...verified, updates: [{ ...verified.updates[0], startDate: "2027-01-01" }] }, new Date("2026-10-16T00:00:00Z")), /future/); assert.throws(() => getNewOperatorIds(records, { ...verified, updates: [verified.updates[0], verified.updates[0]] }), /Duplicate Global update ID/); });
+test("does not depend on a rolling age window", () => { assert.equal(getNewOperatorIds(verified.updates[0].operatorIds.map((id) => operator(id)), verified, new Date("2030-01-01T00:00:00Z")).size, 5); });

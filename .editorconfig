@@ -1,0 +1,11 @@
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+
+[*.{json,jsonc,md,ts,tsx,js,mjs,cjs,css,scss,html,ps1,yml,yaml,sql,toml,txt}]
+charset = utf-8
+
+[*.{png,jpg,jpeg,gif,webp,ico,woff,woff2,ttf,otf,zip,dump}]
+charset = unset
