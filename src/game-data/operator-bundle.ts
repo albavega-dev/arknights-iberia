@@ -6,6 +6,7 @@ export const operatorBundleContractVersion = "1" as const;
 const classes = new Set<OperatorClass>(["Guard", "Vanguard", "Defender", "Sniper", "Caster", "Medic", "Supporter", "Specialist"]);
 const regions = new Set(["en", "cn"] as const);
 const sha256 = /^[a-f0-9]{64}$/iu;
+const isoDate = /^\d{4}-\d{2}-\d{2}$/u;
 
 export type OperatorBundle = {
   readonly contractVersion: typeof operatorBundleContractVersion;
@@ -45,6 +46,15 @@ function validOperator(value: unknown, path: string, issues: BundleIssue[]): val
   if (!classes.has(item.class as OperatorClass)) issues.push(issue(`${path}.class`, "must be a known operator class"));
   if (!Number.isInteger(item.rarity) || Number(item.rarity) < 1 || Number(item.rarity) > 6) issues.push(issue(`${path}.rarity`, "must be an integer from 1 to 6"));
   if (typeof item.cnOnly !== "boolean" || (item.availabilityStatus !== "global-snapshot" && item.availabilityStatus !== "cn-snapshot-candidate")) issues.push(issue(path, "has invalid availability fields"));
+  if (item.cnReleaseDate !== null && (typeof item.cnReleaseDate !== "string" || !isoDate.test(item.cnReleaseDate))) issues.push(issue(`${path}.cnReleaseDate`, "must be an ISO date or null"));
+  if (item.globalReleaseDate !== null && (typeof item.globalReleaseDate !== "string" || !isoDate.test(item.globalReleaseDate))) issues.push(issue(`${path}.globalReleaseDate`, "must be an ISO date or null"));
+  if (item.cnReleaseDateStatus !== undefined && item.cnReleaseDateStatus !== null && item.cnReleaseDateStatus !== "verified" && item.cnReleaseDateStatus !== "community-listed") issues.push(issue(`${path}.cnReleaseDateStatus`, "must be verified, community-listed or null"));
+  if (item.cnReleaseDateSource !== undefined && item.cnReleaseDateSource !== null && (typeof item.cnReleaseDateSource !== "string" || item.cnReleaseDateSource.length === 0)) issues.push(issue(`${path}.cnReleaseDateSource`, "must be a non-empty string or null"));
+  if (item.cnReleaseDate !== null && (!item.cnReleaseDateStatus || !item.cnReleaseDateSource)) issues.push(issue(path, "CN release dates require status and source metadata"));
+  if (item.additionalFactionIds !== undefined) {
+    if (!Array.isArray(item.additionalFactionIds) || item.additionalFactionIds.some((entry) => typeof entry !== "string" || entry.length === 0)) issues.push(issue(`${path}.additionalFactionIds`, "must contain non-empty faction IDs"));
+    else if (new Set(item.additionalFactionIds).size !== item.additionalFactionIds.length || [...item.additionalFactionIds].some((entry, index, entries) => index > 0 && entries[index - 1].localeCompare(entry, "en") >= 0)) issues.push(issue(`${path}.additionalFactionIds`, "must be unique and sorted"));
+  }
   return true;
 }
 

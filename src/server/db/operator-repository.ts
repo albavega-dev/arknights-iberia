@@ -1,6 +1,6 @@
 import "server-only";
 
-import { asc, eq } from "drizzle-orm";
+import { asc, desc, eq, sql } from "drizzle-orm";
 
 import type { OperatorRecord } from "../../game-data/operators";
 import { getDatabase } from "./client";
@@ -28,7 +28,15 @@ function toRecord(row: typeof operators.$inferSelect): OperatorRecord {
 }
 
 export async function listOperators(): Promise<OperatorRecord[]> {
-  const rows = await getDatabase().select().from(operators).orderBy(asc(operators.name));
+  const rows = await getDatabase()
+    .select()
+    .from(operators)
+    .orderBy(
+      sql`${operators.cnReleaseDate} DESC NULLS FIRST`,
+      desc(operators.rarity),
+      asc(operators.name),
+      asc(operators.id),
+    );
   return rows.map(toRecord);
 }
 

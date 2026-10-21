@@ -501,6 +501,7 @@ export function OperatorCatalog({ records }: { records: readonly OperatorRecord[
   const [mainFactionId, setMainFactionId] = useState<string | "all">(initialState.mainFactionId);
   const [sortKey, setSortKey] = useState<OperatorSortKey>(initialState.sortKey);
   const [sortDirection, setSortDirection] = useState<OperatorSortDirection>(initialState.sortDirection);
+  const isDefaultCnReleaseOrder = !searchParamsText.includes("sort=") && !searchParamsText.includes("dir=");
   const lastUrlState = useRef(searchParamsText);
   const commitState = useCallback(
     (next: CatalogFilterState) => {
@@ -539,8 +540,20 @@ export function OperatorCatalog({ records }: { records: readonly OperatorRecord[
         sortKey,
         sortDirection,
         includeCnOnly,
+        isDefaultCnReleaseOrder,
       ),
-    [catalogRecords, query, className, subClassIds, rarities, includeCnOnly, mainFactionId, sortKey, sortDirection],
+    [
+      catalogRecords,
+      query,
+      className,
+      subClassIds,
+      rarities,
+      includeCnOnly,
+      mainFactionId,
+      sortKey,
+      sortDirection,
+      isDefaultCnReleaseOrder,
+    ],
   );
   const newOperatorIds = useMemo(() => getNewOperatorIds(catalogRecords), [catalogRecords]);
   const factions = useMemo(
