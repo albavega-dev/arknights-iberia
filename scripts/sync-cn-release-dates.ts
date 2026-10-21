@@ -78,7 +78,7 @@ type SyncClient = {
   query<T = unknown>(text: string, values?: unknown[]): Promise<{ rows: T[]; rowCount: number | null }>;
   end(): Promise<void>;
 };
-function localConfig(env: NodeJS.ProcessEnv) {
+export function localConfig(env: Readonly<Record<string, string | undefined>>) {
   const host = env.CN_SYNC_DB_HOST;
   const port = Number(env.CN_SYNC_DB_PORT ?? "5432");
   const database = env.CN_SYNC_DB_NAME;
@@ -130,7 +130,7 @@ export async function synchronize(
   }
 }
 
-async function main(): Promise<void> {
+export async function main(): Promise<void> {
   const { apply } = parseArguments(process.argv);
   const release = JSON.parse(await readFile("data/operator-cn-release-manifest.json", "utf8")) as Manifest;
   const regional = JSON.parse(await readFile("data/operator-regional-manifest.json", "utf8")) as Manifest;

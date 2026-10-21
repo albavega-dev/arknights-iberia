@@ -42,7 +42,7 @@ export async function importBundle(value: unknown, adapter: ImportAdapter, confi
   } catch (error) { await transaction.rollback(); throw error; }
 }
 
-function operatorValues(record: OperatorBundle["operators"][number], bundle: OperatorBundle) {
+export function operatorValues(record: OperatorBundle["operators"][number], bundle: OperatorBundle) {
   const source = record.cnOnly ? bundle.sources.cn : bundle.sources.en;
   const regionalMetadataSource = record.cnReleaseDateSource
     ? JSON.stringify({ kind: "cn-release", status: record.cnReleaseDateStatus ?? "unclassified", source: record.cnReleaseDateSource })

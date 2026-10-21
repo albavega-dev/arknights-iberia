@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { assertLocalImportTarget, assertRegionalMetadataCompatible, importBundle, prepareBundleImport, type ImportAdapter, type ImportCounts } from "../src/server/db/operator-bundle-import";
+import { assertLocalImportTarget, assertRegionalMetadataCompatible, importBundle, operatorValues, prepareBundleImport, type ImportAdapter, type ImportCounts } from "../src/server/db/operator-bundle-import";
 import { bundleSha256, type OperatorBundle } from "../src/game-data/operator-bundle";
 
 const source = { repository: "example/repo", revision: "a".repeat(40), path: "source.json", sha256: "b".repeat(64) };
@@ -17,3 +17,10 @@ test("rolls back on transaction failure", async () => { const log: string[] = []
 test("does not expose a delete operation", () => { const log: string[] = []; assert.ok(adapter(log).begin); });
 test("accepts empty and equivalent regional metadata", () => { assert.doesNotThrow(() => assertRegionalMetadataCompatible(null, "incoming")); assert.doesNotThrow(() => assertRegionalMetadataCompatible("", "incoming")); assert.doesNotThrow(() => assertRegionalMetadataCompatible("incoming", "incoming")); });
 test("rejects different or unrecognized regional metadata", () => { assert.throws(() => assertRegionalMetadataCompatible("old-regional-metadata", "incoming"), /conflicts/); assert.throws(() => assertRegionalMetadataCompatible("not-json", "incoming"), /conflicts/); });
+test("serializes verified regional metadata without changing bundle values", () => {
+  const bundle = makeBundle();
+  const record = { ...op, cnReleaseDate: "2026-01-01", cnReleaseDateStatus: "verified" as const, cnReleaseDateSource: "snapshot" };
+  const values = operatorValues(record, bundle);
+  assert.equal(values[0], record.id);
+  assert.equal(values[21], JSON.stringify({ kind: "cn-release", status: "verified", source: "snapshot" }));
+});
