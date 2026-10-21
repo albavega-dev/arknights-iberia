@@ -1,4 +1,7 @@
 import assert from "node:assert/strict";
+import { mkdtemp, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import test from "node:test";
 import { bundleSha256, validateOperatorBundle, type OperatorBundle } from "../src/game-data/operator-bundle";
 import { arg, main as generateBundleMain, source as generatorSource } from "../scripts/generate-operator-bundle";
@@ -45,4 +48,28 @@ test("generator argument parsing rejects missing values and normalizes source ha
   assert.throws(() => arg("--out", ["node", "script", "--out", "--force"]), /Missing --out/);
   assert.deepEqual(generatorSource("repo", "revision", "path", "ABCDEF"), { repository: "repo", revision: "revision", path: "path", sha256: "abcdef" });
   await assert.rejects(generateBundleMain(["node", "generate-operator-bundle.ts"]), /Missing --en-character/);
+});
+
+test("generator rejects an existing output unless force is explicit", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "operator-bundle-test-"));
+  const output = join(directory, "bundle.json");
+  await writeFile(output, "existing", "utf8");
+  const argv = ["node", "generate-operator-bundle.ts", "--en-character", "a", "--cn-character", "b", "--en-handbook", "c", "--cn-handbook", "d", "--out", output];
+  try {
+    await assert.rejects(generateBundleMain(argv), /Output exists; pass --force/);
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
+});
+
+test("generator rejects snapshots whose hashes do not match the pinned references", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "operator-bundle-test-"));
+  const paths = ["en-character", "cn-character", "en-handbook", "cn-handbook"].map((name) => join(directory, name));
+  await Promise.all(paths.map((path) => writeFile(path, "untrusted snapshot", "utf8")));
+  const argv = ["node", "generate-operator-bundle.ts", ...paths.flatMap((path, index) => [`--${["en-character", "cn-character", "en-handbook", "cn-handbook"][index]}`, path]), "--out", join(directory, "bundle.json"), "--force"];
+  try {
+    await assert.rejects(generateBundleMain(argv), /Snapshot SHA-256 mismatch/);
+  } finally {
+    await rm(directory, { recursive: true, force: true });
+  }
 });
