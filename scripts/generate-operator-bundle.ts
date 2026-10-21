@@ -11,16 +11,19 @@ const refs = {
   handbook: { en: { revision: fixedBiographyRevisions.en, sha256: "07077CD529965C57DA1F602028F1CEEC81B43814AF0D8F131DCBED92B04E0498" }, cn: { revision: fixedBiographyRevisions.cn, sha256: "B6E6FA4CAFE118B8C0342E7643A6103775F72C173A43467AEEA22DFBEE01D108" } },
 } as const;
 type Region = "en" | "cn";
-function source(repository: string, revision: string, path: string, hash: string): BundleSource { return { repository, revision, path, sha256: hash.toLowerCase() }; }
+export function source(repository: string, revision: string, path: string, hash: string): BundleSource { return { repository, revision, path, sha256: hash.toLowerCase() }; }
 async function hash(path: string): Promise<string> { return createHash("sha256").update(await readFile(path)).digest("hex").toUpperCase(); }
 async function json(path: string): Promise<unknown> { return JSON.parse(await readFile(path, "utf8")); }
 type ReleaseEntry = { id: string; cnReleaseDate: string; source: string };
 type ReleaseManifest = { coverage?: { verifiedCnDates?: number; unverifiedCnDates?: number }; operators?: ReleaseEntry[] };
 type RegionalEntry = RegionalNameEntry & { cnReleaseDate: string | null; globalReleaseDate?: string | null };
 type RegionalManifest = { sources?: { releaseTable?: string }; operators?: RegionalEntry[] };
-function arg(name: string): string { const index = process.argv.indexOf(name); const value = process.argv[index + 1]; if (index < 0 || !value || value.startsWith("--")) throw new Error(`Missing ${name}`); return value; }
-async function main(): Promise<void> {
-  const enCharacter = arg("--en-character"); const cnCharacter = arg("--cn-character"); const enHandbook = arg("--en-handbook"); const cnHandbook = arg("--cn-handbook"); const output = arg("--out");
+export function arg(name: string, argv: readonly string[] = process.argv): string { const index = argv.indexOf(name); const value = argv[index + 1]; if (index < 0 || !value || value.startsWith("--")) throw new Error(`Missing ${name}`); return value; }
+export async function main(argv: readonly string[] = process.argv): Promise<void> {
+  const previousArgv = process.argv;
+  process.argv = [...argv];
+  try {
+  const enCharacter = arg("--en-character", argv); const cnCharacter = arg("--cn-character", argv); const enHandbook = arg("--en-handbook", argv); const cnHandbook = arg("--cn-handbook", argv); const output = arg("--out", argv);
   if (await stat(output).then(() => true, () => false) && !process.argv.includes("--force")) throw new Error("Output exists; pass --force to overwrite");
   const paths = { enCharacter, cnCharacter, enHandbook, cnHandbook }; const actual = await Promise.all(Object.values(paths).map(hash));
   const expected = [refs.character.en.sha256, refs.character.cn.sha256, refs.handbook.en.sha256, refs.handbook.cn.sha256];
@@ -59,5 +62,9 @@ async function main(): Promise<void> {
   const body = { contractVersion: "1" as const, sources: { en: source("ArknightsAssets/ArknightsGamedata", refs.character.en.revision, "en/gamedata/excel/character_table.json", refs.character.en.sha256), cn: source("ArknightsAssets/ArknightsGamedata", refs.character.cn.revision, "cn/gamedata/excel/character_table.json", refs.character.cn.sha256) }, biographySources, operators: datedOperators, biographies, coverage: { operators: datedOperators.length, biographies: { en: biographies.filter((item) => item.region === "en").length, cn: biographies.filter((item) => item.region === "cn").length, total: biographies.length } } };
   const bundle: OperatorBundle = { ...body, integrity: { algorithm: "sha256", sha256: bundleSha256(body) } }; const validation = validateOperatorBundle(bundle); if (!validation.ok) throw new Error(validation.issues.map((item) => `${item.path}: ${item.message}`).join("; "));
   const temp = `${output}.${process.pid}.partial`; await writeFile(temp, `${JSON.stringify(bundle, null, 2)}\n`, "utf8"); await rename(temp, output); console.log(`Generated ${operators.length} operators and ${biographies.length} biographies`); console.log(`SHA-256 ${bundle.integrity.sha256}`);
+  } finally {
+    process.argv = previousArgv;
+  }
 }
-try { await main(); } catch (error) { console.error(error instanceof Error ? error.message : "Bundle generation failed"); process.exitCode = 1; }
+if (process.argv[1]?.endsWith("generate-operator-bundle.ts"))
+  main().catch((error) => { console.error(error instanceof Error ? error.message : "Bundle generation failed"); process.exitCode = 1; });

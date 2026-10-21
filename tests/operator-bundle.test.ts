@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { bundleSha256, validateOperatorBundle, type OperatorBundle } from "../src/game-data/operator-bundle";
+import { arg, main as generateBundleMain, source as generatorSource } from "../scripts/generate-operator-bundle";
 
 const op = (id = "char_test", slug = "operator-test") => ({ id, name: "Test", cnName: null, globalName: null, class: "Guard" as const, subClassId: "swordmaster", rarity: 6 as const, slug, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: null, globalReleaseDate: null, mainPowerNationId: null, mainPowerGroupId: null, mainPowerTeamId: null, mainFactionId: null });
 const source = { repository: "example/repo", revision: "a".repeat(40), path: "character_table.json", sha256: "b".repeat(64) };
@@ -38,3 +39,10 @@ for (const [name, mutate] of [
 ] as const) test(name, () => assert.equal(validateOperatorBundle(mutate(make()) as unknown).ok, false));
 test("rejects an orphan biography", () => assert.equal(validateOperatorBundle({ ...make(), biographies: [{ operatorId: "char_missing" }] }).ok, false));
 test("rejects non-deterministic operator order", () => assert.equal(validateOperatorBundle({ ...make(), operators: [op("char_z"), op("char_a")] }).ok, false));
+test("generator argument parsing rejects missing values and normalizes source hashes", async () => {
+  assert.equal(arg("--out", ["node", "script", "--out", "bundle.json"]), "bundle.json");
+  assert.throws(() => arg("--out", ["node", "script"]), /Missing --out/);
+  assert.throws(() => arg("--out", ["node", "script", "--out", "--force"]), /Missing --out/);
+  assert.deepEqual(generatorSource("repo", "revision", "path", "ABCDEF"), { repository: "repo", revision: "revision", path: "path", sha256: "abcdef" });
+  await assert.rejects(generateBundleMain(["node", "generate-operator-bundle.ts"]), /Missing --en-character/);
+});
