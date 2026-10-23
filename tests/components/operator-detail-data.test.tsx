@@ -3,7 +3,12 @@ import { describe, expect, it, vi } from "vitest";
 
 vi.mock("next/image", () => ({
   default: (props: Record<string, unknown>) => (
-    <img {...props} data-testid="next-image" data-unoptimized={props.unoptimized === true ? "true" : "false"} />
+    <img
+      {...props}
+      alt={typeof props.alt === "string" ? props.alt : ""}
+      data-testid="next-image"
+      data-unoptimized={props.unoptimized === true ? "true" : "false"}
+    />
   ),
 }));
 
