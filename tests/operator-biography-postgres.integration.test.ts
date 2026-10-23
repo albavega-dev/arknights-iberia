@@ -1,5 +1,4 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
 import { test } from "node:test";
 import { Pool } from "pg";
 import { createBiographyPostgresAdapter, type BiographyPostgresClient, type BiographyQueryResult } from "../src/server/db/operator-biography-drizzle-adapter";
@@ -7,7 +6,14 @@ import { BiographyRepositoryError, persistBiographyEnvelope, type BiographyStora
 import { fixedBiographyRevisions, type OperatorBiography } from "../src/game-data/operator-biography";
 import { preflightBiographies, type BiographyImportEnvelope } from "../src/game-data/operator-biography-import";
 
-const database = "arknights_biography_integration_test";
+type BiographyIntegrationConfig = Readonly<{
+  host: string;
+  port: number;
+  database: string;
+  user: string;
+  password: string;
+}>;
+
 const enRevision = fixedBiographyRevisions.en;
 const cnRevision = fixedBiographyRevisions.cn;
 const enSource = { repository: "synthetic/biography-fixture", revision: enRevision, path: "synthetic/en-handbook.json", sha256: "a".repeat(64) } as const;
@@ -17,10 +23,25 @@ const cnIds = Array.from({ length: 17 }, (_, index) => `char_9900_test_${index +
 const allIds = [...enIds, ...cnIds];
 
 function readEnv(): Record<string, string> {
-  return Object.fromEntries(readFileSync(".env", "utf8").split(/\r?\n/u).filter((line) => line && !line.startsWith("#") && line.includes("=")).map((line) => {
-    const separator = line.indexOf("=");
-    return [line.slice(0, separator), line.slice(separator + 1)];
-  }));
+  return Object.fromEntries(Object.entries(process.env).filter((entry): entry is [string, string] => entry[1] !== undefined));
+}
+
+function readIntegrationConfig(): BiographyIntegrationConfig {
+  const env = readEnv();
+  const required = ["BIOGRAPHY_TEST_DB_HOST", "BIOGRAPHY_TEST_DB_PORT", "BIOGRAPHY_TEST_DB_NAME", "BIOGRAPHY_TEST_DB_USER", "BIOGRAPHY_TEST_DB_PASSWORD"];
+  const missing = required.filter((key) => !env[key]);
+  if (missing.length) throw new Error(`Missing biography integration test variables: ${missing.join(", ")}`);
+
+  const port = Number(env.BIOGRAPHY_TEST_DB_PORT);
+  if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error("BIOGRAPHY_TEST_DB_PORT must be a valid TCP port");
+  if (port === 55432) throw new Error("Biography integration tests cannot use the Development port");
+  if (env.BIOGRAPHY_TEST_DB_HOST !== "127.0.0.1" && env.BIOGRAPHY_TEST_DB_HOST !== "::1") throw new Error("Biography integration tests require a loopback database host");
+  if (!/^arknights_biography_integration_[a-z0-9][a-z0-9_-]*$/u.test(env.BIOGRAPHY_TEST_DB_NAME)) {
+    throw new Error("BIOGRAPHY_TEST_DB_NAME must identify an exclusive integration database");
+  }
+  if (!/^arknights_biography_integration_[a-z0-9][a-z0-9_-]*$/u.test(env.BIOGRAPHY_TEST_DB_USER)) throw new Error("Biography integration tests require a dedicated integration role");
+
+  return { host: env.BIOGRAPHY_TEST_DB_HOST, port, database: env.BIOGRAPHY_TEST_DB_NAME, user: env.BIOGRAPHY_TEST_DB_USER, password: env.BIOGRAPHY_TEST_DB_PASSWORD };
 }
 
 function makeRecord(operatorId: string, region: "en" | "cn"): OperatorBiography {
@@ -44,8 +65,8 @@ function makeEnvelope(records = allIds.map((id) => makeRecord(id, enIds.includes
 }
 
 function makePool(): Pool {
-  const env = readEnv();
-  return new Pool({ host: "127.0.0.1", port: 5432, database, user: env.MIGRATION_DB_USER, password: env.MIGRATION_DB_PASSWORD, ssl: false, max: 4, connectionTimeoutMillis: 3000, idleTimeoutMillis: 10000 });
+  const config = readIntegrationConfig();
+  return new Pool({ host: config.host, port: config.port, database: config.database, user: config.user, password: config.password, ssl: false, max: 4, connectionTimeoutMillis: 3000, idleTimeoutMillis: 10000 });
 }
 
 function makeAdapter(pool: Pool): BiographyStorageAdapter {
@@ -67,13 +88,14 @@ async function countRows(pool: Pool): Promise<number> {
 }
 
 test("persists synthetic biographies transactionally against isolated PostgreSQL", async () => {
+  const config = readIntegrationConfig();
   const pool = makePool();
   const adapter = makeAdapter(pool);
   const envelope = makeEnvelope();
   try {
     const identity = await pool.query("SELECT current_database() AS database, current_user AS user, inet_server_addr()::text AS address, inet_server_port() AS port, COALESCE((SELECT ssl FROM pg_stat_ssl WHERE pid = pg_backend_pid()), false) AS ssl");
-    assert.equal(identity.rows[0].database, database);
-    assert.equal(identity.rows[0].user, readEnv().MIGRATION_DB_USER);
+    assert.equal(identity.rows[0].database, config.database);
+    assert.equal(identity.rows[0].user, config.user);
     assert.match(identity.rows[0].address, /^\d{1,3}(?:\.\d{1,3}){3}(?:\/\d+)?$/u);
     assert.equal(identity.rows[0].port, 5432);
     assert.equal(identity.rows[0].ssl, false);
