@@ -154,7 +154,7 @@ const OperatorCard = memo(function OperatorCard({
           />
         ) : null}
         <span className="operator-card-class-icon">
-          <Image src={getOperatorClassIconUrl(operator.class)} alt="" fill sizes="29px" />
+          <Image src={getOperatorClassIconUrl(operator.class)} alt="" fill sizes="29px" unoptimized />
         </span>
       </span>
       {operator.cnOnly ? (
@@ -208,7 +208,13 @@ function FilterButton({
       onClick={onClick}
     >
       {iconUrl ? (
-        <Image src={iconUrl} alt="" width={22} height={22} unoptimized={iconUrl.includes("/ui/subclass/")} />
+        <Image
+          src={iconUrl}
+          alt=""
+          width={22}
+          height={22}
+          unoptimized={iconUrl.includes("/classes/") || iconUrl.includes("/ui/subclass/")}
+        />
       ) : (
         <span aria-hidden="true">{rarity ? `${rarity}${String.fromCharCode(9733)}` : "Todas"}</span>
       )}

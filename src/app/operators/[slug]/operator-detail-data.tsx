@@ -13,7 +13,7 @@ import { OperatorControlButton } from "../operator-control-button";
 import type { OperatorTacticalEntry } from "../../../game-data/operator-tactical";
 
 function Image(props: ComponentProps<typeof NextImage>) {
-  return <NextImage {...props} quality={75} unoptimized={typeof props.src === "string" && props.src.includes("/ui/subclass/")} />;
+  return <NextImage {...props} quality={75} unoptimized={typeof props.src === "string" && (props.src.includes("/classes/") || props.src.includes("/ui/subclass/"))} />;
 }
 const classLabels: Record<OperatorClass, string> = { Guard: "Guard", Vanguard: "Vanguard", Defender: "Defender", Sniper: "Sniper", Caster: "Caster", Specialist: "Specialist", Supporter: "Supporter", Medic: "Medic" };
 const tabs = ["Estadísticas", "Habilidades", "Talentos", "Módulos", "Expediente", "Voces"] as const;
