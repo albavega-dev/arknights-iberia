@@ -30,6 +30,18 @@ const operator: OperatorRecord = {
   mainFactionId: null,
 };
 
+const tacticalPhasesFixture = {
+  id: "phase-fixture",
+  source: null,
+  position: "RANGED",
+  tags: [],
+  phases: [
+    { phase: 0, rangeId: "3-6", rangeKey: "en:3-6" },
+    { phase: 1, rangeId: "3-1", rangeKey: "en:3-1" },
+    { phase: 2, rangeId: "3-1", rangeKey: "en:3-1" },
+  ],
+} as const;
+
 describe("OperatorDetailData image policy", () => {
   it("marks subclass icons unoptimized and keeps regular icons optimized", () => {
     render(
@@ -102,5 +114,104 @@ describe("OperatorDetailData image policy", () => {
 
     expect(screen.getByText("Etiquetas")).toBeInTheDocument();
     expect(screen.getByText("DPS")).toBeInTheDocument();
+  });
+
+  it("renders no tactical section when the entry is absent or has no valid range", () => {
+    const { container, rerender } = render(<OperatorTacticalInfo entry={null} />);
+    expect(container).toBeEmptyDOMElement();
+
+    rerender(
+      <OperatorTacticalInfo entry={{ id: "empty-range", source: null, position: null, tags: [], phases: [] }} />,
+    );
+    expect(container).toBeEmptyDOMElement();
+  });
+
+  it("uses the fallback position label and omits the tags block when tags are absent", () => {
+    render(
+      <OperatorTacticalInfo
+        entry={{
+          id: "char_002_amiya",
+          source: null,
+          position: "UNKNOWN",
+          tags: [],
+          phases: [{ phase: 0, rangeId: "3-6", rangeKey: "en:3-6" }],
+        }}
+      />,
+    );
+
+    expect(screen.getByText("UNKNOWN")).toBeInTheDocument();
+    expect(screen.queryByText("Etiquetas")).not.toBeInTheDocument();
+  });
+
+  it("groups equal phase ranges and changes the visible range when selected", () => {
+    render(<OperatorTacticalInfo entry={tacticalPhasesFixture} />);
+
+    const phaseSelector = screen.getByRole("group", { name: /Fase de promoción y módulos/i });
+    const phaseButtons = screen.getAllByRole("button").filter((button) => phaseSelector.contains(button));
+    expect(phaseButtons).toHaveLength(2);
+    expect(phaseButtons[0]).toHaveAttribute("aria-pressed", "true");
+
+    const initialReachableCells = screen.getAllByLabelText("Casilla alcanzable").length;
+    fireEvent.click(phaseButtons[1]);
+
+    expect(phaseButtons[0]).toHaveAttribute("aria-pressed", "false");
+    expect(phaseButtons[1]).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getAllByLabelText("Casilla alcanzable").length).not.toBe(initialReachableCells);
+  });
+
+  it("selects the confirmed SPC-X module and changes its active range", () => {
+    render(
+      <OperatorTacticalInfo
+        entry={{
+          id: "char_2015_dusk",
+          source: null,
+          position: "RANGED",
+          tags: [],
+          phases: [
+            { phase: 0, rangeId: "2-3", rangeKey: "en:2-3" },
+            { phase: 1, rangeId: "3-6", rangeKey: "en:3-6" },
+            { phase: 2, rangeId: "3-6", rangeKey: "en:3-6" },
+          ],
+        }}
+      />,
+    );
+
+    const moduleButton = screen.getByRole("button", { name: /SPC-X/ });
+    const phaseButton = screen.getAllByRole("button").find((button) => button !== moduleButton)!;
+    expect(moduleButton).toHaveAttribute("aria-pressed", "false");
+    expect(phaseButton).toHaveAttribute("aria-pressed", "true");
+
+    const phaseReachableCells = screen.getAllByLabelText("Casilla alcanzable").length;
+    fireEvent.click(moduleButton);
+
+    expect(moduleButton).toHaveAttribute("aria-pressed", "true");
+    expect(phaseButton).toHaveAttribute("aria-pressed", "false");
+    expect(screen.getAllByLabelText("Casilla alcanzable").length).not.toBe(phaseReachableCells);
+  });
+
+  it("switches between Tactical Anchor Point associated states", () => {
+    render(
+      <OperatorTacticalInfo
+        entry={{
+          id: "char_1052_kalts2",
+          source: null,
+          position: "RANGED",
+          tags: [],
+          phases: [{ phase: 0, rangeId: "y-2", rangeKey: "en:y-2" }],
+        }}
+      />,
+    );
+
+    const stateSelector = screen.getByRole("group", { name: "Estados de Tactical Anchor Point" });
+    const stateButtons = screen.getAllByRole("button").filter((button) => stateSelector.contains(button));
+    expect(stateButtons).toHaveLength(2);
+    expect(stateButtons[0]).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText(/Estado y-2/)).toBeInTheDocument();
+
+    fireEvent.click(stateButtons[1]);
+
+    expect(stateButtons[0]).toHaveAttribute("aria-pressed", "false");
+    expect(stateButtons[1]).toHaveAttribute("aria-pressed", "true");
+    expect(screen.getByText(/Estado y-6/)).toBeInTheDocument();
   });
 });
