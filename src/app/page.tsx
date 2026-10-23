@@ -139,7 +139,7 @@ export default function Home() {
             <article className="landing-news-entry">
               <h3>23 de octubre de 2026 - 0.1.1</h3>
               <ul>
-                <li>Preparación del versionado 0.1.1 y reorganización del historial de novedades.</li>
+                <li><strong>Mejorada la carga de ilustraciones E2</strong><br />Se ha añadido un indicador de carga al cambiar a la ilustración E2 de los operadores, con una transición más fluida y sin parpadeos.</li>
               </ul>
             </article>
             <article className="landing-news-entry">
