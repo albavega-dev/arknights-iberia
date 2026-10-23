@@ -1,6 +1,6 @@
 {
   "name": "arknights-iberia",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -36,7 +36,7 @@
     "better-auth": "1.7.9",
     "drizzle-orm": "0.45.4",
     "lucide-react": "1.58.0",
-    "next": "16.4.0",
+    "next": "16.4.1",
     "nodemailer": "10.1.1",
     "pg": "8.23.1",
     "react": "19.3.0",
@@ -52,7 +52,7 @@
     "c8": "10.1.3",
     "drizzle-kit": "0.31.11",
     "eslint": "^9",
-    "eslint-config-next": "16.4.0",
+    "eslint-config-next": "16.4.1",
     "prettier": "3.6.2",
     "tsx": "4.23.15",
     "typescript": "^5"

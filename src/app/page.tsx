@@ -137,7 +137,13 @@ export default function Home() {
           <div className="landing-section-content">
             <h2 id="news-title">Novedades</h2>
             <article className="landing-news-entry">
-              <h3>21 de octubre de 2026 - Beta 1.0</h3>
+              <h3>23 de octubre de 2026 - 0.1.1</h3>
+              <ul>
+                <li>Preparación del versionado 0.1.1 y reorganización del historial de novedades.</li>
+              </ul>
+            </article>
+            <article className="landing-news-entry">
+              <h3>21 de octubre de 2026 - 0.1.0</h3>
               <ul>
                 <li>Primera versión beta de Arknights Iberia.</li>
                 <li>Catálogo de operadores con sus fichas individuales (incompletas).</li>
