@@ -748,8 +748,10 @@ h2 {
     font-weight: 680;
     letter-spacing: 0.08em;
   }
-  .mobile-brand span {
-    color: var(--color-cyan);
+  .mobile-brand strong {
+    color: var(--color-brass);
+    font-weight: 600;
+    margin-left: 0.35rem;
   }
   .mobile-menu-button {
     min-width: 64px;
