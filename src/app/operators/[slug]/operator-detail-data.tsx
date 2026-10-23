@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useId, useState, type ComponentProps, type KeyboardEvent } from "react";
+import { useId, useState, type ComponentProps, type KeyboardEvent } from "react";
 import NextImage from "next/image";
 import { Brush, Star } from "lucide-react";
 import { getOperatorDisplayName, type OperatorClass, type OperatorRecord } from "../../../game-data/operators";
@@ -62,15 +62,6 @@ export function OperatorDetailData({ operator, biography, tactical, artistCredit
   const displayedVariant = artVariant === "elite2" && !loadedVariants.elite2 ? "base" : artVariant;
   const illustrationUrl = illustrationAssets?.[displayedVariant];
   const pendingElite2Url = artVariant === "elite2" && !loadedVariants.elite2 ? illustrationAssets?.elite2 : undefined;
-  useEffect(() => {
-    if (!loadedVariants.base || !illustrationAssets?.elite2) return;
-    const connection = (navigator as Navigator & { connection?: { saveData?: boolean; effectiveType?: string } }).connection;
-    if (connection?.saveData || connection?.effectiveType === "slow-2g" || connection?.effectiveType === "2g") return;
-    const preload = new window.Image();
-    preload.decoding = "async";
-    preload.onload = () => setLoadedVariants((current) => ({ ...current, elite2: true }));
-    preload.src = `/_next/image?url=${encodeURIComponent(illustrationAssets.elite2)}&w=828&q=75`;
-  }, [illustrationAssets, loadedVariants.base]);
   const moveTab = (event: KeyboardEvent<HTMLButtonElement>) => {
     if (!["ArrowRight", "ArrowLeft", "Home", "End"].includes(event.key)) return;
     event.preventDefault();
