@@ -154,7 +154,7 @@ const OperatorCard = memo(function OperatorCard({
           />
         ) : null}
         <span className="operator-card-class-icon">
-          <Image src={getOperatorClassIconUrl(operator.class)} alt="" fill sizes="29px" />
+          <Image src={getOperatorClassIconUrl(operator.class)} alt="" fill sizes="29px" unoptimized />
         </span>
       </span>
       {operator.cnOnly ? (
