@@ -140,6 +140,19 @@ export default function Home() {
               <h3>23 de octubre de 2026 - 0.1.1</h3>
               <ul>
                 <li><strong>Mejorada la carga de ilustraciones E2</strong><br />Se ha añadido un indicador de carga al cambiar a la ilustración E2 de los operadores, con una transición más fluida y sin parpadeos.</li>
+                <li>
+                  <strong>Cabecera móvil renovada</strong>
+                  <br />
+                  Se ha unificado el título y el color de la cabecera para una identidad visual más coherente.
+                </li>
+              </ul>
+              <h4 className="landing-news-category">Errores corregidos:</h4>
+              <ul>
+                <li>
+                  <strong>Corregido el estado visual de los filtros móviles</strong>
+                  <br />
+                  Se ha corregido un problema que podía mostrar incorrectamente los botones seleccionados al utilizar los filtros en dispositivos táctiles.
+                </li>
               </ul>
             </article>
             <article className="landing-news-entry">
