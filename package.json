@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "test:e2e": "playwright test",
+    "test:components": "vitest run --config vitest.components.config.ts",
+    "test:components:coverage": "vitest run --config vitest.components.config.ts --coverage",
     "lint": "eslint",
     "format:css:check": "prettier --check src/app/globals.css src/app/operators/operators.css",
     "format:css": "prettier --write src/app/globals.css src/app/operators/operators.css",
@@ -45,17 +47,22 @@
   },
   "devDependencies": {
     "@playwright/test": "1.55.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
     "@types/node": "^20",
     "@types/pg": "8.23.1",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/coverage-v8": "^5.0.5",
     "c8": "10.1.3",
     "drizzle-kit": "0.31.11",
     "eslint": "^9",
     "eslint-config-next": "16.4.1",
+    "jsdom": "^30.1.3",
     "prettier": "3.6.2",
     "tsx": "4.23.15",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5.0.5"
   },
   "packageManager": "pnpm@12.11.2",
   "type": "module"
