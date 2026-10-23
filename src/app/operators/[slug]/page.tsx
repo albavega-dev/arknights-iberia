@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { connection } from "next/server";
+import { cache } from "react";
 
 import { listOperators } from "../../../server/db/operator-repository";
 import { readBiographyByOperatorIdFromDatabase } from "../../../server/db/operator-biography-database-reader";
@@ -12,12 +13,12 @@ import { loadOperatorDetailBiography } from "./operator-detail-biography";
 
 type OperatorPageProps = { params: Promise<{ slug: string }> };
 
-async function resolveOperator(slug: string) {
+const resolveOperator = cache(async (slug: string) => {
   const records = await listOperators();
   const publicSlugs = getOperatorPublicSlugs(records);
   const operator = records.find((record) => record.slug === slug || publicSlugs.get(record.id) === slug);
   return operator ? { operator, records, publicSlug: getOperatorPublicSlug(operator, records) } : null;
-}
+});
 
 export async function generateMetadata({ params }: OperatorPageProps): Promise<Metadata> {
   const { slug } = await params;

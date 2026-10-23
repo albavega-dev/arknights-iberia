@@ -748,8 +748,10 @@ h2 {
     font-weight: 680;
     letter-spacing: 0.08em;
   }
-  .mobile-brand span {
-    color: var(--color-cyan);
+  .mobile-brand strong {
+    color: var(--color-brass);
+    font-weight: 600;
+    margin-left: 0.35rem;
   }
   .mobile-menu-button {
     min-width: 64px;
@@ -1006,7 +1008,8 @@ h2 {
   background: #191e21;
   padding-inline: clamp(2rem, 4vw, 3rem);
 }
-.landing-main::before {
+.landing-main::before,
+.credits-main::before {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -1235,9 +1238,17 @@ h2 {
 }
 .landing-news-entry h3 {
   margin: 1.25rem 0 0.8rem;
-  color: #e2dbcc;
+  color: var(--color-brass);
   font-size: 1rem;
   font-weight: 600;
+}
+.landing-news-category {
+  margin: 0.95rem 0 0.35rem;
+  color: var(--color-cyan);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
 }
 .landing-news-entry ul {
   margin: 0;
@@ -1280,38 +1291,6 @@ h2 {
   overflow: clip;
   padding: 0 clamp(1.25rem, 4vw, 3rem) 1.25rem;
   background: #191e21;
-}
-.credits-main::before {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 24rem;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(25, 30, 33, 0.56) 0%,
-      rgba(25, 30, 33, 0.08) 32%,
-      rgba(25, 30, 33, 0.04) 72%,
-      rgba(25, 30, 33, 0.62) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(7, 25, 38, 0.08) 0%,
-      rgba(10, 24, 31, 0.2) 50%,
-      rgba(25, 30, 33, 0.92) 82%,
-      #191e21 100%
-    ),
-    url("/assets/backgrounds/mystic-sea.png") 62% 24% / cover no-repeat;
-  content: "";
-  filter: blur(2px);
-  opacity: 0.92;
-  pointer-events: none;
-  transform: scale(1.015);
-  transform-origin: top center;
-  mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
 }
 .credits-content {
   width: min(100%, 1100px);

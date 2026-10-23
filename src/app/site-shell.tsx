@@ -95,7 +95,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <div className="app-content">
         <header className="mobile-header">
           <Link className="mobile-brand" href="/" onClick={handleHomeClick}>
-            ARKNIGHTS <span>/ IBERIA</span>
+            ARKNIGHTS <strong>IBERIA</strong>
           </Link>
           <button
             type="button"

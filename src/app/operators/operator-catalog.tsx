@@ -208,7 +208,7 @@ function FilterButton({
       onClick={onClick}
     >
       {iconUrl ? (
-        <Image src={iconUrl} alt="" width={22} height={22} />
+        <Image src={iconUrl} alt="" width={22} height={22} unoptimized={iconUrl.includes("/ui/subclass/")} />
       ) : (
         <span aria-hidden="true">{rarity ? `${rarity}${String.fromCharCode(9733)}` : "Todas"}</span>
       )}

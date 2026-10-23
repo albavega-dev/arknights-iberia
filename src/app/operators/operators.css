@@ -982,6 +982,33 @@
   opacity: 0;
   pointer-events: none;
 }
+.operator-detail-art.is-loading::after {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  z-index: 2;
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 2px solid color-mix(in srgb, var(--color-brass) 28%, transparent);
+  border-top-color: var(--color-brass);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: operator-art-spinner 0.8s linear infinite;
+}
+.operator-detail-art.is-loading .operator-detail-illustration {
+  visibility: hidden;
+}
+@keyframes operator-art-spinner {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .operator-detail-art.is-loading::after {
+    animation: none;
+  }
+}
 .operator-art-placeholder {
   display: grid;
   min-height: 410px;
@@ -2738,4 +2765,41 @@
     rgba(23, 51, 58, 0.96) 100%
   );
   box-shadow: 0 3px 8px rgba(3, 13, 20, 0.2);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .operator-filter-button:hover:not(.is-active) {
+    border-color: transparent;
+    background: linear-gradient(
+      135deg,
+      rgba(68, 91, 101, 0.72) 0%,
+      rgba(42, 68, 79, 0.86) 45%,
+      rgba(16, 35, 48, 0.98) 100%
+    );
+    color: var(--color-muted);
+    transform: none;
+    box-shadow: 0 2px 6px rgba(3, 13, 20, 0.16);
+  }
+
+  .operator-filter-button.is-active:hover {
+    border-color: transparent;
+    background: linear-gradient(
+      135deg,
+      rgba(208, 188, 145, 0.74) 0%,
+      rgba(82, 78, 67, 0.86) 45%,
+      rgba(20, 45, 52, 0.96) 100%
+    );
+    color: var(--operator-accent-light);
+    transform: none;
+    box-shadow: 0 2px 7px rgba(3, 13, 20, 0.17);
+  }
+
+  .operator-filter-button.rarity-6.is-active:hover,
+  .operator-filter-button.rarity-5.is-active:hover,
+  .operator-filter-button.rarity-4.is-active:hover,
+  .operator-filter-button.rarity-3.is-active:hover,
+  .operator-filter-button.rarity-2.is-active:hover,
+  .operator-filter-button.rarity-1.is-active:hover {
+    color: var(--operator-filter-rarity);
+  }
 }
