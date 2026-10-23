@@ -48,7 +48,7 @@ const tacticalPhasesFixture = {
 } as const;
 
 describe("OperatorDetailData image policy", () => {
-  it("marks subclass icons unoptimized and keeps regular icons optimized", () => {
+  it("marks class and subclass icons unoptimized", () => {
     render(
       <OperatorDetailData
         operator={operator}
@@ -60,8 +60,7 @@ describe("OperatorDetailData image policy", () => {
 
     const images = screen.getAllByTestId("next-image");
     expect(images).toHaveLength(2);
-    expect(images.filter((image) => image.getAttribute("data-unoptimized") === "true")).toHaveLength(1);
-    expect(images.filter((image) => image.getAttribute("data-unoptimized") === "false")).toHaveLength(1);
+    expect(images.filter((image) => image.getAttribute("data-unoptimized") === "true")).toHaveLength(2);
   });
 
   it("shows a loading state while the E2 illustration transitions", () => {
@@ -89,11 +88,13 @@ describe("OperatorDetailData image policy", () => {
     expect(loadingArt).toHaveAttribute("aria-busy", "true");
     const preload = document.querySelector(".operator-detail-illustration-preload");
     expect(preload).toBeInTheDocument();
+    expect(preload).toHaveAttribute("data-unoptimized", "false");
 
     fireEvent.load(preload!);
 
     const eliteTwo = document.querySelector(".operator-detail-illustration.is-elite2");
     expect(eliteTwo).toBeInTheDocument();
+    expect(eliteTwo).toHaveAttribute("data-unoptimized", "false");
     expect(loadingArt).toHaveAttribute("aria-busy", "true");
 
     fireEvent.load(eliteTwo!);
