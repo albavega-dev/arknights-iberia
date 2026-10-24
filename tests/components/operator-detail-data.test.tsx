@@ -15,6 +15,7 @@ vi.mock("next/image", () => ({
 import { OperatorDetailData } from "../../src/app/operators/[slug]/operator-detail-data";
 import { OperatorTacticalInfo } from "../../src/app/operators/[slug]/operator-tactical-info";
 import type { OperatorRecord } from "../../src/game-data/operators";
+import { getRelevantPotentialRanks, officialPotentialToAppliedRanks, type OperatorStatsProfile } from "../../src/game-data/operator-stats";
 
 const operator: OperatorRecord = {
   id: "char_component_test",
@@ -47,7 +48,77 @@ const tacticalPhasesFixture = {
   ],
 } as const;
 
+const statsFixture: OperatorStatsProfile = {
+  operatorId: operator.id,
+  region: "en",
+  source: { repository: "test", revision: "test", path: "character_table.json", sha256: "test" },
+  phases: [
+    { phase: 0, maxLevel: 30, keyframes: [{ level: 1, attributes: { maxHp: 100, atk: 20, def: 10, magicResistance: 0, baseAttackTime: 1.2 } }, { level: 30, attributes: { maxHp: 200, atk: 40, def: 20, magicResistance: 5, baseAttackTime: 1.2 } }] },
+    { phase: 1, maxLevel: 50, keyframes: [{ level: 1, attributes: { maxHp: 210, atk: 42, def: 21, magicResistance: 5 } }, { level: 50, attributes: { maxHp: 400, atk: 80, def: 40, magicResistance: 10 } }] },
+  ],
+  favorKeyframes: [{ level: 100, attributes: { atk: 5 } }],
+  potentialRanks: [
+    { rank: 0, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 2 }] } }] },
+    { rank: 1, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 3 }] } }] },
+    { rank: 2, effects: [] },
+  ],
+  modules: [{ uniEquipId: "uniequip_test", operatorId: operator.id, region: "en", name: "Test Module", moduleType: "SPC-X", typeIcon: "spc-x", moduleSourceRegion: "en", levels: [{ level: 1, attributes: { atk: 3 }, specialEffects: [] }] }],
+};
+
 describe("OperatorDetailData image policy", () => {
+  it("calculates stats through elite, level, trust, potential and module controls", () => {
+    render(
+      <OperatorDetailData
+        operator={operator}
+        stats={statsFixture}
+        biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }}
+        tactical={null}
+        artistCredit={null}
+      />,
+    );
+
+    expect(screen.queryByRole("button", { name: "Potencial 1" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Potencial 2" })).toHaveAttribute("aria-pressed", "false");
+    fireEvent.click(screen.getByRole("button", { name: "Potencial 2" }));
+    expect(screen.getByRole("button", { name: "Potencial 2" })).toHaveAttribute("aria-pressed", "true");
+    fireEvent.click(screen.getByRole("button", { name: "Potencial 2" }));
+    expect(screen.getByRole("button", { name: "Potencial 2" })).toHaveAttribute("aria-pressed", "false");
+    expect(screen.getByRole("heading", { name: /Élite 1 nivel 50/ })).toBeInTheDocument();
+    const level = document.getElementById("stats-level") as HTMLInputElement;
+    fireEvent.change(level, { target: { value: "25" } });
+    expect(screen.getByText("303")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "Élite 0" }));
+    expect(screen.getByRole("heading", { name: /Élite 0 nivel 1/ })).toBeInTheDocument();
+    expect(level).toHaveValue("1");
+    fireEvent.change(level, { target: { value: "25" } });
+    fireEvent.click(screen.getByRole("button", { name: "Élite 0" }));
+    expect(screen.getByRole("heading", { name: /Élite 0 nivel 25/ })).toBeInTheDocument();
+    const statsCard = screen.getByRole("region", { name: "Estadísticas calculadas" });
+    expect(statsCard).toHaveTextContent("Intervalo");
+    expect(statsCard).not.toHaveTextContent("Velocidad de ataque");
+    const withoutModule = statsCard.textContent;
+    const moduleButton = screen.getByRole("button", { name: /SPC-X: Test Module/ });
+    expect(moduleButton).toHaveAttribute("title", "Test Module");
+    fireEvent.click(moduleButton);
+    expect(statsCard.textContent).not.toBe(withoutModule);
+
+    fireEvent.click(screen.getByRole("button", { name: "Élite 1" }));
+    expect(screen.getByRole("heading", { name: /Élite 1 nivel 1/ })).toBeInTheDocument();
+    expect(level).toHaveValue("1");
+    const trust = document.getElementById("stats-trust") as HTMLInputElement;
+    fireEvent.change(trust, { target: { value: "0" } });
+    expect(trust).toHaveValue("0");
+  });
+
+  it("shows only potential one and ranks with visible numeric bonuses", () => {
+    const profile = { potentialRanks: [{ rank: 0, effects: [] }, { rank: 1, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 5 }] } }] }, { rank: 2, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "CUSTOM", value: 1 }] } }] }] } as Pick<OperatorStatsProfile, "potentialRanks">;
+    expect(getRelevantPotentialRanks(profile)).toEqual([3]);
+    expect(officialPotentialToAppliedRanks(1)).toBe(0);
+    expect(officialPotentialToAppliedRanks(2)).toBe(1);
+    expect(officialPotentialToAppliedRanks(6)).toBe(5);
+  });
+
   it("marks class and subclass icons unoptimized", () => {
     render(
       <OperatorDetailData
