@@ -9,6 +9,7 @@ La disponibilidad pública de una URL o de un repositorio comunitario no equival
 | Torre de Operadores | Icono de navegación | [PRTS Design](https://github.com/MooncellWiki/prts-design) | Incluido; revisar por separado los derechos del asset del juego |
 | Anchor | Favicon e identidad de interfaz | [Lucide](https://github.com/lucide-icons/lucide) | Incluido mediante `lucide-react` y `public/assets/anchor.svg` |
 | Iconos de interfaz | Navegación y controles | [Lucide](https://github.com/lucide-icons/lucide) | Dependencia del proyecto; conservar su licencia |
+| Iconos de habilidades | Pestaña Habilidades de las fichas | [Arknight-Images](https://github.com/PuppiizSunniiz/Arknight-Images), carpeta `skills/`, commit `1a41341cc634461a5abe3456722801a39b9a9d32`; 887 archivos locales en `public/assets/operator-skills/`, con URL, bytes y SHA-256 en `data/operator-skill-icons-manifest.json` | Incluido; copia sin modificar. Los iconos pertenecen a sus propietarios y la fuente no declara una licencia propia |
 | Retratos e ilustraciones | Catálogo y fichas | CDN y repositorios comunitarios indicados en [SOURCES.md](SOURCES.md) | Uso actual; condiciones de producción pendientes |
 
 Los materiales originales de Arknights conservan la titularidad de sus propietarios. La atribución no sustituye una autorización cuando sea necesaria.

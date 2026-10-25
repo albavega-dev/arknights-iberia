@@ -14,7 +14,7 @@ Este documento recoge las fuentes de datos, recursos gráficos y herramientas ut
 
 ## Recursos gráficos
 
-- [Arknight-Images](https://github.com/PuppiizSunniiz/Arknight-Images): retratos, ilustraciones e iconos externos referenciados por los componentes.
+- [Arknight-Images](https://github.com/PuppiizSunniiz/Arknight-Images): retratos, ilustraciones e iconos externos referenciados por los componentes. Los iconos de habilidades se copian localmente desde `skills/` en el commit `1a41341cc634461a5abe3456722801a39b9a9d32` (`data/operator-skill-icons-manifest.json`).
 - [PRTS Design](https://github.com/MooncellWiki/prts-design): procedencia del icono de Operadores.
 - [Magnific](https://www.magnific.com/): atribución indicada para el recurso del faro.
 
