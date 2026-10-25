@@ -1,9 +1,9 @@
-import { createHash } from "node:crypto";
-import { mkdir, readFile, rename, rm, stat, writeFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import { join } from "node:path";
 import { isDeepStrictEqual } from "node:util";
 import { gameDataRepository, gameDataRevisions, gameDataTableHashes, type GameDataRegion, type GameDataTable } from "../src/game-data/gamedata-revisions";
-import { buildDatasetIndex, checkDatasetLimits, datasetFileName, datasetLimits, serializeDatasetJson, validateDatasetIndex, type DatasetFile, type DatasetIndex } from "../src/game-data/operator-dataset";
+import { validateDatasetIndex, type DatasetFile, type DatasetIndex } from "../src/game-data/operator-dataset";
+import { arg, exists, operatorDatasetFile, readCatalog, readJson as json, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
 import { attachModuleStats, extractOperatorStatsProfiles, type OperatorStatsProfile } from "../src/game-data/operator-stats";
 
 export const statsDatasetName = "operator-stats";
@@ -23,22 +23,7 @@ export type StatsGeneratorOptions = Readonly<{
 }>;
 export type StatsVerification = { identical: number; differences: { operatorId: string; keys: string[] }[]; missing: string[]; ignored: number };
 
-export function tableFlag(region: GameDataRegion, table: GameDataTable): string { return `--${region}-${table.replace(/_table$/, "").replaceAll("_", "-")}`; }
-export function arg(name: string, argv: readonly string[]): string { const index = argv.indexOf(name); const value = argv[index + 1]; if (index < 0 || !value || value.startsWith("--")) throw new Error(`Missing ${name}`); return value; }
-const sha256 = (data: string | Buffer) => createHash("sha256").update(data).digest("hex").toUpperCase();
-async function json(path: string): Promise<unknown> { return JSON.parse(await readFile(path, "utf8")); }
-const exists = (path: string) => stat(path).then(() => true, () => false);
-
-export async function readCatalog(releasePath: string, regionalPath: string, expectedSize: number): Promise<Map<string, GameDataRegion>> {
-  const ids = (manifest: unknown, label: string) => { const operators = (manifest as { operators?: { id?: unknown }[] }).operators; if (!Array.isArray(operators)) throw new Error(`${label} has no operators`); return operators.map((item) => { if (typeof item.id !== "string") throw new Error(`${label} has an operator without id`); return item.id; }); };
-  const catalog = new Map<string, GameDataRegion>();
-  for (const [id, region] of [...ids(await json(releasePath), "Release manifest").map((id) => [id, "en"] as const), ...ids(await json(regionalPath), "Regional manifest").map((id) => [id, "cn"] as const)]) {
-    if (catalog.has(id)) throw new Error(`Duplicate catalog operator: ${id}`);
-    catalog.set(id, region);
-  }
-  if (catalog.size !== expectedSize) throw new Error(`Catalog has ${catalog.size} operators; expected ${expectedSize}`);
-  return catalog;
-}
+export { arg, readCatalog, tableFlag };
 
 export function buildStatsDataset(input: Readonly<Record<GameDataRegion, Readonly<Record<GameDataTable, unknown>>>>, catalog: ReadonlyMap<string, GameDataRegion>, sources: Record<GameDataRegion, StatsSource>): StatsDataset {
   const profiles: StatsDatasetProfile[] = [];
@@ -55,7 +40,7 @@ export function buildStatsDataset(input: Readonly<Record<GameDataRegion, Readonl
 }
 
 export function datasetFiles(dataset: StatsDataset): DatasetFile[] {
-  return dataset.profiles.map((profile) => { const text = serializeDatasetJson(profile); return { operatorId: profile.operatorId, region: profile.region as GameDataRegion, text, bytes: Buffer.byteLength(text), sha256: sha256(text) }; });
+  return dataset.profiles.map((profile) => operatorDatasetFile(profile.operatorId, profile.region as GameDataRegion, profile));
 }
 
 export async function readStatsDataset(directory: string): Promise<StatsDataset> {
@@ -104,25 +89,7 @@ export function compareStatsManifests(reference: unknown, generated: StatsDatase
 }
 
 export async function writeStatsDataset(directory: string, dataset: StatsDataset, options: Readonly<{ force: boolean; limits?: Readonly<{ fileBytes: number; totalBytes: number }> }>): Promise<{ index: DatasetIndex; totalBytes: number; warnings: string[] }> {
-  const files = datasetFiles(dataset);
-  const index = buildDatasetIndex(statsDatasetName, dataset.sources, files);
-  const indexText = serializeDatasetJson(index);
-  const { errors, warnings } = checkDatasetLimits(index, Buffer.byteLength(indexText), options.limits ?? datasetLimits);
-  if (errors.length) throw new Error(`${errors.join("; ")}; output not written`);
-  if (await exists(directory) && !options.force) throw new Error("Output exists; pass --force to overwrite");
-  const partial = `${directory}.${process.pid}.partial`;
-  const previous = `${directory}.${process.pid}.previous`;
-  await rm(partial, { recursive: true, force: true });
-  await mkdir(partial, { recursive: true });
-  try {
-    for (const file of files) await writeFile(join(partial, datasetFileName(file.operatorId)), file.text, "utf8");
-    await writeFile(join(partial, "index.json"), indexText, "utf8");
-  } catch (error) { await rm(partial, { recursive: true, force: true }); throw error; }
-  const hadPrevious = await exists(directory);
-  if (hadPrevious) await rename(directory, previous);
-  try { await rename(partial, directory); } catch (error) { if (hadPrevious) await rename(previous, directory); await rm(partial, { recursive: true, force: true }); throw error; }
-  if (hadPrevious) await rm(previous, { recursive: true, force: true });
-  return { index, totalBytes: Buffer.byteLength(indexText) + files.reduce((sum, file) => sum + file.bytes, 0), warnings };
+  return writeDatasetDirectory(directory, statsDatasetName, dataset.sources, datasetFiles(dataset), options);
 }
 
 export async function main(argv: readonly string[] = process.argv, options: StatsGeneratorOptions = {}): Promise<void> {
