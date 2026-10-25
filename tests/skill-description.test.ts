@@ -35,7 +35,7 @@ describe("parseSkillDescription real cases", () => {
 
   it("keeps stun as a plain number (skchr_amiya_2)", () => {
     assert.deepEqual(parseSkillDescription("<$ba.stun>Stun</> for {stun}s", bb(["stun", 10])), [
-      { type: "style", tag: "$ba.stun", tone: "status", children: [text("Stun")] },
+      { type: "style", tag: "$ba.stun", tone: "status", termId: "ba.stun", children: [text("Stun")] },
       text(" for "),
       value("stun", "10"),
       text("s"),
@@ -50,8 +50,46 @@ describe("parseSkillDescription markup", () => {
       text(" and "),
       { type: "style", tag: "@ba.rem", tone: "keyword", children: [text("note")] },
       text(" and "),
-      { type: "style", tag: "$ba.binding", tone: "status", children: [text("Bind")] },
+      { type: "style", tag: "$ba.binding", tone: "status", termId: "ba.binding", children: [text("Bind")] },
     ]);
+  });
+
+  it("maps the decrease and keyword tags found in the catalog", () => {
+    assert.deepEqual(parseSkillDescription("<@ba.vdown>slow</> <@ba.kw>Limit</> <@cc.vup>up</> <@cc.rem>r</> <@cc.kw>k</>", []), [
+      { type: "style", tag: "@ba.vdown", tone: "decrease", children: [text("slow")] },
+      text(" "),
+      { type: "style", tag: "@ba.kw", tone: "keyword", children: [text("Limit")] },
+      text(" "),
+      { type: "style", tag: "@cc.vup", tone: "increase", children: [text("up")] },
+      text(" "),
+      { type: "style", tag: "@cc.rem", tone: "keyword", children: [text("r")] },
+      text(" "),
+      { type: "style", tag: "@cc.kw", tone: "keyword", children: [text("k")] },
+    ]);
+  });
+
+  it("gives every glossary term the status tone and keeps its id", () => {
+    assert.deepEqual(parseSkillDescription("<$ba.sluggish>Slow</> and <$ba.dt.element>Elemental</> and <$cc.bd_A>x</>", []), [
+      { type: "style", tag: "$ba.sluggish", tone: "status", termId: "ba.sluggish", children: [text("Slow")] },
+      text(" and "),
+      { type: "style", tag: "$ba.dt.element", tone: "status", termId: "ba.dt.element", children: [text("Elemental")] },
+      text(" and "),
+      { type: "style", tag: "$cc.bd_A", tone: "status", termId: "cc.bd_A", children: [text("x")] },
+    ]);
+  });
+
+  it("parses a glossary explanation with nested terms and real line breaks", () => {
+    assert.deepEqual(parseSkillDescription("Cannot move.\n<$ba.cold>Cold</> then <@cc.rem>wait</>", []), [
+      text("Cannot move."),
+      { type: "lineBreak" },
+      { type: "style", tag: "$ba.cold", tone: "status", termId: "ba.cold", children: [text("Cold")] },
+      text(" then "),
+      { type: "style", tag: "@cc.rem", tone: "keyword", children: [text("wait")] },
+    ]);
+  });
+
+  it("treats a term tag without an id as an unknown tag", () => {
+    assert.deepEqual(parseSkillDescription("<$>text</>", []), [text("text")]);
   });
 
   it("converts the literal \n and real newlines to line breaks", () => {
@@ -70,7 +108,7 @@ describe("parseSkillDescription markup", () => {
   });
 
   it("shows the inner text of unknown tags without style or raw markers", () => {
-    assert.deepEqual(parseSkillDescription("<@ba.unknown>text</> after <$ba.other>more", []), [text("text after more")]);
+    assert.deepEqual(parseSkillDescription("<@ba.unknown>text</> after <@ba.other>more", []), [text("text after more")]);
     assert.deepEqual(parseSkillDescription("<@ba.unknown>a <@ba.vup>{atk:0%}</> b</>", bb(["atk", 1])), [text("a "), { type: "style", tag: "@ba.vup", tone: "increase", children: [value("atk", "100 %", true)] }, text(" b")]);
   });
 
@@ -111,11 +149,31 @@ describe("parseSkillDescription values", () => {
   });
 
   it("keeps unsupported formats and non-finite values as unknown markers", () => {
-    assert.deepEqual(parseSkillDescription("{atk:0.0} {nan}", bb(["atk", 1], ["nan", Number.NaN])), [
-      { type: "unknownMarker", text: "{atk:0.0}" },
+    assert.deepEqual(parseSkillDescription("{atk:0.00} {nan}", bb(["atk", 1], ["nan", Number.NaN])), [
+      { type: "unknownMarker", text: "{atk:0.00}" },
       text(" "),
       { type: "unknownMarker", text: "{nan}" },
     ]);
+  });
+
+  it("formats :0 as a rounded integer and :0.0 with its natural precision (Terra Wiki: Greyy S2, Thorns S2)", () => {
+    assert.deepEqual(parseSkillDescription("{a:0} {b:0} {c:0.0} {d:0.0} {e:0.0}", bb(["a", 6], ["b", 2.6], ["c", 2], ["d", 1.5], ["e", 0.75])), [
+      value("a", "6"), text(" "), value("b", "3"), text(" "), value("c", "2"), text(" "), value("d", "1,5"), text(" "), value("e", "0,75"),
+    ]);
+  });
+
+  it("formats :0.0% as a percentage with natural precision", () => {
+    assert.deepEqual(parseSkillDescription("{hp:0.0%} {atk:0.0%}", bb(["hp", 0.025], ["atk", 1])), [value("hp", "2,5 %", true), text(" "), value("atk", "100 %", true)]);
+  });
+
+  it("negates the value of {-key} and {-key:0%} (Frostleaf S1, Nights S2)", () => {
+    assert.deepEqual(parseSkillDescription("-{-move_speed:0%} {-def} {-max_hp:0.0}", bb(["move_speed", -0.2], ["def", -3], ["max_hp", -0.75])), [
+      text("-"), value("move_speed", "20 %", true), text(" "), value("def", "3"), text(" "), value("max_hp", "0,75"),
+    ]);
+  });
+
+  it("keeps a negated key with an unknown name or without a name as an unknown marker", () => {
+    assert.deepEqual(parseSkillDescription("{-gone} {-}", bb(["atk", 1])), [{ type: "unknownMarker", text: "{-gone}" }, text(" "), { type: "unknownMarker", text: "{-}" }]);
   });
 
   it("matches keys case-insensitively and supports keys with @", () => {
