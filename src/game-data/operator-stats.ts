@@ -98,7 +98,7 @@ export function extractOperatorStatsProfiles(table: unknown, region: StatsRegion
     });
     const favor = Array.isArray(record.favorKeyFrames) ? record.favorKeyFrames.flatMap((frame) => { const entry = frame as Record<string, unknown>; return typeof entry.level === "number" ? [{ level: entry.level, attributes: numericRecord(entry.data) }] : []; }) : [];
     const potentialSource = Array.isArray(record.potentialRanks) ? record.potentialRanks : Object.values(record.potentialRanks ?? {});
-    const potentialRanks = potentialSource.map((entry, rank) => { const item = entry as Record<string, unknown>; const buff = item.buff; return { rank, effects: buff && typeof buff === "object" && !Array.isArray(buff) && "attributes" in buff ? (buff as Record<string, unknown>).attributes as readonly unknown[] : buff ? [buff] : [] }; });
+    const potentialRanks = potentialSource.map((entry, rank) => { const item = entry as Record<string, unknown>; const buff = item.buff; return { rank, effects: buff ? [buff] : [] }; });
     return [{ operatorId, region, source, phases, favorKeyframes: favor, potentialRanks, modules: [] }];
   });
 }

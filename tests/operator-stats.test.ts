@@ -24,6 +24,19 @@ it("selects the requested regional profile and reports missing data", () => {
   expect(getStatsProfile(manifest, "char_test", "en")).toBeNull();
 });
 
+it("keeps each potential buff whole so display rows can read its modifiers", () => {
+  const buff = { attributes: { abnormalFlags: null, attributeModifiers: [{ attributeType: "COST", formulaItem: "ADDITION", value: -1 }] } };
+  const [profile] = extractOperatorStatsProfiles({ char_test: { phases: [{ maxLevel: 30, attributesKeyFrames: [] }], potentialRanks: [{ buff }, { buff: null }] } }, "en", source);
+  expect(profile.potentialRanks).toEqual([{ rank: 0, effects: [buff] }, { rank: 1, effects: [] }]);
+  expect(potentialDisplayRows(profile.potentialRanks[0].effects)).toEqual([{ label: "Coste DP", value: "-1", special: false }]);
+});
+
+it("records the profile region as the module source region", () => {
+  const profiles = extractOperatorStatsProfiles({ char_test: { phases: [{ maxLevel: 30, attributesKeyFrames: [] }] } }, "cn", source);
+  const [profile] = attachModuleStats(profiles, { charEquip: { char_test: ["uniequip_test"] }, equipDict: { uniequip_test: { charId: "char_test", uniEquipName: "Test Module", typeName1: "PHY", typeName2: "X" } } }, { uniequip_test: { phases: [{ equipLevel: 1, attributeBlackboard: [], parts: [] }] } }, "cn");
+  expect(profile.modules[0]).toMatchObject({ region: "cn", moduleSourceRegion: "cn", moduleType: "PHY-X" });
+});
+
 it("separates numeric potential additions from special effects", () => {
   const rows = potentialDisplayRows([{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 30 }] } }, { attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "CUSTOM", value: 1 }] } }]);
   expect(rows.map((row) => ({ label: row.label, value: row.value, special: row.special }))).toEqual([{ label: "ATK", value: "+30", special: false }, { label: "Efecto especial", value: "Disponible en los datos originales; no convertido a bonificación numérica", special: true }]);

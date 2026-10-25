@@ -18,6 +18,7 @@ export default defineConfig({
       include: [
         "src/app/operators/[slug]/operator-detail-data.tsx",
         "src/app/operators/[slug]/operator-tactical-info.tsx",
+        "src/game-data/operator-stats.ts",
       ],
       exclude: ["**/*.d.ts"],
     },
