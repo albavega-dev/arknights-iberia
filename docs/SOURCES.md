@@ -1,22 +1,25 @@
 # Fuentes
 
-Esta lista recoge únicamente fuentes activas o necesarias para comprender el código y los datos publicados.
+Este documento recoge las fuentes de datos, recursos gráficos y herramientas utilizadas en Arknights Iberia, junto con sus respectivas atribuciones.
 
 ## Datos del juego
 
-- [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata): snapshots EN/CN utilizados por el pipeline. Las revisiones están fijadas en los manifiestos de `data/`; la procedencia técnica no implica licencia de redistribución.
-
-## Recursos visuales
-
-- [Arknights Wiki](https://arknights.wiki.gg/): referencia documentada para Mystic Sea.
-- [PuppiizSunniiz/Arknight-Images](https://github.com/PuppiizSunniiz/Arknight-Images): retratos, ilustraciones e iconos externos referenciados por los manifiestos y componentes.
+- [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata): snapshots EN/CN utilizados por el pipeline.
 - [Arknights CDN](https://web.hycdn.cn/arknights/game/assets/char/portrait/): retratos por identificador `char_*`.
-- [PRTS Design](https://github.com/MooncellWiki/prts-design): procedencia documentada del icono de Operadores.
-- [Lucide](https://github.com/lucide-icons/lucide): iconos de interfaz utilizados mediante `lucide-react`.
 
-## Referencias comunitarias
+## Wikis y documentación comunitaria
 
-- [Terra Wiki](https://arknights.wiki.gg/): contraste de nombres, fechas y relaciones cuando se indica en los manifiestos.
+- [Terra Wiki](https://arknights.wiki.gg/): contraste de nombres, fechas y relaciones.
 - [PRTS Wiki](https://prts.wiki/): referencia comunitaria para información CN.
 
-Las fuentes comunitarias y los repositorios de assets deben revisarse individualmente. No se asume una licencia común ni autorización de uso por el mero hecho de que el contenido sea accesible.
+## Recursos gráficos
+
+- [Arknight-Images](https://github.com/PuppiizSunniiz/Arknight-Images): retratos, ilustraciones e iconos externos referenciados por los componentes.
+- [PRTS Design](https://github.com/MooncellWiki/prts-design): procedencia del icono de Operadores.
+- [Magnific](https://www.magnific.com/): atribución indicada para el recurso del faro.
+
+## Bibliotecas y herramientas
+
+- [Lucide](https://lucide.dev/): iconos de interfaz utilizados mediante `lucide-react`.
+
+La presencia de una fuente en este documento no constituye por sí misma una licencia de redistribución. Las condiciones de uso de recursos de terceros deben revisarse individualmente.

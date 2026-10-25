@@ -1,5 +1,7 @@
 # Hoja de ruta
 
+La próxima actualización funcional prevista es Stats 0.2.0: investigación y posterior incorporación gradual de perfiles estadísticos verificables.
+
 La hoja de ruta describe objetivos públicos y no promete fechas ni disponibilidad.
 
 ## Disponible
