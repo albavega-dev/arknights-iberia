@@ -1,0 +1,302 @@
+{
+  "operatorId": "char_199_yak",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_yak_1",
+      "name": "Stamina Enhancement",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 0,
+          "values": [
+            0.2,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 0,
+          "values": [
+            0.23,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 0,
+          "values": [
+            0.26,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 5,
+          "values": [
+            0.3,
+            25
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 5,
+          "values": [
+            0.33,
+            25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 5,
+          "values": [
+            0.36,
+            25
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 5,
+          "values": [
+            0.4,
+            30
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 5,
+          "values": [
+            0.5,
+            33
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 29,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 5,
+          "values": [
+            0.6,
+            36
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            0.7,
+            40
+          ]
+        }
+      ],
+      "description": "Max HP <@ba.vup>+{max_hp:0%}</>; Restores HP by <@ba.vup>{HP_RECOVERY_PER_SEC}</> per second",
+      "blackboardKeys": [
+        "max_hp",
+        "hp_recovery_per_sec"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_yak_2",
+      "name": "Cold Resistance",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 0,
+          "values": [
+            0.2,
+            0.1,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 0,
+          "values": [
+            0.23,
+            0.1,
+            0.53
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 0,
+          "values": [
+            0.26,
+            0.1,
+            0.56
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.1,
+            0.6
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 0,
+          "values": [
+            0.33,
+            0.1,
+            0.63
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 0,
+          "values": [
+            0.36,
+            0.1,
+            0.66
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 5,
+          "values": [
+            0.4,
+            0.15,
+            0.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 5,
+          "values": [
+            0.43,
+            0.2,
+            0.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 29,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 5,
+          "values": [
+            0.46,
+            0.25,
+            0.9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 10,
+          "values": [
+            0.5,
+            0.3,
+            1
+          ]
+        }
+      ],
+      "description": "Max HP <@ba.vup>+{max_hp:0%}</>; DEF <@ba.vup>+{def:0%}</>; RES <@ba.vup>+{magic_resistance:0%}</>",
+      "blackboardKeys": [
+        "max_hp",
+        "def",
+        "magic_resistance"
+      ]
+    }
+  ],
+  "ranges": {}
+}

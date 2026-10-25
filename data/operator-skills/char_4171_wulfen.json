@@ -1,0 +1,324 @@
+{
+  "operatorId": "char_4171_wulfen",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_wulfen_1",
+      "name": "'For Scaring Beasts'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 0,
+          "values": [
+            1,
+            1.8,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "values": [
+            1,
+            1.85,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 0,
+          "values": [
+            1,
+            1.9,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 0,
+          "values": [
+            1,
+            1.95,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "values": [
+            1,
+            2.1,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 0,
+          "values": [
+            1,
+            2.1,
+            2.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 0,
+          "values": [
+            1,
+            2.2,
+            2.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 0,
+          "values": [
+            1,
+            2.3,
+            2.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            1,
+            2.5,
+            3
+          ]
+        }
+      ],
+      "description": "Passive Effect: Each Ore 'Killer' can be manually detonated once armed, which deals <@ba.vup>{atk_scale:0%}</> ATK as Physical damage to all enemies in range and <$ba.stun>Stuns</> them for <@ba.vup>{stun}</>s\nActive Effect: obtain an Ore 'Killer' immediately",
+      "blackboardKeys": [
+        "cnt",
+        "atk_scale",
+        "stun"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_wulfen_2",
+      "name": "'For Stubborn Rocks'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            1,
+            1.5,
+            -0.15,
+            5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            1,
+            1.6,
+            -0.15,
+            5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "values": [
+            1,
+            1.7,
+            -0.15,
+            5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "values": [
+            1,
+            1.8,
+            -0.15,
+            5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 0,
+          "values": [
+            1,
+            1.9,
+            -0.2,
+            5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 0,
+          "values": [
+            1,
+            2,
+            -0.2,
+            5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 0,
+          "values": [
+            1,
+            2.2,
+            -0.25,
+            5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 0,
+          "values": [
+            1,
+            2.3,
+            -0.25,
+            5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 0,
+          "values": [
+            1,
+            2.4,
+            -0.25,
+            5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            1,
+            2.5,
+            -0.25,
+            5
+          ]
+        }
+      ],
+      "description": "Passive Effect: Ore 'Killer' Attack Range expands, and detonating one detonates all armed Ore 'Killers' simultaneously; all enemies in range take <@ba.vup>{atk_scale:0%}</> ATK as Physical damage <@ba.vup>twice</>, and have <@ba.vup>-{-def:0%}</> DEF (does not stack) for <@ba.vup>{duration}</>s\nActive Effect: obtain an Ore 'Killer' immediately",
+      "blackboardKeys": [
+        "cnt",
+        "atk_scale",
+        "def",
+        "duration"
+      ]
+    }
+  ],
+  "ranges": {}
+}

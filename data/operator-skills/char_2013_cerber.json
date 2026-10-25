@@ -1,0 +1,506 @@
+{
+  "operatorId": "char_2013_cerber",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_cerber_1",
+      "name": "'Really Cold Axe'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            1.5,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            1.55,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            1.6,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.65,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.7,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.75,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.8,
+            2.5,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.9,
+            2.5,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            2,
+            2.5,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.1,
+            3,
+            3
+          ]
+        }
+      ],
+      "description": "Increases the ATK of the next attack to <@ba.vup>{atk_scale:0%}</>, prioritizing enemies that are not blocked and <$ba.root>Binding</> them for <@ba.vup>{duration}</> seconds\n<@ba.rem>Can store {cnt} charge(s)</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "duration",
+        "cnt"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_cerber_2",
+      "name": "'Really Hot Knives'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "description": "Attack Interval is <@ba.vup>reduced slightly</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 11,
+          "description": "Attack Interval is <@ba.vup>reduced slightly</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 12,
+          "description": "Attack Interval is <@ba.vup>reduced slightly</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 13,
+          "description": "Attack Interval is <@ba.vup>reduced</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 34,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 14,
+          "description": "Attack Interval is <@ba.vup>reduced</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 15,
+          "description": "Attack Interval is <@ba.vup>reduced</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 36,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 16,
+          "description": "Attack Interval is <@ba.vup>reduced moderately</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 37,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 18,
+          "description": "Attack Interval is <@ba.vup>reduced significantly</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.36
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 38,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 20,
+          "description": "Attack Interval is <@ba.vup>reduced significantly</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.36
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "description": "Attack Interval is <@ba.vup>reduced greatly</>, and attacks prioritize enemies with the highest DEF",
+          "values": [
+            0.33
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "base_attack_time"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_cerber_3",
+      "name": "'Really Heavy Spear'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 55,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 35,
+          "rangeId": "3-3",
+          "values": [
+            1,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 55,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 37,
+          "rangeId": "3-3",
+          "values": [
+            1.1,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 55,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 39,
+          "rangeId": "3-3",
+          "values": [
+            1.2,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 56,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 41,
+          "rangeId": "3-3",
+          "values": [
+            1.3,
+            2.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 56,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 43,
+          "rangeId": "3-3",
+          "values": [
+            1.4,
+            2.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 56,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 45,
+          "rangeId": "3-3",
+          "values": [
+            1.5,
+            2.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 57,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 47,
+          "rangeId": "3-3",
+          "values": [
+            1.6,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 58,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 49,
+          "rangeId": "3-3",
+          "values": [
+            1.75,
+            3.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 59,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 52,
+          "rangeId": "3-3",
+          "values": [
+            1.9,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 55,
+          "rangeId": "3-3",
+          "values": [
+            2.1,
+            5
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, attacks now deal <@ba.vup>Physical</> damage, prioritize enemies with the lowest defense, and silence targets for <@ba.vup>{attack@silence}</> seconds",
+      "blackboardKeys": [
+        "atk",
+        "attack@silence"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        }
+      ]
+    }
+  }
+}

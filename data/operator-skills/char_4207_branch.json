@@ -1,0 +1,354 @@
+{
+  "operatorId": "char_4207_branch",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_branch_1",
+      "name": "Desperate Resistance",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 20,
+          "initSp": 4,
+          "values": [
+            0.6,
+            -0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 20,
+          "initSp": 4,
+          "values": [
+            0.65,
+            -0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 20,
+          "initSp": 4,
+          "values": [
+            0.7,
+            -0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 20,
+          "initSp": 4,
+          "values": [
+            0.75,
+            -0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 20,
+          "initSp": 6,
+          "values": [
+            0.8,
+            -0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 20,
+          "initSp": 6,
+          "values": [
+            0.85,
+            -0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 20,
+          "initSp": 6,
+          "values": [
+            0.9,
+            -0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 18,
+          "initSp": 8,
+          "values": [
+            1,
+            -0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 18,
+          "initSp": 8,
+          "values": [
+            1.1,
+            -0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 10,
+          "values": [
+            1.2,
+            -0.5
+          ]
+        }
+      ],
+      "description": "DEF <@ba.vup>+{def:0%}</> and gains <$ba.buffres>status resistance</>",
+      "blackboardKeys": [
+        "def",
+        "one_minus_status_resistance"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_branch_2",
+      "name": "Set on Survival",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.8,
+            5,
+            0.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.85,
+            5,
+            0.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.9,
+            5,
+            0.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1,
+            5,
+            0.3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 3,
+          "rangeId": "x-4",
+          "values": [
+            1.05,
+            5,
+            0.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 3,
+          "rangeId": "x-4",
+          "values": [
+            1.1,
+            5,
+            0.4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 3,
+          "rangeId": "x-4",
+          "values": [
+            1.2,
+            5,
+            0.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            1.3,
+            5,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            1.4,
+            5,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            1.5,
+            5,
+            0.5
+          ]
+        }
+      ],
+      "description": "<$ba.tremble>Frightens</> nearby ground enemies for <@ba.vup>{not_combat}</>s; ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, and attacks all blocked enemies",
+      "blackboardKeys": [
+        "atk",
+        "not_combat",
+        "def"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

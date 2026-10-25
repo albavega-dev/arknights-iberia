@@ -1,0 +1,302 @@
+{
+  "operatorId": "char_446_aroma",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_aroma_1",
+      "name": "Power Cleaning",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            1.2,
+            0.4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            1.3,
+            0.45
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            1.4,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            1.5,
+            0.55
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            1.6,
+            0.6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            1.7,
+            0.65
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            1.8,
+            0.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            1.9,
+            0.75
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2,
+            0.8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2.1,
+            0.9
+          ]
+        }
+      ],
+      "description": "Next attack deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage, plus an additional <@ba.vup>{atk_scale_to_fly:0%}</> ATK as Arts damage to aerial enemies.\n<@ba.rem>Can store up to 2 charges.</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "atk_scale_to_fly"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_aroma_2",
+      "name": "Caution! Wet Floor!",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 15,
+          "values": [
+            0.5,
+            0.5,
+            15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 18,
+          "values": [
+            0.55,
+            0.55,
+            15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 18,
+          "values": [
+            0.6,
+            0.6,
+            15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 20,
+          "values": [
+            0.65,
+            0.65,
+            15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 20,
+          "values": [
+            0.7,
+            0.7,
+            15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 21,
+          "values": [
+            0.75,
+            0.75,
+            15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 21,
+          "values": [
+            0.8,
+            0.8,
+            15
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 23,
+          "values": [
+            0.9,
+            0.9,
+            15
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 25,
+          "values": [
+            0.95,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 27,
+          "values": [
+            1,
+            1.1,
+            15
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, and deals <@ba.vup>{attack@atk_scale_when_fly_finish:0%}</> ATK as Arts damage to Levitated enemies within range when they fall back to the ground.",
+      "blackboardKeys": [
+        "atk",
+        "attack@atk_scale_when_fly_finish",
+        "attack@duration"
+      ]
+    }
+  ],
+  "ranges": {}
+}

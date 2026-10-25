@@ -1,0 +1,597 @@
+{
+  "operatorId": "char_1032_excu2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_excu2_1",
+      "name": "Testament Exacted",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.1,
+            100,
+            8
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.1,
+            130,
+            8
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.1,
+            160,
+            8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 9,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.2,
+            190,
+            8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 9,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.2,
+            220,
+            8
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 9,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.2,
+            250,
+            8
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.3,
+            280,
+            8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.4,
+            320,
+            8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.45,
+            360,
+            8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.5,
+            400,
+            8
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, attacks ignore <@ba.vup>{def_penetrate_fixed}</> of the target's DEF\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)",
+      "blackboardKeys": [
+        "atk",
+        "def_penetrate_fixed",
+        "attack@trigger_time"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_excu2_2",
+      "name": "Close Combat",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.3,
+            1,
+            0.1,
+            1,
+            12
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 1,
+          "values": [
+            0.35,
+            0.35,
+            1,
+            0.1,
+            1,
+            12
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 2,
+          "values": [
+            0.4,
+            0.4,
+            1,
+            0.1,
+            1,
+            12
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 3,
+          "values": [
+            0.45,
+            0.45,
+            1,
+            0.2,
+            1,
+            12
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 4,
+          "values": [
+            0.5,
+            0.5,
+            1,
+            0.2,
+            1,
+            12
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "values": [
+            0.55,
+            0.55,
+            1,
+            0.2,
+            1,
+            12
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 6,
+          "values": [
+            0.6,
+            0.6,
+            1,
+            0.3,
+            1,
+            12
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 6,
+          "values": [
+            0.7,
+            0.7,
+            1,
+            0.3,
+            1,
+            12
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 6,
+          "values": [
+            0.75,
+            0.75,
+            1,
+            0.3,
+            1,
+            12
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 6,
+          "values": [
+            0.8,
+            0.8,
+            1,
+            0.4,
+            1,
+            12
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Block <@ba.vup>+{block_cnt}</>; upon receiving a melee attack from an enemy, there is a <@ba.vup>{prob:0%}</> chance to dodge and reload <@ba.vup>{recover_cnt}</> ammo\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "block_cnt",
+        "prob",
+        "recover_cnt",
+        "attack@trigger_time"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_excu2_3",
+      "name": "Damnatus Ex Foedere",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 36,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.9,
+            0.03,
+            2,
+            2,
+            0.5,
+            16,
+            30
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 35,
+          "initSp": 2,
+          "rangeId": "2-5",
+          "values": [
+            1,
+            0.03,
+            2,
+            2,
+            0.5,
+            16,
+            30
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 34,
+          "initSp": 4,
+          "rangeId": "2-5",
+          "values": [
+            1.1,
+            0.03,
+            2,
+            2,
+            0.5,
+            16,
+            30
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 33,
+          "initSp": 6,
+          "rangeId": "2-5",
+          "values": [
+            1.2,
+            0.04,
+            2,
+            2,
+            0.5,
+            16,
+            30
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 32,
+          "initSp": 8,
+          "rangeId": "2-5",
+          "values": [
+            1.3,
+            0.04,
+            2,
+            2,
+            0.5,
+            16,
+            30
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 31,
+          "initSp": 10,
+          "rangeId": "2-5",
+          "values": [
+            1.4,
+            0.04,
+            2,
+            2,
+            0.5,
+            16,
+            30
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 30,
+          "initSp": 12,
+          "rangeId": "2-5",
+          "values": [
+            1.5,
+            0.05,
+            2,
+            2,
+            0.5,
+            16,
+            30
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 28,
+          "initSp": 12,
+          "rangeId": "2-5",
+          "values": [
+            1.6,
+            0.05,
+            3,
+            2,
+            0.5,
+            16,
+            30
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 26,
+          "initSp": 12,
+          "rangeId": "2-5",
+          "values": [
+            1.7,
+            0.05,
+            3,
+            2,
+            0.5,
+            16,
+            30
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 24,
+          "initSp": 12,
+          "rangeId": "2-5",
+          "values": [
+            1.8,
+            0.06,
+            3,
+            2.5,
+            0.5,
+            16,
+            30
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vdown>lengthens slightly</>, Attack Range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>; each time 1 ammo is consumed, ATK increases by an additional <@ba.vup>{attack@atk:0%}</> (up to a maximum of {attack@max_stack_cnt} stacks); increases the Trait HP recovery effectiveness to <@ba.vup>{trait_ratio}</> times; when the skill ends, deals <@ba.vup>{attack@final_atk_scale:0%}</> of ATK as Physical damage to all enemies attacked while the skill is active\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "atk",
+        "attack@atk",
+        "trait_ratio",
+        "attack@final_atk_scale",
+        "base_attack_time",
+        "attack@trigger_time",
+        "attack@max_stack_cnt"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  }
+}

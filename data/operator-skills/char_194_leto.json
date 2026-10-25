@@ -1,0 +1,291 @@
+{
+  "operatorId": "char_194_leto",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_quickattack[3]",
+      "name": "Swift Strike γ",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 0,
+          "values": [
+            0.2,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 0,
+          "values": [
+            0.22,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 0,
+          "values": [
+            0.24,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 5,
+          "values": [
+            0.27,
+            25
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 5,
+          "values": [
+            0.29,
+            25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 5,
+          "values": [
+            0.31,
+            25
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 10,
+          "values": [
+            0.34,
+            35
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 10,
+          "values": [
+            0.37,
+            35
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 10,
+          "values": [
+            0.4,
+            35
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "values": [
+            0.45,
+            45
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>; ASPD <@ba.vup>+{attack_speed}</>",
+      "blackboardKeys": [
+        "atk",
+        "attack_speed"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_leto_2",
+      "name": "Answer the Call",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 6,
+          "values": [
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 7,
+          "values": [
+            0.3,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 8,
+          "values": [
+            0.4,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 9,
+          "values": [
+            0.5,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "values": [
+            0.6,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 11,
+          "values": [
+            0.7,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 12,
+          "values": [
+            0.8,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 14,
+          "values": [
+            0.9,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 14,
+          "values": [
+            1,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 16,
+          "values": [
+            1.15,
+            2
+          ]
+        }
+      ],
+      "description": "All [Ursus Student Self-government Group] Operators with skills ready activate their skills at the same time. Own ATK <@ba.vup>+{atk:0%}</>, attack an extra target, and ranged attacks no longer reduce ATK",
+      "blackboardKeys": [
+        "atk",
+        "attack@max_target"
+      ]
+    }
+  ],
+  "ranges": {}
+}

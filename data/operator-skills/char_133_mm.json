@@ -1,0 +1,324 @@
+{
+  "operatorId": "char_133_mm",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_mm_1",
+      "name": "Paralyzing Shell",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.35,
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.4,
+            1.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.45,
+            1.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.55,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.6,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.7,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.8,
+            2.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.9,
+            2.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2,
+            2.5
+          ]
+        }
+      ],
+      "description": "Increases the ATK of the next attack to <@ba.vup>{atk_scale:0%}</>, and <$ba.sluggish>Slows</> the target for <@ba.vup>{sluggish:0.0}</> seconds",
+      "blackboardKeys": [
+        "atk_scale",
+        "sluggish"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_mm_2",
+      "name": "Binding Shock",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.6,
+            0.9,
+            0.3,
+            0.8
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.65,
+            0.9,
+            0.3,
+            0.8
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.7,
+            0.9,
+            0.3,
+            0.8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.75,
+            1,
+            0.3,
+            0.8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.8,
+            1,
+            0.3,
+            0.8
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.85,
+            1,
+            0.3,
+            0.8
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.9,
+            1,
+            0.3,
+            0.9
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 0,
+          "values": [
+            0.5,
+            1,
+            1.1,
+            0.3,
+            0.9
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 29,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 0,
+          "values": [
+            0.5,
+            1.1,
+            1.1,
+            0.3,
+            0.9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            0.5,
+            1.2,
+            1.2,
+            0.3,
+            1
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, attacks <$ba.sluggish>Slow</> the target for <@ba.vup>{attack@sluggish:0.0}</> seconds and have <@ba.vup>{attack@prob:0%}</> chance to <$ba.stun>Stun</> them for <@ba.vup>{attack@stun:0.0}</> seconds",
+      "blackboardKeys": [
+        "base_attack_time",
+        "atk",
+        "attack@stun",
+        "attack@prob",
+        "attack@sluggish"
+      ]
+    }
+  ],
+  "ranges": {}
+}

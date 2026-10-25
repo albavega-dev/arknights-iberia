@@ -1,0 +1,601 @@
+{
+  "operatorId": "char_4182_oblvns",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_oblvns_1",
+      "name": "New Moon Awakening",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.46,
+            0.38,
+            0.29,
+            0.21,
+            0.17,
+            0.08,
+            0.03,
+            15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.55,
+            0.5,
+            0.42,
+            0.32,
+            0.23,
+            0.19,
+            0.09,
+            0.03,
+            15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.6,
+            0.55,
+            0.45,
+            0.35,
+            0.25,
+            0.2,
+            0.1,
+            0.03,
+            15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.65,
+            0.6,
+            0.49,
+            0.38,
+            0.27,
+            0.22,
+            0.11,
+            0.04,
+            15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.7,
+            0.64,
+            0.53,
+            0.41,
+            0.29,
+            0.24,
+            0.12,
+            0.04,
+            15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.75,
+            0.69,
+            0.57,
+            0.44,
+            0.31,
+            0.25,
+            0.12,
+            0.04,
+            15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.8,
+            0.73,
+            0.6,
+            0.47,
+            0.33,
+            0.27,
+            0.13,
+            0.04,
+            15
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            0.85,
+            0.78,
+            0.64,
+            0.5,
+            0.35,
+            0.29,
+            0.14,
+            0.05,
+            15
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            0.9,
+            0.83,
+            0.68,
+            0.53,
+            0.38,
+            0.3,
+            0.15,
+            0.05,
+            15
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1,
+            0.92,
+            0.75,
+            0.58,
+            0.42,
+            0.33,
+            0.17,
+            0.05,
+            15
+          ]
+        }
+      ],
+      "description": "Performs <@ba.vup>8</> notes; the Arts damage dealt by each note starts at <@ba.vup>{atk_scale:0%}</> of ATK but gradually reduces to <@ba.vup>{atk_scale_8:0%}</>;\n<@ba.rem>Can store 2 charges; releases 1 charge automatically when charges are full</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "atk_scale_2",
+        "atk_scale_3",
+        "atk_scale_4",
+        "atk_scale_5",
+        "atk_scale_6",
+        "atk_scale_7",
+        "atk_scale_8",
+        "angle"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_oblvns_2",
+      "name": "Full Moon Masquerade",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            60,
+            0.4,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            65,
+            0.45,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            70,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            80,
+            0.6,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            90,
+            0.65,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            100,
+            0.7,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            110,
+            0.75,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            120,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            130,
+            0.95,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            140,
+            1.1,
+            0.5
+          ]
+        }
+      ],
+      "description": "<@ba.rem>Swap between performing on the <@ba.vup>piano (starting)</> and <@ba.vup>organ</> timbres.</>\n<@ba.vup>Piano</>: ATK <@ba.vup>+{attack@atk:0%}</>, notes fly faster; notes pierce enemies, dealing <@ba.vup>Physical damage</>\n<@ba.vup>Organ</>: ASPD <@ba.vup>+{attack@attack_speed}</>, notes deal <@ba.vup>Arts damage</> and fly slower\n<@ba.rem>During <$ba.fever>Fever</>, the current timbre deals double strikes</>",
+      "blackboardKeys": [
+        "attack@attack_speed",
+        "attack@atk",
+        "attack@passby_delay"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_oblvns_3",
+      "name": "Crescent Moon Echoes",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 48,
+          "initSp": 28,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            1.4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 48,
+          "initSp": 28,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            1.45
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 48,
+          "initSp": 28,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            1.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 47,
+          "initSp": 28,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            1.55
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 47,
+          "initSp": 29,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            1.6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 47,
+          "initSp": 29,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            1.7
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 46,
+          "initSp": 30,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            1.8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 45,
+          "initSp": 31,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            1.9
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 44,
+          "initSp": 32,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            2.05
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 42,
+          "initSp": 34,
+          "rangeId": "3-21",
+          "values": [
+            0,
+            2.2
+          ]
+        }
+      ],
+      "description": "Attack Range expands, performs on both <@ba.vup>piano</> and <@ba.vup>organ</> timbres at once, each timbre creating <@ba.vup>2</> notes that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Physical and Arts damage respectively, which home in on the enemy with the highest RES or DEF respectively\n<@ba.rem>During <$ba.fever>Fever</>, <$ba.mujica>Ave Mujica</> members who receive fatal damage will not retreat until <$ba.fever>Fever</> is over</>",
+      "blackboardKeys": [
+        "attack@attack_speed",
+        "attack@atk_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-21": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

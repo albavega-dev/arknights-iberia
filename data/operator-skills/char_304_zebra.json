@@ -1,0 +1,419 @@
+{
+  "operatorId": "char_304_zebra",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_zebra_1",
+      "name": "Emergency Camouflage",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            30,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            33,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            36,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            40,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            43,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            46,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            50,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            55,
+            2,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            60,
+            2,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "correctedKeys": [
+            "duration"
+          ],
+          "values": [
+            70,
+            2,
+            4
+          ]
+        }
+      ],
+      "description": "The next attack grants <$ba.camou>Camouflage</> and <@ba.vup>{HP_RECOVERY_PER_SEC}</> HP recovery per second to a nearby ally unit with less than 50% HP, lasting for <@ba.vup>{duration}</> seconds (will not use on an ally unit already under the same effect)\n<@ba.rem>Can store {cnt} charge(s)</>",
+      "blackboardKeys": [
+        "hp_recovery_per_sec",
+        "cnt",
+        "duration"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_zebra_2",
+      "name": "Group Camouflage",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 15,
+          "rangeId": "x-5",
+          "values": [
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 15,
+          "rangeId": "x-5",
+          "values": [
+            0.23,
+            0.23
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 15,
+          "rangeId": "x-5",
+          "values": [
+            0.26,
+            0.26
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 54,
+          "initSp": 20,
+          "rangeId": "x-5",
+          "values": [
+            0.3,
+            0.3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 20,
+          "rangeId": "x-5",
+          "values": [
+            0.33,
+            0.33
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "rangeId": "x-5",
+          "values": [
+            0.36,
+            0.36
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 25,
+          "rangeId": "x-5",
+          "values": [
+            0.4,
+            0.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 25,
+          "rangeId": "x-5",
+          "values": [
+            0.45,
+            0.45
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 19,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 25,
+          "rangeId": "x-5",
+          "values": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "rangeId": "x-5",
+          "values": [
+            0.55,
+            0.55
+          ]
+        }
+      ],
+      "description": "Stops attacking; DEF <@ba.vup>+{def:0%}</> and Max HP <@ba.vup>+{max_hp:0%}</>. Self and allies in the surrounding 4 tiles gain <$ba.camou>Camouflage</>",
+      "blackboardKeys": [
+        "max_hp",
+        "def"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    },
+    "x-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 0
+        }
+      ]
+    }
+  }
+}

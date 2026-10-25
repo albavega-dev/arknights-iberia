@@ -1,0 +1,591 @@
+{
+  "operatorId": "char_4179_monstr",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_monstr_1",
+      "name": "Stratagem: Hyperpressurized Link",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            1.1,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            1.2,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            1.25,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            1.35,
+            4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            1.6,
+            4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            1.7,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            1.8,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            1.9,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "rangeId": "y-2",
+          "values": [
+            2,
+            4
+          ]
+        }
+      ],
+      "description": "The next heal is increased to <@ba.vup>{heal_scale:0%}</> ATK, and bounces per heal <@ba.vup>+1</>",
+      "blackboardKeys": [
+        "heal_scale",
+        "chain.max_target"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_monstr_2",
+      "name": "Stratagem: Overload",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "y-2",
+          "values": [
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "y-2",
+          "values": [
+            1.6
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "y-2",
+          "values": [
+            1.7
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 7,
+          "rangeId": "y-2",
+          "values": [
+            1.8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 7,
+          "rangeId": "y-2",
+          "values": [
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 7,
+          "rangeId": "y-2",
+          "values": [
+            2.1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 8,
+          "rangeId": "y-2",
+          "values": [
+            2.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 9,
+          "rangeId": "y-2",
+          "values": [
+            2.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 10,
+          "rangeId": "y-2",
+          "values": [
+            2.6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 13,
+          "rangeId": "y-2",
+          "values": [
+            2.8
+          ]
+        }
+      ],
+      "description": "When skill is active, prioritizes healing the Reconstruction; whenever the Reconstruction is healed by Mon3tr, it will perform a bouncing heal; Talent 2's effect increases to <@ba.vup>{talent_scale}</>x",
+      "blackboardKeys": [
+        "talent_scale"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_monstr_3",
+      "name": "Stratagem: Meltdown",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.2,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.3,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            2.5,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            2.6,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            2.7,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 7,
+          "rangeId": "x-4",
+          "values": [
+            2.8,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 8,
+          "rangeId": "x-4",
+          "values": [
+            3,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 9,
+          "rangeId": "x-4",
+          "values": [
+            3.1,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 11,
+          "rangeId": "x-4",
+          "values": [
+            3.3,
+            80,
+            5000,
+            2,
+            -1.5,
+            0.5
+          ]
+        }
+      ],
+      "description": "Attack Range changes, <$ba.addash>Moves</> to the position of the Reconstruction, ATK <@ba.vup>+{atk:0%}</>, Attack Interval reduces, Block <@ba.vup>+{block_cnt}</>, Max HP <@ba.vup>+{max_hp}</>, loses <@ba.vdown>{damage_per_second}</> HP per second, attacks all blocked enemies, attacks deal <@ba.vup>True</> damage, and attacks heal self by <@ba.vup>{attack@heal_scale:0%}</> ATK\n<@ba.rem>When skill ends or lethal damage is taken, Mon3tr returns to her original position</>",
+      "blackboardKeys": [
+        "atk",
+        "damage_per_second",
+        "max_hp",
+        "block_cnt",
+        "base_attack_time",
+        "attack@heal_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    },
+    "y-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  }
+}

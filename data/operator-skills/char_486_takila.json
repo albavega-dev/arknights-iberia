@@ -1,0 +1,368 @@
+{
+  "operatorId": "char_486_takila",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_takila_1",
+      "name": "Decisive Action",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            20,
+            1.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            23,
+            1.25
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            26,
+            1.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            29,
+            1.35
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            32,
+            1.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            35,
+            1.45
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            38,
+            1.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            42,
+            1.55
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            46,
+            1.6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            50,
+            1.7
+          ]
+        }
+      ],
+      "description": "ASPD <@ba.vup>+{attack_speed}</> and every attack deals <@ba.vup>{attack@atk_scale:0%}</> of ATK as Physical damage",
+      "blackboardKeys": [
+        "attack_speed",
+        "attack@atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_takila_2",
+      "name": "Esoteric Bladework",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "rangeId": "2-3",
+          "values": [
+            1.4,
+            30,
+            3,
+            1.4,
+            15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "rangeId": "2-3",
+          "values": [
+            1.5,
+            30,
+            3,
+            1.5,
+            15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "rangeId": "2-3",
+          "values": [
+            1.6,
+            30,
+            3,
+            1.6,
+            15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "rangeId": "2-3",
+          "values": [
+            1.7,
+            30,
+            3,
+            1.7,
+            15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "rangeId": "2-3",
+          "values": [
+            1.8,
+            30,
+            3,
+            1.8,
+            15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "rangeId": "2-3",
+          "values": [
+            1.9,
+            30,
+            3,
+            1.9,
+            15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 10,
+          "rangeId": "2-3",
+          "values": [
+            2,
+            30,
+            3,
+            2,
+            15
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 10,
+          "rangeId": "2-3",
+          "values": [
+            2.1,
+            30,
+            3,
+            2.1,
+            15
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 12,
+          "rangeId": "2-3",
+          "values": [
+            2.2,
+            30,
+            3,
+            2.2,
+            15
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 12,
+          "rangeId": "2-3",
+          "values": [
+            2.3,
+            30,
+            3,
+            2.3,
+            15
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</> and attacks <@ba.vup>2</> enemies simultaneously. Every attack deals <@ba.vup>{attack@atk_scale:0%}</> of ATK as Physical damage. <$ba.charged>Charged</> effect: Changes to attacking <@ba.vup>3</> enemies simultaneously and skill duration is extended to <@ba.vup>{enhance_duration}</> seconds\n<@ba.rem>Can manually deactivate skill (skill can be deactivated at will)</>",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "enhance_duration",
+        "attack@plus_max_target",
+        "attack@plus_atk_scale",
+        "duration_plus"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

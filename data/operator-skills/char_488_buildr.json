@@ -1,0 +1,357 @@
+{
+  "operatorId": "char_488_buildr",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_charge_cost[3]",
+      "name": "Charge γ",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 14,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 16,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 18,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            12
+          ]
+        }
+      ],
+      "description": "Instantly gains <@ba.vup>{cost}</> Deployment Points.",
+      "blackboardKeys": [
+        "cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_buildr_2",
+      "name": "Engineer's Wish",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "values": [
+            9,
+            15,
+            0.1,
+            0.3,
+            -1,
+            0.1,
+            0.3,
+            1,
+            5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 25,
+          "values": [
+            9,
+            15,
+            0.1,
+            0.35,
+            -1,
+            0.1,
+            0.35,
+            1,
+            5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 25,
+          "values": [
+            9,
+            15,
+            0.1,
+            0.4,
+            -1,
+            0.1,
+            0.4,
+            1,
+            5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 25,
+          "values": [
+            10,
+            15,
+            0.1,
+            0.4,
+            -1,
+            0.1,
+            0.4,
+            1,
+            4.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 25,
+          "values": [
+            10,
+            15,
+            0.15,
+            0.45,
+            -1,
+            0.15,
+            0.45,
+            1,
+            4.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 25,
+          "values": [
+            10,
+            15,
+            0.2,
+            0.5,
+            -1,
+            0.2,
+            0.5,
+            1,
+            4.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 25,
+          "values": [
+            11,
+            15,
+            0.2,
+            0.5,
+            -1,
+            0.2,
+            0.5,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 25,
+          "values": [
+            11,
+            15,
+            0.25,
+            0.55,
+            -1,
+            0.25,
+            0.55,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 25,
+          "values": [
+            11,
+            15,
+            0.3,
+            0.6,
+            -1,
+            0.3,
+            0.6,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "values": [
+            12,
+            15,
+            0.35,
+            0.65,
+            -1,
+            0.35,
+            0.65,
+            1,
+            4
+          ]
+        }
+      ],
+      "description": "Immediately generates <@ba.vup>{cost}</> DP; ATK <@ba.vup>+{atk:0%}</> and DEF <@ba.vup>+{def:0%}</> for the duration\n<@ba.rem>From second activation and on: generates {buildr_s_2[b].cost} DP every {buildr_s_2[b].interval} seconds, and has unlimited duration</>",
+      "blackboardKeys": [
+        "cost",
+        "duration",
+        "atk",
+        "def",
+        "buildr_s_2[b].duration",
+        "buildr_s_2[b].atk",
+        "buildr_s_2[b].def",
+        "buildr_s_2[b].cost",
+        "buildr_s_2[b].interval"
+      ]
+    }
+  ],
+  "ranges": {}
+}

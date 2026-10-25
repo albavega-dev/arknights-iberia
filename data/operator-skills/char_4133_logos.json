@@ -1,0 +1,650 @@
+{
+  "operatorId": "char_4133_logos",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_logos_1",
+      "name": "Perish",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            0.1,
+            0.6,
+            9999999
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            0.2,
+            0.7,
+            9999999
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 76,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            0.3,
+            0.8,
+            9999999
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 74,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            0.4,
+            0.9,
+            9999999
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 72,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            0.5,
+            1,
+            9999999
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            0.6,
+            1.1,
+            9999999
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 68,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            0.7,
+            1.2,
+            9999999
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 64,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            0.8,
+            1.3,
+            9999999
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 62,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            0.9,
+            1.4,
+            9999999
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "rangeId": "3-3",
+          "values": [
+            1,
+            1.5,
+            9999999
+          ]
+        }
+      ],
+      "description": "Attack range <@ba.vup>expands</> and ATK <@ba.vup>+{atk:0%}</>. Immediately defeats enemies in range with HP below <@ba.vup>{attack@kill_atk_scale:0%}</> of Logos's ATK, and deals Arts damage equal to the HP of the defeated unit to another random target.\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk",
+        "attack@kill_atk_scale",
+        "attack@kill_damage"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_logos_2",
+      "name": "Synecdoche",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 20,
+          "values": [
+            30,
+            0.5,
+            0.2,
+            0.04,
+            -0.06,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 20,
+          "values": [
+            30,
+            0.5,
+            0.25,
+            0.05,
+            -0.06,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 20,
+          "values": [
+            30,
+            0.5,
+            0.3,
+            0.06,
+            -0.06,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 20,
+          "values": [
+            40,
+            0.5,
+            0.35,
+            0.07,
+            -0.06,
+            10
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 20,
+          "values": [
+            40,
+            0.5,
+            0.4,
+            0.08,
+            -0.06,
+            10
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 20,
+          "values": [
+            40,
+            0.5,
+            0.45,
+            0.09,
+            -0.06,
+            10
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 20,
+          "values": [
+            50,
+            0.5,
+            0.5,
+            0.1,
+            -0.06,
+            10
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 20,
+          "values": [
+            60,
+            0.5,
+            0.6,
+            0.12,
+            -0.06,
+            10
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 20,
+          "values": [
+            60,
+            0.5,
+            0.65,
+            0.13,
+            -0.06,
+            10
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            70,
+            0.5,
+            0.75,
+            0.15,
+            -0.06,
+            10
+          ]
+        }
+      ],
+      "description": "RES <@ba.vup>+{magic_resistance}</>. Attacks now lock on to a target, dealing <@ba.vup>{attack@atk_scale_base:0%}</> ATK as Arts damage every <@ba.vup>{attack@cooldown}</>s. When against the same target, gradually increases damage up to a maximum of <@ba.vup>3</>x and gradually reduces its Movement Speed to up to <@ba.vup>40%</> (max effect reached after 5s). The locked-on target and the effects are reset when the skill is interrupted, or when the target is defeated.",
+      "blackboardKeys": [
+        "magic_resistance",
+        "attack@cooldown",
+        "attack@atk_scale_base",
+        "attack@atk_scale_delta",
+        "attack@move_speed",
+        "attack@max_stack_cnt"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_logos_3",
+      "name": "Extended Acuity",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 0,
+          "rangeId": "3-4",
+          "values": [
+            1,
+            3,
+            0.05
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 3,
+          "rangeId": "3-4",
+          "values": [
+            1.2,
+            3,
+            0.05
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 6,
+          "rangeId": "3-4",
+          "values": [
+            1.4,
+            3,
+            0.05
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 9,
+          "rangeId": "3-4",
+          "values": [
+            1.6,
+            3,
+            0.05
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 12,
+          "rangeId": "3-4",
+          "values": [
+            1.8,
+            3,
+            0.05
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 15,
+          "rangeId": "3-4",
+          "values": [
+            2,
+            3,
+            0.05
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 18,
+          "rangeId": "3-4",
+          "values": [
+            2.2,
+            3,
+            0.05
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 22,
+          "rangeId": "3-4",
+          "values": [
+            2.4,
+            4,
+            0.05
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 26,
+          "rangeId": "3-4",
+          "values": [
+            2.6,
+            4,
+            0.05
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 30,
+          "rangeId": "3-4",
+          "values": [
+            3,
+            4,
+            0.05
+          ]
+        }
+      ],
+      "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, and attacks strike <@ba.vup>{attack@max_target}</> targets at once; enemy projectile speed in attack range is <@ba.vup>greatly reduced</>, and all projectiles are <@ba.vup>removed</> when the skill expires.",
+      "blackboardKeys": [
+        "atk",
+        "attack@max_target",
+        "projectile_move_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        }
+      ]
+    },
+    "3-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 2
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,578 @@
+{
+  "operatorId": "char_420_flamtl",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_flamtl_1",
+      "name": "Quick Intuition",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 0,
+          "values": [
+            6
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 1,
+          "values": [
+            6
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 2,
+          "values": [
+            6
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 3,
+          "values": [
+            6
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 4,
+          "values": [
+            6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 5,
+          "values": [
+            6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 6,
+          "values": [
+            6
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 7,
+          "values": [
+            6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 8,
+          "values": [
+            6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 9,
+          "values": [
+            6
+          ]
+        }
+      ],
+      "description": "Immediately gains <@ba.vup>{cost}</> DP and dodge the next Physical attack",
+      "blackboardKeys": [
+        "cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_flamtl_2",
+      "name": "'Pinus Sylvestris'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 20,
+          "rangeId": "x-1",
+          "values": [
+            10,
+            1.5,
+            0.5,
+            6,
+            0.35,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 21,
+          "rangeId": "x-1",
+          "values": [
+            10,
+            1.6,
+            0.5,
+            6,
+            0.35,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 22,
+          "rangeId": "x-1",
+          "values": [
+            10,
+            1.7,
+            0.5,
+            6,
+            0.35,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 23,
+          "rangeId": "x-1",
+          "values": [
+            11,
+            1.8,
+            0.5,
+            6,
+            0.4,
+            10
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 24,
+          "rangeId": "x-1",
+          "values": [
+            11,
+            1.9,
+            0.5,
+            6,
+            0.4,
+            10
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "rangeId": "x-1",
+          "values": [
+            11,
+            2,
+            0.5,
+            6,
+            0.4,
+            10
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 26,
+          "rangeId": "x-1",
+          "values": [
+            12,
+            2.1,
+            0.5,
+            6,
+            0.45,
+            10
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 27,
+          "rangeId": "x-1",
+          "values": [
+            12,
+            2.2,
+            0.5,
+            6,
+            0.45,
+            10
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 28,
+          "rangeId": "x-1",
+          "values": [
+            12,
+            2.3,
+            0.5,
+            6,
+            0.5,
+            10
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 30,
+          "rangeId": "x-1",
+          "values": [
+            13,
+            2.4,
+            0.5,
+            6,
+            0.5,
+            10
+          ]
+        }
+      ],
+      "description": "Immediately gains <@ba.vup>{cost}</> DP; Deals <@ba.vup>{atk_scale:0%}</> ATK as Physical damage <@ba.vup>twice</> to up to 6 nearby enemies and <$ba.stun>Stuns</> them for <@ba.vup>{stun}</> seconds. Allied units within Attack Range gain <@ba.vup>{flamtl_s_2.prob:0%}</> Physical Dodge for <@ba.vup>{flamtl_s_2.duration}</> seconds",
+      "blackboardKeys": [
+        "cost",
+        "atk_scale",
+        "stun",
+        "max_target",
+        "flamtl_s_2.prob",
+        "flamtl_s_2.duration"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_flamtl_3",
+      "name": "Flameheart",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 0,
+          "values": [
+            0.3,
+            1,
+            0.6,
+            0.7,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 1,
+          "values": [
+            0.35,
+            1,
+            0.6,
+            0.7,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 1,
+          "values": [
+            0.4,
+            1,
+            0.6,
+            0.7,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 2,
+          "values": [
+            0.45,
+            1,
+            0.6,
+            0.7,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 2,
+          "values": [
+            0.5,
+            1,
+            0.6,
+            0.7,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 3,
+          "values": [
+            0.55,
+            1,
+            0.6,
+            0.7,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 3,
+          "values": [
+            0.6,
+            1,
+            0.8,
+            0.7,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 4,
+          "values": [
+            0.7,
+            1,
+            0.8,
+            0.7,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 5,
+          "values": [
+            0.8,
+            1,
+            0.8,
+            0.7,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 6,
+          "values": [
+            0.9,
+            1,
+            0.8,
+            0.7,
+            1,
+            8
+          ]
+        }
+      ],
+      "description": "Gradually gains <@ba.vup>{value}</> DP over the skill duration. Attack Interval <@ba.vup>reduces</>, ATK <@ba.vup>+{atk:0%}</>, Block <@ba.vup>+{block_cnt}</> and gain <@ba.vup>{prob:0%}</> Physical and Arts Dodge",
+      "blackboardKeys": [
+        "atk",
+        "cost",
+        "prob",
+        "base_attack_time",
+        "block_cnt",
+        "value"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  }
+}

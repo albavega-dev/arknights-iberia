@@ -1,0 +1,548 @@
+{
+  "operatorId": "char_1033_swire2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_swire2_1",
+      "name": "Loyalty and Generosity",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 1 Coin may be held while this Skill is equipped</>",
+          "values": [
+            0.25,
+            1,
+            -1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 1 Coin may be held while this Skill is equipped</>",
+          "values": [
+            0.3,
+            1,
+            -1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 1 Coin may be held while this Skill is equipped</>",
+          "values": [
+            0.35,
+            1,
+            -1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 2 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.4,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 2 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.45,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 2 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.5,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 2 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.55,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 3 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.6,
+            3,
+            -1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 3 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.7,
+            3,
+            -1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin: the next attack restores HP equal to <@ba.vup>{attack@heal_scale:0%}</> of ATK to a friendly unit within the surrounding 8 tiles with less than 70% HP\n<@ba.rem>A maximum of 3 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.8,
+            3,
+            -1
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "attack@heal_scale",
+        "sp",
+        "attack@sp"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_swire2_2",
+      "name": "'Courtesy Gift'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with, and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 3 Coins may be held while this Skill is equipped</>",
+          "values": [
+            3,
+            1.4,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with, and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 3 Coins may be held while this Skill is equipped</>",
+          "values": [
+            3,
+            1.45,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with, and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 3 Coins may be held while this Skill is equipped</>",
+          "values": [
+            3,
+            1.5,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with, and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 3 Coins may be held while this Skill is equipped</>",
+          "values": [
+            3,
+            1.55,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with, and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 3 Coins may be held while this Skill is equipped</>",
+          "values": [
+            3,
+            1.6,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with, and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 3 Coins may be held while this Skill is equipped</>",
+          "values": [
+            3,
+            1.65,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 4 Coins may be held while this Skill is equipped</>",
+          "values": [
+            4,
+            1.7,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 4 Coins may be held while this Skill is equipped</>",
+          "values": [
+            4,
+            1.8,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 5 Coins may be held while this Skill is equipped</>",
+          "values": [
+            5,
+            1.9,
+            2,
+            -1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Spends <@ba.vup>1</> Coin to place a Champagne Bomb on a ground tile within range that is passable and can be deployed upon; the Champagne Bomb deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the first target it comes in contact with and <$ba.sluggish>Slows</> for <@ba.vup>{sluggish}</> seconds\n<@ba.rem>The Champagne Bomb deals additional damage after having been deployed for 3 seconds; a maximum of 5 Coins may be held while this Skill is equipped</>",
+          "values": [
+            5,
+            2,
+            2,
+            -1
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "sp",
+        "atk_scale",
+        "sluggish",
+        "attack@sp"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_swire2_3",
+      "name": "Lavish and Prodigal",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>slightly</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.8,
+            0,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>slightly</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.85,
+            0,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>slightly</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            0.9,
+            0,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>slightly</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            1,
+            0,
+            10
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>slightly</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            1.05,
+            0,
+            10
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>slightly</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            1.1,
+            0,
+            10
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>slightly</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            1.2,
+            0,
+            10
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>slightly</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            1.3,
+            0,
+            10
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>slightly</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            1.4,
+            0,
+            10
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "1-1",
+          "description": "Attacks hit twice, and gain 1 Coin upon defeating an enemy; when skill is manually deactivated, <@ba.vup>all</> Coins will be spent to randomly attack enemies in a frontal area. Each Coin spent in this manner hits once for <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage and knocks the target back <@ba.vup>moderately</>\n<@ba.rem>Unlimited duration, can be manually deactivated at any time; a maximum of 10 Coins may be held while this Skill is equipped</>",
+          "values": [
+            1.5,
+            1,
+            10
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk_scale",
+        "force",
+        "sp"
+      ]
+    }
+  ],
+  "ranges": {
+    "1-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

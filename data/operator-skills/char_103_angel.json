@@ -1,0 +1,453 @@
+{
+  "operatorId": "char_103_angel",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_angel_1",
+      "name": "Charging Mode",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.05,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.07,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.09,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.13,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.15,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.17,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.21,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.29,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.37,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.45,
+            3
+          ]
+        }
+      ],
+      "description": "Shoots <@ba.vup>{times}</> times in a row in the next attack, dealing <@ba.vup>{atk_scale:0%}</> of ATK damage with every shot",
+      "blackboardKeys": [
+        "atk_scale",
+        "times"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_angel_2",
+      "name": "Shooting Mode",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 15,
+          "values": [
+            1,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 15,
+          "values": [
+            1,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 15,
+          "values": [
+            1,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 15,
+          "values": [
+            1.05,
+            4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 15,
+          "values": [
+            1.05,
+            4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 15,
+          "values": [
+            1.05,
+            4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 18,
+          "values": [
+            1.1,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 20,
+          "values": [
+            1.15,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 22,
+          "values": [
+            1.2,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 25,
+          "values": [
+            1.25,
+            4
+          ]
+        }
+      ],
+      "description": "Shoots <@ba.vup>{attack@times}</> times in a row, dealing <@ba.vup>{attack@atk_scale:0%}</> of ATK damage with every shot",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "attack@times"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_angel_3",
+      "name": "Overloading Mode",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1,
+            5,
+            0
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1,
+            5,
+            0
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1,
+            5,
+            0
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row; <@ba.vup>Very minor</> Attack Interval reduction\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1,
+            5,
+            -0.05
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row; <@ba.vup>Very minor</> Attack Interval reduction\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1,
+            5,
+            -0.05
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row; <@ba.vup>Very minor</> Attack Interval reduction\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1,
+            5,
+            -0.05
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row; <@ba.vup>Minor</> Attack Interval reduction\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1,
+            5,
+            -0.08
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row; <@ba.vup>Minor</> Attack Interval reduction; ATK <@ba.vup>increases to {attack@atk_scale:0%}</>\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1.03,
+            5,
+            -0.08
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row; <@ba.vup>Minor</> Attack Interval reduction; ATK <@ba.vup>increases to {attack@atk_scale:0%}</>\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1.07,
+            5,
+            -0.08
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "description": "Shoots <@ba.vup>{attack@times}</> times in a row; <@ba.vup>Slight</> Attack Interval reduction; ATK <@ba.vup>increases to {attack@atk_scale:0%}</>\n<@ba.rem>Automatically activated</>",
+          "values": [
+            1.1,
+            5,
+            -0.11
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "attack@times",
+        "base_attack_time"
+      ]
+    }
+  ],
+  "ranges": {}
+}

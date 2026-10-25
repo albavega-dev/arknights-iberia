@@ -1,0 +1,654 @@
+{
+  "operatorId": "char_4231_clemnt",
+  "region": "cn",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_clemnt_1",
+      "name": "冲蚀",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.9,
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.95,
+            0.2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2,
+            0.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.05,
+            0.25
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.1,
+            0.25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.15,
+            0.25
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.25,
+            0.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            2.5,
+            0.3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            2.65,
+            0.35
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            2.9,
+            0.35
+          ]
+        }
+      ],
+      "description": "下次攻击的攻击力提高至<@ba.vup>{atk_scale:0%}</>并造成相当于物理伤害<@ba.vup>{ep_damage_ratio:0%}</>的<$ba.dt.erosion2>侵蚀损伤</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "ep_damage_ratio"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_clemnt_2",
+      "name": "风暴潮",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 8,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2,
+            8,
+            15,
+            -0.7,
+            200,
+            2.5,
+            5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 8,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2,
+            8,
+            15,
+            -0.7,
+            200,
+            2.55,
+            5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 8,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2,
+            8,
+            15,
+            -0.7,
+            200,
+            2.6,
+            5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 9,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2.2,
+            8,
+            15,
+            -0.7,
+            200,
+            2.65,
+            5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 9,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2.2,
+            8,
+            15,
+            -0.7,
+            200,
+            2.7,
+            5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 9,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2.2,
+            8,
+            15,
+            -0.7,
+            200,
+            2.8,
+            5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 12,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2.3,
+            8,
+            15,
+            -0.7,
+            200,
+            2.85,
+            5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 13,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2.3,
+            8,
+            15,
+            -0.7,
+            200,
+            2.9,
+            5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 13,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2.35,
+            8,
+            15,
+            -0.7,
+            200,
+            2.95,
+            5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "rangeId": "4-1",
+          "values": [
+            100,
+            2.5,
+            8,
+            15,
+            -0.7,
+            200,
+            3,
+            5
+          ]
+        }
+      ],
+      "description": "攻击范围<@ba.vup>扩大</>，攻击速度<@ba.vup>+{attack_speed}</>，每次攻击对目标及其周围最多<@ba.vup>5</>名地面敌人造成相当于攻击力<@ba.vup>{attack@aoe_atk_scale:0%}</>的物理伤害；向前方召唤浮游放逐舱，放逐舱使周围累计不超过<@ba.vup>{attack@max_passenger_mass}</>重量的最多<@ba.vup>15</>名地面敌人不断向前移动；放逐舱在移动3格后消失并留下漩涡，处于漩涡的所有敌人移动速度<@ba.vup>{attack@move_speed:0%}</>且每秒受到<@ba.vup>200</>点<$ba.dt.erosion2>侵蚀损伤</>和相当于攻击力<@ba.vup>{attack@physical_atk_scale:0%}</>的物理伤害",
+      "blackboardKeys": [
+        "attack_speed",
+        "attack@aoe_atk_scale",
+        "attack@max_passenger_mass",
+        "attack@max_passenger_cnt",
+        "attack@move_speed",
+        "attack@water_element",
+        "attack@physical_atk_scale",
+        "attack@max_target"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_clemnt_3",
+      "name": "与海为敌",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 25,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            1.5,
+            0.2,
+            1,
+            5,
+            2,
+            1.5,
+            10,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 25,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            1.6,
+            0.2,
+            1,
+            5,
+            2,
+            1.5,
+            10,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 25,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            1.7,
+            0.2,
+            1,
+            5,
+            2.3,
+            1.5,
+            10,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 27,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            1.8,
+            0.2,
+            1,
+            5,
+            2.5,
+            1.8,
+            10,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 27,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            1.85,
+            0.2,
+            1,
+            5,
+            2.5,
+            1.8,
+            10,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 27,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            1.9,
+            0.2,
+            1,
+            5,
+            2.5,
+            1.8,
+            10,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 28,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            2,
+            0.2,
+            1,
+            5,
+            2.7,
+            2,
+            10,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 29,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            2.2,
+            0.2,
+            1,
+            5,
+            2.8,
+            2.1,
+            10,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 30,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            2.3,
+            0.2,
+            1,
+            5,
+            2.9,
+            2.3,
+            10,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 30,
+          "rangeId": "3-2",
+          "values": [
+            3,
+            2.35,
+            0.2,
+            1,
+            5,
+            3,
+            2.5,
+            10,
+            3,
+            1
+          ]
+        }
+      ],
+      "description": "攻击范围<@ba.vup>扩大</>，攻击目标数<@ba.vup>+2</>，每次攻击对目标造成相当于攻击力<@ba.vup>{attack@atk_scale:0%}</>的物理伤害并额外造成相当于物理伤害<@ba.vup>{attack@ep_damage_ratio:0%}</>的<$ba.dt.erosion2>侵蚀损伤</>；当全场有敌人<$ba.dt.erosion2>侵蚀损伤</>爆发时，消耗1发弹药对目标所在位置及其周围四格内所有地面敌人造成<@ba.vup>3</>次相当于攻击力<@ba.vup>{s3_atk_scale:0%}</>的物理伤害与相当于攻击力<@ba.vup>{ep_damage_scale:0%}</>的元素伤害\\n<@ba.rem>技能装有{trigger_time}发弹药，打完后结束（可随时停止技能）</>",
+      "blackboardKeys": [
+        "attack@max_target",
+        "attack@atk_scale",
+        "attack@ep_damage_ratio",
+        "attack@ep_break_duration",
+        "projectile_life_time",
+        "s3_atk_scale",
+        "ep_damage_scale",
+        "trigger_time",
+        "audio_trigger_cnt",
+        "ep_break_duration"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        }
+      ]
+    },
+    "4-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 4
+        }
+      ]
+    }
+  }
+}

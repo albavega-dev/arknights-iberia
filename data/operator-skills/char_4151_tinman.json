@@ -1,0 +1,344 @@
+{
+  "operatorId": "char_4151_tinman",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_tinman_1",
+      "name": "'Ol' Curly'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            8,
+            -0.15,
+            0.3,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            8,
+            -0.15,
+            0.35,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            8,
+            -0.15,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            8,
+            -0.2,
+            0.45,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            8,
+            -0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            8,
+            -0.2,
+            0.55,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            8,
+            -0.25,
+            0.6,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            9,
+            -0.25,
+            0.65,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            9,
+            -0.25,
+            0.7,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            10,
+            -0.3,
+            0.75,
+            1
+          ]
+        }
+      ],
+      "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point suffer from <@ba.vup>{-atk:0%}</> <$ba.weaken>Enfeeble</> and take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second",
+      "blackboardKeys": [
+        "projectile_delay_time",
+        "atk",
+        "atk_scale",
+        "projectile_range"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_tinman_2",
+      "name": "'Big Larry'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            10,
+            0.1,
+            0.5,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 10,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            10,
+            0.1,
+            0.55,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 10,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            10,
+            0.1,
+            0.6,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 12,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            11,
+            0.15,
+            0.65,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 12,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            11,
+            0.15,
+            0.7,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 12,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            11,
+            0.15,
+            0.75,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 14,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            12,
+            0.2,
+            0.8,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 16,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            13,
+            0.2,
+            0.9,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 18,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            14,
+            0.2,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 20,
+          "description": "Throws an Alchemical Unit. For <@ba.vup>{projectile_delay_time}</> seconds, enemies around the landing point take <@ba.vup>{atk_scale:0%}</> ATK as Arts damage per second, while allied units around the point recover HP equal to <@ba.vup>{hp_recovery_per_sec_ratio:0%}</> ATK per second\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            15,
+            0.25,
+            1.1,
+            2
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "projectile_delay_time",
+        "hp_recovery_per_sec_ratio",
+        "atk_scale",
+        "projectile_range"
+      ]
+    }
+  ],
+  "ranges": {}
+}

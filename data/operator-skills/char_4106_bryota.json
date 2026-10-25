@@ -1,0 +1,291 @@
+{
+  "operatorId": "char_4106_bryota",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_bryota_1",
+      "name": "Power Strike β",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.7
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.75
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.85
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.9
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.95
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2.1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2.2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.3
+          ]
+        }
+      ],
+      "description": "Increases the ATK of next attack to <@ba.vup>{atk_scale:0%}</>",
+      "blackboardKeys": [
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_bryota_2",
+      "name": "Earthen Tenacity",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 20,
+          "values": [
+            0.3,
+            0.3,
+            8
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 20,
+          "values": [
+            0.35,
+            0.35,
+            8
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 20,
+          "values": [
+            0.4,
+            0.4,
+            8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 25,
+          "values": [
+            0.45,
+            0.45,
+            7
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 25,
+          "values": [
+            0.5,
+            0.5,
+            7
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 25,
+          "values": [
+            0.55,
+            0.55,
+            7
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 30,
+          "values": [
+            0.6,
+            0.6,
+            6
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 30,
+          "values": [
+            0.65,
+            0.65,
+            6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 35,
+          "values": [
+            0.7,
+            0.7,
+            6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 35,
+          "values": [
+            0.8,
+            0.8,
+            5
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, and grants DEF <@ba.vup>+{def:0%}</> to the melee Operator in the surrounding 8 tiles with the highest Block (if no applicable Operators, effect is granted to self)\n<@ba.rem>After skill ends, <$ba.stun>Stuns</> self for {stun}s</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "stun"
+      ]
+    }
+  ],
+  "ranges": {}
+}

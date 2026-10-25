@@ -1,0 +1,507 @@
+{
+  "operatorId": "char_2024_chyue",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_chyue_1",
+      "name": "Abundant",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.1,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.2,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.3,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.5,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.6,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.7,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2.9,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            3.2,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            3.5,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            4,
+            3,
+            3
+          ]
+        }
+      ],
+      "description": "Deals <@ba.vup>{atk_scale:0%}</> ATK as Physical damage to the target. When at maximum charges, removes all charges and deals damage for each charge removed\n<@ba.rem>Max 3 charges</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "cnt",
+        "times"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_chyue_2",
+      "name": "Whisk",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            3.5,
+            2.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            3.7,
+            2.6
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            3.9,
+            2.7
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 6,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            4.1,
+            2.9
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 6,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            4.3,
+            3.1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 6,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            4.5,
+            3.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 7,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            4.8,
+            3.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 7,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            5.3,
+            3.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 7,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            5.8,
+            4.1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 9,
+          "rangeId": "x-4",
+          "values": [
+            4,
+            6.5,
+            4.5
+          ]
+        }
+      ],
+      "description": "Deals <@ba.vup>{atk_scale:0%}</> ATK as Physical damage to up to <@ba.vup>{max_target}</> enemies and causes targets affected by Talent 1 to <$ba.levitate>Levitate</>, then removes <$ba.levitate>Levitate</> from all enemies with <$ba.levitate>Levitate</>, activates Talent 1 on them with 100% chance, and deals <@ba.vup>{atk_scale_down:0%}</> ATK as Physical damage\n<@ba.rem>Max 2 charges</>",
+      "blackboardKeys": [
+        "max_target",
+        "atk_scale_down",
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_chyue_3",
+      "name": "Anatta",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 0,
+          "values": [
+            1.8,
+            5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 0,
+          "values": [
+            2,
+            5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 0,
+          "values": [
+            2.2,
+            5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            2.4,
+            5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            2.6,
+            5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            2.8,
+            5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            3,
+            5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            3.2,
+            5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            3.8,
+            5
+          ]
+        }
+      ],
+      "description": "Deals <@ba.vup>{atk_scale:0%}</> ATK as Physical damage to the target and nearby enemies; after this skill has been used <@ba.vup>5 times</>: Chongyue's <@ba.vup>attack range increases</> and attacks <@ba.vup>hit twice</>; this skill becomes <@ba.vdown>auto-activated</> and <@ba.vup>deals damage an extra time</>.",
+      "blackboardKeys": [
+        "atk_scale",
+        "cast_cnt"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

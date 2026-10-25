@@ -1,0 +1,280 @@
+{
+  "operatorId": "char_275_breeze",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_breeze_1",
+      "name": "Cluster Therapy",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 20,
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 20,
+          "values": [
+            0.75
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 20,
+          "values": [
+            0.8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 20,
+          "values": [
+            0.85
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 20,
+          "values": [
+            0.9
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            0.95
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 20,
+          "values": [
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 20,
+          "values": [
+            1.1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 20,
+          "values": [
+            1.2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            1.4
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>，targets healed <@ba.vdown>-1</>",
+      "blackboardKeys": [
+        "atk"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_breeze_2",
+      "name": "Widespread Therapy",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            1.1,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 36,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            1.2,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 37,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            1.3,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 38,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 44,
+          "values": [
+            1.5,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 39,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 44,
+          "values": [
+            1.6,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 44,
+          "values": [
+            1.7,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 41,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 48,
+          "values": [
+            1.9,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 42,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 52,
+          "values": [
+            2.1,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 43,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 56,
+          "values": [
+            2.3,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 60,
+          "values": [
+            2.5,
+            0.5
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, switch attack mode to firing a healing round to a friendly unit in range, healing the target and friendly units on the surrounding 8 tiles (healing amount is halved to surrounding units)",
+      "blackboardKeys": [
+        "atk",
+        "attack@scale"
+      ]
+    }
+  ],
+  "ranges": {}
+}

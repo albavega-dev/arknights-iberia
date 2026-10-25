@@ -1,0 +1,365 @@
+{
+  "operatorId": "char_4214_cairn",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_cairn_1",
+      "name": "Covered Consolidation",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 5,
+          "values": [
+            0.4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 7,
+          "values": [
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 9,
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 11,
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 13,
+          "values": [
+            0.8
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 15,
+          "values": [
+            0.9
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 16,
+          "values": [
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 17,
+          "values": [
+            1.1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 18,
+          "values": [
+            1.2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            1.3
+          ]
+        }
+      ],
+      "description": "<@ba.vup>+{max_hp:0%}</> Max HP",
+      "blackboardKeys": [
+        "max_hp"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_cairn_2",
+      "name": "Stunning Directives",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.3,
+            0.2,
+            0.05,
+            0.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.4,
+            0.3,
+            0.05,
+            0.4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 5,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.5,
+            0.3,
+            0.05,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 7,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.6,
+            0.4,
+            0.07,
+            0.6
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 7,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.7,
+            0.5,
+            0.07,
+            0.7
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 9,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.8,
+            0.5,
+            0.07,
+            0.8
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 10,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.9,
+            0.6,
+            0.1,
+            0.9
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 12,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.9,
+            0.6,
+            0.1,
+            0.9
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 13,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.9,
+            0.7,
+            0.1,
+            0.9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 14,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.9,
+            0.8,
+            0.1,
+            0.9
+          ]
+        }
+      ],
+      "description": "Gains a <$ba.barrier>Barrier</> equal to <@ba.vup>{shield_hp_ratio:0%}</> of Max HP (Barrier lasts <@ba.vup>{buff_duration}</> seconds, cannot exceed <@ba.vup>{shield_max_hp_ratio:0%}</> of Max HP), and deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage and <@ba.vup>{ep_damage_ratio:0%}</> ATK as <$ba.dt.neural2>Nervous Impairment</> every second for <@ba.vup>{buff_duration}</> seconds to surrounding ground enemies",
+      "blackboardKeys": [
+        "buff_duration",
+        "shield_max_hp_ratio",
+        "atk_scale",
+        "ep_damage_ratio",
+        "shield_hp_ratio"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

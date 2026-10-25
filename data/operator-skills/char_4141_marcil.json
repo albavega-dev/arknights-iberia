@@ -1,0 +1,642 @@
+{
+  "operatorId": "char_4141_marcil",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_marcil_1",
+      "name": "A Top Student's Abilities",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            0.4,
+            2,
+            80
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            0.45,
+            2,
+            80
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            0.5,
+            2,
+            80
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            0.55,
+            2,
+            80
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            0.6,
+            2,
+            80
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            0.7,
+            2,
+            80
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            0.85,
+            2,
+            80
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            1,
+            2,
+            80
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            1.2,
+            2,
+            80
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 25,
+          "values": [
+            1.5,
+            2,
+            25,
+            1.4,
+            2,
+            80
+          ]
+        }
+      ],
+      "description": "After <$ba.chant>Chanting</> for a short time, activates the skill. Consumes <@ba.vdown>{sp_cost}</> <$ba.magicpoint>Mana</> every attack, and ATK <@ba.vup>+{atk:0%}</>. If there are no enemies within range, heals allied operators instead\n<@ba.rem>Skill can be manually deactivated</>",
+      "blackboardKeys": [
+        "chant_duration",
+        "skill_cost_min_sp",
+        "mana_init",
+        "atk",
+        "sp_cost",
+        "mana_max"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_marcil_2",
+      "name": "Summon Familiar",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            0.4,
+            0.5,
+            30,
+            0.5,
+            35,
+            80
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            0.45,
+            0.5,
+            30,
+            0.5,
+            35,
+            80
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            0.5,
+            0.5,
+            30,
+            0.5,
+            35,
+            80
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            0.55,
+            0.5,
+            35,
+            0.5,
+            35,
+            80
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            0.6,
+            0.5,
+            35,
+            0.5,
+            35,
+            80
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            0.65,
+            0.5,
+            35,
+            0.5,
+            35,
+            80
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            0.7,
+            0.5,
+            45,
+            0.5,
+            35,
+            80
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            0.8,
+            0.5,
+            50,
+            0.5,
+            35,
+            80
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            0.9,
+            0.5,
+            55,
+            0.5,
+            35,
+            80
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 10,
+          "values": [
+            11,
+            35,
+            10,
+            1,
+            0.5,
+            60,
+            0.5,
+            35,
+            80
+          ]
+        }
+      ],
+      "description": "After <$ba.chant>Chanting</> for <@ba.vdown>{chant_duration}</>s, consumes <@ba.vdown>{sp_cost}</> <$ba.magicpoint>Mana</> to create a familiar to attack; ATK <@ba.vup>+{atk:0%}</>, attacks <$ba.sluggish>Slow</> all targets for <@ba.vup>{attack@sluggish}</>s.\nSkill can be activated again to upgrade the familiar; attack range <@ba.vup>+1</>, ASPD <@ba.vup>+{attack_speed}</>, attacks <$ba.stun>Stun</> the main target for <@ba.vup>{attack@stun}</>s\n<@ba.rem>Unlimited duration. Skill can be manually deactivated during first activation</>",
+      "blackboardKeys": [
+        "chant_duration",
+        "skill_cost_min_sp",
+        "mana_init",
+        "atk",
+        "attack@sluggish",
+        "attack_speed",
+        "attack@stun",
+        "sp_cost",
+        "mana_max"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_marcil_3",
+      "name": "Explosion Magic",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            2.8,
+            0.45,
+            2,
+            49
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            2.9,
+            0.45,
+            2,
+            49
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            3,
+            0.45,
+            2,
+            49
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            3.1,
+            0.45,
+            3,
+            49
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            3.2,
+            0.45,
+            3,
+            49
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            3.3,
+            0.45,
+            3,
+            49
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            3.4,
+            0.45,
+            3,
+            49
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            3.5,
+            0.45,
+            3.5,
+            49
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            3.7,
+            0.45,
+            3.5,
+            49
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            5,
+            10,
+            8,
+            80,
+            40,
+            8,
+            3.9,
+            0.45,
+            4,
+            49
+          ]
+        }
+      ],
+      "description": "After <$ba.chant>Chanting</> for <@ba.vdown>{chant_duration}</>s, consumes <@ba.vdown>{skill_cost_min_sp}</> <$ba.magicpoint>Mana</> to create an explosion in front of the unit at max range; explosion deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage to surrounding enemies and causes high ground tiles to collapse, <$ba.stun>Stunning</> them for <@ba.vup>{stun}</>s\n<$ba.chant>Chanting</> can be extended for <@ba.vdown>{extra_chant_duration}</>s; upon completion, consumes <@ba.vdown>all remaining</> <$ba.magicpoint>Mana</>; for every <@ba.vdown>{sp_cost_extra}</> additional <$ba.magicpoint>Mana</> consumed, create 1 additional explosion\n<@ba.rem>Extended chanting can be manually deactivated</>",
+      "blackboardKeys": [
+        "chant_duration",
+        "extra_chant_duration",
+        "skill_cost_min_sp",
+        "mana_max",
+        "mana_init",
+        "sp_cost_extra",
+        "atk_scale",
+        "interval",
+        "stun",
+        "trig_cnt"
+      ]
+    }
+  ],
+  "ranges": {}
+}

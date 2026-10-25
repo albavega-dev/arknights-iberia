@@ -1,0 +1,291 @@
+{
+  "operatorId": "char_343_tknogi",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_tknogi_1",
+      "name": "Without a Trace",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "values": [
+            0.25
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 16,
+          "values": [
+            0.25
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 17,
+          "values": [
+            0.25
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 18,
+          "values": [
+            0.28
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 29,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 19,
+          "values": [
+            0.28
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            0.28
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 21,
+          "values": [
+            0.31
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 22,
+          "values": [
+            0.32
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 23,
+          "values": [
+            0.33
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "values": [
+            0.35
+          ]
+        }
+      ],
+      "description": "Grants <@ba.vup>{attack@prob:0%}</> Physical and Arts Dodge to allies within Attack Range, and reveals <$ba.invisible>Invisible</> enemies",
+      "blackboardKeys": [
+        "attack@prob"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_tknogi_2",
+      "name": "Forest's Embrace",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 10,
+          "values": [
+            0.5,
+            1.4,
+            0.06
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 10,
+          "values": [
+            0.5,
+            1.5,
+            0.06
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 10,
+          "values": [
+            0.5,
+            1.6,
+            0.06
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 54,
+          "initSp": 15,
+          "values": [
+            0.5,
+            1.7,
+            0.08
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 15,
+          "values": [
+            0.5,
+            1.8,
+            0.08
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 15,
+          "values": [
+            0.5,
+            1.9,
+            0.08
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 51,
+          "initSp": 20,
+          "values": [
+            0.55,
+            2,
+            0.1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 21,
+          "values": [
+            0.55,
+            2.1,
+            0.1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 19,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 22,
+          "values": [
+            0.55,
+            2.2,
+            0.12
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 23,
+          "values": [
+            0.6,
+            2.3,
+            0.12
+          ]
+        }
+      ],
+      "description": "Stops attacking; HP Ratio required to activate this unit's Talent is increased to <@ba.vup>{talent@hp_ratio:0%}</>, and the <$ba.protect>Sanctuary</> effect is increased to <@ba.vup>{talent_scale}</> times. Heals all allies within Attack Range for <@ba.vup>{attack@atk_to_hp_recovery_ratio:0%}</> of this unit's ATK every second",
+      "blackboardKeys": [
+        "talent@hp_ratio",
+        "talent_scale",
+        "attack@atk_to_hp_recovery_ratio"
+      ]
+    }
+  ],
+  "ranges": {}
+}

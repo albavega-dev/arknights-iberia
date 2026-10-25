@@ -1,0 +1,374 @@
+{
+  "operatorId": "char_4183_mortis",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_mortis_1",
+      "name": "Belua Multorum es Capitums",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "values": [
+            0.5,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 5,
+          "values": [
+            0.55,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 5,
+          "values": [
+            0.6,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 14,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 10,
+          "values": [
+            0.65,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 14,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 10,
+          "values": [
+            0.7,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 14,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 10,
+          "values": [
+            0.75,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 15,
+          "values": [
+            0.8,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 15,
+          "values": [
+            0.9,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 15,
+          "values": [
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "values": [
+            1.2,
+            2,
+            1
+          ]
+        }
+      ],
+      "description": "DEF <@ba.vup>+{def:0%}</>, Block <@ba.vup>+{block_cnt}</>, more likely to be attacked by enemies; when defeated while skill is active, <Substitute> can also block enemies and benefits from skill effects until the <Substitute> retreats",
+      "blackboardKeys": [
+        "def",
+        "block_cnt",
+        "taunt_level"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_mortis_2",
+      "name": "Destruction and Renewal",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.6,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.65,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.7,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 7,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.75,
+            20
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 7,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.8,
+            20
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 7,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.85,
+            20
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 8,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, Attack Interval reduces slightly, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            -0.3,
+            0.9,
+            20
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 9,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, Attack Interval reduces slightly, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            -0.3,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 10,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, Attack Interval reduces slightly, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            -0.3,
+            1.1,
+            20
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 11,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, Attack Interval reduces slightly, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            -0.3,
+            1.2,
+            20
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "base_attack_time",
+        "attack@atk_scale",
+        "value"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  }
+}

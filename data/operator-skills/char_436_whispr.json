@@ -1,0 +1,324 @@
+{
+  "operatorId": "char_436_whispr",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_whispr_1",
+      "name": "Oriented Diagnosis",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.05,
+            1,
+            -0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.05,
+            2,
+            -0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.1,
+            2,
+            -0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.1,
+            3,
+            -0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.15,
+            3,
+            -0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.15,
+            4,
+            -0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.2,
+            4,
+            -0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            1.2,
+            5,
+            -0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            1.25,
+            5,
+            -0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            1.3,
+            5,
+            -0.5
+          ]
+        }
+      ],
+      "description": "The next heal is increased to <@ba.vup>{heal_scale:0%}</> of ATK, and an additional target will be healed (prioritizes units under abnormal status) and granted <$ba.buffres>status resistance</> for <@ba.vup>{status_resistance[limit]}</> seconds",
+      "blackboardKeys": [
+        "heal_scale",
+        "status_resistance[limit]",
+        "one_minus_status_resistance"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_whispr_2",
+      "name": "Pain Suppression",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            1,
+            -0.5,
+            1.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 64,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            1,
+            -0.5,
+            1.2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 63,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            1,
+            -0.5,
+            1.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 62,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            2,
+            -0.5,
+            1.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 61,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            2,
+            -0.5,
+            1.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            2,
+            -0.5,
+            1.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 59,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            3,
+            -0.5,
+            1.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            3,
+            -0.5,
+            1.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            3,
+            -0.5,
+            1.9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            4,
+            -0.5,
+            2
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vup>reduced</>. The healing effect of this unit's Talent increases to <@ba.vup>{talent_scale:0%}</>, and each target healed by this unit is granted <$ba.buffres>status resistance</> for <@ba.vup>{attack@status_resistance[limit]}</> second(s)\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "base_attack_time",
+        "attack@status_resistance[limit]",
+        "attack@one_minus_status_resistance",
+        "talent_scale"
+      ]
+    }
+  ],
+  "ranges": {}
+}

@@ -1,0 +1,594 @@
+{
+  "operatorId": "char_1028_texas2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_texas2_1",
+      "name": "Silent Drizzle",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.25,
+            3,
+            200,
+            1,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.3,
+            3,
+            220,
+            1,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.35,
+            3,
+            240,
+            1,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 11,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.4,
+            5,
+            260,
+            1,
+            5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 11,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.45,
+            5,
+            280,
+            1,
+            5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 11,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.5,
+            5,
+            300,
+            1,
+            5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.55,
+            8,
+            320,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.6,
+            8,
+            350,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.65,
+            8,
+            380,
+            1,
+            8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.7,
+            10,
+            400,
+            1,
+            10
+          ]
+        }
+      ],
+      "description": "After deployment, gains ATK <@ba.vup>+{atk:0%}</>; Attacks Silence the target for <@ba.vup>{attack@silence}</> seconds and cause them to take <@ba.vup>{attack@texas2_s_1[dot].dot_damage}</> Arts damage per second during that duration",
+      "blackboardKeys": [
+        "atk",
+        "attack@texas2_s_1[dot].duration",
+        "attack@texas2_s_1[dot].dot_damage",
+        "attack@texas2_s_1[dot].interval",
+        "attack@silence"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_texas2_2",
+      "name": "Unrelenting Downpour",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.2,
+            -0.1,
+            1.2,
+            8
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.23,
+            -0.1,
+            1.3,
+            8
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.26,
+            -0.1,
+            1.4,
+            8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.3,
+            -0.15,
+            1.5,
+            8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.33,
+            -0.15,
+            1.6,
+            8
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.36,
+            -0.15,
+            1.7,
+            8
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.4,
+            -0.2,
+            1.8,
+            10
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.45,
+            -0.25,
+            2,
+            10
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.5,
+            -0.3,
+            2.2,
+            10
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.55,
+            -0.3,
+            2.4,
+            10
+          ]
+        }
+      ],
+      "description": "After deployment, immediately deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage to all surrounding enemies and inflicts <@ba.vup>-{-magic_resistance:0%}</> RES for <@ba.vup>{debuff_duration}</> seconds; ATK <@ba.vup>+{atk:0%}</>, attacks hit 2 times and deal Arts damage",
+      "blackboardKeys": [
+        "atk",
+        "magic_resistance",
+        "atk_scale",
+        "debuff_duration"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_texas2_3",
+      "name": "Torrential Sword Rain",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.7,
+            0.2,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.75,
+            0.2,
+            2,
+            1,
+            1.05,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.8,
+            0.2,
+            2,
+            1,
+            1.1,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.85,
+            0.2,
+            2,
+            1,
+            1.15,
+            1.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.9,
+            0.2,
+            2,
+            1,
+            1.2,
+            1.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.95,
+            0.2,
+            2,
+            1,
+            1.25,
+            1.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 7,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1,
+            0.2,
+            3,
+            1,
+            1.3,
+            1.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 7,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.1,
+            0.2,
+            3,
+            1,
+            1.35,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.2,
+            0.2,
+            3,
+            1,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.3,
+            0.2,
+            4,
+            1,
+            1.65,
+            2
+          ]
+        }
+      ],
+      "description": "After deployment, immediately deals <@ba.vup>{appear.atk_scale:0%}</> ATK as Arts damage twice to all surrounding enemies and <$ba.stun>Stuns</> them for <@ba.vup>{appear.stun}</> seconds, then releases a Sword Rain at up to <@ba.vup>{max_target}</> different targets within range every second that deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage and <$ba.stun>Stuns</> for <@ba.vup>{stun}</> seconds",
+      "blackboardKeys": [
+        "atk_scale",
+        "stun",
+        "max_target",
+        "texas2_s_3[sword].interval",
+        "appear.atk_scale",
+        "appear.stun"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

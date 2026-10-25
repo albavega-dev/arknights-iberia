@@ -1,0 +1,302 @@
+{
+  "operatorId": "char_4221_ju",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_ju_1",
+      "name": "Fine Bow, Difficult Draw",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            1.95
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            2.05
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            2.1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            2.15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            2.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2.25
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2.3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2.4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2.5
+          ]
+        }
+      ],
+      "description": "The next attack deals <@ba.vup>{atk_scale_s1:0%}</> ATK as Physical damage; will not target enemies above 50% HP\n<@ba.rem>Can store 2 charges</>",
+      "blackboardKeys": [
+        "atk_scale_s1"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_ju_2",
+      "name": "Fine Wings, Difficult Flight",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            0.5,
+            2,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 20,
+          "values": [
+            0.54,
+            2,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 20,
+          "values": [
+            0.58,
+            2,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 21,
+          "values": [
+            0.62,
+            2,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 21,
+          "values": [
+            0.66,
+            2,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 21,
+          "values": [
+            0.7,
+            2,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 22,
+          "values": [
+            0.75,
+            2,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 23,
+          "values": [
+            0.8,
+            2,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 24,
+          "values": [
+            0.9,
+            2,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "values": [
+            1,
+            2,
+            1,
+            0.5
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, attacks 1 additional target; enemies below 50% HP within Attack Range receive an additional attack for <@ba.vup>{atk_scale_s2_extra:0%}</> ATK as Physical damage (after a short delay)\n<@ba.rem>Each enemy can receive at most one additional instance of Physical damage</>",
+      "blackboardKeys": [
+        "atk",
+        "attack@max_target_s2",
+        "atk_scale_s2_extra",
+        "hp_ratio"
+      ]
+    }
+  ],
+  "ranges": {}
+}

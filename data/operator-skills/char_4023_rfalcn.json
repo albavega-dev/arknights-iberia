@@ -1,0 +1,348 @@
+{
+  "operatorId": "char_4023_rfalcn",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_charge_cost[3]",
+      "name": "Charge γ",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 14,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 16,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 18,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            12
+          ]
+        }
+      ],
+      "description": "Instantly gains <@ba.vup>{cost}</> Deployment Points.",
+      "blackboardKeys": [
+        "cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_rfalcn_2",
+      "name": "Drunken Bladedance",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "rangeId": "1-1",
+          "values": [
+            9,
+            10,
+            0.04,
+            1.6,
+            1,
+            1.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 6,
+          "rangeId": "1-1",
+          "values": [
+            9,
+            10,
+            0.08,
+            1.6,
+            1,
+            1.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 7,
+          "rangeId": "1-1",
+          "values": [
+            9,
+            10,
+            0.12,
+            1.6,
+            1,
+            1.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 8,
+          "rangeId": "1-1",
+          "values": [
+            10,
+            20,
+            0.16,
+            1.5,
+            1,
+            1.6
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 9,
+          "rangeId": "1-1",
+          "values": [
+            10,
+            20,
+            0.2,
+            1.5,
+            1,
+            1.6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "rangeId": "1-1",
+          "values": [
+            10,
+            20,
+            0.24,
+            1.5,
+            1,
+            1.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 12,
+          "rangeId": "1-1",
+          "values": [
+            11,
+            30,
+            0.28,
+            1.3,
+            1,
+            1.9
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 13,
+          "rangeId": "1-1",
+          "values": [
+            11,
+            30,
+            0.32,
+            1.3,
+            1,
+            2.1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 14,
+          "rangeId": "1-1",
+          "values": [
+            11,
+            30,
+            0.36,
+            1.3,
+            1,
+            2.3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "rangeId": "1-1",
+          "values": [
+            12,
+            40,
+            0.4,
+            1.25,
+            1,
+            2.5
+          ]
+        }
+      ],
+      "description": "Gradually gains <@ba.vup>{value}</> DP over the skill duration; ATK <@ba.vup>+{atk:0%}</>, ASPD <@ba.vup>+{attack_speed}</>, and Talent 1 activation chance increases to <@ba.vup>{talent@prob_scaler:0.0}</> times",
+      "blackboardKeys": [
+        "value",
+        "attack_speed",
+        "atk",
+        "rfalcn_s_2[cost].interval",
+        "rfalcn_s_2[cost].cost",
+        "talent@prob_scaler"
+      ]
+    }
+  ],
+  "ranges": {
+    "1-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

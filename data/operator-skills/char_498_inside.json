@@ -1,0 +1,302 @@
+{
+  "operatorId": "char_498_inside",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_inside_1",
+      "name": "'Don't Invite Trouble'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            1.7,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            1.75,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            1.8,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 0,
+          "values": [
+            1.85,
+            4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 0,
+          "values": [
+            1.9,
+            4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 0,
+          "values": [
+            1.95,
+            4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 0,
+          "values": [
+            2,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 0,
+          "values": [
+            2.1,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 0,
+          "values": [
+            2.2,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 0,
+          "values": [
+            2.3,
+            4
+          ]
+        }
+      ],
+      "description": "Each attack deals <@ba.vup>{attack@atk_scale:0%}</> of ATK as Physical damage\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "attack@trigger_time"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_inside_2",
+      "name": "'Problem Solver'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "values": [
+            0.6,
+            -0.3,
+            14
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "values": [
+            0.65,
+            -0.3,
+            14
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "values": [
+            0.7,
+            -0.3,
+            14
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 8,
+          "values": [
+            0.8,
+            -0.3,
+            14
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 8,
+          "values": [
+            0.85,
+            -0.3,
+            14
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 8,
+          "values": [
+            0.9,
+            -0.3,
+            14
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 10,
+          "values": [
+            1,
+            -0.3,
+            14
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 11,
+          "values": [
+            1.1,
+            -0.3,
+            14
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 12,
+          "values": [
+            1.2,
+            -0.3,
+            14
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 14,
+          "values": [
+            1.3,
+            -0.3,
+            14
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>shortens slightly</>, attacks prioritize enemies with long-ranged weapons, and becomes less likely to be targeted by enemies\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "atk",
+        "base_attack_time",
+        "attack@trigger_time"
+      ]
+    }
+  ],
+  "ranges": {}
+}

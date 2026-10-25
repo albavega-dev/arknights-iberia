@@ -1,0 +1,576 @@
+{
+  "operatorId": "char_1034_jesca2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_jesca2_1",
+      "name": "Hold the Line",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 100,
+          "initSp": 0,
+          "values": [
+            0.25,
+            0.25,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 100,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.3,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 100,
+          "initSp": 0,
+          "values": [
+            0.35,
+            0.35,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 100,
+          "initSp": 0,
+          "values": [
+            0.4,
+            0.4,
+            20
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 100,
+          "initSp": 0,
+          "values": [
+            0.45,
+            0.45,
+            20
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 100,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.5,
+            20
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 90,
+          "initSp": 0,
+          "values": [
+            0.55,
+            0.55,
+            20
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 0,
+          "values": [
+            0.6,
+            0.6,
+            25
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 75,
+          "initSp": 0,
+          "values": [
+            0.65,
+            0.65,
+            25
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 0,
+          "values": [
+            0.7,
+            0.7,
+            30
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, increases DEF of self and Mobile Riot Shield by <@ba.vup>+{def:0%}</>, and increases duration of Mobile Riot Shield by <@ba.vup>+{duration}</> seconds\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "def",
+        "atk",
+        "duration"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_jesca2_2",
+      "name": "Covered Defense",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "2-5",
+          "values": [
+            0.3,
+            -0.9,
+            0.75
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "2-5",
+          "values": [
+            0.35,
+            -0.9,
+            0.75
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "2-5",
+          "values": [
+            0.4,
+            -0.9,
+            0.75
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "2-5",
+          "values": [
+            0.45,
+            -0.9,
+            0.75
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "2-5",
+          "values": [
+            0.5,
+            -0.9,
+            0.75
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "2-5",
+          "values": [
+            0.55,
+            -0.9,
+            0.75
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "rangeId": "2-5",
+          "values": [
+            0.6,
+            -0.9,
+            0.75
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "rangeId": "2-5",
+          "values": [
+            0.65,
+            -0.9,
+            0.75
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 22,
+          "rangeId": "2-5",
+          "values": [
+            0.7,
+            -0.9,
+            0.75
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 25,
+          "rangeId": "2-5",
+          "values": [
+            0.75,
+            -0.9,
+            0.75
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>reduces significantly</>, and gains <@ba.vup>75%</> Physical and Arts dodge",
+      "blackboardKeys": [
+        "atk",
+        "base_attack_time",
+        "prob"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_jesca2_3",
+      "name": "Saturation Burst",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            2,
+            0.75,
+            1,
+            0.6,
+            5,
+            2.5,
+            20,
+            1.7,
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            2.1,
+            0.8,
+            1,
+            0.6,
+            5,
+            2.5,
+            20,
+            1.7,
+            0.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            2.3,
+            0.9,
+            1,
+            0.6,
+            5,
+            2.5,
+            20,
+            1.7,
+            0.35
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            2.4,
+            1,
+            1,
+            0.6,
+            5,
+            2.5,
+            20,
+            1.7,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            2.5,
+            1.1,
+            1,
+            0.6,
+            5,
+            2.5,
+            20,
+            1.7,
+            0.55
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            2.6,
+            1.2,
+            1,
+            0.6,
+            5,
+            2.5,
+            20,
+            1.7,
+            0.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 25,
+          "values": [
+            2.7,
+            1.35,
+            1,
+            0.6,
+            5,
+            2.5,
+            20,
+            1.7,
+            0.65
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 28,
+          "values": [
+            2.8,
+            1.5,
+            1,
+            0.6,
+            5.5,
+            2.5,
+            20,
+            1.7,
+            0.7
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 28,
+          "values": [
+            2.9,
+            1.6,
+            1,
+            0.6,
+            5.5,
+            2.5,
+            20,
+            1.7,
+            0.75
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 30,
+          "values": [
+            3.1,
+            1.7,
+            1,
+            0.6,
+            6,
+            2.5,
+            20,
+            1.7,
+            0.8
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>+1</>, Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{jesca2_s_3[def].def:0%}</>, Mobile Riot Shield gains <@ba.vup>+{jesca2_s_3_token[def].def:0%}</> DEF\nWhen the Mobile Riot Shield is deployed, immediately fires a shell forward that explodes upon reaching a target or its max distance, dealing <@ba.vup>{attack@extrabomb.atk_scale:0%}</> ATK as Physical damage to all enemies in an area and <$ba.stun>stunning</> them for <@ba.vup>{attack@extrabomb.stun}</> seconds\n<@ba.rem>Skill activation grants {attack@trigger_time} Ammo, and the skill ends when all Ammo is used (can be manually deactivated)</>",
+      "blackboardKeys": [
+        "atk",
+        "jesca2_s_3_token[def].def",
+        "ability_range_forward_extend",
+        "base_attack_time",
+        "attack@extrabomb.stun",
+        "attack@extrabomb.atk_scale",
+        "attack@trigger_time",
+        "attack@extrabomb.projectile_range",
+        "jesca2_s_3[def].def"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  }
+}

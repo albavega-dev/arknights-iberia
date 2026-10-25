@@ -1,0 +1,333 @@
+{
+  "operatorId": "char_4163_rosesa",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_rosesa_1",
+      "name": "Top-Notch Emergency Meds!",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            1.4,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            1.45,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            1.55,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            1.6,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            1.65,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            1.7,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            1.8,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            1.9,
+            2
+          ]
+        }
+      ],
+      "description": "The next heal is increased to <@ba.vup>{heal_scale:0%}</> ATK\n<@ba.rem>Can store {ct} charge(s)</>",
+      "blackboardKeys": [
+        "heal_scale",
+        "ct"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_rosesa_2",
+      "name": "Super-Fine Slow-Release Meds!",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 17,
+          "description": "Attack interval <@ba.vup>reduces slightly</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -0.75,
+            0.9,
+            0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 17,
+          "description": "Attack interval <@ba.vup>reduces slightly</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -0.75,
+            0.85,
+            0.15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 17,
+          "description": "Attack interval <@ba.vup>reduces slightly</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -0.75,
+            0.8,
+            0.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 19,
+          "description": "Attack interval <@ba.vup>reduces somewhat slightly</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -1.05,
+            0.8,
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 19,
+          "description": "Attack interval <@ba.vup>reduces somewhat slightly</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -1.05,
+            0.75,
+            0.25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 19,
+          "description": "Attack interval <@ba.vup>reduces somewhat slightly</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -1.05,
+            0.7,
+            0.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 21,
+          "description": "Attack interval <@ba.vup>reduces</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -1.35,
+            0.7,
+            0.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 23,
+          "description": "Attack interval <@ba.vup>reduces</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -1.35,
+            0.65,
+            0.35
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 25,
+          "description": "Attack interval <@ba.vup>reduces</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -1.35,
+            0.6,
+            0.4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 27,
+          "description": "Attack interval <@ba.vup>reduces</>, <@ba.vup>{damage_reduce_scale_display:0%}</> of Physical and Arts damage received by allied Operators within range becomes HP loss over <@ba.vup>{attack@final_duration}</>s",
+          "values": [
+            1,
+            5,
+            -1.35,
+            0.5,
+            0.5
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "attack@interval",
+        "attack@final_duration",
+        "base_attack_time",
+        "attack@damage_scale",
+        "damage_reduce_scale_display"
+      ]
+    }
+  ],
+  "ranges": {}
+}

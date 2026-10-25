@@ -1,0 +1,367 @@
+{
+  "operatorId": "char_394_hadiya",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_hadiya_1",
+      "name": "Enhanced Desert Tactics",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 0,
+          "values": [
+            0.4,
+            0.4,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 2,
+          "values": [
+            0.45,
+            0.45,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 3,
+          "values": [
+            0.5,
+            0.5,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 5,
+          "values": [
+            0.55,
+            0.55,
+            10
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 7,
+          "values": [
+            0.6,
+            0.6,
+            10
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 8,
+          "values": [
+            0.65,
+            0.65,
+            10
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 9,
+          "values": [
+            0.7,
+            0.7,
+            10
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 10,
+          "values": [
+            0.8,
+            0.8,
+            10
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 11,
+          "values": [
+            0.9,
+            0.9,
+            10
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 13,
+          "values": [
+            1,
+            1,
+            10
+          ]
+        }
+      ],
+      "description": "<@ba.vup>+{def:0%}</> DEF\n<$ba.alter>Equipment Alteration</>: Consumes <@ba.vdown>10</> DP to gain <@ba.vup>+{extra.atk:0%}</> ATK until skill ends\n<@ba.rem>Can use <$ba.alter>Equipment Alteration</> to activate skill when SP is full</>",
+      "blackboardKeys": [
+        "def",
+        "extra.atk",
+        "retrigger_cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_hadiya_2",
+      "name": "Blade of the Qarnsayf",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 5,
+          "rangeId": "3-2",
+          "values": [
+            0.85,
+            2,
+            10,
+            15,
+            15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 6,
+          "rangeId": "3-2",
+          "values": [
+            0.95,
+            2,
+            10,
+            15,
+            15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 7,
+          "rangeId": "3-2",
+          "values": [
+            1.05,
+            2,
+            10,
+            15,
+            15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 8,
+          "rangeId": "3-2",
+          "values": [
+            1.1,
+            2,
+            10,
+            15,
+            15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 9,
+          "rangeId": "3-2",
+          "values": [
+            1.15,
+            2,
+            10,
+            15,
+            15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 10,
+          "rangeId": "3-2",
+          "values": [
+            1.25,
+            2,
+            10,
+            15,
+            15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 11,
+          "rangeId": "3-2",
+          "values": [
+            1.35,
+            3,
+            10,
+            15,
+            15
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 12,
+          "rangeId": "3-2",
+          "values": [
+            1.4,
+            3,
+            10,
+            15,
+            15
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 14,
+          "rangeId": "3-2",
+          "values": [
+            1.45,
+            3,
+            10,
+            15,
+            15
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 15,
+          "rangeId": "3-2",
+          "values": [
+            1.5,
+            3,
+            10,
+            15,
+            15
+          ]
+        }
+      ],
+      "description": "Consumes <@ba.vdown>10</> DP to fuse sword and staff, gaining <@ba.vup>increased</> Attack Range, <@ba.vup>+{atk:0%}</> ATK, and attacking up to <@ba.vup>{attack@max_target:0}</> targets simultaneously; \nWhen skill is active, can spend <@ba.vdown>15</> DP to activate <$ba.alter>Equipment Alteration</>, extending skill duration by <@ba.vup>15</> seconds",
+      "blackboardKeys": [
+        "atk",
+        "attack@max_target",
+        "cost",
+        "retrigger_cost",
+        "extra.duration"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        }
+      ]
+    }
+  }
+}

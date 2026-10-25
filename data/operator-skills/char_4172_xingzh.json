@@ -1,0 +1,302 @@
+{
+  "operatorId": "char_4172_xingzh",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_xingzh_1",
+      "name": "Filled Tomes, Spilling Sheets",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 3,
+          "values": [
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 4,
+          "values": [
+            2.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 4,
+          "values": [
+            2.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 5,
+          "values": [
+            2.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 6,
+          "values": [
+            2.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 6,
+          "values": [
+            2.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 7,
+          "values": [
+            2.9
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 7,
+          "values": [
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 8,
+          "values": [
+            3.1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 8,
+          "values": [
+            3.3
+          ]
+        }
+      ],
+      "description": "Immediately performs a heal to all targets within range equal to <@ba.vup>{heal_scale:0%}</> of Xingzhu's ATK",
+      "blackboardKeys": [
+        "heal_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_xingzh_2",
+      "name": "Fine Food, Soothed Souls",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 45,
+          "values": [
+            20,
+            2,
+            1,
+            0.15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 47,
+          "values": [
+            23,
+            2,
+            1,
+            0.15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 49,
+          "values": [
+            27,
+            2,
+            1,
+            0.15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 24,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 50,
+          "values": [
+            32,
+            2,
+            1,
+            0.15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 24,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 52,
+          "values": [
+            35,
+            2,
+            1,
+            0.15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 24,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 54,
+          "values": [
+            38,
+            2,
+            1,
+            0.15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 55,
+          "values": [
+            43,
+            2,
+            1,
+            0.18
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 57,
+          "values": [
+            45,
+            2,
+            1,
+            0.18
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 59,
+          "values": [
+            47,
+            2,
+            1,
+            0.18
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 75,
+          "initSp": 60,
+          "values": [
+            50,
+            2,
+            1,
+            0.2
+          ]
+        }
+      ],
+      "description": "ASPD <@ba.vup>+{attack_speed}</>, heals <@ba.vup>1</> additional target, and the targets of Xingzhu's talent recover HP equal to <@ba.vup>{attack@xingzh_s_2[heal].atk_to_hp_recovery_ratio:0%}</> of Xingzhu's ATK per second",
+      "blackboardKeys": [
+        "attack_speed",
+        "attack@max_target",
+        "attack@xingzh_s_2[heal].interval",
+        "attack@xingzh_s_2[heal].atk_to_hp_recovery_ratio"
+      ]
+    }
+  ],
+  "ranges": {}
+}

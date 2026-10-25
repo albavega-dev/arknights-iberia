@@ -1,0 +1,348 @@
+{
+  "operatorId": "char_4124_iana",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_iana_1",
+      "name": "Mirage Mine",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            2.6
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            2.7
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            2.8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            3.1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            3.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            3.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            3.6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            3.8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            4
+          ]
+        }
+      ],
+      "description": "When switching to a <Substitute>, immediately deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to the attacker of the Holographic Mirage as well as the enemies around them",
+      "blackboardKeys": [
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_iana_2",
+      "name": "Omniscient Tactics",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            200,
+            8
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            210,
+            8
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            220,
+            8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            230,
+            8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            240,
+            8
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            250,
+            8
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            260,
+            10
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            270,
+            10
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            280,
+            10
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            300,
+            10
+          ]
+        }
+      ],
+      "description": "Immediately nullifies the <$ba.invisible>Invisibility</> of enemies around for <@ba.vup>{anti_invisible_duration}</>s and switches to a <Substitute>\nGains <@ba.vup>+{attack_speed}</> ASPD and <$ba.invisible>Invisibility</> over the skill duration",
+      "blackboardKeys": [
+        "attack_speed",
+        "anti_invisible_duration"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  }
+}

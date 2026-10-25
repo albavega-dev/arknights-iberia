@@ -1,0 +1,197 @@
+{
+  "region": "en",
+  "terms": {
+    "ba.addash": {
+      "name": "Move",
+      "description": "Cannot leave the field; will deploy at the target location with the current HP"
+    },
+    "ba.addbullet": {
+      "name": "Replenish",
+      "description": "Replenishes ammo for other Operators' ammo-type skills; an ammo-type skill can only be replenished up to its max ammo capacity during a single activation of that skill"
+    },
+    "ba.alter": {
+      "name": "Equipment Alteration",
+      "description": "When selecting a deployed Operator, can activate extra effects when certain conditions are fulfilled"
+    },
+    "ba.attract": {
+      "name": "Lure",
+      "description": "Cannot be blocked and moves towards the target's position"
+    },
+    "ba.barrier": {
+      "name": "Barrier",
+      "description": "Absorbs a certain amount of damage."
+    },
+    "ba.binding": {
+      "name": "Tied",
+      "description": "When the corresponding Tied unit is no longer on the battlefield, this unit's skill immediately ends, SP is set to 0, and SP can no longer be gained"
+    },
+    "ba.buffres": {
+      "name": "Status Resistance",
+      "description": "<$ba.stun>Stun</>, <$ba.cold>Cold</>, and <$ba.frozen>Frozen</> durations halved; <$ba.palsy>Paralysis</> loses 1 stack every 5s (does not stack with the same effect)"
+    },
+    "ba.camou": {
+      "name": "Camouflage",
+      "description": "Prevents being targeted by normal enemy attacks if the unit is not blocking (but will still take Splash damage)"
+    },
+    "ba.chant": {
+      "name": "Chanting",
+      "description": "Stops attacking for a period of time, then attempts to activate skill; interruptions during this period will stop the chant"
+    },
+    "ba.charged": {
+      "name": "Charged",
+      "description": "Can continue recovering SP after reaching the maximum. When SP reaches double the maximum, enters Charged state. Skills have additional effects when activated in Charged state (All SP will be consumed whenever the skill is activated)"
+    },
+    "ba.cold": {
+      "name": "Cold",
+      "description": "Reduces ASPD by 30 and causes subsequent applications of the Cold status during the debuff duration to inflict <$ba.frozen>Frozen</>"
+    },
+    "ba.debuff": {
+      "name": "Negative Status",
+      "description": "Includes <$ba.stun>Stun</>, <$ba.cold>Cold</>, <$ba.frozen>Freeze</>, etc."
+    },
+    "ba.dt.apoptosis": {
+      "name": "Necrosis",
+      "description": "After Necrosis reaches 1000, the affected unit cannot use skills for 15 seconds and every second loses 1 SP and takes 100 Arts damage"
+    },
+    "ba.dt.apoptosis2": {
+      "name": "Necrosis - Ally",
+      "description": "Explodes when at max (1000 for Normal and Elite, 2000 for Leaders), inflicting 50%<$ba.weaken>Enfeeble</> that gradually recovers, and dealing 800 Elemental Damage per second. 15s cooldown."
+    },
+    "ba.dt.burning": {
+      "name": "Burn",
+      "description": "After Burn reaches 1000, the affected unit has its RES reduced by 20 for 10 seconds and takes 1200 Arts damage"
+    },
+    "ba.dt.burning2": {
+      "name": "Burn - Ally",
+      "description": "Explodes when at max (1000 for Normal and Elite, 2000 for Leaders), dealing 7000 Elemental Damage and temporarily inflicting -20 RES. 10s cooldown."
+    },
+    "ba.dt.element": {
+      "name": "Elemental Injury",
+      "description": "Includes <$ba.dt.neural>Nervous Impairment</>, <$ba.dt.erosion>Corrosion</>, <$ba.dt.burning>Burn</>, and <$ba.dt.apoptosis>Necrosis</>"
+    },
+    "ba.dt.erosion": {
+      "name": "Corrosion",
+      "description": "After Corrosion reaches 1000, the affected unit has its DEF permanently reduced by 100 and takes 800 Physical damage"
+    },
+    "ba.dt.erosion2": {
+      "name": "Corrosion - Ally",
+      "description": "Explodes when at max (1000 for Normal and Elite, 2000 for Leaders), dealing 5000 Elemental Damage and permanently reducing DEF by 120 (stacks). 8s cooldown."
+    },
+    "ba.dt.neural": {
+      "name": "Nervous Impairment",
+      "description": "After Nervous Impairment reaches 1000, the affected unit takes 1000 True damage and is <$ba.stun>Stunned</> for 10s"
+    },
+    "ba.dt.neural2": {
+      "name": "Nervous Impairment - Ally",
+      "description": "Explodes when at max (1000 for Normal and Elite, 2000 for Leaders), dealing 6000 Elemental Damage and inflicting 3 stacks of <$ba.palsy>Paralysis</>. 10s cooldown."
+    },
+    "ba.dying": {
+      "name": "Critically Wounded",
+      "description": "Movement Speed reduced, cannot be blocked, dies after 10s, restores SP to the attacker when defeated."
+    },
+    "ba.epbarrier": {
+      "name": "Protective Barrier",
+      "description": "Absorbs a certain amount of <$ba.dt.element>Elemental Injury</>."
+    },
+    "ba.fear": {
+      "name": "Fear",
+      "description": "Cannot be blocked and runs off uncontrollably"
+    },
+    "ba.fever": {
+      "name": "Fever",
+      "description": "Once Fever reaches 450, whenever any <$ba.mujica>Ave Mujica</> member's skill is manually activated, all <$ba.mujica>Ave Mujica</> members on the field will keep their current skill activated for 20s"
+    },
+    "ba.fragile": {
+      "name": "Fragile",
+      "description": "Amplifies all Physical, Arts, and True damage taken by the corresponding amount (only the strongest effect of this type applies)"
+    },
+    "ba.frozen": {
+      "name": "Frozen",
+      "description": "Unable to move, attack, or use skills (inflicted through the <$ba.cold>Cold</> status); When enemies are frozen, RES -15"
+    },
+    "ba.inspire": {
+      "name": "Inspiration",
+      "description": "Increases base stats (only the strongest effect of this type applies for each stat)"
+    },
+    "ba.invisible": {
+      "name": "Invisible",
+      "description": "Prevents being targeted by enemy attacks if the unit is not blocking"
+    },
+    "ba.levitate": {
+      "name": "Levitate",
+      "description": "Target becomes aerial and cannot move, attack, or use skills. Duration halved if Weight is greater than 3."
+    },
+    "ba.liftoff": {
+      "name": "Take Off",
+      "description": "Cannot block ground enemies and will not be attacked by them; can block flying enemies"
+    },
+    "ba.magicfragile": {
+      "name": "Arts Fragility",
+      "description": "Amplifies all Arts damage taken by the corresponding amount (only the strongest effect of this type applies)"
+    },
+    "ba.magicpoint": {
+      "name": "Mana",
+      "description": "A special form of SP that persists throughout battle"
+    },
+    "ba.mujica": {
+      "name": "Ave Mujica",
+      "description": "Includes Sakiko Togawa, Umiri Yahata, Uika Misumi, Nyamu Yūtenji, Mutsumi Wakaba"
+    },
+    "ba.overdrive": {
+      "name": "Overload",
+      "description": "Skill duration has two gauges. Extra effect is triggered when skill duration is halfway complete."
+    },
+    "ba.palsy": {
+      "name": "Paralysis",
+      "description": "Each stack of Paralysis can interrupt an enemy when it attempts to perform a normal attack, max 3 stacks; Paralysis has unlimited duration when not consumed, but units with status resistance lose 1 stack every 5s"
+    },
+    "ba.protect": {
+      "name": "Sanctuary",
+      "description": "Reduces incoming Physical and Arts damage by the corresponding amount (only the strongest effect of this type applies)"
+    },
+    "ba.root": {
+      "name": "Bind",
+      "description": "Unable to move"
+    },
+    "ba.shield": {
+      "name": "Shield",
+      "description": "Blocks 1 instance of damage per layer of Shield"
+    },
+    "ba.sleep": {
+      "name": "Sleep",
+      "description": "Invulnerable and unable to take any actions"
+    },
+    "ba.slowdown": {
+      "name": "Sluggish",
+      "description": "Movement Speed, ASPD, activation and cooldown speed of certain skills, and recovery speed from certain negative statuses are reduced by the corresponding amount (only the strongest effect of this type applies)"
+    },
+    "ba.sluggish": {
+      "name": "Slow",
+      "description": "-80% Movement Speed"
+    },
+    "ba.steal": {
+      "name": "Steal",
+      "description": "Reduces the target's base stats while increasing own. The reduction and increase in stats cannot exceed the specified upper limit (only the strongest effect of this type applies)"
+    },
+    "ba.strong": {
+      "name": "Vigor",
+      "description": "Increases stats when HP is above a certain percentage (only the strongest effect of this type applies)"
+    },
+    "ba.stun": {
+      "name": "Stun",
+      "description": "Unable to move, block, attack, or use skills"
+    },
+    "ba.tremble": {
+      "name": "Frighten",
+      "description": "Cannot perform normal attacks when blocked"
+    },
+    "ba.weaken": {
+      "name": "Enfeeble",
+      "description": "Reduces the target's ATK by the corresponding amount (only the strongest effect with this name applies)"
+    },
+    "ba.weightless": {
+      "name": "Weightless",
+      "description": "Weight reduced by 1 level (effects of the same name do not stack)"
+    }
+  }
+}

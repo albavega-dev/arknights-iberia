@@ -1,0 +1,313 @@
+{
+  "operatorId": "char_171_bldsk",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_bldsk_1",
+      "name": "Emergency Triage",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.11,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.12,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.13,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.15,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.16,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.17,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.19,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.21,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.23,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.25,
+            4
+          ]
+        }
+      ],
+      "description": "The next heal restores an additional <@ba.vup>{hp_ratio:0%}</> of its target's Max HP\n<@ba.rem>Only available when the target's HP is lower than 50%; Can store {ct} charge(s)</>",
+      "blackboardKeys": [
+        "hp_ratio",
+        "ct"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_bldsk_2",
+      "name": "Unstable Plasma",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 35,
+          "values": [
+            0.3,
+            0.03,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 35,
+          "values": [
+            0.35,
+            0.03,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 35,
+          "values": [
+            0.4,
+            0.03,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 40,
+          "values": [
+            0.45,
+            0.03,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 40,
+          "values": [
+            0.5,
+            0.03,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 40,
+          "values": [
+            0.55,
+            0.03,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 45,
+          "values": [
+            0.6,
+            0.03,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 45,
+          "values": [
+            0.7,
+            0.03,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 45,
+          "values": [
+            0.8,
+            0.03,
+            1,
+            15
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 50,
+          "values": [
+            0.9,
+            0.03,
+            1,
+            15
+          ]
+        }
+      ],
+      "description": "Warfarin and a random ally within range obtain the following status:\nATK <@ba.vup>+{atk:0%}</> and loses <@ba.vdown>{hp_ratio:0%}</> of Max HP every second, lasting for <@ba.vup>{duration}</> seconds",
+      "blackboardKeys": [
+        "atk",
+        "hp_ratio",
+        "interval",
+        "duration"
+      ]
+    }
+  ],
+  "ranges": {}
+}

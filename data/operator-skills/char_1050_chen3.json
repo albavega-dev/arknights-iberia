@@ -1,0 +1,570 @@
+{
+  "operatorId": "char_1050_chen3",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_chen3_1",
+      "name": "Chi Xiao - Fleeting Night",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "values": [
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 5,
+          "values": [
+            0.55
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 5,
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 6,
+          "values": [
+            0.65
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 6,
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 6,
+          "values": [
+            0.75
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 7,
+          "values": [
+            0.8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 8,
+          "values": [
+            0.9
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 9,
+          "values": [
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 10,
+          "values": [
+            1.2
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, attacks hit twice, and attacks silence the target until the skill ends",
+      "blackboardKeys": [
+        "atk"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_chen3_2",
+      "name": "Chi Xiao - Shadowless Speed",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            3.5,
+            2,
+            0.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            3.6,
+            2.1,
+            0.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            3.7,
+            2.2,
+            0.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 11,
+          "rangeId": "x-1",
+          "values": [
+            3.9,
+            2.3,
+            0.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 11,
+          "rangeId": "x-1",
+          "values": [
+            4,
+            2.4,
+            0.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 11,
+          "rangeId": "x-1",
+          "values": [
+            4.1,
+            2.5,
+            0.4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 12,
+          "rangeId": "x-1",
+          "values": [
+            4.3,
+            2.6,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 13,
+          "rangeId": "x-1",
+          "values": [
+            4.5,
+            2.7,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 14,
+          "rangeId": "x-1",
+          "values": [
+            4.6,
+            2.8,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 6,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "rangeId": "x-1",
+          "values": [
+            4.8,
+            3,
+            0.6
+          ]
+        }
+      ],
+      "description": "Slashes the nearest enemy <@ba.vup>10</> times, each slash dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; if the target is defeated, retargets to the next nearest enemy and adds <@ba.vup>+1</> to remaining slash count; once all slashes end, if target has not been defeated and is on a deployable tile, <$ba.addash>Move</> to said tile, otherwise return to starting tile; afterward, ATK <@ba.vup>+{chen3_s2[respawn_buff].atk:0%}</> and gains <@ba.vup>{chen3_s2[respawn_buff].prob:0%}</> Physical and Arts Dodge",
+      "blackboardKeys": [
+        "atk_scale",
+        "chen3_s2[respawn_buff].atk",
+        "chen3_s2[respawn_buff].prob"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_chen3_3",
+      "name": "Chi Xiao - Heaven's Plaint",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5,
+            1.5,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5,
+            1.55,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5,
+            1.6,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 12,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5.3,
+            1.65,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 12,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5.3,
+            1.7,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 12,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5.3,
+            1.75,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 15,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5.5,
+            1.8,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 16,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5.6,
+            1.9,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 17,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5.7,
+            2,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 18,
+          "rangeId": "3-12",
+          "values": [
+            0.06,
+            5.8,
+            2.1,
+            4
+          ]
+        }
+      ],
+      "description": "On skill activation, unleashes a sword wave that travels forward and can change direction, dealing Arts damage to enemies it passes through equivalent to <@ba.vup>{hp_ratio:0%}</> of their current HP (minimum of <@ba.vup>{projectile_min_atk_scale:0%}</> ATK as Arts damage); Attack Range expands, each attack deals <@ba.vup>3</> instances of <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage to up to <@ba.vup>{attack@max_target}</> ground enemies",
+      "blackboardKeys": [
+        "hp_ratio",
+        "projectile_min_atk_scale",
+        "attack@atk_scale",
+        "attack@max_target"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-12": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    },
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  }
+}

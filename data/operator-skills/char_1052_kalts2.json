@@ -1,0 +1,569 @@
+{
+  "operatorId": "char_1052_kalts2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_kalts2_1",
+      "name": "Kriza Responda Bastiono",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "values": [
+            0.2,
+            0.23,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "values": [
+            0.35,
+            0.23,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "values": [
+            0.5,
+            0.23,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 18,
+          "values": [
+            0.6,
+            0.23,
+            25
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 18,
+          "values": [
+            0.65,
+            0.23,
+            25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 18,
+          "values": [
+            0.7,
+            0.23,
+            25
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            0.75,
+            0.23,
+            35
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 22,
+          "values": [
+            0.8,
+            0.23,
+            35
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 25,
+          "values": [
+            0.85,
+            0.23,
+            35
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 28,
+          "values": [
+            0.9,
+            0.23,
+            50
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, ASPD <@ba.vup>+{attack_speed}</>, all other <$ba.liftoff>Flying</> allied Operators have expanded Block range",
+      "blackboardKeys": [
+        "atk",
+        "attack@block_radius_scale",
+        "attack_speed"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_kalts2_2",
+      "name": "Repuŝado Defenda",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "y-11",
+          "values": [
+            0.8,
+            2.8,
+            1,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "y-11",
+          "values": [
+            0.9,
+            2.9,
+            1.2,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "y-11",
+          "values": [
+            1,
+            3,
+            1.3,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 18,
+          "rangeId": "y-11",
+          "values": [
+            1.1,
+            3.1,
+            1.35,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 18,
+          "rangeId": "y-11",
+          "values": [
+            1.15,
+            3.2,
+            1.5,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 18,
+          "rangeId": "y-11",
+          "values": [
+            1.2,
+            3.3,
+            1.6,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "rangeId": "y-11",
+          "values": [
+            1.25,
+            3.5,
+            1.7,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 22,
+          "rangeId": "y-11",
+          "values": [
+            1.3,
+            3.6,
+            1.8,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 25,
+          "rangeId": "y-11",
+          "values": [
+            1.35,
+            3.7,
+            1.9,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 28,
+          "rangeId": "y-11",
+          "values": [
+            1.5,
+            3.8,
+            2,
+            5,
+            10
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, and attacks now release medical units (prioritizing enemies) that deal <@ba.vup>{attack@atk_scale:0%}</> ATK as True damage to all enemies around the target, <$ba.sluggish>Slow</> them for <@ba.vup>{attack@sluggish}</>s, and restore HP equal to <@ba.vup>{attack@heal_scale:0%}</> ATK to all allied Operators around the target\n<@ba.rem>Skill activation grants 10 ammo; can manually deactivate skill</>",
+      "blackboardKeys": [
+        "atk",
+        "attack@atk_scale",
+        "attack@heal_scale",
+        "attack@sluggish",
+        "attack@trigger_time"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_kalts2_3",
+      "name": "Renaskiĝo Malkatena",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 20,
+          "values": [
+            0.8,
+            -1.55
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 22,
+          "values": [
+            0.9,
+            -1.55
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 23,
+          "values": [
+            1,
+            -1.55
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 25,
+          "values": [
+            1.1,
+            -1.55
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 28,
+          "values": [
+            1.15,
+            -1.55
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 62,
+          "initSp": 29,
+          "values": [
+            1.2,
+            -1.55
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 30,
+          "values": [
+            1.25,
+            -1.55
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 32,
+          "values": [
+            1.3,
+            -1.55
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 33,
+          "values": [
+            1.35,
+            -1.55
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 35,
+          "values": [
+            1.5,
+            -1.55
+          ]
+        }
+      ],
+      "description": "Gain a Tactical Anchor Point; ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases significantly</>, and heals <@ba.vup>1</> additional target; after deploying the Tactical Anchor Point, Kal'tsit Esperanta <$ba.addash>Moves</> to its position, and up to <@ba.vup>2</> allied Operators within her Attack Range can be brought along and deployed elsewhere within her new Attack Range",
+      "blackboardKeys": [
+        "atk",
+        "base_attack_time"
+      ]
+    }
+  ],
+  "ranges": {
+    "y-11": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

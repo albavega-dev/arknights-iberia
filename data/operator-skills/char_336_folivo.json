@@ -1,0 +1,324 @@
+{
+  "operatorId": "char_336_folivo",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_folivo_1",
+      "name": "Protective Camouflage",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 90,
+          "initSp": 0,
+          "values": [
+            0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 87,
+          "initSp": 0,
+          "values": [
+            0.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 84,
+          "initSp": 0,
+          "values": [
+            0.1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 81,
+          "initSp": 0,
+          "values": [
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 0,
+          "values": [
+            0.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 75,
+          "initSp": 0,
+          "values": [
+            0.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 72,
+          "initSp": 0,
+          "values": [
+            0.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 69,
+          "initSp": 0,
+          "values": [
+            0.4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 66,
+          "initSp": 0,
+          "values": [
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "values": [
+            0.6
+          ]
+        }
+      ],
+      "description": "Increases the ATK of all Buggy Cams by <@ba.vup>+{atk:0%}</> and grants them <$ba.camou>Camouflage</>\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_folivo_2",
+      "name": "Panoramic Overload",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "values": [
+            0.5,
+            0.5,
+            10,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "values": [
+            0.55,
+            0.55,
+            10,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "values": [
+            0.6,
+            0.6,
+            10,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 7,
+          "values": [
+            0.65,
+            0.65,
+            10,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 7,
+          "values": [
+            0.7,
+            0.7,
+            10,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 7,
+          "values": [
+            0.75,
+            0.75,
+            10,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 9,
+          "values": [
+            0.8,
+            0.8,
+            15,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 11,
+          "values": [
+            0.95,
+            0.95,
+            15,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 19,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 13,
+          "values": [
+            1.1,
+            1.1,
+            15,
+            5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "values": [
+            1.3,
+            1.3,
+            20,
+            5,
+            1,
+            1
+          ]
+        }
+      ],
+      "description": "Immediately obtains 1 Buggy Cam and grants all deployed Buggy Cams <@ba.vup>increased</> Detection Range, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, and RES <@ba.vup>+{magic_resistance}</>\n<@ba.rem>After the skill ends, all Buggy Cams are <$ba.stun>stunned</> for {stun} seconds</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "magic_resistance",
+        "stun",
+        "talent_range_flag",
+        "cnt"
+      ]
+    }
+  ],
+  "ranges": {}
+}

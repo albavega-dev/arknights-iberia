@@ -1,0 +1,567 @@
+{
+  "operatorId": "char_4098_vvana",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_vvana_1",
+      "name": "Blade of Fleeting Shadows",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.45
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.55
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.65
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2
+          ]
+        }
+      ],
+      "description": "For the next attack, ATK is increased to <@ba.vup>{atk_scale:0%}</>, and hits twice;\n<$ba.charged>Charged</> effect: Attack range <@ba.vup>+2</>, and hits 3 times",
+      "blackboardKeys": [
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_vvana_2",
+      "name": "Shadowed by Candlelight",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 6,
+          "values": [
+            0.1,
+            0.5,
+            1,
+            1.2,
+            0.8,
+            0.2,
+            20,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 6,
+          "values": [
+            0.13,
+            0.6,
+            1,
+            1.2,
+            0.8,
+            0.2,
+            20,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 6,
+          "values": [
+            0.16,
+            0.7,
+            1,
+            1.2,
+            0.8,
+            0.2,
+            20,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 9,
+          "values": [
+            0.2,
+            0.8,
+            1,
+            1.3,
+            0.8,
+            0.2,
+            25,
+            25
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 9,
+          "values": [
+            0.23,
+            0.9,
+            1,
+            1.3,
+            0.8,
+            0.2,
+            25,
+            25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 9,
+          "values": [
+            0.26,
+            1,
+            1,
+            1.3,
+            0.8,
+            0.2,
+            25,
+            25
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 12,
+          "values": [
+            0.3,
+            1.1,
+            1,
+            1.4,
+            0.8,
+            0.2,
+            30,
+            30
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 13,
+          "values": [
+            0.33,
+            1.3,
+            1,
+            1.4,
+            0.8,
+            0.2,
+            33,
+            33
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 14,
+          "values": [
+            0.36,
+            1.45,
+            1,
+            1.4,
+            0.8,
+            0.2,
+            36,
+            36
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 15,
+          "values": [
+            0.4,
+            1.6,
+            1,
+            1.5,
+            0.8,
+            0.2,
+            40,
+            40
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Block <@ba.vup>+{block_cnt}</>, and attacks all blocked enemies. Each attack has a <@ba.vup>{attack@prob_twice:0%}</> chance to be 2 hits with <@ba.vup>{attack@atk_scale_twice:0%}</> ATK and <$ba.steal>Steal</> <@ba.vup>{attack@steal_atk_speed}</> ASPD from the target (up to a total of {attack@steal_atk_speed_max}, lasts until skill expires or Viviana leaves the battlefield)",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "block_cnt",
+        "attack@atk_scale_twice",
+        "attack@prob_once",
+        "attack@prob_twice",
+        "attack@steal_atk_speed",
+        "attack@steal_atk_speed_max"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_vvana_3",
+      "name": "'Flicker'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 6,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            0.35,
+            0.2,
+            10,
+            25,
+            1.6,
+            15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 6,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            0.4,
+            0.25,
+            10,
+            25,
+            1.6,
+            15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 6,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            0.45,
+            0.3,
+            10,
+            25,
+            1.6,
+            15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 9,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            0.55,
+            0.4,
+            15,
+            25,
+            1.8,
+            15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 9,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            0.6,
+            0.45,
+            15,
+            25,
+            1.8,
+            15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 9,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            0.65,
+            0.5,
+            15,
+            25,
+            1.8,
+            15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 12,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            0.75,
+            0.6,
+            20,
+            25,
+            2,
+            15
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 14,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            0.85,
+            0.7,
+            25,
+            25,
+            2.2,
+            15
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 16,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            0.95,
+            0.8,
+            25,
+            25,
+            2.3,
+            15
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 18,
+          "rangeId": "1-1",
+          "values": [
+            0.5,
+            1.1,
+            0.9,
+            25,
+            25,
+            2.5,
+            15
+          ]
+        }
+      ],
+      "description": "Attack interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, RES <@ba.vup>+{magic_resistance}</>, attacks hit twice, 2nd Talent trigger chance increased to <@ba.vup>{talent_scale:0.0}</>x, attacks prioritize elite and leader enemies\n<@ba.rem>Starting with the 2nd use, attack range +2, attacks hit 3 times, and duration increased to 25s</>",
+      "blackboardKeys": [
+        "base_attack_time",
+        "atk",
+        "def",
+        "magic_resistance",
+        "enhance_duration",
+        "talent_scale",
+        "duration_plus"
+      ]
+    }
+  ],
+  "ranges": {
+    "1-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

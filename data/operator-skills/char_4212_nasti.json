@@ -1,0 +1,477 @@
+{
+  "operatorId": "char_4212_nasti",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_nasti_1",
+      "name": "'Fortify'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 18,
+          "values": [
+            0.35,
+            0.42,
+            0.42
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 19,
+          "values": [
+            0.36,
+            0.45,
+            0.45
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 20,
+          "values": [
+            0.38,
+            0.48,
+            0.48
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 38,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 21,
+          "values": [
+            0.4,
+            0.52,
+            0.52
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 38,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 22,
+          "values": [
+            0.42,
+            0.56,
+            0.56
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 38,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 23,
+          "values": [
+            0.44,
+            0.6,
+            0.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 25,
+          "values": [
+            0.46,
+            0.65,
+            0.65
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 26,
+          "values": [
+            0.49,
+            0.7,
+            0.7
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 27,
+          "values": [
+            0.52,
+            0.75,
+            0.75
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 28,
+          "values": [
+            0.55,
+            0.8,
+            0.8
+          ]
+        }
+      ],
+      "description": "When this skill is equipped, Device grants the Operator in front extra DEF\n<@ba.vup>+{atk:0%}</> ATK, <@ba.vup>+{def:0%}</> DEF, and simultaneously attacks all blocked enemies; Device grants <@ba.vup>+1</> Block to the Operator in front and <@ba.vup>+{talent@def:0%}</> DEF, but devices lose 2% Max HP every second\n<@ba.rem>Gains 1 Device on skill activation</>",
+      "blackboardKeys": [
+        "talent@def",
+        "atk",
+        "def"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_nasti_2",
+      "name": "'Execute'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 16,
+          "values": [
+            0.5,
+            0.04,
+            0.32,
+            0.32,
+            0.02
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 17,
+          "values": [
+            0.5,
+            0.04,
+            0.32,
+            0.32,
+            0.02
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 18,
+          "values": [
+            0.5,
+            0.04,
+            0.32,
+            0.32,
+            0.02
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 19,
+          "values": [
+            0.5,
+            0.06,
+            0.48,
+            0.48,
+            0.03
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.06,
+            0.48,
+            0.48,
+            0.03
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 21,
+          "values": [
+            0.5,
+            0.06,
+            0.48,
+            0.48,
+            0.03
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.08,
+            0.64,
+            0.64,
+            0.04
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 21,
+          "values": [
+            0.5,
+            0.08,
+            0.64,
+            0.64,
+            0.04
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 22,
+          "values": [
+            0.5,
+            0.08,
+            0.64,
+            0.64,
+            0.04
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 23,
+          "values": [
+            0.5,
+            0.1,
+            0.8,
+            0.8,
+            0.05
+          ]
+        }
+      ],
+      "description": "When this skill is equipped, restores device HP over time after the device is deployed. On activation, the device loses 1 HP every 0.5 seconds, and grants the Operator in front <@ba.vup>1</> SP and a <$ba.barrier>Barrier</> equal to <@ba.vup>{talent@shield_each_hp_rate:0%}</> of Nasti's Max HP.\nImmediately activates the devices on the field. Stops attacking and gains a <$ba.barrier>Barrier</> equal to <@ba.vup>{attack@nasti_s2[update_shield].shield_each_hp_rate:0%}</> of her Max HP every 0.5 seconds. (Barrier cannot exceed {talent@shield_max_hp_rate:0%} of Max HP)\n<@ba.rem>Gains 1 Device when skill ends</>",
+      "blackboardKeys": [
+        "attack@nasti_s2[update_shield].interval",
+        "attack@nasti_s2[update_shield].shield_each_hp_rate",
+        "attack@nasti_s2[update_shield].shield_max_hp_rate",
+        "talent@shield_max_hp_rate",
+        "talent@shield_each_hp_rate"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_nasti_3",
+      "name": "Roosting Grounds",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 8,
+          "values": [
+            0.8,
+            0.8
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 9,
+          "values": [
+            0.85,
+            0.85
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 10,
+          "values": [
+            0.9,
+            0.9
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 11,
+          "values": [
+            1,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 12,
+          "values": [
+            1.1,
+            1.1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 13,
+          "values": [
+            1.2,
+            1.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 14,
+          "values": [
+            1.3,
+            1.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 15,
+          "values": [
+            1.4,
+            1.4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 16,
+          "values": [
+            1.5,
+            1.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 17,
+          "values": [
+            1.6,
+            1.6
+          ]
+        }
+      ],
+      "description": "When this skill is equipped, the device can build and upgrade a special high ground device to deploy Ranged Operators and provide them with a buff\n<@ba.vup>+{atk:0%}</> ATK, <@ba.vup>+{def:0%}</> DEF; the little engineer's device restores double SP and HP to the special high ground.\n<@ba.rem>Gains 1 Device on skill activation</>",
+      "blackboardKeys": [
+        "atk",
+        "def"
+      ]
+    }
+  ],
+  "ranges": {}
+}

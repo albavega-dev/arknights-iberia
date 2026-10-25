@@ -1,0 +1,510 @@
+{
+  "operatorId": "char_2023_ling",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_ling_1",
+      "name": "Sips of Wine",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 5,
+          "values": [
+            0.2,
+            20,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 5,
+          "values": [
+            0.23,
+            23,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 5,
+          "values": [
+            0.26,
+            26,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            0.29,
+            29,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            0.32,
+            32,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            0.35,
+            35,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.38,
+            38,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "values": [
+            0.42,
+            42,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "values": [
+            0.46,
+            46,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 15,
+          "values": [
+            0.5,
+            50,
+            1
+          ]
+        }
+      ],
+      "description": "Passive: Summons may be deployed on melee tiles\nActive: Ling and her summons gain <@ba.vup>+{atk:0%}</> ATK and <@ba.vup>+{attack_speed}</> ASPD. The summons deal <@ba.vup>Arts damage</>\n<@ba.rem>Immediately gain 1 summon when the skill is activated</>",
+      "blackboardKeys": [
+        "atk",
+        "attack_speed",
+        "cnt"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_ling_2",
+      "name": "Amidst Pleasant Melodies",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            2.5,
+            1,
+            1.5,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            2.7,
+            1,
+            1.5,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            2.9,
+            1,
+            1.5,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 0,
+          "values": [
+            3.1,
+            1,
+            2,
+            2,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 0,
+          "values": [
+            3.3,
+            1,
+            2,
+            2,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 0,
+          "values": [
+            3.5,
+            1,
+            2,
+            2,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 5,
+          "values": [
+            3.7,
+            1,
+            2.5,
+            2,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 5,
+          "values": [
+            3.9,
+            1,
+            2.5,
+            2,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 14,
+          "initSp": 5,
+          "values": [
+            4.2,
+            1,
+            2.5,
+            2,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 5,
+          "values": [
+            4.5,
+            1,
+            3,
+            2,
+            0.5
+          ]
+        }
+      ],
+      "description": "Passive: Summons may be deployed on ranged tiles and deal <@ba.vup>Arts damage</>\nActive: Ling and her summons deal <@ba.vup>{atk_scale:0%}</> ATK as Arts damage to <@ba.vup>2</> enemies within Attack Range and <$ba.root>Bind</> them for <@ba.vup>{ling_s2_unmovable.duration}</> seconds\n<@ba.rem>After the skill ends, retrieve all summons with less than 50% HP. Can store {value} charge(s)</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "cnt",
+        "ling_s2_unmovable.duration",
+        "value",
+        "hp_ratio"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_ling_3",
+      "name": "To Remain Oneself",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 10,
+          "values": [
+            0.4,
+            0.4,
+            0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 10,
+          "values": [
+            0.45,
+            0.4,
+            0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 10,
+          "values": [
+            0.5,
+            0.4,
+            0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 12,
+          "values": [
+            0.55,
+            0.5,
+            0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 12,
+          "values": [
+            0.6,
+            0.5,
+            0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 12,
+          "values": [
+            0.65,
+            0.5,
+            0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 15,
+          "values": [
+            0.7,
+            0.6,
+            0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 15,
+          "values": [
+            0.8,
+            0.7,
+            0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 15,
+          "values": [
+            0.9,
+            0.85,
+            0.2,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 15,
+          "values": [
+            1,
+            1,
+            0.2,
+            0.5,
+            1
+          ]
+        }
+      ],
+      "description": "Passive: Summons may be deployed on melee tiles. If there are other summons within their Attack Range, combines with them into a <@ba.vup>Higher form</>\nActive: Ling and her summons gain <@ba.vup>+{atk:0%}</> ATK and <@ba.vup>+{def:0%}</> DEF. Each summon deals <@ba.vup>{atk_scale:0%}</> of Ling's ATK as Arts damage to enemies in the four adjacent tiles every <@ba.vup>{interval}</> seconds\n<@ba.rem>After the skill ends, gain 1 summon</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "atk_scale",
+        "interval",
+        "cnt"
+      ]
+    }
+  ],
+  "ranges": {}
+}

@@ -1,0 +1,622 @@
+{
+  "operatorId": "char_1047_halo2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_halo2_1",
+      "name": "Star Chart's Shine",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 10,
+          "values": [
+            0.3,
+            3,
+            1.7
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 10,
+          "values": [
+            0.35,
+            3,
+            1.7
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 10,
+          "values": [
+            0.4,
+            3,
+            1.7
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 13,
+          "values": [
+            0.45,
+            3,
+            1.7
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 13,
+          "values": [
+            0.5,
+            3,
+            1.7
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 13,
+          "values": [
+            0.55,
+            3,
+            1.7
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 15,
+          "values": [
+            0.6,
+            3,
+            1.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 15,
+          "values": [
+            0.7,
+            3,
+            1.7
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 15,
+          "values": [
+            0.8,
+            3,
+            1.7
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "values": [
+            1,
+            3,
+            1.7
+          ]
+        }
+      ],
+      "description": "<@ba.vup>+{atk:0%}</> ATK, attacks can jump between enemies multiple times, up to <@ba.vup>{attack@chain.max_target}</> times",
+      "blackboardKeys": [
+        "atk",
+        "attack@chain.max_target",
+        "attack@projectile_range"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_halo2_2",
+      "name": "Stellar Gravity",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>slight</> force, dealing the same amount of Arts damage",
+          "values": [
+            1,
+            3,
+            2,
+            0,
+            2,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>slight</> force, dealing the same amount of Arts damage",
+          "values": [
+            1.05,
+            3,
+            2,
+            0,
+            2,
+            1.05,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>slight</> force, dealing the same amount of Arts damage",
+          "values": [
+            1.1,
+            3,
+            2,
+            0,
+            2,
+            1.1,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>slight</> force, dealing the same amount of Arts damage",
+          "values": [
+            1.15,
+            3,
+            2,
+            0,
+            2,
+            1.15,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>slight</> force, dealing the same amount of Arts damage",
+          "values": [
+            1.2,
+            3,
+            2,
+            0,
+            2,
+            1.2,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>slight</> force, dealing the same amount of Arts damage",
+          "values": [
+            1.25,
+            3,
+            2,
+            0,
+            2,
+            1.25,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>moderate</> force, dealing the same amount of Arts damage",
+          "values": [
+            1.3,
+            3,
+            2,
+            1,
+            2,
+            1.3,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>moderate</> force, dealing the same amount of Arts damage",
+          "values": [
+            1.35,
+            3,
+            2,
+            1,
+            2,
+            1.35,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>moderate</> force, dealing the same amount of Arts damage",
+          "values": [
+            1.4,
+            3,
+            2,
+            1,
+            2,
+            1.4,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "description": "The next attack targets the furthest <@ba.vup>{max_target_attack}</> enemies from the Objective Point within Attack Range, dealing <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; extends <$ba.sluggish>Slow</> duration to <@ba.vup>{sluggish}</> seconds, links to up to <@ba.vup>{max_target}</> enemies around the target and pulls them towards the target's location with <@ba.vup>moderate</> force, dealing the same amount of Arts damage",
+          "values": [
+            1.45,
+            3,
+            3,
+            1,
+            2,
+            1.45,
+            2
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk_scale",
+        "sluggish",
+        "max_target",
+        "force",
+        "ability_range_radius",
+        "atk_scale_link",
+        "max_target_attack"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_halo2_3",
+      "name": "Flux Chain",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "rangeId": "y-4",
+          "values": [
+            0.2,
+            -0.7,
+            2,
+            0.15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 16,
+          "rangeId": "y-4",
+          "values": [
+            0.25,
+            -0.7,
+            2,
+            0.15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 17,
+          "rangeId": "y-4",
+          "values": [
+            0.3,
+            -0.7,
+            2,
+            0.15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 18,
+          "rangeId": "y-4",
+          "values": [
+            0.35,
+            -0.7,
+            2,
+            0.15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 19,
+          "rangeId": "y-4",
+          "values": [
+            0.4,
+            -0.7,
+            2,
+            0.15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 20,
+          "rangeId": "y-4",
+          "values": [
+            0.45,
+            -0.7,
+            2,
+            0.15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 21,
+          "rangeId": "y-4",
+          "values": [
+            0.5,
+            -0.7,
+            2,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 22,
+          "rangeId": "y-4",
+          "values": [
+            0.55,
+            -0.7,
+            2,
+            0.2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 23,
+          "rangeId": "y-4",
+          "values": [
+            0.6,
+            -0.7,
+            2,
+            0.2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 25,
+          "rangeId": "y-4",
+          "values": [
+            0.7,
+            -0.7,
+            2,
+            0.25
+          ]
+        }
+      ],
+      "description": "Attack range <@ba.vup>expands</>; <@ba.vup>+{atk:0%}</> ATK, ATK interval <@ba.vup>decreases</>; attacks continuously lock onto <@ba.vup>{attack@max_target}</> enemies, chaining them together, and every chained enemy will deal <@ba.vup>{attack@atk_share:0%}</> of the Arts damage taken to other chained enemies as extra damage",
+      "blackboardKeys": [
+        "atk",
+        "base_attack_time",
+        "attack@max_target",
+        "attack@atk_share"
+      ]
+    }
+  ],
+  "ranges": {
+    "y-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": -1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": -1
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

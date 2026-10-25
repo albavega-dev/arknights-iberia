@@ -1,0 +1,323 @@
+{
+  "operatorId": "char_4041_chnut",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_chnut_1",
+      "name": "Little by Little",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 0,
+          "values": [
+            1.6,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            1.7,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 4,
+          "values": [
+            2,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 4,
+          "values": [
+            2.1,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 4,
+          "values": [
+            2.2,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 14,
+          "initSp": 6,
+          "values": [
+            2.5,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 6,
+          "values": [
+            2.7,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 6,
+          "values": [
+            2.8,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 8,
+          "values": [
+            3,
+            2
+          ]
+        }
+      ],
+      "description": "Perform a heal with <$ba.dt.element>Elemental Injury</> recovery increased to <@ba.vup>{trait_scale:0%}</>\n<@ba.rem>Can store {cnt} charges</>",
+      "blackboardKeys": [
+        "trait_scale",
+        "cnt"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_chnut_2",
+      "name": "Rising Earth",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 90,
+          "initSp": 20,
+          "rangeId": "3-2",
+          "values": [
+            80,
+            1.05
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 88,
+          "initSp": 21,
+          "rangeId": "3-2",
+          "values": [
+            80,
+            1.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 86,
+          "initSp": 22,
+          "rangeId": "3-2",
+          "values": [
+            80,
+            1.15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 82,
+          "initSp": 25,
+          "rangeId": "3-2",
+          "values": [
+            90,
+            1.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 26,
+          "rangeId": "3-2",
+          "values": [
+            90,
+            1.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 27,
+          "rangeId": "3-2",
+          "values": [
+            90,
+            1.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 74,
+          "initSp": 30,
+          "rangeId": "3-2",
+          "values": [
+            100,
+            1.35
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 72,
+          "initSp": 34,
+          "rangeId": "3-2",
+          "values": [
+            110,
+            1.4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 72,
+          "initSp": 36,
+          "rangeId": "3-2",
+          "values": [
+            110,
+            1.45
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 40,
+          "rangeId": "3-2",
+          "values": [
+            130,
+            1.5
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vdown>reduced</>; ASPD <@ba.vup>+{attack_speed}</>; when healing the same target multiple times, healing effect and <$ba.dt.element>Elemental Injury</> recovery are increased to <@ba.vup>{attack@heal_continuously_scale:0%}</>",
+      "blackboardKeys": [
+        "attack_speed",
+        "attack@heal_continuously_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        }
+      ]
+    }
+  }
+}

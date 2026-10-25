@@ -1,0 +1,588 @@
+{
+  "operatorId": "char_2014_nian",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_nian_1",
+      "name": "Tin Burning",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.1,
+            0.25
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.1,
+            0.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.1,
+            0.35
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.2,
+            0.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 24,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.2,
+            0.45
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.2,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.3,
+            0.55
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.35,
+            0.6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.4,
+            0.65
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.45,
+            0.7
+          ]
+        }
+      ],
+      "description": "DEF <@ba.vup>+{def:0%}</>, ATK <@ba.vup>+{atk:0%}</>, and normal attacks now deal <@ba.vup>Arts</> damage",
+      "blackboardKeys": [
+        "atk",
+        "def"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_nian_2",
+      "name": "Copper Seal",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "values": [
+            0.6,
+            1,
+            0.5,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 26,
+          "values": [
+            0.65,
+            1,
+            0.5,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 27,
+          "values": [
+            0.7,
+            1,
+            0.5,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 28,
+          "values": [
+            0.8,
+            1,
+            0.6,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 29,
+          "values": [
+            0.85,
+            1,
+            0.6,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 30,
+          "values": [
+            0.9,
+            1,
+            0.6,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 31,
+          "values": [
+            1,
+            1,
+            0.7,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 32,
+          "values": [
+            1.1,
+            1,
+            0.7,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 34,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 33,
+          "values": [
+            1.2,
+            1,
+            0.8,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 35,
+          "values": [
+            1.3,
+            1,
+            0.9,
+            5
+          ]
+        }
+      ],
+      "description": "<@ba.vdown>Stops attacking</>; DEF <@ba.vup>+{def:0%}</>, Block <@ba.vup>+{block_cnt}</>, upon receiving an enemy attack, deals Arts damage to the attacker equal to <@ba.vup>{atk_scale:0%}</> of Nian's ATK and silences them for <@ba.vup>{silence}</> seconds",
+      "blackboardKeys": [
+        "def",
+        "block_cnt",
+        "atk_scale",
+        "silence"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_nian_3",
+      "name": "Iron Defense",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 40,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.3,
+            -0.5,
+            0.55
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 42,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.3,
+            -0.5,
+            0.55
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 44,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.3,
+            -0.5,
+            0.6
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 48,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.4,
+            -0.5,
+            0.65
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 50,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.4,
+            -0.5,
+            0.7
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 52,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.4,
+            -0.5,
+            0.75
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 56,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.5,
+            -0.5,
+            0.8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 41,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 60,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.6,
+            -0.5,
+            0.9
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 42,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 64,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.7,
+            -0.5,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 70,
+          "rangeId": "x-2",
+          "values": [
+            0,
+            1,
+            0.8,
+            -0.5,
+            1.2
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{nian_s_3[self].atk:0%}</>; Nearby allied Operators gain DEF <@ba.vup>+{nian_s_3[ally].def:0%}</>, Block <@ba.vup>+1</> and <$ba.buffres>status resistance</>",
+      "blackboardKeys": [
+        "nian_s_3[self].block_cnt",
+        "nian_s_3[ally].block_cnt",
+        "nian_s_3[ally].def",
+        "one_minus_status_resistance",
+        "nian_s_3[self].atk"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": -1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -2
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": -1
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

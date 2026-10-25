@@ -1,0 +1,110 @@
+{
+  "operatorId": "char_240_wyvern",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_wyvern_1",
+      "name": "Command - Reinforcement",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            6,
+            0.05
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 1,
+          "values": [
+            6,
+            0.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 2,
+          "values": [
+            6,
+            0.15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 3,
+          "values": [
+            6,
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 3,
+          "values": [
+            6,
+            0.25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 3,
+          "values": [
+            6,
+            0.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 6,
+          "values": [
+            6,
+            0.35
+          ]
+        }
+      ],
+      "description": "Gain <@ba.vup>{cost}</> Deployment Points; ATK <@ba.vup>+{atk:0%}</>",
+      "blackboardKeys": [
+        "cost",
+        "atk"
+      ]
+    }
+  ],
+  "ranges": {}
+}

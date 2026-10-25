@@ -1,0 +1,559 @@
+{
+  "operatorId": "char_010_chen",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_chen_1",
+      "name": "Sheathed Strike",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            2,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            2.1,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            2.2,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.3,
+            1.25
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.4,
+            1.25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.5,
+            1.25
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.6,
+            1.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.8,
+            1.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            3,
+            1.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            3.2,
+            1.5
+          ]
+        }
+      ],
+      "description": "On the next attack, strike the enemy using the sheath, dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage and <$ba.stun>Stunning</> them for <@ba.vup>{stun}</> seconds",
+      "blackboardKeys": [
+        "atk_scale",
+        "stun"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_chen_2",
+      "name": "Chi Xiao - Unsheath",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 27,
+          "initSp": 10,
+          "rangeId": "3-12",
+          "values": [
+            3.3,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 27,
+          "initSp": 10,
+          "rangeId": "3-12",
+          "values": [
+            3.4,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 27,
+          "initSp": 10,
+          "rangeId": "3-12",
+          "values": [
+            3.5,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 26,
+          "initSp": 12,
+          "rangeId": "3-12",
+          "values": [
+            3.7,
+            5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 26,
+          "initSp": 12,
+          "rangeId": "3-12",
+          "values": [
+            3.8,
+            5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 26,
+          "initSp": 12,
+          "rangeId": "3-12",
+          "values": [
+            3.9,
+            5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 25,
+          "initSp": 14,
+          "rangeId": "3-12",
+          "values": [
+            4.1,
+            6
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 23,
+          "initSp": 15,
+          "rangeId": "3-12",
+          "values": [
+            4.4,
+            6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 21,
+          "initSp": 16,
+          "rangeId": "3-12",
+          "values": [
+            4.7,
+            6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 20,
+          "initSp": 20,
+          "rangeId": "3-12",
+          "values": [
+            5,
+            7
+          ]
+        }
+      ],
+      "description": "Deals <@ba.vup>{atk_scale:0%}</> of ATK <@ba.rem>Physical damage</> and <@ba.vup>{atk_scale:0%}</> of ATK <@ba.rem>Arts damage</> to at most <@ba.vup>{max_target}</> enemies in front of this unit",
+      "blackboardKeys": [
+        "atk_scale",
+        "max_target"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_chen_3",
+      "name": "Chi Xiao - Shadowless",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 40,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            2,
+            10,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 40,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            2.1,
+            10,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 40,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            2.2,
+            10,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 38,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            2.3,
+            10,
+            2.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 38,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            2.4,
+            10,
+            2.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 38,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            2.5,
+            10,
+            2.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 36,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            2.6,
+            10,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 34,
+          "initSp": 13,
+          "rangeId": "x-1",
+          "values": [
+            2.8,
+            10,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 32,
+          "initSp": 16,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            10,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 30,
+          "initSp": 20,
+          "rangeId": "x-1",
+          "values": [
+            3.2,
+            10,
+            4
+          ]
+        }
+      ],
+      "description": "Seeks the closest enemy around and launches <@ba.vup>{times}</> slashes in a row, each dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage and <$ba.stun>Stunning</> the target on the last hit for <@ba.vup>{stun}</> seconds",
+      "blackboardKeys": [
+        "atk_scale",
+        "times",
+        "stun"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-12": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    },
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  }
+}

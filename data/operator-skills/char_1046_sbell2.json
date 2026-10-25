@@ -1,0 +1,785 @@
+{
+  "operatorId": "char_1046_sbell2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_sbell2_1",
+      "name": "Ere Snow, Bells Chime",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            3,
+            1,
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            3.3,
+            1,
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            3.6,
+            1,
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 5,
+          "values": [
+            3.9,
+            1,
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 5,
+          "values": [
+            4.2,
+            1,
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 5,
+          "values": [
+            4.5,
+            1,
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 7,
+          "values": [
+            4.8,
+            1,
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 8,
+          "values": [
+            5,
+            1,
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 10,
+          "values": [
+            5.1,
+            1,
+            3.5,
+            5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 12,
+          "values": [
+            5.2,
+            1,
+            3.5,
+            5
+          ]
+        }
+      ],
+      "description": "Deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage to all enemies within range, inflicting <$ba.cold>Cold</> for <@ba.vup>{cold}</> seconds, and pushing them with moderate force in deployment direction; snow spreads on the ground (Up to 5 tiles forward)\n<@ba.rem>Can store 2 charges</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "force",
+        "cold",
+        "trig_cnt"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_sbell2_2",
+      "name": "Peaks, Clad in Frost",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 2.5
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 2.7
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 2.9
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 3.1
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 3.2
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 3.3
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 3.5
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 3.6
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 3.7
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale_s2",
+              "value": 3.8
+            },
+            {
+              "key": "talent@s2_magic_scale",
+              "value": 0.2
+            },
+            {
+              "key": "talent@max_cast_tile_count",
+              "value": 20
+            },
+            {
+              "key": "talent@cold",
+              "value": 5
+            },
+            {
+              "key": "talent@token_key",
+              "value": 0,
+              "valueStr": "token_10058_sbell2_icetgt"
+            }
+          ]
+        }
+      ],
+      "description": "Attacks deal <@ba.vup>{attack@atk_scale_s2:0%}</> ATK as Arts damage, and snow spreads to surrounding tiles after reaching 5 stacks (Spreads to a max of 20 tiles); ground enemies on snow tiles take <@ba.vup>{talent@s2_magic_scale:0%}</> ATK as Arts damage every second, and are inflicted with <@ba.vup>5</> seconds of <$ba.cold>Cold</> after leaving a snow tile; When snow accumulates on the Objective Point 5 times, it freezes\n<@ba.rem>Unlimited duration, can manually deactivate skill (skill can be deactivated at will)</>"
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_sbell2_3",
+      "name": "Towards the Mountains, Bow",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.1,
+            30,
+            10,
+            10,
+            1.5,
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 59,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.2,
+            30,
+            10,
+            10,
+            1.5,
+            1.6
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.3,
+            30,
+            10,
+            10,
+            1.5,
+            1.7
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.35,
+            30,
+            10,
+            10,
+            1.5,
+            1.8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.5,
+            30,
+            10,
+            10,
+            1.5,
+            1.9
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 32,
+          "rangeId": "x-2",
+          "values": [
+            0.6,
+            30,
+            10,
+            10,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 35,
+          "rangeId": "x-2",
+          "values": [
+            0.7,
+            30,
+            10,
+            10,
+            1.5,
+            2.1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 36,
+          "rangeId": "x-2",
+          "values": [
+            0.8,
+            30,
+            10,
+            10,
+            1.5,
+            2.3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 38,
+          "rangeId": "x-2",
+          "values": [
+            0.9,
+            30,
+            10,
+            10,
+            1.5,
+            2.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 42,
+          "rangeId": "x-2",
+          "values": [
+            1,
+            30,
+            10,
+            10,
+            1.5,
+            2.6
+          ]
+        }
+      ],
+      "description": "Attack range <@ba.vup>expands</>. Immediately <$ba.attract>Lures</> all enemies within attack range for <@ba.vup>{attract_time}</> seconds to the closest reachable ground near her, increases snowfall speed, <@ba.vup>+{atk:0%}</> ATK, <@ba.vup>+{attack_speed}</> ASPD, attacks ignore <@ba.vup>10</> RES, and every attack deals <@ba.vup>{attack@atk_scale_s3:0%}</> ATK as Arts damage",
+      "blackboardKeys": [
+        "atk",
+        "attack_speed",
+        "magic_resist_penetrate_fixed",
+        "attract_time",
+        "interval",
+        "attack@atk_scale_s3"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": -1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -2
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": -1
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

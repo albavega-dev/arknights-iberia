@@ -1,0 +1,269 @@
+{
+  "operatorId": "char_306_leizi",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_atk_up[3]",
+      "name": "ATK Up γ",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 0,
+          "values": [
+            0.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 0,
+          "values": [
+            0.35
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 0,
+          "values": [
+            0.4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 5,
+          "values": [
+            0.45
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 5,
+          "values": [
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 5,
+          "values": [
+            0.55
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 10,
+          "values": [
+            0.75
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 10,
+          "values": [
+            0.9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "values": [
+            1
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>",
+      "blackboardKeys": [
+        "atk"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_leizi_2",
+      "name": "Thunderclap",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 40,
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 41,
+          "values": [
+            0.65
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 42,
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 43,
+          "values": [
+            0.8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 44,
+          "values": [
+            0.85
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 45,
+          "values": [
+            0.9
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 46,
+          "values": [
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 47,
+          "values": [
+            1.15
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 34,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 48,
+          "values": [
+            1.3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 50,
+          "values": [
+            1.5
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, and attacks <@ba.vup>no longer deal reduced damage</> on subsequent targets",
+      "blackboardKeys": [
+        "atk"
+      ]
+    }
+  ],
+  "ranges": {}
+}

@@ -1,0 +1,280 @@
+{
+  "operatorId": "char_405_absin",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_absin_1",
+      "name": "Enforcement Mode",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 90,
+          "initSp": 0,
+          "values": [
+            0.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 88,
+          "initSp": 0,
+          "values": [
+            0.35
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 86,
+          "initSp": 0,
+          "values": [
+            0.4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 84,
+          "initSp": 0,
+          "values": [
+            0.45
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 82,
+          "initSp": 0,
+          "values": [
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 0,
+          "values": [
+            0.55
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 0,
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 76,
+          "initSp": 0,
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 74,
+          "initSp": 0,
+          "values": [
+            0.8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 0,
+          "values": [
+            0.9
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, and attacks now prioritize enemies with the lowest percentage of remaining HP\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_absin_2",
+      "name": "Ultimatum",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 11,
+          "values": [
+            4,
+            0.55
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 59,
+          "initSp": 12,
+          "values": [
+            4,
+            0.58
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 13,
+          "values": [
+            4,
+            0.61
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 15,
+          "values": [
+            4,
+            0.65
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 16,
+          "values": [
+            4,
+            0.68
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 17,
+          "values": [
+            4,
+            0.71
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 54,
+          "initSp": 19,
+          "values": [
+            4,
+            0.75
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 22,
+          "values": [
+            4,
+            0.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 29,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 25,
+          "values": [
+            4,
+            0.85
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 28,
+          "values": [
+            4,
+            0.9
+          ]
+        }
+      ],
+      "description": "Each attack turns into bursts of <@ba.vup>{attack@times}</> attacks that each deal <@ba.vup>{attack@atk_scale:0%}</> damage, but no longer attack enemies above <@ba.vup>50%</> HP",
+      "blackboardKeys": [
+        "attack@times",
+        "attack@atk_scale"
+      ]
+    }
+  ],
+  "ranges": {}
+}

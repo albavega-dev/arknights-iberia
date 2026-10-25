@@ -1,0 +1,488 @@
+{
+  "operatorId": "char_2012_typhon",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_quickattack[3]",
+      "name": "Swift Strike γ",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 0,
+          "values": [
+            0.2,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 0,
+          "values": [
+            0.22,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 0,
+          "values": [
+            0.24,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 5,
+          "values": [
+            0.27,
+            25
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 5,
+          "values": [
+            0.29,
+            25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 5,
+          "values": [
+            0.31,
+            25
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 10,
+          "values": [
+            0.34,
+            35
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 10,
+          "values": [
+            0.37,
+            35
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 10,
+          "values": [
+            0.4,
+            35
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "values": [
+            0.45,
+            45
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>; ASPD <@ba.vup>+{attack_speed}</>",
+      "blackboardKeys": [
+        "atk",
+        "attack_speed"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_typhon_2",
+      "name": "Order of the Icefield",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 34,
+          "values": [
+            0.17,
+            0.4,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 35,
+          "values": [
+            0.2,
+            0.4,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 36,
+          "values": [
+            0.23,
+            0.4,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 37,
+          "values": [
+            0.26,
+            0.4,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 38,
+          "values": [
+            0.29,
+            0.4,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 39,
+          "values": [
+            0.32,
+            0.4,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 51,
+          "initSp": 40,
+          "values": [
+            0.35,
+            0.4,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 51,
+          "initSp": 41,
+          "values": [
+            0.4,
+            0.4,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 51,
+          "initSp": 41,
+          "values": [
+            0.45,
+            0.4,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 42,
+          "values": [
+            0.5,
+            0.4,
+            1,
+            20
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, each attack fires off <@ba.vup>2</> arrows (prioritizing different targets), and has a <@ba.vup>{attack@prob:0%}</> chance of stunning targets for <@ba.vup>{attack@stun}</> seconds\n<@ba.rem>From second activation and on, this skill has unlimited duration</>",
+      "blackboardKeys": [
+        "atk",
+        "attack@prob",
+        "attack@stun",
+        "first_duration"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_typhon_3",
+      "name": "'Eternal Hunt'",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.3,
+            6,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.35,
+            6,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.4,
+            6,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.45,
+            7,
+            4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.5,
+            7,
+            4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.55,
+            7,
+            4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.6,
+            8,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.65,
+            8,
+            5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.7,
+            9,
+            5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "values": [
+            3.1,
+            0.4,
+            1.75,
+            10,
+            5
+          ]
+        }
+      ],
+      "description": "Immediately marks a target within range, Attack Interval <@ba.vdown>lengthens significantly</>, and attacks become a hail of arrows aimed at the marked target; the hail of arrows will randomly strike enemies around the marked target, dealing <@ba.vup>{attack@s3_max_hit_num}</> hits of <@ba.vup>{attack@s3_atk_scale:0%}</> ATK as Physical damage and stunning targets hit for <@ba.vup>{attack@s3_stun}</> seconds\n<@ba.rem>Skill activation grants {attack@s3_trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "base_attack_time",
+        "attack@s3_stun",
+        "attack@s3_atk_scale",
+        "attack@s3_trigger_time",
+        "attack@s3_max_hit_num"
+      ]
+    }
+  ],
+  "ranges": {}
+}

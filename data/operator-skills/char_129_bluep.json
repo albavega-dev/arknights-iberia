@@ -1,0 +1,289 @@
+{
+  "operatorId": "char_129_bluep",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_bluep_1",
+      "name": "Twinshot - Auto",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.25
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.35
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.45
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.55
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.7
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.85
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            2
+          ]
+        }
+      ],
+      "description": "The next attack hits 1 additional target for <@ba.vup>{atk_scale:0%}</> of ATK Physical damage",
+      "blackboardKeys": [
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_bluep_2",
+      "name": "Venom Spray",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.2,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 24,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.2,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.2,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.3,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 21,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack strikes its primary target an additional <@ba.vup>1 </>time，and also hits up to <@ba.vup>2</> additional targets.",
+          "values": [
+            0.3,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 22,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack strikes its primary target an additional <@ba.vup>1 </>time，and also hits up to <@ba.vup>2</> additional targets.",
+          "values": [
+            0.4,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack strikes its primary target an additional <@ba.vup>1 </>time，and also hits up to <@ba.vup>2</> additional targets.",
+          "values": [
+            0.5,
+            2
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk",
+        "attack@times"
+      ]
+    }
+  ],
+  "ranges": {}
+}

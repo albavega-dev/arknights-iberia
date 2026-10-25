@@ -1,0 +1,585 @@
+{
+  "operatorId": "char_4146_nymph",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_nymph_1",
+      "name": "Strike of the Djall",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 0,
+          "values": [
+            0.4,
+            0.1,
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 0,
+          "values": [
+            0.45,
+            0.1,
+            0.2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.1,
+            0.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 5,
+          "values": [
+            0.6,
+            0.1,
+            0.3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 5,
+          "values": [
+            0.65,
+            0.1,
+            0.3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 5,
+          "values": [
+            0.7,
+            0.1,
+            0.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 15,
+          "values": [
+            0.8,
+            0.1,
+            0.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 15,
+          "values": [
+            0.9,
+            0.15,
+            0.4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 15,
+          "values": [
+            1,
+            0.15,
+            0.4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            1.1,
+            0.15,
+            0.5
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, attacks deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of Arts damage as <$ba.dt.apoptosis2>Necrosis</>; if target is under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, deal an additional <@ba.vup>{attack@extra_ep_damage_scale:0%}</> ATK as Elemental Damage",
+      "blackboardKeys": [
+        "atk",
+        "attack@ep_damage_ratio",
+        "attack@extra_ep_damage_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_nymph_2",
+      "name": "Fear Blast",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            2.4,
+            0.16,
+            3,
+            0.6,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 1,
+          "values": [
+            2.5,
+            0.16,
+            3,
+            0.6,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 2,
+          "values": [
+            2.6,
+            0.18,
+            3,
+            0.6,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 3,
+          "values": [
+            2.7,
+            0.18,
+            4,
+            0.7,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 4,
+          "values": [
+            2.8,
+            0.2,
+            4,
+            0.75,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 5,
+          "values": [
+            2.9,
+            0.2,
+            4,
+            0.8,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 14,
+          "initSp": 6,
+          "values": [
+            3,
+            0.22,
+            5,
+            0.85,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 7,
+          "values": [
+            3.6,
+            0.22,
+            5,
+            0.9,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 8,
+          "values": [
+            3.8,
+            0.25,
+            5,
+            0.95,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 9,
+          "values": [
+            4,
+            0.25,
+            5,
+            1,
+            1.5,
+            2
+          ]
+        }
+      ],
+      "description": "Deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage to the target and inflicts <$ba.fear>Fear</> for <@ba.vup>{fear}</> seconds, also dealing an equal amount of Arts splash damage around the target; both instances deal an additional <@ba.vup>{ep_damage_ratio:0%}</> of Arts damage as <$ba.dt.apoptosis2>Necrosis</>. If the target hit is under the burst effect of Necrosis, the damage dealt by Talent 1 increases to <@ba.vup>{element_atk_scale:0%}</> ATK\n<@ba.rem>Can store {ct} charge(s)</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "ep_damage_ratio",
+        "fear",
+        "element_atk_scale",
+        "projectile_range",
+        "ct"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_nymph_3",
+      "name": "Crumbling Heart",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 15,
+          "rangeId": "3-3",
+          "values": [
+            1.1,
+            25,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 16,
+          "rangeId": "3-3",
+          "values": [
+            1.2,
+            25,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 17,
+          "rangeId": "3-3",
+          "values": [
+            1.3,
+            25,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 19,
+          "rangeId": "3-3",
+          "values": [
+            1.4,
+            30,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 21,
+          "rangeId": "3-3",
+          "values": [
+            1.5,
+            30,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 24,
+          "rangeId": "3-3",
+          "values": [
+            1.6,
+            30,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 29,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 27,
+          "rangeId": "3-3",
+          "values": [
+            1.7,
+            45,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 30,
+          "rangeId": "3-3",
+          "values": [
+            1.9,
+            45,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 33,
+          "rangeId": "3-3",
+          "values": [
+            2.05,
+            60,
+            2,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 36,
+          "rangeId": "3-3",
+          "values": [
+            2.2,
+            60,
+            2,
+            1,
+            0
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>increases</>, ATK <@ba.vup>+{atk:0%}</>, ASPD <@ba.vup>+{attack_speed}</>, attack <@ba.vup>{attack@max_target}</> targets simultaneously. If target is under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, attacks deal Elemental Damage",
+      "blackboardKeys": [
+        "atk",
+        "attack_speed",
+        "attack@max_target",
+        "attack@split_atk_scale",
+        "attack@magic_atk_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        }
+      ]
+    }
+  }
+}

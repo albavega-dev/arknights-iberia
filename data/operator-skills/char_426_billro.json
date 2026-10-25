@@ -1,0 +1,564 @@
+{
+  "operatorId": "char_426_billro",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_billro_1",
+      "name": "Sandstorm Guardian",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            0.1,
+            0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            0.15,
+            0.2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            0.2,
+            0.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            0.35,
+            0.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 1,
+          "values": [
+            0.4,
+            0.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 2,
+          "values": [
+            0.45,
+            0.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 19,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 3,
+          "values": [
+            0.5,
+            0.9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 5,
+          "values": [
+            0.6,
+            1
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>;\n<$ba.charged>Charged</> effect: Trait effect remains active during skill",
+      "blackboardKeys": [
+        "atk",
+        "def"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_billro_2",
+      "name": "Sand Fetters",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 1,
+          "description": "Attack Interval <@ba.vup>reduces slightly</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -0.4,
+            0.3,
+            0.05,
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 2,
+          "description": "Attack Interval <@ba.vup>reduces slightly</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -0.4,
+            0.3,
+            0.05,
+            0.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 3,
+          "description": "Attack Interval <@ba.vup>reduces slightly</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -0.4,
+            0.3,
+            0.1,
+            0.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 4,
+          "description": "Attack Interval <@ba.vup>reduces</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -0.6,
+            0.3,
+            0.1,
+            0.3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "description": "Attack Interval <@ba.vup>reduces</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -0.6,
+            0.3,
+            0.1,
+            0.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 6,
+          "description": "Attack Interval <@ba.vup>reduces</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -0.6,
+            0.3,
+            0.15,
+            0.4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 7,
+          "description": "Attack Interval <@ba.vup>reduces greatly</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -0.8,
+            0.3,
+            0.15,
+            0.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 8,
+          "description": "Attack Interval <@ba.vup>reduces greatly</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -0.8,
+            0.3,
+            0.15,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 9,
+          "description": "Attack Interval <@ba.vup>reduces greatly</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -0.8,
+            0.3,
+            0.2,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 10,
+          "description": "Attack Interval <@ba.vup>reduces significantly</> and every attack inflicts <$ba.sluggish>Slow</> for {attack@sluggish} seconds;\n<$ba.charged>Charged</> effect: ATK <@ba.vup>+{atk:0%}</> and instead of <$ba.sluggish>Slowing</>, <$ba.root>Binds</> targets for <@ba.vup>{attack@root}</> seconds",
+          "values": [
+            -1.1,
+            0.3,
+            0.2,
+            0.6
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "base_attack_time",
+        "attack@sluggish",
+        "atk",
+        "attack@root"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_billro_3",
+      "name": "Mark of Gluttony",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "rangeId": "x-2",
+          "values": [
+            0.8,
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "rangeId": "x-2",
+          "values": [
+            1,
+            0.2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "rangeId": "x-2",
+          "values": [
+            1.2,
+            0.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "rangeId": "x-2",
+          "values": [
+            1.4,
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "rangeId": "x-2",
+          "values": [
+            1.6,
+            0.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "rangeId": "x-2",
+          "values": [
+            1.8,
+            0.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 1,
+          "rangeId": "x-2",
+          "values": [
+            2,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 2,
+          "rangeId": "x-2",
+          "values": [
+            2.2,
+            0.2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 3,
+          "rangeId": "x-2",
+          "values": [
+            2.4,
+            0.2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 5,
+          "rangeId": "x-2",
+          "values": [
+            2.8,
+            0.2
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</> and ATK gradually increases up to <@ba.vup>+{atk:0%}</>\n<$ba.charged>Charged</> effect: Every attack increases the damage taken by the target from Carnelian by <@ba.vup>{attack@damage_scale:0%}</> (stacks up to <@ba.vup>5</> times), lasting until the end of the skill",
+      "blackboardKeys": [
+        "atk",
+        "attack@damage_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": -1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -2
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": -1
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    }
+  }
+}

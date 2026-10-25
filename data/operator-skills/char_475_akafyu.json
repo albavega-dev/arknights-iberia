@@ -1,0 +1,291 @@
+{
+  "operatorId": "char_475_akafyu",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_akafyu_1",
+      "name": "Nobukage-ryu - Kaminari Gatana no Zei",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            0.25
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            0.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            0.35
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            0.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            0.45
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 0,
+          "values": [
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 0,
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 0,
+          "values": [
+            0.8
+          ]
+        }
+      ],
+      "description": "Cannot block enemies, ATK <@ba.vup>+{atk:0%}</>, and attacks turn into double strikes",
+      "blackboardKeys": [
+        "atk"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_akafyu_2",
+      "name": "Nobukage-ryu - Juumonji Masaru",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "values": [
+            0.5,
+            0.7,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 15,
+          "values": [
+            0.5,
+            0.7,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 15,
+          "values": [
+            0.5,
+            0.7,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 15,
+          "values": [
+            0.6,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 15,
+          "values": [
+            0.6,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "values": [
+            0.6,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 15,
+          "values": [
+            0.7,
+            0.9,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 15,
+          "values": [
+            0.8,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 15,
+          "values": [
+            0.9,
+            1.1,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 15,
+          "values": [
+            1,
+            1.2,
+            0.5
+          ]
+        }
+      ],
+      "description": "Immediately loses <@ba.vdown>{hp_ratio:0%}</> current HP and gain 1 <$ba.shield>Shield</> (disappears when the skill ends), ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "hp_ratio"
+      ]
+    }
+  ],
+  "ranges": {}
+}

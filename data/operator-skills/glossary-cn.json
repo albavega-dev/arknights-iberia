@@ -1,0 +1,73 @@
+{
+  "region": "cn",
+  "terms": {
+    "ba.addash": {
+      "name": "移动",
+      "description": "不退场，以当前血量在目标位置部署"
+    },
+    "ba.airprotect": {
+      "name": "对空庇护",
+      "description": "受到来自空中的物理和法术伤害降低相应比例（同名效果取最高）"
+    },
+    "ba.alter": {
+      "name": "装备应变",
+      "description": "选中在场干员后，可以通过一定条件激活的额外效果"
+    },
+    "ba.barrier": {
+      "name": "屏障",
+      "description": "可以吸收一定数值的伤害"
+    },
+    "ba.dt.erosion2": {
+      "name": "侵蚀损伤·我方",
+      "description": "累计满时爆发（普通、精英敌人1000点、领袖2000点累计值），敌人立即受到5000点元素伤害且永久降低120点防御力（可叠加）。8秒冷却"
+    },
+    "ba.fear": {
+      "name": "恐惧",
+      "description": "无法被阻挡并四散逃跑"
+    },
+    "ba.groundbind": {
+      "name": "缚地",
+      "description": "目标变为地面单位，无法移动；使部分近地悬浮敌人掉落；对重量大于3的单位持续时间减半"
+    },
+    "ba.levitate": {
+      "name": "浮空",
+      "description": "变为空中单位，无法移动、攻击及使用技能；对重量大于3的单位持续时间减半"
+    },
+    "ba.liftoff": {
+      "name": "起飞",
+      "description": "不阻挡地面敌人且不会被地面敌人攻击，可以阻挡飞行敌人"
+    },
+    "ba.magicarcane": {
+      "name": "术法充盈",
+      "description": "造成的法术伤害提升（同名效果取最高）"
+    },
+    "ba.overdrive": {
+      "name": "过载",
+      "description": "技能持续拥有两段计量槽，技能进行到一半时触发额外效果"
+    },
+    "ba.sluggish": {
+      "name": "停顿",
+      "description": "移动速度降低80%"
+    },
+    "ba.stun": {
+      "name": "晕眩",
+      "description": "无法移动、阻挡、攻击及使用技能"
+    },
+    "ba.tremble": {
+      "name": "战栗",
+      "description": "被阻挡后无法进行普通攻击"
+    },
+    "ba.triggereffect": {
+      "name": "触发型效果",
+      "description": "施加于敌方/友方单位的一次性减益/增益效果，该效果仅在满足特定条件时触发"
+    },
+    "ba.weaken": {
+      "name": "虚弱",
+      "description": "使目标攻击力降低相应比例（同名效果取最高）"
+    },
+    "ba.weaknessatk": {
+      "name": "弱点伤害",
+      "description": "造成物理或法术伤害时，根据目标防御力和法术抗性变更伤害类型"
+    }
+  }
+}

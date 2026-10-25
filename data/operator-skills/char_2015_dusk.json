@@ -1,0 +1,606 @@
+{
+  "operatorId": "char_2015_dusk",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_dusk_1",
+      "name": "Transcendental Stroke",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.6,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.7,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.8,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.9,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            2,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.1,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.2,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.35,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.5,
+            3
+          ]
+        }
+      ],
+      "description": "The next attack has <@ba.vup>increased</> splash area and deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage\n<@ba.rem>Can store {cnt} charges</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "cnt"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_dusk_2",
+      "name": "Flowing Ink",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "rangeId": "3-3",
+          "values": [
+            0.2,
+            20,
+            0.5,
+            1.15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 10,
+          "rangeId": "3-3",
+          "values": [
+            0.23,
+            23,
+            0.5,
+            1.15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 10,
+          "rangeId": "3-3",
+          "values": [
+            0.26,
+            26,
+            0.5,
+            1.15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 15,
+          "rangeId": "3-3",
+          "values": [
+            0.29,
+            29,
+            0.5,
+            1.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 15,
+          "rangeId": "3-3",
+          "values": [
+            0.32,
+            32,
+            0.5,
+            1.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 15,
+          "rangeId": "3-3",
+          "values": [
+            0.35,
+            35,
+            0.5,
+            1.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 15,
+          "rangeId": "3-3",
+          "values": [
+            0.4,
+            40,
+            0.5,
+            1.25
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 20,
+          "rangeId": "3-3",
+          "values": [
+            0.45,
+            45,
+            0.5,
+            1.3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 19,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "rangeId": "3-3",
+          "values": [
+            0.5,
+            50,
+            0.5,
+            1.3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 25,
+          "rangeId": "3-3",
+          "values": [
+            0.55,
+            55,
+            0.5,
+            1.3
+          ]
+        }
+      ],
+      "description": "Range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, ASPD <@ba.vup>+{attack_speed}</> and attacks all enemies within range. Increase Arts damage dealt to enemies with less than 50% HP to <@ba.vup>{damage_scale:0%}</>",
+      "blackboardKeys": [
+        "atk",
+        "attack_speed",
+        "hp_ratio",
+        "damage_scale"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_dusk_3",
+      "name": "Image over Form",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 110,
+          "initSp": 45,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            0.4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 109,
+          "initSp": 45,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 108,
+          "initSp": 45,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            0.6
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 107,
+          "initSp": 50,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            0.7
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 106,
+          "initSp": 50,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            0.8
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 105,
+          "initSp": 50,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            0.9
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 104,
+          "initSp": 55,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 103,
+          "initSp": 60,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            1.1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 102,
+          "initSp": 65,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            1.15
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 100,
+          "initSp": 70,
+          "rangeId": "3-15",
+          "values": [
+            0.4,
+            1.2
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vdown>increases</> and prioritize attacking unblocked enemies. Range and splash area <@ba.vup>expand</>, ATK <@ba.vup>+{atk:0%}</> and every attack summons/refreshes a <@ba.vup>'Freeling'</> (lasts for 25 seconds) at the target's location (only on deployable ground tiles)",
+      "blackboardKeys": [
+        "base_attack_time",
+        "atk"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-15": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 2
+        }
+      ]
+    },
+    "3-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        }
+      ]
+    }
+  }
+}

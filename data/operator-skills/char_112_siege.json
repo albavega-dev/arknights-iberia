@@ -1,0 +1,491 @@
+{
+  "operatorId": "char_112_siege",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_charge_cost[3]",
+      "name": "Charge γ",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 14,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 16,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 18,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            12
+          ]
+        }
+      ],
+      "description": "Instantly gains <@ba.vup>{cost}</> Deployment Points.",
+      "blackboardKeys": [
+        "cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_siege_2",
+      "name": "Aerial Hammer",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "x-5",
+          "values": [
+            2.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "x-5",
+          "values": [
+            2.3,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "x-5",
+          "values": [
+            2.4,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 3,
+          "rangeId": "x-5",
+          "values": [
+            2.5,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 3,
+          "rangeId": "x-5",
+          "values": [
+            2.6,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 3,
+          "rangeId": "x-5",
+          "values": [
+            2.7,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 6,
+          "rangeId": "x-5",
+          "values": [
+            2.8,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 7,
+          "rangeId": "x-5",
+          "values": [
+            3,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 8,
+          "rangeId": "x-5",
+          "values": [
+            3.2,
+            3,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 10,
+          "rangeId": "x-5",
+          "values": [
+            3.4,
+            3,
+            3
+          ]
+        }
+      ],
+      "description": "Deals <@ba.vup>{atk_scale:0%}</> of ATK Physical damage to all nearby enemies in the next attack; Gains <@ba.vup>{cost}</> DP\n<@ba.rem>Can store {ct} charge(s)</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "cost",
+        "ct"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_siege_3",
+      "name": "Skull Breaker",
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            2.6,
+            0.4,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            2.7,
+            0.4,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            2.8,
+            0.4,
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "values": [
+            2.9,
+            0.4,
+            0.8,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 19,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "values": [
+            3,
+            0.4,
+            0.8,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "values": [
+            3.1,
+            0.4,
+            0.8,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            3.2,
+            0.4,
+            1.1,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "values": [
+            3.4,
+            0.4,
+            1.2,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            3.6,
+            0.4,
+            1.3,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 25,
+          "values": [
+            3.8,
+            0.4,
+            1.5,
+            1
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vdown>increases</>. Increases ATK to <@ba.vup>{attack@atk_scale:0%}</> when attacking and has <@ba.vup>{attack@buff_prob:0%}</> chance to <$ba.stun>Stun</> the target for <@ba.vup>{attack@stun:0.0}</> seconds",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "attack@buff_prob",
+        "attack@stun",
+        "base_attack_time"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 0
+        }
+      ]
+    }
+  }
+}
