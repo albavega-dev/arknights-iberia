@@ -22,15 +22,17 @@ export const gameDataTableHashes: Readonly<Record<GameDataRegion, Readonly<Recor
   },
 };
 
-export type GameDataSkillTable = "skill_table" | "range_table";
+export type GameDataSkillTable = "skill_table" | "range_table" | "gamedata_const";
 
 export const gameDataSkillTableHashes: Readonly<Record<GameDataRegion, Readonly<Record<GameDataSkillTable, string>>>> = {
   en: {
     skill_table: "C70AAB798F37A07C5D1BB30D0E596260F8FC2458773A33A573660E1144C58900",
     range_table: "A98344D688A8933C4DD7DDAAE3CB76C4347295359A18B60B918042CC2542D9D9",
+    gamedata_const: "F45652A5C0DAB05A9774C286B9E21655569D24B809C1678BAE3D15D08A97CACD",
   },
   cn: {
     skill_table: "A3B1A5680421BA32465211E3876475E1AAD116CFCCC63755352AE667559A6E88",
     range_table: "A98344D688A8933C4DD7DDAAE3CB76C4347295359A18B60B918042CC2542D9D9",
+    gamedata_const: "DA2F59B8213AFBF7E1F745A092B48B0106A5D1B8903B9D73DC2883918B688231",
   },
 };

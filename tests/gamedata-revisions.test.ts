@@ -10,7 +10,7 @@ describe("GameData pinned revisions", () => {
 
   it("records an uppercase SHA-256 for every pinned table", () => {
     const hashes = [...Object.values(gameDataTableHashes), ...Object.values(gameDataSkillTableHashes)].flatMap((tables) => Object.values(tables));
-    assert.equal(hashes.length, 10);
+    assert.equal(hashes.length, 12);
     for (const hash of hashes) assert.match(hash, /^[0-9A-F]{64}$/);
   });
 
