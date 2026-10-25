@@ -15,7 +15,15 @@ import type { OperatorTacticalEntry } from "../../../game-data/operator-tactical
 import { calculateOperatorStats, displayStatLabels, formatModuleTypeLabel, getRelevantPotentialRanks, getRelevantStatsModules, moduleAttributeLabels, officialPotentialToAppliedRanks, potentialDisplayRows, type OperatorStatsProfile } from "../../../game-data/operator-stats";
 
 function Image(props: ComponentProps<typeof NextImage>) {
-  return <NextImage {...props} quality={75} unoptimized={typeof props.src === "string" && (props.src.includes("/classes/") || props.src.includes("/ui/subclass/"))} />;
+  const source = typeof props.src === "string" ? props.src : "";
+  const isSmallStaticAsset = source.startsWith("/assets/operator-");
+  return (
+    <NextImage
+      {...props}
+      quality={75}
+      unoptimized={isSmallStaticAsset || source.includes("/classes/") || source.includes("/ui/subclass/")}
+    />
+  );
 }
 const classLabels: Record<OperatorClass, string> = { Guard: "Guard", Vanguard: "Vanguard", Defender: "Defender", Sniper: "Sniper", Caster: "Caster", Specialist: "Specialist", Supporter: "Supporter", Medic: "Medic" };
 const tabs = ["Estadísticas", "Habilidades", "Talentos", "Módulos", "Expediente", "Voces"] as const;
