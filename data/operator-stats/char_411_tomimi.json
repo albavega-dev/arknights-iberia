@@ -1,0 +1,315 @@
+{
+  "operatorId": "char_411_tomimi",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 837,
+            "atk": 271,
+            "def": 45,
+            "magicResistance": 10,
+            "cost": 20,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1197,
+            "atk": 383,
+            "def": 76,
+            "magicResistance": 10,
+            "cost": 20,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 70,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1197,
+            "atk": 383,
+            "def": 76,
+            "magicResistance": 15,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 70,
+          "attributes": {
+            "maxHp": 1555,
+            "atk": 504,
+            "def": 106,
+            "magicResistance": 15,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1555,
+            "atk": 504,
+            "def": 106,
+            "magicResistance": 20,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1920,
+            "atk": 600,
+            "def": 119,
+            "magicResistance": 20,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 200,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -10,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_tomimi",
+      "operatorId": "char_411_tomimi",
+      "region": "en",
+      "name": "Broken Tail Corrector",
+      "moduleType": "CCR-Y",
+      "typeIcon": "ccr-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 30,
+            "def": 15
+          },
+          "specialEffects": [
+            "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy."
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 40,
+            "def": 20
+          },
+          "specialEffects": [
+            "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+            "When skill is activated, range reduces slightly, attacks now deal Physical damage (only to ground enemies), ATK +105%",
+            "When skill is activated, range reduces slightly, attacks now deal Physical damage (only to ground enemies), ATK +125%<@ba.talpu> (+20%)</>"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 50,
+            "def": 25
+          },
+          "specialEffects": [
+            "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+            "When skill is activated, range reduces slightly, attacks now deal Physical damage (only to ground enemies), ATK +110%.",
+            "When skill is activated, range reduces slightly, attacks now deal Physical damage (only to ground enemies), ATK +130%<@ba.talpu> (+20%)</>"
+          ]
+        }
+      ]
+    }
+  ]
+}

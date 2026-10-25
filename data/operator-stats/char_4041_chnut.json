@@ -1,0 +1,311 @@
+{
+  "operatorId": "char_4041_chnut",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 45,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 623,
+            "atk": 136,
+            "def": 44,
+            "magicResistance": 10,
+            "cost": 12,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.85,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 45,
+          "attributes": {
+            "maxHp": 820,
+            "atk": 223,
+            "def": 64,
+            "magicResistance": 10,
+            "cost": 12,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.85,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 60,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 820,
+            "atk": 223,
+            "def": 64,
+            "magicResistance": 10,
+            "cost": 14,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.85,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 60,
+          "attributes": {
+            "maxHp": 977,
+            "atk": 311,
+            "def": 80,
+            "magicResistance": 10,
+            "cost": 14,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.85,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 70,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 977,
+            "atk": 311,
+            "def": 80,
+            "magicResistance": 10,
+            "cost": 14,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.85,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 70,
+          "attributes": {
+            "maxHp": 1137,
+            "atk": 389,
+            "def": 101,
+            "magicResistance": 10,
+            "cost": 14,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.85,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 100,
+        "atk": 35,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -4,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 15,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_chnut",
+      "operatorId": "char_4041_chnut",
+      "region": "en",
+      "name": "Ground Journey Commemorative Light",
+      "moduleType": "WDM-X",
+      "typeIcon": "wdm-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 50,
+            "atk": 15
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 24
+          },
+          "specialEffects": [
+            "<$ba.dt.element>Elemental Injury</> recovery +25% when healing ground units",
+            "<$ba.dt.element>Elemental Injury</> recovery +28%<@ba.talpu>(+3%)</> when healing ground units"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 30
+          },
+          "specialEffects": [
+            "<$ba.dt.element>Elemental Injury</> recovery +27% when healing ground units",
+            "<$ba.dt.element>Elemental Injury</> recovery +30%<@ba.talpu>(+3%)</> when healing ground units"
+          ]
+        }
+      ]
+    }
+  ]
+}

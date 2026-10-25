@@ -1,0 +1,299 @@
+{
+  "operatorId": "char_4064_mlynar",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1945,
+            "atk": 161,
+            "def": 239,
+            "magicResistance": 15,
+            "cost": 10,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 2560,
+            "atk": 231,
+            "def": 332,
+            "magicResistance": 15,
+            "cost": 10,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 2560,
+            "atk": 231,
+            "def": 332,
+            "magicResistance": 15,
+            "cost": 12,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 3241,
+            "atk": 301,
+            "def": 426,
+            "magicResistance": 15,
+            "cost": 12,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 3241,
+            "atk": 301,
+            "def": 426,
+            "magicResistance": 15,
+            "cost": 12,
+            "blockCnt": 3,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 3906,
+            "atk": 355,
+            "def": 502,
+            "magicResistance": 15,
+            "cost": 12,
+            "blockCnt": 3,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 360,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": []
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 25,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_mlynar",
+      "operatorId": "char_4064_mlynar",
+      "region": "en",
+      "name": "'Man in Scabbard'",
+      "moduleType": "LIB-X",
+      "typeIcon": "lib-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 225,
+            "atk": 18,
+            "attack_speed": 5
+          },
+          "specialEffects": [
+            "Directly gains <@ba.kw>+100%</> charge after deployment"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 27,
+            "attack_speed": 6
+          },
+          "specialEffects": [
+            "Directly gains <@ba.kw>+100%</> charge after deployment",
+            "ATK increased to 115% when attacking. If there are 3 or more enemies nearby, ATK increased to 120%, and takes 20% less damage",
+            "ATK increased to 118% <@ba.talpu>(+3%)</> when attacking. If there are 3 or more enemies nearby, ATK increased to 123% <@ba.talpu>(+3%)</>, and takes 20% less damage"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 360,
+            "atk": 35,
+            "attack_speed": 7
+          },
+          "specialEffects": [
+            "Directly gains <@ba.kw>+100%</> charge after deployment",
+            "ATK increased to 120% when attacking. If there are 3 or more enemies nearby, ATK increased to 125%, and takes 25% less damage",
+            "ATK increased to 123% <@ba.talpu>(+3%)</> when attacking. If there are 3 or more enemies nearby, ATK increased to 128% <@ba.talpu>(+3%)</>, and takes 25% less damage"
+          ]
+        }
+      ]
+    }
+  ]
+}

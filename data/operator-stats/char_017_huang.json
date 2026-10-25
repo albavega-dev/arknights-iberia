@@ -1,0 +1,337 @@
+{
+  "operatorId": "char_017_huang",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1286,
+            "atk": 308,
+            "def": 156,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1649,
+            "atk": 429,
+            "def": 224,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1649,
+            "atk": 429,
+            "def": 224,
+            "magicResistance": 0,
+            "cost": 22,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 2115,
+            "atk": 581,
+            "def": 303,
+            "magicResistance": 0,
+            "cost": 22,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 2115,
+            "atk": 581,
+            "def": 303,
+            "magicResistance": 0,
+            "cost": 24,
+            "blockCnt": 3,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 2821,
+            "atk": 765,
+            "def": 370,
+            "magicResistance": 0,
+            "cost": 24,
+            "blockCnt": 3,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 60,
+        "def": 45,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": []
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 28,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_huang",
+      "operatorId": "char_017_huang",
+      "region": "en",
+      "name": "Overloaded Weapons, Overheated Heart",
+      "moduleType": "CEN-X",
+      "typeIcon": "cen-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 50
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 70
+          },
+          "specialEffects": [
+            "This unit gains <$ba.buffres>Status Resistance</> after being deployed for 15 seconds, +4% ATK after 30 seconds, and +7 ASPD after 45 seconds",
+            "This unit gains <$ba.buffres>Status Resistance</> after being deployed for 12 <@ba.talpu>(-3)</> seconds, +4% ATK after 30 seconds, and +7 ASPD after 45 seconds"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 285,
+            "atk": 86
+          },
+          "specialEffects": [
+            "This unit gains <$ba.buffres>Status Resistance</> after being deployed for 15 seconds, +6% ATK after 30 seconds, and +12 ASPD after 45 seconds",
+            "This unit gains <$ba.buffres>Status Resistance</> after being deployed for 12 <@ba.talpu>(-3)</> seconds, +6% ATK after 30 seconds, and +12 ASPD after 45 seconds"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_huang",
+      "operatorId": "char_017_huang",
+      "region": "en",
+      "name": "'I'll be right back'",
+      "moduleType": "CEN-Y",
+      "typeIcon": "cen-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 40
+          },
+          "specialEffects": [
+            "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 330,
+            "atk": 50
+          },
+          "specialEffects": [
+            "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+            "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 8 seconds; ignores 150 DEF of a target when HP is above 50%",
+            "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 9 <@ba.talpu>(+1)</> seconds; ignores 150 DEF of a target when HP is above 50%"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 345,
+            "atk": 66
+          },
+          "specialEffects": [
+            "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+            "When this unit's HP falls beneath 50% for the first time, and then beneath 25% for the first time, restores 50% HP and prevents HP from falling under 50% for 8 seconds; ignores 150 DEF of a target when HP is above 50%",
+            "When this unit's HP falls beneath 50% for the first time, and then beneath 25% for the first time, restores 50% HP and prevents HP from falling under 50% for 9 <@ba.talpu>(+1)</> seconds; ignores 150 DEF of a target when HP is above 50%"
+          ]
+        }
+      ]
+    }
+  ]
+}

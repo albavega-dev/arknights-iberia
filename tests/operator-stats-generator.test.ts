@@ -6,7 +6,7 @@ import { join } from "node:path";
 import test, { mock } from "node:test";
 import type { GameDataRegion, GameDataTable } from "../src/game-data/gamedata-revisions";
 import type { DatasetIndex } from "../src/game-data/operator-dataset";
-import { arg, compareStatsManifests, main, readCatalog, readStatsDataset, tableFlag, type StatsDataset, type StatsGeneratorOptions } from "../scripts/generate-operator-stats-manifest";
+import { arg, compareStatsManifests, main, readCatalog, readStatsDataset, tableFlag, type StatsDataset, type StatsGeneratorOptions } from "../scripts/generate-operator-stats";
 
 const buff = { attributes: { attributeModifiers: [{ attributeType: "COST", formulaItem: "ADDITION", value: -1 }] } };
 const character = (ids: readonly string[]) => Object.fromEntries(ids.map((id) => [id, { phases: [{ maxLevel: 1, attributesKeyFrames: [{ level: 1, data: { maxHp: 100, atk: 10 } }] }], favorKeyFrames: [], potentialRanks: [{ buff }] }]));
@@ -27,7 +27,7 @@ const sha = (text: string) => createHash("sha256").update(text).digest("hex").to
 
 async function workspace(release: unknown = { operators: [{ id: "char_a" }, { id: "char_b" }] }, regional: unknown = { operators: [{ id: "char_cn" }] }) {
   const directory = await mkdtemp(join(tmpdir(), "operator-stats-generator-"));
-  const argv = ["node", "generate-operator-stats-manifest.ts"];
+  const argv = ["node", "generate-operator-stats.ts"];
   const expectedHashes = { en: {}, cn: {} } as Record<GameDataRegion, Record<GameDataTable, string>>;
   for (const region of ["en", "cn"] as const) for (const table of tables) {
     const path = join(directory, `${region}-${table}.json`); const text = JSON.stringify(fixtures[region][table]);
@@ -46,7 +46,7 @@ test("stats generator parses table flags and rejects missing arguments", async (
   assert.equal(tableFlag("en", "battle_equip_table"), "--en-battle-equip");
   assert.equal(arg("--out-dir", ["node", "script", "--out-dir", "operator-stats"]), "operator-stats");
   assert.throws(() => arg("--out-dir", ["node", "script", "--out-dir", "--force"]), /Missing --out-dir/);
-  await assert.rejects(main(["node", "generate-operator-stats-manifest.ts"]), /Missing --en-character/);
+  await assert.rejects(main(["node", "generate-operator-stats.ts"]), /Missing --en-character/);
 });
 
 test("stats generator refuses to overwrite without force and rejects unpinned snapshots", async () => {

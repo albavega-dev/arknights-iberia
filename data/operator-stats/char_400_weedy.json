@@ -1,0 +1,369 @@
+{
+  "operatorId": "char_400_weedy",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 984,
+            "atk": 295,
+            "def": 163,
+            "magicResistance": 0,
+            "cost": 19,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1313,
+            "atk": 411,
+            "def": 248,
+            "magicResistance": 0,
+            "cost": 19,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1313,
+            "atk": 411,
+            "def": 248,
+            "magicResistance": 0,
+            "cost": 21,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1663,
+            "atk": 548,
+            "def": 327,
+            "magicResistance": 0,
+            "cost": 21,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1663,
+            "atk": 548,
+            "def": 327,
+            "magicResistance": 0,
+            "cost": 21,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 2133,
+            "atk": 677,
+            "def": 394,
+            "magicResistance": 0,
+            "cost": 21,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 45,
+        "def": 45,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -4,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATTACK_SPEED",
+                "formulaItem": "ADDITION",
+                "value": 8,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "MAX_HP",
+                "formulaItem": "ADDITION",
+                "value": 140,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_weedy",
+      "operatorId": "char_400_weedy",
+      "region": "en",
+      "name": "Custom Bionic Seadragon",
+      "moduleType": "PUS-X",
+      "typeIcon": "pus-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 50
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 64
+          },
+          "specialEffects": [
+            "Normal attacks and skills have +1 shift level; restores 1 SP per 2.5 seconds to Weedy if located within 4 tiles around her and additionally grants +15% ATK",
+            "Increases the shift level of the Water Cannon's normal attacks and skills by 1; Weedy gains +15% ATK and restores 1 SP per 2.5 seconds if the Water Cannon is located within 4 tiles around her"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 72
+          },
+          "specialEffects": [
+            "Normal attacks and skills have +1 shift level; restores 1 SP per 2 seconds to Weedy if located within 4 tiles around her and additionally grants +20% ATK",
+            "Increases the shift level of the Water Cannon's normal attacks and skills by 1; Weedy gains +20% ATK and restores 1 SP per 2 seconds if the Water Cannon is located within 4 tiles around her"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_weedy",
+      "operatorId": "char_400_weedy",
+      "region": "en",
+      "name": "New Bionic Prototype",
+      "moduleType": "PUS-Y",
+      "typeIcon": "pus-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 46,
+            "def": 30
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 60,
+            "def": 36
+          },
+          "specialEffects": [
+            "Can deploy a Reserve Water Cannon that lasts for 20s; the Water Cannon can attack 1 target and push it away slightly; Water Cannon redeployment time reduced by 5s"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 68,
+            "def": 40
+          },
+          "specialEffects": [
+            "Can deploy a Reserve Water Cannon that lasts for 20s; the Water Cannon can attack 1 target and push it away slightly; Water Cannon redeployment time reduced by 8s"
+          ]
+        }
+      ]
+    }
+  ]
+}

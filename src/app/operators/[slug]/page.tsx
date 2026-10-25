@@ -8,8 +8,7 @@ import { readBiographyByOperatorIdFromDatabase } from "../../../server/db/operat
 import { getOperatorPageTitle, getOperatorPublicSlug, getOperatorPublicSlugs } from "../../../game-data/operator-slugs";
 import { getOperatorTacticalEntry } from "../../../game-data/operator-tactical";
 import { getOperatorArtistCredit } from "../../../game-data/operator-artist-credits";
-import statsManifest from "../../../../data/operator-stats-manifest.json";
-import { getStatsProfile, type OperatorStatsManifest } from "../../../game-data/operator-stats";
+import { loadStatsProfile } from "../../../game-data/operator-stats-data";
 import { OperatorDetailData } from "./operator-detail-data";
 import { loadOperatorDetailBiography } from "./operator-detail-biography";
 
@@ -42,11 +41,12 @@ export default async function OperatorPage({ params }: OperatorPageProps) {
   if (operator.slug === slug && publicSlug !== slug) permanentRedirect(`/operators/${publicSlug}`);
   const detailBiography = await loadOperatorDetailBiography(slug, records, readBiographyByOperatorIdFromDatabase);
   if (detailBiography.status === "operator-not-found") notFound();
+  const stats = await loadStatsProfile(operator.id, operator.cnOnly ? "cn" : "en");
 
   return (
     <main className="operators-page" id="contenido">
       <div className="operator-detail-content">
-      <OperatorDetailData operator={operator} stats={getStatsProfile(statsManifest as OperatorStatsManifest, operator.id, operator.cnOnly ? "cn" : "en")} biography={detailBiography.biography} tactical={getOperatorTacticalEntry(operator.id)} artistCredit={getOperatorArtistCredit(operator.id)} />
+      <OperatorDetailData operator={operator} stats={stats} biography={detailBiography.biography} tactical={getOperatorTacticalEntry(operator.id)} artistCredit={getOperatorArtistCredit(operator.id)} />
       <footer className="operators-provenance">
         <p>Proyecto independiente de la comunidad, no afiliado oficialmente a Hypergryph, Yostar ni Gryphline. Arknights y sus elementos pertenecen a sus respectivos titulares.</p>
         <p className="operator-credit">Diseño y desarrollo web por <a href="https://albavega.vercel.app/" target="_blank" rel="noopener noreferrer">Alba Vega</a></p>

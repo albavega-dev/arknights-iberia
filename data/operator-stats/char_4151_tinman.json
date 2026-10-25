@@ -1,0 +1,296 @@
+{
+  "operatorId": "char_4151_tinman",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 500,
+            "atk": 207,
+            "def": 44,
+            "magicResistance": 20,
+            "cost": 13,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 677,
+            "atk": 288,
+            "def": 65,
+            "magicResistance": 20,
+            "cost": 13,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 70,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 677,
+            "atk": 288,
+            "def": 65,
+            "magicResistance": 25,
+            "cost": 15,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 70,
+          "attributes": {
+            "maxHp": 880,
+            "atk": 379,
+            "def": 83,
+            "magicResistance": 25,
+            "cost": 15,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 880,
+            "atk": 379,
+            "def": 83,
+            "magicResistance": 30,
+            "cost": 17,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1114,
+            "atk": 469,
+            "def": 99,
+            "magicResistance": 30,
+            "cost": 17,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 200,
+        "atk": 30,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": []
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "MAGIC_RESISTANCE",
+                "formulaItem": "ADDITION",
+                "value": 8,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_tinman",
+      "operatorId": "char_4151_tinman",
+      "region": "en",
+      "name": "'Phrenology'",
+      "moduleType": "ALC-X",
+      "typeIcon": "alc-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 20
+          },
+          "specialEffects": [
+            "Increases SP recovery rate by +0.1/s while an Alchemical Unit is on the field"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 30
+          },
+          "specialEffects": [
+            "Increases SP recovery rate by +0.1/s while an Alchemical Unit is on the field",
+            "Increases the continuous damage dealt to ground enemies in range of Tin Man's Alchemical Units by 23%",
+            "Increases the continuous damage dealt to ground enemies in range of Tin Man's Alchemical Units by 25% <@ba.talpu>(+2%)</>"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 35
+          },
+          "specialEffects": [
+            "Increases SP recovery rate by +0.1/s while an Alchemical Unit is on the field",
+            "Increases the continuous damage dealt to ground enemies in range of Tin Man's Alchemical Units by 25%",
+            "Increases the continuous damage dealt to ground enemies in range of Tin Man's Alchemical Units by 27% <@ba.talpu>(+2%)</>"
+          ]
+        }
+      ]
+    }
+  ]
+}

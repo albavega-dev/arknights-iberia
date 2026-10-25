@@ -1,0 +1,352 @@
+{
+  "operatorId": "char_1031_slent2",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 737,
+            "atk": 185,
+            "def": 73,
+            "magicResistance": 15,
+            "cost": 13,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1054,
+            "atk": 290,
+            "def": 110,
+            "magicResistance": 15,
+            "cost": 13,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1054,
+            "atk": 290,
+            "def": 110,
+            "magicResistance": 20,
+            "cost": 15,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1445,
+            "atk": 387,
+            "def": 147,
+            "magicResistance": 20,
+            "cost": 15,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1445,
+            "atk": 387,
+            "def": 147,
+            "magicResistance": 25,
+            "cost": 15,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 1927,
+            "atk": 467,
+            "def": 184,
+            "magicResistance": 25,
+            "cost": 15,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 350,
+        "atk": 55,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -10,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_slent2",
+      "operatorId": "char_1031_slent2",
+      "region": "en",
+      "name": "Hard to Keep Awake",
+      "moduleType": "BLS-X",
+      "typeIcon": "bls-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 45
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 60
+          },
+          "specialEffects": [
+            "Increases the Max HP of allies within Attack Range by +6%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 6% of this unit's ATK every second; effect doubles for [Rhine Lab] Operators",
+            "Increases the Max HP of allies within Attack Range by +6%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 7% <@ba.talpu>(+1%)</> of this unit's ATK every second; effect doubles for [Rhine Lab] Operators"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 70
+          },
+          "specialEffects": [
+            "Increases the Max HP of allies within Attack Range by +10%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 7% of this unit's ATK every second; effect doubles for [Rhine Lab] Operators",
+            "Increases the Max HP of allies within Attack Range by +10%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 8% <@ba.talpu>(+1%)</> of this unit's ATK every second; effect doubles for [Rhine Lab] Operators"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_slent2",
+      "operatorId": "char_1031_slent2",
+      "region": "en",
+      "name": "Controllable Momentum",
+      "moduleType": "BLS-Y",
+      "typeIcon": "bls-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 40
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 50
+          },
+          "specialEffects": [
+            "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 5% of this unit's ATK every second; the first time an Operator within range drops below 50% HP, grants that Operator a Barrier equal to 35% of this unit's Max HP; effect doubles for [Rhine Lab] Operators",
+            "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 6% <@ba.talpu>(+1%)</> of this unit's ATK every second; the first time an Operator within range drops below 50% HP, grants that Operator a Barrier equal to 35% of this unit's Max HP; effect doubles for [Rhine Lab] Operators"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 62
+          },
+          "specialEffects": [
+            "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 5% of this unit's ATK every second; the first time an Operator within range drops below 50% HP, grants that Operator a Barrier equal to 50% of this unit's Max HP; effect doubles for [Rhine Lab] Operators",
+            "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 6% <@ba.talpu>(+1%)</> of this unit's ATK every second; the first time an Operator within range drops below 50% HP, grants that Operator a Barrier equal to 50% of this unit's Max HP; effect doubles for [Rhine Lab] Operators"
+          ]
+        }
+      ]
+    }
+  ]
+}

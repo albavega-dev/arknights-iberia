@@ -27,7 +27,7 @@
     "data:bundle:import": "tsx scripts/import-operator-bundle.ts",
     "data:bundle": "tsx scripts/import-operator-bundle.ts",
     "data:cn-sync": "tsx scripts/sync-cn-release-dates.ts",
-    "data:stats:generate": "tsx scripts/generate-operator-stats-manifest.ts",
+    "data:stats:generate": "tsx scripts/generate-operator-stats.ts",
     "db:generate": "node --env-file=.env node_modules/drizzle-kit/bin.cjs generate",
     "assets:generate-illustrations": "node --import=tsx scripts/generate-operator-illustration-manifest.ts",
     "ranges:verify-modules": "tsx scripts/verify-operator-module-ranges.ts",

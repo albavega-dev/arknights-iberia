@@ -1,0 +1,360 @@
+{
+  "operatorId": "char_430_fartth",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 749,
+            "atk": 535,
+            "def": 79,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.7,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 973,
+            "atk": 744,
+            "def": 106,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.7,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 973,
+            "atk": 744,
+            "def": 106,
+            "magicResistance": 0,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.7,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1217,
+            "atk": 980,
+            "def": 133,
+            "magicResistance": 0,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.7,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1217,
+            "atk": 980,
+            "def": 133,
+            "magicResistance": 0,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.7,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 1522,
+            "atk": 1196,
+            "def": 163,
+            "magicResistance": 0,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2.7,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 100,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -4,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 40,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_fartth",
+      "operatorId": "char_430_fartth",
+      "region": "en",
+      "name": "First-show Support Set",
+      "moduleType": "DEA-X",
+      "typeIcon": "dea-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 70,
+            "attack_speed": 5
+          },
+          "specialEffects": [
+            "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 85,
+            "attack_speed": 6
+          },
+          "specialEffects": [
+            "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+            "When no damage is taken within the past 8 seconds, ATK +20%",
+            "When no damage is taken within the past 8 seconds, ATK +23% <@ba.talpu>(+3%)</>"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 100,
+            "attack_speed": 7
+          },
+          "specialEffects": [
+            "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+            "When no damage is taken within the past 6 seconds, ATK +22%",
+            "When no damage is taken within the past 6 seconds, ATK +25% <@ba.talpu>(+3%)</>"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_fartth",
+      "operatorId": "char_430_fartth",
+      "region": "en",
+      "name": "Fan Letters",
+      "moduleType": "DEA-Y",
+      "typeIcon": "dea-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 80
+          },
+          "specialEffects": [
+            "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 100
+          },
+          "specialEffects": [
+            "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+            "When no damage is taken within the past 5 seconds, ATK +15% and ASPD +4",
+            "When no damage is taken within the past 5 seconds, ATK +18% <@ba.talpu>(+3%)</> and ASPD +4"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 120
+          },
+          "specialEffects": [
+            "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+            "When no damage is taken within the past 3 seconds, ATK +15% and ASPD +7",
+            "When no damage is taken within the past 3 seconds, ATK +18% <@ba.talpu>(+3%)</> and ASPD +7"
+          ]
+        }
+      ]
+    }
+  ]
+}

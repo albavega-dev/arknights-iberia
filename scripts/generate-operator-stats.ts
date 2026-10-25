@@ -150,4 +150,4 @@ export async function main(argv: readonly string[] = process.argv, options: Stat
   console.log(`Generated ${dataset.profiles.length} stats files (${result.totalBytes} bytes in total, largest ${largest}) at ${output}`);
 }
 
-if (process.argv[1]?.endsWith("generate-operator-stats-manifest.ts")) main().catch((error: unknown) => { console.error(error instanceof Error ? error.message : error); process.exitCode = 1; });
+if (process.argv[1]?.endsWith("generate-operator-stats.ts")) main().catch((error: unknown) => { console.error(error instanceof Error ? error.message : error); process.exitCode = 1; });
