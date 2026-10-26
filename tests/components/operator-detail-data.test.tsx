@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
 vi.mock("next/image", () => ({
@@ -290,5 +290,26 @@ describe("OperatorDetailData image policy", () => {
     expect(stateButtons[0]).toHaveAttribute("aria-pressed", "false");
     expect(stateButtons[1]).toHaveAttribute("aria-pressed", "true");
     expect(screen.getByText(/Estado y-6/)).toBeInTheDocument();
+  });
+});
+
+describe("OperatorDetailData skills tab", () => {
+  const renderTab = (skills: Parameters<typeof OperatorDetailData>[0]["skills"]) => {
+    render(<OperatorDetailData operator={operator} skills={skills} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />);
+    fireEvent.click(screen.getByRole("tab", { name: "Habilidades" }));
+    return screen.getByRole("heading", { name: "Habilidades" }).parentElement!;
+  };
+  const source = { repository: "test", revision: "test", path: "skill_table.json", sha256: "test" };
+
+  it("receives the skills view without showing anything new yet", () => {
+    const withoutView = renderTab(null);
+    expect(withoutView).toHaveAttribute("data-skills-status", "unavailable");
+    const text = withoutView.textContent;
+    cleanup();
+    expect(renderTab({ status: "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills: [] })).toHaveAttribute("data-skills-status", "empty");
+    cleanup();
+    const available = renderTab({ status: "available", operatorId: operator.id, region: "en", source, ranges: {}, skills: [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", icon: null, levels: [], defaultLevelIndex: -1, terms: {} }] });
+    expect(available).toHaveAttribute("data-skills-status", "available");
+    expect(available.textContent).toBe(text);
   });
 });
