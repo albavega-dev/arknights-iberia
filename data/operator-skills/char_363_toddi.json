@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_toddi_1",
       "name": "Signal Arrow",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_toddi_2",
       "name": "Portable Fortcracker Arrows",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

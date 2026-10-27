@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_flameb_1",
       "name": "Blood Pact",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_flameb_2",
       "name": "Blade Demon",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

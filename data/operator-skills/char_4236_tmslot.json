@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skcom_atk_up[3]",
       "name": "攻击力强化·γ型",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -137,6 +141,10 @@
       "slot": 2,
       "skillId": "skchr_tmslot_2",
       "name": "科技与传统仪式",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

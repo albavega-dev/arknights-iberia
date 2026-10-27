@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_puzzle_1",
       "name": "Key Clue",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_puzzle_2",
       "name": "Follow a Lead",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

@@ -17,7 +17,7 @@ test("level labels run 1-7 then M1-M3", () => {
 });
 
 test("reachable levels follow the unlock phases the operator has", () => {
-  const character = { phases: [{}, {}, {}], allSkillLvlup, skills: [{ skillId: "a", levelUpCostCond: mastery }, { skillId: "b" }] };
+  const character = { phases: [{}, {}, {}], allSkillLvlup, skills: [{ skillId: "a", unlockCond: { phase: "PHASE_0", level: 1 }, levelUpCostCond: mastery }, { skillId: "b", unlockCond: { phase: "PHASE_0", level: 1 } }] };
   assert.equal(reachableSkillLevels(character, 0, 10), 10);
   assert.equal(reachableSkillLevels(character, 1, 7), 7);
   assert.equal(reachableSkillLevels(character, 1, 10), 7, "no mastery data hides M1-M3");
@@ -29,7 +29,7 @@ test("reachable levels follow the unlock phases the operator has", () => {
 });
 
 test("builds operator skills in slot order with ranges and without null values", () => {
-  const character = { phases: [{}, {}, {}], allSkillLvlup, skills: [{ skillId: "s1", levelUpCostCond: mastery }, { skillId: "s2" }] };
+  const character = { phases: [{}, {}, {}], allSkillLvlup, skills: [{ skillId: "s1", unlockCond: { phase: "PHASE_0", level: 1 }, levelUpCostCond: mastery }, { skillId: "s2", unlockCond: { phase: "PHASE_0", level: 1 } }] };
   const skillTable = {
     s1: { levels: Array.from({ length: 10 }, (_, index) => level("Hit {atk_scale:0%}", { rangeId: "x-1", blackboard: [{ key: "atk_scale", value: 1 + index / 10, valueStr: index === 0 ? "x" : null }] })) },
     s2: { levels: Array.from({ length: 7 }, () => level()) },
@@ -55,14 +55,14 @@ test("operators without a skill list, such as robots, produce an empty skill lis
 });
 
 test("rejects missing skills, renamed skills and unknown ranges", () => {
-  const character = { phases: [{}, {}], allSkillLvlup, skills: [{ skillId: "s1" }] };
+  const character = { phases: [{}, {}], allSkillLvlup, skills: [{ skillId: "s1", unlockCond: { phase: "PHASE_0", level: 1 } }] };
   assert.throws(() => buildOperatorSkills("char_a", "en", character, {}, {}), /skill s1 is missing/);
   assert.throws(() => buildOperatorSkills("char_a", "en", character, { s1: { levels: [level(), { ...level(), name: "Other" }] } }, {}), /changes its name/);
   assert.throws(() => buildOperatorSkills("char_a", "en", character, { s1: { levels: [level("x", { rangeId: "nope" })] } }, rangeTable), /unknown range nope/);
 });
 
 test("compact storage keeps per-level descriptions and blackboards when levels differ, and expands both forms", () => {
-  const character = { phases: [{}, {}], allSkillLvlup, skills: [{ skillId: "s1" }, { skillId: "s2" }, { skillId: "s3" }] };
+  const character = { phases: [{}, {}], allSkillLvlup, skills: [{ skillId: "s1", unlockCond: { phase: "PHASE_0", level: 1 } }, { skillId: "s2", unlockCond: { phase: "PHASE_0", level: 1 } }, { skillId: "s3", unlockCond: { phase: "PHASE_0", level: 1 } }] };
   const withKeys = (keys: string[], description: string) => level(description, { blackboard: keys.map((key, index) => ({ key, value: index + 1, valueStr: null })) });
   const skillTable = {
     s1: { levels: [withKeys(["a", "b"], "One {a}"), withKeys(["a", "b"], "Two {a}")] },
@@ -87,20 +87,20 @@ test("compact storage keeps per-level descriptions and blackboards when levels d
 });
 
 test("a marker without a value fails unless the skill has a declared data gap", () => {
-  const character = { phases: [{}, {}], allSkillLvlup, skills: [{ skillId: "skchr_zebra_1" }, { skillId: "other" }] };
+  const character = { phases: [{}, {}], allSkillLvlup, skills: [{ skillId: "skchr_zebra_1", unlockCond: { phase: "PHASE_0", level: 1 } }, { skillId: "other", unlockCond: { phase: "PHASE_0", level: 1 } }] };
   const levels = [level("Lasts {duration} seconds, {atk_scale:0%} and {duration}")];
-  assert.throws(() => buildOperatorSkills("char_x", "en", { ...character, skills: [{ skillId: "other" }] }, { other: { levels } }, {}), /unresolved marker \{duration\}/);
-  const profile = buildOperatorSkills("char_304_zebra", "en", { ...character, skills: [{ skillId: "skchr_zebra_1" }] }, { skchr_zebra_1: { levels } }, {});
+  assert.throws(() => buildOperatorSkills("char_x", "en", { ...character, skills: [{ skillId: "other", unlockCond: { phase: "PHASE_0", level: 1 } }] }, { other: { levels } }, {}), /unresolved marker \{duration\}/);
+  const profile = buildOperatorSkills("char_304_zebra", "en", { ...character, skills: [{ skillId: "skchr_zebra_1", unlockCond: { phase: "PHASE_0", level: 1 } }] }, { skchr_zebra_1: { levels } }, {});
   assert.deepEqual(profile.skills[0].levels[0].correctedKeys, ["duration"], "the documented correction completes the value");
   assert.equal(profile.skills[0].levels[0].absentKeys, undefined);
   assert.deepEqual(expandSkillLevel(profile.skills[0], profile.skills[0].levels[0]).blackboard, [{ key: "atk_scale", value: 1.5 }, { key: "duration", value: 10 }]);
   const unfixed = [{ skillId: "skchr_zebra_1", operatorId: "char_304_zebra", key: "duration", note: "no source" }];
-  const absent = buildOperatorSkills("char_304_zebra", "en", { ...character, skills: [{ skillId: "skchr_zebra_1" }] }, { skchr_zebra_1: { levels } }, {}, unfixed);
+  const absent = buildOperatorSkills("char_304_zebra", "en", { ...character, skills: [{ skillId: "skchr_zebra_1", unlockCond: { phase: "PHASE_0", level: 1 } }] }, { skchr_zebra_1: { levels } }, {}, unfixed);
   assert.deepEqual(absent.skills[0].levels[0].absentKeys, ["duration"], "without a fix the value stays absent");
   assert.equal(absent.skills[0].levels[0].correctedKeys, undefined);
   assert.deepEqual(expandSkillLevel(absent.skills[0], absent.skills[0].levels[0]).blackboard, [{ key: "atk_scale", value: 1.5 }]);
-  assert.throws(() => buildOperatorSkills("char_x", "en", { ...character, skills: [{ skillId: "skchr_zebra_1" }] }, { skchr_zebra_1: { levels: [level("{other_key}")] } }, {}), /unresolved marker \{other_key\}/);
-  assert.throws(() => buildOperatorSkills("char_x", "en", { ...character, skills: [{ skillId: "skchr_zebra_1" }] }, { skchr_zebra_1: { levels: [level("Stray </>")] } }, {}), /unresolved marker <\/>/);
+  assert.throws(() => buildOperatorSkills("char_x", "en", { ...character, skills: [{ skillId: "skchr_zebra_1", unlockCond: { phase: "PHASE_0", level: 1 } }] }, { skchr_zebra_1: { levels: [level("{other_key}")] } }, {}), /unresolved marker \{other_key\}/);
+  assert.throws(() => buildOperatorSkills("char_x", "en", { ...character, skills: [{ skillId: "skchr_zebra_1", unlockCond: { phase: "PHASE_0", level: 1 } }] }, { skchr_zebra_1: { levels: [level("Stray </>")] } }, {}), /unresolved marker <\/>/);
 });
 
 test("known data gaps live in one list and are looked up by skill and key", () => {
@@ -130,4 +130,19 @@ test("glossary collects used terms and the terms nested in their explanations", 
   });
   assert.deepEqual(buildGlossary(["no terms"], dictionary), {});
   assert.throws(() => buildGlossary(["<$ba.missing>x</>"], dictionary), /term ba.missing is missing/);
+});
+
+test("the unlock of each skill comes from character_table and a missing or invalid one fails instead of being guessed", () => {
+  const levels = [{ name: "S", rangeId: null, description: "x", skillType: "MANUAL", durationType: "NONE", duration: 1, spData: { spType: "INCREASE_WITH_TIME", spCost: 1, initSp: 0 }, blackboard: [] }];
+  const build = (skills: { skillId: string; unlockCond?: { phase?: string; level?: number } }[]) => buildOperatorSkills("char_x", "en", { phases: [{}, {}, {}], allSkillLvlup: [], skills }, { s1: { levels }, s2: { levels }, s3: { levels } }, {});
+  const profile = build([
+    { skillId: "s1", unlockCond: { phase: "PHASE_0", level: 1 } },
+    { skillId: "s2", unlockCond: { phase: "PHASE_1", level: 1 } },
+    { skillId: "s3", unlockCond: { phase: "PHASE_2", level: 30 } },
+  ]);
+  assert.deepEqual(profile.skills.map((skill) => skill.unlock), [{ elite: 0, level: 1 }, { elite: 1, level: 1 }, { elite: 2, level: 30 }]);
+  assert.throws(() => build([{ skillId: "s1" }]), /no valid unlock condition/);
+  assert.throws(() => build([{ skillId: "s1", unlockCond: { phase: "PHASE_3", level: 1 } }]), /no valid unlock condition/);
+  assert.throws(() => build([{ skillId: "s1", unlockCond: { phase: "PHASE_1" } }]), /no valid unlock condition/);
+  assert.throws(() => build([{ skillId: "s1", unlockCond: { phase: "PHASE_1", level: 0 } }]), /no valid unlock condition/);
 });

@@ -99,3 +99,16 @@ test("skills dataset pins the source revisions and tables and stays within its o
   }
   assert.deepEqual(checkDatasetLimits(index, indexBytes, skillsDatasetLimits).errors, []);
 });
+
+test("every skill has a valid unlock and later slots never unlock earlier than previous ones", async () => {
+  const { index } = await readIndex(directory);
+  for (const profile of await readProfiles(index)) {
+    let previous = 0;
+    for (const skill of profile.skills) {
+      assert.ok([0, 1, 2].includes(skill.unlock.elite), `${profile.operatorId} ${skill.skillId}`);
+      assert.ok(Number.isInteger(skill.unlock.level) && skill.unlock.level >= 1, `${profile.operatorId} ${skill.skillId}`);
+      assert.ok(skill.unlock.elite >= previous, `${profile.operatorId} slot ${skill.slot}`);
+      previous = skill.unlock.elite;
+    }
+  }
+});

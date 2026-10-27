@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_amoris_1",
       "name": "As Fierce As Flame",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_amoris_2",
       "name": "As Strong As Wheat",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

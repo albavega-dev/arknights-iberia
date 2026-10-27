@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_doroth_1",
       "name": "Dangerous Entity Removal",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -170,6 +174,10 @@
       "slot": 2,
       "skillId": "skchr_doroth_2",
       "name": "Quicksand Generation",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -345,6 +353,10 @@
       "slot": 3,
       "skillId": "skchr_doroth_3",
       "name": "High-speed Resonating Troubleshooter",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

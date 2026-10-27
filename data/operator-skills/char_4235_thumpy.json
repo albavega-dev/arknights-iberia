@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_thumpy_1",
       "name": "“还不走？”",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_thumpy_2",
       "name": "“慢慢走~”",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -367,6 +375,10 @@
       "slot": 3,
       "skillId": "skchr_thumpy_3",
       "name": "“不准走！”",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

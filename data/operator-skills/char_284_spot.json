@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_spot_1",
       "name": "Secondary Healing Mode",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

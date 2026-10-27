@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_hbound_1",
       "name": "触礁",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -190,6 +194,10 @@
       "slot": 2,
       "skillId": "skchr_hbound_2",
       "name": "座浅",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

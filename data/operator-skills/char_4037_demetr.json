@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_demetr_1",
       "name": "A Don's Plenty",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -137,6 +141,10 @@
       "slot": 2,
       "skillId": "skchr_demetr_2",
       "name": "An Advisor's Tricks",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -300,6 +308,10 @@
       "slot": 3,
       "skillId": "skchr_demetr_3",
       "name": "Riscossione",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

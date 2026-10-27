@@ -161,3 +161,14 @@ test("a glossary term missing from the glossary is an error, and an unknown icon
   const badSlot = { ...profile, skills: [{ ...profile.skills[0], slot: 4 }] };
   assert.throws(() => buildOperatorSkillsView(badSlot, "en", index.sources.en, glossary, () => null), /slot/);
 });
+
+test("unlock is carried from the dataset: a 3-star with one skill and a 6-star with three", async () => {
+  const hibiscus = await load("char_120_hibisc", "en");
+  assert.deepEqual(hibiscus.skills.map((skill) => [skill.slot, skill.unlock]), [[1, { elite: 0, level: 1 }]]);
+  const kaltsit = await load("char_003_kalts", "en");
+  assert.deepEqual(kaltsit.skills.map((skill) => [skill.slot, skill.unlock]), [[1, { elite: 0, level: 1 }], [2, { elite: 1, level: 1 }], [3, { elite: 2, level: 1 }]]);
+  const stored = await readJson<StoredSkillsProfile>("operator-skills/char_003_kalts.json");
+  stored.skills.forEach((skill, position) => assert.deepEqual(kaltsit.skills[position].unlock, skill.unlock));
+  const aigis = await load("char_4218_aigis", "cn");
+  for (const skill of aigis.skills) assert.ok([0, 1, 2].includes(skill.unlock.elite));
+});

@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_nasti_1",
       "name": "'Fortify'",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_nasti_2",
       "name": "'Execute'",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -334,6 +342,10 @@
       "slot": 3,
       "skillId": "skchr_nasti_3",
       "name": "Roosting Grounds",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

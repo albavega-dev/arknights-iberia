@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_monstr_1",
       "name": "Stratagem: Hyperpressurized Link",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -158,6 +162,10 @@
       "slot": 2,
       "skillId": "skchr_monstr_2",
       "name": "Stratagem: Overload",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -299,6 +307,10 @@
       "slot": 3,
       "skillId": "skchr_monstr_3",
       "name": "Stratagem: Meltdown",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

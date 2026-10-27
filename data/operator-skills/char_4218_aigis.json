@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_aigis_1",
       "name": "启动狂宴模式",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_aigis_2",
       "name": "全弹发射",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

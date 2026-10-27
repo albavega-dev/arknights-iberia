@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_crosly_1",
       "name": "Smoke and Mirrors",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -158,6 +162,10 @@
       "slot": 2,
       "skillId": "skchr_crosly_2",
       "name": "Smokebomb Blast",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -332,6 +340,10 @@
       "slot": 3,
       "skillId": "skchr_crosly_3",
       "name": "Smokescreen Execution",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

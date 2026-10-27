@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_absin_1",
       "name": "Enforcement Mode",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -137,6 +141,10 @@
       "slot": 2,
       "skillId": "skchr_absin_2",
       "name": "Ultimatum",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

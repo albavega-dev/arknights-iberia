@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_ghost2_1",
       "name": "The Skill to Survive",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -147,6 +151,10 @@
       "slot": 2,
       "skillId": "skchr_ghost2_2",
       "name": "The Thirst to Survive",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -289,6 +297,10 @@
       "slot": 3,
       "skillId": "skchr_ghost2_3",
       "name": "The Pressure to Survive",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

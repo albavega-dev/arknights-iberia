@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_hsguma_1",
       "name": "Warpath",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_hsguma_2",
       "name": "Thorns",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -290,6 +298,10 @@
       "slot": 3,
       "skillId": "skchr_hsguma_3",
       "name": "Saw of Strength",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

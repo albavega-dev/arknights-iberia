@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_phatm2_1",
       "name": "Night Echoes",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -170,6 +174,10 @@
       "slot": 2,
       "skillId": "skchr_phatm2_2",
       "name": "Folie à Plusieurs",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -698,6 +706,10 @@
       "slot": 3,
       "skillId": "skchr_phatm2_3",
       "name": "Le Théâtre du Vide",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_ayer_1",
       "name": "Shrapnel Burst",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_ayer_2",
       "name": "Activate Phase Blades",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

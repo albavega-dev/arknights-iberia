@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_svash2_1",
       "name": "Pawn Break",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -170,6 +174,10 @@
       "slot": 2,
       "skillId": "skchr_svash2_2",
       "name": "Countergambit",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -668,6 +676,10 @@
       "slot": 3,
       "skillId": "skchr_svash2_3",
       "name": "Castled King",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

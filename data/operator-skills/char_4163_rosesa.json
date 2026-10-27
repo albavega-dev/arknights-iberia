@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_rosesa_1",
       "name": "Top-Notch Emergency Meds!",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_rosesa_2",
       "name": "Super-Fine Slow-Release Meds!",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skcom_quickattack[3]",
       "name": "Swift Strike γ",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_fartth_2",
       "name": "Ally Support",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -279,6 +287,10 @@
       "slot": 3,
       "skillId": "skchr_fartth_3",
       "name": "Feathershine Arrows",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

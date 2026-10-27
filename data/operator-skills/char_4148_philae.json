@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_philae_1",
       "name": "Blessing of the River of Life",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_philae_2",
       "name": "Curse of the River of Death",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

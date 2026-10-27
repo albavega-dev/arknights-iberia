@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_rdoc_1",
       "name": "Violent Response",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -179,6 +183,10 @@
       "slot": 2,
       "skillId": "skchr_rdoc_2",
       "name": "Stim Pistol",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

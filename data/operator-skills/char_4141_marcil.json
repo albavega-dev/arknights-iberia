@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_marcil_1",
       "name": "A Top Student's Abilities",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -192,6 +196,10 @@
       "slot": 2,
       "skillId": "skchr_marcil_2",
       "name": "Summon Familiar",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -411,6 +419,10 @@
       "slot": 3,
       "skillId": "skchr_marcil_3",
       "name": "Explosion Magic",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

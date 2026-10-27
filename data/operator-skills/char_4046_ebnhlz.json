@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_ebnhlz_1",
       "name": "Quickening Presto",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -178,6 +182,10 @@
       "slot": 2,
       "skillId": "skchr_ebnhlz_2",
       "name": "Desolate Echoes",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -320,6 +328,10 @@
       "slot": 3,
       "skillId": "skchr_ebnhlz_3",
       "name": "Sound of Silence",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

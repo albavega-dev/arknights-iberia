@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_glassb_1",
       "name": "Concentration",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -146,6 +150,10 @@
       "slot": 2,
       "skillId": "skchr_glassb_2",
       "name": "Literature Storm",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

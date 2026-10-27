@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_flint_1",
       "name": "Relentless",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_flint_2",
       "name": "Display of Might",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

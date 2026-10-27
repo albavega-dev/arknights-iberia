@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_slchan_1",
       "name": "Chain Hook",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -157,6 +161,10 @@
       "slot": 2,
       "skillId": "skchr_slchan_2",
       "name": "Binding Chains",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

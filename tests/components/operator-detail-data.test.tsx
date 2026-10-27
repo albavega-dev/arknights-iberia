@@ -308,7 +308,7 @@ describe("OperatorDetailData skills tab", () => {
     cleanup();
     expect(renderTab({ status: "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills: [] })).toHaveAttribute("data-skills-status", "empty");
     cleanup();
-    const available = renderTab({ status: "available", operatorId: operator.id, region: "en", source, ranges: {}, skills: [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", icon: null, levels: [], defaultLevelIndex: -1, terms: {} }] });
+    const available = renderTab({ status: "available", operatorId: operator.id, region: "en", source, ranges: {}, skills: [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [], defaultLevelIndex: -1, terms: {} }] });
     expect(available).toHaveAttribute("data-skills-status", "available");
     expect(available.textContent).toBe(text);
   });

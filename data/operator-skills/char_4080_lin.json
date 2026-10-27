@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_lin_1",
       "name": "Elegance",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_lin_2",
       "name": "Shelter",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -301,6 +309,10 @@
       "slot": 3,
       "skillId": "skchr_lin_3",
       "name": "Riving Lighttails",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

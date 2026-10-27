@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_kirara_1",
       "name": "Anchor Strike",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -137,6 +141,10 @@
       "slot": 2,
       "skillId": "skchr_kirara_2",
       "name": "Anchor Point Snap",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

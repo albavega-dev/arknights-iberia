@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_orchd2_1",
       "name": "刚射",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -179,6 +183,10 @@
       "slot": 2,
       "skillId": "skchr_orchd2_2",
       "name": "飞翔瞪射",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -373,6 +381,10 @@
       "slot": 3,
       "skillId": "skchr_orchd2_3",
       "name": "龙之箭",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

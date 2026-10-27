@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_sora_1",
       "name": "Hymn of Respite",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -147,6 +151,10 @@
       "slot": 2,
       "skillId": "skchr_sora_2",
       "name": "Hymn of Battle",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

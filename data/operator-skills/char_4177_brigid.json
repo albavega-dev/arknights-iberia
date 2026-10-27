@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_brigid_1",
       "name": "Familiarity",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_brigid_2",
       "name": "Bring to Heel",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

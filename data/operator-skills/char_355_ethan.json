@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_ethan_1",
       "name": "Fancy Maneuvers",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_ethan_2",
       "name": "Suspended Cross",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

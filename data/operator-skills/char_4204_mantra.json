@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_mantra_1",
       "name": "Resonance Collapse",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_mantra_2",
       "name": "Gestalt Consciousness",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -365,6 +373,10 @@
       "slot": 3,
       "skillId": "skchr_mantra_3",
       "name": "Truth Unchanted",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_mcnist_1",
       "name": "聚类分析",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -203,6 +207,10 @@
       "slot": 2,
       "skillId": "skchr_mcnist_2",
       "name": "协防术式",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -389,6 +397,10 @@
       "slot": 3,
       "skillId": "skchr_mcnist_3",
       "name": "工程学十字星",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

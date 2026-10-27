@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_aroma_1",
       "name": "Power Cleaning",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_aroma_2",
       "name": "Caution! Wet Floor!",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

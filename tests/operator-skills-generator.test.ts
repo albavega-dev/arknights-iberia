@@ -11,7 +11,7 @@ import { arg, tableFlag } from "../scripts/operator-dataset-io";
 
 const tables = ["character_table", "skill_table", "range_table", "gamedata_const"] as const;
 const level = (description: string) => ({ name: "Skill", rangeId: "r-1", description, skillType: "MANUAL", durationType: "NONE", duration: 5, spData: { spType: 8, spCost: 20, initSp: 5 }, blackboard: [{ key: "atk_scale", value: 2, valueStr: null }] });
-const character = (skillIds: readonly string[]) => ({ phases: [{}, {}], allSkillLvlup: Array.from({ length: 6 }, (_, index) => ({ unlockCond: { phase: index < 3 ? "PHASE_0" : "PHASE_1" } })), skills: skillIds.map((skillId) => ({ skillId })) });
+const character = (skillIds: readonly string[]) => ({ phases: [{}, {}], allSkillLvlup: Array.from({ length: 6 }, (_, index) => ({ unlockCond: { phase: index < 3 ? "PHASE_0" : "PHASE_1" } })), skills: skillIds.map((skillId) => ({ skillId, unlockCond: { phase: "PHASE_0", level: 1 } })) });
 const fixtures: Record<GameDataRegion, Record<(typeof tables)[number], unknown>> = {
   en: {
     character_table: { char_a: character(["sk_a"]), char_b: character(["sk_b1", "sk_b2"]), char_extra: character(["sk_a"]), token_a: character(["sk_a"]) },

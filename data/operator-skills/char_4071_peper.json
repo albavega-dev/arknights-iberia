@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skcom_heal_rage[3]",
       "name": "Shielding Tactics γ",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -137,6 +141,10 @@
       "slot": 2,
       "skillId": "skchr_peper_2",
       "name": "Camaraderie",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_rfrost_1",
       "name": "Trap Deployment",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_rfrost_2",
       "name": "Incapacitated Prey",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

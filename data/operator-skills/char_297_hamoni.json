@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_hamoni_1",
       "name": "Lithe Steps",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -158,6 +162,10 @@
       "slot": 2,
       "skillId": "skchr_hamoni_2",
       "name": "A Disastrous Drowning",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

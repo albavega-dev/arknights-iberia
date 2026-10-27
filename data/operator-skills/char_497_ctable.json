@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_ctable_1",
       "name": "Penetrating Gaze",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_ctable_2",
       "name": "Specular Reflection",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

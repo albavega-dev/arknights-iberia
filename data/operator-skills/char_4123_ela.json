@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_ela_1",
       "name": "Optical Interference",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -181,6 +185,10 @@
       "slot": 2,
       "skillId": "skchr_ela_2",
       "name": "Shock Defense",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -366,6 +374,10 @@
       "slot": 3,
       "skillId": "skchr_ela_3",
       "name": "'The Bosak Tempest'",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

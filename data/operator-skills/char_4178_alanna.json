@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_alanna_1",
       "name": "Pneumatic Power-Up",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_alanna_2",
       "name": "'Million-Pound Jack'",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

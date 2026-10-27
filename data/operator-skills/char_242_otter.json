@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_otter_1",
       "name": "Bionic Device",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -156,6 +160,10 @@
       "slot": 2,
       "skillId": "skchr_otter_2",
       "name": "Detonate and Recycle",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

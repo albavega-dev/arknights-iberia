@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_excu2_1",
       "name": "Testament Exacted",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -169,6 +173,10 @@
       "slot": 2,
       "skillId": "skchr_excu2_2",
       "name": "Close Combat",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -355,6 +363,10 @@
       "slot": 3,
       "skillId": "skchr_excu2_3",
       "name": "Damnatus Ex Foedere",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_flamtl_1",
       "name": "Quick Intuition",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -137,6 +141,10 @@
       "slot": 2,
       "skillId": "skchr_flamtl_2",
       "name": "'Pinus Sylvestris'",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -333,6 +341,10 @@
       "slot": 3,
       "skillId": "skchr_flamtl_3",
       "name": "Flameheart",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

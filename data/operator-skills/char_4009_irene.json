@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_irene_1",
       "name": "Gust",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_irene_2",
       "name": "Shattertide",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -322,6 +330,10 @@
       "slot": 3,
       "skillId": "skchr_irene_3",
       "name": "Judgment",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

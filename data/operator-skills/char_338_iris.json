@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_iris_1",
       "name": "Fairytale Guardian",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -158,6 +162,10 @@
       "slot": 2,
       "skillId": "skchr_iris_2",
       "name": "Dreamland's Cradle",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

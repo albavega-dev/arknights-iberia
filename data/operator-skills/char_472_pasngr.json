@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_pasngr_1",
       "name": "Touch of Static",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_pasngr_2",
       "name": "Focus Command",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -332,6 +340,10 @@
       "slot": 3,
       "skillId": "skchr_pasngr_3",
       "name": "Glorious Shards",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

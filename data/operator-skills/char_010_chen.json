@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_chen_1",
       "name": "Sheathed Strike",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_chen_2",
       "name": "Chi Xiao - Unsheath",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -300,6 +308,10 @@
       "slot": 3,
       "skillId": "skchr_chen_3",
       "name": "Chi Xiao - Shadowless",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

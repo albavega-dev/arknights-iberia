@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_mgllan_1",
       "name": "High-Efficiency Freezing Module",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_mgllan_2",
       "name": "Laser Mining Module",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -290,6 +298,10 @@
       "slot": 3,
       "skillId": "skchr_mgllan_3",
       "name": "Armed Combat Module",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

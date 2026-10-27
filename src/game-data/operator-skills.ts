@@ -28,8 +28,11 @@ export type SkillLevelData = {
   /** Blackboard keys completed from a documented correction (see skill-data-gaps.ts). */
   correctedKeys?: string[];
 };
+export type SkillUnlock = { /** Elite phase (0-2) the operator needs for the skill. */ elite: 0 | 1 | 2; level: number };
 export type OperatorSkill = {
   slot: number; skillId: string; name: string;
+  /** From `character_table` `skills[].unlockCond`. */
+  unlock: SkillUnlock;
   /** Present when every level shares the same description. */
   description?: string;
   /** Present when every level lists the same keys in the same order and none has a `valueStr`. */
@@ -50,7 +53,7 @@ type SourceLevel = {
   blackboard: { key: string; value: number; valueStr?: string | null }[];
 };
 type SourceUnlock = { unlockCond?: { phase?: string } };
-type SourceCharacter = { phases?: unknown[]; skills?: { skillId: string; levelUpCostCond?: SourceUnlock[] }[] | Record<string, never> | null; allSkillLvlup?: SourceUnlock[] };
+type SourceCharacter = { phases?: unknown[]; skills?: { skillId: string; unlockCond?: { phase?: string; level?: number }; levelUpCostCond?: SourceUnlock[] }[] | Record<string, never> | null; allSkillLvlup?: SourceUnlock[] };
 type SourceSkillTable = Record<string, { levels?: SourceLevel[] } | undefined>;
 type SourceRangeTable = Record<string, { direction: number; grids: { row: number; col: number }[] } | undefined>;
 
@@ -77,6 +80,12 @@ export function reachableSkillLevels(character: SourceCharacter, skillIndex: num
     if (!unlock || phaseIndex(unlock) >= phases) { count = index; break; }
   }
   return count;
+}
+
+function skillUnlock(operatorId: string, skillId: string, cond: { phase?: string; level?: number } | undefined): SkillUnlock {
+  const phase = /^PHASE_([0-2])$/.exec(cond?.phase ?? "");
+  if (!phase || !Number.isInteger(cond?.level) || cond!.level! < 1) throw new Error(`${operatorId}: skill ${skillId} has no valid unlock condition`);
+  return { elite: Number(phase[1]) as 0 | 1 | 2, level: cond!.level! };
 }
 
 function unknownMarkers(nodes: readonly SkillDescriptionNode[]): string[] {
@@ -121,7 +130,7 @@ export function buildOperatorSkills(operatorId: string, region: string, characte
         ...(correctedKeys.length ? { correctedKeys } : {}),
       };
     });
-    return compactSkill({ slot: skillIndex + 1, skillId: entry.skillId, name: source[0].name, levels });
+    return compactSkill({ slot: skillIndex + 1, skillId: entry.skillId, name: source[0].name, unlock: skillUnlock(operatorId, entry.skillId, entry.unlockCond), levels });
   });
   return { operatorId, region, skills, ranges: Object.fromEntries(Object.entries(ranges).sort(([a], [b]) => a.localeCompare(b, "en"))) };
 }
@@ -152,7 +161,7 @@ function compactSkill(skill: OperatorSkill): OperatorSkill {
   const sameDescription = levels.every((level) => level.description === levels[0].description);
   const keys = levels[0].blackboard!.map((item) => item.key);
   const sameKeys = keys.length > 0 && levels.every((level) => level.blackboard!.length === keys.length && level.blackboard!.every((item, index) => item.key === keys[index] && item.valueStr === undefined));
-  const result: OperatorSkill = { slot: skill.slot, skillId: skill.skillId, name: skill.name, levels: [] };
+  const result: OperatorSkill = { slot: skill.slot, skillId: skill.skillId, name: skill.name, unlock: skill.unlock, levels: [] };
   if (sameDescription) result.description = levels[0].description;
   if (sameKeys) result.blackboardKeys = keys;
   result.levels = levels.map((level) => {

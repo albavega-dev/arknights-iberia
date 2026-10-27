@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_fang2_1",
       "name": "Impaler Lance",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_fang2_2",
       "name": "Stand Your Ground",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

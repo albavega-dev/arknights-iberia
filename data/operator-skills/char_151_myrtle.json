@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skcom_assist_cost[2]",
       "name": "Support β",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_myrtle_2",
       "name": "Healing Wings",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

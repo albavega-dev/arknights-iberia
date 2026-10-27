@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_aglna2_1",
       "name": "极速送达",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -158,6 +162,10 @@
       "slot": 2,
       "skillId": "skchr_aglna2_2",
       "name": "重力自定义",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -374,6 +382,10 @@
       "slot": 3,
       "skillId": "skchr_aglna2_3",
       "name": "酸橙的心事",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

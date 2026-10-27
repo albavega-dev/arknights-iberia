@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_mitm_1",
       "name": "Remote Self-Destruct",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -158,6 +162,10 @@
       "slot": 2,
       "skillId": "skchr_mitm_2",
       "name": "Power Under Pressure",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

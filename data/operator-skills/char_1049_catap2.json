@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_catap2_1",
       "name": "高压回填斩",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -180,6 +184,10 @@
       "slot": 2,
       "skillId": "skchr_catap2_2",
       "name": "超高输出属性解放斩",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

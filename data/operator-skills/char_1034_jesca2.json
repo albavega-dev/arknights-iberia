@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_jesca2_1",
       "name": "Hold the Line",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_jesca2_2",
       "name": "Covered Defense",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -322,6 +330,10 @@
       "slot": 3,
       "skillId": "skchr_jesca2_3",
       "name": "Saturation Burst",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

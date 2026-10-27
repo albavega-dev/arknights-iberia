@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_narant_1",
       "name": "Whirling Blade",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_narant_2",
       "name": "Nightmare",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -334,6 +342,10 @@
       "slot": 3,
       "skillId": "skchr_narant_3",
       "name": "Sunswallower",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

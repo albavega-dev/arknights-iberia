@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_haini_1",
       "name": "Camouflaging Current Chart",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_haini_2",
       "name": "Release-retarding Chromogen",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

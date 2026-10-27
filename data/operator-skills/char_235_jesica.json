@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_jesica_1",
       "name": "Power Strike β",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -137,6 +141,10 @@
       "slot": 2,
       "skillId": "skchr_jesica_2",
       "name": "Smokescreen",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

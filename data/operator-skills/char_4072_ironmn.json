@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_ironmn_1",
       "name": "Extreme Firepower",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_ironmn_2",
       "name": "Efficient Resupply",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -301,6 +309,10 @@
       "slot": 3,
       "skillId": "skchr_ironmn_3",
       "name": "Prototype of Feist's Metal Crab",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

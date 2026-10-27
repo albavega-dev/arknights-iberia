@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_swllow_1",
       "name": "Flying Feathers",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_swllow_2",
       "name": "Counterflow",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

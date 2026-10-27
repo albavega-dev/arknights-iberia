@@ -1,6 +1,6 @@
 import { isOperatorId, type DatasetIndex, type DatasetSource } from "./operator-dataset";
 import type { GameDataRegion } from "./gamedata-revisions";
-import { expandSkillLevel, termIdsOf, type OperatorSkillsProfile, type SkillLevelData } from "./operator-skills";
+import { expandSkillLevel, termIdsOf, type OperatorSkillsProfile, type SkillLevelData, type SkillUnlock } from "./operator-skills";
 import { parseSkillDescription, type SkillDescriptionNode } from "./skill-description";
 
 // What the Skills tab receives: built on the server from one operator's skills file, serializable, with descriptions already parsed.
@@ -25,6 +25,8 @@ export type OperatorSkillView = {
   skillId: string;
   activation: "manual" | "auto" | "passive" | "unknown";
   spRecovery: "time" | "attack" | "defense" | "none" | "unknown";
+  /** Elite phase and operator level required to unlock the skill. */
+  unlock: SkillUnlock;
   icon: SkillIconView | null;
   /** Only the levels the operator can reach. */
   levels: SkillLevelView[];
@@ -85,7 +87,7 @@ export function buildOperatorSkillsView(profile: StoredSkillsProfile, region: Ga
       };
     });
     return {
-      slot: skill.slot as 1 | 2 | 3, skillId: skill.skillId, activation: activationOf(skill.levels[0]), spRecovery: recoveryOf(skill.levels[0]),
+      slot: skill.slot as 1 | 2 | 3, skillId: skill.skillId, activation: activationOf(skill.levels[0]), spRecovery: recoveryOf(skill.levels[0]), unlock: { ...skill.unlock },
       icon: resolveIcon(skill.skillId), levels, defaultLevelIndex: levels.length - 1,
       terms: termsOf(expanded.map((level) => level.description), glossary),
     };

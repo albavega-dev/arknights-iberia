@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_amgoat_1",
       "name": "Duetto",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_amgoat_2",
       "name": "Ignition",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -345,6 +353,10 @@
       "slot": 3,
       "skillId": "skchr_amgoat_3",
       "name": "Volcano",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

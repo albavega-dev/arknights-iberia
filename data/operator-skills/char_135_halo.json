@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_halo_1",
       "name": "Double Diversion",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -181,6 +185,10 @@
       "slot": 2,
       "skillId": "skchr_halo_2",
       "name": "Starlight Intersection",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

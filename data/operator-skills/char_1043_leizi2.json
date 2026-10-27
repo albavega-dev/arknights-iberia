@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_leizi2_1",
       "name": "Nobility Enduring",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -147,6 +151,10 @@
       "slot": 2,
       "skillId": "skchr_leizi2_2",
       "name": "Shock and Awe",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -311,6 +319,10 @@
       "slot": 3,
       "skillId": "skchr_leizi2_3",
       "name": "All the Thunderlight",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

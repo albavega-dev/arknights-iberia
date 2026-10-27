@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skcom_quickattack[3]",
       "name": "Swift Strike γ",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_reed2_2",
       "name": "Wither and Thrive",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -321,6 +329,10 @@
       "slot": 3,
       "skillId": "skchr_reed2_3",
       "name": "Ember of Life",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

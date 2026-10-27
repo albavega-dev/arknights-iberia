@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_vigil_1",
       "name": "Packleader's Call",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -137,6 +141,10 @@
       "slot": 2,
       "skillId": "skchr_vigil_2",
       "name": "Packleader's Gift",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -301,6 +309,10 @@
       "slot": 3,
       "skillId": "skchr_vigil_3",
       "name": "Packleader's Dignity",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

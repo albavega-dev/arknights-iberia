@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_shining_1",
       "name": "Creed",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -148,6 +152,10 @@
       "slot": 2,
       "skillId": "skchr_shining_2",
       "name": "Auto Protect",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -312,6 +320,10 @@
       "slot": 3,
       "skillId": "skchr_shining_3",
       "name": "Creed Field",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skchr_texas2_1",
       "name": "Silent Drizzle",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -181,6 +185,10 @@
       "slot": 2,
       "skillId": "skchr_texas2_2",
       "name": "Unrelenting Downpour",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -355,6 +363,10 @@
       "slot": 3,
       "skillId": "skchr_texas2_3",
       "name": "Torrential Sword Rain",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",

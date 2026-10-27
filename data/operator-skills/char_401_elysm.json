@@ -6,6 +6,10 @@
       "slot": 1,
       "skillId": "skcom_assist_cost[3]",
       "name": "Support γ",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
@@ -159,6 +163,10 @@
       "slot": 2,
       "skillId": "skchr_elysm_2",
       "name": "Monitor",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
       "levels": [
         {
           "level": "1",
