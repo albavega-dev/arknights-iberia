@@ -3325,11 +3325,10 @@
   --skill-tone-decrease: var(--color-danger);
   --skill-tone-keyword: var(--color-brass);
   --skill-tone-status: var(--color-muted);
-  /* Una tarjeta por fila, con el ancho que tenía en la fila de dos a 1440 px. */
-  --skill-card-max: 33rem;
   --skill-level-button: 2rem;
+  /* Una tarjeta por fila, a todo el ancho de la pestaña. */
   display: grid;
-  grid-template-columns: minmax(0, var(--skill-card-max));
+  grid-template-columns: minmax(0, 1fr);
   align-items: start;
   gap: var(--space-3);
   min-width: 0;
@@ -3436,9 +3435,11 @@
   padding-inline: 0;
 }
 /* Valores y rango en un panel con la superficie de los selectores de la información táctica. */
+/* Valores con su ancho natural y el rango justo a su derecha, a una separación fija (column-gap). */
 .operator-skill-data {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: auto auto;
+  justify-content: start;
   align-items: center;
   gap: var(--space-3) var(--space-6);
   padding: 0.9rem;
@@ -3503,7 +3504,6 @@
 .operator-skill-range {
   --range-cell-size: 1.5rem;
   --range-grid-width: max-content;
-  justify-self: center;
   min-width: 0;
 }
 .operator-skill-levels-toggle {
@@ -3552,6 +3552,9 @@
 @container (max-width: 26rem) {
   .operator-skill-data {
     grid-template-columns: minmax(0, 1fr);
+  }
+  .operator-skill-range {
+    justify-self: center;
   }
   .operator-skill-levels {
     flex-wrap: wrap;
