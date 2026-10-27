@@ -36,3 +36,11 @@ export const gameDataSkillTableHashes: Readonly<Record<GameDataRegion, Readonly<
     gamedata_const: "DA2F59B8213AFBF7E1F745A092B48B0106A5D1B8903B9D73DC2883918B688231",
   },
 };
+
+// Base (infrastructure) skills of each operator.
+export type GameDataBuildingTable = "building_data";
+
+export const gameDataBuildingTableHashes: Readonly<Record<GameDataRegion, Readonly<Record<GameDataBuildingTable, string>>>> = {
+  en: { building_data: "A46851367F3844E3EFB37C9C540BA0AE55A8F5D46360F2B24CD4AE44DDC152C4" },
+  cn: { building_data: "824CB228DD44697B469ECAE907ED835C74DA32068589CB52F352D4D32EB0F0F9" },
+};
