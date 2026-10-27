@@ -3315,6 +3315,13 @@
 }
 
 /* Pestaña Habilidades: tarjetas con la identidad naval de Estadísticas. */
+/* Título y tarjetas comparten el mismo bloque: 760 px como máximo, centrado en la pestaña. */
+.operator-skills-tab {
+  width: 100%;
+  max-width: 47.5rem;
+  min-width: 0;
+  margin-inline: auto;
+}
 .operator-skills {
   /* Recuperación de SP y activación: colores de la plantilla Skill head de Terra Wiki. */
   --skill-recovery-time: #8ec31f;
@@ -3326,16 +3333,12 @@
   --skill-tone-keyword: var(--color-brass);
   --skill-tone-status: var(--color-muted);
   --skill-level-button: 2rem;
-  /* Una tarjeta por fila; el bloque se limita a 760 px y se centra en la pestaña. */
-  --skill-block-max: 47.5rem;
+  /* Una tarjeta por fila. */
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
   gap: var(--space-3);
-  width: 100%;
-  max-width: var(--skill-block-max);
   min-width: 0;
-  margin-inline: auto;
 }
 .operator-skill-card {
   container-type: inline-size;
@@ -3440,11 +3443,10 @@
   min-width: 0;
   padding-inline: 0;
 }
-/* Valores con su ancho natural y el rango justo a su derecha, a una separación fija (column-gap). */
+/* Valores con su ancho natural; el rango, centrado en el espacio que queda a su derecha. */
 .operator-skill-data {
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: start;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: var(--space-3) var(--space-6);
   padding: 0.9rem;
@@ -3509,6 +3511,7 @@
 .operator-skill-range {
   --range-cell-size: 1.5rem;
   --range-grid-width: max-content;
+  justify-self: center;
   min-width: 0;
 }
 .operator-skill-levels-toggle {
@@ -3557,9 +3560,6 @@
 @container (max-width: 26rem) {
   .operator-skill-data {
     grid-template-columns: minmax(0, 1fr);
-  }
-  .operator-skill-range {
-    justify-self: center;
   }
   .operator-skill-levels {
     flex-wrap: wrap;

@@ -297,7 +297,7 @@ describe("OperatorDetailData skills tab", () => {
   const renderTab = (skills: Parameters<typeof OperatorDetailData>[0]["skills"]) => {
     render(<OperatorDetailData operator={operator} skills={skills} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />);
     fireEvent.click(screen.getByRole("tab", { name: "Habilidades" }));
-    return screen.getByRole("heading", { name: "Habilidades" }).parentElement!;
+    return screen.getByRole("heading", { name: "Habilidades de combate" }).parentElement!;
   };
   const source = { repository: "test", revision: "test", path: "skill_table.json", sha256: "test" };
 
