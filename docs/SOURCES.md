@@ -14,7 +14,7 @@ Este documento recoge las fuentes de datos, recursos gráficos y herramientas ut
 
 ## Recursos gráficos
 
-- [Arknight-Images](https://github.com/PuppiizSunniiz/Arknight-Images): retratos, ilustraciones e iconos externos referenciados por los componentes. Los iconos de habilidades se copian localmente desde `skills/` en el commit `1a41341cc634461a5abe3456722801a39b9a9d32` (`data/operator-skill-icons-manifest.json`), y los de maestría M1–M3 desde `ui/rank/` en el mismo commit (`public/assets/operator-skill-mastery/`).
+- [Arknight-Images](https://github.com/PuppiizSunniiz/Arknight-Images): retratos, ilustraciones e iconos externos referenciados por los componentes. Los iconos de habilidades se copian localmente desde `skills/` en el commit `1a41341cc634461a5abe3456722801a39b9a9d32` (`data/operator-skill-icons-manifest.json`), y los de maestría M1–M3 desde `ui/rank/` en el mismo commit (`public/assets/operator-skill-mastery/`). Los iconos de habilidades de base y de salas se copian desde `ui/infrastructure/skill/` y `ui/infrastructure/` en el mismo commit (`public/assets/operator-base-skills/` y `public/assets/operator-base-rooms/`).
 - [PRTS Design](https://github.com/MooncellWiki/prts-design): procedencia del icono de Operadores.
 - [Magnific](https://www.magnific.com/): atribución indicada para el recurso del faro.
 

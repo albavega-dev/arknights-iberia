@@ -50,8 +50,10 @@ export type BaseSkillStageView = {
   name: string;
   /** building_data room type, such as TRADING; the interface names it. */
   room: string;
-  /** building_data `skillIcon` id; its image is not inventoried yet. */
-  iconId: string;
+  /** Icon of the building_data `skillIcon`; null when it is not inventoried. */
+  icon: SkillIconView | null;
+  /** Icon of the room; null when it is not inventoried. */
+  roomIcon: SkillIconView | null;
   color: string;
   textColor: string;
   unlock: SkillUnlock;
@@ -79,6 +81,8 @@ export type OperatorSkillsView = {
   skills: OperatorSkillView[];
   baseSkills: OperatorBaseSkillView[];
 };
+export type BaseSkillIconResolvers = { skill: (iconId: string) => SkillIconView | null; room: (room: string) => SkillIconView | null };
+const noBaseIcons: BaseSkillIconResolvers = { skill: () => null, room: () => null };
 export type StoredSkillsProfile = Omit<OperatorSkillsProfile, "region"> & { region: string };
 export type StoredSkillsGlossary = { region: string; terms: Record<string, { name: string; description: string }> };
 
@@ -110,7 +114,7 @@ function termsOf(descriptions: readonly string[], glossary: StoredSkillsGlossary
   return Object.fromEntries(Object.entries(result).sort(([a], [b]) => a.localeCompare(b, "en")));
 }
 
-export function buildOperatorSkillsView(profile: StoredSkillsProfile, region: GameDataRegion, source: DatasetSource, glossary: StoredSkillsGlossary, resolveIcon: (skillId: string) => SkillIconView | null, resolveMasteryIcon: (label: SkillLevelLabel) => SkillIconView | null = () => null): OperatorSkillsView {
+export function buildOperatorSkillsView(profile: StoredSkillsProfile, region: GameDataRegion, source: DatasetSource, glossary: StoredSkillsGlossary, resolveIcon: (skillId: string) => SkillIconView | null, resolveMasteryIcon: (label: SkillLevelLabel) => SkillIconView | null = () => null, baseIcons: BaseSkillIconResolvers = noBaseIcons): OperatorSkillsView {
   const ranges: Record<string, OperatorSkillRangeView> = {};
   const skills = profile.skills.map((skill): OperatorSkillView => {
     if (skill.slot < 1 || skill.slot > 3) throw new Error(`${profile.operatorId}: unexpected skill slot ${skill.slot}`);
@@ -133,7 +137,7 @@ export function buildOperatorSkillsView(profile: StoredSkillsProfile, region: Ga
   const baseSkills = profile.baseSkills.map((slot): OperatorBaseSkillView => ({
     slot: slot.slot,
     stages: slot.stages.map((stage) => ({
-      buffId: stage.buffId, name: stage.name, room: stage.room, iconId: stage.icon, color: stage.color, textColor: stage.textColor, unlock: { ...stage.unlock },
+      buffId: stage.buffId, name: stage.name, room: stage.room, icon: baseIcons.skill(stage.icon), roomIcon: baseIcons.room(stage.room), color: stage.color, textColor: stage.textColor, unlock: { ...stage.unlock },
       description: parseSkillDescription(stage.description, []),
     })),
     terms: termsOf(baseSkillDescriptions([slot]), glossary),
@@ -147,6 +151,8 @@ export type SkillsDatasetReaders = {
   readGlossary: (region: GameDataRegion) => Promise<StoredSkillsGlossary>;
   resolveIcon: (region: GameDataRegion, skillId: string) => SkillIconView | null;
   resolveMasteryIcon: (label: SkillLevelLabel) => SkillIconView | null;
+  resolveBaseSkillIcon: (iconId: string) => SkillIconView | null;
+  resolveRoomIcon: (room: string) => SkillIconView | null;
 };
 
 /** Same checks as `loadStatsProfile`: the id must be well formed and indexed for the requested region, and the file must agree. */
@@ -157,5 +163,5 @@ export async function loadOperatorSkillsView(readers: SkillsDatasetReaders, oper
   const profile = await readers.readProfile(operatorId);
   if (profile.operatorId !== operatorId || profile.region !== region) return null;
   const glossary = await readers.readGlossary(region);
-  return buildOperatorSkillsView(profile, region, readers.index.sources[region], glossary, (skillId) => readers.resolveIcon(region, skillId), readers.resolveMasteryIcon);
+  return buildOperatorSkillsView(profile, region, readers.index.sources[region], glossary, (skillId) => readers.resolveIcon(region, skillId), readers.resolveMasteryIcon, { skill: readers.resolveBaseSkillIcon, room: readers.resolveRoomIcon });
 }

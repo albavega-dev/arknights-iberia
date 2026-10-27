@@ -2,7 +2,8 @@ import { assetPath } from "./asset-paths";
 import type { GameDataRegion } from "./gamedata-revisions";
 
 export const skillIconsDirectory = "operator-skills";
-export const skillIconsContractVersion = "1";
+// Version 2 adds the base skill and room icons (`baseSkills`, `baseSkillsMissing`, `rooms`).
+export const skillIconsContractVersion = "2";
 const sourcePrefix = "skill_icon_";
 
 export type SkillIconEntry = Readonly<{ source: string; url: string; bytes: number; sha256: string; width: number; height: number }>;
@@ -17,6 +18,12 @@ export type SkillIconsManifest = Readonly<{
   missing: Readonly<Record<GameDataRegion, readonly string[]>>;
   /** Mastery rank icons (`ui/rank/m-1.png`..`m-3.png` of the same source), by local file name. */
   mastery: Readonly<Record<string, SkillIconEntry>>;
+  /** Base skill icons (`ui/infrastructure/skill/<skillIcon>.png`), by local file name. */
+  baseSkills: Readonly<Record<string, SkillIconEntry>>;
+  /** building_data `skillIcon` ids of the catalog that have no file, per region. */
+  baseSkillsMissing: Readonly<Record<GameDataRegion, readonly string[]>>;
+  /** Room icons (`ui/infrastructure/<file>.png`), by local file name. */
+  rooms: Readonly<Record<string, SkillIconEntry>>;
 }>;
 
 export const masteryIconsDirectory = "operator-skill-mastery";
@@ -40,6 +47,38 @@ export function skillIconLocalName(sourceName: string): string {
 export function resolveSkillIconSource(skillId: string, iconId: string | null | undefined, inventory: ReadonlySet<string>): string | null {
   if (iconId && inventory.has(`${sourcePrefix}${iconId}.png`)) return `${sourcePrefix}${iconId}.png`;
   return inventory.has(`${sourcePrefix}${skillId}.png`) ? `${sourcePrefix}${skillId}.png` : null;
+}
+
+export const baseSkillIconsDirectory = "operator-base-skills";
+export const baseSkillIconsSourceDirectory = "ui/infrastructure/skill";
+export const roomIconsDirectory = "operator-base-rooms";
+export const roomIconsSourceDirectory = "ui/infrastructure";
+/** building_data room type -> source file; `buffIcon` (`manufacture`, `trading`...) does not match the file names. */
+export const roomIconSources: Readonly<Record<string, string>> = {
+  CONTROL: "control.png", POWER: "power.png", MANUFACTURE: "manu.png", TRADING: "trade.png", WORKSHOP: "workshop.png",
+  TRAINING: "train.png", DORMITORY: "dorm.png", MEETING: "meet.png", HIRE: "hire.png", RECYCLE: "recycle.png",
+};
+
+const baseSkillIconIdPattern = /^[A-Za-z0-9][A-Za-z0-9_&.-]*$/;
+
+/** `bskill_man_spd&limit1` ->`bskill_man_spd-limit1.png`: lower case, any other character than a-z, 0-9, `_`, `.` or `-` becomes `-`. */
+export function baseSkillIconLocalName(iconId: string): string {
+  if (!baseSkillIconIdPattern.test(iconId)) throw new Error(`Unexpected base skill icon id: ${iconId}`);
+  return `${iconId.toLowerCase().replace(/[^a-z0-9_.-]/g, "-")}.png`;
+}
+
+/** `TRADING` -> `trading.png`. */
+export function roomIconLocalName(room: string): string { return `${room.toLowerCase()}.png`; }
+
+export function getBaseSkillIconPath(manifest: SkillIconsManifest, iconId: string): string | null {
+  const file = baseSkillIconIdPattern.test(iconId) ? baseSkillIconLocalName(iconId) : null;
+  return file && Object.hasOwn(manifest.baseSkills, file) ? assetPath(baseSkillIconsDirectory, file) : null;
+}
+
+export function getRoomIconPath(manifest: SkillIconsManifest, room: string): string | null {
+  if (!Object.hasOwn(roomIconSources, room)) return null;
+  const file = roomIconLocalName(room);
+  return Object.hasOwn(manifest.rooms, file) ? assetPath(roomIconsDirectory, file) : null;
 }
 
 export function getSkillIconPath(manifest: SkillIconsManifest, region: GameDataRegion, skillId: string): string | null {

@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import type { GameDataRegion } from "../src/game-data/gamedata-revisions";
 import type { DatasetIndex } from "../src/game-data/operator-dataset";
-import { getMasteryIconPath, getSkillIconPath, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
+import { getBaseSkillIconPath, getMasteryIconPath, getRoomIconPath, getSkillIconPath, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
 import { buildOperatorSkillsView, loadOperatorSkillsView, skillDurationKind, type OperatorSkillsView, type SkillsDatasetReaders, type StoredSkillsGlossary, type StoredSkillsProfile } from "../src/game-data/operator-skills-view";
 import type { SkillDescriptionNode } from "../src/game-data/skill-description";
 
@@ -25,6 +25,8 @@ const readers: SkillsDatasetReaders = {
     const src = getMasteryIconPath(icons, label);
     return src ? { src, width: 250, height: 230 } : null;
   },
+  resolveBaseSkillIcon: (iconId) => { const src = getBaseSkillIconPath(icons, iconId); return src ? { src, width: 36, height: 36 } : null; },
+  resolveRoomIcon: (room) => { const src = getRoomIconPath(icons, room); return src ? { src, width: 23, height: 23 } : null; },
 };
 const load = async (operatorId: string, region: GameDataRegion): Promise<OperatorSkillsView> => {
   const view = await loadOperatorSkillsView(readers, operatorId, region);
@@ -203,7 +205,7 @@ test("Amiya (EN) has two base skills: Control Center at E0 and Dormitory at E2, 
   assert.deepEqual(stagesOf(view), [[1, [["control_tra_spd[000]", "CONTROL", 0, 1]]], [2, [["dorm_rec_all[010]", "DORMITORY", 2, 1]]]]);
   const [agreement] = view.baseSkills[0].stages;
   assert.equal(agreement.name, "Agreement");
-  assert.equal(agreement.iconId, "bskill_ctrl_t_spd");
+  assert.deepEqual([agreement.icon?.src, agreement.roomIcon?.src], ["/assets/operator-base-skills/bskill_ctrl_t_spd.png", "/assets/operator-base-rooms/control.png"]);
   assert.deepEqual([agreement.color, agreement.textColor], ["#005752", "#ffffff"]);
   assert.match(textOf(agreement.description), /\+7%/);
   assert.ok(agreement.description.some((node) => node.type === "style" && node.tone === "increase"));
@@ -230,6 +232,7 @@ test("a CN-only operator reads its CN base skills, including the CN-only recycli
   const view = await load("char_4232_hbound", "cn");
   assert.deepEqual(stagesOf(view), [[1, [["recycle_spd&cost[000]", "RECYCLE", 0, 1], ["recycle_spd&cost[010]", "RECYCLE", 2, 1]]], [2, [["workshop_formula_device[080]", "WORKSHOP", 2, 1]]]]);
   assert.equal(view.baseSkills[0].stages[0].name, "拾荒者");
+  assert.equal(view.baseSkills[0].stages[0].roomIcon?.src, "/assets/operator-base-rooms/recycle.png");
   for (const slot of view.baseSkills) for (const stage of slot.stages) assert.deepEqual(unknownMarkers(stage.description), []);
 });
 
@@ -250,4 +253,15 @@ test("base skill terms come from the region glossary, and Mulberry's term is a r
   assert.equal(slot.terms["cc.bd_b1"].name, "Worldly Plight");
   const profile = await readJson<StoredSkillsProfile>("operator-skills/char_473_mberry.json");
   assert.throws(() => buildOperatorSkillsView(profile, "en", index.sources.en, { region: "en", terms: {} }, () => null), /Glossary term/);
+});
+
+test("a base skill icon with an ampersand resolves to its normalised file, and the view builds without base icon resolvers", async () => {
+  const view = await load("char_4114_harold", "en");
+  const stage = view.baseSkills.flatMap((slot) => slot.stages).find((item) => item.icon?.src.includes("bskil_meet_team"));
+  assert.equal(stage?.icon?.src, "/assets/operator-base-skills/bskil_meet_team-char.png");
+  assert.equal(stage?.roomIcon?.src, "/assets/operator-base-rooms/meeting.png");
+  const profile = await readJson<StoredSkillsProfile>("operator-skills/char_002_amiya.json");
+  const glossary = await readJson<StoredSkillsGlossary>("operator-skills/glossary-en.json");
+  const bare = buildOperatorSkillsView(profile, "en", index.sources.en, glossary, () => null);
+  assert.ok(bare.baseSkills.flatMap((slot) => slot.stages).every((item) => item.icon === null && item.roomIcon === null));
 });
