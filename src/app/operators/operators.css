@@ -3326,12 +3326,16 @@
   --skill-tone-keyword: var(--color-brass);
   --skill-tone-status: var(--color-muted);
   --skill-level-button: 2rem;
-  /* Una tarjeta por fila, a todo el ancho de la pestaña. */
+  /* Una tarjeta por fila; el bloque se limita a 760 px y se centra en la pestaña. */
+  --skill-block-max: 47.5rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
   gap: var(--space-3);
+  width: 100%;
+  max-width: var(--skill-block-max);
   min-width: 0;
+  margin-inline: auto;
 }
 .operator-skill-card {
   container-type: inline-size;
@@ -3402,6 +3406,8 @@
   background:
     linear-gradient(90deg, rgba(176, 148, 94, 0.4) 0%, rgba(176, 148, 94, 0.18) 46%, rgba(176, 148, 94, 0) 100%),
     linear-gradient(90deg, rgba(68, 91, 101, 0.48), rgba(68, 91, 101, 0));
+  /* Tras el atajo: los degradados cubren también el borde transparente; si no, se repiten bajo él y dejan una línea clara a la derecha. */
+  background-origin: border-box;
   box-shadow: 0 2px 6px rgba(3, 13, 20, 0.16);
   color: var(--color-ivory);
   font-family: var(--font-geist-mono), monospace;
@@ -3434,7 +3440,6 @@
   min-width: 0;
   padding-inline: 0;
 }
-/* Valores y rango en un panel con la superficie de los selectores de la información táctica. */
 /* Valores con su ancho natural y el rango justo a su derecha, a una separación fija (column-gap). */
 .operator-skill-data {
   display: grid;
