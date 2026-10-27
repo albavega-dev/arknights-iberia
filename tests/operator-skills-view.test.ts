@@ -3,8 +3,8 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import type { GameDataRegion } from "../src/game-data/gamedata-revisions";
 import type { DatasetIndex } from "../src/game-data/operator-dataset";
-import { getSkillIconPath, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
-import { buildOperatorSkillsView, loadOperatorSkillsView, type OperatorSkillsView, type SkillsDatasetReaders, type StoredSkillsGlossary, type StoredSkillsProfile } from "../src/game-data/operator-skills-view";
+import { getMasteryIconPath, getSkillIconPath, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
+import { buildOperatorSkillsView, loadOperatorSkillsView, skillDurationKind, type OperatorSkillsView, type SkillsDatasetReaders, type StoredSkillsGlossary, type StoredSkillsProfile } from "../src/game-data/operator-skills-view";
 import type { SkillDescriptionNode } from "../src/game-data/skill-description";
 
 // The real dataset, read the way operator-skills-data.ts does but without the server-only import.
@@ -20,6 +20,10 @@ const readers: SkillsDatasetReaders = {
     const src = getSkillIconPath(icons, region, skillId);
     const entry = src ? icons.icons[icons.skills[region][skillId]] : undefined;
     return src && entry ? { src, width: entry.width, height: entry.height } : null;
+  },
+  resolveMasteryIcon: (label) => {
+    const src = getMasteryIconPath(icons, label);
+    return src ? { src, width: 250, height: 230 } : null;
   },
 };
 const load = async (operatorId: string, region: GameDataRegion): Promise<OperatorSkillsView> => {
@@ -171,4 +175,23 @@ test("unlock is carried from the dataset: a 3-star with one skill and a 6-star w
   stored.skills.forEach((skill, position) => assert.deepEqual(kaltsit.skills[position].unlock, skill.unlock));
   const aigis = await load("char_4218_aigis", "cn");
   for (const skill of aigis.skills) assert.ok([0, 1, 2].includes(skill.unlock.elite));
+});
+
+test("duration kinds follow the source values: seconds, instant, unlimited, ammo and passive without duration", async () => {
+  const kindOf = async (operatorId: string, skillId: string) => (await load(operatorId, "en")).skills.find((skill) => skill.skillId === skillId)!.levels.map((level) => level.durationKind);
+  assert.ok((await kindOf("char_002_amiya", "skchr_amiya_3")).every((kind) => kind === "seconds"));
+  assert.ok((await kindOf("char_010_chen", "skchr_chen_2")).every((kind) => kind === "instant"));
+  assert.ok((await kindOf("char_017_huang", "skchr_huang_2")).every((kind) => kind === "unlimited"));
+  assert.ok((await kindOf("char_1013_chen2", "skchr_chen2_2")).every((kind) => kind === "ammo"));
+  assert.ok((await kindOf("char_136_hsguma", "skchr_hsguma_2")).every((kind) => kind === "none"));
+  assert.equal(skillDurationKind({ duration: 0, durationType: "AMMO", skillType: "MANUAL" }), "ammo");
+  assert.equal(skillDurationKind({ duration: -1, durationType: "NONE", skillType: "PASSIVE" }), "none");
+  assert.equal(skillDurationKind({ duration: 12, durationType: "NONE", skillType: "PASSIVE" }), "seconds");
+  assert.equal(skillDurationKind({ duration: -2, durationType: "NONE", skillType: "AUTO" }), "unknown");
+  assert.equal(skillDurationKind({ duration: 0, durationType: "OTHER", skillType: "AUTO" }), "unknown");
+});
+
+test("mastery levels carry their rank icon and normal levels none", async () => {
+  const [h1] = (await load("char_002_amiya", "en")).skills;
+  assert.deepEqual(h1.levels.map((level) => level.icon?.src ?? null), [null, null, null, null, null, null, null, "/assets/operator-skill-mastery/m-1.png", "/assets/operator-skill-mastery/m-2.png", "/assets/operator-skill-mastery/m-3.png"]);
 });

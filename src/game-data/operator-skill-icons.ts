@@ -15,7 +15,20 @@ export type SkillIconsManifest = Readonly<{
   skills: Readonly<Record<GameDataRegion, Readonly<Record<string, string>>>>;
   /** Skills of the catalog that have no icon, so the interface needs no file check. */
   missing: Readonly<Record<GameDataRegion, readonly string[]>>;
+  /** Mastery rank icons (`ui/rank/m-1.png`..`m-3.png` of the same source), by local file name. */
+  mastery: Readonly<Record<string, SkillIconEntry>>;
 }>;
+
+export const masteryIconsDirectory = "operator-skill-mastery";
+export const masteryIconsSourceDirectory = "ui/rank";
+export const masteryIconFiles = ["m-1.png", "m-2.png", "m-3.png"] as const;
+
+/** `M1` -> `/assets/operator-skill-mastery/m-1.png` when the manifest lists it; null for any other label. */
+export function getMasteryIconPath(manifest: SkillIconsManifest, label: string): string | null {
+  const match = /^M([1-3])$/.exec(label);
+  const file = match ? `m-${match[1]}.png` : null;
+  return file && Object.hasOwn(manifest.mastery, file) ? assetPath(masteryIconsDirectory, file) : null;
+}
 
 /** `skill_icon_skcom_powerstrike[3].png` -> `skcom_powerstrike-3.png`. */
 export function skillIconLocalName(sourceName: string): string {

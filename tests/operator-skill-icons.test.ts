@@ -4,7 +4,7 @@ import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
 import { assetPath } from "../src/game-data/asset-paths";
-import { getSkillIconPath, resolveSkillIconSource, skillIconLocalName, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
+import { getMasteryIconPath, getSkillIconPath, resolveSkillIconSource, skillIconLocalName, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
 import type { OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { buildSkillIconsManifest, pngInfo, resolveCatalogIcons } from "../scripts/sync-operator-skill-icons";
 
@@ -42,13 +42,18 @@ test("the sync lists missing skills per region and builds a manifest with proven
   const skills = [{ region: "en", skillId: "skchr_a_1" }, { region: "cn", skillId: "skchr_c_1" }, { region: "cn", skillId: "skchr_c_1" }] as const;
   const resolved = resolveCatalogIcons(skills, { en: { skchr_a_1: { iconId: null } }, cn: {} }, new Set(["skill_icon_skchr_a_1.png"]));
   assert.deepEqual(resolved.missing, { en: [], cn: ["skchr_c_1"] });
-  const manifest = buildSkillIconsManifest(revision, resolved, new Map([["skill_icon_skchr_a_1.png", pngInfo(png(128, 128))]]));
+  const mastery = new Map(["m-1.png", "m-2.png", "m-3.png"].map((file) => [file, pngInfo(png(250, 230))]));
+  const manifest = buildSkillIconsManifest(revision, resolved, new Map([["skill_icon_skchr_a_1.png", pngInfo(png(128, 128))]]), mastery);
+  assert.equal(manifest.mastery["m-2.png"].url, `https://raw.githubusercontent.com/PuppiizSunniiz/Arknight-Images/${revision}/ui/rank/m-2.png`);
+  assert.equal(getMasteryIconPath(manifest, "M2"), "/assets/operator-skill-mastery/m-2.png");
+  assert.equal(getMasteryIconPath(manifest, "7"), null);
+  assert.throws(() => buildSkillIconsManifest(revision, resolved, new Map([["skill_icon_skchr_a_1.png", pngInfo(png(128, 128))]]), new Map()));
   assert.deepEqual(manifest.skills, { en: { skchr_a_1: "skchr_a_1.png" }, cn: {} });
   assert.equal(manifest.icons["skchr_a_1.png"].url, `https://raw.githubusercontent.com/PuppiizSunniiz/Arknight-Images/${revision}/skills/skill_icon_skchr_a_1.png`);
   assert.equal(getSkillIconPath(manifest, "en", "skchr_a_1"), "/assets/operator-skills/skchr_a_1.png");
   assert.equal(getSkillIconPath(manifest, "cn", "skchr_c_1"), null);
-  assert.throws(() => buildSkillIconsManifest("main", resolved, new Map()));
-  assert.throws(() => buildSkillIconsManifest(revision, resolved, new Map()));
+  assert.throws(() => buildSkillIconsManifest("main", resolved, new Map(), mastery));
+  assert.throws(() => buildSkillIconsManifest(revision, resolved, new Map(), mastery));
   assert.throws(() => pngInfo(Buffer.from("not a png file, long enough......")));
 });
 
@@ -63,6 +68,13 @@ test("the committed manifest matches the files and covers every skill of the dat
     assert.equal(data.byteLength, entry.bytes, file);
     assert.deepEqual([data.readUInt32BE(16), data.readUInt32BE(20)], [entry.width, entry.height], file);
     assert.ok(entry.url.startsWith(`https://raw.githubusercontent.com/${manifest.source.repository}/${revision}/skills/`), file);
+  }
+  assert.deepEqual((await readdir("public/assets/operator-skill-mastery")).sort(), Object.keys(manifest.mastery).sort());
+  for (const [file, entry] of Object.entries(manifest.mastery)) {
+    const data = await readFile(path.join("public/assets/operator-skill-mastery", file));
+    assert.equal(createHash("sha256").update(data).digest("hex").toUpperCase(), entry.sha256, file);
+    assert.equal(data.byteLength, entry.bytes, file);
+    assert.equal(entry.url, `https://raw.githubusercontent.com/${manifest.source.repository}/${revision}/ui/rank/${file}`);
   }
   const listed = new Set(Object.values(manifest.skills).flatMap((map) => Object.values(map)));
   assert.deepEqual([...listed].sort(), files);

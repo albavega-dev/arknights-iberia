@@ -10,6 +10,7 @@ import { getOperatorArchetypeName } from "../../../game-data/operator-archetypes
 import { getOperatorClassIconUrl, getOperatorIllustrationAssets, getOperatorSubclassIconUrl } from "../../../game-data/operator-assets";
 import type { BiographyReadResult } from "../../../server/db/operator-biography-reader";
 import { OperatorTacticalInfo } from "./operator-tactical-info";
+import { OperatorSkillsPanel } from "./operator-skills-panel";
 import { getConfirmedModuleRanges } from "../../../game-data/operator-tactical";
 import { OperatorControlButton } from "../operator-control-button";
 import type { OperatorTacticalEntry } from "../../../game-data/operator-tactical";
@@ -153,7 +154,7 @@ export function OperatorDetailData({ operator, stats = null, skills = null, biog
     </header>
     <div className="operator-profile-tabs"><div className="operator-tab-list" role="tablist" aria-label={`Secciones de ${displayName}`}>{tabs.map((label, index) => <button key={label} id={`${tabId}-tab-${index}`} type="button" role="tab" className="operator-tab" aria-selected={activeTab === index} aria-controls={`${tabId}-panel-${index}`} tabIndex={activeTab === index ? 0 : -1} onClick={() => setActiveTab(index)} onKeyDown={moveTab} onMouseMove={(event) => { const rect = event.currentTarget.getBoundingClientRect(); event.currentTarget.style.setProperty("--pointer-x", `${event.clientX - rect.left}px`); event.currentTarget.style.setProperty("--pointer-y", `${event.clientY - rect.top}px`); }}><span className="operator-tab-label">{label}</span><span className="operator-tab-indicator" aria-hidden="true" /></button>)}<span className="operator-tab-extension" aria-hidden="true" /></div><section id={`${tabId}-panel-${activeTab}`} className="operator-tab-panel" role="tabpanel" aria-labelledby={`${tabId}-tab-${activeTab}`} tabIndex={0}>
       {activeTab === 0 ? <div className="operator-panel-layout"><div><VisualStatsPanel stats={stats} /></div></div> : null}
-      {activeTab === 1 ? <div data-skills-status={skills?.status ?? "unavailable"}><h2>Habilidades</h2>{emptyPanel("Tarjetas de habilidades", "Las habilidades y sus niveles todavía no están importados.")}</div> : null}
+      {activeTab === 1 ? <div data-skills-status={skills?.status ?? "unavailable"}><h2>Habilidades</h2><OperatorSkillsPanel view={skills} tactical={tactical} /></div> : null}
       {activeTab === 2 ? <div><h2>Talentos</h2>{emptyPanel("Tarjetas de talentos", "Los talentos todavía no están importados.")}</div> : null}
       {activeTab === 3 ? <div><h2>Módulos</h2><div className="operator-module-placeholder"><span>Selector de módulo y nivel</span><span>Comparación de niveles y efectos pendiente de importación</span></div></div> : null}
       {activeTab === 4 ? <div><h2>Expediente</h2><BiographyPanel result={biography} cnOnly={operator.cnOnly} /></div> : null}

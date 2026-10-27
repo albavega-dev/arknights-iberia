@@ -301,15 +301,18 @@ describe("OperatorDetailData skills tab", () => {
   };
   const source = { repository: "test", revision: "test", path: "skill_table.json", sha256: "test" };
 
-  it("receives the skills view without showing anything new yet", () => {
+  it("shows the skills panel for the view it receives", () => {
     const withoutView = renderTab(null);
     expect(withoutView).toHaveAttribute("data-skills-status", "unavailable");
-    const text = withoutView.textContent;
+    expect(withoutView).toHaveTextContent("Habilidades no disponibles");
     cleanup();
-    expect(renderTab({ status: "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills: [] })).toHaveAttribute("data-skills-status", "empty");
+    const empty = renderTab({ status: "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills: [] });
+    expect(empty).toHaveAttribute("data-skills-status", "empty");
+    expect(empty).toHaveTextContent("Este operador no tiene habilidades.");
     cleanup();
-    const available = renderTab({ status: "available", operatorId: operator.id, region: "en", source, ranges: {}, skills: [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [], defaultLevelIndex: -1, terms: {} }] });
+    const level = { index: 0, label: "1" as const, group: "level" as const, name: "Test Skill", icon: null, spCost: 30, initialSp: 10, duration: 20, durationKind: "seconds" as const, rangeId: null, description: [{ type: "text" as const, text: "Efecto" }] };
+    const available = renderTab({ status: "available", operatorId: operator.id, region: "en", source, ranges: {}, skills: [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [level], defaultLevelIndex: 0, terms: {} }] });
     expect(available).toHaveAttribute("data-skills-status", "available");
-    expect(available.textContent).toBe(text);
+    expect(screen.getByRole("heading", { name: "Test Skill" })).toBeInTheDocument();
   });
 });

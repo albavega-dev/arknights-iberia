@@ -5,6 +5,12 @@ import { parseSkillDescription, type SkillDescriptionNode } from "./skill-descri
 
 // What the Skills tab receives: built on the server from one operator's skills file, serializable, with descriptions already parsed.
 export type SkillLevelLabel = "1" | "2" | "3" | "4" | "5" | "6" | "7" | "M1" | "M2" | "M3";
+/**
+ * How to read `duration`, checked against the catalog: positive values are seconds; `durationType: "AMMO"` skills end with their
+ * ammo (duration 0 or -1); otherwise 0 is an instant effect and -1 has no time limit ("Unlimited duration" in the descriptions).
+ * Passive skills with 0 or -1 have no active duration. Any other value is kept as unknown instead of guessed.
+ */
+export type SkillDurationKind = "seconds" | "instant" | "unlimited" | "ammo" | "none" | "unknown";
 export type SkillLevelView = {
   /** Position in the stored levels of the skill. */
   index: number;
@@ -13,9 +19,12 @@ export type SkillLevelView = {
   name: string;
   spCost: number | null;
   initialSp: number | null;
-  /** Source value; a value of 0 or less is presented according to the skill's duration type. */
+  /** Source value; a value of 0 or less is presented according to `durationKind`. */
   duration: number | null;
+  durationKind: SkillDurationKind;
   rangeId: string | null;
+  /** Mastery rank icon for M1-M3; null for normal levels or when the icon is not inventoried. */
+  icon: SkillIconView | null;
   description: SkillDescriptionNode[];
 };
 export type SkillTermView = { name: string; description: SkillDescriptionNode[] };
@@ -59,6 +68,14 @@ function activationOf(level: SkillLevelData): OperatorSkillView["activation"] { 
 // Passive skills store a number (8) instead of a recovery type: they have no SP.
 function recoveryOf(level: SkillLevelData): OperatorSkillView["spRecovery"] { return typeof level.spType === "number" ? "none" : recoveries[level.spType] ?? "unknown"; }
 
+export function skillDurationKind(level: Pick<SkillLevelData, "duration" | "durationType" | "skillType">): SkillDurationKind {
+  if (level.duration > 0) return "seconds";
+  if (level.durationType === "AMMO") return "ammo";
+  if (level.durationType !== "NONE" || (level.duration !== 0 && level.duration !== -1)) return "unknown";
+  if (level.skillType === "PASSIVE") return "none";
+  return level.duration === 0 ? "instant" : "unlimited";
+}
+
 function termsOf(descriptions: readonly string[], glossary: StoredSkillsGlossary): Record<string, SkillTermView> {
   const result: Record<string, SkillTermView> = {};
   const pending = descriptions.flatMap(termIdsOf);
@@ -72,7 +89,7 @@ function termsOf(descriptions: readonly string[], glossary: StoredSkillsGlossary
   return Object.fromEntries(Object.entries(result).sort(([a], [b]) => a.localeCompare(b, "en")));
 }
 
-export function buildOperatorSkillsView(profile: StoredSkillsProfile, region: GameDataRegion, source: DatasetSource, glossary: StoredSkillsGlossary, resolveIcon: (skillId: string) => SkillIconView | null): OperatorSkillsView {
+export function buildOperatorSkillsView(profile: StoredSkillsProfile, region: GameDataRegion, source: DatasetSource, glossary: StoredSkillsGlossary, resolveIcon: (skillId: string) => SkillIconView | null, resolveMasteryIcon: (label: SkillLevelLabel) => SkillIconView | null = () => null): OperatorSkillsView {
   const ranges: Record<string, OperatorSkillRangeView> = {};
   const skills = profile.skills.map((skill): OperatorSkillView => {
     if (skill.slot < 1 || skill.slot > 3) throw new Error(`${profile.operatorId}: unexpected skill slot ${skill.slot}`);
@@ -81,8 +98,8 @@ export function buildOperatorSkillsView(profile: StoredSkillsProfile, region: Ga
       const rangeId = level.rangeId && profile.ranges[level.rangeId] ? level.rangeId : null;
       if (rangeId) ranges[rangeId] = { direction: profile.ranges[rangeId].direction, grids: profile.ranges[rangeId].grids.map((cell) => ({ row: cell.row, col: cell.col })) };
       return {
-        index, label: level.level as SkillLevelLabel, group: level.level.startsWith("M") ? "mastery" : "level", name: skill.name,
-        spCost: level.spCost, initialSp: level.initSp, duration: level.duration, rangeId,
+        index, label: level.level as SkillLevelLabel, group: level.level.startsWith("M") ? "mastery" : "level", name: skill.name, icon: level.level.startsWith("M") ? resolveMasteryIcon(level.level as SkillLevelLabel) : null,
+        spCost: level.spCost, initialSp: level.initSp, duration: level.duration, durationKind: skillDurationKind(level), rangeId,
         description: parseSkillDescription(expanded[index].description, expanded[index].blackboard),
       };
     });
@@ -100,6 +117,7 @@ export type SkillsDatasetReaders = {
   readProfile: (operatorId: string) => Promise<StoredSkillsProfile>;
   readGlossary: (region: GameDataRegion) => Promise<StoredSkillsGlossary>;
   resolveIcon: (region: GameDataRegion, skillId: string) => SkillIconView | null;
+  resolveMasteryIcon: (label: SkillLevelLabel) => SkillIconView | null;
 };
 
 /** Same checks as `loadStatsProfile`: the id must be well formed and indexed for the requested region, and the file must agree. */
@@ -110,5 +128,5 @@ export async function loadOperatorSkillsView(readers: SkillsDatasetReaders, oper
   const profile = await readers.readProfile(operatorId);
   if (profile.operatorId !== operatorId || profile.region !== region) return null;
   const glossary = await readers.readGlossary(region);
-  return buildOperatorSkillsView(profile, region, readers.index.sources[region], glossary, (skillId) => readers.resolveIcon(region, skillId));
+  return buildOperatorSkillsView(profile, region, readers.index.sources[region], glossary, (skillId) => readers.resolveIcon(region, skillId), readers.resolveMasteryIcon);
 }
