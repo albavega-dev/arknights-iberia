@@ -392,5 +392,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "recycle_spd&cost[000]",
+          "name": "拾荒者",
+          "room": "RECYCLE",
+          "icon": "bskill_recycle_spd&cost1",
+          "color": "#6ccbcb",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻回收站时，材料转化效率<@cc.vup>+20%</>"
+        },
+        {
+          "buffId": "recycle_spd&cost[010]",
+          "name": "捡海人",
+          "room": "RECYCLE",
+          "icon": "bskill_recycle_spd&cost2",
+          "color": "#6ccbcb",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻回收站时，材料转化效率<@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_device[080]",
+          "name": "指尖的光",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_Refractor",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻加工站加工<@cc.kw>手性屈光体</>或<@cc.kw>重相位对映体</>时，副产物的产出概率提升<@cc.vup>90%</>"
+        }
+      ]
+    }
+  ]
 }

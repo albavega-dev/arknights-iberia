@@ -295,5 +295,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all&oneself[000]",
+          "name": "Laziness",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all&one1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, self Morale recovered per hour <@cc.vdown>-0.1</>, but restores <@cc.vup>+0.2</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ]
 }

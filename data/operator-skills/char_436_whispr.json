@@ -328,5 +328,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_bd_n1_n1[100]",
+          "name": "Itinerant",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd_bd_n1_n1",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>. Additionally, for every Recruit slot (Default slots do not count), <$cc.bd_a1_a1><@cc.rem>Memory Fragments</></> <@cc.vup>+10</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "hire_spd_bd_n1[000]",
+          "name": "Memory Seeker",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd_memento",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, every <@cc.vup>1</> <$cc.bd_a1_a1><@cc.rem>Memory Fragment</></> is converted into <@cc.vup>1</> <$cc.bd_a1><@cc.rem>Perception Information</></>. When Morale is fully consumed, remove all <$cc.bd_a1_a1><@cc.rem>Memory Fragments</></> and accumulated <$cc.bd_a1><@cc.rem>Perception Information</></>"
+        }
+      ]
+    }
+  ]
 }

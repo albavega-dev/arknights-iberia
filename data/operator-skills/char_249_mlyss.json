@@ -518,5 +518,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all&oneself[022]",
+          "name": "Natural Beauty",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all&one3",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, self Morale recovered per hour <@cc.vup>+0.55</>, and restores <@cc.vup>+0.1</> Morale per hour to all other Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_rhine[000]",
+          "name": "Ecological Section Director",
+          "room": "POWER",
+          "icon": "bskill_power_rec_rhine",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, drone charging speed <@cc.vup>+10%</>; for every other <$cc.g.rh><@cc.kw>Rhine Lab</></> Operator in base (excluding Assistants and Activity Room users, caps at <@cc.kw>5</>), additional charging speed <@cc.vup>+3%</>"
+        }
+      ]
+    }
+  ]
 }

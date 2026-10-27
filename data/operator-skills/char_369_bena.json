@@ -317,5 +317,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&limit&cost[020]",
+          "name": "'Reliable' Helper",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&limit&cost4",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vdown>-20%</>, capacity limit <@cc.vup>+17</>, and Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_wt&cost[000]",
+          "name": "Tailoring α",
+          "room": "TRADING",
+          "icon": "bskill_tra_wt&cost1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, the chance of getting <@cc.kw>higher-yield Precious Metal orders</> is <@cc.kw>increased slightly</> (rate is influenced by length of work time), and Morale consumed per hour is reduced by <@cc.vup>-0.25</>"
+        }
+      ]
+    }
+  ]
 }

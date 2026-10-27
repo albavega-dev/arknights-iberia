@@ -2,5 +2,43 @@
   "operatorId": "char_4136_phonor",
   "region": "en",
   "skills": [],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[004]",
+          "name": "Elegy Charge α",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_spd_P[001]",
+          "name": "Incantation Resonance",
+          "room": "POWER",
+          "icon": "bskill_pow_spd_P1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to a Power Plant, if <@cc.kw>Logos</> is assigned to be the Trainer in the Training Room, increases the drone recovery rate by <@cc.vup>+5%</>."
+        }
+      ]
+    }
+  ]
 }

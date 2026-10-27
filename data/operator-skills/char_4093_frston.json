@@ -2,5 +2,43 @@
   "operatorId": "char_4093_frston",
   "region": "en",
   "skills": [],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[000]",
+          "name": "Backup Energy",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_spd_P[000]",
+          "name": "'Pleasant Conversation'",
+          "room": "POWER",
+          "icon": "bskill_pow_spd_P",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to a Power Plant, if <@cc.kw>Kal'tsit</> is assigned to the Control Center, increases the drone recovery rate by <@cc.vup>+5%</>."
+        }
+      ]
+    }
+  ]
 }

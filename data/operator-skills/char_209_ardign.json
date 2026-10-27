@@ -102,5 +102,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&limit[000]",
+          "name": "Warehouse Organization α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&limit1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+6</> and productivity <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single&oneself[000]",
+          "name": "Liveliness",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single&one01",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.2</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour <@cc.vup>+0.4</>"
+        }
+      ]
+    }
+  ]
 }

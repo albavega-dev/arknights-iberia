@@ -485,5 +485,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[011]",
+          "name": "Rhine Tech β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+25%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd&cost_bd[100]",
+          "name": "Costly Construction",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_gold&rhine",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, for each <$cc.g.rh><@cc.kw>Rhine Lab</></> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.kw>5</>), <@cc.kw>Precious Metal</> productivity <@cc.vup>+3%</>"
+        }
+      ]
+    }
+  ]
 }

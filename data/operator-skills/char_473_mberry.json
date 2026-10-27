@@ -315,5 +315,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_cost[100]",
+          "name": "Rescue Team - Abacus Calculations",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost1",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+10%</>, Morale consumed per hour <@cc.vup>-0.25</>"
+        },
+        {
+          "buffId": "hire_spd_cost[110]",
+          "name": "Rescue Team - Resource Inventory",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost2",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>, Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "hire_spd_bd_n1_n1[200]",
+          "name": "Rescue Team - Post-Catastrophe Census",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd_bd_n2",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, for every Recruit slot (Default slots do not count), <$cc.bd_b1><@cc.rem>Worldly Plight</></> <@cc.vup>+10</>"
+        }
+      ]
+    }
+  ]
 }

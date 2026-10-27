@@ -295,5 +295,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_constrLv[000]",
+          "name": "Graphic Design",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_constrLv",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, gain <@cc.vup>+1</> <@cc.kw><$cc.bd_malist>Engineering Robot</></> per level per building (excluding Activity Rooms), max <@cc.vup>64</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_bd[100]",
+          "name": "Machine Assistance α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd3",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, for every <@cc.vup>16</><@cc.kw><$cc.bd_malist> Engineering Robot</></> present, productivity <@cc.vup>+5%</>"
+        },
+        {
+          "buffId": "manu_prod_spd_bd[110]",
+          "name": "Machine Assistance β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd4",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, for every <@cc.vup>8</><@cc.kw><$cc.bd_malist> Engineering Robot</></> present, productivity <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ]
 }

@@ -361,5 +361,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_bd_n1_n3[000]",
+          "name": "Adagio",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all&bd_n1_n3",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.65</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (only the strongest effect of this type applies), and each Dormitory level gives <@cc.vup>1</> <$cc.bd_a1_a3><@cc.rem>Measure</></>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_bd_n1[100]",
+          "name": "Walking the Keyboard",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all&bd_n1_2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, convert every <@cc.vup>1</> <$cc.bd_a1_a3><@cc.rem>Measure</></> to <@cc.vup>1</> <$cc.bd_a1><@cc.rem>Perception Information</></>"
+        }
+      ]
+    }
+  ]
 }

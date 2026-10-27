@@ -317,5 +317,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession2[020]",
+          "name": "Guard Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_guard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession2[220]",
+          "name": "Austerity",
+          "room": "TRAINING",
+          "icon": "bskill_train2_guard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>; if training this skill to Specialization Level <@cc.vup>2</>, training speed will be further increased by <@cc.vup>+45%</>"
+        }
+      ]
+    }
+  ]
 }

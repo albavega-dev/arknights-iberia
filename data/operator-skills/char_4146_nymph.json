@@ -593,5 +593,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all[017]",
+          "name": "Meditative Rites·α",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.15</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        },
+        {
+          "buffId": "dorm_rec_all[027]",
+          "name": "Meditative Rites·β",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all3",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.2</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_dorm_rec[002]",
+          "name": "Wandering Heart",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_leader",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, all Operators in Dormitories recover <@cc.vup>+0.05</> Morale per hour (strongest effect of the same type applies)"
+        }
+      ]
+    }
+  ]
 }

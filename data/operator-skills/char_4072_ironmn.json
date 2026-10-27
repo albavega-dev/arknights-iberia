@@ -452,5 +452,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_formula_cost&dorm[000]",
+          "name": "Heart to Heart",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_cost&dorm",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, for every <@cc.kw>10</> Operators in Dormitories with Morale below <@cc.vup>12</>, recipes with Morale cost of <@cc.kw>4</> have <@cc.vup>-1</> Morale cost"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_dorm[002]",
+          "name": "Mind to Mind",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_evolve_dorm2",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the byproduct production rate by <@cc.vup>5%</> for every <@cc.kw>1</> Operator with <@cc.vup>12</> or less Morale assigned to the Dorms"
+        }
+      ]
+    }
+  ]
 }

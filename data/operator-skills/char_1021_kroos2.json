@@ -293,5 +293,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_mp_cost&faction[900]",
+          "name": "Alternate Operator",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_sp",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, each <$cc.g.sp><@cc.kw>Alternate Operator</></> increases the Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd&profession3[140]",
+          "name": "Combat Techniques: Marksman",
+          "room": "TRAINING",
+          "icon": "bskill_train_fastshot",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Marksman</>, training speed will be further increased by <@cc.vup>+45%</>"
+        }
+      ]
+    }
+  ]
 }

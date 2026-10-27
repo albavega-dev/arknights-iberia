@@ -518,5 +518,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_bd_n1[000]",
+          "name": "Extrasensory",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd_n1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, for every <@cc.kw>1</> operator in the Dormitory, <$cc.bd_a1><@cc.rem>Perception Information</> </><@cc.vup>+1</>. Additionally, every <@cc.vup>1</> points of <$cc.bd_a1><@cc.rem>Perception Information</></> is converted into <@cc.vup>1</> points of <$cc.bd_A><@cc.rem>Chain of Thought</></>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_bd[000]",
+          "name": "Psychokinesis",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to Factory, for every <@cc.vup>2</> points of <$cc.bd_A><@cc.rem>Chain of Thought</></>, productivity <@cc.vup>+1%</>"
+        },
+        {
+          "buffId": "manu_prod_spd_bd[010]",
+          "name": "Manifestation of Consciousness",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to Factory, for every <@cc.vup>1</> points of <$cc.bd_A><@cc.rem>Chain of Thought</></>, productivity <@cc.vup>+1%</>"
+        }
+      ]
+    }
+  ]
 }

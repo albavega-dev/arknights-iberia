@@ -360,5 +360,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd[020]",
+          "name": "Clue Search β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>20%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_limit&cost[000]",
+          "name": "Negotiation",
+          "room": "TRADING",
+          "icon": "bskill_tra_limit&cost",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order limit <@cc.vup>+5</> and Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    }
+  ]
 }

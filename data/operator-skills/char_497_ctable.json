@@ -328,5 +328,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd_notOwned[000]",
+          "name": "Overlook Nothing α",
+          "room": "MEETING",
+          "icon": "bskill_meet_spdNotOwned1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining clues that are not on the Clue Board."
+        },
+        {
+          "buffId": "meet_spd_notOwned[010]",
+          "name": "Overlook Nothing β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spdNotOwned2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</>, and increases the likelihood of obtaining clues that are not on the Clue Board."
+        }
+      ]
+    }
+  ]
 }

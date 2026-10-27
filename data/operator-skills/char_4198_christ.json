@@ -350,5 +350,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_limit&cost[012]",
+          "name": "Perfect Nap Spot",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_limit&cost2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+10</> and Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_double[100]",
+          "name": "Fancy Feast's Reward",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_double2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula productivity <@cc.vup>+30%</> when <@cc.kw>Tragodia</> is assigned to the same Factory"
+        }
+      ]
+    }
+  ]
 }

@@ -1109,5 +1109,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd_notOwned[004]",
+          "name": "资深信使",
+          "room": "MEETING",
+          "icon": "bskill_meet_spdNotOwned1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻会客室时，更容易获得线索板上尚未拥有的线索"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd&cost_condChar[002]",
+          "name": "我自己的愿望",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&cost_condChar",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻会客室时，如果会客室内只有自身处于工作状态时，线索搜集速度提升<@cc.vup>50%</>，心情每小时消耗<@cc.vdown>+2</>"
+        }
+      ]
+    }
+  ]
 }

@@ -306,5 +306,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_reduce[000]",
+          "name": "Blurry Vision",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_reduce",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, Productivity <@cc.vup>+30%</>. For every <@cc.kw>4</> points of <$cc.bd.costdrop><@cc.kw>Morale difference</></> on self, Productivity <@cc.vdown>-5%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_addition&cost[000]",
+          "name": "Blizzard Outside",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_add&cost",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, if own <$cc.bd.costdrop><@cc.kw>Morale difference</></> is greater than <@cc.kw>12</>, Productivity <@cc.vup>+10%</>, storage capacity <@cc.vup>+6</>"
+        }
+      ]
+    }
+  ]
 }

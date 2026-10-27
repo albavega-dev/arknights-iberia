@@ -273,5 +273,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_formula_probability[000]",
+          "name": "Tech Theory",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_skill1",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Skill Summaries</>, the production rate of byproduct increases by <@cc.vup>70%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ]
 }

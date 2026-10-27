@@ -360,5 +360,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_ext[000]",
+          "name": "Envoy To Land α",
+          "room": "TRADING",
+          "icon": "bskill_tra_ord_spd_ext0",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+25%</>; When <@cc.kw>Ulpianus</> is in the Base (excluding Assistants and Activity Room users), increase order acquisition efficiency by an additional <@cc.vup>+5%</>"
+        },
+        {
+          "buffId": "trade_ord_spd_ext[001]",
+          "name": "Envoy To Land·β",
+          "room": "TRADING",
+          "icon": "bskill_tra_ord_spd_ext1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>; When <@cc.kw>Ulpianus</> is in the Base (excluding Assistants and Activity Room users), increase order acquisition efficiency by an additional <@cc.vup>+10%</>"
+        }
+      ]
+    }
+  ]
 }

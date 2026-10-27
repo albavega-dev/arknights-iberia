@@ -284,5 +284,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_limit&cost[0000]",
+          "name": "Junkman",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_limit&cost1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+8</> and Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_variable[000]",
+          "name": "Recycling",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_variable11",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, Operators assigned to the Factory increase all capacity limits, add <@cc.vup>2%</> productivity."
+        }
+      ]
+    }
+  ]
 }

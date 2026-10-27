@@ -1370,5 +1370,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_tra_limit&spd3[000]",
+          "name": "Land of Business",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_t_limit&spd3",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, all Trading Posts with <@cc.vup>3</> <$cc.g.karlan><@cc.kw>Kjerag</></> Operators assigned gain order acquisition efficiency <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd&profession2[111]",
+          "name": "Vanguard Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_spd&profession2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Vanguard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession2[112]",
+          "name": "Trailblazers' Consensus",
+          "room": "TRAINING",
+          "icon": "bskill_train_spd&profession2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Vanguard</> Operators' Specialization training speed <@cc.vup>+30%</>; if training this skill to Specialization Level <@cc.vup>3</>, training speed will be further increased by <@cc.vup>+50%</>"
+        }
+      ]
+    }
+  ]
 }

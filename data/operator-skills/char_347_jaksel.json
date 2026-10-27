@@ -295,5 +295,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single&oneself[000]",
+          "name": "Liveliness",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single&one01",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.2</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour <@cc.vup>+0.4</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd[0020]",
+          "name": "Clue Search β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>20%</>"
+        }
+      ]
+    }
+  ]
 }

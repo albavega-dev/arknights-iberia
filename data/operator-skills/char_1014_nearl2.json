@@ -575,5 +575,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_tag[000]",
+          "name": "Knight Training",
+          "room": "TRAINING",
+          "icon": "bskill_train_knight_bd1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, for each <$cc.tag.knight><@cc.kw>Knight</></> Operator in the Base (excluding Assistants and Activity Room users), Operators' Specialization training speed <@cc.vup>+5%</> (caps at <@cc.kw>5</> Operators)"
+        },
+        {
+          "buffId": "train_spd_tag[010]",
+          "name": "Noble Creed",
+          "room": "TRAINING",
+          "icon": "bskill_train_knight_bd2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, for each <$cc.tag.knight><@cc.kw>Knight</></> Operator in the Base (excluding Assistants and Activity Room users), Operators' Specialization training speed <@cc.vup>+5%</> (caps at <@cc.kw>8</> Operators)"
+        }
+      ]
+    }
+  ]
 }

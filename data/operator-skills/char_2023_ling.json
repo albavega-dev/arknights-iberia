@@ -518,5 +518,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_facCostReset[000]",
+          "name": "Keep the Wine Flowing",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_clear_sui",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, <@cc.kw>remove</> any Morale reduction effects from <$cc.g.sui><@cc.kw>Sui</></> Operators assigned to the Control Center that affect <@cc.kw>themselves</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_costToBD[000]",
+          "name": "'Vast Mountains and Rivers'",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_cost_bd1&bd2",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center and own Morale is above <@cc.kw>12</>,<$cc.bd_b1><@cc.rem>Worldly Plight</></> <@cc.vup>+15</>; When own Morale is below<@cc.kw>12</>, <$cc.bd_a1><@cc.rem>Perception Information</></> <@cc.vup>+10</> instead"
+        }
+      ]
+    }
+  ]
 }

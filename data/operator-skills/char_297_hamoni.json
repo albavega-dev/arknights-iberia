@@ -351,5 +351,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_one2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, self Morale recovered <@cc.vup>+0.7</> per hour"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd&cost_condChar[000]",
+          "name": "Double Agent",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&cost_condChar",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, if no other Operators are working in the Reception Room, increases Clue search speed by <@cc.vup>50%</>, and Morale consumed per hour <@cc.vdown>+2</>"
+        }
+      ]
+    }
+  ]
 }

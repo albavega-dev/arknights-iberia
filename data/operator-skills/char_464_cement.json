@@ -306,5 +306,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[000]",
+          "name": "Standardization α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+15%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_limit&cost[021]",
+          "name": "Tunnel Work",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_limit&cost5",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+10</> and Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    }
+  ]
 }

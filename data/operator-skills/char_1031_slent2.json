@@ -452,5 +452,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd[032]",
+          "name": "Phone's Always Ringing",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd4",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+40%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[021]",
+          "name": "Rhine Tech γ",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd3",
+          "color": "#ffd801",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ]
 }

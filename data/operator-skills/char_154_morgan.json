@@ -317,5 +317,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_toone[000]",
+          "name": "No.1 Practice Partner",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_toone1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, <@cc.kw>Siege</> increases <$cc.g.glasgow><@cc.kw>Glasgow Gang</></> Operator recovery in the building by an additional <@cc.vup>+0.3</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_par[000]",
+          "name": "Gang Compass",
+          "room": "TRADING",
+          "icon": "bskill_tra_par1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, for every <$cc.g.glasgow><@cc.kw>Glasgow Gang</></> Operator in the same Trading Post, order acquisition efficiency <@cc.vup>+20%</>; when in the same Trading Post as <@cc.kw>Siege</>, additional order acquisition efficiency <@cc.vup>+35%</>"
+        }
+      ]
+    }
+  ]
 }

@@ -369,5 +369,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all&lv[000]",
+          "name": "Bedtime Stories",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_rec_all&lvl1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.15</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        },
+        {
+          "buffId": "dorm_rec_all&lv[100]",
+          "name": "Bucket List",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_rec_all&lv2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.15</> Morale per hour to all Operators assigned to that Dormitory, and every level of that Dormitory increases restoration by another <@cc.vup>+0.02</> (Only the strongest stacked effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd&exchange[001]",
+          "name": "Special Methods Consultant",
+          "room": "MEETING",
+          "icon": "bskill_meet_exchange2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, if in Clue Exchange, increases Clue search speed by <@cc.vup>30%</>"
+        }
+      ]
+    }
+  ]
 }

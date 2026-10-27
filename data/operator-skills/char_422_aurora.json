@@ -339,5 +339,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession2[030]",
+          "name": "Defender Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_defender1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Defender</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession2[130]",
+          "name": "Polar Survival",
+          "room": "TRAINING",
+          "icon": "bskill_train1_defender1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Defender</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+45%</> if training the skill to Specialization Level <@cc.vup>1</>"
+        }
+      ]
+    }
+  ]
 }

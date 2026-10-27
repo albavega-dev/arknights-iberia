@@ -339,5 +339,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_cost[220]",
+          "name": "Restless Rover α",
+          "room": "HIRE",
+          "icon": "bskill_hire_skgoat3",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+30%</> and Morale consumed per hour <@cc.vdown>+1</>"
+        },
+        {
+          "buffId": "hire_spd_cost[230]",
+          "name": "Restless Rover β",
+          "room": "HIRE",
+          "icon": "bskill_hire_skgoat4",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+45%</> and Morale consumed per hour <@cc.vdown>+1</>"
+        }
+      ]
+    }
+  ]
 }

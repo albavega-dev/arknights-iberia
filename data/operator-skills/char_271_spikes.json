@@ -340,5 +340,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_formula_dorm[000]",
+          "name": "Waste Not, Want Not",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_evolve_dorm1",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the byproduct production rate by <@cc.vup>5%</> for every <@cc.kw>1</> Operator with <@cc.vup>4</> or less Morale assigned to the Dorms"
+        },
+        {
+          "buffId": "workshop_formula_dorm[001]",
+          "name": "Everyone Does Their Part",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_evolve_dorm3",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, increases the byproduct production rate by <@cc.vup>5%</> for every <@cc.kw>1</> Operator with <@cc.vup>20</> or less Morale assigned to the Dorms"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_oneself2[000]",
+          "name": "Searching for Solitude",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_one",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, increases own Morale restored per hour by <@cc.vup>+0.7</>; If there are other Operators in that Dormitory, further increases own Morale restored per hour by <@cc.vup>+0.05</> for each additional Operator."
+        }
+      ]
+    }
+  ]
 }

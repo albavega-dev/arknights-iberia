@@ -591,5 +591,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_bd_num[000]",
+          "name": "Soundless Resonance",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_bdnum",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, for every <@cc.vup>1</> Operators in that Dormitory, <$cc.bd_B><@cc.rem>Soundless Resonance</></> <@cc.vup>+1</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all&bd[000]",
+          "name": "Wordless Anthem",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_rec_allbd",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.2</> Morale per hour to all Operators assigned to that Dormitory, and for every <@cc.vup>5</> <$cc.bd_B><@cc.rem>Soundless Resonance</></>, restores an additional <@cc.vup>+0.01</> to all Operators (Only the strongest effect of this type applies)"
+        }
+      ]
+    }
+  ]
 }

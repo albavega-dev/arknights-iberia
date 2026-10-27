@@ -306,5 +306,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_formula_probability[129]",
+          "name": "Scholar",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_evolve3",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>elite material</>, the production rate of byproduct increases by <@cc.vup>80%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[212]",
+          "name": "Originium Study",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_originium2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Originium</> formula related productivity <@cc.vup>+35%</>"
+        }
+      ]
+    }
+  ]
 }

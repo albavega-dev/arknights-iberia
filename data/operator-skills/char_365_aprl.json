@@ -273,5 +273,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit[000]",
+          "name": "Order Management α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+10%</> and the order limit <@cc.vup>+2</>"
+        },
+        {
+          "buffId": "trade_ord_spd&limit[001]",
+          "name": "Order Management β",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+10%</> and the order limit <@cc.vup>+4</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all[000]",
+          "name": "Inspiration",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.1</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        }
+      ]
+    }
+  ]
 }

@@ -452,5 +452,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_clue_cost[000]",
+          "name": "Neuroticism",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_wt",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, <@cc.kw>increases</> the likelihood of obtaining Clues <@cc.kw>corresponding to the factions of Operators assigned to the Reception Room</>, but also increases the Morale consumption of Operators assigned to the Control Center by <@cc.vdown>+1.5</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[170]",
+          "name": "Surgical Precision",
+          "room": "TRAINING",
+          "icon": "bskill_train_medic3",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Medic</> Operators' Specialization training speed <@cc.vup>+60%</>"
+        }
+      ]
+    }
+  ]
 }

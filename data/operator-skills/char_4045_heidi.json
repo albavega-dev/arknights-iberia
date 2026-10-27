@@ -328,5 +328,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd[000]",
+          "name": "Order Distribution α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+20%</>"
+        },
+        {
+          "buffId": "trade_ord_spd[021]",
+          "name": "High Society",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd3",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+35%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_clue_faction[070]",
+          "name": "'One Thousand Letters'",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_victoria",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, the likelihood of the Reception Room obtaining <@cc.kw>Glasgow</> clues is increased (Rate is influenced by length of work time)"
+        }
+      ]
+    }
+  ]
 }

@@ -450,5 +450,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_team[060]",
+          "name": "Correspondent",
+          "room": "MEETING",
+          "icon": "bskill_meet_rhodes1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining <@cc.kw>Rhodes Island</> clues (Rate is influenced by length of work time)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_flag[060]",
+          "name": "Pioneer",
+          "room": "MEETING",
+          "icon": "bskill_meet_flag_rhodes",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, every time that a non-<@cc.kw>Rhodes Island</> clue is collected, increases the likelihood of obtaining <@cc.kw>Rhodes Island</> clues (Rate is influenced by length of work time)"
+        }
+      ]
+    }
+  ]
 }

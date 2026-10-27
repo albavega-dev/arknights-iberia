@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { buildDatasetIndex, checkDatasetLimits, datasetFileName, datasetLimits, isOperatorId, serializeDatasetJson, sharedFileName, skillsDatasetLimits, validateDatasetIndex, type DatasetFile } from "../src/game-data/operator-dataset";
+import { buildDatasetIndex, checkDatasetLimits, datasetContractVersion, datasetFileName, datasetLimits, isOperatorId, serializeDatasetJson, sharedFileName, skillsDatasetContractVersion, skillsDatasetLimits, validateDatasetIndex, type DatasetFile } from "../src/game-data/operator-dataset";
 
 const source = { repository: "example/repo", revision: "a".repeat(40), path: "en/gamedata/excel/character_table.json", sha256: "B".repeat(64) };
 const file = (operatorId: string, region: "en" | "cn", bytes = 100): DatasetFile => ({ operatorId, region, text: "{}\n", bytes, sha256: "C".repeat(64) });
@@ -74,4 +74,17 @@ test("each dataset declares its own limits in the index and is checked against t
   assert.deepEqual(validateDatasetIndex({ ...skills, limits: { fileBytes: 0, totalBytes: 5 } }), ["Invalid limits"]);
   assert.deepEqual(validateDatasetIndex({ ...skills, limits: { fileBytes: 10, totalBytes: 5 } }), ["Invalid limits"]);
   assert.deepEqual(validateDatasetIndex({ ...skills, limits: undefined }), ["Invalid limits"]);
+});
+
+test("each dataset declares its own contract version and is validated against the expected one", () => {
+  assert.equal(datasetContractVersion, "2");
+  assert.equal(skillsDatasetContractVersion, "3");
+  const stats = buildDatasetIndex("operator-stats", { en: source, cn: source }, [file("char_a", "en", 10)]);
+  const skills = buildDatasetIndex("operator-skills", { en: source, cn: source }, [file("char_a", "en", 10)], { contractVersion: skillsDatasetContractVersion });
+  assert.equal(stats.contractVersion, "2");
+  assert.equal(skills.contractVersion, "3");
+  assert.deepEqual(validateDatasetIndex(stats), []);
+  assert.deepEqual(validateDatasetIndex(skills, skillsDatasetContractVersion), []);
+  assert.deepEqual(validateDatasetIndex(skills), ["Unsupported contract: 3"]);
+  assert.deepEqual(validateDatasetIndex(stats, skillsDatasetContractVersion), ["Unsupported contract: 2"]);
 });

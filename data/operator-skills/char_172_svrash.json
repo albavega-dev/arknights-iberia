@@ -552,5 +552,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit[020]",
+          "name": "Karlan Trade α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit3",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+15%</> and the order limit <@cc.vup>+2</>"
+        },
+        {
+          "buffId": "trade_ord_spd&limit[022]",
+          "name": "Lord of Karlan",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit5",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+20%</> and the order limit <@cc.vup>+4</>"
+        }
+      ]
+    }
+  ]
 }

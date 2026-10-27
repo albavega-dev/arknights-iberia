@@ -295,5 +295,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd[020]",
+          "name": "Clue Search β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>20%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[010]",
+          "name": "Combat Guidance Video",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_exp2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula related productivity <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ]
 }

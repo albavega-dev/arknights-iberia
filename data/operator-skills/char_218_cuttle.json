@@ -295,5 +295,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_oneself[000]",
+          "name": "Solitude",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_one2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, self Morale recovered <@cc.vup>+0.7</> per hour"
+        },
+        {
+          "buffId": "dorm_rec_oneself[011]",
+          "name": "Hard to Avoid",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_one4",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, self Morale recovered <@cc.vup>+0.85</> per hour"
+        }
+      ]
+    }
+  ]
 }

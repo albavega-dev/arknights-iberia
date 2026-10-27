@@ -474,5 +474,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession2[060]",
+          "name": "Supporter Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_supporter1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Supporter</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession2[660]",
+          "name": "Assimilation",
+          "room": "TRAINING",
+          "icon": "bskill_train3_supporter2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Supporter</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+65%</> if training the skill to Specialization Level <@cc.vup>3</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_cost&profession[360]",
+          "name": "Mutation",
+          "room": "TRAINING",
+          "icon": "bskill_train_skadi",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour <@cc.vdown>+1</> when training a <@cc.kw>Supporter</> Operator's skill to Specialization Level <@cc.vup>3</>"
+        }
+      ]
+    }
+  ]
 }

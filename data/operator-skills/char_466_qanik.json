@@ -328,5 +328,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_cost&clue[001]",
+          "name": "Rescue Team - External Contact",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd2",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "hire_spd_cost&clue[000]",
+          "name": "Rescue Team - Preserve Strength",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost3",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+35%</>, and for every recruit slot (excluding initial slot), Morale consumed per hour <@cc.vup>-0.1</>"
+        }
+      ]
+    }
+  ]
 }

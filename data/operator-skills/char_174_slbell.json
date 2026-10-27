@@ -295,5 +295,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single&oneself[021]",
+          "name": "Karlan Saintess",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single&one22",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.5</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour <@cc.vup>+0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[061]",
+          "name": "Supporter Expert β",
+          "room": "TRAINING",
+          "icon": "bskill_train_supporter2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Supporter</> Operators' Specialization training speed <@cc.vup>+50%</>"
+        }
+      ]
+    }
+  ]
 }

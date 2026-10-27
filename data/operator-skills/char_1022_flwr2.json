@@ -350,5 +350,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all[029]",
+          "name": "Gentle Spirit",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.15</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all&tired[100]",
+          "name": "Pure Breath",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all_tired2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores an additional <@cc.vup>+0.1</> Morale to Operators assigned to that Dormitory whose Morale is below <@cc.vup>20</> (Strongest effect of the same type applies)"
+        }
+      ]
+    }
+  ]
 }

@@ -930,5 +930,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[102]",
+          "name": "Metalwork α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_gold1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Precious Metal</> formula related productivity <@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&trade[1000]",
+          "name": "Essence Transmutation Byproduct",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&trade1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, every <@cc.kw>Trading Post</> makes the Factory's <@cc.kw>Precious Metal</> formula related productivity <@cc.vup>+3%</>"
+        }
+      ]
+    }
+  ]
 }

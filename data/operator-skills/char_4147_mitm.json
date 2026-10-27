@@ -419,5 +419,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_wt&cost[003]",
+          "name": "Know the Ropes",
+          "room": "TRADING",
+          "icon": "bskill_tra_wt&cost1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, the chance of getting <@cc.kw>higher-yield Precious Metal orders</> is <@cc.kw>increased slightly</> (rate is influenced by length of work time), and Morale consumed per hour is reduced by <@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&meet[010]",
+          "name": "Gifted Adviser",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&meet",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+15%</>, +<@cc.vup>5%</> per Reception Room level, up to a maximum of <@cc.vup>30%</>"
+        }
+      ]
+    }
+  ]
 }

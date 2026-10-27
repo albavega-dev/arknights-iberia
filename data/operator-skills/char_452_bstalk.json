@@ -317,5 +317,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[003]",
+          "name": "Metal Crab - Peacake",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+15%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_limit&cost[001]",
+          "name": "Metal Crab - Trey",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_limit&cost1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+8</> and Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    }
+  ]
 }

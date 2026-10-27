@@ -421,5 +421,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_doubleProf3[000]",
+          "name": "兴之所至·α",
+          "room": "TRAINING",
+          "icon": "bskill_train_mh2_guard&sniper1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻训练室协助位时，<@cc.kw>近卫</>与<@cc.kw>狙击</>干员的专精技能训练速度<@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd_doubleProf3[100]",
+          "name": "兴之所至·β",
+          "room": "TRAINING",
+          "icon": "bskill_train_mh2_guard&sniper2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻训练室协助位时，<@cc.kw>近卫</>与<@cc.kw>狙击</>干员的专精技能训练速度<@cc.vup>+50%</>，心情每小时消耗<@cc.vdown>+1</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd[022]",
+          "name": "气氛组",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd3&catap2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻贸易站时，订单获取效率<@cc.vup>+35%</>"
+        }
+      ]
+    }
+  ]
 }

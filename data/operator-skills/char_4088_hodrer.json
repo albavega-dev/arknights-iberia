@@ -529,5 +529,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_par&per[000]",
+          "name": "Starting From Scratch α",
+          "room": "TRADING",
+          "icon": "bskill_tra_par&per1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+25%</>; when <@cc.kw>Ines</> is assigned to any <$cc.c.room3><@cc.kw>Work Area</></> (excluding Assistant), order acquisition efficiency additionally <@cc.vup>+5%</>"
+        },
+        {
+          "buffId": "trade_ord_par&per[001]",
+          "name": "Starting From Scratch β",
+          "room": "TRADING",
+          "icon": "bskill_tra_par&per2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>; when <@cc.kw>Ines</> or <@cc.kw>W</> are assigned to any <$cc.c.room3><@cc.kw>Work Area</></> (excluding Assistants), order acquisition efficiency additionally <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ]
 }

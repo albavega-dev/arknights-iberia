@@ -317,5 +317,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_tag[1030]",
+          "name": "Tactic Guidance: Offense",
+          "room": "TRAINING",
+          "icon": "bskill_train_attack",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed <@cc.vup>+10%</> for each <$cc.g.Attack><@cc.kw>Attacking</></> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.kw>4</> Operators)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_bd[000]",
+          "name": "Silent and Hardworking",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_fuze",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, Productivity <@cc.vup>+20%</>; for every <@cc.vup>1</> <$cc.bd_tachanka><@cc.rem>Ursus Specialty Beverage</></>, capacity limit <@cc.vup>+2</>"
+        }
+      ]
+    }
+  ]
 }

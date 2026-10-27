@@ -306,12 +306,12 @@ describe("OperatorDetailData skills tab", () => {
     expect(withoutView).toHaveAttribute("data-skills-status", "unavailable");
     expect(withoutView).toHaveTextContent("Habilidades no disponibles");
     cleanup();
-    const empty = renderTab({ status: "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills: [] });
+    const empty = renderTab({ status: "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills: [], baseSkills: [] });
     expect(empty).toHaveAttribute("data-skills-status", "empty");
     expect(empty).toHaveTextContent("Este operador no tiene habilidades.");
     cleanup();
     const level = { index: 0, label: "1" as const, group: "level" as const, name: "Test Skill", icon: null, spCost: 30, initialSp: 10, duration: 20, durationKind: "seconds" as const, rangeId: null, description: [{ type: "text" as const, text: "Efecto" }] };
-    const available = renderTab({ status: "available", operatorId: operator.id, region: "en", source, ranges: {}, skills: [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [level], defaultLevelIndex: 0, terms: {} }] });
+    const available = renderTab({ status: "available", operatorId: operator.id, region: "en", source, ranges: {}, skills: [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [level], defaultLevelIndex: 0, terms: {} }], baseSkills: [] });
     expect(available).toHaveAttribute("data-skills-status", "available");
     expect(screen.getByRole("heading", { name: "Test Skill" })).toBeInTheDocument();
   });

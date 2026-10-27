@@ -192,6 +192,326 @@
     "ba.weightless": {
       "name": "Weightless",
       "description": "Weight reduced by 1 level (effects of the same name do not stack)"
+    },
+    "cc.angel": {
+      "name": "Exusiai",
+      "description": "Includes the following Operators:\nExusiai the New Covenant, Exusiai"
+    },
+    "cc.bd_A": {
+      "name": "Chain of Thought",
+      "description": "Affects skills related to <$cc.bd_A_1><@cc.rem>Psychokinesis</></> and <$cc.bd_A_2><@cc.rem>Manifestation of Consciousness</></>\nProvided by the following Operators' skills:\nRosmontis"
+    },
+    "cc.bd_A_1": {
+      "name": "Psychokinesis",
+      "description": "Operators with this skill\nRosmontis"
+    },
+    "cc.bd_A_2": {
+      "name": "Manifestation of Consciousness",
+      "description": "Operators with this skill\nRosmontis"
+    },
+    "cc.bd_a1": {
+      "name": "Perception Information",
+      "description": "Affects skills related to <$cc.bd_A><@cc.rem>Chain of Thought</></> and <$cc.bd_B><@cc.rem>Soundless Resonance</></>\nProvided by the following Operators' skills:\nRosmontis, Ebenholz, Dusk, Ling, Whisperain, Iris, Czerny"
+    },
+    "cc.bd_a1_a1": {
+      "name": "Memory Fragments",
+      "description": "Affects skills related to <$cc.bd_a1><@cc.rem>Perception Information</></>\nProvided by the following Operator's skills\nWhisperain"
+    },
+    "cc.bd_a1_a2": {
+      "name": "Dreamland",
+      "description": "Affects skills related to <$cc.bd_a1><@cc.rem>Perception Information</></>\nProvided by the following Operator's skills\nIris"
+    },
+    "cc.bd_a1_a3": {
+      "name": "Measure",
+      "description": "Affects skills related to <$cc.bd_a1><@cc.rem>Perception Information</></>\nProvided by the following Operator's skills\nCzerny"
+    },
+    "cc.bd_ash": {
+      "name": "Intelligence Reserve",
+      "description": "Provided by the following Operator's skills\nAsh"
+    },
+    "cc.bd_B": {
+      "name": "Soundless Resonance",
+      "description": "Affects skills related to <$cc.bd_B_1><@cc.rem>Lingering Melody</></>, <$cc.bd_B_2><@cc.rem>Harmony Astray</></>, and <$cc.bd_B_3><@cc.rem>Wordless Anthem</></>\nProvided by the following Operators' skills:\nEbenholz, Virtuosa, Bassline"
+    },
+    "cc.bd_B_1": {
+      "name": "Lingering Melody",
+      "description": "Operators with this skill\nEbenholz"
+    },
+    "cc.bd_B_2": {
+      "name": "Harmony Astray",
+      "description": "Operators with this skill\nEbenholz"
+    },
+    "cc.bd_B_3": {
+      "name": "Wordless Anthem",
+      "description": "Operators with this skill\nVirtuosa"
+    },
+    "cc.bd_b1": {
+      "name": "Worldly Plight",
+      "description": "Affects <$cc.bd_C><@cc.rem>Witchcraft Crystal</></> skills\nProvided by the following Operators' skills\nDusk, Ling, Chongyue, Mr. Nothing, Mulberry"
+    },
+    "cc.bd_C": {
+      "name": "Witchcraft Crystal",
+      "description": "Operators with this skill\nJieyun"
+    },
+    "cc.bd_dungeon": {
+      "name": "Monster Meal",
+      "description": "Provided by the following Operators' skills:\nSenshi"
+    },
+    "cc.bd_felyne": {
+      "name": "Felvine",
+      "description": "Affects related skills <$cc.bd_felyne_1><@cc.rem>Lovable Felynes</></>, <$cc.bd_felyne_2><@cc.rem>Trusty Buddies</></>\nProvided by the following Operators' skills\nRathalos S Noir Corne, Kirin R Yato"
+    },
+    "cc.bd_felyne_1": {
+      "name": "Lovable Felynes",
+      "description": "Operator with this skill\nTerra Research Commission"
+    },
+    "cc.bd_felyne_2": {
+      "name": "Trusty Buddies",
+      "description": "Operator with this skill\nTerra Research Commission"
+    },
+    "cc.bd_malist": {
+      "name": "Engineering Robot",
+      "description": "Provided by the following Operator's skills\nMinimalist"
+    },
+    "cc.bd_mujica": {
+      "name": "Passion",
+      "description": "Affects skills related to <$cc.bd_mujica_1><@cc.rem>Plentiful Work Experience</></> and <$cc.bd_mujica_2><@cc.rem>Monster of Acting</></>\nProvided by the following Operators' skills:\nMutsumi Wakaba, Uika Misumi, Nyamu Yūtenji, Umiri Yahata"
+    },
+    "cc.bd_mujica_1": {
+      "name": "Plentiful Work Experience",
+      "description": "Operators with this skill\nSakiko Togawa"
+    },
+    "cc.bd_mujica_2": {
+      "name": "Monster of Acting",
+      "description": "Operators with this skill\nMutsumi Wakaba"
+    },
+    "cc.bd_tachanka": {
+      "name": "Ursus Specialty Beverage",
+      "description": "Provided by the following Operator's skills\nTachanka"
+    },
+    "cc.bd_wang_1": {
+      "name": "Influence",
+      "description": "Provided by the following Operators' skills\nWang\nFor every Trading Post and Power Plant, Influence +1"
+    },
+    "cc.bd_wang_2": {
+      "name": "Territory",
+      "description": "Provided by the following Operators' skills\nWang\nFor every Factory, Territory +1"
+    },
+    "cc.bd.costdrop": {
+      "name": "Morale Difference",
+      "description": "Difference between an Operator's max morale and current morale"
+    },
+    "cc.c.abyssal2_1": {
+      "name": "Special Bonus",
+      "description": "For every <$cc.g.abyssal><@cc.kw>Abyssal Hunter</></> operator stationed in a Factory, the Control Center provides <@cc.vup>5%</> Productivity for every Factory with an <$cc.g.abyssal><@cc.kw>Abyssal Hunter</></> operator stationed within it, up to a maximum of <@cc.vup>45%</> Productivity"
+    },
+    "cc.c.abyssal2_2": {
+      "name": "Special Bonus",
+      "description": "For every <$cc.g.abyssal><@cc.kw>Abyssal Hunter</></> operator stationed in a Factory, the Control Center provides <@cc.vup>10%</> Productivity for every Factory with an <$cc.g.abyssal><@cc.kw>Abyssal Hunter</></> operator stationed within it, up to a maximum of <@cc.vup>90%</> Productivity"
+    },
+    "cc.c.abyssal2_3": {
+      "name": "Special Interaction Rules",
+      "description": "Takes priority over <$cc.m.var2><@cc.rem>Cooperative Will</></>, and does not stack\nDoes not stack with <$cc.m.pow1><@cc.rem>Automation α</></>, <$cc.m.pow2><@cc.rem>Automation β</></>, or <$cc.m.pow3><@cc.rem>Bionic Seadragon</></>, and the 'set to 0' effect will take priority"
+    },
+    "cc.c.room1": {
+      "name": "Certain Facilities",
+      "description": "Includes the following facilities: \nPower Plant, HR Office, Reception Room"
+    },
+    "cc.c.room2": {
+      "name": "Other Facilities",
+      "description": "Includes the following facilities: \nPower Plant, Factory, Trading Post, HR Office, Reception Room"
+    },
+    "cc.c.room3": {
+      "name": "Workplace",
+      "description": "Includes the following buildings: \nPower Plant, Factory, Trading Post, HR Office, Reception Room, Control Center, Training Room"
+    },
+    "cc.c.skill": {
+      "name": "Certain Skills",
+      "description": "Includes the following skills:\nCapable Assistance, S.W.E.E.P., Snack Network, Cleaning Agreement, Substitute, Necessary Responsibility, Guarding, Tiny Leader, Self-Absorbed, Million Dollar Smile, Marigold Poetry Gathering, Art of Defense, New to the Job, Drip-Fed Care, Chief Engineer"
+    },
+    "cc.c.sui2_1": {
+      "name": "Special comparison rules",
+      "description": "The highest hourly Morale recovery of <$cc.c.room2><@cc.kw>other buildings</></> provided by <@cc.kw>Business Is Business</>, <@cc.kw>Solitary Light</>, or <@cc.kw>Banner of Babel</> will take effect"
+    },
+    "cc.g.A1": {
+      "name": "A1 Detachment",
+      "description": "Includes the following Operators:\nHibiscus, Lava, Beagle, Fang, Kroos"
+    },
+    "cc.g.abyssal": {
+      "name": "Abyssal Hunter",
+      "description": "Includes the following Operators:\nGladiia, Skadi, Specter, Andreana, Ulpianus"
+    },
+    "cc.g.Attack": {
+      "name": "Attacking team",
+      "description": "Includes the following Operators:\nAsh Blitz Iana Fuze"
+    },
+    "cc.g.bs": {
+      "name": "Blacksteel Worldwide",
+      "description": "Includes the following Operators:\nLiskarm, Franka, Jessica, Vanilla, Almond, Surfer"
+    },
+    "cc.g.Defence": {
+      "name": "Defending team",
+      "description": "Includes the following Operators:\nTachanka Frost Ela Doc"
+    },
+    "cc.g.elite": {
+      "name": "Elite Operator",
+      "description": "Includes the following Operators:\nRosmontis, Blaze, Logos, Blaze the Igniting Spark, Raidian, Mantra"
+    },
+    "cc.g.glasgow": {
+      "name": "Glasgow Gang",
+      "description": "Includes the following Operators:\nSiege, Morgan, Dagda, Indra"
+    },
+    "cc.g.karlan": {
+      "name": "Kjerag",
+      "description": "Includes the following Operators:\nSilverAsh, Gnosis, Pramanix, Cliffheart, Matterhorn, Courier, Kjera, Aurora, Degenbrecher, Snow Hunter"
+    },
+    "cc.g.laterano": {
+      "name": "Laterano",
+      "description": "Includes the following Operators:\nPlume, Adnachiel, Executor, Mostima, Ambriel, Arene, Archetto, Fiammetta, Enforcer, Spuria, Insider, Virtuosa, Lemuen, Sankta Miksaparato, CONFESS-47"
+    },
+    "cc.g.lda": {
+      "name": "Lee's Detective Agency",
+      "description": "Includes the following Operators\nLee, Aak, Hung, Waai Fu"
+    },
+    "cc.g.lgd": {
+      "name": "Lungmen Guard Department",
+      "description": "Includes the following Operators:\nCh'en, Hoshiguma, Swire"
+    },
+    "cc.g.minos": {
+      "name": "Minos",
+      "description": "Includes the following Operators:\nErato, Pallas, Sideroca, Conviction, Vulcan, Varkáris"
+    },
+    "cc.g.psk": {
+      "name": "Pinus Sylvestris",
+      "description": "Includes the following Operators: \nFlametail, Fartooth, Ashlock, Wild Mane, 'Justice Knight'"
+    },
+    "cc.g.R6": {
+      "name": "Team Rainbow",
+      "description": "Includes the following Operators:\nAsh Tachanka Blitz Frost Ela Doc Iana Fuze"
+    },
+    "cc.g.rh": {
+      "name": "Rhine Lab",
+      "description": "Includes the following Operators:\nSilence, Ifrit, Saria, Ptilopsis, Mayer, Magallan, Dorothy, Astgenne, Muelsyse, Nasti"
+    },
+    "cc.g.sargon": {
+      "name": "Sargon",
+      "description": "Includes the following Operators:\nWulfenite, Philae, Pepe, Narantuya, Sand Reckoner, Papyrus, Kestrel, Totter, Tuye, Bubble, Eunectes, Flint, Tomimi, Beeswax, Scene, Sesa, Manticore, Passenger, Estelle, Minimalist, Hadiya, Titi"
+    },
+    "cc.g.siracusa": {
+      "name": "Siracusa",
+      "description": "Includes the following Operators:\nAngelina, Lappland, Provence, Vermeil, Broca, Shamare, Suzuran, Chiave, Aosta, Penance, Lunacub, Vigil, Aroma, Vulpisfoglia, Figurino, Lappland the Decadenza, Bellone, Ripresa"
+    },
+    "cc.g.sm": {
+      "name": "Sami",
+      "description": "Includes the following Operators:\nGitano, Bibeak, Qanipalaat, Typhon, Santalla, Valarqvin"
+    },
+    "cc.g.sp": {
+      "name": "Alternate",
+      "description": "Includes all Alternate Operators."
+    },
+    "cc.g.sui": {
+      "name": "Sui",
+      "description": "Includes the following Operators:\nNian, Dusk, Ling, Chongyue, Shu, Yu, Wang"
+    },
+    "cc.g.ussg": {
+      "name": "Ursus Student Self-government Group",
+      "description": "Includes the following Operators:\nRosa, Zima, Istina, Gummy, Leto, Absinthe"
+    },
+    "cc.gvial": {
+      "name": "Gavial",
+      "description": "Includes the following Operators:\nGavial the Invincible, Gavial"
+    },
+    "cc.m.pow1": {
+      "name": "Automation α",
+      "description": "Provided by the following Operator(s):\nWeedy, Eunectes, Passenger"
+    },
+    "cc.m.pow2": {
+      "name": "Automation β",
+      "description": "Provided by the following Operator(s):\nEunectes"
+    },
+    "cc.m.pow3": {
+      "name": "Bionic Seadragon",
+      "description": "Provided by the following Operator(s):\nWeedy"
+    },
+    "cc.m.var1": {
+      "name": "Recycling",
+      "description": "Operators with this skill\nVermeil"
+    },
+    "cc.m.var2": {
+      "name": "Cooperative Will",
+      "description": "Operators with this skill\nWaai Fu"
+    },
+    "cc.sk.manu1": {
+      "name": "Standardization Skills",
+      "description": "Include the following skills\nStandardization α, Standardization β"
+    },
+    "cc.sk.manu2": {
+      "name": "Rhine Tech-type Skill",
+      "description": "Includes the following skills:\nRhine Tech α, Rhine Tech β, Rhine Tech γ"
+    },
+    "cc.sk.manu3": {
+      "name": "Pinus Sylvestris Skills",
+      "description": "Includes the following skills: \nPinus Sylvestris α, Pinus Sylvestris β"
+    },
+    "cc.sk.manu4": {
+      "name": "Metalwork-type Skill",
+      "description": "Includes the following skills:\nMetalwork α, Metalwork β"
+    },
+    "cc.t.accmuguard1": {
+      "name": "Martial Arts",
+      "description": "Accumulate <@cc.kw>1</> point when assisting with Specialization training to level 1, <@cc.kw>2</> points to level 2, and <@cc.kw>3</> points at level 3, with a maximum accumulation limit of <@cc.kw>3</> points (cannot be accumulated or consumed when the Trainer's Morale is 0)"
+    },
+    "cc.t.flow_gold": {
+      "name": "Pure Gold Production Line",
+      "description": "For <@cc.kw>every</> <@cc.kw>Factory</> producing <@cc.kw>Pure Gold</>, Pure Gold Production Line <@cc.kw>+1</>"
+    },
+    "cc.t.snsant1": {
+      "name": "Heavenly Reward α",
+      "description": "Operators with this skill\nSnowsant"
+    },
+    "cc.t.snsant2": {
+      "name": "Heavenly Reward β",
+      "description": "Operators with this skill\nSnowsant"
+    },
+    "cc.t.strong2": {
+      "name": "Special Interaction Rules",
+      "description": "Cannot stack with <$cc.t.snsant1><@cc.rem>Heavenly Reward α</></>, <$cc.t.snsant2><@cc.rem>Heavenly Reward β</></>, and will take precedence instead\nWhen <$cc.t.snsant1><@cc.rem>Heavenly Reward α</></>, <$cc.t.snsant2><@cc.rem>Heavenly Reward β</></> stacks with other skills, this skill will take effect on the resulting effect"
+    },
+    "cc.tag.dungeon": {
+      "name": "Laios's Party",
+      "description": "Includes the following Operators:\nMarcille, Laios, Chilchuck, Senshi"
+    },
+    "cc.tag.durin": {
+      "name": "Durin",
+      "description": "Includes the following Operators:\nMinimalist, Myrtle, Chestnut, Durin, Tecno"
+    },
+    "cc.tag.knight": {
+      "name": "Knight",
+      "description": "Includes the following operators\nNearl the Radiant Knight, Nearl, Blemishine, Whislash, Flametail, Fartooth, Ashlock, Wild Mane, Justice Knight, Gravel, Viviana"
+    },
+    "cc.tag.mh": {
+      "name": "Monster Hunter Party",
+      "description": "Includes the following Operators:\nRathalos S Noir Corne, Kirin R Yato, Terra Research Commission"
+    },
+    "cc.tag.op": {
+      "name": "Operation Platform",
+      "description": "Includes the following Operators:\nLancet-2, Castle-3, THRM-EX, Justice Knight, Friston-3, PhonoR-0, CONFESS-47, GALLUS²"
+    },
+    "cc.tra.closure": {
+      "name": "Closure's Special Order",
+      "description": "Special Precious Metal orders offered by Closure that have fixed earnings, and require 2 Pure Gold to trade"
+    },
+    "cc.tra.pepe": {
+      "name": "Special Exclusive Order",
+      "description": "Special Precious Metal orders offered by Pepe that have a fixed acquisition time and earnings, and require 0 Pure Gold to trade"
+    },
+    "cc.w.ncdeer1": {
+      "name": "Causality",
+      "description": "Whenever a recipe that consumes <@cc.kw>4</> or less Morale fails to produce a byproduct, gain <@cc.kw>1</> point of <@cc.kw>Causality</> for every <@cc.kw>1</> Morale consumed"
+    },
+    "cc.w.ncdeer2": {
+      "name": "Karma",
+      "description": "Whenever a recipe that consumes <@cc.kw>8</> Morale fails to produce a byproduct, gain <@cc.kw>1</> point of <@cc.kw>Karma</> for every <@cc.kw>1</> Morale consumed"
     }
   }
 }

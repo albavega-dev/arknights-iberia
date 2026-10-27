@@ -396,5 +396,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&limit&cost[100]",
+          "name": "Tailoring Art",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&cost1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, Productivity <@cc.vup>+20%</> and Morale consumed per hour <@cc.vdown>+0.25</>"
+        },
+        {
+          "buffId": "manu_prod_spd&limit&cost[200]",
+          "name": "Proficient Artistry",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&limit5",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, Productivity <@cc.vup>+25%</> and capacity limit <@cc.vup>+6</>"
+        }
+      ]
+    }
+  ]
 }

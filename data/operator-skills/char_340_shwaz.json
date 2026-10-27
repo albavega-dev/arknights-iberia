@@ -518,5 +518,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single_P[000]",
+          "name": "Make Tea",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single_schwarz",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.55</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); if the target is <@cc.kw>Ceylon</>, further increases Morale restored by <@cc.vup>+0.45</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[140]",
+          "name": "Black Arrow",
+          "room": "TRAINING",
+          "icon": "bskill_train_sniper3",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+60%</>"
+        }
+      ]
+    }
+  ]
 }

@@ -342,5 +342,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_bd_n1_n2[000]",
+          "name": "Bedtime Story",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all&bd_n1_n2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.1</> Morale per hour to all Operators in that Dormitory (Only the strongest effect of this type triggered). Additionally, for every level of the current Dormitory, <@cc.vup>1 level</> <$cc.bd_a1_a2><@cc.rem>of Dreamland</></>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_bd_n1[000]",
+          "name": "Sleep Talking",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all&bd_n1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, every <@cc.vup>1</> levels of <$cc.bd_a1_a2><@cc.rem>Dreamland</></> is converted into <@cc.vup>1</> points of <$cc.bd_a1><@cc.rem>Perception Information</></>"
+        }
+      ]
+    }
+  ]
 }

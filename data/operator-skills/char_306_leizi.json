@@ -273,5 +273,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_clue_cost[010]",
+          "name": "Picky",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_wt1",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, <@cc.kw>slightly increases</> the likelihood of obtaining Clues <@cc.kw>corresponding to the factions of Operators assigned to the Reception Room</>, but also increases the Morale consumption of Operators assigned to the Control Center by <@cc.vdown>+0.5</>"
+        },
+        {
+          "buffId": "control_clue_cost[011]",
+          "name": "Discernment",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_wt2",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, <@cc.kw>slightly increases</> the likelihood of obtaining Clues <@cc.kw>corresponding to the factions of Operators assigned to the Reception Room</>"
+        }
+      ]
+    }
+  ]
 }

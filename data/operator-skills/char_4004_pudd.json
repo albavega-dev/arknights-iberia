@@ -284,5 +284,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[010]",
+          "name": "Equipment Maintenance",
+          "room": "POWER",
+          "icon": "bskill_pow_spd2",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+15%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_token_prod_spd[000]",
+          "name": "Overclock",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_token_p_spd",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, if there are <@cc.kw>2</> or more <$cc.tag.op><@cc.kw>Operation Platforms</></> assigned to <@cc.kw>Power Plants</>, all Factories' productivity <@cc.vup>+2%</> (only the most effective one will take effect when assigned Operators have the same skill effect)"
+        }
+      ]
+    }
+  ]
 }

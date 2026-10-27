@@ -284,5 +284,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[010]",
+          "name": "Combat Guidance Video",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_exp2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula related productivity <@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[011]",
+          "name": "Vanguard Expert β",
+          "room": "TRAINING",
+          "icon": "bskill_train_vanguard2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Vanguard</> Operators' Specialization training speed <@cc.vup>+50%</>"
+        }
+      ]
+    }
+  ]
 }

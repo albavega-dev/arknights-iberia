@@ -2,5 +2,43 @@
   "operatorId": "char_285_medic2",
   "region": "en",
   "skills": [],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[000]",
+          "name": "Backup Energy",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single[000]",
+          "name": "Medical Service",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.65</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)"
+        }
+      ]
+    }
+  ]
 }

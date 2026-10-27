@@ -20,7 +20,7 @@ const skill = (slot: 1 | 2 | 3, count: number, overrides: Partial<OperatorSkillV
   levels: Array.from({ length: count }, (_, index) => level(index, { name: `Habilidad ${slot}`, ...levelOverrides })), defaultLevelIndex: count - 1, terms: {}, ...overrides,
 });
 const source = { repository: "test", revision: "test", path: "skill_table.json", sha256: "test" };
-const view = (skills: OperatorSkillView[], overrides: Partial<OperatorSkillsView> = {}): OperatorSkillsView => ({ status: "available", operatorId: "char_test", region: "en", source, ranges: {}, skills, ...overrides });
+const view = (skills: OperatorSkillView[], overrides: Partial<OperatorSkillsView> = {}): OperatorSkillsView => ({ status: "available", operatorId: "char_test", region: "en", source, ranges: {}, skills, baseSkills: [], ...overrides });
 const card = (name: string) => screen.getByRole("article", { name });
 const radios = (slot: number) => within(screen.getByRole("radiogroup", { name: `Nivel de S${slot}` })).getAllByRole("radio");
 const checked = (slot: number) => radios(slot).find((radio) => radio.getAttribute("aria-checked") === "true")!.textContent;

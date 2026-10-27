@@ -306,5 +306,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_proc_probability[031]",
+          "name": "Shed Excess",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_p4",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, the production rate of byproduct increases by <@cc.vup>65%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_drop[020]",
+          "name": "Useless Gift",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_drop_polyester",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Elite materials</>, any byproducts of <@cc.kw>T3</> quality produced will be <@cc.kw>Polyester Packs</>"
+        }
+      ]
+    }
+  ]
 }

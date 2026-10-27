@@ -295,5 +295,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[020]",
+          "name": "Guard Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_guard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd_P[000]",
+          "name": "Through Thick and Thin",
+          "room": "MANUFACTURE",
+          "icon": "bskill_formula_spd_sunbr",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory and <@cc.kw>Gummy</> is in a Trading Post, <@cc.kw>Battle Record</> formula productivity <@cc.vup>+35%</>"
+        }
+      ]
+    }
+  ]
 }

@@ -363,5 +363,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&cost_P[000]",
+          "name": "Feud",
+          "room": "TRADING",
+          "icon": "bskill_tra_texas1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the same Trading Post as <@cc.kw>Lappland</>, Morale consumed each hour <@cc.vdown>+0.3</>, and order acquisition efficiency <@cc.vup>+65%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_limit&cost_P[010]",
+          "name": "Tacit Understanding",
+          "room": "TRADING",
+          "icon": "bskill_tra_texas2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the same Trading Post as <@cc.kw>Exusiai</>, Morale consumed each hour <@cc.vup>-0.3</>"
+        }
+      ]
+    }
+  ]
 }

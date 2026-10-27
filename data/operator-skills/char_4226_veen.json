@@ -496,5 +496,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_doubleProf[301]",
+          "name": "'I Don't Get It'",
+          "room": "TRAINING",
+          "icon": "bskill_train_caster&vanguard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> and <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd_doubleProf[310]",
+          "name": "'Learning By Analogy'",
+          "room": "TRAINING",
+          "icon": "bskill_train_caster&vanguard2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> and <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+45%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_train&lv[000]",
+          "name": "Artisan",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_veen",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, current Factory Productivity <@cc.vup>+10%</> for every level of each Training Room level, up to <@cc.vup>30%</>"
+        }
+      ]
+    }
+  ]
 }

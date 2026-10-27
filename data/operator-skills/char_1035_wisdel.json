@@ -516,5 +516,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_meeting&ord[000]",
+          "name": "Conspirator α",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_babel",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center: if <@cc.kw>Ines</> is assigned to the Reception Room, clue collection speed <@cc.vup>+5%</>; if <@cc.kw>Hoederer</> is assigned to a Trading Post, that Trading Post's order limit <@cc.vup>+1</>."
+        },
+        {
+          "buffId": "control_meeting&ord[001]",
+          "name": "Conspirator β",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_babel2",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center: if <@cc.kw>Ines</> is assigned to the Reception Room, clue collection speed <@cc.vup>+5%</>; if <@cc.kw>Hoederer</> is assigned to a Trading Post, that Trading Post's order limit <@cc.vup>+2</>."
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_mp_expand_double[000]",
+          "name": "Banner of Babel",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_cost_expand",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, Operators working in <$cc.c.room2><@cc.kw>other buildings</></> recover <@cc.vup>+0.1</> Morale per hour, with an additional <@cc.vup>+0.1</> when <@cc.kw>Civilight Eterna</> is also assigned to the Control Center (<$cc.c.sui2_1><@cc.rem>Special Comparison Rules</></> apply with Control Center bonus)."
+        }
+      ]
+    }
+  ]
 }

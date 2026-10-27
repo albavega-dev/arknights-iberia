@@ -337,5 +337,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_limit&trade&lv[001]",
+          "name": "Time Is Money",
+          "room": "TRADING",
+          "icon": "bskill_tra_limit&trade2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, <@cc.vup>+1</> order limit for every level of that Trading Post"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd[1001]",
+          "name": "Order Distribution β",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ]
 }

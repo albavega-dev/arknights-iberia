@@ -655,5 +655,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all[028]",
+          "name": "Celebrity Effect",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.15</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "hire_spd[012]",
+          "name": "Invite to the Show",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd5",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+45%</>"
+        }
+      ]
+    }
+  ]
 }

@@ -609,5 +609,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_prod_bd_spd[000]",
+          "name": "Plentiful Work Experience",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_p_oblvns",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, the productivity of <@cc.kw>Precious Metals</> of all Factories <@cc.vup>+0.5%</>, with an additional <@cc.vup>+0.5%</> for every <@cc.vup>20</> <$cc.bd_mujica><@cc.rem>Passion</></>"
+        },
+        {
+          "buffId": "control_prod_bd_spd[010]",
+          "name": "Plentiful Work Experience",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_p_oblvns",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, the productivity of <@cc.kw>Precious Metals</> of all Factories <@cc.vup>+1%</>, with an additional <@cc.vup>+1%</> for every <@cc.vup>20</> <$cc.bd_mujica><@cc.rem>Passion</></>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_mp_cost&bd3[000]",
+          "name": "Indomitable Lady",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_mp_oblvns",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, self Morale loss per hour <@cc.vdown>+0.05</> when Passion is <@cc.kw>40</> or higher"
+        }
+      ]
+    }
+  ]
 }

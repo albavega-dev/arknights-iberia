@@ -359,5 +359,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_formula_cost[000]",
+          "name": "Vlog",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_exp&cost",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, the Morale consumed when producing <@cc.kw>Battle Records</> is reduced by <@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_limit[010]",
+          "name": "Editing β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_exp&limit2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit is increased by <@cc.vup>+15</> when producing <@cc.kw>Battle Records</>"
+        }
+      ]
+    }
+  ]
 }

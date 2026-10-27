@@ -679,5 +679,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single_power[100]",
+          "name": "Natural Optimist",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.55</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)"
+        },
+        {
+          "buffId": "dorm_rec_single_power[001]",
+          "name": "Funny Holy City Stories",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single_laterano",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.55</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); if the target is a <$cc.g.laterano><@cc.kw>Laterano</></> Operator, further increases Morale restored by <@cc.vup>+0.45</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_par[001]",
+          "name": "Same-City Express Order",
+          "room": "TRADING",
+          "icon": "bskill_tra_laterano1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, for every <$cc.g.laterano><@cc.kw>Laterano</></> Operator in the same Trading Post, order acquisition efficiency <@cc.vup>+15%</>"
+        }
+      ]
+    }
+  ]
 }

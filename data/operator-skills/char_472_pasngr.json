@@ -654,5 +654,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[003]",
+          "name": "Electromagnetic Charge α",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        },
+        {
+          "buffId": "power_rec_spd[016]",
+          "name": "Energy Gathering",
+          "room": "POWER",
+          "icon": "bskill_pow_spd2",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+15%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&power[000]",
+          "name": "Automation α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&power1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</> (excluding productivity granted based on facility count), but each <@cc.kw>Power Plant</> increases that Factory's productivity by <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ]
 }

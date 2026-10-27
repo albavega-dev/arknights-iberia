@@ -306,5 +306,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_cost[112]",
+          "name": "Pensive Stroll α",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost4",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>, Morale consumed per hour <@cc.vup>-0.25</>"
+        },
+        {
+          "buffId": "hire_spd_cost[121]",
+          "name": "Pensive Stroll β",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost6",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+30%</>, Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd[1020]",
+          "name": "Clue Search β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd3",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>20%</>"
+        }
+      ]
+    }
+  ]
 }

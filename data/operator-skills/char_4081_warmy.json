@@ -317,5 +317,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all[014]",
+          "name": "Cookout α",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all2",
+          "color": "#22cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.15</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        },
+        {
+          "buffId": "dorm_rec_all[024]",
+          "name": "Cookout β",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all3",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.2</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[101]",
+          "name": "Metalwork α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_gold1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Precious Metal</> formula related productivity <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ]
 }

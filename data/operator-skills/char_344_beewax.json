@@ -384,5 +384,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[050]",
+          "name": "Caster Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_caster1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession[051]",
+          "name": "Caster Expert β",
+          "room": "TRAINING",
+          "icon": "bskill_train_caster2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> Operators' Specialization training speed <@cc.vup>+50%</>"
+        }
+      ]
+    }
+  ]
 }

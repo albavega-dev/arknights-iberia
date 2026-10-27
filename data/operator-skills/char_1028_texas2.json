@@ -602,5 +602,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_doubleProf2[001]",
+          "name": "Silence as a Sword",
+          "room": "TRAINING",
+          "icon": "bskill_train_specialist&pioneer1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Specialist</> and <@cc.kw>Vanguard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd_doubleProf2[000]",
+          "name": "Break the Shackles",
+          "room": "TRAINING",
+          "icon": "bskill_train2_specialist&pioneer1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Specialist</> and <@cc.kw>Vanguard</> Operators' Specialization training speed <@cc.vup>+30%</>; if training a skill to Specialization Level <@cc.vup>2</>, training speed will be further increased by <@cc.vup>+50%</>"
+        }
+      ]
+    }
+  ]
 }

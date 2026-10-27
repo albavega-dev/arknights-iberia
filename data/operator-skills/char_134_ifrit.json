@@ -485,5 +485,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[001]",
+          "name": "Heat Charge α",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        },
+        {
+          "buffId": "power_rec_spd[013]",
+          "name": "Superheat Charge",
+          "room": "POWER",
+          "icon": "bskill_pow_spd2",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+15%</>"
+        }
+      ]
+    }
+  ]
 }

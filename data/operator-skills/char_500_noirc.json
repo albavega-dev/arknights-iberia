@@ -2,5 +2,43 @@
   "operatorId": "char_500_noirc",
   "region": "en",
   "skills": [],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&limit[001]",
+          "name": "Warehouse Organization β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&limit3",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+10</> and productivity <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit[000]",
+          "name": "Order Management α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+10%</> and the order limit <@cc.vup>+2</>"
+        }
+      ]
+    }
+  ]
 }

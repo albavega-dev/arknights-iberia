@@ -295,5 +295,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd[010]",
+          "name": "Avatar",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>15%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd_condChar[000]",
+          "name": "Proficient Artistry",
+          "room": "MEETING",
+          "icon": "bskill_meet_condChar",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, if no other Operators are working in the Reception Room, increases Clue search speed by <@cc.vup>35%</>"
+        }
+      ]
+    }
+  ]
 }

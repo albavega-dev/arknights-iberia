@@ -1,6 +1,6 @@
 import { isOperatorId, type DatasetIndex, type DatasetSource } from "./operator-dataset";
 import type { GameDataRegion } from "./gamedata-revisions";
-import { expandSkillLevel, termIdsOf, type OperatorSkillsProfile, type SkillLevelData, type SkillUnlock } from "./operator-skills";
+import { baseSkillDescriptions, expandSkillLevel, termIdsOf, type OperatorSkillsProfile, type SkillLevelData, type SkillUnlock } from "./operator-skills";
 import { parseSkillDescription, type SkillDescriptionNode } from "./skill-description";
 
 // What the Skills tab receives: built on the server from one operator's skills file, serializable, with descriptions already parsed.
@@ -45,9 +45,29 @@ export type OperatorSkillView = {
   terms: Record<string, SkillTermView>;
 };
 export type OperatorSkillRangeView = { direction: number; grids: { row: number; col: number }[] };
+export type BaseSkillStageView = {
+  buffId: string;
+  name: string;
+  /** building_data room type, such as TRADING; the interface names it. */
+  room: string;
+  /** building_data `skillIcon` id; its image is not inventoried yet. */
+  iconId: string;
+  color: string;
+  textColor: string;
+  unlock: SkillUnlock;
+  description: SkillDescriptionNode[];
+};
+/** One base skill slot: its stages in unlock order, each replacing the previous one. */
+export type OperatorBaseSkillView = {
+  slot: number;
+  stages: BaseSkillStageView[];
+  /** Glossary terms used by any stage, including terms nested inside other explanations. */
+  terms: Record<string, SkillTermView>;
+};
 /**
- * `status: "empty"` means the operator has no skills (the dataset file exists with `skills: []`), which the interface
- * shows as a message. A missing view (`null` from the loader) means the dataset has no entry for that operator and region.
+ * `status: "empty"` means the operator has no combat skills (the dataset file exists with `skills: []`), which the interface
+ * shows as a message; base skills are independent of it. A missing view (`null` from the loader) means the dataset has no
+ * entry for that operator and region.
  */
 export type OperatorSkillsView = {
   status: "available" | "empty";
@@ -57,6 +77,7 @@ export type OperatorSkillsView = {
   /** Only the ranges the skills use, as stored (range_table shape). */
   ranges: Record<string, OperatorSkillRangeView>;
   skills: OperatorSkillView[];
+  baseSkills: OperatorBaseSkillView[];
 };
 export type StoredSkillsProfile = Omit<OperatorSkillsProfile, "region"> & { region: string };
 export type StoredSkillsGlossary = { region: string; terms: Record<string, { name: string; description: string }> };
@@ -109,7 +130,15 @@ export function buildOperatorSkillsView(profile: StoredSkillsProfile, region: Ga
       terms: termsOf(expanded.map((level) => level.description), glossary),
     };
   });
-  return { status: skills.length ? "available" : "empty", operatorId: profile.operatorId, region, source, ranges: Object.fromEntries(Object.entries(ranges).sort(([a], [b]) => a.localeCompare(b, "en"))), skills };
+  const baseSkills = profile.baseSkills.map((slot): OperatorBaseSkillView => ({
+    slot: slot.slot,
+    stages: slot.stages.map((stage) => ({
+      buffId: stage.buffId, name: stage.name, room: stage.room, iconId: stage.icon, color: stage.color, textColor: stage.textColor, unlock: { ...stage.unlock },
+      description: parseSkillDescription(stage.description, []),
+    })),
+    terms: termsOf(baseSkillDescriptions([slot]), glossary),
+  }));
+  return { status: skills.length ? "available" : "empty", operatorId: profile.operatorId, region, source, ranges: Object.fromEntries(Object.entries(ranges).sort(([a], [b]) => a.localeCompare(b, "en"))), skills, baseSkills };
 }
 
 export type SkillsDatasetReaders = {

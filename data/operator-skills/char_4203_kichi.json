@@ -339,5 +339,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&share[001]",
+          "name": "Hard-Working Manager α",
+          "room": "TRADING",
+          "icon": "bskill_tra_share2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, other Operators working in the Trading Post have <@cc.vup>+10%</> order acquisition efficiency"
+        },
+        {
+          "buffId": "trade_ord_spd&share[002]",
+          "name": "Hard-Working Manager β",
+          "room": "TRADING",
+          "icon": "bskill_tra_share3",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, other Operators working in the Trading Post have <@cc.vup>+20%</> order acquisition efficiency"
+        }
+      ]
+    }
+  ]
 }

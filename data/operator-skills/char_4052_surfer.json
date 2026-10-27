@@ -328,5 +328,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd&sami[100]",
+          "name": "Networking Expert",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&blacksteel1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases Clue search speed by <@cc.vup>10%</>, and when assigned together with another <$cc.g.bs><@cc.kw>Blacksteel Worldwide</></> Operator, increases Clue search speed by an additional <@cc.vup>15%</> while self Morale loss per hour <@cc.vdown>+0.5</>"
+        },
+        {
+          "buffId": "meet_spd&sami[110]",
+          "name": "Information Gathering",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&blacksteel2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases Clue search speed by <@cc.vup>10%</>, and when assigned together with another <$cc.g.bs><@cc.kw>Blacksteel Worldwide</></> Operator, increases Clue search speed by an additional <@cc.vup>20%</>"
+        }
+      ]
+    }
+  ]
 }

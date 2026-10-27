@@ -306,5 +306,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd&addition[000]",
+          "name": "Technology Exchange α",
+          "room": "POWER",
+          "icon": "bskill_power_rec_spd&addition1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, drone recovery rate is <@cc.vup>+10%</> in the first hour and thereafter <@cc.vup>+1%</> per hour, up to <@cc.vup>+15%</>"
+        },
+        {
+          "buffId": "power_rec_spd&addition[001]",
+          "name": "Technology Exchange β",
+          "room": "POWER",
+          "icon": "bskill_power_rec_spd&addition2",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, drone recovery rate is <@cc.vup>+15%</> in the first hour and thereafter <@cc.vup>+1%</> per hour, up to <@cc.vup>+20%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_spd&cost[010]",
+          "name": "Take-Away Fruit Tarts",
+          "room": "POWER",
+          "icon": "bskill_pow_spd&cost",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, reduces the Morale consumed each hour by <@cc.vup>-0.3</>"
+        }
+      ]
+    }
+  ]
 }

@@ -582,5 +582,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_doubleProf[201]",
+          "name": "'Questions Should Be Exact'",
+          "room": "TRAINING",
+          "icon": "bskill_train_guard&supporter",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> and <@cc.kw>Supporter</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd_power_down[000]",
+          "name": "'Methods Should Be Effective'",
+          "room": "TRAINING",
+          "icon": "bskill_train_abyssal",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour <@cc.vdown>+1</>, and Operators' Specialization training speed <@cc.vup>+10%</> for each <$cc.g.abyssal><@cc.kw>Abyssal Hunter</></> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.kw>5</> Operators)"
+        }
+      ]
+    }
+  ]
 }

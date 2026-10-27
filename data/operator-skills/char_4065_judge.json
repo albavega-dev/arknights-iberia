@@ -537,5 +537,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_cost[210]",
+          "name": "Law Is Order",
+          "room": "HIRE",
+          "icon": "bskill_hire_skgoat2",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+50%</> and Morale consumed per hour <@cc.vdown>+0.5</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_hireToRecAll[000]",
+          "name": "Fellow Travelers",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_hireToRecAll1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.15</> Morale per hour to all Operators assigned to that Dormitory, and every recruit slot (excluding initial slot), restores another <@cc.vup>+0.05</> (Only the strongest stacked effect of this type takes place)"
+        }
+      ]
+    }
+  ]
 }

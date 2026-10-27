@@ -611,5 +611,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_doubleProf[000]",
+          "name": "Sword and Handcannon",
+          "room": "TRAINING",
+          "icon": "bskill_train_vanguard&sniper",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> and <@cc.kw>Sniper</> Operators' Specialization training speed<@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd_reduceTime[000]",
+          "name": "Mental Training",
+          "room": "TRAINING",
+          "icon": "bskill_train_reduceTime",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Training Room to train an Operator for <@cc.vup>5</> hours, that Operator's next training time <@cc.vup>-50%</> (effect expires if either Operator leaves the Training Room)"
+        }
+      ]
+    }
+  ]
 }

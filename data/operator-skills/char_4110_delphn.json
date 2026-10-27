@@ -364,5 +364,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd&clue2[260]",
+          "name": "Old Acquaintances, New Friends",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&glasgow",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>, and for every <@cc.vup>1</> contact made, increases the likelihood of obtaining <$cc.g.glasgow><@cc.kw>Glasgow Gang</></> clues (working time and recruit slots improve the likelihood)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_tra_limit&spd[010]",
+          "name": "Master Strategist",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_g_limit&spd",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, for <@cc.vup>each</> <$cc.g.glasgow><@cc.kw>Glasgow Gang</></> Operator assigned to the same Trading Post, order acquisition efficiency <@cc.vup>+10%</>"
+        }
+      ]
+    }
+  ]
 }

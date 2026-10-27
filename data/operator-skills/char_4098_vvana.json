@@ -575,5 +575,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_mp_cost[010]",
+          "name": "Marigold Poetry Gathering",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_cost",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_prod_fraction[000]",
+          "name": "The Candle Knight's Glimmer",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_fraction_knight",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, all <$cc.tag.knight><@cc.kw>Knight</></> Operators assigned to Factories gain productivity <@cc.vup>+7%</>"
+        }
+      ]
+    }
+  ]
 }

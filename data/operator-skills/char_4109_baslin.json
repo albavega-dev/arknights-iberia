@@ -368,5 +368,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_cost[101]",
+          "name": "Court Etiquette",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost5",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+10%</>, Morale consumed per hour <@cc.vup>-0.25</>"
+        },
+        {
+          "buffId": "hire_spd_cost[120]",
+          "name": "Authoritarian Envoy",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost6",
+          "color": "#565657",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+30%</>, Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "hire_spd_bd_n1_n1[300]",
+          "name": "Drawing the Heart's Voice",
+          "room": "HIRE",
+          "icon": "bskill_hire_bd_B",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, for every Recruit slot (Default slots do not count), <$cc.bd_B><@cc.rem>Soundless Resonance</></> <@cc.vup>+15</>"
+        }
+      ]
+    }
+  ]
 }

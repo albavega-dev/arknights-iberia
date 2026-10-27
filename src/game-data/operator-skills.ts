@@ -1,4 +1,4 @@
-import { findSkillDataGap, skillDataGaps, type SkillDataGap } from "./skill-data-gaps";
+import { baseSkillTextFixes, findSkillDataGap, fixBaseSkillText, skillDataGaps, type BaseSkillTextFix, type SkillDataGap } from "./skill-data-gaps";
 import { parseSkillDescription, type SkillBlackboardEntry, type SkillDescriptionNode } from "./skill-description";
 
 // Combat data of operator skills (H1-H3) extracted from skill_table, character_table and range_table.
@@ -40,11 +40,30 @@ export type OperatorSkill = {
   levels: SkillLevelData[];
 };
 export type ExpandedSkillLevel = { description: string; blackboard: SkillBlackboardEntry[] };
+
+// Base (infrastructure) skills from building_data: each slot lists its stages in unlock order, and a later stage replaces
+// the earlier one. Descriptions carry their values written in, so they have no blackboard.
+export type BaseSkillStage = {
+  buffId: string;
+  name: string;
+  /** building_data room type, such as TRADING or MANUFACTURE. */
+  room: string;
+  /** building_data `skillIcon` id. */
+  icon: string;
+  /** Source `buffColor` and `textColor`, as given. */
+  color: string;
+  textColor: string;
+  unlock: SkillUnlock;
+  description: string;
+};
+export type OperatorBaseSkill = { slot: number; stages: BaseSkillStage[] };
+
 export type OperatorSkillsProfile = {
   operatorId: string;
   region: string;
   skills: OperatorSkill[];
   ranges: Record<string, SkillRange>;
+  baseSkills: OperatorBaseSkill[];
 };
 
 type SourceLevel = {
@@ -56,6 +75,10 @@ type SourceUnlock = { unlockCond?: { phase?: string } };
 type SourceCharacter = { phases?: unknown[]; skills?: { skillId: string; unlockCond?: { phase?: string; level?: number }; levelUpCostCond?: SourceUnlock[] }[] | Record<string, never> | null; allSkillLvlup?: SourceUnlock[] };
 type SourceSkillTable = Record<string, { levels?: SourceLevel[] } | undefined>;
 type SourceRangeTable = Record<string, { direction: number; grids: { row: number; col: number }[] } | undefined>;
+type SourceBaseStage = { buffId: string; cond?: { phase?: string; level?: number } };
+/** An empty slot comes as `buffData: {}` instead of an empty list. */
+type SourceBuildingCharacter = { buffChar?: { buffData?: SourceBaseStage[] | Record<string, never> }[] };
+type SourceBuffTable = Record<string, { buffName: string; roomType: string; skillIcon: string; buffColor: string; textColor: string; description: string } | undefined>;
 
 const maxLevels = 10;
 const normalLevels = 7;
@@ -97,7 +120,7 @@ export function termIdsOf(description: string): string[] {
   return [...description.matchAll(/<\$([^<>\s]+)>/g)].map((match) => match[1]);
 }
 
-export function buildOperatorSkills(operatorId: string, region: string, character: SourceCharacter, skillTable: SourceSkillTable, rangeTable: SourceRangeTable, gaps: readonly SkillDataGap[] = skillDataGaps): OperatorSkillsProfile {
+export function buildOperatorSkills(operatorId: string, region: string, character: SourceCharacter, skillTable: SourceSkillTable, rangeTable: SourceRangeTable, gaps: readonly SkillDataGap[] = skillDataGaps): Omit<OperatorSkillsProfile, "baseSkills"> {
   const ranges: Record<string, SkillRange> = {};
   const skills = (Array.isArray(character.skills) ? character.skills : []).map((entry, skillIndex): OperatorSkill => {
     const source = skillTable[entry.skillId]?.levels;
@@ -135,7 +158,42 @@ export function buildOperatorSkills(operatorId: string, region: string, characte
   return { operatorId, region, skills, ranges: Object.fromEntries(Object.entries(ranges).sort(([a], [b]) => a.localeCompare(b, "en"))) };
 }
 
-export type GlossaryTable = Record<string, { termId?: string; termName: string; description: string } | undefined>;
+const descriptionTagPattern = /<[@$][^<>\s]*>|<\/>/g;
+
+/**
+ * Base skill slots in source order, without the empty ones. Stages keep their unlock order; a stage that unlocks earlier
+ * than the previous one, an unknown buff or a stray `<` or `>` left after the declared fixes is an error.
+ */
+export function buildOperatorBaseSkills(operatorId: string, building: SourceBuildingCharacter, buffs: SourceBuffTable, fixes: readonly BaseSkillTextFix[] = baseSkillTextFixes): OperatorBaseSkill[] {
+  const slots = (building.buffChar ?? []).map((slot) => {
+    if (Array.isArray(slot.buffData)) return slot.buffData;
+    if (slot.buffData && Object.keys(slot.buffData).length) throw new Error(`${operatorId}: unexpected base skill slot`);
+    return [];
+  }).filter((stages) => stages.length);
+  return slots.map((stages, index): OperatorBaseSkill => {
+    let previous = -1;
+    return {
+      slot: index + 1,
+      stages: stages.map((stage): BaseSkillStage => {
+        const buff = buffs[stage.buffId];
+        if (!buff) throw new Error(`${operatorId}: base skill ${stage.buffId} is missing from the buff table`);
+        const unlock = skillUnlock(operatorId, stage.buffId, stage.cond);
+        const order = unlock.elite * 1000 + unlock.level;
+        if (order < previous) throw new Error(`${operatorId}: base skill ${stage.buffId} unlocks before the stage it replaces`);
+        previous = order;
+        const description = fixBaseSkillText(stage.buffId, buff.description, fixes);
+        if (/[<>]/.test(description.replace(descriptionTagPattern, ""))) throw new Error(`${operatorId}: base skill ${stage.buffId} has a stray < or > in its description`);
+        return { buffId: stage.buffId, name: buff.buffName, room: buff.roomType, icon: buff.skillIcon, color: buff.buffColor, textColor: buff.textColor, unlock, description };
+      }),
+    };
+  });
+}
+
+export function baseSkillDescriptions(baseSkills: readonly OperatorBaseSkill[]): string[] {
+  return baseSkills.flatMap((slot) => slot.stages.map((stage) => stage.description));
+}
+
+export type GlossaryTable =Record<string, { termId?: string; termName: string; description: string } | undefined>;
 export type GlossaryEntry = { name: string; description: string };
 
 /** Glossary of the terms used by the given descriptions, including terms nested inside other explanations. */

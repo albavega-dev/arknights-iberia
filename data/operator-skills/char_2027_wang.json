@@ -623,5 +623,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_prod_tra_spd[000]",
+          "name": "Expedience",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_tra&prod",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, if <$cc.bd_wang_1><@cc.kw>Influence</></> is greater than or equal to <$cc.bd_wang_2><@cc.kw>Territory</></>, all Trading Posts' order efficiency <@cc.vup>+7%</>; if <$cc.bd_wang_2><@cc.kw>Territory</></> is greater than <$cc.bd_wang_1><@cc.kw>Influence</></>, all Factories' productivity <@cc.vup>+2%</> (Strongest effect of the same type applies)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd&level[000]",
+          "name": "Painstaking Effort",
+          "room": "TRAINING",
+          "icon": "bskill_train_spd&level",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, if training the skill to Specialization Level <@cc.vup>3</>, training speed will be increased by <@cc.vup>+70%</>"
+        }
+      ]
+    }
+  ]
 }

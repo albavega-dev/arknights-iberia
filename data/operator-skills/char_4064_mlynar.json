@@ -589,5 +589,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_mp_cost[008]",
+          "name": "Self-Absorbed",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_cost",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_mp_lonely[000]",
+          "name": "Business Is Business",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_lonely",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, working Operators in <$cc.c.room1><@cc.kw>certain facilities</></> will recover <@cc.vup>+0.1</> Morale per hour, and <$cc.c.skill><@cc.kw>some skills</></> in the Control Center will provide additional Morale recovery for Operators working in <$cc.c.room2><@cc.kw>other facilities</></>"
+        }
+      ]
+    }
+  ]
 }

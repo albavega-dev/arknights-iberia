@@ -327,5 +327,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[000]",
+          "name": "Standardization α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+15%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[201]",
+          "name": "Geology α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_originium1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Originium</> formula related productivity <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ]
 }

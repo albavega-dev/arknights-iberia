@@ -1,14 +1,14 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
-import { sharedFileName, skillsDatasetLimits, validateDatasetIndex, type DatasetFile, type DatasetIndex, type DatasetSharedFile, type DatasetSource } from "../src/game-data/operator-dataset";
-import { buildGlossary, buildOperatorSkills, skillDescriptions, type GlossaryEntry, type GlossaryTable, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
+import { gameDataBuildingTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
+import { sharedFileName, skillsDatasetContractVersion, skillsDatasetLimits, validateDatasetIndex, type DatasetFile, type DatasetIndex, type DatasetSharedFile, type DatasetSource } from "../src/game-data/operator-dataset";
+import { baseSkillDescriptions, buildGlossary, buildOperatorBaseSkills, buildOperatorSkills, skillDescriptions, type GlossaryEntry, type GlossaryTable, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { arg, exists, operatorDatasetFile, readCatalog, readJson, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
 
 export const skillsDatasetName = "operator-skills";
 const catalogSize = 432;
 const regions: readonly GameDataRegion[] = ["en", "cn"];
-const tables = ["character_table", "skill_table", "range_table", "gamedata_const"] as const;
+const tables = ["character_table", "skill_table", "range_table", "gamedata_const", "building_data"] as const;
 type SkillsTable = (typeof tables)[number];
 type HashTable = Readonly<Record<GameDataRegion, Readonly<Record<SkillsTable, string>>>>;
 
@@ -25,7 +25,7 @@ export type SkillsGeneratorOptions = Readonly<{
 export const glossaryFileName = (region: GameDataRegion) => `glossary-${region}`;
 
 function defaultHashes(): HashTable {
-  return Object.fromEntries(regions.map((region) => [region, { character_table: gameDataTableHashes[region].character_table, ...gameDataSkillTableHashes[region] }])) as unknown as HashTable;
+  return Object.fromEntries(regions.map((region) => [region, { character_table: gameDataTableHashes[region].character_table, ...gameDataSkillTableHashes[region], ...gameDataBuildingTableHashes[region] }])) as unknown as HashTable;
 }
 
 export function buildSkillsDataset(input: Readonly<Record<GameDataRegion, Readonly<Record<SkillsTable, unknown>>>>, catalog: ReadonlyMap<string, GameDataRegion>, hashes: HashTable): SkillsDataset {
@@ -35,12 +35,17 @@ export function buildSkillsDataset(input: Readonly<Record<GameDataRegion, Readon
     const characters = input[region].character_table as Record<string, Parameters<typeof buildOperatorSkills>[2] | undefined>;
     const skillTable = input[region].skill_table as Parameters<typeof buildOperatorSkills>[3];
     const rangeTable = input[region].range_table as Parameters<typeof buildOperatorSkills>[4];
+    const building = input[region].building_data as { chars?: Record<string, Parameters<typeof buildOperatorBaseSkills>[1] | undefined>; buffs?: Parameters<typeof buildOperatorBaseSkills>[2] };
+    if (!building.chars || !building.buffs) throw new Error(`The ${region} building data has no characters or buffs`);
     const descriptions: string[] = [];
     for (const operatorId of [...catalog].filter(([, value]) => value === region).map(([id]) => id).sort((a, b) => a.localeCompare(b, "en"))) {
       const character = characters[operatorId];
       if (!character) throw new Error(`Catalog operator ${operatorId} is missing from the ${region} character table`);
-      const profile = buildOperatorSkills(operatorId, region, character, skillTable, rangeTable);
+      const buildingCharacter = building.chars[operatorId];
+      if (!buildingCharacter) throw new Error(`Catalog operator ${operatorId} is missing from the ${region} building data`);
+      const profile: OperatorSkillsProfile = { ...buildOperatorSkills(operatorId, region, character, skillTable, rangeTable), baseSkills: buildOperatorBaseSkills(operatorId, buildingCharacter, building.buffs) };
       for (const skill of profile.skills) descriptions.push(...skillDescriptions(skill));
+      descriptions.push(...baseSkillDescriptions(profile.baseSkills));
       profiles.push(profile);
     }
     const dictionary = (input[region].gamedata_const as { termDescriptionDict?: GlossaryTable }).termDescriptionDict;
@@ -65,12 +70,12 @@ export function skillsDatasetFiles(dataset: SkillsDataset): { files: DatasetFile
 
 export async function writeSkillsDataset(directory: string, dataset: SkillsDataset, options: Readonly<{ force: boolean; limits?: Readonly<{ fileBytes: number; totalBytes: number }> }>) {
   const { files, shared } = skillsDatasetFiles(dataset);
-  return writeDatasetDirectory(directory, skillsDatasetName, dataset.sources, files, { force: options.force, limits: options.limits ?? skillsDatasetLimits, extras: { tables: dataset.tables, shared } });
+  return writeDatasetDirectory(directory, skillsDatasetName, dataset.sources, files, { force: options.force, limits: options.limits ?? skillsDatasetLimits, extras: { tables: dataset.tables, shared, contractVersion: skillsDatasetContractVersion } });
 }
 
 export async function readSkillsDataset(directory: string): Promise<{ index: DatasetIndex; profiles: OperatorSkillsProfile[]; glossaries: Record<string, SkillsGlossary> }> {
   const index = await readJson(join(directory, "index.json")) as DatasetIndex;
-  const errors = validateDatasetIndex(index);
+  const errors = validateDatasetIndex(index, skillsDatasetContractVersion);
   if (errors.length) throw new Error(`Invalid dataset index: ${errors.join("; ")}`);
   const profiles: OperatorSkillsProfile[] = [];
   for (const [operatorId, entry] of Object.entries(index.operators)) {

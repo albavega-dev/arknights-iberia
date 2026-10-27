@@ -401,5 +401,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all&tag[000]",
+          "name": "Veteran Cook",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_senshi",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.15</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place); if the target is a <$cc.tag.dungeon><@cc.kw>Laios's Party</></> Operator, restore an additional <@cc.vup>+0.15</> Morale"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_bd_dungeon[000]",
+          "name": "Senshi's Diner",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_bd_dungeon",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, provide <@cc.vup>1</> <$cc.bd_dungeon><@cc.rem>Monster Meal</></> for every level of the current Dormitory"
+        }
+      ]
+    }
+  ]
 }

@@ -2,5 +2,43 @@
   "operatorId": "char_4220_kormr",
   "region": "cn",
   "skills": [],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all[999]",
+          "name": "毛茸茸的抚慰",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_p3r",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻宿舍时，该宿舍内所有干员的心情每小时恢复<@cc.vup>+0.1</>（同种效果取最高）"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd&exchange[999]",
+          "name": "虎狼丸的报恩",
+          "room": "MEETING",
+          "icon": "bskill_meet_koromaru",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "进驻会客室时，处于线索交流时线索搜集速度提升<@cc.vup>30%</>"
+        }
+      ]
+    }
+  ]
 }

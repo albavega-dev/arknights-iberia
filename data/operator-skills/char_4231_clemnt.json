@@ -662,5 +662,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd&cost[110]",
+          "name": "谈判技巧",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&cost_clms",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻会客室时，线索搜集速度提升<@cc.vup>20%</>，心情每小时消耗<@cc.vdown>+1</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd&cost_char[000]",
+          "name": "合作原则",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&cost_char",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "与其他干员进驻会客室一起工作时，线索搜集速度提升<@cc.vup>15%</>，心情每小时消耗<@cc.vdown>+1</>"
+        }
+      ]
+    }
+  ]
 }

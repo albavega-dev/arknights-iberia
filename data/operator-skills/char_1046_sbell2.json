@@ -793,5 +793,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_cost&char[000]",
+          "name": "Saintess's Prestige",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost7",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>, Morale consumed per hour <@cc.vup>-0.25</>"
+        },
+        {
+          "buffId": "hire_spd_cost&char[001]",
+          "name": "Yearning for the Snow Realm",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&char1",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+35%</>, Morale consumed per hour <@cc.vup>-0.25</>; if <@cc.kw>SilverAsh the Reignfrost</> is assigned to the <@cc.kw>Control Center</>, HR contacting speed increases by a further <@cc.vup>+10%</>"
+        }
+      ]
+    }
+  ]
 }

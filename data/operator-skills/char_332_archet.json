@@ -496,5 +496,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&dorm&lv[000]",
+          "name": "Pious Fundraising α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&dorm1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+1%</> for every level of each Dormitory"
+        },
+        {
+          "buffId": "trade_ord_spd&dorm&lv[010]",
+          "name": "Pious Fundraising β",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&dorm2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+2%</> for every level of each Dormitory"
+        }
+      ]
+    }
+  ]
 }

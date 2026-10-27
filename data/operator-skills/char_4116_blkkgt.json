@@ -698,5 +698,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit[100]",
+          "name": "Intimidate",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit_down1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+20%</> and order limit <@cc.vdown>-2</> (minimum 1)"
+        },
+        {
+          "buffId": "trade_ord_spd&limit[101]",
+          "name": "Imposing Presence",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit_down2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+25%</> and order limit <@cc.vdown>-6</> (minimum 1)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_variable3[000]",
+          "name": "Champion's Bearing",
+          "room": "TRADING",
+          "icon": "bskill_tra_limit2spd",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, for every <@cc.vup>5</> order limit increase provided by Operators in the Trading Post, provides <@cc.vup>25%</> order acquisition efficiency, up to a maximum of <@cc.vup>100%</>"
+        }
+      ]
+    }
+  ]
 }

@@ -295,5 +295,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd&clue[010]",
+          "name": "Catastrophe Messenger α",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd2",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "hire_spd&clue[100]",
+          "name": "Empath's Insight",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&clue",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, increases HR contacting speed by <@cc.vup>+35%</>, and increases Clue collection speed in the Reception Room by <@cc.vup>+5%</> for each additional Recruitment slot (does not count default slots)."
+        }
+      ]
+    }
+  ]
 }

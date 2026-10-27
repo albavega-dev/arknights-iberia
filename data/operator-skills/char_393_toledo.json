@@ -295,5 +295,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_cost[113]",
+          "name": "拉拢听众",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost4",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+20%</>，心情每小时消耗<@cc.vup>-0.25</>"
+        },
+        {
+          "buffId": "hire_spd_cost[122]",
+          "name": "聚众宣讲",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&cost6",
+          "color": "#565657",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+30%</>，心情每小时消耗<@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_hireToRecAll[002]",
+          "name": "忠实拥趸",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_hireToRecAll2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻宿舍时，该宿舍内所有干员心情每小时恢复<@cc.vup>+0.1</>，同时每个招募位（不包含初始招募位）额外<@cc.vup>+0.05</>恢复效果（叠加后的最终值同种效果取最高）"
+        }
+      ]
+    }
+  ]
 }

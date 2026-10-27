@@ -110,5 +110,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[010]",
+          "name": "Vanguard Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_vanguard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Vanguard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit[000]",
+          "name": "Order Management α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+10%</> and the order limit <@cc.vup>+2</>"
+        }
+      ]
+    }
+  ]
 }

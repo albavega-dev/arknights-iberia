@@ -650,5 +650,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[004]",
+          "name": "Familiar Dispatch α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_marcille1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+20%</>"
+        },
+        {
+          "buffId": "manu_prod_spd[014]",
+          "name": "Familiar Dispatch β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_marcille2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_bd[400]",
+          "name": "Unexpectedly Delicious",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd_dungeon",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.vup>+1%</> productivity for every <@cc.vup>1</> <$cc.bd_dungeon><@cc.rem>Monster Meal</></>"
+        }
+      ]
+    }
+  ]
 }

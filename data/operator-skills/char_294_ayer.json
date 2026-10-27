@@ -362,5 +362,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd[000]",
+          "name": "Clue Search α",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</>"
+        },
+        {
+          "buffId": "meet_spd[020]",
+          "name": "Clue Search β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>20%</>"
+        }
+      ]
+    }
+  ]
 }

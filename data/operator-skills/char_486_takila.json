@@ -372,5 +372,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_long[000]",
+          "name": "Investment α",
+          "room": "TRADING",
+          "icon": "bskill_tra_long1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, if the amount of <@cc.kw>Pure Gold</> traded is higher than <@cc.kw>3</> (Defaulted trades do not count), increase the LMD gained by <@cc.kw>+250</>, and Morale consumed per hour is reduced by <@cc.vup>-0.25</>"
+        },
+        {
+          "buffId": "trade_ord_long[010]",
+          "name": "Investment β",
+          "room": "TRADING",
+          "icon": "bskill_tra_long2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, if the amount of <@cc.kw>Pure Gold</> traded is higher than <@cc.kw>3</> (Defaulted trades do not count), increase the LMD gained by <@cc.kw>+500</>, and Morale consumed per hour is reduced by <@cc.vup>-0.25</>"
+        }
+      ]
+    }
+  ]
 }

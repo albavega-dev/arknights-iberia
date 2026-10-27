@@ -328,5 +328,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_addition[041]",
+          "name": "Time-Lapse Photography",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_add2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+15%</> in the first hour and thereafter <@cc.vup>+2%</> per hour, up to <@cc.vup>+25%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_limit[0000]",
+          "name": "Editing α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_exp&limit1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit is increased by <@cc.vup>+12</> when producing <@cc.kw>Battle Records</>"
+        }
+      ]
+    }
+  ]
 }

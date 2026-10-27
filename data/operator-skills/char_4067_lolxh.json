@@ -351,5 +351,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_proc_cost[000]",
+          "name": "Spiritshaping: Metal",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_lolxh",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</> with a base Morale cost of <@cc.kw>8</>, byproduct production chance is increased by <@cc.vup>50%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_lolxh[000]",
+          "name": "Catform",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_cost_lolxh",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, any recipes with Morale cost of <@cc.kw>4</> or higher have their Morale cost divided by <@cc.vup>4</>"
+        }
+      ]
+    }
+  ]
 }

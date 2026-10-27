@@ -637,5 +637,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession2[052]",
+          "name": "Caster Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_caster1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession2[650]",
+          "name": "Pyral Psychopomp",
+          "room": "TRAINING",
+          "icon": "bskill_train3_caster2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Caster</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+65%</> if training the skill to Specialization Level <@cc.vup>3</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_cost&profession[350]",
+          "name": "Why Cry For Freedom?",
+          "room": "TRAINING",
+          "icon": "bskill_train_necras",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour <@cc.vdown>+1</> when training a <@cc.kw>Caster</> Operator's skill to Specialization Level <@cc.vup>3</>"
+        }
+      ]
+    }
+  ]
 }

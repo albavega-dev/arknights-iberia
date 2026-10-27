@@ -2,5 +2,43 @@
   "operatorId": "char_4215_buddy",
   "region": "cn",
   "skills": [],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single&tag[000]",
+          "name": "狩猎好帮手",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_buddy",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻宿舍时，使该宿舍内除自身以外心情未满的某个干员每小时恢复<@cc.vup>+0.55</>（同种效果取最高），如果目标是<$cc.tag.mh><@cc.kw>怪物猎人小队</></>成员和<$cc.tag.mh2><@cc.kw>泡影国狩猎小队</></>，则恢复效果额外<@cc.vup>+0.45</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd_notOwned_P[000]",
+          "name": "隐秘专家",
+          "room": "MEETING",
+          "icon": "bskill_meet_buddy",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "进驻会客室时，更容易获得线索板上尚未拥有的线索，若<@cc.kw>焰狐龙梓兰</>进驻控制中枢，则线索搜集速度提升<@cc.vup>10%</>"
+        }
+      ]
+    }
+  ]
 }

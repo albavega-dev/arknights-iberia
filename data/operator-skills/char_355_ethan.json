@@ -295,5 +295,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd[030]",
+          "name": "WRITER",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd4",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+40%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_oneself[030]",
+          "name": "Concealed Gourmet",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_one3",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, self Morale recovered <@cc.vup>+0.75</> per hour"
+        }
+      ]
+    }
+  ]
 }

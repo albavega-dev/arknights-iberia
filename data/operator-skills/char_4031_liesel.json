@@ -315,5 +315,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd&cost_condChar[020]",
+          "name": "Professional Manager α",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&cost_condChargoat",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, if no other Operators are working in the Reception Room, increases Clue search speed by <@cc.vup>15%</>, and Morale consumed per hour <@cc.vdown>+1</>"
+        },
+        {
+          "buffId": "meet_spd&cost_condChar[021]",
+          "name": "Professional Manager β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&cost_condChargoat2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, if no other Operators are working in the Reception Room, increases Clue search speed by <@cc.vup>35%</>, and Morale consumed per hour <@cc.vdown>+1</>"
+        }
+      ]
+    }
+  ]
 }

@@ -452,5 +452,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession2[040]",
+          "name": "Sniper Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_sniper1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession2[640]",
+          "name": "Patience",
+          "room": "TRAINING",
+          "icon": "bskill_train3_sniper2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>; if training this skill to Specialization Level <@cc.vup>3</>, training speed will be further increased by <@cc.vup>+65%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_cost&profession[340]",
+          "name": "Insipid",
+          "room": "TRAINING",
+          "icon": "bskill_train_w",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour is increased by <@cc.vdown>+1</> when training a <@cc.kw>Sniper</> Operator's skill to Specialization Level <@cc.vup>3</>"
+        }
+      ]
+    }
+  ]
 }

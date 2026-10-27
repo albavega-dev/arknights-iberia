@@ -597,5 +597,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_skill_spd1[000]",
+          "name": "Consciousness Agreement",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_skill_spd",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, provides an additional <@cc.vup>+5%</> productivity for every <$cc.sk.manu1><@cc.kw>Standardization Skill</></> in the same Factory"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[010]",
+          "name": "Standardization β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+25%</>"
+        }
+      ]
+    }
+  ]
 }

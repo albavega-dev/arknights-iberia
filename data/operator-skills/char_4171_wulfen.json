@@ -328,5 +328,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&limit&cost[300]",
+          "name": "Go-Getter",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&limit6",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, Productivity <@cc.vup>+20%</> and capacity limit <@cc.vdown>-8</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_limit&cost[1020]",
+          "name": "Storage Guru",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_limit&cost3",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+16</> and Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    }
+  ]
 }

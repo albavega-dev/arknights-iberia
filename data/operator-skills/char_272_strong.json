@@ -347,5 +347,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_limit_diff[000]",
+          "name": "Street Economics",
+          "room": "TRADING",
+          "icon": "bskill_tra_limit_diff",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, increases order acquisition efficiency by <@cc.vup>+4%</> for every difference of <@cc.vup>1</> order(s) between the current number of orders and the maximum number of orders"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_limit_count[000]",
+          "name": "Basic Needs",
+          "room": "TRADING",
+          "icon": "bskill_tra_limit_count",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, reduces the order limit by <@cc.vdown>-1</> for every <@cc.vup>10%</> order acquisition efficiency provided by all other Operators stationed at that Trading Post (to a minimum of 1); Furthermore, increases order acquisition efficiency by <@cc.vup>+4%</> for every <@cc.vup>1</> order(s) (<$cc.t.strong2><@cc.rem>Special Interaction Rules</></> apply with certain skills)"
+        }
+      ]
+    }
+  ]
 }

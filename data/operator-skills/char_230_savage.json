@@ -316,5 +316,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_formula_probability[000]",
+          "name": "Tech Theory",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_skill1",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Skill Summaries</>, the production rate of byproduct increases by <@cc.vup>70%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single&oneself[011]",
+          "name": "Cooking",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single&one12",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.35</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); furthermore, self Morale recovered per hour <@cc.vup>+0.35</>"
+        }
+      ]
+    }
+  ]
 }

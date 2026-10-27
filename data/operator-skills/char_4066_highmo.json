@@ -295,5 +295,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_skill_change[000]",
+          "name": "Consciousness Compatibility",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_skill_change",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, all <$cc.sk.manu2><@cc.kw>Rhine Lab</></> and <$cc.sk.manu3><@cc.kw>Pinus Sylvestris</></> skills in the Factory are considered <@cc.kw>Standardization</> skills"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[010]",
+          "name": "Standardization β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+25%</>"
+        }
+      ]
+    }
+  ]
 }

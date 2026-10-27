@@ -3,9 +3,9 @@ import { createHash } from "node:crypto";
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
-import { checkDatasetLimits, skillsDatasetLimits, validateDatasetIndex, type DatasetIndex } from "../src/game-data/operator-dataset";
-import { gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
-import { expandSkillLevel, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
+import { checkDatasetLimits, skillsDatasetContractVersion, skillsDatasetLimits, validateDatasetIndex, type DatasetIndex } from "../src/game-data/operator-dataset";
+import { gameDataBuildingTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
+import { expandSkillLevel, termIdsOf, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { findSkillDataGap } from "../src/game-data/skill-data-gaps";
 import { parseSkillDescription, type SkillDescriptionNode } from "../src/game-data/skill-description";
 
@@ -25,7 +25,7 @@ const unknownMarkers = (nodes: readonly SkillDescriptionNode[]): string[] => nod
 
 test("skills dataset index is valid and lists the same operators and regions as the stats dataset", async () => {
   const { index } = await readIndex(directory);
-  assert.deepEqual(validateDatasetIndex(index), []);
+  assert.deepEqual(validateDatasetIndex(index, skillsDatasetContractVersion), []);
   assert.equal(Object.keys(index.operators).length, expectedOperators);
   const stats = (await readIndex(statsDirectory)).index;
   assert.deepEqual(Object.fromEntries(Object.entries(index.operators).map(([id, entry]) => [id, entry.region])), Object.fromEntries(Object.entries(stats.operators).map(([id, entry]) => [id, entry.region])));
@@ -90,7 +90,7 @@ test("skills dataset pins the source revisions and tables and stays within its o
   for (const region of ["en", "cn"] as const) {
     assert.equal(index.sources[region].revision, gameDataRevisions[region]);
     assert.match(index.sources[region].revision, /^[0-9a-f]{40}$/);
-    const expectedHashes = { character_table: gameDataTableHashes[region].character_table, ...gameDataSkillTableHashes[region] };
+    const expectedHashes = { character_table: gameDataTableHashes[region].character_table, ...gameDataSkillTableHashes[region], ...gameDataBuildingTableHashes[region] };
     assert.deepEqual(Object.keys(index.tables?.[region] ?? {}).sort(), Object.keys(expectedHashes).sort());
     for (const [table, source] of Object.entries(index.tables?.[region] ?? {})) {
       assert.equal(source.revision, gameDataRevisions[region]);
@@ -111,4 +111,33 @@ test("every skill has a valid unlock and later slots never unlock earlier than p
       previous = skill.unlock.elite;
     }
   }
+});
+
+test("every catalog operator has base skills: stages in unlock order, one room per slot, known tags and glossary terms", async () => {
+  const { index } = await readIndex(directory);
+  const glossaries = Object.fromEntries(await Promise.all((["en", "cn"] as const).map(async (region) => [region, JSON.parse(await readFile(path.join(directory, `glossary-${region}.json`), "utf8")) as { terms: Record<string, unknown> }])));
+  let replaced = 0;
+  for (const profile of await readProfiles(index)) {
+    assert.ok(profile.baseSkills.length >= 1 && profile.baseSkills.length <= 2, `${profile.operatorId} base slots`);
+    profile.baseSkills.forEach((slot, position) => {
+      assert.equal(slot.slot, position + 1, `${profile.operatorId} base slot`);
+      assert.ok(slot.stages.length >= 1, `${profile.operatorId} slot ${slot.slot} stages`);
+      replaced += slot.stages.length - 1;
+      assert.equal(new Set(slot.stages.map((stage) => stage.room)).size, 1, `${profile.operatorId} slot ${slot.slot} changes room`);
+      slot.stages.forEach((stage, at) => {
+        assert.ok([0, 1, 2].includes(stage.unlock.elite) && stage.unlock.level >= 1, `${stage.buffId} unlock`);
+        if (at > 0) {
+          const before = slot.stages[at - 1].unlock;
+          assert.ok(stage.unlock.elite > before.elite || (stage.unlock.elite === before.elite && stage.unlock.level > before.level), `${stage.buffId} replaces an earlier stage`);
+        }
+        assert.match(stage.color, /^#[0-9a-f]{6}$/i);
+        assert.match(stage.textColor, /^#[0-9a-f]{6}$/i);
+        assert.deepEqual(unknownMarkers(parseSkillDescription(stage.description, [])), [], `${stage.buffId} markers`);
+        for (const [, tag] of stage.description.matchAll(/<(@[^<>\s]*)>/g)) assert.equal(parseSkillDescription(`<${tag}>x</>`, [])[0].type, "style", `${stage.buffId} tag ${tag}`);
+        assert.doesNotMatch(stage.description.replace(/<[@$][^<>\s]*>|<\/>/g, ""), /[<>]/, `${stage.buffId} stray < or >`);
+        for (const term of termIdsOf(stage.description)) assert.ok(glossaries[profile.region].terms[term], `${stage.buffId} term ${term}`);
+      });
+    });
+  }
+  assert.equal(replaced, 169, "168 slots replace a stage, one of them twice");
 });

@@ -485,5 +485,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_mp_cost&bd2[010]",
+          "name": "Endurance Recovery",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_cost_felyne",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, self Morale loss per hour <@cc.vdown>+0.5</>, <$cc.bd_felyne><@cc.rem>Felvine</></> <@cc.vup>+8</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_token_prod_spd2[000]",
+          "name": "Leading By Example",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_token_p_spd2",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned together with other <$cc.tag.mh><@cc.kw>Soubo Adventurers</></> Operators to the Control Center, all Factories' productivity <@cc.vup>+2%</> (Only the strongest effect of this type takes place)"
+        }
+      ]
+    }
+  ]
 }

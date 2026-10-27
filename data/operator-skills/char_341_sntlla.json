@@ -370,5 +370,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single_power[000]",
+          "name": "Born of the Biting Cold",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single_sami",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.55</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); if the target is a <$cc.g.sm><@cc.kw>Sami</></> Operator, further increases Morale restored by <@cc.vup>+0.45</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd_power[000]",
+          "name": "Snowpriest Candidate",
+          "room": "TRAINING",
+          "icon": "bskill_train_sami",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed <@cc.vup>+10%</> for each <$cc.g.sm><@cc.kw>Sami</></> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.kw>3</> Operators)"
+        }
+      ]
+    }
+  ]
 }

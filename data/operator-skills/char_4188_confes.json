@@ -2,5 +2,43 @@
   "operatorId": "char_4188_confes",
   "region": "en",
   "skills": [],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[006]",
+          "name": "Now Charging",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_spd_ext&faction[000]",
+          "name": "Now Under Maintenance",
+          "room": "POWER",
+          "icon": "bskill_power_rec_spd_ext&faction",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to a Power Plant, if another <$cc.g.laterano><@cc.kw>Laterano</></> Operator is assigned to a Power Plant, drone charging speed <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ]
 }

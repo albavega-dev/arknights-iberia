@@ -474,5 +474,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_powToRecAll[000]",
+          "name": "Glimmering Glow α",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_powToRecAll1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.1</> Morale per hour to all Operators assigned to that Dormitory, and every <@cc.kw>1</> Power Plant increases restoration by another <@cc.vup>+0.05</> (Only the strongest stacked effect of this type takes place)"
+        },
+        {
+          "buffId": "dorm_powToRecAll[010]",
+          "name": "Glimmering Glow β",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_powToRecAll2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.15</> Morale per hour to all Operators assigned to that Dormitory, and every <@cc.kw>1</> Power Plant increases restoration by another <@cc.vup>+0.05</> (Only the strongest stacked effect of this type takes place)"
+        }
+      ]
+    }
+  ]
 }

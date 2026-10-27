@@ -317,5 +317,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&gold[000]",
+          "name": "Logistics Planning α",
+          "room": "TRADING",
+          "icon": "bskill_tra_flow_gs1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+5%</>; Furthermore, increase order acquisition efficiency by an additional <@cc.vup>+15%</> for every <@cc.kw>4</> <$cc.t.flow_gold><@cc.kw>Pure Gold Production Line</></>"
+        },
+        {
+          "buffId": "trade_ord_spd&gold[010]",
+          "name": "Logistics Planning β",
+          "room": "TRADING",
+          "icon": "bskill_tra_flow_gs2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+5%</>; Furthermore, increase order acquisition efficiency by an additional <@cc.vup>+15%</> for every <@cc.kw>2</> <$cc.t.flow_gold><@cc.kw>Pure Gold Production Line</></>"
+        }
+      ]
+    }
+  ]
 }

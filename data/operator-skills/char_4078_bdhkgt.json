@@ -339,5 +339,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_bd_to_bd[000]",
+          "name": "Ancient Witchcraft",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_bd1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, every <@cc.vup>5</> <$cc.bd_b1><@cc.rem>Worldly Plight</></> is converted to <@cc.vup>1</> <$cc.bd_C><@cc.rem>Witchcraft Crystal</></>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_bd[200]",
+          "name": "Always on the Move",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd5",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, for every <@cc.vup>1</> <$cc.bd_C><@cc.rem>Witchcraft Crystal</></>, productivity <@cc.vup>+1%</>"
+        },
+        {
+          "buffId": "manu_prod_spd_bd[201]",
+          "name": "Of Death and Rebirth",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd6",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, for every <@cc.vup>1</> <$cc.bd_C><@cc.rem>Witchcraft Crystal</></>, productivity <@cc.vup>+2%</>"
+        }
+      ]
+    }
+  ]
 }

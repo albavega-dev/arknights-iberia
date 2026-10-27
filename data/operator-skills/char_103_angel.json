@@ -461,5 +461,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd[010]",
+          "name": "Penguin Logistics α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+20%</>"
+        },
+        {
+          "buffId": "trade_ord_spd[020]",
+          "name": "Logistics Expert",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd3",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+35%</>"
+        }
+      ]
+    }
+  ]
 }

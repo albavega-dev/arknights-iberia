@@ -2,5 +2,43 @@
   "operatorId": "char_502_nblade",
   "region": "en",
   "skills": [],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[000]",
+          "name": "Standardization α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+15%</>"
+        }
+      ]
+    }
+  ]
 }

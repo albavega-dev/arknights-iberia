@@ -496,5 +496,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd&sami[000]",
+          "name": "Icefield Navigation",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&sami",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases Clue search speed by <@cc.vup>10%</>, and when assigned together with another <$cc.g.sm><@cc.kw>Sami</></> Operator, increases Clue search speed by an additional <@cc.vup>5%</> while self Morale loss per hour <@cc.vdown>+0.5</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd&profession3[170]",
+          "name": "Combat Techniques: Besieger",
+          "room": "TRAINING",
+          "icon": "bskill_train_siegesniper",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Besieger</>, training speed will be further increased by <@cc.vup>+45%</>"
+        }
+      ]
+    }
+  ]
 }

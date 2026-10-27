@@ -519,5 +519,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_mp_cost&faction[990]",
+          "name": "Team Rainbow",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_r6",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, each Operator from <$cc.g.R6><@cc.kw>Team Rainbow</></> increases the Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_mp_bd[000]",
+          "name": "Intelligence Reserve",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_ash",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, for each <$cc.g.R6><@cc.kw>Team Rainbow</></> Operator, <$cc.bd_ash><@cc.rem>Intelligence Reserve</></><@cc.vup>+1</>"
+        }
+      ]
+    }
+  ]
 }

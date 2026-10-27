@@ -630,5 +630,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_skill_limit[000]",
+          "name": "Explorer's Backpack",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_limit1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, gain <@cc.vup>+5</> Storage Capacity for each <$cc.sk.manu2><@cc.kw>Rhine Tech-type</></> skill in that Factory"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[011]",
+          "name": "Rhine Tech β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+25%</>"
+        }
+      ]
+    }
+  ]
 }

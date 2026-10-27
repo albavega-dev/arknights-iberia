@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { buildGlossary, buildOperatorSkills, expandSkillLevel, reachableSkillLevels, skillDescriptions, skillLevelLabel, termIdsOf } from "../src/game-data/operator-skills";
-import { absentValueDisplay, findSkillDataGap, skillDataGaps } from "../src/game-data/skill-data-gaps";
+import { baseSkillDescriptions, buildGlossary, buildOperatorBaseSkills, buildOperatorSkills, expandSkillLevel, reachableSkillLevels, skillDescriptions, skillLevelLabel, termIdsOf } from "../src/game-data/operator-skills";
+import { absentValueDisplay, baseSkillTextFixes, findSkillDataGap, fixBaseSkillText, skillDataGaps } from "../src/game-data/skill-data-gaps";
 
 const level = (description = "Deals <@ba.vup>{atk_scale:0%}</> damage", extra: Record<string, unknown> = {}) => ({
   name: "Skill", rangeId: null, description, skillType: "MANUAL", durationType: "NONE", duration: 10,
@@ -113,6 +113,47 @@ test("known data gaps live in one list and are looked up by skill and key", () =
   assert.equal(findSkillDataGap("skchr_zebra_1", "atk"), undefined);
   assert.equal(findSkillDataGap("skchr_other", "duration"), undefined);
   assert.equal(absentValueDisplay, "—");
+});
+
+const buffs = {
+  "a[0]": { buffName: "Alpha", roomType: "TRADING", skillIcon: "bskill_a", buffColor: "#0075a9", textColor: "#ffffff", description: "Orders <@cc.vup>+20%</>" },
+  "a[1]": { buffName: "Beta", roomType: "TRADING", skillIcon: "bskill_b", buffColor: "#0075a9", textColor: "#ffffff", description: "Orders <@cc.vup>+35%</>" },
+  "s[0]": { buffName: "Stray", roomType: "HIRE", skillIcon: "bskill_s", buffColor: "#565656", textColor: "#ffffff", description: "Slots <<$cc.x><@cc.rem>X</></>" },
+};
+const baseStage = (buffId: string, phase: string, level = 1) => ({ buffId, cond: { phase, level } });
+
+test("base skills keep slots in order without empty ones, and stages in unlock order", () => {
+  const slots = buildOperatorBaseSkills("char_x", { buffChar: [{ buffData: [baseStage("a[0]", "PHASE_0"), baseStage("a[1]", "PHASE_2")] }, { buffData: {} }] }, buffs);
+  assert.deepEqual(slots, [{ slot: 1, stages: [
+    { buffId: "a[0]", name: "Alpha", room: "TRADING", icon: "bskill_a", color: "#0075a9", textColor: "#ffffff", unlock: { elite: 0, level: 1 }, description: "Orders <@cc.vup>+20%</>" },
+    { buffId: "a[1]", name: "Beta", room: "TRADING", icon: "bskill_b", color: "#0075a9", textColor: "#ffffff", unlock: { elite: 2, level: 1 }, description: "Orders <@cc.vup>+35%</>" },
+  ] }]);
+  assert.deepEqual(baseSkillDescriptions(slots), ["Orders <@cc.vup>+20%</>", "Orders <@cc.vup>+35%</>"]);
+  const level30 = buildOperatorBaseSkills("char_x", { buffChar: [{ buffData: [baseStage("a[0]", "PHASE_0"), baseStage("a[1]", "PHASE_0", 30)] }] }, buffs);
+  assert.deepEqual(level30[0].stages.map((item) => item.unlock), [{ elite: 0, level: 1 }, { elite: 0, level: 30 }]);
+  assert.deepEqual(buildOperatorBaseSkills("char_x", {}, buffs), []);
+});
+
+test("base skills reject unknown buffs, invalid or backward unlocks and unexpected slots", () => {
+  assert.throws(() => buildOperatorBaseSkills("char_x", { buffChar: [{ buffData: [baseStage("zz[0]", "PHASE_0")] }] }, buffs), /zz\[0\] is missing from the buff table/);
+  assert.throws(() => buildOperatorBaseSkills("char_x", { buffChar: [{ buffData: [baseStage("a[0]", "PHASE_3")] }] }, buffs), /no valid unlock/);
+  assert.throws(() => buildOperatorBaseSkills("char_x", { buffChar: [{ buffData: [baseStage("a[1]", "PHASE_2"), baseStage("a[0]", "PHASE_0")] }] }, buffs), /unlocks before the stage it replaces/);
+  assert.throws(() => buildOperatorBaseSkills("char_x", { buffChar: [{ buffData: { 0: baseStage("a[0]", "PHASE_0") } as never }] }, buffs), /unexpected base skill slot/);
+});
+
+test("a stray < in a base skill description fails unless a declared fix removes it, and a stale fix fails", () => {
+  const building = { buffChar: [{ buffData: [baseStage("s[0]", "PHASE_2")] }] };
+  assert.throws(() => buildOperatorBaseSkills("char_x", building, buffs, []), /s\[0\] has a stray < or >/);
+  const fix = { buffId: "s[0]", operatorId: "char_x", find: "<<$cc.x>", replace: "<$cc.x>", note: "", source: "https://example.org", checked: "2026-10-27" };
+  assert.equal(buildOperatorBaseSkills("char_x", building, buffs, [fix])[0].stages[0].description, "Slots <$cc.x><@cc.rem>X</></>");
+  assert.throws(() => fixBaseSkillText("a[0]", buffs["a[0]"].description, [{ ...fix, buffId: "a[0]" }]), /no longer matches/);
+  assert.equal(fixBaseSkillText("a[0]", "Text", [fix]), "Text");
+});
+
+test("the Mulberry fix is the only declared base skill fix and cites its source", () => {
+  assert.deepEqual(baseSkillTextFixes.map((fix) => [fix.buffId, fix.operatorId]), [["hire_spd_bd_n1_n1[200]", "char_473_mberry"]]);
+  assert.match(baseSkillTextFixes[0].source, /^https:\/\/prts\.wiki\//);
+  assert.match(baseSkillTextFixes[0].checked, /^\d{4}-\d{2}-\d{2}$/);
 });
 
 test("glossary collects used terms and the terms nested in their explanations", () => {

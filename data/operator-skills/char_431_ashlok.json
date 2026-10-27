@@ -293,5 +293,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd[002]",
+          "name": "Pinus Sylvestris α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+15%</>"
+        },
+        {
+          "buffId": "manu_prod_spd[012]",
+          "name": "Pinus Sylvestris β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+25%</>"
+        }
+      ]
+    }
+  ]
 }

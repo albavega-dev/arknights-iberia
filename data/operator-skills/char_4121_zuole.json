@@ -592,5 +592,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd[001]",
+          "name": "Master of Everything α",
+          "room": "TRAINING",
+          "icon": "bskill_train_all",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed <@cc.vup>+25%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd_bd&reduceTime[000]",
+          "name": "Think Before Acting",
+          "room": "TRAINING",
+          "icon": "bskill_train_accmu_guard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer of the Training Room, for every 1 Specialization training session completed, <$cc.t.accmuguard1><@cc.rem>Martial Arts</></> is accumulated. When <$cc.t.accmuguard1><@cc.rem>Martial Arts</></> reaches its cap, the next <@cc.kw>Guard</> Operator's skill Specialization training to level <@cc.kw>1</> is completed immediately, and all <$cc.t.accmuguard1><@cc.rem>Martial Arts</></> is removed."
+        }
+      ]
+    }
+  ]
 }

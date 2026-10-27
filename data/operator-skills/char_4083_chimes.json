@@ -317,5 +317,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_cost&bd2[000]",
+          "name": "Hell and High Water",
+          "room": "TRADING",
+          "icon": "bskill_tra_bd_cost1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, Morale loss of Operators in the Trading Post <@cc.vup>-0.1</> per hour, with an additional <@cc.vup>-0.01</> for every <@cc.vup>10</> <$cc.bd_b1><@cc.rem>Worldly Plight</></>"
+        },
+        {
+          "buffId": "trade_cost&bd2[001]",
+          "name": "Distant Letter",
+          "room": "TRADING",
+          "icon": "bskill_tra_bd_cost2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, Morale loss of Operators in the Trading Post <@cc.vup>-0.1</> per hour, with an additional <@cc.vup>-0.02</> for every <@cc.vup>10</> <$cc.bd_b1><@cc.rem>Worldly Plight</></>"
+        }
+      ]
+    }
+  ]
 }

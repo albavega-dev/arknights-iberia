@@ -374,5 +374,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd&cost[000]",
+          "name": "Clue Search α",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</>"
+        },
+        {
+          "buffId": "meet_spd&cost[100]",
+          "name": "Logical Deduction",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&cost",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases Clue search speed by <@cc.vup>35%</>, and Morale consumed per hour by <@cc.vdown>+2</>"
+        }
+      ]
+    }
+  ]
 }

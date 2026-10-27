@@ -540,5 +540,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[214]",
+          "name": "源岩解析",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_originium2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻制造站时，<@cc.kw>源石</>类配方的生产力<@cc.vup>+35%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_device[050]",
+          "name": "DIY·源岩",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_orirock",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻加工站加工<@cc.kw>源岩</>类材料时，副产品的产出概率提升<@cc.vup>90%</>"
+        }
+      ]
+    }
+  ]
 }

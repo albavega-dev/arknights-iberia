@@ -581,5 +581,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_allCost_condChar[000]",
+          "name": "Moment of Respite",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_lda",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned together with <@cc.kw>Aak</> to the Control Center, increases Morale recovery per hour of all Operators in the Control Center by <@cc.vup>+0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_upMeetingSpeed[000]",
+          "name": "Worldly Insight",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_spd",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, clue collection speed <@cc.vup>+25%</> (Only the strongest effect of this type takes place)."
+        }
+      ]
+    }
+  ]
 }

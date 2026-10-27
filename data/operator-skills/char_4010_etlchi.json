@@ -518,5 +518,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_hireToRecAll[001]",
+          "name": "Flawless Heart α",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_hireToRecAll2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.1</> Morale per hour to all Operators assigned to that Dormitory, and every recruit slot (excluding initial slot), restores another <@cc.vup>+0.05</> (Only the strongest stacked effect of this type takes place)"
+        },
+        {
+          "buffId": "dorm_hireToRecAll[021]",
+          "name": "Flawless Heart β",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_hireToRecAll3",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.1</> Morale per hour to all Operators assigned to that Dormitory, and every recruit slot (excluding initial slot), restores another <@cc.vup>+0.1</> (Only the strongest stacked effect of this type takes place)"
+        }
+      ]
+    }
+  ]
 }

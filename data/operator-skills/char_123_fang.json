@@ -102,5 +102,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_addition[030]",
+          "name": "Hothead",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_add1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+20%</> in the first hour and thereafter <@cc.vup>+1%</> per hour, up to <@cc.vup>+25%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd[001]",
+          "name": "Order Distribution β",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ]
 }

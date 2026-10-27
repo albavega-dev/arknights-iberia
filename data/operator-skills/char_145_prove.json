@@ -284,5 +284,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd[010]",
+          "name": "Catastrophe Messenger α",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd2",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "hire_spd[011]",
+          "name": "Catastrophe Messenger β",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd5",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+45%</>"
+        }
+      ]
+    }
+  ]
 }

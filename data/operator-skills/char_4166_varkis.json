@@ -306,5 +306,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_meeting&mp_cost[000]",
+          "name": "Pride of a Hero α",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_minos",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, clue collection speed <@cc.vup>+4%</> for each <$cc.g.minos><@cc.kw>Minos</></> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.vup>+20%</>, strongest effect of the same type applies); when assigned together with <$cc.g.sargon><@cc.kw>Sargon</></> Operators, self Morale loss per hour <@cc.vdown>+0.02</>"
+        },
+        {
+          "buffId": "control_meeting&mp_cost[100]",
+          "name": "Pride of a Hero β",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_minos2",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, clue collection speed <@cc.vup>+5%</> for each <$cc.g.minos><@cc.kw>Minos</></> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.vup>+25%</>, strongest effect of the same type applies); when assigned together with <$cc.g.sargon><@cc.kw>Sargon</></> Operators, self Morale loss per hour <@cc.vdown>+0.02</>"
+        }
+      ]
+    }
+  ]
 }

@@ -383,5 +383,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd[000]",
+          "name": "Order Distribution α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+20%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&tag[020]",
+          "name": "'The Best of Students!'",
+          "room": "TRADING",
+          "icon": "bskill_ord_spd&tag2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, for every facility in the Base with a <$cc.g.sui><@cc.kw>Sui</></> Operator assigned (excluding Assistants and Activity Rooms), order acquisition efficiency <@cc.vup>+4%</> (max <@cc.kw>5</> facilities)"
+        }
+      ]
+    }
+  ]
 }

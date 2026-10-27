@@ -130,9 +130,9 @@ test("the loader checks id and region against the index before reading any file"
   assert.equal(await loadOperatorSkillsView(readers, "char_4218_aigis", "en"), null);
   assert.equal(await loadOperatorSkillsView(readers, "char_9999_missing", "en"), null);
   assert.equal(reads, before);
-  const wrongFile: SkillsDatasetReaders = { ...readers, readProfile: async () => ({ operatorId: "char_003_kalts", region: "en", skills: [], ranges: {} }) };
+  const wrongFile: SkillsDatasetReaders = { ...readers, readProfile: async () => ({ operatorId: "char_003_kalts", region: "en", skills: [], ranges: {}, baseSkills: [] }) };
   assert.equal(await loadOperatorSkillsView(wrongFile, "char_002_amiya", "en"), null);
-  const wrongRegion: SkillsDatasetReaders = { ...readers, readProfile: async () => ({ operatorId: "char_002_amiya", region: "cn", skills: [], ranges: {} }) };
+  const wrongRegion: SkillsDatasetReaders = { ...readers, readProfile: async () => ({ operatorId: "char_002_amiya", region: "cn", skills: [], ranges: {}, baseSkills: [] }) };
   assert.equal(await loadOperatorSkillsView(wrongRegion, "char_002_amiya", "en"), null);
 });
 
@@ -194,4 +194,60 @@ test("duration kinds follow the source values: seconds, instant, unlimited, ammo
 test("mastery levels carry their rank icon and normal levels none", async () => {
   const [h1] = (await load("char_002_amiya", "en")).skills;
   assert.deepEqual(h1.levels.map((level) => level.icon?.src ?? null), [null, null, null, null, null, null, null, "/assets/operator-skill-mastery/m-1.png", "/assets/operator-skill-mastery/m-2.png", "/assets/operator-skill-mastery/m-3.png"]);
+});
+
+const stagesOf = (view: OperatorSkillsView) => view.baseSkills.map((slot) => [slot.slot, slot.stages.map((stage) => [stage.buffId, stage.room, stage.unlock.elite, stage.unlock.level])]);
+
+test("Amiya (EN) has two base skills: Control Center at E0 and Dormitory at E2, with parsed descriptions", async () => {
+  const view = await load("char_002_amiya", "en");
+  assert.deepEqual(stagesOf(view), [[1, [["control_tra_spd[000]", "CONTROL", 0, 1]]], [2, [["dorm_rec_all[010]", "DORMITORY", 2, 1]]]]);
+  const [agreement] = view.baseSkills[0].stages;
+  assert.equal(agreement.name, "Agreement");
+  assert.equal(agreement.iconId, "bskill_ctrl_t_spd");
+  assert.deepEqual([agreement.color, agreement.textColor], ["#005752", "#ffffff"]);
+  assert.match(textOf(agreement.description), /\+7%/);
+  assert.ok(agreement.description.some((node) => node.type === "style" && node.tone === "increase"));
+});
+
+test("Exusiai (EN) replaces Penguin Logistics α with Logistics Expert at E2 in the same Trading Post slot", async () => {
+  const view = await load("char_103_angel", "en");
+  assert.deepEqual(stagesOf(view), [[1, [["trade_ord_spd[010]", "TRADING", 0, 1], ["trade_ord_spd[020]", "TRADING", 2, 1]]]]);
+  assert.deepEqual(view.baseSkills[0].stages.map((stage) => stage.name), ["Penguin Logistics α", "Logistics Expert"]);
+});
+
+test("the only three-stage slot (char_188_helage) keeps E0, E1 and E2 in order, and its decrease values get the decrease tone", async () => {
+  const view = await load("char_188_helage", "en");
+  assert.deepEqual(stagesOf(view), [
+    [1, [["dorm_rec_all&oneself[010]", "DORMITORY", 0, 1], ["dorm_rec_all&oneself[011]", "DORMITORY", 1, 1], ["dorm_rec_all&oneself[012]", "DORMITORY", 2, 1]]],
+    [2, [["workshop_formula_probability[010]", "WORKSHOP", 0, 1]]],
+  ]);
+  const durin = await load("char_501_durin", "en");
+  const tones = (nodes: readonly SkillDescriptionNode[]): string[] => nodes.flatMap((node) => node.type === "style" ? [node.tone, ...tones(node.children)] : []);
+  assert.ok(tones(durin.baseSkills[0].stages[0].description).includes("decrease"));
+});
+
+test("a CN-only operator reads its CN base skills, including the CN-only recycling room", async () => {
+  const view = await load("char_4232_hbound", "cn");
+  assert.deepEqual(stagesOf(view), [[1, [["recycle_spd&cost[000]", "RECYCLE", 0, 1], ["recycle_spd&cost[010]", "RECYCLE", 2, 1]]], [2, [["workshop_formula_device[080]", "WORKSHOP", 2, 1]]]]);
+  assert.equal(view.baseSkills[0].stages[0].name, "拾荒者");
+  for (const slot of view.baseSkills) for (const stage of slot.stages) assert.deepEqual(unknownMarkers(stage.description), []);
+});
+
+test("a 1-star operator without combat skills still has base skills, one unlocked at E0 level 30", async () => {
+  const view = await load("char_285_medic2", "en");
+  assert.equal(view.status, "empty");
+  assert.deepEqual(stagesOf(view), [[1, [["power_rec_spd[000]", "POWER", 0, 1]]], [2, [["dorm_rec_single[000]", "DORMITORY", 0, 30]]]]);
+});
+
+test("base skill terms come from the region glossary, and Mulberry's term is a real term after the fix", async () => {
+  const view = await load("char_473_mberry", "en");
+  const stage = view.baseSkills.flatMap((slot) => slot.stages).find((item) => item.buffId === "hire_spd_bd_n1_n1[200]");
+  assert.ok(stage);
+  assert.doesNotMatch(textOf(stage.description), /</);
+  const term = stage.description.find((node) => node.type === "style" && node.termId === "cc.bd_b1");
+  assert.ok(term, "the Worldly Plight term is parsed");
+  const slot = view.baseSkills.find((item) => item.stages.includes(stage))!;
+  assert.equal(slot.terms["cc.bd_b1"].name, "Worldly Plight");
+  const profile = await readJson<StoredSkillsProfile>("operator-skills/char_473_mberry.json");
+  assert.throws(() => buildOperatorSkillsView(profile, "en", index.sources.en, { region: "en", terms: {} }, () => null), /Glossary term/);
 });

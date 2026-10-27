@@ -284,5 +284,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_team[070]",
+          "name": "Sound of the Wind",
+          "room": "MEETING",
+          "icon": "bskill_meet_glasgow1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, the likelihood of obtaining <@cc.kw>Glasgow</> clues is increased (working time improves the likelihood)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_flag[070]",
+          "name": "Information Collation",
+          "room": "MEETING",
+          "icon": "bskill_meet_flag_glasgow",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, every time that a non-<@cc.kw>Glasgow</> clue is collected, the likelihood of obtaining <@cc.kw>Glasgow</> clues is increased (working time improves the likelihood)"
+        }
+      ]
+    }
+  ]
 }

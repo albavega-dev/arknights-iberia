@@ -630,5 +630,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_hire_spd_all[000]",
+          "name": "办公室年度人物",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_orchd2",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻控制中枢时，人力办公室联络速度<@cc.vup>+10%</>（同种效果取最高）"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit_tag[000]",
+          "name": "队长的自觉",
+          "room": "TRADING",
+          "icon": "bskill_tra_orchd2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻贸易站时，订单上限<@cc.vup>+3</>，且每有一个<$cc.tag.mh2><@cc.kw>泡影国狩猎小队</></>干员进驻贸易站，订单获取效率<@cc.vup>+20%</>"
+        }
+      ]
+    }
+  ]
 }

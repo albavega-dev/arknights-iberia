@@ -306,5 +306,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd&cost[001]",
+          "name": "Clean Breeze",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_gold4",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Precious Metal</> productivity <@cc.vup>+25%</>, and Morale consumed per hour <@cc.vdown>+0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_addition[100]",
+          "name": "Routine Cleaning",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_add3",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity per hour <@cc.vup>+2%</>, up to <@cc.vup>+20%</>."
+        }
+      ]
+    }
+  ]
 }

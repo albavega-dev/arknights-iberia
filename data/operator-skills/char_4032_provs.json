@@ -401,5 +401,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_law[000]",
+          "name": "Contract Law",
+          "room": "TRADING",
+          "icon": "bskill_tra_law",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, if the amount of <@cc.kw>Pure Gold</> traded is less than <@cc.kw>4</>, it will be considered a <@cc.kw>Defaulted trade</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_against[000]",
+          "name": "Damages for Breach α",
+          "room": "TRADING",
+          "icon": "bskill_tra_against",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, if a <@cc.kw>Pure Gold</> trade is a <@cc.kw>Defaulted trade</>, <@cc.kw>Pure Gold</> traded <@cc.vup>+1</>"
+        },
+        {
+          "buffId": "trade_ord_against[010]",
+          "name": "Damages for Breach β",
+          "room": "TRADING",
+          "icon": "bskill_tra_against2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, if a <@cc.kw>Pure Gold</> trade is a <@cc.kw>Defaulted trade</>, <@cc.kw>Pure Gold</> traded <@cc.vup>+2</>"
+        }
+      ]
+    }
+  ]
 }

@@ -551,5 +551,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd&clue2[230]",
+          "name": "Insider",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&blacksteel2",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, increases HR contacting speed by <@cc.vup>+20%</>, and for every <@cc.vup>1</> contacts made, increases the likelihood of obtaining <@cc.kw>Blacksteel</> clues (working time and recruitment slots improves the likelihood)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_flag[010]",
+          "name": "Columbian History",
+          "room": "MEETING",
+          "icon": "bskill_meet_flag_rhine",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, every time that a non-<@cc.kw>Rhine Lab</> clue is collected, the likelihood of obtaining <@cc.kw>Rhine Lab</> clues is increased (working time improves the likelihood)"
+        }
+      ]
+    }
+  ]
 }

@@ -339,5 +339,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_drone[000]",
+          "name": "Line Patrol Frame",
+          "room": "POWER",
+          "icon": "bskill_pow_drone",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, <@cc.vup>+1%</> Drone recovery rate for every <@cc.vup>10</> max Drone capacity (Max <@cc.vup>+25%</>)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_count[000]",
+          "name": "Dawnlight",
+          "room": "POWER",
+          "icon": "bskill_pow_count",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, if there are no <$cc.tag.op><@cc.kw>Operation Platforms</></> in other <@cc.kw>Power Plants</>, <@cc.kw>Power Plant </><@cc.vup>+1</>(only affects facility quantity)"
+        }
+      ]
+    }
+  ]
 }

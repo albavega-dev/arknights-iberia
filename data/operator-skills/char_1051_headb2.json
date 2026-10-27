@@ -551,5 +551,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd&bd[000]",
+          "name": "Fighter-in-Chief",
+          "room": "MANUFACTURE",
+          "icon": "bskill_formula_spd_headb1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula related productivity <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "manu_formula_spd&bd[001]",
+          "name": "Friends Forever",
+          "room": "MANUFACTURE",
+          "icon": "bskill_formula_spd_headb2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula productivity <@cc.vup>+30%</>; when an <$cc.g.ussg><@cc.kw>Ursus Student Self-Government Group</></> Operator is assigned to the same Factory, grants an additional <@cc.vup>+10%</> to <@cc.kw>Battle Record</> formula productivity"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_meeting_bd[000]",
+          "name": "'Got It, Boss!'",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_ussg",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, self Morale loss per hour <@cc.vdown>+0.5</>; for each <$cc.g.ussg><@cc.kw>Ursus Student Self-Government Group</></> Operator assigned to the Reception Room, clue collection speed <@cc.vup>+10%</>"
+        }
+      ]
+    }
+  ]
 }

@@ -1,7 +1,10 @@
 import type { GameDataRegion } from "./gamedata-revisions";
 
 // Per-operator datasets (stats and skills): one JSON file per operator plus an index, and optionally shared files (for example a glossary).
+// Each dataset declares its contract in its index; this is the default and the one stats uses.
 export const datasetContractVersion = "2";
+// Version 3 adds base skills (`baseSkills`) to every skills file.
+export const skillsDatasetContractVersion = "3";
 export type DatasetLimits = Readonly<{ fileBytes: number; totalBytes: number }>;
 // Each dataset declares its own limits (written into its index); this is the default and the one stats uses.
 export const datasetLimits: DatasetLimits = { fileBytes: 32_768, totalBytes: 6_000_000 };
@@ -12,7 +15,7 @@ export type DatasetSource = Readonly<{ repository: string; revision: string; pat
 export type DatasetIndexEntry = Readonly<{ region: GameDataRegion; file: string; bytes: number; sha256: string }>;
 export type DatasetSharedEntry = Readonly<{ file: string; bytes: number; sha256: string }>;
 export type DatasetIndex = Readonly<{
-  contractVersion: typeof datasetContractVersion;
+  contractVersion: string;
   dataset: string;
   sources: Readonly<Record<GameDataRegion, DatasetSource>>;
   /** Every pinned table the dataset reads, when it reads more than the main source. */
@@ -24,7 +27,7 @@ export type DatasetIndex = Readonly<{
 }>;
 export type DatasetFile = Readonly<{ operatorId: string; region: GameDataRegion; text: string; bytes: number; sha256: string }>;
 export type DatasetSharedFile = Readonly<{ name: string; text: string; bytes: number; sha256: string }>;
-export type DatasetExtras = Readonly<{ tables?: DatasetIndex["tables"]; shared?: readonly DatasetSharedFile[]; limits?: DatasetLimits }>;
+export type DatasetExtras = Readonly<{ tables?: DatasetIndex["tables"]; shared?: readonly DatasetSharedFile[]; limits?: DatasetLimits; contractVersion?: string }>;
 
 const operatorIdPattern = /^char_[a-z0-9_]+$/;
 const sharedNamePattern = /^[a-z0-9]+(-[a-z0-9]+)*$/;
@@ -41,7 +44,7 @@ export function buildDatasetIndex(dataset: string, sources: Record<GameDataRegio
     if (operators[file.operatorId]) throw new Error(`Duplicate dataset operator: ${file.operatorId}`);
     operators[file.operatorId] = { region: file.region, file: datasetFileName(file.operatorId), bytes: file.bytes, sha256: file.sha256 };
   }
-  const index: DatasetIndex = { contractVersion: datasetContractVersion, dataset, sources, ...(extras.tables ? { tables: extras.tables } : {}), limits: { ...(extras.limits ?? datasetLimits) }, operators };
+  const index: DatasetIndex = { contractVersion: extras.contractVersion ?? datasetContractVersion, dataset, sources, ...(extras.tables ? { tables: extras.tables } : {}), limits: { ...(extras.limits ?? datasetLimits) }, operators };
   if (!extras.shared?.length) return index;
   const shared: Record<string, DatasetSharedEntry> = {};
   for (const file of [...extras.shared].sort((a, b) => a.name.localeCompare(b.name, "en"))) {
@@ -51,11 +54,11 @@ export function buildDatasetIndex(dataset: string, sources: Record<GameDataRegio
   return { ...index, shared };
 }
 
-export function validateDatasetIndex(value: unknown): string[] {
+export function validateDatasetIndex(value: unknown, contractVersion: string = datasetContractVersion): string[] {
   const errors: string[] = [];
   const index = value as Partial<DatasetIndex> | null;
   if (!index || typeof index !== "object") return ["Index is not an object"];
-  if (index.contractVersion !== datasetContractVersion) errors.push(`Unsupported contract: ${String(index.contractVersion)}`);
+  if (index.contractVersion !== contractVersion) errors.push(`Unsupported contract: ${String(index.contractVersion)}`);
   if (typeof index.dataset !== "string" || !index.dataset) errors.push("Missing dataset name");
   for (const region of ["en", "cn"] as const) if (!index.sources?.[region]?.revision) errors.push(`Missing ${region} source`);
   const limits = index.limits;

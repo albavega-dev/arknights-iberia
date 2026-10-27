@@ -538,5 +538,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_doubleProf[100]",
+          "name": "Red Dragon's Blood",
+          "room": "TRAINING",
+          "icon": "bskill_train_caster&medic1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> and <@cc.kw>Medic</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd_doubleProf[110]",
+          "name": "Red Dragon's Blood",
+          "room": "TRAINING",
+          "icon": "bskill_train_caster&medic2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> and <@cc.kw>Medic</> Operators' Specialization training speed <@cc.vup>+45%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_dorm_rec[000]",
+          "name": "Leader",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_leader",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, all Operators in Dormitories recover <@cc.vup>+0.05</> Morale per hour (strongest effect of the same type applies)"
+        }
+      ]
+    }
+  ]
 }

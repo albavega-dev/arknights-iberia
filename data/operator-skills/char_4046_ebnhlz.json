@@ -508,5 +508,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_bd_n1[000]",
+          "name": "Musicianship",
+          "room": "TRADING",
+          "icon": "bskill_tra_bd_n1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, for every <@cc.kw>1</> Operator in the Dormitories, <$cc.bd_a1><@cc.rem>Perception Information</></> <@cc.vup>+1</>, and every <@cc.vup>1</> <$cc.bd_a1><@cc.rem>Perception Information</></> is converted to <@cc.vup>1</> <$cc.bd_B><@cc.rem>Soundless Resonance</></>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_bd[000]",
+          "name": "Lingering Melody",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd_bd1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, for every <@cc.vup>4</> <$cc.bd_B><@cc.rem>Soundless Resonance</></>, <@cc.vup>+1%</> order efficiency"
+        },
+        {
+          "buffId": "trade_ord_spd_bd[010]",
+          "name": "Harmony Astray",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd_bd2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, for every <@cc.vup>2</> <$cc.bd_B><@cc.rem>Soundless Resonance</></>, <@cc.vup>+1%</> order efficiency"
+        }
+      ]
+    }
+  ]
 }

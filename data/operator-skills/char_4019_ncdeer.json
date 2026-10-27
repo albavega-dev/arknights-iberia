@@ -295,5 +295,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_formula_bonus1[000]",
+          "name": "Causality",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_bonus1",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop, a byproduct is guaranteed when <@cc.kw>40</> points of <$cc.w.ncdeer1><@cc.rem>Causality</></> are accumulated"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_bonus2[000]",
+          "name": "Karma",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_bonus2",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop, a byproduct is guaranteed when <@cc.kw>80</> points of <$cc.w.ncdeer2><@cc.rem>Karma</></> are accumulated"
+        }
+      ]
+    }
+  ]
 }

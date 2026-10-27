@@ -566,5 +566,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd[011]",
+          "name": "Tea Master",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>15%</>"
+        },
+        {
+          "buffId": "meet_spd[022]",
+          "name": "Expert Socializer",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd3",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>20%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd_ext&P[000]",
+          "name": "Eternal Youth",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd_confes1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, if <@cc.kw>Fiammetta</> is assigned to a Dormitory, Clue search speed increases by <@cc.vup>10%</>"
+        }
+      ]
+    }
+  ]
 }

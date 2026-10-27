@@ -306,5 +306,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_wt&cost[002]",
+          "name": "Appraiser's Eyes",
+          "room": "TRADING",
+          "icon": "bskill_tra_wt&cost1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, the chance of getting <@cc.kw>higher-yield Precious Metal orders</> is <@cc.kw>increased slightly</> (rate is influenced by length of work time), and Morale consumed per hour is reduced by <@cc.vup>-0.25</>"
+        },
+        {
+          "buffId": "trade_ord_wt&cost[012]",
+          "name": "Appraiser's Means",
+          "room": "TRADING",
+          "icon": "bskill_tra_wt&cost2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, the chance of getting <@cc.kw>higher-yield Precious Metal orders</> is <@cc.kw>increased</> (rate is influenced by length of work time), and Morale consumed per hour is reduced by <@cc.vup>-0.25</>"
+        }
+      ]
+    }
+  ]
 }

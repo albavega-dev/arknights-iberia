@@ -284,5 +284,43 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_team[050]",
+          "name": "Secret Inquiry",
+          "room": "MEETING",
+          "icon": "bskill_meet_ursus1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, the likelihood of obtaining <@cc.kw>Ursus Student Self-government Group</> clues is increased (working time improves the likelihood)."
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_flag[050]",
+          "name": "Screening",
+          "room": "MEETING",
+          "icon": "bskill_meet_flag_ursus",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining <@cc.kw>Ursus Student Self-government Group</> clues for every newly-obtained Clue that is not from <@cc.kw>Ursus Student Self-government Group</> (working time improves this likelihood)."
+        }
+      ]
+    }
+  ]
 }

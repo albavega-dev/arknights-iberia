@@ -405,5 +405,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_formula_cost5[000]",
+          "name": "Familiarity",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_evolve_cost4",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Crystal</>-type materials, all Morale costs <@cc.vup>-1</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_device[070]",
+          "name": "DIY Crystal",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_Crystalline",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Crystal</>-type materials, the byproduct chance is increased by <@cc.vup>80%</>"
+        }
+      ]
+    }
+  ]
 }

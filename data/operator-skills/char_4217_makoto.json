@@ -639,5 +639,43 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_prod_spd[999]",
+          "name": "领袖魅力",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_p_spd_p3r",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻控制中枢时，所有制造站生产力<@cc.vup>+2%</>（同种效果取最高）"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&bd[000]",
+          "name": "社群的意义",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_p3r",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻制造站时，生产力<@cc.vup>+20%</>，基建内（不包含副手）每有1名<$cc.tag.sees><@cc.kw>S.E.E.S.</></>干员（最多<@cc.kw>4</>名），生产力额外<@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ]
 }

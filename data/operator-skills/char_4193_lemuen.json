@@ -595,5 +595,38 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&multiPar[000]",
+          "name": "Order Distribution α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+20%</>"
+        },
+        {
+          "buffId": "trade_ord_spd&multiPar[100]",
+          "name": "Amicus",
+          "room": "TRADING",
+          "icon": "bskill_tra_lemuen1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+20%</>; if <@cc.kw><$cc.angel>Exusiai</></> is assigned to the same Trading Post, additionally order acquisition efficiency <@cc.vup>+25%</>"
+        }
+      ]
+    }
+  ]
 }

@@ -535,5 +535,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&par[000]",
+          "name": "Resolution on Foreign Trade α",
+          "room": "TRADING",
+          "icon": "trade_ord_spd&par1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "trade_ord_spd&par[001]",
+          "name": "Resolution on Foreign Trade β",
+          "room": "TRADING",
+          "icon": "trade_ord_spd&par2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>; if a <$cc.g.glasgow><@cc.kw>Glasgow Gang</></> Operator is assigned to the same Trading Post, increase order acquisition efficiency by an additional <@cc.vup>+10%</>"
+        }
+      ]
+    }
+  ]
 }

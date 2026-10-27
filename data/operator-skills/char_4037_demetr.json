@@ -544,5 +544,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_ext[020]",
+          "name": "Famiglia Business α",
+          "room": "TRADING",
+          "icon": "bskill_tra_ord_spd_ext2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+25%</>; When <@cc.kw>Vigil</> is in the Base (excluding Assistants and Activity Room users), increase order acquisition efficiency by an additional <@cc.vup>+5%</>"
+        },
+        {
+          "buffId": "trade_ord_spd_ext[021]",
+          "name": "Famiglia Business β",
+          "room": "TRADING",
+          "icon": "bskill_tra_ord_spd_ext3",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>; When <@cc.kw>Vigil</> is in the Base (excluding Assistants and Activity Room users), increase order acquisition efficiency by an additional <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_limit&cost_P[020]",
+          "name": "Outstanding Debt",
+          "room": "TRADING",
+          "icon": "bskill_tra_demetr",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the same Trading Post as <@cc.kw>Vigil</>, Morale consumed each hour <@cc.vup>-0.1</>, and order limit <@cc.vup>+2</>"
+        }
+      ]
+    }
+  ]
 }

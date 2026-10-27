@@ -537,5 +537,38 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[080]",
+          "name": "Specialist Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_specialist1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Specialist</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession[180]",
+          "name": "Masked Phantom",
+          "room": "TRAINING",
+          "icon": "bskill_train_specialist3",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Specialist</> Operators' Specialization training speed <@cc.vup>+60%</>"
+        }
+      ]
+    }
+  ]
 }

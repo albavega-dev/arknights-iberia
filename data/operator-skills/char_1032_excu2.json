@@ -605,5 +605,56 @@
         }
       ]
     }
-  }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[030]",
+          "name": "Notarial Hall Instructor α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_exp4",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula related productivity <@cc.vup>+20%</>"
+        },
+        {
+          "buffId": "manu_formula_spd[031]",
+          "name": "Notarial Hall Instructor β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_exp2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula related productivity <@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_limit[020]",
+          "name": "Reasonable Utilization",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_exp&limit3",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit is increased by <@cc.vup>+4</> when producing <@cc.kw>Battle Records</>"
+        }
+      ]
+    }
+  ]
 }

@@ -441,5 +441,56 @@
       ]
     }
   ],
-  "ranges": {}
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession3[180]",
+          "name": "Medic Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_medic1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Medic</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession3[181]",
+          "name": "Combat Techniques: Wandering Medic",
+          "room": "TRAINING",
+          "icon": "bskill_train_wandermedic",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Medic</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Wandering Medic</>, training speed will be further increased by <@cc.vup>+45%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all&profession[000]",
+          "name": "Volcanic Hot Springs Bath",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_rec_all&profession",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, Morale recovery per hour of all Operators in that Dormitory <@cc.vup>+0.06</> for each <@cc.kw>Wandering Medic</> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.kw>4</> Operators, strongest effect of the same type applies)"
+        }
+      ]
+    }
+  ]
 }
