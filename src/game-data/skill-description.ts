@@ -22,6 +22,7 @@ const knownTags: Record<string, SkillDescriptionTone> = {
   "@ba.rem": "keyword",
   "@ba.kw": "keyword",
   "@cc.vup": "increase",
+  "@cc.vdown": "decrease",
   "@cc.rem": "keyword",
   "@cc.kw": "keyword",
 };

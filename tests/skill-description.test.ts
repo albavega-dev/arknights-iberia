@@ -68,6 +68,14 @@ describe("parseSkillDescription markup", () => {
     ]);
   });
 
+  it("gives the base skill decrease tag the decrease tone", () => {
+    assert.deepEqual(parseSkillDescription("Morale <@cc.vdown>-0.1</> per hour", []), [
+      text("Morale "),
+      { type: "style", tag: "@cc.vdown", tone: "decrease", children: [text("-0.1")] },
+      text(" per hour"),
+    ]);
+  });
+
   it("gives every glossary term the status tone and keeps its id", () => {
     assert.deepEqual(parseSkillDescription("<$ba.sluggish>Slow</> and <$ba.dt.element>Elemental</> and <$cc.bd_A>x</>", []), [
       { type: "style", tag: "$ba.sluggish", tone: "status", termId: "ba.sluggish", children: [text("Slow")] },
