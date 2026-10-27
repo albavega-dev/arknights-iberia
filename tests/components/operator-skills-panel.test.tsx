@@ -8,6 +8,7 @@ vi.mock("next/image", () => ({
 import { OperatorSkillsPanel } from "../../src/app/operators/[slug]/operator-skills-panel";
 import type { OperatorTacticalEntry } from "../../src/game-data/operator-tactical";
 import type { OperatorSkillsView, OperatorSkillView, SkillLevelLabel, SkillLevelView } from "../../src/game-data/operator-skills-view";
+import type { SkillDescriptionNode } from "../../src/game-data/skill-description";
 
 const labels: SkillLevelLabel[] = ["1", "2", "3", "4", "5", "6", "7", "M1", "M2", "M3"];
 const level = (index: number, overrides: Partial<SkillLevelView> = {}): SkillLevelView => ({
@@ -162,6 +163,96 @@ describe("OperatorSkillsPanel", () => {
     expect(description.querySelector(".operator-skill-unknown")).toHaveTextContent("{duration}");
     expect(description.querySelector("b")).toBeNull();
     expect(description).toHaveTextContent("<b>literal</b>");
+  });
+
+  describe("glossary tooltips", () => {
+    const termNode = (termId: string, text: string): SkillDescriptionNode => ({ type: "style", tag: `$${termId}`, tone: "status", termId, children: [{ type: "text", text }] });
+    const terms = {
+      "ba.stun": { name: "Aturdimiento", description: [{ type: "text" as const, text: "No puede actuar; ver " }, termNode("ba.sleep", "Dormir")] },
+      "ba.sleep": { name: "Dormir", description: [{ type: "text" as const, text: "No puede actuar ni ser atacado" }] },
+    };
+    const termSkill = (slot: 1 | 2, name: string) => skill(slot, 1, { terms, levels: [level(0, { name, description: [{ type: "text", text: "Aplica " }, termNode("ba.stun", "Aturdir"), { type: "text", text: " y " }, termNode("ba.unknown", "Otro")] })] });
+    const trigger = (name: string) => within(card(name)).getByRole("button", { name: "Aturdir" });
+    const renderTerms = () => render(<OperatorSkillsPanel view={view([termSkill(1, "Primera"), termSkill(2, "Segunda")])} tactical={null} />);
+
+    it("renders known terms as buttons that open and close their explanation", () => {
+      renderTerms();
+      const button = trigger("Primera");
+      expect(button).toHaveAttribute("type", "button");
+      expect(button).toHaveAttribute("aria-expanded", "false");
+      expect(button).toHaveAttribute("data-term-id", "ba.stun");
+      expect(button).not.toHaveAttribute("aria-controls");
+      expect(card("Primera").querySelector('[data-term-id="ba.unknown"]')!.tagName).toBe("SPAN");
+      fireEvent.click(button);
+      const dialog = screen.getByRole("dialog", { name: "Aturdimiento" });
+      expect(button).toHaveAttribute("aria-expanded", "true");
+      expect(button).toHaveAttribute("aria-controls", dialog.id);
+      expect(dialog).toHaveTextContent("AturdimientoNo puede actuar; ver Dormir");
+      expect(document.activeElement).toBe(dialog);
+      fireEvent.click(button);
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+      expect(button).toHaveAttribute("aria-expanded", "false");
+    });
+
+    it("closes with Escape returning the focus, with a click outside and when the focus leaves", () => {
+      renderTerms();
+      const button = trigger("Primera");
+      fireEvent.click(button);
+      fireEvent.keyDown(document, { key: "Enter" });
+      expect(screen.getByRole("dialog")).toBeInTheDocument();
+      fireEvent.keyDown(document, { key: "Escape" });
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+      expect(document.activeElement).toBe(button);
+      fireEvent.click(button);
+      fireEvent.pointerDown(screen.getByRole("dialog"));
+      expect(screen.getByRole("dialog")).toBeInTheDocument();
+      fireEvent.pointerDown(document.body);
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+      fireEvent.click(button);
+      fireEvent.blur(screen.getByRole("dialog"), { relatedTarget: button });
+      fireEvent.blur(screen.getByRole("dialog"), { relatedTarget: null });
+      expect(screen.getByRole("dialog")).toBeInTheDocument();
+      fireEvent.blur(screen.getByRole("dialog"), { relatedTarget: radios(1)[0] });
+      expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    });
+
+    it("keeps a single explanation open across cards", () => {
+      renderTerms();
+      fireEvent.click(trigger("Primera"));
+      fireEvent.click(trigger("Segunda"));
+      expect(screen.getAllByRole("dialog")).toHaveLength(1);
+      expect(trigger("Primera")).toHaveAttribute("aria-expanded", "false");
+      expect(trigger("Segunda")).toHaveAttribute("aria-expanded", "true");
+    });
+
+    it("styles terms nested in an explanation without opening another one", () => {
+      renderTerms();
+      fireEvent.click(trigger("Primera"));
+      const dialog = screen.getByRole("dialog");
+      const nested = dialog.querySelector('[data-term-id="ba.sleep"]')!;
+      expect(nested.tagName).toBe("SPAN");
+      expect(nested).toHaveClass("operator-skill-tone", "is-status", "is-term");
+      expect(within(dialog).queryByRole("button")).toBeNull();
+    });
+
+    it("places the explanation below the term or above it, inside the viewport", () => {
+      renderTerms();
+      const button = trigger("Primera");
+      const size = vi.spyOn(HTMLElement.prototype, "offsetWidth", "get").mockReturnValue(320);
+      const height = vi.spyOn(HTMLElement.prototype, "offsetHeight", "get").mockReturnValue(120);
+      Object.defineProperty(document.documentElement, "clientWidth", { configurable: true, value: 375 });
+      const rect = (top: number, left: number) => vi.spyOn(button, "getBoundingClientRect").mockReturnValue({ top, bottom: top + 20, left, right: left + 60, width: 60, height: 20, x: left, y: top, toJSON: () => ({}) });
+      rect(100, 300);
+      fireEvent.click(button);
+      expect(screen.getByRole("dialog").style).toMatchObject({ top: "126px", left: "39px" });
+      fireEvent.click(button);
+      rect(window.innerHeight - 40, 4);
+      fireEvent.click(button);
+      expect(screen.getByRole("dialog").style).toMatchObject({ top: `${window.innerHeight - 40 - 6 - 120}px`, left: "16px" });
+      size.mockRestore();
+      height.mockRestore();
+      Reflect.deleteProperty(document.documentElement, "clientWidth");
+    });
   });
 
   it("uses the icon when available and the fallback when it is missing or fails", () => {

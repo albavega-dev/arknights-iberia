@@ -1,12 +1,13 @@
 "use client";
 
-import { useId, useState, type KeyboardEvent, type ReactNode } from "react";
+import { useId, useLayoutEffect, useRef, useState, type FocusEvent, type KeyboardEvent, type ReactNode } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import { Play, Timer, Zap, type LucideIcon } from "lucide-react";
 import { formatNumber } from "../../../game-data/number-format";
 import { getTacticalRangeDefinition, type OperatorTacticalEntry, type TacticalRangeDefinition } from "../../../game-data/operator-tactical";
-import type { OperatorSkillsView, OperatorSkillView, SkillLevelView } from "../../../game-data/operator-skills-view";
-import type { SkillDescriptionNode } from "../../../game-data/skill-description";
+import type { OperatorSkillsView, OperatorSkillView, SkillLevelView, SkillTermView } from "../../../game-data/operator-skills-view";
+import type { SkillDescriptionNode, SkillDescriptionTone } from "../../../game-data/skill-description";
 import { OperatorControlButton } from "../operator-control-button";
 import { RangeGrid } from "../range-grid";
 
@@ -38,16 +39,86 @@ function levelValues(skill: OperatorSkillView, level: SkillLevelView): ValueCell
   ];
 }
 
-function SkillDescription({ nodes }: { nodes: readonly SkillDescriptionNode[] }): ReactNode {
+/** Glossary of the description being rendered; without it (inside an explanation) terms keep their style but open nothing. */
+type GlossaryContext = { terms: Record<string, SkillTermView>; openId: string | null; setOpenId: (id: string | null) => void; layer: HTMLElement | null };
+
+function SkillDescription({ nodes, glossary }: { nodes: readonly SkillDescriptionNode[]; glossary?: GlossaryContext }): ReactNode {
   return nodes.map((node, index) => {
     switch (node.type) {
       case "text": return node.text;
       case "lineBreak": return <br key={index} />;
       case "value": return <span key={index} className="operator-skill-value">{node.display}</span>;
       case "unknownMarker": return <span key={index} className="operator-skill-unknown">{node.text}</span>;
-      default: return <span key={index} className={`operator-skill-tone is-${node.tone}${node.termId ? " is-term" : ""}`} data-term-id={node.termId}><SkillDescription nodes={node.children} /></span>;
+      default: {
+        const term = node.termId ? glossary?.terms[node.termId] : undefined;
+        if (glossary && term) return <GlossaryTerm key={index} termId={node.termId!} term={term} tone={node.tone} glossary={glossary}><SkillDescription nodes={node.children} /></GlossaryTerm>;
+        return <span key={index} className={`operator-skill-tone is-${node.tone}${node.termId ? " is-term" : ""}`} data-term-id={node.termId}><SkillDescription nodes={node.children} glossary={glossary} /></span>;
+      }
     }
   });
+}
+
+// Matches the 1rem side gutter of the panel width in CSS.
+const viewportGutter = 16;
+const panelGap = 6;
+
+/** Below the term, or above it when it does not fit, always inside the viewport. */
+function placePanel(trigger: HTMLElement, panel: HTMLElement) {
+  const anchor = trigger.getBoundingClientRect();
+  const width = panel.offsetWidth;
+  const height = panel.offsetHeight;
+  const viewportWidth = document.documentElement.clientWidth;
+  const viewportHeight = window.innerHeight;
+  const below = anchor.bottom + panelGap;
+  const above = anchor.top - panelGap - height;
+  const top = below + height <= viewportHeight - viewportGutter || above < viewportGutter ? Math.max(viewportGutter, Math.min(below, viewportHeight - viewportGutter - height)) : above;
+  panel.style.top = `${top}px`;
+  panel.style.left = `${Math.max(viewportGutter, Math.min(anchor.left, viewportWidth - viewportGutter - width))}px`;
+}
+
+/** A term that toggles its explanation; the panel is portalled out of the card, whose container query would trap `position: fixed`. */
+function GlossaryTerm({ termId, term, tone, glossary, children }: { termId: string; term: SkillTermView; tone: SkillDescriptionTone; glossary: GlossaryContext; children: ReactNode }) {
+  const id = useId();
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const { setOpenId, layer } = glossary;
+  const open = glossary.openId === id && layer !== null;
+  useLayoutEffect(() => {
+    const trigger = triggerRef.current;
+    const panel = panelRef.current;
+    if (!open || !trigger || !panel) return;
+    const place = () => placePanel(trigger, panel);
+    place();
+    panel.focus({ preventScroll: true });
+    const handlePointerDown = (event: PointerEvent) => {
+      if (event.target instanceof Node && !trigger.contains(event.target) && !panel.contains(event.target)) setOpenId(null);
+    };
+    const handleKeyDown = (event: globalThis.KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      setOpenId(null);
+      trigger.focus();
+    };
+    window.addEventListener("resize", place);
+    window.addEventListener("scroll", place, true);
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("resize", place);
+      window.removeEventListener("scroll", place, true);
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open, setOpenId]);
+  // Tabbing away closes it; a click elsewhere is handled by the pointer listener (relatedTarget is null then).
+  const closeOnFocusAway = (event: FocusEvent<HTMLDivElement>) => {
+    const next = event.relatedTarget;
+    if (next instanceof Node && !event.currentTarget.contains(next) && next !== triggerRef.current) setOpenId(null);
+  };
+  return <>
+    <button ref={triggerRef} type="button" className={`operator-skill-tone is-${tone} is-term`} data-term-id={termId} aria-haspopup="dialog" aria-expanded={open} aria-controls={open ? `${id}-panel` : undefined} onClick={() => setOpenId(open ? null : id)}>{children}</button>
+    {open ? createPortal(<div ref={panelRef} id={`${id}-panel`} className="operator-glossary-panel" role="dialog" aria-labelledby={`${id}-name`} tabIndex={-1} onBlur={closeOnFocusAway}><strong className="operator-glossary-name" id={`${id}-name`}>{term.name}</strong><p className="operator-glossary-text"><SkillDescription nodes={term.description} /></p></div>, layer) : null}
+  </>;
 }
 
 function SkillIcon({ skill }: { skill: OperatorSkillView }) {
@@ -83,7 +154,7 @@ function SkillRange({ view, level, operatorRange }: { view: OperatorSkillsView; 
   return operatorRange ? <div className="operator-skill-range"><RangeGrid grids={operatorRange.grids} /></div> : null;
 }
 
-function SkillCard({ view, skill, operatorRange }: { view: OperatorSkillsView; skill: OperatorSkillView; operatorRange: OperatorRange }) {
+function SkillCard({ view, skill, operatorRange, glossary }: { view: OperatorSkillsView; skill: OperatorSkillView; operatorRange: OperatorRange; glossary: Omit<GlossaryContext, "terms"> }) {
   const id = useId();
   const [selected, setSelected] = useState(skill.defaultLevelIndex);
   const [expanded, setExpanded] = useState(false);
@@ -95,7 +166,7 @@ function SkillCard({ view, skill, operatorRange }: { view: OperatorSkillsView; s
     <header className="operator-skill-header"><SkillIcon skill={skill} /><div className="operator-skill-title"><h3 id={`${id}-name`}>{level.name}</h3><p className="operator-skill-tags">{recovery ? <span className={`operator-skill-tag is-recovery-${skill.spRecovery}`}>Recuperación {recovery.toLowerCase()}</span> : null}{activation ? <span className="operator-skill-tag is-activation"><span className="sr-only">Activación </span>{activation}</span> : null}</p></div><span className="operator-tactical-tag operator-skill-slot">S{skill.slot}</span></header>
     <SkillLevelSelector skill={skill} selected={selected} onSelect={setSelected} />
     <div className="operator-skill-data"><dl className="operator-skill-values">{values.map((value) => <div key={value.label}><dt><value.icon size={16} strokeWidth={2} aria-hidden="true" />{value.label}</dt><dd>{value.text}</dd></div>)}</dl><SkillRange view={view} level={level} operatorRange={operatorRange} /></div>
-    <p className="operator-skill-description"><SkillDescription nodes={level.description} /></p>
+    <p className="operator-skill-description"><SkillDescription nodes={level.description} glossary={{ ...glossary, terms: skill.terms }} /></p>
     <div className="operator-skill-levels-toggle"><OperatorControlButton appearance="naval" size="compact" type="button" aria-expanded={expanded} aria-controls={`${id}-table`} onClick={() => setExpanded((current) => !current)}>{expanded ? "Ocultar niveles" : "Mostrar niveles"}</OperatorControlButton>{expanded ? <SkillLevelsTable skill={skill} id={`${id}-table`} /> : null}</div>
   </article>;
 }
@@ -110,10 +181,13 @@ function operatorRangeOf(tactical: OperatorTacticalEntry | null): OperatorRange 
 }
 
 export function OperatorSkillsPanel({ view, tactical }: { view: OperatorSkillsView | null; tactical: OperatorTacticalEntry | null }) {
+  // One open explanation across every card; the panels are portalled into the skills container.
+  const [openId, setOpenId] = useState<string | null>(null);
+  const [layer, setLayer] = useState<HTMLElement | null>(null);
   if (!view) return <div className="operator-panel-empty"><strong>Habilidades no disponibles</strong><p>No hay datos de habilidades verificados para este operador.</p></div>;
   if (view.status === "empty" || !view.skills.length) return <div className="operator-panel-empty"><p>Este operador no tiene habilidades.</p></div>;
   const operatorRange = operatorRangeOf(tactical);
-  return <div className="operator-skills">
-    {view.skills.map((skill) => <SkillCard key={skill.skillId} view={view} skill={skill} operatorRange={operatorRange} />)}
+  return <div className="operator-skills" ref={setLayer}>
+    {view.skills.map((skill) => <SkillCard key={skill.skillId} view={view} skill={skill} operatorRange={operatorRange} glossary={{ openId, setOpenId, layer }} />)}
   </div>;
 }

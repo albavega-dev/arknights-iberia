@@ -3500,9 +3500,99 @@
 .operator-skill-tone.is-status {
   color: var(--skill-tone-status);
 }
+/*
+ * Término del glosario con la luz del faro: una franja difusa de brillo latón y, como su límite inferior, una línea latón
+ * tenue de 1 px. Son dos capas del mismo fondo, con la misma anchura y ancladas al mismo borde; `clone` repite ambas en
+ * cada línea cuando el término se parte.
+ */
 .operator-skill-tone.is-term {
-  text-decoration: underline dotted;
-  text-underline-offset: 0.2em;
+  --term-light: color-mix(in srgb, var(--operator-accent-light) 20%, transparent);
+  --term-light-height: 0.6em;
+  --term-line: color-mix(in srgb, var(--operator-accent-light) 38%, transparent);
+  background:
+    linear-gradient(var(--term-line), var(--term-line)) left bottom / 100% 1px no-repeat,
+    linear-gradient(0deg, var(--term-light), transparent) left bottom / 100% var(--term-light-height) no-repeat;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+/* Dentro de una explicación no abre nada: subrayado de texto tenue, solo un rastro de luz y sin intensificarse. */
+.operator-glossary-text .operator-skill-tone.is-term {
+  --term-light: color-mix(in srgb, var(--operator-accent-light) 9%, transparent);
+  --term-light-height: 0.4em;
+  --term-line: transparent;
+  text-decoration: underline 1px color-mix(in srgb, var(--operator-accent-light) 38%, transparent);
+  text-underline-offset: 0.22em;
+}
+/*
+ * Como botón, en línea con el texto. Al pasar el ratón, enfocarlo o abrirlo, la línea y la luz se intensifican un poco.
+ */
+button.operator-skill-tone.is-term {
+  display: inline;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  transition:
+    background-size 200ms ease,
+    text-shadow 200ms ease;
+}
+button.operator-skill-tone.is-term:hover,
+button.operator-skill-tone.is-term:focus-visible,
+button.operator-skill-tone.is-term[aria-expanded="true"] {
+  --term-light: color-mix(in srgb, var(--operator-accent-light) 30%, transparent);
+  --term-light-height: 0.9em;
+  --term-line: color-mix(in srgb, var(--operator-accent-light) 70%, transparent);
+  text-shadow: 0 0 0.5em color-mix(in srgb, var(--operator-accent-light) 30%, transparent);
+}
+button.operator-skill-tone.is-term:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+/*
+ * Explicación del término, colocada por script junto a él. Se separa de la tarjeta sin contorno, como el menú lateral:
+ * su superficie tonal algo más clara, el brillo latón que baja desde arriba (la luz del faro) y una sombra suave.
+ */
+.operator-glossary-panel {
+  position: fixed;
+  z-index: 30;
+  width: min(20rem, calc(100vw - 2rem));
+  padding: var(--space-3);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--operator-accent-light) 14%, transparent), transparent 4.5rem),
+    linear-gradient(135deg, rgba(200, 174, 121, 0.08), transparent 42%),
+    linear-gradient(180deg, #222a2d 0%, #1f2b30 100%);
+  box-shadow:
+    0 2px 6px rgba(3, 13, 20, 0.16),
+    0 12px 32px rgba(3, 13, 20, 0.42);
+  color: var(--color-ivory);
+}
+.operator-glossary-panel:focus {
+  outline: none;
+}
+.operator-glossary-panel:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.operator-glossary-name {
+  display: block;
+  margin-bottom: var(--space-1);
+  color: var(--operator-accent-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.operator-glossary-text {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  overflow-wrap: break-word;
+}
+@media (prefers-reduced-motion: reduce) {
+  button.operator-skill-tone.is-term {
+    transition: none;
+  }
 }
 .operator-skill-unknown {
   color: var(--color-muted);
