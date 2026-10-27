@@ -2983,7 +2983,7 @@
   aspect-ratio: auto;
 }
 .operator-range-cell {
-  width: 40px;
+  width: var(--range-cell-size, 40px);
   aspect-ratio: 1;
   min-width: 0;
   border: 1px solid rgba(146, 179, 187, 0.24);
@@ -3046,10 +3046,10 @@
 }
 @media (max-width: 900px) {
   .operator-range-grid {
-    width: 100%;
+    width: var(--range-grid-width, 100%);
   }
   .operator-range-cell {
-    width: auto;
+    width: var(--range-cell-size, auto);
   }
 }
 .operator-tactical-phase-selector > button[title*="nivel"],
@@ -3311,5 +3311,268 @@
   .operator-filter-button.rarity-2.is-active:hover,
   .operator-filter-button.rarity-1.is-active:hover {
     color: var(--operator-filter-rarity);
+  }
+}
+
+/* Pestaña Habilidades: tarjetas con la identidad naval de Estadísticas. */
+.operator-skills {
+  /* Recuperación de SP y activación: colores de la plantilla Skill head de Terra Wiki. */
+  --skill-recovery-time: #8ec31f;
+  --skill-recovery-attack: #fc793e;
+  --skill-recovery-defense: #f4af09;
+  --skill-activation: #808080;
+  --skill-tone-increase: var(--color-cyan);
+  --skill-tone-decrease: var(--color-danger);
+  --skill-tone-keyword: var(--color-brass);
+  --skill-tone-status: var(--color-muted);
+  /* Una tarjeta por fila, con el ancho que tenía en la fila de dos a 1440 px. */
+  --skill-card-max: 33rem;
+  --skill-level-button: 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, var(--skill-card-max));
+  align-items: start;
+  gap: var(--space-3);
+  min-width: 0;
+}
+.operator-skill-card {
+  container-type: inline-size;
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-3);
+  border: 1px solid var(--border-subtle);
+}
+.operator-skill-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+.operator-skill-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(7, 15, 24, 0.6);
+  object-fit: contain;
+}
+.operator-skill-icon.is-fallback {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+.operator-skill-title {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+.operator-skill-title h3 {
+  margin: 0;
+  color: var(--color-brass);
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
+}
+.operator-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+}
+.operator-skill-tag {
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--skill-activation);
+  color: var(--color-abyss);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+.operator-skill-tag.is-recovery-time {
+  background: var(--skill-recovery-time);
+}
+.operator-skill-tag.is-recovery-attack {
+  background: var(--skill-recovery-attack);
+}
+.operator-skill-tag.is-recovery-defense {
+  background: var(--skill-recovery-defense);
+}
+/* Etiqueta de hueco con la luz del faro: degradado y halo latón del enlace activo del menú lateral. */
+.operator-skill-slot {
+  align-self: start;
+  border-color: transparent;
+  background:
+    linear-gradient(90deg, rgba(176, 148, 94, 0.4) 0%, rgba(176, 148, 94, 0.18) 46%, rgba(176, 148, 94, 0) 100%),
+    linear-gradient(90deg, rgba(68, 91, 101, 0.48), rgba(68, 91, 101, 0));
+  box-shadow: 0 2px 6px rgba(3, 13, 20, 0.16);
+  color: var(--color-ivory);
+  font-family: var(--font-geist-mono), monospace;
+  letter-spacing: 0.08em;
+}
+.operator-skill-levels {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.operator-skill-levels-label {
+  color: var(--color-cyan);
+  font-size: 0.78rem;
+}
+.operator-skill-level-groups {
+  display: flex;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.operator-skill-level-group.operator-stats-choice-list {
+  flex-wrap: nowrap;
+  gap: 2px;
+}
+.operator-skill-level-group + .operator-skill-level-group {
+  padding-left: var(--space-2);
+  border-left: 1px solid var(--border-subtle);
+}
+.operator-skill-level-group .operator-filter-button {
+  width: var(--skill-level-button);
+  min-width: 0;
+  padding-inline: 0;
+}
+/* Valores y rango en un panel con la superficie de los selectores de la información táctica. */
+.operator-skill-data {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-3) var(--space-6);
+  padding: 0.9rem;
+  background: rgba(7, 15, 24, 0.45);
+}
+.operator-skill-values {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  margin: 0;
+}
+.operator-skill-values > div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.operator-skill-values dt {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-cyan);
+  font-size: 0.88rem;
+  line-height: 1.2;
+}
+.operator-skill-values dd {
+  margin: 0;
+  color: var(--color-brass);
+  font-size: 0.98rem;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+.operator-skill-description {
+  margin: 0;
+  color: var(--color-ivory);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+.operator-skill-value {
+  font-variant-numeric: tabular-nums;
+}
+.operator-skill-tone.is-increase {
+  color: var(--skill-tone-increase);
+}
+.operator-skill-tone.is-decrease {
+  color: var(--skill-tone-decrease);
+}
+.operator-skill-tone.is-keyword {
+  color: var(--skill-tone-keyword);
+}
+.operator-skill-tone.is-status {
+  color: var(--skill-tone-status);
+}
+.operator-skill-tone.is-term {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+}
+.operator-skill-unknown {
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+.operator-skill-range {
+  --range-cell-size: 1.5rem;
+  --range-grid-width: max-content;
+  justify-self: center;
+  min-width: 0;
+}
+.operator-skill-levels-toggle {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.operator-skill-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+}
+.operator-skill-table-scroll:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--operator-accent-light) 72%, transparent);
+  outline-offset: 2px;
+}
+.operator-skill-table {
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.operator-skill-table th,
+.operator-skill-table td {
+  padding: var(--space-1) var(--space-3);
+  border-bottom: 1px solid color-mix(in srgb, var(--border-subtle) 60%, transparent);
+  text-align: left;
+}
+.operator-skill-table thead th {
+  color: var(--color-cyan);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+.operator-skill-table tbody th {
+  color: var(--color-ivory);
+}
+.operator-skill-table td {
+  color: var(--color-brass);
+}
+.operator-skill-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+/* Tarjeta más estrecha que el mínimo (móvil): selector en dos filas y rango debajo de los valores. */
+@container (max-width: 26rem) {
+  .operator-skill-data {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .operator-skill-levels {
+    flex-wrap: wrap;
+  }
+  .operator-skill-level-groups {
+    display: grid;
+    flex: 1 1 100%;
+  }
+  .operator-skill-level-group.operator-stats-choice-list {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--space-1);
+  }
+  .operator-skill-level-group .operator-filter-button {
+    width: 100%;
+    min-height: 2.5rem;
+  }
+  .operator-skill-level-group + .operator-skill-level-group {
+    padding-top: var(--space-2);
+    padding-left: 0;
+    border-top: 1px solid var(--border-subtle);
+    border-left: 0;
   }
 }
