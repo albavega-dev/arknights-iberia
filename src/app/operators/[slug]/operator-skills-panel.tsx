@@ -1,12 +1,13 @@
 "use client";
 
-import { useId, useLayoutEffect, useRef, useState, type FocusEvent, type KeyboardEvent, type ReactNode } from "react";
+import { useId, useLayoutEffect, useRef, useState, type CSSProperties, type FocusEvent, type KeyboardEvent, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import { Play, Timer, Zap, type LucideIcon } from "lucide-react";
 import { formatNumber } from "../../../game-data/number-format";
 import { getTacticalRangeDefinition, type OperatorTacticalEntry, type TacticalRangeDefinition } from "../../../game-data/operator-tactical";
-import type { OperatorSkillsView, OperatorSkillView, SkillLevelView, SkillTermView } from "../../../game-data/operator-skills-view";
+import type { BaseSkillStageView, OperatorBaseSkillView, OperatorSkillsView, OperatorSkillView, SkillLevelView, SkillTermView } from "../../../game-data/operator-skills-view";
+import type { SkillUnlock } from "../../../game-data/operator-skills";
 import type { SkillDescriptionNode, SkillDescriptionTone } from "../../../game-data/skill-description";
 import { OperatorControlButton } from "../operator-control-button";
 import { RangeGrid } from "../range-grid";
@@ -180,14 +181,87 @@ function operatorRangeOf(tactical: OperatorTacticalEntry | null): OperatorRange 
   return null;
 }
 
+// Room names as in the region data, like S1/S2/S3; HIRE is "Office" in the data and "HR Office" in the descriptions.
+const roomNames: Record<string, { name: string; lang?: string }> = {
+  CONTROL: { name: "Control Center" }, POWER: { name: "Power Plant" }, MANUFACTURE: { name: "Factory" }, TRADING: { name: "Trading Post" }, WORKSHOP: { name: "Workshop" },
+  TRAINING: { name: "Training Room" }, DORMITORY: { name: "Dormitory" }, HIRE: { name: "HR Office" }, MEETING: { name: "Reception Room" }, RECYCLE: { name: "回收站", lang: "zh-Hans" },
+};
+
+/** "E2", or "E0 · Nv. 30" when a level above 1 is also required. */
+function unlockLabel(unlock: SkillUnlock): string {
+  return unlock.level > 1 ? `E${unlock.elite} · Nv. ${unlock.level}` : `E${unlock.elite}`;
+}
+
+/** WCAG relative luminance of a #rrggbb color; null for anything else. */
+function luminance(color: string): number | null {
+  if (!/^#[0-9a-f]{6}$/i.test(color)) return null;
+  const [r, g, b] = [1, 3, 5].map((start) => parseInt(color.slice(start, start + 2), 16) / 255).map((channel) => channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4);
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+}
+// --color-abyss, the dark text of the tags.
+const darkTextLuminance = luminance("#080f18")!;
+
+/** Dark text on the game's room color, or white when that color is too dark for it (Control Center, Training Room, Trading Post, HR Office). */
+function roomTagStyle(color: string): { className: string; style?: CSSProperties } {
+  const background = luminance(color);
+  if (background === null) return { className: "is-dark-text" };
+  const dark = (background + 0.05) / (darkTextLuminance + 0.05) >= 1.05 / (background + 0.05);
+  return { className: dark ? "is-dark-text" : "is-light-text", style: { "--base-room-color": color } as CSSProperties };
+}
+
+function RoomTag({ stage }: { stage: BaseSkillStageView }) {
+  const room = roomNames[stage.room] ?? { name: stage.room };
+  const { className, style } = roomTagStyle(stage.color);
+  return <span className={`operator-skill-tag operator-base-skill-room ${className}`} style={style}><span className="sr-only">Sala </span>{stage.roomIcon ? <Image src={stage.roomIcon.src} alt="" width={stage.roomIcon.width} height={stage.roomIcon.height} unoptimized /> : null}<span lang={room.lang}>{room.name}</span></span>;
+}
+
+function BaseSkillIcon({ stage, slot }: { stage: BaseSkillStageView; slot: number }) {
+  const [failed, setFailed] = useState(false);
+  if (!stage.icon || failed) return <span className="operator-skill-icon is-fallback" aria-hidden="true" data-testid="skill-icon-fallback">B{slot}</span>;
+  return <Image className="operator-skill-icon" src={stage.icon.src} alt="" width={stage.icon.width} height={stage.icon.height} unoptimized onError={() => setFailed(true)} />;
+}
+
+/** Unlock of each stage as a radio group, with the same keys as the level selector; a single stage keeps a fixed tag. */
+function BaseStageSelector({ slot, selected, onSelect }: { slot: OperatorBaseSkillView; selected: number; onSelect: (index: number) => void }) {
+  const id = useId();
+  if (slot.stages.length === 1) return <span className="operator-tactical-tag operator-skill-slot"><span className="sr-only">Desbloqueo </span>{unlockLabel(slot.stages[0].unlock)}</span>;
+  const last = slot.stages.length - 1;
+  const move = (event: KeyboardEvent<HTMLButtonElement>) => {
+    const next = event.key === "Home" ? 0 : event.key === "End" ? last : event.key === "ArrowRight" || event.key === "ArrowDown" ? (selected + 1) % (last + 1) : event.key === "ArrowLeft" || event.key === "ArrowUp" ? (selected + last) % (last + 1) : null;
+    if (next === null) return;
+    event.preventDefault();
+    onSelect(next);
+    document.getElementById(`${id}-${next}`)?.focus();
+  };
+  return <div className="operator-base-skill-stage-selector" role="radiogroup" aria-label={`Promoción de la habilidad de base ${slot.slot}`}>{slot.stages.map((stage, index) => <button type="button" key={stage.buffId} id={`${id}-${index}`} role="radio" aria-checked={index === selected} tabIndex={index === selected ? 0 : -1} className={`operator-tactical-tag operator-skill-slot${index === selected ? " is-active" : ""}`} onClick={() => onSelect(index)} onKeyDown={move} onMouseMove={(event) => { const rect = event.currentTarget.getBoundingClientRect(); event.currentTarget.style.setProperty("--pointer-x", `${event.clientX - rect.left}px`); event.currentTarget.style.setProperty("--pointer-y", `${event.clientY - rect.top}px`); }}>{unlockLabel(stage.unlock)}</button>)}</div>;
+}
+
+/** One slot showing one stage at a time, the highest by default; each stage replaces the previous one. */
+function BaseSkillCard({ slot, glossary }: { slot: OperatorBaseSkillView; glossary: Omit<GlossaryContext, "terms"> }) {
+  const id = useId();
+  const [selected, setSelected] = useState(slot.stages.length - 1);
+  const stage = slot.stages[selected];
+  return <article className="operator-skill-card operator-base-skill-card" aria-labelledby={`${id}-name`}>
+    <header className="operator-skill-header"><BaseSkillIcon key={stage.buffId} stage={stage} slot={slot.slot} /><div className="operator-skill-title"><h3 id={`${id}-name`}>{stage.name}</h3><p className="operator-skill-tags"><RoomTag stage={stage} /></p></div><BaseStageSelector slot={slot} selected={selected} onSelect={setSelected} /></header>
+    <p className="operator-skill-description"><SkillDescription nodes={stage.description} glossary={{ ...glossary, terms: slot.terms }} /></p>
+  </article>;
+}
+
 export function OperatorSkillsPanel({ view, tactical }: { view: OperatorSkillsView | null; tactical: OperatorTacticalEntry | null }) {
-  // One open explanation across every card; the panels are portalled into the skills container.
+  // One open explanation across every card, combat and base; the panels are portalled into the skills container.
   const [openId, setOpenId] = useState<string | null>(null);
   const [layer, setLayer] = useState<HTMLElement | null>(null);
+  const baseHeadingId = useId();
   if (!view) return <div className="operator-panel-empty"><strong>Habilidades no disponibles</strong><p>No hay datos de habilidades verificados para este operador.</p></div>;
-  if (view.status === "empty" || !view.skills.length) return <div className="operator-panel-empty"><p>Este operador no tiene habilidades.</p></div>;
+  const glossary = { openId, setOpenId, layer };
   const operatorRange = operatorRangeOf(tactical);
   return <div className="operator-skills" ref={setLayer}>
-    {view.skills.map((skill) => <SkillCard key={skill.skillId} view={view} skill={skill} operatorRange={operatorRange} glossary={{ openId, setOpenId, layer }} />)}
+    {view.status === "empty" || !view.skills.length
+      ? <div className="operator-panel-empty"><p>Este operador no tiene habilidades.</p></div>
+      : <div className="operator-skill-cards">{view.skills.map((skill) => <SkillCard key={skill.skillId} view={view} skill={skill} operatorRange={operatorRange} glossary={glossary} />)}</div>}
+    {view.baseSkills.length ? <section className="operator-base-skills" aria-labelledby={baseHeadingId}>
+      <h2 id={baseHeadingId}>Habilidades de base</h2>
+      <div className="operator-skill-cards">{view.baseSkills.map((slot) => <BaseSkillCard key={slot.slot} slot={slot} glossary={glossary} />)}</div>
+    </section> : null}
   </div>;
 }

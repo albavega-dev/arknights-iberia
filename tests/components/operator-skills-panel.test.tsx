@@ -7,7 +7,7 @@ vi.mock("next/image", () => ({
 
 import { OperatorSkillsPanel } from "../../src/app/operators/[slug]/operator-skills-panel";
 import type { OperatorTacticalEntry } from "../../src/game-data/operator-tactical";
-import type { OperatorSkillsView, OperatorSkillView, SkillLevelLabel, SkillLevelView } from "../../src/game-data/operator-skills-view";
+import type { BaseSkillStageView, OperatorBaseSkillView, OperatorSkillsView, OperatorSkillView, SkillLevelLabel, SkillLevelView } from "../../src/game-data/operator-skills-view";
 import type { SkillDescriptionNode } from "../../src/game-data/skill-description";
 
 const labels: SkillLevelLabel[] = ["1", "2", "3", "4", "5", "6", "7", "M1", "M2", "M3"];
@@ -263,6 +263,123 @@ describe("OperatorSkillsPanel", () => {
     expect(within(card("Habilidad 2")).getByTestId("skill-icon-fallback")).toHaveTextContent("S2");
     fireEvent.error(icon);
     expect(within(card("Habilidad 1")).getByTestId("skill-icon-fallback")).toHaveAttribute("aria-hidden", "true");
+  });
+
+  describe("base skills", () => {
+    const stage = (name: string, overrides: Partial<BaseSkillStageView> = {}): BaseSkillStageView => ({
+      buffId: `buff_${name}`, name, room: "DORMITORY", icon: null, roomIcon: null, color: "#21cdcb", textColor: "#ffffff", unlock: { elite: 0, level: 1 }, description: [{ type: "text", text: `Efecto de ${name}` }], ...overrides,
+    });
+    const slot = (number: number, stages: BaseSkillStageView[], terms: OperatorBaseSkillView["terms"] = {}): OperatorBaseSkillView => ({ slot: number, stages, terms });
+    const base = (slots: OperatorBaseSkillView[], overrides: Partial<OperatorSkillsView> = {}) => render(<OperatorSkillsPanel view={view([skill(1, 1)], { baseSkills: slots, ...overrides })} tactical={null} />);
+    const section = () => screen.getByRole("region", { name: "Habilidades de base" });
+    const stageRadios = (slot: number) => within(screen.getByRole("radiogroup", { name: `Promoción de la habilidad de base ${slot}` })).getAllByRole("radio");
+
+    it("adds no section without base skills", () => {
+      base([]);
+      expect(screen.queryByRole("heading", { name: "Habilidades de base" })).not.toBeInTheDocument();
+    });
+
+    it("renders one slot with its icon, room tag, unlock and description, without a level selector", () => {
+      base([slot(1, [stage("Penguin Logistics", { room: "TRADING", color: "#0075a9", icon: { src: "/assets/operator-base-skills/bskill_tra_spd1.png", width: 36, height: 36 }, roomIcon: { src: "/assets/operator-base-rooms/trading.png", width: 23, height: 23 } })])]);
+      const item = within(section()).getByRole("article", { name: "Penguin Logistics" });
+      expect(within(item).getAllByTestId("next-image").map((image) => image.getAttribute("src"))).toEqual(["/assets/operator-base-skills/bskill_tra_spd1.png", "/assets/operator-base-rooms/trading.png"]);
+      expect(within(item).getAllByTestId("next-image")[0]).toHaveAttribute("width", "36");
+      const room = item.querySelector(".operator-base-skill-room")!;
+      expect(room).toHaveTextContent("Sala Trading Post");
+      expect(room).toHaveStyle({ "--base-room-color": "#0075a9" });
+      expect(item.querySelector(".operator-skill-slot")).toHaveTextContent("Desbloqueo E0");
+      expect(item).toHaveTextContent("Efecto de Penguin Logistics");
+      expect(within(item).queryByRole("radiogroup")).toBeNull();
+      expect(within(item).queryByRole("radio")).toBeNull();
+    });
+
+    it("renders two slots in order and names HIRE as HR Office", () => {
+      base([slot(1, [stage("Primera", { room: "CONTROL" })]), slot(2, [stage("Segunda", { room: "HIRE", unlock: { elite: 2, level: 1 } })])]);
+      expect(within(section()).getAllByRole("article").map((item) => within(item).getByRole("heading").textContent)).toEqual(["Primera", "Segunda"]);
+      expect(card("Primera")).toHaveTextContent("Control Center");
+      expect(card("Segunda")).toHaveTextContent("HR Office");
+      expect(card("Segunda").querySelector(".operator-skill-slot")).toHaveTextContent("E2");
+    });
+
+    it("uses dark text on light room colors and white on dark ones", () => {
+      base([slot(1, [stage("Clara", { color: "#e3eb00" })]), slot(2, [stage("Oscura", { room: "TRAINING", color: "#7d0022" })]), slot(3, [stage("Sin color", { color: "teal" })])]);
+      expect(card("Clara").querySelector(".operator-base-skill-room")).toHaveClass("is-dark-text");
+      expect(card("Oscura").querySelector(".operator-base-skill-room")).toHaveClass("is-light-text");
+      expect(card("Sin color").querySelector(".operator-base-skill-room")).toHaveClass("is-dark-text");
+      expect(card("Sin color").querySelector(".operator-base-skill-room")).not.toHaveAttribute("style");
+    });
+
+    it("shows one stage of a replacement, the highest by default, and switches it from the promotion selector", () => {
+      base([slot(1, [stage("Penguin Logistics α", { room: "TRADING" }), stage("Logistics Expert", { room: "TRADING", unlock: { elite: 2, level: 1 } })])]);
+      const group = screen.getByRole("radiogroup", { name: "Promoción de la habilidad de base 1" });
+      expect(stageRadios(1).map((radio) => radio.textContent)).toEqual(["E0", "E2"]);
+      expect(stageRadios(1)[1]).toHaveAttribute("aria-checked", "true");
+      expect(stageRadios(1)[1]).toHaveClass("is-active");
+      expect(within(group.closest("article")!).getAllByRole("heading").map((heading) => heading.textContent)).toEqual(["Logistics Expert"]);
+      expect(group.closest("article")).not.toHaveTextContent(/Sustitu/);
+      fireEvent.click(stageRadios(1)[0]);
+      expect(card("Penguin Logistics α")).toHaveTextContent("Efecto de Penguin Logistics α");
+      expect(stageRadios(1)[0]).toHaveAttribute("aria-checked", "true");
+      expect(stageRadios(1)[0]).toHaveAttribute("tabindex", "0");
+      expect(stageRadios(1)[1]).toHaveAttribute("tabindex", "-1");
+      vi.spyOn(stageRadios(1)[1], "getBoundingClientRect").mockReturnValue({ top: 100, left: 200, bottom: 120, right: 240, width: 40, height: 20, x: 200, y: 100, toJSON: () => ({}) });
+      fireEvent.mouseMove(stageRadios(1)[1], { clientX: 215, clientY: 108 });
+      expect(stageRadios(1)[1].style.getPropertyValue("--pointer-x")).toBe("15px");
+      expect(stageRadios(1)[1].style.getPropertyValue("--pointer-y")).toBe("8px");
+    });
+
+    it("moves through three stages with arrows, Home and End (char_188_helage)", () => {
+      base([slot(1, [stage("Release"), stage("Break Loose", { unlock: { elite: 1, level: 1 } }), stage("Absolution", { unlock: { elite: 2, level: 1 } })])]);
+      const names = () => within(screen.getByRole("region", { name: "Habilidades de base" })).getByRole("article").querySelector("h3")!.textContent;
+      expect(stageRadios(1).map((radio) => radio.textContent)).toEqual(["E0", "E1", "E2"]);
+      expect(names()).toBe("Absolution");
+      fireEvent.keyDown(stageRadios(1)[2], { key: "ArrowLeft" });
+      expect(names()).toBe("Break Loose");
+      expect(document.activeElement).toBe(stageRadios(1)[1]);
+      fireEvent.keyDown(stageRadios(1)[1], { key: "Home" });
+      expect(names()).toBe("Release");
+      fireEvent.keyDown(stageRadios(1)[0], { key: "ArrowUp" });
+      expect(names()).toBe("Absolution");
+      fireEvent.keyDown(stageRadios(1)[2], { key: "ArrowRight" });
+      expect(names()).toBe("Release");
+      fireEvent.keyDown(stageRadios(1)[0], { key: "ArrowDown" });
+      fireEvent.keyDown(stageRadios(1)[1], { key: "End" });
+      expect(names()).toBe("Absolution");
+      fireEvent.keyDown(stageRadios(1)[2], { key: "Tab" });
+      expect(names()).toBe("Absolution");
+    });
+
+    it("labels an unlock at level 30 with its level", () => {
+      base([slot(1, [stage("Antes"), stage("Después", { unlock: { elite: 0, level: 30 } })])]);
+      expect(stageRadios(1).map((radio) => radio.textContent)).toEqual(["E0", "E0 · Nv. 30"]);
+    });
+
+    it("shows a CN-only operator, with the recycling room as in the data, even without combat skills", () => {
+      render(<OperatorSkillsPanel view={view([], { status: "empty", region: "cn", baseSkills: [slot(1, [stage("回收", { room: "RECYCLE", color: "#6ccbcb" })]), slot(2, [stage("Taller", { room: "WORKSHOP", color: "#e3eb00" })])] })} tactical={null} />);
+      expect(screen.getByText("Este operador no tiene habilidades.")).toBeInTheDocument();
+      expect(screen.getByText("回收站")).toHaveAttribute("lang", "zh-Hans");
+      expect(card("Taller")).toHaveTextContent("Workshop");
+      expect(screen.queryByText(/chino/)).not.toBeInTheDocument();
+    });
+
+    it("keeps the unknown room id and falls back when the icon is missing or fails", () => {
+      base([slot(1, [stage("Rota", { room: "ELEVATOR", icon: { src: "/assets/operator-base-skills/rota.png", width: 36, height: 36 } })]), slot(2, [stage("Sin icono")])]);
+      expect(card("Rota")).toHaveTextContent("ELEVATOR");
+      expect(within(card("Sin icono")).getByTestId("skill-icon-fallback")).toHaveTextContent("B2");
+      fireEvent.error(within(card("Rota")).getByTestId("next-image"));
+      expect(within(card("Rota")).getByTestId("skill-icon-fallback")).toHaveTextContent("B1");
+    });
+
+    it("opens glossary terms, sharing a single open explanation with the combat cards", () => {
+      const terms = { "cc.g.lda": { name: "Lungmen Dollars", description: [{ type: "text" as const, text: "Moneda" }] } };
+      const term: SkillDescriptionNode = { type: "style", tag: "$cc.g.lda", tone: "keyword", termId: "cc.g.lda", children: [{ type: "text", text: "LMD" }] };
+      render(<OperatorSkillsPanel view={view([skill(1, 1, { terms, levels: [level(0, { name: "Combate", description: [term] })] })], { baseSkills: [slot(1, [stage("Base", { description: [term] })], terms)] })} tactical={null} />);
+      fireEvent.click(within(card("Combate")).getByRole("button", { name: "LMD" }));
+      fireEvent.click(within(card("Base")).getByRole("button", { name: "LMD" }));
+      expect(screen.getAllByRole("dialog")).toHaveLength(1);
+      expect(screen.getByRole("dialog", { name: "Lungmen Dollars" })).toHaveTextContent("Moneda");
+      expect(within(card("Base")).getByRole("button", { name: "LMD" })).toHaveAttribute("aria-expanded", "true");
+    });
   });
 
   it("shows the skill range, or the operator range at its highest promotion, without headings", () => {

@@ -3333,7 +3333,10 @@
   --skill-tone-keyword: var(--color-brass);
   --skill-tone-status: var(--color-muted);
   --skill-level-button: 2rem;
-  /* Una tarjeta por fila. */
+  min-width: 0;
+}
+/* Una tarjeta por fila, en combate y en base. */
+.operator-skill-cards {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
@@ -3603,6 +3606,86 @@ button.operator-skill-tone.is-term:focus-visible {
   --range-grid-width: max-content;
   justify-self: center;
   min-width: 0;
+}
+/* Habilidades de base: el mismo lenguaje que las tarjetas de combate, más compacto. */
+.operator-base-skills {
+  margin-top: var(--space-4);
+}
+/* El icono, con su transparencia y sin marco, a su tamaño de origen y centrado respecto al nombre y la sala. */
+.operator-base-skill-card .operator-skill-icon {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: none;
+}
+/* Icono de sala reducido (origen 23 px) para que quepa dentro del relleno de la etiqueta. */
+.operator-base-skill-room img {
+  width: 1rem;
+  height: 1rem;
+}
+/* Etapas por promoción: la activa con la luz del faro de la etiqueta de hueco, las demás atenuadas. */
+.operator-base-skill-stage-selector {
+  display: flex;
+  gap: var(--space-1);
+  align-self: start;
+}
+.operator-base-skill-stage-selector .operator-skill-slot {
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+.operator-base-skill-stage-selector .operator-skill-slot:not(.is-active) {
+  background: rgba(68, 91, 101, 0.24);
+  box-shadow: none;
+  color: var(--color-muted);
+}
+/* Alumbrado de las pestañas de la ficha: un foco latón que sigue al puntero, por detrás del texto. */
+.operator-base-skill-stage-selector .operator-skill-slot::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle 3rem at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    color-mix(in srgb, var(--color-brass) 18%, transparent),
+    transparent 72%
+  );
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .operator-base-skill-stage-selector .operator-skill-slot:not(.is-active):hover {
+    color: var(--color-ivory);
+  }
+  .operator-base-skill-stage-selector .operator-skill-slot:hover::before {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .operator-base-skill-stage-selector .operator-skill-slot,
+  .operator-base-skill-stage-selector .operator-skill-slot::before {
+    transition: none;
+  }
+}
+.operator-base-skill-stage-selector .operator-skill-slot:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+/* Sala con el color del juego; el texto es oscuro salvo en los colores demasiado oscuros para él. */
+.operator-base-skill-room {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: var(--base-room-color, var(--skill-activation));
+}
+.operator-base-skill-room.is-light-text {
+  color: #fff;
+}
+/* El icono de sala es un glifo blanco: sobre los colores claros se oscurece como el texto. */
+.operator-base-skill-room.is-dark-text img {
+  filter: brightness(0);
 }
 .operator-skill-levels-toggle {
   display: grid;
