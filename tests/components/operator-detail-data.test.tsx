@@ -1,4 +1,4 @@
-import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
 vi.mock("next/image", () => ({
@@ -294,25 +294,58 @@ describe("OperatorDetailData image policy", () => {
 });
 
 describe("OperatorDetailData skills tab", () => {
-  const renderTab = (skills: Parameters<typeof OperatorDetailData>[0]["skills"]) => {
-    render(<OperatorDetailData operator={operator} skills={skills} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />);
-    fireEvent.click(screen.getByRole("tab", { name: "Habilidades" }));
-    return screen.getByRole("heading", { name: "Habilidades de combate" }).parentElement!;
-  };
+  type SkillsView = NonNullable<Parameters<typeof OperatorDetailData>[0]["skills"]>;
+  const detail = (skills: SkillsView | null) => <OperatorDetailData operator={operator} skills={skills} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />;
+  const tabNames = () => screen.getAllByRole("tab").map((tab) => tab.textContent);
   const source = { repository: "test", revision: "test", path: "skill_table.json", sha256: "test" };
+  const level = { index: 0, label: "1" as const, group: "level" as const, name: "Test Skill", icon: null, spCost: 30, initialSp: 10, duration: 20, durationKind: "seconds" as const, rangeId: null, description: [{ type: "text" as const, text: "Efecto" }] };
+  const combat: SkillsView["skills"] = [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [level], defaultLevelIndex: 0, terms: {} }];
+  const base: SkillsView["baseSkills"] = [{ slot: 1, stages: [{ buffId: "buff_test", name: "Test Base", room: "CONTROL", icon: null, roomIcon: null, color: "#005752", textColor: "#ffffff", unlock: { elite: 0, level: 1 }, description: [{ type: "text", text: "Efecto de base" }] }], terms: {} }];
+  const view = (skills: SkillsView["skills"], baseSkills: SkillsView["baseSkills"]): SkillsView => ({ status: skills.length ? "available" : "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills, baseSkills });
 
-  it("shows the skills panel for the view it receives", () => {
-    const withoutView = renderTab(null);
-    expect(withoutView).toHaveAttribute("data-skills-status", "unavailable");
-    expect(withoutView).toHaveTextContent("Habilidades no disponibles");
-    cleanup();
-    const empty = renderTab({ status: "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills: [], baseSkills: [] });
-    expect(empty).toHaveAttribute("data-skills-status", "empty");
-    expect(empty).toHaveTextContent("Este operador no tiene habilidades.");
-    cleanup();
-    const level = { index: 0, label: "1" as const, group: "level" as const, name: "Test Skill", icon: null, spCost: 30, initialSp: 10, duration: 20, durationKind: "seconds" as const, rangeId: null, description: [{ type: "text" as const, text: "Efecto" }] };
-    const available = renderTab({ status: "available", operatorId: operator.id, region: "en", source, ranges: {}, skills: [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [level], defaultLevelIndex: 0, terms: {} }], baseSkills: [] });
-    expect(available).toHaveAttribute("data-skills-status", "available");
+  it("hides the Skills tab without a view or without combat and base skills", () => {
+    const { rerender } = render(detail(null));
+    expect(tabNames()).toEqual(["Estadísticas", "Talentos", "Módulos", "Expediente", "Voces"]);
+    rerender(detail(view([], [])));
+    expect(screen.queryByRole("tab", { name: "Habilidades" })).not.toBeInTheDocument();
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Estadísticas" }), { key: "ArrowRight" });
+    expect(screen.getByRole("tab", { name: "Talentos" })).toHaveAttribute("aria-selected", "true");
+    expect(document.activeElement).toBe(screen.getByRole("tab", { name: "Talentos" }));
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Talentos" }), { key: "ArrowLeft" });
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Estadísticas" }), { key: "End" });
+    expect(screen.getByRole("tab", { name: "Voces" })).toHaveAttribute("aria-selected", "true");
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Voces" }), { key: "Home" });
+    expect(screen.getByRole("tab", { name: "Estadísticas" })).toHaveAttribute("aria-selected", "true");
+  });
+
+  it("opens Stats when the selected Skills tab does not exist for the operator", () => {
+    const { rerender } = render(detail(view(combat, base)));
+    fireEvent.click(screen.getByRole("tab", { name: "Habilidades" }));
+    expect(screen.getByRole("tabpanel")).toHaveAttribute("aria-labelledby", screen.getByRole("tab", { name: "Habilidades" }).id);
+    rerender(detail(null));
+    expect(screen.getByRole("tab", { name: "Estadísticas" })).toHaveAttribute("aria-selected", "true");
+    expect(screen.getByRole("tabpanel")).toHaveAttribute("aria-labelledby", screen.getByRole("tab", { name: "Estadísticas" }).id);
+    rerender(detail(view(combat, base)));
+    expect(screen.getByRole("tab", { name: "Habilidades" })).toHaveAttribute("aria-selected", "true");
+  });
+
+  it("shows only the base section for an operator without combat skills", () => {
+    render(detail(view([], base)));
+    fireEvent.click(screen.getByRole("tab", { name: "Habilidades" }));
+    const tab = screen.getByRole("tabpanel").querySelector(".operator-skills-tab")!;
+    expect(tab).toHaveAttribute("data-skills-status", "empty");
+    expect(screen.queryByRole("heading", { name: "Habilidades de combate" })).not.toBeInTheDocument();
+    expect(screen.queryByText("Este operador no tiene habilidades.")).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Habilidades de base" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Test Base" })).toBeInTheDocument();
+  });
+
+  it("shows the combat and base sections when the operator has both", () => {
+    render(detail(view(combat, base)));
+    fireEvent.click(screen.getByRole("tab", { name: "Habilidades" }));
+    expect(screen.getByRole("tabpanel").querySelector(".operator-skills-tab")).toHaveAttribute("data-skills-status", "available");
+    expect(screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent)).toEqual(["Habilidades de combate", "Habilidades de base"]);
     expect(screen.getByRole("heading", { name: "Test Skill" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Test Base" })).toBeInTheDocument();
   });
 });

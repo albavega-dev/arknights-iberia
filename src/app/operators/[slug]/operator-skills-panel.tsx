@@ -139,7 +139,12 @@ function SkillLevelSelector({ skill, selected, onSelect }: { skill: OperatorSkil
     onSelect(next);
     document.getElementById(`${id}-${next}`)?.focus();
   };
-  return <div className="operator-skill-levels"><span className="operator-skill-levels-label" aria-hidden="true">Nv.</span><div className="operator-skill-level-groups" role="radiogroup" aria-label={`Nivel de S${skill.slot}`}>{groups.map((levels) => <div className="operator-stats-choice-list operator-skill-level-group" key={levels[0].group}>{levels.map((level) => <OperatorControlButton appearance="naval" size="compact" type="button" key={level.index} id={`${id}-${level.index}`} role="radio" aria-checked={level.index === selected} aria-label={level.icon ? level.label : undefined} tabIndex={level.index === selected ? 0 : -1} className={`operator-filter-button${level.icon ? "" : " is-text"}${level.index === selected ? " is-active" : ""}`} onClick={() => onSelect(level.index)} onKeyDown={move}>{level.icon ? <Image src={level.icon.src} alt="" width={26} height={24} unoptimized /> : level.label}</OperatorControlButton>)}</div>)}</div></div>;
+  return <div className="operator-skill-levels"><span className="operator-skill-levels-label" aria-hidden="true">Nv.</span><div className="operator-skill-level-groups" role="radiogroup" aria-label={`Nivel de S${skill.slot}`}>{groups.map((levels) => <div className="operator-stats-choice-list operator-skill-level-group" key={levels[0].group}>{levels.map((level) => {
+    const radio = { id: `${id}-${level.index}`, role: "radio", "aria-checked": level.index === selected, tabIndex: level.index === selected ? 0 : -1, onClick: () => onSelect(level.index), onKeyDown: move } as const;
+    // Masteries are their icon alone, lit like the base skill stages; levels 1-7 keep the naval buttons.
+    if (level.icon) return <button type="button" key={level.index} {...radio} aria-label={level.label} className={`operator-skill-mastery${level.index === selected ? " is-active" : ""}`}><Image src={level.icon.src} alt="" width={level.icon.width} height={level.icon.height} unoptimized /></button>;
+    return <OperatorControlButton appearance="naval" size="compact" type="button" key={level.index} {...radio} className={`operator-filter-button is-text${level.index === selected ? " is-active" : ""}`}>{level.label}</OperatorControlButton>;
+  })}</div>)}</div></div>;
 }
 
 function SkillLevelsTable({ skill, id }: { skill: OperatorSkillView; id: string }) {
@@ -221,10 +226,15 @@ function BaseSkillIcon({ stage, slot }: { stage: BaseSkillStageView; slot: numbe
   return <Image className="operator-skill-icon" src={stage.icon.src} alt="" width={stage.icon.width} height={stage.icon.height} unoptimized onError={() => setFailed(true)} />;
 }
 
+/** Promotion icon of the Stats elite selector, plus the level when it is above 1; the text label is for assistive technology. */
+function UnlockIcon({ unlock }: { unlock: SkillUnlock }) {
+  return <><span className="operator-base-skill-unlock-icon"><Image src={`/assets/operator-elite/elite-${unlock.elite}.png`} alt="" width={40} height={40} unoptimized /></span>{unlock.level > 1 ? <span className="operator-base-skill-unlock-level" aria-hidden="true">Nv. {unlock.level}</span> : null}</>;
+}
+
 /** Unlock of each stage as a radio group, with the same keys as the level selector; a single stage keeps a fixed tag. */
 function BaseStageSelector({ slot, selected, onSelect }: { slot: OperatorBaseSkillView; selected: number; onSelect: (index: number) => void }) {
   const id = useId();
-  if (slot.stages.length === 1) return <span className="operator-tactical-tag operator-skill-slot"><span className="sr-only">Desbloqueo </span>{unlockLabel(slot.stages[0].unlock)}</span>;
+  if (slot.stages.length === 1) return <span className="operator-base-skill-unlock"><span className="sr-only">Desbloqueo {unlockLabel(slot.stages[0].unlock)}</span><UnlockIcon unlock={slot.stages[0].unlock} /></span>;
   const last = slot.stages.length - 1;
   const move = (event: KeyboardEvent<HTMLButtonElement>) => {
     const next = event.key === "Home" ? 0 : event.key === "End" ? last : event.key === "ArrowRight" || event.key === "ArrowDown" ? (selected + 1) % (last + 1) : event.key === "ArrowLeft" || event.key === "ArrowUp" ? (selected + last) % (last + 1) : null;
@@ -233,7 +243,7 @@ function BaseStageSelector({ slot, selected, onSelect }: { slot: OperatorBaseSki
     onSelect(next);
     document.getElementById(`${id}-${next}`)?.focus();
   };
-  return <div className="operator-base-skill-stage-selector" role="radiogroup" aria-label={`Promoción de la habilidad de base ${slot.slot}`}>{slot.stages.map((stage, index) => <button type="button" key={stage.buffId} id={`${id}-${index}`} role="radio" aria-checked={index === selected} tabIndex={index === selected ? 0 : -1} className={`operator-tactical-tag operator-skill-slot${index === selected ? " is-active" : ""}`} onClick={() => onSelect(index)} onKeyDown={move} onMouseMove={(event) => { const rect = event.currentTarget.getBoundingClientRect(); event.currentTarget.style.setProperty("--pointer-x", `${event.clientX - rect.left}px`); event.currentTarget.style.setProperty("--pointer-y", `${event.clientY - rect.top}px`); }}>{unlockLabel(stage.unlock)}</button>)}</div>;
+  return <div className="operator-base-skill-stage-selector" role="radiogroup" aria-label={`Promoción de la habilidad de base ${slot.slot}`}>{slot.stages.map((stage, index) => <button type="button" key={stage.buffId} id={`${id}-${index}`} role="radio" aria-checked={index === selected} aria-label={unlockLabel(stage.unlock)} tabIndex={index === selected ? 0 : -1} className={`operator-base-skill-unlock${index === selected ? " is-active" : ""}`} onClick={() => onSelect(index)} onKeyDown={move}><UnlockIcon unlock={stage.unlock} /></button>)}</div>;
 }
 
 /** One slot showing one stage at a time, the highest by default; each stage replaces the previous one. */
@@ -257,7 +267,7 @@ export function OperatorSkillsPanel({ view, tactical }: { view: OperatorSkillsVi
   const operatorRange = operatorRangeOf(tactical);
   return <div className="operator-skills" ref={setLayer}>
     {view.status === "empty" || !view.skills.length
-      ? <div className="operator-panel-empty"><p>Este operador no tiene habilidades.</p></div>
+      ? view.baseSkills.length ? null : <div className="operator-panel-empty"><p>Este operador no tiene habilidades.</p></div>
       : <div className="operator-skill-cards">{view.skills.map((skill) => <SkillCard key={skill.skillId} view={view} skill={skill} operatorRange={operatorRange} glossary={glossary} />)}</div>}
     {view.baseSkills.length ? <section className="operator-base-skills" aria-labelledby={baseHeadingId}>
       <h2 id={baseHeadingId}>Habilidades de base</h2>
