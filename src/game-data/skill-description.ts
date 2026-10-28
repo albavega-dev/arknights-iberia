@@ -27,7 +27,7 @@ const knownTags: Record<string, SkillDescriptionTone> = {
   "@cc.kw": "keyword",
 };
 
-/** `<$id>` tags mark a glossary term: they share the status tone and keep the term id (for example `ba.stun`) for future tooltips. */
+/** `<$id>` tags mark a glossary term: they share the status tone and keep the term id (for example `ba.stun`) for its explanation. */
 function termIdOf(tag: string): string | null {
   return tag.startsWith("$") && tag.length > 1 ? tag.slice(1) : null;
 }

@@ -10,7 +10,7 @@ const index = indexData as unknown as DatasetIndex;
 type StoredProfile = Omit<OperatorStatsProfile, "source">;
 
 // Reads one operator profile from the per-operator dataset. The bundler includes the JSON files
-// (data/operator-stats/*.json) in the server output, so no file tracing configuration is needed.
+// (data/operator-stats/*.json) in the server output.
 // Returns null when the operator is not indexed for the requested region.
 export async function loadStatsProfile(operatorId: string, region: GameDataRegion): Promise<OperatorStatsProfile | null> {
   if (!isOperatorId(operatorId)) return null;

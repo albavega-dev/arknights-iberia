@@ -3314,8 +3314,7 @@
   }
 }
 
-/* Pestaña Habilidades: tarjetas con la identidad naval de Estadísticas. */
-/* Título y tarjetas comparten el mismo bloque: 760 px como máximo, centrado en la pestaña. */
+/* Skills tab */
 .operator-skills-tab {
   width: 100%;
   max-width: 47.5rem;
@@ -3323,7 +3322,7 @@
   margin-inline: auto;
 }
 .operator-skills {
-  /* Recuperación de SP y activación: colores de la plantilla Skill head de Terra Wiki. */
+  /* SP recovery and activation */
   --skill-recovery-time: #8ec31f;
   --skill-recovery-attack: #fc793e;
   --skill-recovery-defense: #f4af09;
@@ -3335,7 +3334,7 @@
   --skill-level-button: 2rem;
   min-width: 0;
 }
-/* Una tarjeta por fila, en combate y en base. */
+/* Cards, one per row */
 .operator-skill-cards {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -3405,9 +3404,7 @@
 .operator-skill-tag.is-recovery-defense {
   background: var(--skill-recovery-defense);
 }
-/*
- * Etiqueta de hueco sin caja, como el selector de etapas de base, en marfil (más contraste que el latón).
- */
+/* Slot label (S1–S3) */
 .operator-skill-slot {
   align-self: start;
   padding: 0;
@@ -3428,7 +3425,6 @@
   color: var(--color-cyan);
   font-size: 0.78rem;
 }
-/* Niveles y maestrías separados solo por espacio. */
 .operator-skill-level-groups {
   display: flex;
   align-items: center;
@@ -3444,10 +3440,7 @@
   min-width: 0;
   padding-inline: 0;
 }
-/*
- * Maestrías: el icono solo (origen 250 × 230), sin caja, con 44 px de área táctil. La activa, con la luz latón del faro
- * siguiendo su contorno, como las etapas de base; las demás, tal cual, con un brillo suave al pasar el ratón.
- */
+/* Masteries */
 .operator-skill-mastery {
   display: grid;
   place-items: center;
@@ -3480,7 +3473,7 @@
     transition: none;
   }
 }
-/* Valores con su ancho natural; el rango, centrado en el espacio que queda a su derecha. */
+/* Values and range */
 .operator-skill-data {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
@@ -3537,11 +3530,7 @@
 .operator-skill-tone.is-status {
   color: var(--skill-tone-status);
 }
-/*
- * Término del glosario con la luz del faro: una franja difusa de brillo latón y, como su límite inferior, una línea latón
- * tenue de 1 px. Son dos capas del mismo fondo, con la misma anchura y ancladas al mismo borde; `clone` repite ambas en
- * cada línea cuando el término se parte.
- */
+/* Glossary term */
 .operator-skill-tone.is-term {
   --term-light: color-mix(in srgb, var(--operator-accent-light) 20%, transparent);
   --term-light-height: 0.6em;
@@ -3552,7 +3541,7 @@
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
-/* Dentro de una explicación no abre nada: subrayado de texto tenue, solo un rastro de luz y sin intensificarse. */
+/* Term inside an explanation: opens nothing. */
 .operator-glossary-text .operator-skill-tone.is-term {
   --term-light: color-mix(in srgb, var(--operator-accent-light) 9%, transparent);
   --term-light-height: 0.4em;
@@ -3560,9 +3549,7 @@
   text-decoration: underline 1px color-mix(in srgb, var(--operator-accent-light) 38%, transparent);
   text-underline-offset: 0.22em;
 }
-/*
- * Como botón, en línea con el texto. Al pasar el ratón, enfocarlo o abrirlo, la línea y la luz se intensifican un poco.
- */
+/* Term as a button */
 button.operator-skill-tone.is-term {
   display: inline;
   padding: 0;
@@ -3587,10 +3574,7 @@ button.operator-skill-tone.is-term:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
-/*
- * Explicación del término, colocada por script junto a él. Se separa de la tarjeta sin contorno, como el menú lateral:
- * su superficie tonal algo más clara, el brillo latón que baja desde arriba (la luz del faro) y una sombra suave.
- */
+/* Term explanation */
 .operator-glossary-panel {
   position: fixed;
   z-index: 30;
@@ -3641,26 +3625,21 @@ button.operator-skill-tone.is-term:focus-visible {
   justify-self: center;
   min-width: 0;
 }
-/* Habilidades de base: el mismo lenguaje que las tarjetas de combate, más compacto. */
+/* Base skills */
 .operator-base-skills {
   margin-top: var(--space-4);
 }
-/* El icono, con su transparencia y sin marco, a su tamaño de origen y centrado respecto al nombre y la sala. */
 .operator-base-skill-card .operator-skill-icon {
   width: 36px;
   height: 36px;
   border: 0;
   background: none;
 }
-/* Icono de sala reducido (origen 23 px) para que quepa dentro del relleno de la etiqueta. */
 .operator-base-skill-room img {
   width: 1rem;
   height: 1rem;
 }
-/*
- * Etapas por promoción: el icono de élite de Estadísticas (origen 40 px), sin caja. La etapa activa y la fija se iluminan con
- * la luz latón del faro; las demás, tal cual, con un brillo suave al pasar el ratón. 44 px de área táctil.
- */
+/* Stage selector */
 .operator-base-skill-stage-selector {
   display: flex;
   align-self: start;
@@ -3693,13 +3672,13 @@ button.operator-base-skill-unlock {
   height: 32px;
   transition: filter 180ms ease;
 }
-/* Luz del faro que sigue el contorno del icono: un halo corto e intenso y otro más amplio y suave, con el icono algo más claro. */
+/* Active or fixed stage */
 .operator-base-skill-unlock.is-active img,
 span.operator-base-skill-unlock img {
   filter: brightness(1.15) drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 90%, transparent))
     drop-shadow(0 0 7px color-mix(in srgb, var(--color-brass) 60%, transparent));
 }
-/* "Nv. 30" se ilumina con la misma luz que su icono de E0, para leerse como un solo elemento. */
+/* Unlock level, lit like its icon */
 .operator-base-skill-unlock-level {
   transition: text-shadow 180ms ease;
 }
@@ -3727,7 +3706,7 @@ button.operator-base-skill-unlock:focus-visible {
   outline: 2px solid var(--focus-ring);
   outline-offset: -2px;
 }
-/* Sala con el color del juego; el texto es oscuro salvo en los colores demasiado oscuros para él. */
+/* Room tag */
 .operator-base-skill-room {
   display: inline-flex;
   align-items: center;
@@ -3737,7 +3716,7 @@ button.operator-base-skill-unlock:focus-visible {
 .operator-base-skill-room.is-light-text {
   color: #fff;
 }
-/* El icono de sala es un glifo blanco: sobre los colores claros se oscurece como el texto. */
+/* The room icon is white: darken it on light colors. */
 .operator-base-skill-room.is-dark-text img {
   filter: brightness(0);
 }
@@ -3783,7 +3762,7 @@ button.operator-base-skill-unlock:focus-visible {
 .operator-skill-table tbody tr:last-child > * {
   border-bottom: 0;
 }
-/* Tarjeta más estrecha que el mínimo (móvil): selector en dos filas y rango debajo de los valores. */
+/* Narrow cards: selector in two rows and range below. */
 @container (max-width: 26rem) {
   .operator-skill-data {
     grid-template-columns: minmax(0, 1fr);

@@ -43,7 +43,7 @@ export function skillIconLocalName(sourceName: string): string {
   return sourceName.slice(sourcePrefix.length).replace(/\[(\d+)\]/g, "-$1").toLowerCase();
 }
 
-/** Order from the design: the icon id when it is set and inventoried, otherwise the skill id. Never builds a path outside the inventory. */
+/** The icon id when it is set and inventoried, otherwise the skill id. Never builds a path outside the inventory. */
 export function resolveSkillIconSource(skillId: string, iconId: string | null | undefined, inventory: ReadonlySet<string>): string | null {
   if (iconId && inventory.has(`${sourcePrefix}${iconId}.png`)) return `${sourcePrefix}${iconId}.png`;
   return inventory.has(`${sourcePrefix}${skillId}.png`) ? `${sourcePrefix}${skillId}.png` : null;

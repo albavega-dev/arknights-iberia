@@ -141,7 +141,7 @@ function SkillLevelSelector({ skill, selected, onSelect }: { skill: OperatorSkil
   };
   return <div className="operator-skill-levels"><span className="operator-skill-levels-label" aria-hidden="true">Nv.</span><div className="operator-skill-level-groups" role="radiogroup" aria-label={`Nivel de S${skill.slot}`}>{groups.map((levels) => <div className="operator-stats-choice-list operator-skill-level-group" key={levels[0].group}>{levels.map((level) => {
     const radio = { id: `${id}-${level.index}`, role: "radio", "aria-checked": level.index === selected, tabIndex: level.index === selected ? 0 : -1, onClick: () => onSelect(level.index), onKeyDown: move } as const;
-    // Masteries are their icon alone, lit like the base skill stages; levels 1-7 keep the naval buttons.
+    // Masteries show only their icon.
     if (level.icon) return <button type="button" key={level.index} {...radio} aria-label={level.label} className={`operator-skill-mastery${level.index === selected ? " is-active" : ""}`}><Image src={level.icon.src} alt="" width={level.icon.width} height={level.icon.height} unoptimized /></button>;
     return <OperatorControlButton appearance="naval" size="compact" type="button" key={level.index} {...radio} className={`operator-filter-button is-text${level.index === selected ? " is-active" : ""}`}>{level.label}</OperatorControlButton>;
   })}</div>)}</div></div>;
@@ -186,7 +186,7 @@ function operatorRangeOf(tactical: OperatorTacticalEntry | null): OperatorRange 
   return null;
 }
 
-// Room names as in the region data, like S1/S2/S3; HIRE is "Office" in the data and "HR Office" in the descriptions.
+// Room names as in the region data; HIRE uses "HR Office" from the descriptions (the room table says "Office").
 const roomNames: Record<string, { name: string; lang?: string }> = {
   CONTROL: { name: "Control Center" }, POWER: { name: "Power Plant" }, MANUFACTURE: { name: "Factory" }, TRADING: { name: "Trading Post" }, WORKSHOP: { name: "Workshop" },
   TRAINING: { name: "Training Room" }, DORMITORY: { name: "Dormitory" }, HIRE: { name: "HR Office" }, MEETING: { name: "Reception Room" }, RECYCLE: { name: "回收站", lang: "zh-Hans" },
@@ -206,7 +206,7 @@ function luminance(color: string): number | null {
 // --color-abyss, the dark text of the tags.
 const darkTextLuminance = luminance("#080f18")!;
 
-/** Dark text on the game's room color, or white when that color is too dark for it (Control Center, Training Room, Trading Post, HR Office). */
+/** Dark text on the game's room color, or white when white contrasts more. */
 function roomTagStyle(color: string): { className: string; style?: CSSProperties } {
   const background = luminance(color);
   if (background === null) return { className: "is-dark-text" };

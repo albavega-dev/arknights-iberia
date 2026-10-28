@@ -1,4 +1,4 @@
-// Single place that builds paths under /assets/. New asset kinds use it; older call sites still write their paths inline.
+// Builds paths under /assets/.
 export const assetsRoot = "/assets";
 
 export function assetPath(directory: string, file: string): string {
