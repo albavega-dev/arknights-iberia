@@ -311,5 +311,21 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has <@ba.kw>reduced</> Redeployment Time, can use ranged attacks",
+      "blackboard": [
+        {
+          "key": "runtime_cost",
+          "value": -9999
+        }
+      ]
+    }
   ]
 }

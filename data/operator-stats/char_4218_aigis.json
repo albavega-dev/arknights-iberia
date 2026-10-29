@@ -310,5 +310,15 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "部署后<$ba.liftoff>起飞</>，<$ba.liftoff>起飞</>后只攻击空中敌人；技能开启时降落且攻击造成<@ba.kw>群体物理伤害</>"
+    }
   ]
 }

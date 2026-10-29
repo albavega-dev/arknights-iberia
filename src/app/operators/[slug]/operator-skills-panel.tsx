@@ -7,7 +7,7 @@ import { Play, Timer, Zap, type LucideIcon } from "lucide-react";
 import { formatNumber } from "../../../game-data/number-format";
 import { getTacticalRangeDefinition, type OperatorTacticalEntry, type TacticalRangeDefinition } from "../../../game-data/operator-tactical";
 import type { BaseSkillStageView, OperatorBaseSkillView, OperatorSkillRangeView, OperatorSkillsView, OperatorSkillView, OperatorTalentView, SkillLevelView, SkillTermView, TalentStageView } from "../../../game-data/operator-skills-view";
-import type { ModuleTalentChangeView } from "../../../game-data/operator-modules-view";
+import type { ModuleTalentChangeView, ModuleTraitChangeView, TraitStageView } from "../../../game-data/operator-modules-view";
 import { formatModuleTypeLabel } from "../../../game-data/operator-stats";
 import type { SkillUnlock } from "../../../game-data/operator-skills";
 import type { SkillDescriptionNode, SkillDescriptionTone } from "../../../game-data/skill-description";
@@ -291,8 +291,32 @@ function talentStageFor(talent: OperatorTalentView, selection: TalentSelection):
   return talent.stages.findLast((stage) => unlockAtOrBelow(stage.unlock, selection) && stage.potential <= selection.potential) ?? null;
 }
 
-/** Talent changes of the module and level chosen in Stats, already resolved for the selected potential. */
-export type TalentModuleEffect = { type: string; terms: Record<string, SkillTermView>; ranges: Record<string, OperatorSkillRangeView>; changes: ModuleTalentChangeView[] };
+/** Talent changes of the module and level chosen in Stats, already resolved for the selected potential, and its trait changes. */
+export type TalentModuleEffect = { type: string; terms: Record<string, SkillTermView>; ranges: Record<string, OperatorSkillRangeView>; changes: ModuleTalentChangeView[]; traits: ModuleTraitChangeView[] };
+
+/** Trait stages of the operator, from its stats file, with the glossary terms of their texts. */
+export type StatsTrait = { stages: TraitStageView[]; terms: Record<string, SkillTermView> };
+
+/**
+ * The trait at the selection: the last stage whose unlock and potential it meets (the first stage is always unlocked). A module
+ * that replaces the trait marks the card with its tone; the parts it appends follow the trait in the module tone.
+ */
+function TraitCard({ trait, selection, glossary, moduleEffect }: { trait: StatsTrait; selection: TalentSelection; glossary: Omit<GlossaryContext, "terms">; moduleEffect?: TalentModuleEffect }) {
+  const id = useId();
+  const stage = trait.stages.findLast((item) => unlockAtOrBelow(item.unlock, selection) && item.potential <= selection.potential) ?? trait.stages[0];
+  const changes = moduleEffect?.traits ?? [];
+  const override = changes.findLast((change) => change.override)?.override;
+  const moduleLabel = moduleEffect ? formatModuleTypeLabel(moduleEffect.type) : "";
+  const moduleGlossary = { ...glossary, terms: moduleEffect?.terms ?? {} };
+  const label = override ? `Sustituido por el módulo ${moduleLabel}` : undefined;
+  return <article className={`operator-skill-card operator-talent-card${override ? " is-module" : ""}`} aria-labelledby={`${id}-name`}>
+    <header className="operator-talent-header"><div className="operator-skill-title"><h3 id={`${id}-name`} title={label}>Rasgo</h3>{label ? <span className="sr-only">{label}</span> : null}</div></header>
+    <div className="operator-talent-body"><p className="operator-skill-description">
+      {override ? <SkillDescription nodes={override} glossary={moduleGlossary} /> : <SkillDescription nodes={stage.description} glossary={{ ...glossary, terms: trait.terms }} />}
+      {changes.flatMap((change, index) => change.addition ? [<span key={index} className="operator-module-trait-addition"><span className="sr-only">Añadido por el módulo {moduleLabel}: </span><SkillDescription nodes={change.addition} glossary={moduleGlossary} /></span>] : [])}
+    </p></div>
+  </article>;
+}
 
 /** The module tone marks the name; the text names the module for assistive technology and on hover. */
 function ModuleTalentCard({ change, effect, glossary }: { change: ModuleTalentChangeView; effect: TalentModuleEffect; glossary: Omit<GlossaryContext, "terms"> }) {
@@ -324,13 +348,13 @@ function TalentCard({ view, talent, selection, glossary, moduleEffect }: { view:
   </article>;
 }
 
-/** Talent cards driven by the Stats selection; talents the selected module adds follow the operator's own. */
-export function OperatorTalentsPanel({ view, selection, moduleEffect }: { view: OperatorSkillsView; selection: TalentSelection; moduleEffect?: TalentModuleEffect }) {
+/** Trait and talent cards driven by the Stats selection; talents the selected module adds follow the operator's own. */
+export function OperatorTalentsPanel({ view, trait, selection, moduleEffect }: { view: OperatorSkillsView | null; trait?: StatsTrait; selection: TalentSelection; moduleEffect?: TalentModuleEffect }) {
   const [openId, setOpenId] = useState<string | null>(null);
   const [layer, setLayer] = useState<HTMLElement | null>(null);
   const glossary = { openId, setOpenId, layer };
   const added = moduleEffect?.changes.filter((change) => change.index === null) ?? [];
   return <div className="operator-skills" ref={setLayer}>
-    <div className="operator-skill-cards">{view.talents.map((talent) => <TalentCard key={talent.index} view={view} talent={talent} selection={selection} glossary={glossary} moduleEffect={moduleEffect} />)}{moduleEffect ? added.map((change) => <ModuleTalentCard key={`added-${change.name}`} change={change} effect={moduleEffect} glossary={glossary} />) : null}</div>
+    <div className="operator-skill-cards">{trait?.stages.length ? <TraitCard trait={trait} selection={selection} glossary={glossary} moduleEffect={moduleEffect} /> : null}{view ? view.talents.map((talent) => <TalentCard key={talent.index} view={view} talent={talent} selection={selection} glossary={glossary} moduleEffect={moduleEffect} />) : null}{moduleEffect ? added.map((change) => <ModuleTalentCard key={`added-${change.name}`} change={change} effect={moduleEffect} glossary={glossary} />) : null}</div>
   </div>;
 }

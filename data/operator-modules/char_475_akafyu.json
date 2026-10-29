@@ -1,50 +1,6 @@
 {
   "operatorId": "char_475_akafyu",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)",
-      "blackboard": [
-        {
-          "key": "value",
-          "value": 30
-        }
-      ]
-    },
-    {
-      "unlock": {
-        "elite": 1,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 2)",
-      "blackboard": [
-        {
-          "key": "value",
-          "value": 50
-        }
-      ]
-    },
-    {
-      "unlock": {
-        "elite": 2,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy",
-      "blackboard": [
-        {
-          "key": "value",
-          "value": 70
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

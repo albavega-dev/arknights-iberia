@@ -1,30 +1,6 @@
 {
   "operatorId": "char_4202_haruka",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
-      "blackboard": [
-        {
-          "key": "heal_scale",
-          "value": 0.75
-        },
-        {
-          "key": "attack@max_target",
-          "value": 1
-        },
-        {
-          "key": "attack@max_target_heal",
-          "value": 1
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

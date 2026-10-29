@@ -1,22 +1,6 @@
 {
   "operatorId": "char_4125_rdoc",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Has <@ba.kw>extended</> attack range; When attacking enemies not blocked by self, increase ATK to 120%",
-      "blackboard": [
-        {
-          "key": "atk_scale",
-          "value": 1.2
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

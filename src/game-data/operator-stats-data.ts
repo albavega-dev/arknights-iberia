@@ -2,7 +2,7 @@ import "server-only";
 
 import indexData from "../../data/operator-stats/index.json";
 import type { GameDataRegion } from "./gamedata-revisions";
-import { isOperatorId, validateDatasetIndex, type DatasetIndex } from "./operator-dataset";
+import { isOperatorId, statsDatasetContractVersion, validateDatasetIndex, type DatasetIndex } from "./operator-dataset";
 import type { OperatorStatsProfile } from "./operator-stats";
 
 const index = indexData as unknown as DatasetIndex;
@@ -22,4 +22,4 @@ export async function loadStatsProfile(operatorId: string, region: GameDataRegio
   return { ...profile, source: index.sources[region] };
 }
 
-export function statsIndexErrors(): string[] { return validateDatasetIndex(index); }
+export function statsIndexErrors(): string[] { return validateDatasetIndex(index, statsDatasetContractVersion); }

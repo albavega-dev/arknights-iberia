@@ -53,6 +53,7 @@ it("links module levels to the operator and preserves special effects separately
 
 it("filters Stats modules by all verified numeric stages and interval-relevant ASPD", () => {
   const profile: OperatorStatsProfile = {
+    trait: [],
     operatorId: "char_test",
     region: "en",
     source,
@@ -79,7 +80,7 @@ it("interpolates continuous attributes, clamps the phase level and caps trust at
 });
 
 it("matches the independently observed Horn E2 progression at consecutive levels", () => {
-  const profile: OperatorStatsProfile = { operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, magicResistance: 0 } }, { level: 90, attributes: { maxHp: 3067, atk: 936, def: 620, magicResistance: 0 } }] }], favorKeyframes: [], potentialRanks: [], modules: [] };
+  const profile: OperatorStatsProfile = { trait: [], operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, magicResistance: 0 } }, { level: 90, attributes: { maxHp: 3067, atk: 936, def: 620, magicResistance: 0 } }] }], favorKeyframes: [], potentialRanks: [], modules: [] };
   const values = [1, 2, 3, 4].map((level) => {
     const result = calculateOperatorStats(profile, { elite: 0, level, trust: 0, potential: 0 });
     return [result.calculated.maxHp, result.calculated.atk, result.calculated.def, result.calculated.magicResistance];
@@ -88,7 +89,7 @@ it("matches the independently observed Horn E2 progression at consecutive levels
 });
 
 it("matches the independently observed Horn trust bonuses at E2 level 90", () => {
-  const profile: OperatorStatsProfile = { operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, magicResistance: 0 } }, { level: 90, attributes: { maxHp: 3067, atk: 936, def: 620, magicResistance: 0 } }] }], favorKeyframes: [{ level: 0, attributes: { maxHp: 0, atk: 0, def: 0, magicResistance: 0 } }, { level: 50, attributes: { maxHp: 300, atk: 70, def: 0, magicResistance: 0 } }], potentialRanks: [], modules: [] };
+  const profile: OperatorStatsProfile = { trait: [], operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, magicResistance: 0 } }, { level: 90, attributes: { maxHp: 3067, atk: 936, def: 620, magicResistance: 0 } }] }], favorKeyframes: [{ level: 0, attributes: { maxHp: 0, atk: 0, def: 0, magicResistance: 0 } }, { level: 50, attributes: { maxHp: 300, atk: 70, def: 0, magicResistance: 0 } }], potentialRanks: [], modules: [] };
   expect([0, 50, 100].map((trust) => calculateOperatorStats(profile, { elite: 0, level: 90, trust, potential: 0 }).calculated)).toEqual([
     { maxHp: 3067, atk: 936, def: 620, magicResistance: 0 },
     { maxHp: 3217, atk: 971, def: 620, magicResistance: 0 },
@@ -97,7 +98,7 @@ it("matches the independently observed Horn trust bonuses at E2 level 90", () =>
 });
 
 it("scales Horn trust across the full visible range and clamps outside it", () => {
-  const profile: OperatorStatsProfile = { operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, magicResistance: 0 } }, { level: 90, attributes: { maxHp: 3067, atk: 936, def: 620, magicResistance: 0 } }] }], favorKeyframes: [{ level: 0, attributes: { maxHp: 0, atk: 0 } }, { level: 50, attributes: { maxHp: 300, atk: 70 } }], potentialRanks: [], modules: [] };
+  const profile: OperatorStatsProfile = { trait: [], operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, magicResistance: 0 } }, { level: 90, attributes: { maxHp: 3067, atk: 936, def: 620, magicResistance: 0 } }] }], favorKeyframes: [{ level: 0, attributes: { maxHp: 0, atk: 0 } }, { level: 50, attributes: { maxHp: 300, atk: 70 } }], potentialRanks: [], modules: [] };
   const value = (trust: number) => calculateOperatorStats(profile, { elite: 0, level: 90, trust, potential: 0 }).calculated;
   expect(value(-1)).toMatchObject({ maxHp: 3067, atk: 936 });
   expect(value(1)).toMatchObject({ maxHp: 3070, atk: 937 });
@@ -106,7 +107,7 @@ it("scales Horn trust across the full visible range and clamps outside it", () =
 });
 
 it("accumulates numeric potential additions and keeps custom effects separate", () => {
-  const profile: OperatorStatsProfile = { operatorId: "char_test", region: "en", source, phases: [{ phase: 0, maxLevel: 1, keyframes: [{ level: 1, attributes: { atk: 100 } }] }], favorKeyframes: [], potentialRanks: [{ rank: 0, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 5 }] } }] }, { rank: 1, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "CUSTOM", value: 1 }] } }] }], modules: [] };
+  const profile: OperatorStatsProfile = { trait: [], operatorId: "char_test", region: "en", source, phases: [{ phase: 0, maxLevel: 1, keyframes: [{ level: 1, attributes: { atk: 100 } }] }], favorKeyframes: [], potentialRanks: [{ rank: 0, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 5 }] } }] }, { rank: 1, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "CUSTOM", value: 1 }] } }] }], modules: [] };
   const result = calculateOperatorStats(profile, { elite: 0, level: 1, trust: 0, potential: 2 });
   expect(result.potentialBonus).toEqual({ atk: 5 });
   expect(result.calculated.atk).toBe(105);
@@ -114,7 +115,7 @@ it("accumulates numeric potential additions and keeps custom effects separate", 
 });
 
 it("uses one selected module stage without accumulating later stages", () => {
-  const profile: OperatorStatsProfile = { operatorId: "char_test", region: "en", source, phases: [{ phase: 0, maxLevel: 1, keyframes: [{ level: 1, attributes: { atk: 100 } }] }], favorKeyframes: [], potentialRanks: [], modules: [{ uniEquipId: "uniequip_test", operatorId: "char_test", region: "en", name: "Test", levels: [{ level: 1, attributes: { atk: 5 }, specialEffects: [] }, { level: 2, attributes: { atk: 12 }, specialEffects: ["Range expands"] }] }] };
+  const profile: OperatorStatsProfile = { trait: [], operatorId: "char_test", region: "en", source, phases: [{ phase: 0, maxLevel: 1, keyframes: [{ level: 1, attributes: { atk: 100 } }] }], favorKeyframes: [], potentialRanks: [], modules: [{ uniEquipId: "uniequip_test", operatorId: "char_test", region: "en", name: "Test", levels: [{ level: 1, attributes: { atk: 5 }, specialEffects: [] }, { level: 2, attributes: { atk: 12 }, specialEffects: ["Range expands"] }] }] };
   const result = calculateOperatorStats(profile, { elite: 0, level: 1, trust: 0, potential: 0, moduleId: "uniequip_test", moduleLevel: 2 });
   expect(result.moduleBonus).toEqual({ atk: 12 });
   expect(result.calculated.atk).toBe(112);
@@ -122,7 +123,7 @@ it("uses one selected module stage without accumulating later stages", () => {
 });
 
 it("adjusts the displayed attack interval from direct module ASPD while preserving the base value", () => {
-  const profile: OperatorStatsProfile = { operatorId: "char_test", region: "en", source, phases: [{ phase: 0, maxLevel: 1, keyframes: [{ level: 1, attributes: { baseAttackTime: 1.6, attackSpeed: 100 } }] }], favorKeyframes: [], potentialRanks: [], modules: [{ uniEquipId: "uniequip_aspd", operatorId: "char_test", region: "en", name: "ASPD", levels: [{ level: 1, attributes: { attack_speed: 5 }, specialEffects: [] }, { level: 2, attributes: { attack_speed: 10 }, specialEffects: [] }] }] };
+  const profile: OperatorStatsProfile = { trait: [], operatorId: "char_test", region: "en", source, phases: [{ phase: 0, maxLevel: 1, keyframes: [{ level: 1, attributes: { baseAttackTime: 1.6, attackSpeed: 100 } }] }], favorKeyframes: [], potentialRanks: [], modules: [{ uniEquipId: "uniequip_aspd", operatorId: "char_test", region: "en", name: "ASPD", levels: [{ level: 1, attributes: { attack_speed: 5 }, specialEffects: [] }, { level: 2, attributes: { attack_speed: 10 }, specialEffects: [] }] }] };
   const base = calculateOperatorStats(profile, { elite: 0, level: 1, trust: 0, potential: 0 });
   const stage1 = calculateOperatorStats(profile, { elite: 0, level: 1, trust: 0, potential: 0, moduleId: "uniequip_aspd", moduleLevel: 1 });
   const stage2 = calculateOperatorStats(profile, { elite: 0, level: 1, trust: 0, potential: 0, moduleId: "uniequip_aspd", moduleLevel: 2 });
@@ -134,12 +135,12 @@ it("adjusts the displayed attack interval from direct module ASPD while preservi
 });
 
 it("matches Horn FOR-X module bonuses by selected stage", () => {
-  const profile: OperatorStatsProfile = { operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, magicResistance: 0 } }, { level: 90, attributes: { maxHp: 3067, atk: 936, def: 620, magicResistance: 0 } }] }], favorKeyframes: [], potentialRanks: [], modules: [{ uniEquipId: "uniequip_002_horn", operatorId: "char_4039_horn", region: "cn", name: "FOR-X", levels: [{ level: 1, attributes: { atk: 65, def: 52 }, specialEffects: [] }, { level: 2, attributes: { atk: 85, def: 62 }, specialEffects: [] }, { level: 3, attributes: { atk: 100, def: 70 }, specialEffects: [] }] }] };
+  const profile: OperatorStatsProfile = { trait: [], operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, magicResistance: 0 } }, { level: 90, attributes: { maxHp: 3067, atk: 936, def: 620, magicResistance: 0 } }] }], favorKeyframes: [], potentialRanks: [], modules: [{ uniEquipId: "uniequip_002_horn", operatorId: "char_4039_horn", region: "cn", name: "FOR-X", levels: [{ level: 1, attributes: { atk: 65, def: 52 }, specialEffects: [] }, { level: 2, attributes: { atk: 85, def: 62 }, specialEffects: [] }, { level: 3, attributes: { atk: 100, def: 70 }, specialEffects: [] }] }] };
   expect([1, 2].map((moduleLevel) => calculateOperatorStats(profile, { elite: 0, level: 90, trust: 0, potential: 0, moduleId: "uniequip_002_horn", moduleLevel }).moduleBonus)).toEqual([{ atk: 65, def: 52 }, { atk: 85, def: 62 }]);
 });
 
 it("applies Horn potential improvements cumulatively from P1 through P6", () => {
-  const profile: OperatorStatsProfile = { operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, cost: 28, magicResistance: 0 } }] }], favorKeyframes: [], potentialRanks: [
+  const profile: OperatorStatsProfile = { trait: [], operatorId: "char_4039_horn", region: "cn", source, phases: [{ phase: 2, maxLevel: 90, keyframes: [{ level: 1, attributes: { maxHp: 2200, atk: 776, def: 452, cost: 28, magicResistance: 0 } }] }], favorKeyframes: [], potentialRanks: [
     { rank: 0, effects: [{ attributes: { attributeModifiers: [{ attributeType: "COST", formulaItem: "ADDITION", value: -1 }] } }] },
     { rank: 1, effects: [] },
     { rank: 2, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 30 }] } }] },

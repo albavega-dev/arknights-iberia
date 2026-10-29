@@ -2,7 +2,8 @@ import { readFile, stat } from "node:fs/promises";
 import { join } from "node:path";
 import { isDeepStrictEqual } from "node:util";
 import { gameDataRepository, gameDataRevisions, gameDataTableHashes, type GameDataRegion, type GameDataTable } from "../src/game-data/gamedata-revisions";
-import { validateDatasetIndex, type DatasetFile, type DatasetIndex } from "../src/game-data/operator-dataset";
+import { datasetContractVersion, statsDatasetContractVersion, validateDatasetIndex, type DatasetFile, type DatasetIndex } from "../src/game-data/operator-dataset";
+import { buildOperatorTrait } from "../src/game-data/operator-modules";
 import { arg, exists, operatorDatasetFile, readCatalog, readJson as json, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
 import { attachModuleStats, extractOperatorStatsProfiles, type OperatorStatsProfile } from "../src/game-data/operator-stats";
 
@@ -13,7 +14,7 @@ const tables: readonly GameDataTable[] = ["character_table", "uniequip_table", "
 
 type StatsSource = OperatorStatsProfile["source"];
 export type StatsDatasetProfile = Omit<OperatorStatsProfile, "source">;
-export type StatsDataset = { contractVersion: "2"; sources: Record<GameDataRegion, StatsSource>; profiles: StatsDatasetProfile[] };
+export type StatsDataset = { contractVersion: "2" | "3"; sources: Record<GameDataRegion, StatsSource>; profiles: StatsDatasetProfile[] };
 export type StatsGeneratorOptions = Readonly<{
   expectedHashes?: Readonly<Record<GameDataRegion, Readonly<Record<GameDataTable, string>>>>;
   releaseManifest?: string;
@@ -33,10 +34,12 @@ export function buildStatsDataset(input: Readonly<Record<GameDataRegion, Readonl
     const found = new Set(extracted.map((profile) => profile.operatorId));
     const missing = [...wanted].filter((id) => !found.has(id));
     if (missing.length) throw new Error(`Catalog operators missing from the ${region} character table: ${missing.join(", ")}`);
-    for (const profile of attachModuleStats(extracted, input[region].uniequip_table, input[region].battle_equip_table, region)) { const { source, ...rest } = profile; void source; profiles.push(rest); }
+    const characters = input[region].character_table as Record<string, Parameters<typeof buildOperatorTrait>[1]>;
+    const withTraits = extracted.map((profile) => ({ ...profile, trait: buildOperatorTrait(profile.operatorId, characters[profile.operatorId]!) }));
+    for (const profile of attachModuleStats(withTraits, input[region].uniequip_table, input[region].battle_equip_table, region)) { const { source, ...rest } = profile; void source; profiles.push(rest); }
   }
   profiles.sort((a, b) => a.operatorId.localeCompare(b.operatorId, "en"));
-  return { contractVersion: "2", sources, profiles };
+  return { contractVersion: statsDatasetContractVersion, sources, profiles };
 }
 
 export function datasetFiles(dataset: StatsDataset): DatasetFile[] {
@@ -45,7 +48,8 @@ export function datasetFiles(dataset: StatsDataset): DatasetFile[] {
 
 export async function readStatsDataset(directory: string): Promise<StatsDataset> {
   const index = await json(join(directory, "index.json")) as DatasetIndex;
-  const errors = validateDatasetIndex(index);
+  // A contract 2 directory is still read, as the reference of --verify-against.
+  const errors = validateDatasetIndex(index, index.contractVersion === datasetContractVersion ? datasetContractVersion : statsDatasetContractVersion);
   if (errors.length) throw new Error(`Invalid dataset index: ${errors.join("; ")}`);
   const profiles: StatsDatasetProfile[] = [];
   for (const [operatorId, entry] of Object.entries(index.operators)) {
@@ -55,12 +59,13 @@ export async function readStatsDataset(directory: string): Promise<StatsDataset>
     if (profile.operatorId !== operatorId || profile.region !== entry.region) throw new Error(`Dataset file identity mismatch: ${entry.file}`);
     profiles.push(profile);
   }
-  return { contractVersion: "2", sources: index.sources as Record<GameDataRegion, StatsSource>, profiles };
+  return { contractVersion: index.contractVersion as StatsDataset["contractVersion"], sources: index.sources as Record<GameDataRegion, StatsSource>, profiles };
 }
 
 // Declared normalisations for comparing against an earlier manifest:
 // contract 1 stores the source in every profile instead of the index, and the
-// module enrichment of contract 1 wrote moduleSourceRegion "preferred" for the profile region.
+// module enrichment of contract 1 wrote moduleSourceRegion "preferred" for the profile region; contracts before 3 have no trait,
+// which is then left out of the comparison so the rest of each profile must stay identical.
 function comparableReference(profile: Record<string, unknown>, region: GameDataRegion): Record<string, unknown> {
   const { source, ...rest } = profile; void source;
   const modules = Array.isArray(rest.modules) ? rest.modules.map((module: Record<string, unknown>) => module.moduleSourceRegion === "preferred" ? { ...module, moduleSourceRegion: region } : module) : rest.modules;
@@ -69,7 +74,7 @@ function comparableReference(profile: Record<string, unknown>, region: GameDataR
 
 export function compareStatsManifests(reference: unknown, generated: StatsDataset): StatsVerification {
   const root = reference as { contractVersion?: string; sources?: Record<string, unknown>; profiles?: Record<string, unknown>[] };
-  if (!Array.isArray(root.profiles) || (root.contractVersion !== "1" && root.contractVersion !== "2")) throw new Error("Reference manifest has an unknown contract");
+  if (!Array.isArray(root.profiles) || !["1", "2", "3"].includes(root.contractVersion ?? "")) throw new Error("Reference manifest has an unknown contract");
   const result: StatsVerification = { identical: 0, differences: [], missing: [], ignored: 0 };
   const used = new Set<Record<string, unknown>>();
   for (const profile of generated.profiles) {
@@ -79,7 +84,8 @@ export function compareStatsManifests(reference: unknown, generated: StatsDatase
     used.add(candidate);
     const referenceSource = root.contractVersion === "1" ? candidate.source : root.sources?.[region];
     const expected = JSON.parse(JSON.stringify(comparableReference(candidate, region))) as Record<string, unknown>;
-    const actual = JSON.parse(JSON.stringify(profile)) as Record<string, unknown>;
+    const { trait, ...withoutTrait } = profile;
+    const actual = JSON.parse(JSON.stringify(root.contractVersion === "3" ? { ...withoutTrait, trait } : withoutTrait)) as Record<string, unknown>;
     const keys = [...new Set([...Object.keys(expected), ...Object.keys(actual)])].filter((key) => !isDeepStrictEqual(expected[key], actual[key]));
     if (!isDeepStrictEqual(referenceSource, generated.sources[region])) keys.push("source");
     if (keys.length) result.differences.push({ operatorId: profile.operatorId, keys }); else result.identical += 1;
@@ -89,7 +95,7 @@ export function compareStatsManifests(reference: unknown, generated: StatsDatase
 }
 
 export async function writeStatsDataset(directory: string, dataset: StatsDataset, options: Readonly<{ force: boolean; limits?: Readonly<{ fileBytes: number; totalBytes: number }> }>): Promise<{ index: DatasetIndex; totalBytes: number; warnings: string[] }> {
-  return writeDatasetDirectory(directory, statsDatasetName, dataset.sources, datasetFiles(dataset), options);
+  return writeDatasetDirectory(directory, statsDatasetName, dataset.sources, datasetFiles(dataset), { force: options.force, limits: options.limits, extras: { contractVersion: statsDatasetContractVersion } });
 }
 
 export async function main(argv: readonly string[] = process.argv, options: StatsGeneratorOptions = {}): Promise<void> {

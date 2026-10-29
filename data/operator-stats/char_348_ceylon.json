@@ -311,5 +311,21 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has a large healing range, but the healing amount on farther targets is reduced to <@ba.kw>{heal_scale:0%}</>",
+      "blackboard": [
+        {
+          "key": "heal_scale",
+          "value": 0.8
+        }
+      ]
+    }
   ]
 }

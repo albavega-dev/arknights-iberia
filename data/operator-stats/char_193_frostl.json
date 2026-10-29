@@ -328,5 +328,21 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can launch <@ba.kw>Ranged Attacks</> that deal 80% of normal ATK",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 0.8
+        }
+      ]
+    }
   ]
 }

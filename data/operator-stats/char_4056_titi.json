@@ -288,5 +288,21 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+      "blackboard": [
+        {
+          "key": "scale",
+          "value": 0.5
+        }
+      ]
+    }
   ]
 }

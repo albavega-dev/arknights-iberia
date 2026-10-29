@@ -5,6 +5,7 @@ import type { GameDataRegion } from "../src/game-data/gamedata-revisions";
 import type { DatasetIndex } from "../src/game-data/operator-dataset";
 import { moduleArtResolver } from "../src/game-data/operator-module-art";
 import { buildOperatorModulesView, highlightChangedNumbers, loadOperatorModulesView, modulePotentials, talentChangesAt, visibleModules, type ModulesDatasetReaders, type OperatorModulesView, type StoredModulesProfile } from "../src/game-data/operator-modules-view";
+import type { TraitStage } from "../src/game-data/operator-modules";
 import type { StoredSkillsGlossary } from "../src/game-data/operator-skills-view";
 import type { SkillDescriptionNode } from "../src/game-data/skill-description";
 
@@ -17,8 +18,10 @@ const readers: ModulesDatasetReaders = {
   readProfile: (operatorId) => readJson<StoredModulesProfile>(`operator-modules/${operatorId}.json`),
   readGlossary: (region) => { glossaryReads.push(region); return readJson<StoredSkillsGlossary>(`operator-modules/glossary-${region}.json`); },
 };
+// The trait comes from the stats file, as the page passes it.
+const traitOf = async (operatorId: string) => (await readJson<{ trait: TraitStage[] }>(`operator-stats/${operatorId}.json`)).trait;
 const load = async (operatorId: string, region: GameDataRegion = "en"): Promise<OperatorModulesView> => {
-  const view = await loadOperatorModulesView(readers, operatorId, region);
+  const view = await loadOperatorModulesView(readers, operatorId, region, await traitOf(operatorId));
   assert.ok(view, `${operatorId} should have a view`);
   return view;
 };
@@ -77,7 +80,7 @@ test("Makoto (CN-only) has CN modules without the CN switch; Hibiscus has none",
   const hibiscus = await load("char_120_hibisc");
   assert.deepEqual(hibiscus.modules, []);
   assert.equal(hibiscus.hasCnModules, false);
-  assert.ok(hibiscus.trait.length > 0, "the base trait is there without modules");
+  assert.ok(hibiscus.trait.length > 0, "the base trait, from the stats file, is there without modules");
 });
 
 test("Rosesa changes her range with the module and Sophia's module adds a talent", async () => {
@@ -98,14 +101,14 @@ test("Raidian keeps her Integrated Strategies effects apart from the normal ones
 });
 
 test("the loader rejects unknown ids, wrong regions and mismatched files", async () => {
-  assert.equal(await loadOperatorModulesView(readers, "../index", "en"), null);
-  assert.equal(await loadOperatorModulesView(readers, "char_003_kalts", "cn"), null);
-  assert.equal(await loadOperatorModulesView(readers, "char_9999_none", "en"), null);
+  assert.equal(await loadOperatorModulesView(readers, "../index", "en", []), null);
+  assert.equal(await loadOperatorModulesView(readers, "char_003_kalts", "cn", []), null);
+  assert.equal(await loadOperatorModulesView(readers, "char_9999_none", "en", []), null);
   const mismatched: ModulesDatasetReaders = { ...readers, readProfile: async () => ({ ...(await readers.readProfile("char_003_kalts")), operatorId: "char_010_chen" }) };
-  assert.equal(await loadOperatorModulesView(mismatched, "char_003_kalts", "en"), null);
+  assert.equal(await loadOperatorModulesView(mismatched, "char_003_kalts", "en", []), null);
   const profile = await readers.readProfile("char_2025_shu");
   const en = await readers.readGlossary("en");
-  assert.throws(() => buildOperatorModulesView(profile, "en", index.sources.en, { en }), /the cn glossary was not loaded/);
+  assert.throws(() => buildOperatorModulesView(profile, [], "en", index.sources.en, { en }), /the cn glossary was not loaded/);
 });
 
 test("visible modules, module potentials and talent changes at a potential", async () => {

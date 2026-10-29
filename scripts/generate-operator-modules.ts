@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { gameDataFavorTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { modulesDatasetContractVersion, modulesDatasetLimits, sharedFileName, validateDatasetIndex, type DatasetFile, type DatasetIndex, type DatasetSharedFile, type DatasetSource } from "../src/game-data/operator-dataset";
-import { buildOperatorModules, moduleDescriptions, traitDescriptions, type OperatorModulesProfile, type SourceModuleTables } from "../src/game-data/operator-modules";
+import { buildOperatorModules, buildOperatorTrait, moduleDescriptions, traitDescriptions, type OperatorModulesProfile, type SourceModuleTables } from "../src/game-data/operator-modules";
 import { buildGlossary, type GlossaryEntry, type GlossaryTable } from "../src/game-data/operator-skills";
 import { arg, exists, operatorDatasetFile, readCatalog, readJson, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
 
@@ -37,7 +37,8 @@ export function buildModulesDataset(input: Readonly<Record<GameDataRegion, Reado
   const descriptions: Record<GameDataRegion, string[]> = { en: [], cn: [] };
   for (const [operatorId, region] of [...catalog].sort(([a], [b]) => a.localeCompare(b, "en"))) {
     const profile = buildOperatorModules(operatorId, region, sourceTables);
-    descriptions[region].push(...traitDescriptions(profile.trait));
+    // The trait lives in the stats files, but its terms stay in this glossary, which the trait view reads.
+    descriptions[region].push(...traitDescriptions(buildOperatorTrait(operatorId, sourceTables[region].character_table[operatorId]!)));
     for (const item of profile.modules) descriptions[item.region].push(...moduleDescriptions(item));
     profiles.push(profile);
   }

@@ -1,22 +1,6 @@
 {
   "operatorId": "char_1041_angel2",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Continually loses HP over time",
-      "blackboard": [
-        {
-          "key": "hp_ratio",
-          "value": 0.01
-        }
-      ]
-    }
-  ],
   "tokens": {
     "token_10056_angel2_target": "Delivery Coordinates"
   },

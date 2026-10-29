@@ -9,7 +9,8 @@ import type { DatasetIndex } from "../src/game-data/operator-dataset";
 import { arg, compareStatsManifests, main, readCatalog, readStatsDataset, tableFlag, type StatsDataset, type StatsGeneratorOptions } from "../scripts/generate-operator-stats";
 
 const buff = { attributes: { attributeModifiers: [{ attributeType: "COST", formulaItem: "ADDITION", value: -1 }] } };
-const character = (ids: readonly string[]) => Object.fromEntries(ids.map((id) => [id, { phases: [{ maxLevel: 1, attributesKeyFrames: [{ level: 1, data: { maxHp: 100, atk: 10 } }] }], favorKeyFrames: [], potentialRanks: [{ buff }] }]));
+const traitStages = { candidates: [{ unlockCondition: { phase: "PHASE_0", level: 1 }, requiredPotentialRank: 0, blackboard: [{ key: "value", value: 1 }], overrideDescripton: null }, { unlockCondition: { phase: "PHASE_2", level: 1 }, requiredPotentialRank: 0, blackboard: [{ key: "value", value: 2 }], overrideDescripton: null }] };
+const character = (ids: readonly string[]) => Object.fromEntries(ids.map((id) => [id, { description: id === "char_a" ? "Hits <@ba.kw>{value}</> enemies" : "Plain trait", trait: id === "char_a" ? traitStages : null, phases: [{ maxLevel: 1, attributesKeyFrames: [{ level: 1, data: { maxHp: 100, atk: 10 } }] }], favorKeyFrames: [], potentialRanks: [{ buff }] }]));
 const fixtures: Record<GameDataRegion, Record<GameDataTable, unknown>> = {
   en: {
     character_table: character(["char_b", "char_a", "char_extra"]),
@@ -78,6 +79,12 @@ test("stats generator writes one indented file per catalog operator and a determ
     assert.equal("source" in profile, false);
     assert.ok(first["char_a.json"].startsWith("{\n  \"operatorId\": \"char_a\""));
     assert.deepEqual(profile.potentialRanks, [{ rank: 0, effects: [buff] }]);
+    assert.equal(index.contractVersion, "3");
+    assert.deepEqual(profile.trait, [
+      { unlock: { elite: 0, level: 1 }, potential: 1, description: "Hits <@ba.kw>{value}</> enemies", blackboard: [{ key: "value", value: 1 }] },
+      { unlock: { elite: 2, level: 1 }, potential: 1, description: "Hits <@ba.kw>{value}</> enemies", blackboard: [{ key: "value", value: 2 }] },
+    ]);
+    assert.deepEqual(JSON.parse(first["char_b.json"]).trait, [{ unlock: { elite: 0, level: 1 }, potential: 1, description: "Plain trait" }], "without candidates the trait is the plain description");
     assert.deepEqual(profile.modules.map((module: { uniEquipId: string; moduleSourceRegion: string; moduleType: string }) => [module.uniEquipId, module.moduleSourceRegion, module.moduleType]), [["uniequip_a", "en", "PHY-X"]]);
     const dataset = await readStatsDataset(output);
     assert.deepEqual(dataset.profiles.map((item) => item.operatorId), ["char_a", "char_b", "char_cn"]);
@@ -116,18 +123,22 @@ test("stats generator validates the catalog", async () => {
   try { await assert.rejects(main(missing.argv, missing.options), /missing from the en character table: char_missing/); } finally { await missing.cleanup(); }
 });
 
-test("stats generator verifies against a contract 1 manifest and a contract 2 directory", async () => {
+test("stats generator verifies against contract 1 and 2 manifests without the trait, and a contract 3 directory with it", async () => {
   const { directory, output, argv, options, cleanup } = await workspace(); const mocks = quiet();
   try {
     await main(argv, options);
     const generated: StatsDataset = await readStatsDataset(output);
-    const legacy = { contractVersion: "1", profiles: [...generated.profiles.map((profile) => ({ ...profile, source: generated.sources[profile.region as GameDataRegion], modules: profile.modules.map((module) => ({ ...module, moduleSourceRegion: "preferred" })) })), { operatorId: "char_a", region: "cn", profiles: [] }] };
+    const withoutTrait = generated.profiles.map(({ trait, ...profile }) => { void trait; return profile; });
+    const legacy = { contractVersion: "1", profiles: [...withoutTrait.map((profile) => ({ ...profile, source: generated.sources[profile.region as GameDataRegion], modules: profile.modules.map((module) => ({ ...module, moduleSourceRegion: "preferred" })) })), { operatorId: "char_a", region: "cn", profiles: [] }] };
     assert.deepEqual(compareStatsManifests(legacy, generated), { identical: 3, differences: [], missing: [], ignored: 1 });
     assert.equal(compareStatsManifests(generated, generated).identical, 3);
+    assert.equal(compareStatsManifests({ contractVersion: "2", sources: generated.sources, profiles: withoutTrait }, generated).identical, 3, "contract 2 has no trait: the rest of each profile must match");
+    const otherTrait = { ...generated, profiles: generated.profiles.map((profile) => ({ ...profile, trait: [] })) };
+    assert.deepEqual(compareStatsManifests(otherTrait, generated).differences.map((item) => item.keys), [["trait"], ["trait"], ["trait"]]);
     const changed = JSON.parse(JSON.stringify(legacy)); changed.profiles[0].phases[0].maxLevel = 90; changed.profiles[1].source = { ...changed.profiles[1].source, revision: "other" };
     assert.deepEqual(compareStatsManifests(changed, generated).differences, [{ operatorId: "char_a", keys: ["phases"] }, { operatorId: "char_b", keys: ["source"] }]);
     assert.deepEqual(compareStatsManifests({ contractVersion: "1", profiles: [] }, generated).missing, ["char_a/en", "char_b/en", "char_cn/cn"]);
-    assert.throws(() => compareStatsManifests({ contractVersion: "3", profiles: [] }, generated), /unknown contract/);
+    assert.throws(() => compareStatsManifests({ contractVersion: "4", profiles: [] }, generated), /unknown contract/);
     const reference = join(directory, "reference.json");
     await writeFile(reference, JSON.stringify(legacy), "utf8");
     await main([...argv, "--force", "--verify-against", reference], options);

@@ -1,30 +1,6 @@
 {
   "operatorId": "char_1023_ghost2",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Does not retreat upon receiving lethal damage, instead swaps to a <Substitute> (Substitute has 0 Block). Swaps back to the original after 20 seconds",
-      "blackboard": [
-        {
-          "key": "duration",
-          "value": 20
-        },
-        {
-          "key": "atk",
-          "value": 0
-        },
-        {
-          "key": "max_hp",
-          "value": 0
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

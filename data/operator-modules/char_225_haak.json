@@ -1,22 +1,6 @@
 {
   "operatorId": "char_225_haak",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Continually loses HP over time",
-      "blackboard": [
-        {
-          "key": "hp_ratio",
-          "value": 0.01
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

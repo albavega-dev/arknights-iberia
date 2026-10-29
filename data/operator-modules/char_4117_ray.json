@@ -1,62 +1,6 @@
 {
   "operatorId": "char_4117_ray",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}, improved at Elite 1).",
-      "blackboard": [
-        {
-          "key": "value",
-          "value": 4
-        },
-        {
-          "key": "atk_scale",
-          "value": 1.2
-        }
-      ]
-    },
-    {
-      "unlock": {
-        "elite": 1,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}, improved at Elite 2).",
-      "blackboard": [
-        {
-          "key": "value",
-          "value": 6
-        },
-        {
-          "key": "atk_scale",
-          "value": 1.2
-        }
-      ]
-    },
-    {
-      "unlock": {
-        "elite": 2,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}).",
-      "blackboard": [
-        {
-          "key": "value",
-          "value": 8
-        },
-        {
-          "key": "atk_scale",
-          "value": 1.2
-        }
-      ]
-    }
-  ],
   "tokens": {
     "token_10034_ray_sndbst": "Sandbeast"
   },

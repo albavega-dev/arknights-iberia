@@ -328,5 +328,15 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>; Can create <@ba.kw>Summons</> by defeating enemies, and can attack enemies blocked by these <@ba.kw>Summons</>"
+    }
   ]
 }

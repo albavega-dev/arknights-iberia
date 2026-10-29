@@ -46,7 +46,7 @@ export default async function OperatorPage({ params }: OperatorPageProps) {
   const region = operator.cnOnly ? "cn" : "en";
   const stats = await loadStatsProfile(operator.id, region);
   const skills = await loadSkillsView(operator.id, region);
-  const modules = await loadModulesView(operator.id, region);
+  const modules = await loadModulesView(operator.id, region, stats?.trait ?? []);
 
   return (
     <main className="operators-page" id="contenido">

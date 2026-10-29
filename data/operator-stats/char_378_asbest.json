@@ -327,5 +327,15 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normal attacks deal Arts damage while the skill is active"
+    }
   ]
 }

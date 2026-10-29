@@ -105,5 +105,15 @@
       "effects": []
     }
   ],
-  "modules": []
+  "modules": [],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 3 enemies and ignores <@ba.kw>Deployment Limit</>, but has a long Redeployment Time"
+    }
+  ]
 }

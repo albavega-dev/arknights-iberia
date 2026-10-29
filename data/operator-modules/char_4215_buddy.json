@@ -1,22 +1,6 @@
 {
   "operatorId": "char_4215_buddy",
   "region": "cn",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "可以在攻击范围内选择一次<@ba.kw>战术点</>来召唤援军，自身攻击援军阻挡的敌人时攻击力提升至150%；不受<@ba.kw>部署数量</>限制，但再部署时间极长",
-      "blackboard": [
-        {
-          "key": "atk_scale",
-          "value": 1.5
-        }
-      ]
-    }
-  ],
   "tokens": {
     "token_10063_buddy_bddg": "牙猎犬"
   },

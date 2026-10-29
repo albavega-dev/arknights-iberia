@@ -365,5 +365,15 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can attack <@ba.kw>all blocked enemies</>\nCan be deployed on Ranged Tiles"
+    }
   ]
 }

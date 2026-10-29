@@ -5,7 +5,7 @@ import path from "node:path";
 import test from "node:test";
 import { checkDatasetLimits, modulesDatasetContractVersion, modulesDatasetLimits, validateDatasetIndex, type DatasetIndex } from "../src/game-data/operator-dataset";
 import { gameDataFavorTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
-import { moduleDescriptions, traitDescriptions, type OperatorModulesProfile } from "../src/game-data/operator-modules";
+import { moduleDescriptions, type OperatorModulesProfile } from "../src/game-data/operator-modules";
 import type { ModuleArtManifest } from "../src/game-data/operator-module-art";
 import { termIdsOf, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { parseSkillDescription, type SkillBlackboardEntry, type SkillDescriptionNode } from "../src/game-data/skill-description";
@@ -90,14 +90,12 @@ test("only Pepe, Raidian and Mcnist show effects limited to a game mode, tagged 
   ]);
 });
 
-test("modules are E2 modules with three ordered levels, readable texts, known ranges, icons and glossary terms", async () => {
+test("modules are E2 modules with three ordered levels, readable texts, known ranges, icons and glossary terms, and no trait", async () => {
   const { index } = await readIndex(directory);
   const glossaries = { en: JSON.parse(await readFile(path.join(directory, "glossary-en.json"), "utf8")), cn: JSON.parse(await readFile(path.join(directory, "glossary-cn.json"), "utf8")) } as Record<"en" | "cn", { terms: Record<string, unknown> }>;
   const icons = new Set<string>();
   for (const profile of await readProfiles(index)) {
-    assert.ok(profile.trait.length > 0, `${profile.operatorId} has a trait`);
-    for (const stage of profile.trait) assertReadable(`${profile.operatorId} trait`, stage.description, stage.blackboard);
-    for (const id of traitDescriptions(profile.trait).flatMap(termIdsOf)) assert.ok(glossaries[profile.region].terms[id], `${id} in the ${profile.region} glossary`);
+    assert.equal("trait" in profile, false, `${profile.operatorId}: the trait lives in the stats file`);
     if (profile.region === "cn") assert.ok(profile.modules.every((item) => item.region === "cn"), `${profile.operatorId} is CN-only`);
     for (const item of profile.modules) {
       assert.doesNotMatch(item.type, /^ORIGINAL/);

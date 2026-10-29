@@ -1,34 +1,6 @@
 {
   "operatorId": "char_377_gdglow",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Controls a <@ba.kw>Drone</> that deals <@ba.kw>Arts damage</>; When the Drone attacks the same enemy, its damage will increase (up to 110% of the operator's ATK)",
-      "blackboard": [
-        {
-          "key": "init_atk_scale",
-          "value": 0.2
-        },
-        {
-          "key": "delta_atk_scale",
-          "value": 0.15
-        },
-        {
-          "key": "max_atk_scale",
-          "value": 1.1
-        },
-        {
-          "key": "max_stack_cnt",
-          "value": 6
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

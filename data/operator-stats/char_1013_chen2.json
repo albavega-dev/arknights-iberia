@@ -353,5 +353,21 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks <@ba.kw>all enemies</> within range, and deals 150% damage to enemies in the row directly in front of this unit.",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.5
+        }
+      ]
+    }
   ]
 }

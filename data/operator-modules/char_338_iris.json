@@ -1,22 +1,6 @@
 {
   "operatorId": "char_338_iris",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Attacks deal <@ba.kw>Arts damage</>; When unable to find a target, attacks can be <@ba.kw>stored up</> and fired all at once (Up to 3 charges)",
-      "blackboard": [
-        {
-          "key": "times",
-          "value": 3
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

@@ -307,5 +307,21 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+      "blackboard": [
+        {
+          "key": "ep_heal_ratio",
+          "value": 0.5
+        }
+      ]
+    }
   ]
 }

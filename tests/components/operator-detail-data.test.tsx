@@ -62,6 +62,7 @@ const statsFixture: OperatorStatsProfile = {
     { rank: 1, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 3 }] } }] },
     { rank: 2, effects: [] },
   ],
+  trait: [],
   modules: [{ uniEquipId: "uniequip_test", operatorId: operator.id, region: "en", name: "Test Module", moduleType: "SPC-X", typeIcon: "spc-x", moduleSourceRegion: "en", levels: [{ level: 1, attributes: { atk: 3 }, specialEffects: [] }] }],
 };
 
@@ -358,8 +359,8 @@ describe("OperatorDetailData skills tab", () => {
     ];
     render(<OperatorDetailData operator={operator} stats={statsFixture} skills={view(combat, base, list)} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />);
     expect(tabNames()).toEqual(["Estadísticas", "Habilidades", "Expediente", "Voces"]);
-    const section = screen.getByRole("region", { name: "Talentos" });
-    expect(within(section).getByRole("heading", { level: 2, name: "Talentos" })).toBeInTheDocument();
+    const section = screen.getByRole("region", { name: "Rasgo y talentos" });
+    expect(within(section).getByRole("heading", { level: 2, name: "Rasgo y talentos" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { level: 2, name: /Élite 1 nivel 50/ })).toHaveClass("operator-stats-heading");
     const names = () => within(section).getAllByRole("article").map((item) => item.querySelector("h3")!.textContent);
     expect(names()).toEqual(["Promovido", "Tardío"]);
@@ -389,8 +390,8 @@ describe("OperatorDetailData skills tab", () => {
 
   it("shows the talents at the highest promotion and P1 without stats, and no section without talents", () => {
     const { rerender } = render(detail(view(combat, base, talents)));
-    expect(within(screen.getByRole("region", { name: "Talentos" })).getByRole("article", { name: "Test Talent" })).toHaveTextContent("Efecto del talento");
+    expect(within(screen.getByRole("region", { name: "Rasgo y talentos" })).getByRole("article", { name: "Test Talent" })).toHaveTextContent("Efecto del talento");
     rerender(detail(view(combat, base)));
-    expect(screen.queryByRole("region", { name: "Talentos" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("region", { name: "Rasgo y talentos" })).not.toBeInTheDocument();
   });
 });

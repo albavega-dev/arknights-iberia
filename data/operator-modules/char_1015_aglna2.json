@@ -1,22 +1,6 @@
 {
   "operatorId": "char_1015_aglna2",
   "region": "cn",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "<$ba.liftoff>起飞</>后能够阻挡2个飞行敌人",
-      "blackboard": [
-        {
-          "key": "height_offset",
-          "value": 0.8
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": []

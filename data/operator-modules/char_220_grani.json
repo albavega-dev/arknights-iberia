@@ -1,22 +1,6 @@
 {
   "operatorId": "char_220_grani",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Obtain 1 DP after this unit defeats an enemy; Refunds the original DP Cost when retreated",
-      "blackboard": [
-        {
-          "key": "cost",
-          "value": 1
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

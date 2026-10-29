@@ -307,5 +307,21 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ]
+    }
   ]
 }

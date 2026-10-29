@@ -1,34 +1,6 @@
 {
   "operatorId": "char_4236_tmslot",
   "region": "cn",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "操作<@ba.kw>浮游单元</>造成<@ba.kw>法术伤害</>\\n单元攻击同一敌人伤害提升（最高造成干员110%攻击力的伤害）",
-      "blackboard": [
-        {
-          "key": "init_atk_scale",
-          "value": 0.2
-        },
-        {
-          "key": "delta_atk_scale",
-          "value": 0.15
-        },
-        {
-          "key": "max_atk_scale",
-          "value": 1.1
-        },
-        {
-          "key": "max_stack_cnt",
-          "value": 6
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

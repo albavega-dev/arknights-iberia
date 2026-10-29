@@ -1,12 +1,13 @@
 import { isOperatorId, type DatasetIndex, type DatasetSource } from "./operator-dataset";
 import type { GameDataRegion } from "./gamedata-revisions";
-import { moduleDescriptions, traitDescriptions, type ModuleLevel, type ModuleRegion, type OperatorModulesProfile } from "./operator-modules";
+import { moduleDescriptions, traitDescriptions, type ModuleLevel, type ModuleRegion, type OperatorModulesProfile, type TraitStage } from "./operator-modules";
 import type { SkillUnlock } from "./operator-skills";
 import { termsOf, type OperatorSkillRangeView, type SkillIconView, type SkillTermView, type StoredSkillsGlossary } from "./operator-skills-view";
 import { parseSkillDescription, type SkillDescriptionNode } from "./skill-description";
 
 // What the interface receives for an operator's modules: built on the server from one modules file, serializable, with the
-// descriptions already parsed and each module's glossary terms taken from the glossary of its own region.
+// descriptions already parsed and each module's glossary terms taken from the glossary of its own region. The trait comes from
+// the stats file; its terms come from the modules glossary of the operator's region.
 export type TraitStageView = { unlock: SkillUnlock; potential: number; description: SkillDescriptionNode[] };
 export type ModuleTraitChangeView = { token: boolean; override: SkillDescriptionNode[] | null; addition: SkillDescriptionNode[] | null };
 export type ModuleTalentChangeView = { index: number | null; potential: number; token: boolean; name: string; description: SkillDescriptionNode[]; rangeId: string | null };
@@ -64,7 +65,7 @@ function effectsView(effects: Pick<ModuleLevel, "traits" | "talents">): Pick<Mod
   };
 }
 
-export function buildOperatorModulesView(profile: StoredModulesProfile, region: GameDataRegion, source: DatasetSource, glossaries: Readonly<Partial<Record<GameDataRegion, StoredSkillsGlossary>>>, resolveArt: (moduleId: string) => SkillIconView | null = () => null): OperatorModulesView {
+export function buildOperatorModulesView(profile: StoredModulesProfile, trait: readonly TraitStage[], region: GameDataRegion, source: DatasetSource, glossaries: Readonly<Partial<Record<GameDataRegion, StoredSkillsGlossary>>>, resolveArt: (moduleId: string) => SkillIconView | null = () => null): OperatorModulesView {
   const glossaryOf = (target: GameDataRegion) => {
     const glossary = glossaries[target];
     if (!glossary) throw new Error(`${profile.operatorId}: the ${target} glossary was not loaded`);
@@ -83,8 +84,8 @@ export function buildOperatorModulesView(profile: StoredModulesProfile, region: 
   }));
   return {
     operatorId: profile.operatorId, region, source,
-    trait: profile.trait.map((stage) => ({ unlock: { ...stage.unlock }, potential: stage.potential, description: parseSkillDescription(stage.description, stage.blackboard ?? []) })),
-    traitTerms: termsOf(traitDescriptions(profile.trait), glossaryOf(region)),
+    trait: trait.map((stage) => ({ unlock: { ...stage.unlock }, potential: stage.potential, description: parseSkillDescription(stage.description, stage.blackboard ?? []) })),
+    traitTerms: termsOf(traitDescriptions(trait), glossaryOf(region)),
     tokens: { ...profile.tokens },
     ranges: Object.fromEntries(Object.entries(profile.ranges).map(([id, range]) => [id, { direction: range.direction, grids: range.grids.map((cell) => ({ row: cell.row, col: cell.col })) }])),
     modules,
@@ -121,7 +122,7 @@ export type ModulesDatasetReaders = {
 };
 
 /** Same checks as the skills loader; the CN glossary is read only when the operator has CN modules. */
-export async function loadOperatorModulesView(readers: ModulesDatasetReaders, operatorId: string, region: GameDataRegion): Promise<OperatorModulesView | null> {
+export async function loadOperatorModulesView(readers: ModulesDatasetReaders, operatorId: string, region: GameDataRegion, trait: readonly TraitStage[]): Promise<OperatorModulesView | null> {
   if (!isOperatorId(operatorId)) return null;
   const entry = readers.index.operators[operatorId];
   if (!entry || entry.region !== region) return null;
@@ -129,7 +130,7 @@ export async function loadOperatorModulesView(readers: ModulesDatasetReaders, op
   if (profile.operatorId !== operatorId || profile.region !== region) return null;
   const needed = [...new Set<GameDataRegion>([region, ...profile.modules.map((module) => module.region)])];
   const glossaries = Object.fromEntries(await Promise.all(needed.map(async (target) => [target, await readers.readGlossary(target)] as const)));
-  return buildOperatorModulesView(profile, region, readers.index.sources[region], glossaries, readers.resolveArt);
+  return buildOperatorModulesView(profile, trait, region, readers.index.sources[region], glossaries, readers.resolveArt);
 }
 
 const numberPattern = /\d+(?:\.\d+)?%?/g;

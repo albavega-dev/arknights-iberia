@@ -265,5 +265,15 @@
       ]
     }
   ],
-  "modules": []
+  "modules": [],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 2 enemies, and can inflict <@ba.kw>Elemental damage</>"
+    }
+  ]
 }

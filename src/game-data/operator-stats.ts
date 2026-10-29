@@ -1,3 +1,5 @@
+import type { TraitStage } from "./operator-modules";
+
 export type StatsRegion = "en" | "cn";
 
 export type StatValue = number;
@@ -18,6 +20,8 @@ export type OperatorStatsProfile = Readonly<{
   favorKeyframes: readonly Readonly<{ level: number; attributes: Readonly<Record<string, StatValue>> }>[];
   potentialRanks: readonly Readonly<{ rank: number; effects: readonly unknown[] }>[];
   modules: readonly OperatorModuleStats[];
+  /** Trait stages from character_table, with their unlock and potential; the generator fills them for catalog operators. */
+  trait: readonly TraitStage[];
 }>;
 
 export type OperatorModuleStats = Readonly<{
@@ -99,7 +103,7 @@ export function extractOperatorStatsProfiles(table: unknown, region: StatsRegion
     const favor = Array.isArray(record.favorKeyFrames) ? record.favorKeyFrames.flatMap((frame) => { const entry = frame as Record<string, unknown>; return typeof entry.level === "number" ? [{ level: entry.level, attributes: numericRecord(entry.data) }] : []; }) : [];
     const potentialSource = Array.isArray(record.potentialRanks) ? record.potentialRanks : Object.values(record.potentialRanks ?? {});
     const potentialRanks = potentialSource.map((entry, rank) => { const item = entry as Record<string, unknown>; const buff = item.buff; return { rank, effects: buff ? [buff] : [] }; });
-    return [{ operatorId, region, source, phases, favorKeyframes: favor, potentialRanks, modules: [] }];
+    return [{ operatorId, region, source, phases, favorKeyframes: favor, potentialRanks, modules: [], trait: [] }];
   });
 }
 

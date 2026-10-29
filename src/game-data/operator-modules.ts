@@ -1,7 +1,8 @@
 import { buildOperatorTalents, type SkillRange, type SkillUnlock } from "./operator-skills";
 import { parseSkillDescription, type SkillBlackboardEntry, type SkillDescriptionNode } from "./skill-description";
 
-// Operator modules from uniequip_table and battle_equip_table, plus the base trait from character_table.
+// Operator modules from uniequip_table and battle_equip_table. The base trait, built here from character_table, is stored in the
+// stats files.
 // ORIGINAL modules and the material costs are left out, and so are the texts of data-only trait parts, which the module page does
 // not show. Parts limited to a game mode (Integrated Strategies, Reclamation Algorithm) are kept apart, tagged with their mode.
 export type ModuleRegion = "en" | "cn";
@@ -56,7 +57,6 @@ export type OperatorModule = {
 export type OperatorModulesProfile = {
   operatorId: string;
   region: ModuleRegion;
-  trait: TraitStage[];
   /** Names of the summons the modules mention, by token id. */
   tokens: Record<string, string>;
   ranges: Record<string, SkillRange>;
@@ -249,7 +249,7 @@ function buildLevel(context: string, phase: SourcePhase, equip: SourceEquip, tal
   };
 }
 
-/** The operator's modules, its base trait and the names of the summons they mention. */
+/** The operator's modules and the names of the summons they mention. */
 export function buildOperatorModules(operatorId: string, region: ModuleRegion, tables: Readonly<Record<ModuleRegion, SourceModuleTables>>): OperatorModulesProfile {
   const character = tables[region].character_table[operatorId];
   if (!character) throw new Error(`Catalog operator ${operatorId} is missing from the ${region} character table`);
@@ -287,7 +287,7 @@ export function buildOperatorModules(operatorId: string, region: ModuleRegion, t
     }];
   });
   return {
-    operatorId, region, trait: buildOperatorTrait(operatorId, character),
+    operatorId, region,
     tokens: Object.fromEntries(Object.entries(tokens).sort(([a], [b]) => a.localeCompare(b, "en"))),
     ranges: Object.fromEntries(Object.entries(ranges).sort(([a], [b]) => a.localeCompare(b, "en"))),
     modules,

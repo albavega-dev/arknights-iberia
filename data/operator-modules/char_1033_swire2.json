@@ -1,26 +1,6 @@
 {
   "operatorId": "char_1033_swire2",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Has <@ba.kw>reduced</> Redeployment Time, but <@ba.kw>DP Cost</> is not refunded upon retreating; While deployed, <@ba.kw>3 DP</> are consumed every 3 seconds (automatically retreats without sufficient DP)",
-      "blackboard": [
-        {
-          "key": "interval",
-          "value": 3
-        },
-        {
-          "key": "cost",
-          "value": -3
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [

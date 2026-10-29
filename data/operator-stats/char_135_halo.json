@@ -324,5 +324,43 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@chain.max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</> (improved after Elite 2)",
+      "blackboard": [
+        {
+          "key": "attack@chain.max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@chain.max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</>",
+      "blackboard": [
+        {
+          "key": "attack@chain.max_target",
+          "value": 4
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    }
   ]
 }

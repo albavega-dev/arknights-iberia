@@ -22,7 +22,7 @@ const readJson = <T,>(file: string): T => JSON.parse(readFileSync(resolve(import
 const modulesOf = (operatorId: string, region: GameDataRegion = "en"): OperatorModulesView => {
   const profile = readJson<StoredModulesProfile>(`operator-modules/${operatorId}.json`);
   const glossaries = { en: readJson<StoredSkillsGlossary>("operator-modules/glossary-en.json"), cn: readJson<StoredSkillsGlossary>("operator-modules/glossary-cn.json") };
-  return buildOperatorModulesView(profile, region, readJson<DatasetIndex>("operator-modules/index.json").sources[region], glossaries, moduleArtResolver(readJson<ModuleArtManifest>("operator-module-art-manifest.json")));
+  return buildOperatorModulesView(profile, statsOf(operatorId, region).trait, region, readJson<DatasetIndex>("operator-modules/index.json").sources[region], glossaries, moduleArtResolver(readJson<ModuleArtManifest>("operator-module-art-manifest.json")));
 };
 const skillsOf = (operatorId: string, region: GameDataRegion = "en"): OperatorSkillsView => buildOperatorSkillsView(readJson<StoredSkillsProfile>(`operator-skills/${operatorId}.json`), region, readJson<DatasetIndex>("operator-skills/index.json").sources[region], readJson<StoredSkillsGlossary>(`operator-skills/glossary-${region}.json`), () => null);
 const statsOf = (operatorId: string, region: GameDataRegion = "en"): OperatorStatsProfile => ({ ...readJson<Omit<OperatorStatsProfile, "source">>(`operator-stats/${operatorId}.json`), source: readJson<DatasetIndex>("operator-stats/index.json").sources[region] });
@@ -196,7 +196,7 @@ describe("Modules in the operator detail", () => {
   const record = (id: string, cnOnly = false): OperatorRecord => ({ id, name: id, cnName: null, globalName: null, class: "Medic", subClassId: null, rarity: 6, slug: id, cnOnly, availabilityStatus: "global-snapshot", cnReleaseDate: null, globalReleaseDate: null, mainPowerNationId: null, mainPowerGroupId: null, mainPowerTeamId: null, mainFactionId: null });
   const biography = (id: string) => ({ status: "not-found" as const, operatorId: id, region: "en" as const, revision: "test" });
   const detail = (id: string, modules: OperatorModulesView | null, region: GameDataRegion = "en") => <OperatorDetailData operator={record(id, region === "cn")} stats={statsOf(id, region)} skills={skillsOf(id, region)} modules={modules} biography={biography(id)} tactical={null} artistCredit={null} />;
-  const talents = () => screen.getByRole("region", { name: "Talentos" });
+  const talents = () => screen.getByRole("region", { name: "Rasgo y talentos" });
 
   it("shows the Modules tab only with modules", () => {
     const { rerender } = render(detail("char_003_kalts", null));
@@ -224,6 +224,33 @@ describe("Modules in the operator detail", () => {
     expect(marked).toHaveTextContent("(+0.5)");
     fireEvent.click(screen.getByRole("button", { name: /PHY-X: Mon2tr/ }));
     expect(talents().querySelector(".operator-talent-card.is-module")).toBeNull();
+  });
+
+  it("Stats: the trait card comes first and follows the promotion selector", () => {
+    render(detail("char_337_utage", modulesOf("char_337_utage")));
+    const trait = within(talents()).getAllByRole("article")[0];
+    expect(trait).toHaveAccessibleName("Rasgo");
+    expect(trait).toHaveTextContent("Recovers 70 self HP");
+    expect(trait).not.toHaveTextContent("Upgraded");
+    fireEvent.click(screen.getByRole("button", { name: "Élite 0" }));
+    expect(trait).toHaveTextContent("Recovers 30 self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)");
+    fireEvent.click(screen.getByRole("button", { name: "Élite 1" }));
+    expect(trait).toHaveTextContent("Recovers 50 self HP");
+  });
+
+  it("Stats: the selected module replaces the trait or appends its part in the module tone", () => {
+    render(detail("char_486_takila", modulesOf("char_486_takila")));
+    const trait = () => within(talents()).getAllByRole("article")[0];
+    const base = trait().textContent;
+    expect(trait()).not.toHaveClass("is-module");
+    fireEvent.click(screen.getByRole("button", { name: /^LIB-X: / }));
+    expect(trait()).toHaveClass("is-module");
+    expect(within(trait()).getByText("Sustituido por el módulo LIB-X")).toHaveClass("sr-only");
+    expect(trait()).toHaveTextContent("ATK gradually increases up to +200%");
+    expect(trait().querySelector(".operator-module-trait-addition")).toHaveTextContent("Añadido por el módulo LIB-X: Directly gains +100% charge after deployment");
+    fireEvent.click(screen.getByRole("button", { name: /^LIB-X: / }));
+    expect(trait().textContent).toBe(base);
+    expect(trait().querySelector(".operator-module-trait-addition")).toBeNull();
   });
 
   it("Stats: a talent the module adds appears after the operator's own", () => {

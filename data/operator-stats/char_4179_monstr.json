@@ -288,5 +288,25 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 25% per bounce.",
+      "blackboard": [
+        {
+          "key": "attack@chain.max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@chain.atk_scale",
+          "value": 0.75
+        }
+      ]
+    }
   ]
 }

@@ -291,5 +291,21 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "受到致命伤时不撤退，切换成<替身>作战（替身阻挡数为0），持续20秒后自身再次替换<替身>",
+      "blackboard": [
+        {
+          "key": "duration",
+          "value": 20
+        }
+      ]
+    }
   ]
 }

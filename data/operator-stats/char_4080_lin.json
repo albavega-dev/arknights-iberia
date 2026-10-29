@@ -333,5 +333,25 @@
         }
       ]
     }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; When skill is active, attacks deal <@ba.kw>AoE Arts damage</>",
+      "blackboard": [
+        {
+          "key": "def",
+          "value": 2
+        },
+        {
+          "key": "magic_resistance",
+          "value": 20
+        }
+      ]
+    }
   ]
 }

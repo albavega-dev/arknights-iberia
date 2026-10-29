@@ -1,22 +1,6 @@
 {
   "operatorId": "char_1027_greyy2",
   "region": "en",
-  "trait": [
-    {
-      "unlock": {
-        "elite": 0,
-        "level": 1
-      },
-      "potential": 1,
-      "description": "Attacks deal <@ba.kw>two instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second instance is a shockwave that has half the normal ATK)",
-      "blackboard": [
-        {
-          "key": "attack@append_atk_scale",
-          "value": 0.5
-        }
-      ]
-    }
-  ],
   "tokens": {},
   "ranges": {},
   "modules": [
