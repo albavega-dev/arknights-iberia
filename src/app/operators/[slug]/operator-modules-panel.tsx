@@ -58,11 +58,11 @@ function TalentChanges({ changes, previous, glossary, view }: { changes: ModuleT
   return changes.map((change) => <TalentChange key={`${change.token}-${change.index}-${change.name}`} change={change} previous={previous.find((item) => sameTalent(item, change))} glossary={glossary} view={view} />);
 }
 
-/** Trait changes as text: a replaced trait, then the parts the module appends, after its type icon when given. */
+/** Trait changes as text: a replaced trait, then the parts the module appends. */
 function TraitChanges({ changes, glossary, module }: { changes: ModuleTraitChangeView[]; glossary: GlossaryContext; module?: OperatorModuleView }) {
   return changes.flatMap((change, index) => [
     change.override ? <span key={`${index}-override`} className="operator-module-trait-override"><SkillDescription nodes={change.override} glossary={glossary} /></span> : null,
-    change.addition ? <span key={`${index}-addition`} className="operator-module-trait-addition">{module?.icon ? <Image className="operator-module-trait-mark" src={module.icon} alt="" width={24} height={24} unoptimized /> : null}<span className="sr-only">Añadido por el módulo{module ? ` ${formatModuleTypeLabel(module.type)}` : ""}: </span><SkillDescription nodes={change.addition} glossary={glossary} /></span> : null,
+    change.addition ? <span key={`${index}-addition`} className="operator-module-trait-addition"><span className="sr-only">Añadido por el módulo{module ? ` ${formatModuleTypeLabel(module.type)}` : ""}: </span><SkillDescription nodes={change.addition} glossary={glossary} /></span> : null,
   ]);
 }
 

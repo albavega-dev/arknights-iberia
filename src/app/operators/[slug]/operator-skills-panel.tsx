@@ -292,19 +292,15 @@ function talentStageFor(talent: OperatorTalentView, selection: TalentSelection):
 }
 
 /** Talent changes of the module and level chosen in Stats, already resolved for the selected potential. */
-export type TalentModuleEffect = { type: string; icon: string | null; terms: Record<string, SkillTermView>; ranges: Record<string, OperatorSkillRangeView>; changes: ModuleTalentChangeView[] };
+export type TalentModuleEffect = { type: string; terms: Record<string, SkillTermView>; ranges: Record<string, OperatorSkillRangeView>; changes: ModuleTalentChangeView[] };
 
-/** Type icon of the module that changes or adds the talent; the text is for assistive technology. */
-function ModuleMark({ effect, added }: { effect: TalentModuleEffect; added: boolean }) {
-  const label = `${added ? "Añadido" : "Modificado"} por el módulo ${formatModuleTypeLabel(effect.type)}`;
-  return <span className="operator-talent-module-mark" title={label}>{effect.icon ? <Image src={effect.icon} alt="" width={24} height={24} unoptimized /> : <span aria-hidden="true">{formatModuleTypeLabel(effect.type)}</span>}<span className="sr-only">{label}</span></span>;
-}
-
+/** The module tone marks the name; the text names the module for assistive technology and on hover. */
 function ModuleTalentCard({ change, effect, glossary }: { change: ModuleTalentChangeView; effect: TalentModuleEffect; glossary: Omit<GlossaryContext, "terms"> }) {
   const id = useId();
   const range = change.rangeId ? effect.ranges[change.rangeId] : undefined;
+  const label = `${change.index === null ? "Añadido" : "Modificado"} por el módulo ${formatModuleTypeLabel(effect.type)}`;
   return <article className="operator-skill-card operator-talent-card is-module" aria-labelledby={`${id}-name`}>
-    <header className="operator-talent-header"><div className="operator-skill-title"><h3 id={`${id}-name`}>{change.name}</h3></div><ModuleMark effect={effect} added={change.index === null} /></header>
+    <header className="operator-talent-header"><div className="operator-skill-title"><h3 id={`${id}-name`} title={label}>{change.name}</h3><span className="sr-only">{label}</span></div></header>
     <div className={`operator-talent-body${range ? " has-range" : ""}`}><p className="operator-skill-description"><SkillDescription nodes={change.description} glossary={{ ...glossary, terms: effect.terms }} /></p>{range ? <div className="operator-skill-range"><RangeGrid grids={range.grids} /></div> : null}</div>
   </article>;
 }

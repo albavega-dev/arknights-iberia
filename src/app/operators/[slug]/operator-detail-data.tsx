@@ -132,7 +132,7 @@ function talentModuleEffect(modules: OperatorModulesView | null, moduleId: strin
   const chosen = modules?.modules.find((item) => item.id === moduleId);
   const level = chosen?.levels.find((item) => item.level === moduleLevel);
   if (!modules || !chosen || !level) return undefined;
-  return { type: chosen.type, icon: chosen.icon, terms: chosen.terms, ranges: modules.ranges, changes: talentChangesAt(level.talents.filter((change) => !change.token), potential) };
+  return { type: chosen.type, terms: chosen.terms, ranges: modules.ranges, changes: talentChangesAt(level.talents.filter((change) => !change.token), potential) };
 }
 
 type CnModulesSwitch = { showCnModules: boolean; onShowCnModulesChange: (show: boolean) => void };

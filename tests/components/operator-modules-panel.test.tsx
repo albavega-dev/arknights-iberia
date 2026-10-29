@@ -78,7 +78,6 @@ describe("OperatorModulesPanel", () => {
     // Trait, then the summon block (its texts differ from the operator's) and no unlock or missions.
     expect(x.querySelector(".operator-module-trait-base")).toHaveTextContent("Restores the HP of allies");
     expect(x.querySelector(".operator-module-trait-addition")).toHaveTextContent("increases heal amount by 15%");
-    expect(x.querySelector(".operator-module-trait-addition .operator-module-trait-mark")).toHaveAttribute("src", "/assets/operator-modules/phy-x.png");
     expect(within(x.querySelector<HTMLElement>(".operator-module-trait-addition")!).getByText("Añadido por el módulo PHY-X:")).toHaveClass("sr-only");
     const token = x.querySelector<HTMLElement>(".operator-module-token")!;
     expect(token.querySelector(":scope > h4")).toHaveTextContent("Mon3tr");
@@ -213,9 +212,9 @@ describe("Modules in the operator detail", () => {
     render(detail("char_003_kalts", modulesOf("char_003_kalts")));
     const name = () => within(talents()).getAllByRole("article").map((card) => card.querySelector("h3")!.textContent);
     const before = name();
-    expect(talents().querySelector(".operator-talent-module-mark")).toBeNull();
+    expect(talents().querySelector(".operator-talent-card.is-module")).toBeNull();
     fireEvent.click(screen.getByRole("button", { name: /PHY-X: Mon2tr/ }));
-    expect(talents().querySelector(".operator-talent-module-mark")).toBeNull();
+    expect(talents().querySelector(".operator-talent-card.is-module")).toBeNull();
     fireEvent.click(screen.getByRole("button", { name: "Etapa de módulo 2" }));
     const marked = talents().querySelector(".operator-talent-card.is-module")!;
     expect(marked).toHaveTextContent("Non-Damaging Restructuring");
@@ -224,7 +223,7 @@ describe("Modules in the operator detail", () => {
     fireEvent.click(screen.getByRole("button", { name: "Potencial 5" }));
     expect(marked).toHaveTextContent("(+0.5)");
     fireEvent.click(screen.getByRole("button", { name: /PHY-X: Mon2tr/ }));
-    expect(talents().querySelector(".operator-talent-module-mark")).toBeNull();
+    expect(talents().querySelector(".operator-talent-card.is-module")).toBeNull();
   });
 
   it("Stats: a talent the module adds appears after the operator's own", () => {
