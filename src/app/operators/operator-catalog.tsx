@@ -42,8 +42,8 @@ const classLabels: Record<OperatorClass, string> = {
   Medic: "Medic",
 };
 const operatorClasses: OperatorClass[] = [
-  "Guard",
   "Vanguard",
+  "Guard",
   "Defender",
   "Sniper",
   "Caster",
