@@ -2,7 +2,7 @@ import { isOperatorId, type DatasetIndex, type DatasetSource } from "./operator-
 import type { GameDataRegion } from "./gamedata-revisions";
 import { moduleDescriptions, traitDescriptions, type ModuleLevel, type ModuleRegion, type OperatorModulesProfile } from "./operator-modules";
 import type { SkillUnlock } from "./operator-skills";
-import { termsOf, type OperatorSkillRangeView, type SkillTermView, type StoredSkillsGlossary } from "./operator-skills-view";
+import { termsOf, type OperatorSkillRangeView, type SkillIconView, type SkillTermView, type StoredSkillsGlossary } from "./operator-skills-view";
 import { parseSkillDescription, type SkillDescriptionNode } from "./skill-description";
 
 // What the interface receives for an operator's modules: built on the server from one modules file, serializable, with the
@@ -29,6 +29,8 @@ export type OperatorModuleView = {
   type: string;
   /** Type icon path; null when the dataset has no icon id. */
   icon: string | null;
+  /** Module illustration; null when there is no local file. */
+  art: SkillIconView | null;
   limitedModality: boolean;
   unlock: SkillUnlock;
   missions: string[];
@@ -62,14 +64,14 @@ function effectsView(effects: Pick<ModuleLevel, "traits" | "talents">): Pick<Mod
   };
 }
 
-export function buildOperatorModulesView(profile: StoredModulesProfile, region: GameDataRegion, source: DatasetSource, glossaries: Readonly<Partial<Record<GameDataRegion, StoredSkillsGlossary>>>): OperatorModulesView {
+export function buildOperatorModulesView(profile: StoredModulesProfile, region: GameDataRegion, source: DatasetSource, glossaries: Readonly<Partial<Record<GameDataRegion, StoredSkillsGlossary>>>, resolveArt: (moduleId: string) => SkillIconView | null = () => null): OperatorModulesView {
   const glossaryOf = (target: GameDataRegion) => {
     const glossary = glossaries[target];
     if (!glossary) throw new Error(`${profile.operatorId}: the ${target} glossary was not loaded`);
     return glossary;
   };
   const modules = profile.modules.map((module): OperatorModuleView => ({
-    id: module.id, name: module.name, region: module.region, type: module.type, icon: module.icon ? iconPath(module.icon) : null, limitedModality: module.limitedModality === true,
+    id: module.id, name: module.name, region: module.region, type: module.type, icon: module.icon ? iconPath(module.icon) : null, art: resolveArt(module.id), limitedModality: module.limitedModality === true,
     unlock: { ...module.unlock }, missions: [...module.missions],
     levels: module.levels.map((level): ModuleLevelView => ({
       level: level.level, trust: level.trust, attributes: { ...level.attributes }, rangeId: level.rangeId ?? null,
@@ -90,10 +92,32 @@ export function buildOperatorModulesView(profile: StoredModulesProfile, region: 
   };
 }
 
+/** Modules shown for the operator: those of its own region, plus the CN ones when the switch is on. */
+export function visibleModules(view: OperatorModulesView, showCnModules: boolean): OperatorModuleView[] {
+  return view.modules.filter((module) => module.region === view.region || showCnModules);
+}
+
+/** Official potentials (2–6) at which some talent change of the module differs. */
+export function modulePotentials(module: OperatorModuleView): number[] {
+  const changes = module.levels.flatMap((level) => [...level.talents, ...level.modes.flatMap((mode) => mode.talents)]);
+  return [...new Set(changes.map((change) => change.potential).filter((potential) => potential > 1))].sort((a, b) => a - b);
+}
+
+/**
+ * Talent changes in effect at an official potential (1–6): for each talent, the last change whose potential is met. Changes are
+ * stored in ascending potential order; operator and summon changes of the same talent are kept apart.
+ */
+export function talentChangesAt(changes: readonly ModuleTalentChangeView[], potential: number): ModuleTalentChangeView[] {
+  const byTalent = new Map<string, ModuleTalentChangeView>();
+  for (const change of changes) if (change.potential <= potential) byTalent.set(`${change.token}:${change.index ?? `added:${change.name}`}`, change);
+  return [...byTalent.values()];
+}
+
 export type ModulesDatasetReaders = {
   index: DatasetIndex;
   readProfile: (operatorId: string) => Promise<StoredModulesProfile>;
   readGlossary: (region: GameDataRegion) => Promise<StoredSkillsGlossary>;
+  resolveArt?: (moduleId: string) => SkillIconView | null;
 };
 
 /** Same checks as the skills loader; the CN glossary is read only when the operator has CN modules. */
@@ -105,5 +129,39 @@ export async function loadOperatorModulesView(readers: ModulesDatasetReaders, op
   if (profile.operatorId !== operatorId || profile.region !== region) return null;
   const needed = [...new Set<GameDataRegion>([region, ...profile.modules.map((module) => module.region)])];
   const glossaries = Object.fromEntries(await Promise.all(needed.map(async (target) => [target, await readers.readGlossary(target)] as const)));
-  return buildOperatorModulesView(profile, region, readers.index.sources[region], glossaries);
+  return buildOperatorModulesView(profile, region, readers.index.sources[region], glossaries, readers.resolveArt);
+}
+
+const numberPattern = /\d+(?:\.\d+)?%?/g;
+
+function numbersOf(nodes: readonly SkillDescriptionNode[]): string[] {
+  return nodes.flatMap((node) => node.type === "text" ? node.text.match(numberPattern) ?? [] : node.type === "value" ? [node.display] : node.type === "style" ? numbersOf(node.children) : []);
+}
+
+/**
+ * The description with the numbers that differ from `previous` marked as changed, matched by their order in the text. When the
+ * two texts do not have the same count of numbers (the wording changed), nothing is marked.
+ */
+export function highlightChangedNumbers(nodes: readonly SkillDescriptionNode[], previous: readonly SkillDescriptionNode[]): SkillDescriptionNode[] {
+  const current = numbersOf(nodes);
+  const before = numbersOf(previous);
+  if (current.length !== before.length) return [...nodes];
+  let position = 0;
+  const changed = () => current[position] !== before[position++];
+  const mark = (list: readonly SkillDescriptionNode[]): SkillDescriptionNode[] => list.flatMap((node): SkillDescriptionNode[] => {
+    if (node.type === "value") return changed() ? [{ ...node, changed: true }] : [node];
+    if (node.type === "style") return [{ ...node, children: mark(node.children) }];
+    if (node.type !== "text") return [node];
+    const parts: SkillDescriptionNode[] = [];
+    let last = 0;
+    for (const match of node.text.matchAll(numberPattern)) {
+      if (!changed()) continue;
+      if (match.index > last) parts.push({ type: "text", text: node.text.slice(last, match.index) });
+      parts.push({ type: "value", key: "", display: match[0], percent: false, changed: true });
+      last = match.index + match[0].length;
+    }
+    if (last < node.text.length) parts.push({ type: "text", text: node.text.slice(last) });
+    return parts;
+  });
+  return mark(nodes);
 }

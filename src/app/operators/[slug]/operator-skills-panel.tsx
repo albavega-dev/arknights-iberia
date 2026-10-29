@@ -6,7 +6,9 @@ import Image from "next/image";
 import { Play, Timer, Zap, type LucideIcon } from "lucide-react";
 import { formatNumber } from "../../../game-data/number-format";
 import { getTacticalRangeDefinition, type OperatorTacticalEntry, type TacticalRangeDefinition } from "../../../game-data/operator-tactical";
-import type { BaseSkillStageView, OperatorBaseSkillView, OperatorSkillsView, OperatorSkillView, OperatorTalentView, SkillLevelView, SkillTermView, TalentStageView } from "../../../game-data/operator-skills-view";
+import type { BaseSkillStageView, OperatorBaseSkillView, OperatorSkillRangeView, OperatorSkillsView, OperatorSkillView, OperatorTalentView, SkillLevelView, SkillTermView, TalentStageView } from "../../../game-data/operator-skills-view";
+import type { ModuleTalentChangeView } from "../../../game-data/operator-modules-view";
+import { formatModuleTypeLabel } from "../../../game-data/operator-stats";
 import type { SkillUnlock } from "../../../game-data/operator-skills";
 import type { SkillDescriptionNode, SkillDescriptionTone } from "../../../game-data/skill-description";
 import { OperatorControlButton } from "../operator-control-button";
@@ -42,14 +44,14 @@ function levelValues(skill: OperatorSkillView, level: SkillLevelView): ValueCell
 }
 
 /** Glossary of the description being rendered; without it (inside an explanation) terms keep their style but open nothing. */
-type GlossaryContext = { terms: Record<string, SkillTermView>; openId: string | null; setOpenId: (id: string | null) => void; layer: HTMLElement | null };
+export type GlossaryContext = { terms: Record<string, SkillTermView>; openId: string | null; setOpenId: (id: string | null) => void; layer: HTMLElement | null };
 
-function SkillDescription({ nodes, glossary }: { nodes: readonly SkillDescriptionNode[]; glossary?: GlossaryContext }): ReactNode {
+export function SkillDescription({ nodes, glossary }: { nodes: readonly SkillDescriptionNode[]; glossary?: GlossaryContext }): ReactNode {
   return nodes.map((node, index) => {
     switch (node.type) {
       case "text": return node.text;
       case "lineBreak": return <br key={index} />;
-      case "value": return <span key={index} className="operator-skill-value">{node.display}</span>;
+      case "value": return <span key={index} className={`operator-skill-value${node.changed ? " is-changed" : ""}`}>{node.display}</span>;
       case "unknownMarker": return <span key={index} className="operator-skill-unknown">{node.text}</span>;
       default: {
         const term = node.termId ? glossary?.terms[node.termId] : undefined;
@@ -289,10 +291,30 @@ function talentStageFor(talent: OperatorTalentView, selection: TalentSelection):
   return talent.stages.findLast((stage) => unlockAtOrBelow(stage.unlock, selection) && stage.potential <= selection.potential) ?? null;
 }
 
-/** A locked talent keeps its place, dimmed, with the name and requirement of its first stage. */
-function TalentCard({ view, talent, selection, glossary }: { view: OperatorSkillsView; talent: OperatorTalentView; selection: TalentSelection; glossary: Omit<GlossaryContext, "terms"> }) {
+/** Talent changes of the module and level chosen in Stats, already resolved for the selected potential. */
+export type TalentModuleEffect = { type: string; icon: string | null; terms: Record<string, SkillTermView>; ranges: Record<string, OperatorSkillRangeView>; changes: ModuleTalentChangeView[] };
+
+/** Type icon of the module that changes or adds the talent; the text is for assistive technology. */
+function ModuleMark({ effect, added }: { effect: TalentModuleEffect; added: boolean }) {
+  const label = `${added ? "Añadido" : "Modificado"} por el módulo ${formatModuleTypeLabel(effect.type)}`;
+  return <span className="operator-talent-module-mark" title={label}>{effect.icon ? <Image src={effect.icon} alt="" width={24} height={24} unoptimized /> : <span aria-hidden="true">{formatModuleTypeLabel(effect.type)}</span>}<span className="sr-only">{label}</span></span>;
+}
+
+function ModuleTalentCard({ change, effect, glossary }: { change: ModuleTalentChangeView; effect: TalentModuleEffect; glossary: Omit<GlossaryContext, "terms"> }) {
+  const id = useId();
+  const range = change.rangeId ? effect.ranges[change.rangeId] : undefined;
+  return <article className="operator-skill-card operator-talent-card is-module" aria-labelledby={`${id}-name`}>
+    <header className="operator-talent-header"><div className="operator-skill-title"><h3 id={`${id}-name`}>{change.name}</h3></div><ModuleMark effect={effect} added={change.index === null} /></header>
+    <div className={`operator-talent-body${range ? " has-range" : ""}`}><p className="operator-skill-description"><SkillDescription nodes={change.description} glossary={{ ...glossary, terms: effect.terms }} /></p>{range ? <div className="operator-skill-range"><RangeGrid grids={range.grids} /></div> : null}</div>
+  </article>;
+}
+
+/** A locked talent keeps its place, dimmed, with the name and requirement of its first stage; an unlocked one shows the module change, if any. */
+function TalentCard({ view, talent, selection, glossary, moduleEffect }: { view: OperatorSkillsView; talent: OperatorTalentView; selection: TalentSelection; glossary: Omit<GlossaryContext, "terms">; moduleEffect?: TalentModuleEffect }) {
   const id = useId();
   const stage = talentStageFor(talent, selection);
+  const change = stage ? moduleEffect?.changes.find((item) => item.index === talent.index) : undefined;
+  if (moduleEffect && change) return <ModuleTalentCard change={change} effect={moduleEffect} glossary={glossary} />;
   if (!stage) {
     const { name, unlock } = talent.stages[0];
     return <article className="operator-skill-card operator-talent-card is-locked" aria-labelledby={`${id}-name`}>
@@ -306,12 +328,13 @@ function TalentCard({ view, talent, selection, glossary }: { view: OperatorSkill
   </article>;
 }
 
-/** Talent cards driven by the Stats selection. */
-export function OperatorTalentsPanel({ view, selection }: { view: OperatorSkillsView; selection: TalentSelection }) {
+/** Talent cards driven by the Stats selection; talents the selected module adds follow the operator's own. */
+export function OperatorTalentsPanel({ view, selection, moduleEffect }: { view: OperatorSkillsView; selection: TalentSelection; moduleEffect?: TalentModuleEffect }) {
   const [openId, setOpenId] = useState<string | null>(null);
   const [layer, setLayer] = useState<HTMLElement | null>(null);
   const glossary = { openId, setOpenId, layer };
+  const added = moduleEffect?.changes.filter((change) => change.index === null) ?? [];
   return <div className="operator-skills" ref={setLayer}>
-    <div className="operator-skill-cards">{view.talents.map((talent) => <TalentCard key={talent.index} view={view} talent={talent} selection={selection} glossary={glossary} />)}</div>
+    <div className="operator-skill-cards">{view.talents.map((talent) => <TalentCard key={talent.index} view={view} talent={talent} selection={selection} glossary={glossary} moduleEffect={moduleEffect} />)}{moduleEffect ? added.map((change) => <ModuleTalentCard key={`added-${change.name}`} change={change} effect={moduleEffect} glossary={glossary} />) : null}</div>
   </div>;
 }

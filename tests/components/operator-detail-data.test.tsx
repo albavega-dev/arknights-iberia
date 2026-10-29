@@ -306,13 +306,13 @@ describe("OperatorDetailData skills tab", () => {
 
   it("hides the Skills tab without a view or without combat and base skills", () => {
     const { rerender } = render(detail(null));
-    expect(tabNames()).toEqual(["Estadísticas", "Módulos", "Expediente", "Voces"]);
+    expect(tabNames()).toEqual(["Estadísticas", "Expediente", "Voces"]);
     rerender(detail(view([], [])));
     expect(screen.queryByRole("tab", { name: "Habilidades" })).not.toBeInTheDocument();
     fireEvent.keyDown(screen.getByRole("tab", { name: "Estadísticas" }), { key: "ArrowRight" });
-    expect(screen.getByRole("tab", { name: "Módulos" })).toHaveAttribute("aria-selected", "true");
-    expect(document.activeElement).toBe(screen.getByRole("tab", { name: "Módulos" }));
-    fireEvent.keyDown(screen.getByRole("tab", { name: "Módulos" }), { key: "ArrowLeft" });
+    expect(screen.getByRole("tab", { name: "Expediente" })).toHaveAttribute("aria-selected", "true");
+    expect(document.activeElement).toBe(screen.getByRole("tab", { name: "Expediente" }));
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Expediente" }), { key: "ArrowLeft" });
     fireEvent.keyDown(screen.getByRole("tab", { name: "Estadísticas" }), { key: "End" });
     expect(screen.getByRole("tab", { name: "Voces" })).toHaveAttribute("aria-selected", "true");
     fireEvent.keyDown(screen.getByRole("tab", { name: "Voces" }), { key: "Home" });
@@ -357,7 +357,7 @@ describe("OperatorDetailData skills tab", () => {
       { index: 1, stages: [stage("Tardío", 1, 30, 1)], terms: {} },
     ];
     render(<OperatorDetailData operator={operator} stats={statsFixture} skills={view(combat, base, list)} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />);
-    expect(tabNames()).toEqual(["Estadísticas", "Habilidades", "Módulos", "Expediente", "Voces"]);
+    expect(tabNames()).toEqual(["Estadísticas", "Habilidades", "Expediente", "Voces"]);
     const section = screen.getByRole("region", { name: "Talentos" });
     expect(within(section).getByRole("heading", { level: 2, name: "Talentos" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { level: 2, name: /Élite 1 nivel 50/ })).toHaveClass("operator-stats-heading");

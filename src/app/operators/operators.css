@@ -1682,7 +1682,6 @@
 .operator-stat-placeholder,
 .operator-config-placeholder,
 .operator-panel-empty,
-.operator-module-placeholder,
 .operator-record-placeholder {
   display: grid;
   min-height: 8rem;
@@ -1696,7 +1695,6 @@
   margin: 0;
   font-size: 0.88rem;
 }
-.operator-module-placeholder,
 .operator-record-placeholder {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   min-height: 8rem;
@@ -1831,7 +1829,6 @@
   .operator-panel-layout,
   .operator-stats-calculator,
   .operator-stats-calculator:has(.operator-stats-talents),
-  .operator-module-placeholder,
   .operator-record-placeholder {
     grid-template-columns: 1fr;
     width: 100%;
@@ -3873,4 +3870,237 @@ button.operator-base-skill-unlock:focus-visible {
   .operator-talent-body.has-range {
     grid-template-columns: minmax(0, 1fr);
   }
+}
+
+/* Modules tab */
+.operator-skills-tab.operator-modules-tab {
+  max-width: 64rem;
+}
+.operator-modules-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 var(--space-4);
+}
+.operators-cn-toggle.operator-modules-cn-toggle {
+  order: initial;
+}
+.operator-stats-controls .operator-modules-cn-toggle {
+  margin-top: var(--space-1);
+}
+/* Module card */
+.operator-module-card {
+  gap: var(--space-4);
+  padding-top: 0;
+  border: 0;
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-panel) 70%, transparent),
+    color-mix(in srgb, var(--surface-panel) 35%, transparent)
+  );
+  box-shadow: 0 6px 18px rgba(3, 13, 20, 0.32);
+}
+/* Header band */
+.operator-module-band {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+  margin-inline: calc(var(--space-3) * -1);
+  padding: var(--space-2) var(--space-3);
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--operator-accent-dark) 34%, transparent),
+    color-mix(in srgb, var(--operator-accent-dark) 8%, transparent)
+  );
+}
+.operator-module-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.operator-module-code {
+  margin: 0;
+  color: var(--color-cyan);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+.operator-module-tag {
+  background: var(--color-brass);
+}
+.operator-module-potentials {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* Illustration and levels */
+.operator-module-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-4);
+}
+.operator-module-body.has-art {
+  grid-template-columns: minmax(0, min(30%, 15rem)) minmax(0, 1fr);
+}
+.operator-module-art {
+  justify-self: center;
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+}
+.operator-module-levels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+/* Level icon at the top right */
+.operator-module-level {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: start;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--operator-accent-dark) 16%, transparent),
+    transparent 75%
+  );
+}
+.operator-module-level > * {
+  grid-column: 1 / -1;
+}
+.operator-module-level > .operator-module-level-heading {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  line-height: 0;
+}
+.operator-module-level > .operator-module-level-heading + * {
+  grid-column: 1;
+  grid-row: 1;
+}
+.operator-module-level-heading img {
+  width: auto;
+  height: 1.75rem;
+}
+/* One attribute per line */
+.operator-module-attributes {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-ivory);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.operator-module-attributes .operator-skill-value {
+  color: var(--color-brass);
+}
+.operator-module-attributes-label {
+  color: var(--color-muted);
+}
+/* Numbers that differ from the previous level */
+.operator-module-card .operator-skill-value.is-changed {
+  color: var(--color-cyan);
+  font-weight: 600;
+}
+.operator-module-talent {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+.operator-module-talent h5 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  margin: 0;
+  color: var(--color-brass);
+  font-size: 0.88rem;
+}
+.operator-module-note {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+/* Full-width sections */
+.operator-module-section {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.operator-module-section h4 {
+  margin: 0;
+  color: var(--color-ivory);
+  font-size: 0.88rem;
+}
+.operator-module-section-label {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.operator-module-section-label + h4 {
+  margin-top: calc(var(--space-2) * -1);
+}
+.operator-module-trait {
+  display: grid;
+  gap: var(--space-1);
+}
+.operator-module-trait-levels {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+.operator-module-trait-base,
+.operator-module-trait-override,
+.operator-module-trait-addition {
+  display: block;
+}
+/* Part the module adds to the trait */
+.operator-module-trait-addition {
+  margin-top: var(--space-1);
+}
+.operator-module-trait-mark {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: var(--space-1);
+  object-fit: contain;
+  vertical-align: text-bottom;
+  filter: var(--choice-light-soft);
+}
+.operator-module-ranges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+/* Narrow cards: illustration on top and levels one below another */
+@container (max-width: 36rem) {
+  .operator-module-body.has-art,
+  .operator-module-levels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .operator-module-band {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .operator-module-potentials {
+    grid-column: 1 / -1;
+  }
+}
+/* Stats talent changed by the selected module */
+.operator-talent-module-mark {
+  display: inline-grid;
+  place-items: center;
+  color: var(--color-cyan);
+  font-size: 0.78rem;
+}
+.operator-talent-module-mark img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: var(--choice-light-soft);
 }

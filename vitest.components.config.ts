@@ -19,6 +19,7 @@ export default defineConfig({
         "src/app/operators/[slug]/operator-detail-data.tsx",
         "src/app/operators/[slug]/operator-tactical-info.tsx",
         "src/app/operators/[slug]/operator-skills-panel.tsx",
+        "src/app/operators/[slug]/operator-modules-panel.tsx",
         "src/app/operators/pointer-light.ts",
         "src/app/operators/range-grid.tsx",
         "src/game-data/operator-stats.ts",

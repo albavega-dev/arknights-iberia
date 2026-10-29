@@ -11,7 +11,8 @@ export type SkillDescriptionTone = "increase" | "decrease" | "keyword" | "status
 export type SkillDescriptionNode =
   | { type: "text"; text: string }
   | { type: "lineBreak" }
-  | { type: "value"; key: string; display: string; percent: boolean }
+  /** `changed` marks a number that differs from a previous version of the text (module levels). */
+  | { type: "value"; key: string; display: string; percent: boolean; changed?: true }
   | { type: "style"; tag: string; tone: SkillDescriptionTone; termId?: string; children: SkillDescriptionNode[] }
   | { type: "unknownMarker"; text: string };
 

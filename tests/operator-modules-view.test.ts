@@ -3,7 +3,8 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 import type { GameDataRegion } from "../src/game-data/gamedata-revisions";
 import type { DatasetIndex } from "../src/game-data/operator-dataset";
-import { buildOperatorModulesView, loadOperatorModulesView, type ModulesDatasetReaders, type OperatorModulesView, type StoredModulesProfile } from "../src/game-data/operator-modules-view";
+import { moduleArtResolver } from "../src/game-data/operator-module-art";
+import { buildOperatorModulesView, highlightChangedNumbers, loadOperatorModulesView, modulePotentials, talentChangesAt, visibleModules, type ModulesDatasetReaders, type OperatorModulesView, type StoredModulesProfile } from "../src/game-data/operator-modules-view";
 import type { StoredSkillsGlossary } from "../src/game-data/operator-skills-view";
 import type { SkillDescriptionNode } from "../src/game-data/skill-description";
 
@@ -105,4 +106,42 @@ test("the loader rejects unknown ids, wrong regions and mismatched files", async
   const profile = await readers.readProfile("char_2025_shu");
   const en = await readers.readGlossary("en");
   assert.throws(() => buildOperatorModulesView(profile, "en", index.sources.en, { en }), /the cn glossary was not loaded/);
+});
+
+test("visible modules, module potentials and talent changes at a potential", async () => {
+  const shu = await load("char_2025_shu");
+  assert.deepEqual(visibleModules(shu, false).map((module) => module.id), ["uniequip_002_shu"]);
+  assert.deepEqual(visibleModules(shu, true).map((module) => module.id), ["uniequip_002_shu", "uniequip_003_shu"]);
+  const makoto = await load("char_4217_makoto", "cn");
+  assert.deepEqual(visibleModules(makoto, false).map((module) => module.region), ["cn"], "a CN operator shows its own modules without the switch");
+  const [x] = (await load("char_003_kalts")).modules;
+  assert.deepEqual(modulePotentials(x), [5]);
+  const level = x.levels[2];
+  assert.deepEqual(talentChangesAt(level.talents, 1).map((change) => [change.index, change.potential, change.token]), [[1, 1, false], [1, 1, true]]);
+  assert.deepEqual(talentChangesAt(level.talents, 6).map((change) => [change.index, change.potential, change.token]), [[1, 5, false], [1, 5, true]], "operator and summon changes stay apart");
+  const sophia = (await load("char_265_sophia")).modules[0];
+  assert.deepEqual(modulePotentials(sophia), []);
+  assert.deepEqual(talentChangesAt(sophia.levels[2].talents, 1).map((change) => [change.index, change.name]), [[null, "Vision of Unity"]], "a talent the module adds is kept by name");
+});
+
+test("numbers that change between module levels are marked in reading order", async () => {
+  const changed = (nodes: readonly SkillDescriptionNode[]): string[] => nodes.flatMap((node) => node.type === "value" && node.changed ? [node.display] : node.type === "style" ? changed(node.children) : []);
+  const [x] = (await load("char_003_kalts")).modules;
+  const level2 = talentChangesAt(x.levels[1].talents.filter((change) => !change.token), 5)[0];
+  const level3 = talentChangesAt(x.levels[2].talents.filter((change) => !change.token), 5)[0];
+  const marked = highlightChangedNumbers(level3.description, level2.description);
+  assert.equal(textOf(marked), textOf(level3.description), "the text itself does not change");
+  assert.ok(changed(marked).length > 0);
+  assert.ok(changed(marked).every((number) => /^\d/.test(number)));
+  assert.deepEqual(changed(highlightChangedNumbers(level3.description, level3.description)), [], "identical texts mark nothing");
+  const parse = (text: string): SkillDescriptionNode[] => [{ type: "text", text }];
+  assert.deepEqual(changed(highlightChangedNumbers(parse("ATK +10% for 5 s"), parse("ATK +8% for 5 s"))), ["10%"]);
+  assert.deepEqual(changed(highlightChangedNumbers(parse("Deals 2 hits of 30%"), parse("Deals 30%"))), [], "a different count of numbers marks nothing");
+  assert.deepEqual(changed(highlightChangedNumbers([{ type: "value", key: "atk", display: "20%", percent: true }, { type: "lineBreak" }], [{ type: "value", key: "atk", display: "15%", percent: true }, { type: "lineBreak" }])), ["20%"]);
+});
+
+test("module illustrations come from the art manifest", () => {
+  const resolve = moduleArtResolver({ art: { "uniequip_002_kalts.webp": { source: "equip/icon/uniequip_002_kalts.png", url: "", original: { bytes: 1, sha256: "", width: 511, height: 511 }, converted: { bytes: 1, sha256: "", width: 480, height: 480 } } } });
+  assert.deepEqual(resolve("uniequip_002_kalts"), { src: "/assets/operator-modules-art/uniequip_002_kalts.webp", width: 480, height: 480 });
+  assert.equal(resolve("uniequip_003_kalts"), null);
 });
