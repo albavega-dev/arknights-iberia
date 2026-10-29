@@ -301,17 +301,19 @@ describe("OperatorDetailData skills tab", () => {
   const level = { index: 0, label: "1" as const, group: "level" as const, name: "Test Skill", icon: null, spCost: 30, initialSp: 10, duration: 20, durationKind: "seconds" as const, rangeId: null, description: [{ type: "text" as const, text: "Efecto" }] };
   const combat: SkillsView["skills"] = [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [level], defaultLevelIndex: 0, terms: {} }];
   const base: SkillsView["baseSkills"] = [{ slot: 1, stages: [{ buffId: "buff_test", name: "Test Base", room: "CONTROL", icon: null, roomIcon: null, color: "#005752", textColor: "#ffffff", unlock: { elite: 0, level: 1 }, description: [{ type: "text", text: "Efecto de base" }] }], terms: {} }];
-  const view = (skills: SkillsView["skills"], baseSkills: SkillsView["baseSkills"]): SkillsView => ({ status: skills.length ? "available" : "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills, baseSkills, talents: [] });
+  const talents: SkillsView["talents"] = [{ index: 0, stages: [{ name: "Test Talent", unlock: { elite: 0, level: 1 }, potential: 1, rangeId: null, description: [{ type: "text", text: "Efecto del talento" }] }], terms: {} }];
+  const view = (skills: SkillsView["skills"], baseSkills: SkillsView["baseSkills"], talentList: SkillsView["talents"] = []): SkillsView => ({ status: skills.length ? "available" : "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills, baseSkills, talents: talentList });
 
-  it("hides the Skills tab without a view or without combat and base skills", () => {
+  it("hides the Skills and Talents tabs without a view or without their data", () => {
     const { rerender } = render(detail(null));
-    expect(tabNames()).toEqual(["Estadísticas", "Talentos", "Módulos", "Expediente", "Voces"]);
+    expect(tabNames()).toEqual(["Estadísticas", "Módulos", "Expediente", "Voces"]);
     rerender(detail(view([], [])));
     expect(screen.queryByRole("tab", { name: "Habilidades" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("tab", { name: "Talentos" })).not.toBeInTheDocument();
     fireEvent.keyDown(screen.getByRole("tab", { name: "Estadísticas" }), { key: "ArrowRight" });
-    expect(screen.getByRole("tab", { name: "Talentos" })).toHaveAttribute("aria-selected", "true");
-    expect(document.activeElement).toBe(screen.getByRole("tab", { name: "Talentos" }));
-    fireEvent.keyDown(screen.getByRole("tab", { name: "Talentos" }), { key: "ArrowLeft" });
+    expect(screen.getByRole("tab", { name: "Módulos" })).toHaveAttribute("aria-selected", "true");
+    expect(document.activeElement).toBe(screen.getByRole("tab", { name: "Módulos" }));
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Módulos" }), { key: "ArrowLeft" });
     fireEvent.keyDown(screen.getByRole("tab", { name: "Estadísticas" }), { key: "End" });
     expect(screen.getByRole("tab", { name: "Voces" })).toHaveAttribute("aria-selected", "true");
     fireEvent.keyDown(screen.getByRole("tab", { name: "Voces" }), { key: "Home" });
@@ -347,5 +349,17 @@ describe("OperatorDetailData skills tab", () => {
     expect(screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent)).toEqual(["Habilidades de combate", "Habilidades de base"]);
     expect(screen.getByRole("heading", { name: "Test Skill" })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: "Test Base" })).toBeInTheDocument();
+  });
+
+  it("shows the Talents tab with its cards and opens Stats when the operator has no talents", () => {
+    const { rerender } = render(detail(view(combat, base, talents)));
+    expect(tabNames()).toEqual(["Estadísticas", "Habilidades", "Talentos", "Módulos", "Expediente", "Voces"]);
+    fireEvent.click(screen.getByRole("tab", { name: "Talentos" }));
+    expect(screen.getByRole("heading", { level: 2, name: "Talentos" })).toBeInTheDocument();
+    expect(screen.getByRole("article", { name: "Test Talent" })).toHaveTextContent("Efecto del talento");
+    rerender(detail(view(combat, base)));
+    expect(screen.queryByRole("tab", { name: "Talentos" })).not.toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: "Estadísticas" })).toHaveAttribute("aria-selected", "true");
+    expect(screen.getByRole("tabpanel")).toHaveAttribute("aria-labelledby", screen.getByRole("tab", { name: "Estadísticas" }).id);
   });
 });

@@ -10,7 +10,7 @@ import { getOperatorArchetypeName } from "../../../game-data/operator-archetypes
 import { getOperatorClassIconUrl, getOperatorIllustrationAssets, getOperatorSubclassIconUrl } from "../../../game-data/operator-assets";
 import type { BiographyReadResult } from "../../../server/db/operator-biography-reader";
 import { OperatorTacticalInfo } from "./operator-tactical-info";
-import { OperatorSkillsPanel } from "./operator-skills-panel";
+import { OperatorSkillsPanel, OperatorTalentsPanel } from "./operator-skills-panel";
 import { getConfirmedModuleRanges } from "../../../game-data/operator-tactical";
 import { OperatorControlButton } from "../operator-control-button";
 import type { OperatorTacticalEntry } from "../../../game-data/operator-tactical";
@@ -130,8 +130,8 @@ export function OperatorDetailData({ operator, stats = null, skills = null, biog
   const displayName = getOperatorDisplayName(operator);
   const tabId = useId();
   const [selectedTab, setSelectedTab] = useState<TabLabel>("Estadísticas");
-  // Skills only exists with combat or base skills; a tab this operator lacks (state kept across operators) falls back to Stats.
-  const visibleTabs = tabs.filter((label) => label !== "Habilidades" || hasSkills(skills));
+  // Skills only exists with combat or base skills and Talents with talents; a tab this operator lacks (state kept across operators) falls back to Stats.
+  const visibleTabs = tabs.filter((label) => (label !== "Habilidades" || hasSkills(skills)) && (label !== "Talentos" || Boolean(skills?.talents.length)));
   const activeTab = visibleTabs.includes(selectedTab) ? selectedTab : "Estadísticas";
   const illustrationAssets = getOperatorIllustrationAssets(operator.id);
   const availableIllustrationCount = Number(Boolean(illustrationAssets?.base)) + Number(Boolean(illustrationAssets?.elite2));
@@ -164,7 +164,7 @@ export function OperatorDetailData({ operator, stats = null, skills = null, biog
     <div className="operator-profile-tabs"><div className="operator-tab-list" role="tablist" aria-label={`Secciones de ${displayName}`}>{visibleTabs.map((label) => <button key={label} id={`${tabId}-tab-${tabs.indexOf(label)}`} type="button" role="tab" className="operator-tab" aria-selected={activeTab === label} aria-controls={`${tabId}-panel-${tabs.indexOf(label)}`} tabIndex={activeTab === label ? 0 : -1} onClick={() => setSelectedTab(label)} onKeyDown={moveTab} onMouseMove={(event) => { const rect = event.currentTarget.getBoundingClientRect(); event.currentTarget.style.setProperty("--pointer-x", `${event.clientX - rect.left}px`); event.currentTarget.style.setProperty("--pointer-y", `${event.clientY - rect.top}px`); }}><span className="operator-tab-label">{label}</span><span className="operator-tab-indicator" aria-hidden="true" /></button>)}<span className="operator-tab-extension" aria-hidden="true" /></div><section id={`${tabId}-panel-${tabs.indexOf(activeTab)}`} className="operator-tab-panel" role="tabpanel" aria-labelledby={`${tabId}-tab-${tabs.indexOf(activeTab)}`} tabIndex={0}>
       {activeTab === "Estadísticas" ? <div className="operator-panel-layout"><div><VisualStatsPanel stats={stats} /></div></div> : null}
       {activeTab === "Habilidades" ? <div className="operator-skills-tab" data-skills-status={skills?.status ?? "unavailable"}>{skills?.skills.length ? <h2>Habilidades de combate</h2> : null}<OperatorSkillsPanel view={skills} tactical={tactical} /></div> : null}
-      {activeTab === "Talentos" ? <div><h2>Talentos</h2>{emptyPanel("Tarjetas de talentos", "Los talentos todavía no están importados.")}</div> : null}
+      {activeTab === "Talentos" && skills ? <div className="operator-skills-tab"><h2>Talentos</h2><OperatorTalentsPanel view={skills} /></div> : null}
       {activeTab === "Módulos" ? <div><h2>Módulos</h2><div className="operator-module-placeholder"><span>Selector de módulo y nivel</span><span>Comparación de niveles y efectos pendiente de importación</span></div></div> : null}
       {activeTab === "Expediente" ? <div><h2>Expediente</h2><BiographyPanel result={biography} cnOnly={operator.cnOnly} /></div> : null}
       {activeTab === "Voces" ? <div><h2>Voces</h2>{emptyPanel("Lista de líneas", "Las líneas, transcripciones y audios todavía no están importados.")}</div> : null}

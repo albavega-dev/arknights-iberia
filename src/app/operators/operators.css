@@ -3331,6 +3331,8 @@
   --skill-tone-decrease: var(--color-danger);
   --skill-tone-keyword: var(--color-brass);
   --skill-tone-status: var(--color-muted);
+  /* Game color of ba.talpu */
+  --skill-tone-potential: #0098dc;
   --skill-level-button: 2rem;
   min-width: 0;
 }
@@ -3530,6 +3532,9 @@
 .operator-skill-tone.is-status {
   color: var(--skill-tone-status);
 }
+.operator-skill-tone.is-potential {
+  color: var(--skill-tone-potential);
+}
 /* Glossary term */
 .operator-skill-tone.is-term {
   --term-light: color-mix(in srgb, var(--operator-accent-light) 20%, transparent);
@@ -3720,6 +3725,30 @@ button.operator-base-skill-unlock:focus-visible {
 .operator-base-skill-room.is-dark-text img {
   filter: brightness(0);
 }
+/* Talents */
+.operator-talent-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+.operator-talent-selectors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  min-width: 0;
+}
+.operator-talent-potential .operator-base-skill-unlock-icon img {
+  width: auto;
+  height: 28px;
+}
+.operator-talent-body.has-range {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3) var(--space-6);
+}
 .operator-skill-levels-toggle {
   display: grid;
   justify-items: start;
@@ -3788,5 +3817,12 @@ button.operator-base-skill-unlock:focus-visible {
   }
   .operator-skill-level-group .operator-skill-mastery {
     width: 100%;
+  }
+  .operator-talent-header,
+  .operator-talent-body.has-range {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .operator-talent-selectors {
+    justify-content: flex-start;
   }
 }
