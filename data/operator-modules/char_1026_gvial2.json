@@ -31,7 +31,7 @@
       "levels": [
         {
           "level": 1,
-          "favorPoints": 0,
+          "trust": 0,
           "attributes": {
             "max_hp": 150,
             "atk": 45,
@@ -53,7 +53,7 @@
         },
         {
           "level": 2,
-          "favorPoints": 2732,
+          "trust": 50,
           "attributes": {
             "max_hp": 180,
             "atk": 60,
@@ -90,7 +90,7 @@
         },
         {
           "level": 3,
-          "favorPoints": 10070,
+          "trust": 100,
           "attributes": {
             "max_hp": 200,
             "atk": 73,
@@ -144,7 +144,7 @@
       "levels": [
         {
           "level": 1,
-          "favorPoints": 0,
+          "trust": 0,
           "attributes": {
             "max_hp": 155,
             "atk": 21,
@@ -170,7 +170,7 @@
         },
         {
           "level": 2,
-          "favorPoints": 2732,
+          "trust": 50,
           "attributes": {
             "max_hp": 180,
             "atk": 26,
@@ -211,7 +211,7 @@
         },
         {
           "level": 3,
-          "favorPoints": 10070,
+          "trust": 100,
           "attributes": {
             "max_hp": 200,
             "atk": 29,
@@ -267,7 +267,7 @@
       "levels": [
         {
           "level": 1,
-          "favorPoints": 0,
+          "trust": 0,
           "attributes": {
             "max_hp": 160,
             "atk": 46,
@@ -283,7 +283,7 @@
         },
         {
           "level": 2,
-          "favorPoints": 2732,
+          "trust": 50,
           "attributes": {
             "max_hp": 180,
             "atk": 54,
@@ -314,7 +314,7 @@
         },
         {
           "level": 3,
-          "favorPoints": 10070,
+          "trust": 100,
           "attributes": {
             "max_hp": 200,
             "atk": 62,

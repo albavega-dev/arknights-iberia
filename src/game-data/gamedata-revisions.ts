@@ -44,3 +44,11 @@ export const gameDataBuildingTableHashes: Readonly<Record<GameDataRegion, Readon
   en: { building_data: "A46851367F3844E3EFB37C9C540BA0AE55A8F5D46360F2B24CD4AE44DDC152C4" },
   cn: { building_data: "824CB228DD44697B469ECAE907ED835C74DA32068589CB52F352D4D32EB0F0F9" },
 };
+
+// Trust frames: favor points and their trust percentage.
+export type GameDataFavorTable = "favor_table";
+
+export const gameDataFavorTableHashes: Readonly<Record<GameDataRegion, Readonly<Record<GameDataFavorTable, string>>>> = {
+  en: { favor_table: "A4A015E0166EFF88497E5D2C94E6EF5DEF2AC16D5F5B970054356AAC598A26EF" },
+  cn: { favor_table: "A4A015E0166EFF88497E5D2C94E6EF5DEF2AC16D5F5B970054356AAC598A26EF" },
+};

@@ -39,7 +39,7 @@
       "levels": [
         {
           "level": 1,
-          "favorPoints": 0,
+          "trust": 0,
           "attributes": {
             "max_hp": 84,
             "atk": 26,
@@ -55,7 +55,7 @@
         },
         {
           "level": 2,
-          "favorPoints": 2732,
+          "trust": 50,
           "attributes": {
             "max_hp": 110,
             "atk": 32,
@@ -91,7 +91,7 @@
         },
         {
           "level": 3,
-          "favorPoints": 10070,
+          "trust": 100,
           "attributes": {
             "max_hp": 130,
             "atk": 35,
@@ -144,7 +144,7 @@
       "levels": [
         {
           "level": 1,
-          "favorPoints": 0,
+          "trust": 0,
           "attributes": {
             "atk": 22,
             "def": 22
@@ -159,7 +159,7 @@
         },
         {
           "level": 2,
-          "favorPoints": 2732,
+          "trust": 50,
           "attributes": {
             "atk": 27,
             "def": 29
@@ -189,7 +189,7 @@
         },
         {
           "level": 3,
-          "favorPoints": 10070,
+          "trust": 100,
           "attributes": {
             "atk": 30,
             "def": 33

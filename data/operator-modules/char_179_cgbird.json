@@ -91,7 +91,7 @@
       "levels": [
         {
           "level": 1,
-          "favorPoints": 0,
+          "trust": 0,
           "attributes": {
             "atk": 40,
             "magic_resistance": 5
@@ -107,7 +107,7 @@
         },
         {
           "level": 2,
-          "favorPoints": 2732,
+          "trust": 50,
           "attributes": {
             "atk": 55,
             "magic_resistance": 5
@@ -138,7 +138,7 @@
         },
         {
           "level": 3,
-          "favorPoints": 10070,
+          "trust": 100,
           "attributes": {
             "atk": 65,
             "magic_resistance": 5
@@ -186,7 +186,7 @@
       "levels": [
         {
           "level": 1,
-          "favorPoints": 0,
+          "trust": 0,
           "attributes": {
             "max_hp": 160,
             "attack_speed": 5
@@ -201,7 +201,7 @@
         },
         {
           "level": 2,
-          "favorPoints": 2732,
+          "trust": 50,
           "attributes": {
             "max_hp": 195,
             "attack_speed": 6
@@ -224,7 +224,7 @@
         },
         {
           "level": 3,
-          "favorPoints": 10070,
+          "trust": 100,
           "attributes": {
             "max_hp": 220,
             "attack_speed": 7

@@ -37,7 +37,7 @@
       "levels": [
         {
           "level": 1,
-          "favorPoints": 0,
+          "trust": 0,
           "attributes": {
             "atk": 40,
             "def": 25
@@ -52,7 +52,7 @@
         },
         {
           "level": 2,
-          "favorPoints": 2732,
+          "trust": 50,
           "attributes": {
             "atk": 52,
             "def": 39
@@ -82,7 +82,7 @@
         },
         {
           "level": 3,
-          "favorPoints": 10070,
+          "trust": 100,
           "attributes": {
             "atk": 59,
             "def": 50

@@ -12,7 +12,7 @@ export type ModuleTraitChangeView = { token: boolean; override: SkillDescription
 export type ModuleTalentChangeView = { index: number | null; potential: number; token: boolean; name: string; description: SkillDescriptionNode[]; rangeId: string | null };
 export type ModuleLevelView = {
   level: number;
-  favorPoints: number | null;
+  trust: number | null;
   attributes: Record<string, number>;
   rangeId: string | null;
   tokenAttributes: Record<string, Record<string, number>>;
@@ -72,7 +72,7 @@ export function buildOperatorModulesView(profile: StoredModulesProfile, region: 
     id: module.id, name: module.name, region: module.region, type: module.type, icon: module.icon ? iconPath(module.icon) : null, limitedModality: module.limitedModality === true,
     unlock: { ...module.unlock }, missions: [...module.missions],
     levels: module.levels.map((level): ModuleLevelView => ({
-      level: level.level, favorPoints: level.favorPoints, attributes: { ...level.attributes }, rangeId: level.rangeId ?? null,
+      level: level.level, trust: level.trust, attributes: { ...level.attributes }, rangeId: level.rangeId ?? null,
       tokenAttributes: Object.fromEntries(Object.entries(level.tokenAttributes ?? {}).map(([token, values]) => [token, { ...values }])),
       ...effectsView(level),
       modes: (level.modes ?? []).map((mode) => ({ gameTag: mode.gameTag ?? null, mapTag: mode.mapTag ?? null, rangeId: mode.rangeId ?? null, ...effectsView(mode) })),

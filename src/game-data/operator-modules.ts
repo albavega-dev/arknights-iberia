@@ -27,8 +27,8 @@ export type ModuleModeEffects = {
 };
 export type ModuleLevel = {
   level: number;
-  /** `unlockFavors` of the level: trust points (favor), not a percentage; null when the source has none. */
-  favorPoints: number | null;
+  /** Trust percentage the level needs: the favor_table frame of its `unlockFavors` points; null when the source has none. */
+  trust: number | null;
   attributes: Record<string, number>;
   /** Attack range of the operator with the module, when the module changes it (a trait part or a hidden talent whose range is displayed). */
   rangeId?: string;
@@ -78,6 +78,7 @@ export type SourceModuleTables = {
   uniequip_table: { equipDict: Record<string, SourceEquip | undefined>; charEquip: Record<string, string[] | undefined>; missionList: Record<string, { desc: string } | undefined> };
   battle_equip_table: Record<string, { phases: SourcePhase[] } | undefined>;
   range_table: Record<string, { direction: number; grids: { row: number; col: number }[] } | undefined>;
+  favor_table: { favorFrames: { data: { favorPoint: number; percent: number } }[] };
 };
 type SourceCharacter = Parameters<typeof buildOperatorTalents>[1] & {
   name?: string; description?: string | null; trait?: { candidates?: SourceTraitCandidate[] | null } | null; displayTokenDict?: Record<string, boolean> | null;
@@ -172,7 +173,14 @@ function sortedTalents(talents: Iterable<ModuleTalentChange>): ModuleTalentChang
   return [...talents].sort((a, b) => { const [x, y] = [talentOrder(a), talentOrder(b)]; return x[0] - y[0] || x[1] - y[1] || x[2] - y[2]; });
 }
 
-function buildLevel(context: string, phase: SourcePhase, equip: SourceEquip, talentIndices: ReadonlySet<number>, rangeTable: SourceModuleTables["range_table"], ranges: Record<string, SkillRange>): ModuleLevel {
+/** Trust percentage of a favor frame; points that match no frame exactly are an error, never interpolated. */
+export function trustPercent(context: string, points: number, favorTable: SourceModuleTables["favor_table"]): number {
+  const frame = favorTable.favorFrames.find((item) => item.data.favorPoint === points);
+  if (!frame) throw new Error(`${context} needs ${points} trust points, which match no favor frame`);
+  return frame.data.percent;
+}
+
+function buildLevel(context: string, phase: SourcePhase, equip: SourceEquip, talentIndices: ReadonlySet<number>, rangeTable: SourceModuleTables["range_table"], favorTable: SourceModuleTables["favor_table"], ranges: Record<string, SkillRange>): ModuleLevel {
   const levelContext = `${context} level ${phase.equipLevel}`;
   // Effects tagged with a game mode or a map are kept apart from the normal ones, one group per tag pair.
   const groups = new Map<string, EffectGroup>();
@@ -232,7 +240,7 @@ function buildLevel(context: string, phase: SourcePhase, equip: SourceEquip, tal
   const tokenAttributes = Object.fromEntries(Object.entries(phase.tokenAttributeBlackboard ?? {}).map(([token, entries]) => [token, attributesOf(`${levelContext} ${token}`, entries)]));
   const favor = equip.unlockFavors?.[String(phase.equipLevel)];
   return {
-    level: phase.equipLevel, favorPoints: Number.isFinite(favor) ? favor! : null, attributes: attributesOf(levelContext, phase.attributeBlackboard),
+    level: phase.equipLevel, trust: favor === undefined || favor === null ? null : trustPercent(levelContext, favor, favorTable), attributes: attributesOf(levelContext, phase.attributeBlackboard),
     ...(normal?.rangeId ? { rangeId: normal.rangeId } : {}),
     ...(Object.keys(tokenAttributes).length ? { tokenAttributes } : {}),
     traits: normal?.traits ?? [],
@@ -270,7 +278,7 @@ export function buildOperatorModules(operatorId: string, region: ModuleRegion, t
       return mission.desc;
     });
     const phases = [...battle.phases].sort((a, b) => a.equipLevel - b.equipLevel);
-    const levels = phases.map((phase) => buildLevel(context, phase, equip, talentIndices, source.range_table, ranges));
+    const levels = phases.map((phase) => buildLevel(context, phase, equip, talentIndices, source.range_table, source.favor_table, ranges));
     for (const level of levels) for (const token of Object.keys(level.tokenAttributes ?? {})) nameToken(token, source);
     return [{
       id, name: equip.uniEquipName, region: moduleRegion, type: equip.typeName2 ? `${equip.typeName1}-${equip.typeName2}` : equip.typeName1, icon: equip.typeIcon.toLowerCase(),

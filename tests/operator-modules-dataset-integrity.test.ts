@@ -4,7 +4,7 @@ import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
 import { checkDatasetLimits, modulesDatasetContractVersion, modulesDatasetLimits, validateDatasetIndex, type DatasetIndex } from "../src/game-data/operator-dataset";
-import { gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
+import { gameDataFavorTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
 import { moduleDescriptions, traitDescriptions, type OperatorModulesProfile } from "../src/game-data/operator-modules";
 import { termIdsOf, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { parseSkillDescription, type SkillBlackboardEntry, type SkillDescriptionNode } from "../src/game-data/skill-description";
@@ -38,6 +38,7 @@ test("modules dataset index is valid, pinned and lists the same operators and re
     assert.equal(tables.battle_equip_table.sha256, gameDataTableHashes[region].battle_equip_table);
     assert.equal(tables.range_table.sha256, gameDataSkillTableHashes[region].range_table);
     assert.equal(tables.gamedata_const.sha256, gameDataSkillTableHashes[region].gamedata_const);
+    assert.equal(tables.favor_table.sha256, gameDataFavorTableHashes[region].favor_table);
     assert.equal(index.sources[region].revision, gameDataRevisions[region]);
   }
 });
@@ -112,6 +113,7 @@ test("modules are E2 modules with three ordered levels, readable texts, known ra
           for (const change of effects.talents) assertReadable(`${item.id} talent`, change.description);
           for (const rangeId of [effects.rangeId, ...effects.talents.map((change) => change.rangeId)]) if (rangeId) assert.ok(profile.ranges[rangeId], `${item.id} range ${rangeId}`);
         }
+        assert.ok(level.trust === null || (Number.isInteger(level.trust) && level.trust >= 0 && level.trust <= 200), `${item.id} level ${level.level} trust`);
         for (const token of Object.keys(level.tokenAttributes ?? {})) assert.ok(profile.tokens[token], `${item.id} summon ${token} has a name`);
       }
       for (const id of moduleDescriptions(item).flatMap(termIdsOf)) assert.ok(glossaries[item.region].terms[id], `${id} in the ${item.region} glossary`);

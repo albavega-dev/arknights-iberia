@@ -1,6 +1,6 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
+import { gameDataFavorTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { modulesDatasetContractVersion, modulesDatasetLimits, sharedFileName, validateDatasetIndex, type DatasetFile, type DatasetIndex, type DatasetSharedFile, type DatasetSource } from "../src/game-data/operator-dataset";
 import { buildOperatorModules, moduleDescriptions, traitDescriptions, type OperatorModulesProfile, type SourceModuleTables } from "../src/game-data/operator-modules";
 import { buildGlossary, type GlossaryEntry, type GlossaryTable } from "../src/game-data/operator-skills";
@@ -9,7 +9,7 @@ import { arg, exists, operatorDatasetFile, readCatalog, readJson, sha256, tableF
 export const modulesDatasetName = "operator-modules";
 const catalogSize = 432;
 const regions: readonly GameDataRegion[] = ["en", "cn"];
-const tables = ["character_table", "uniequip_table", "battle_equip_table", "range_table", "gamedata_const"] as const;
+const tables = ["character_table", "uniequip_table", "battle_equip_table", "range_table", "gamedata_const", "favor_table"] as const;
 type ModulesTable = (typeof tables)[number];
 type HashTable = Readonly<Record<GameDataRegion, Readonly<Record<ModulesTable, string>>>>;
 
@@ -28,7 +28,7 @@ export type ModulesGeneratorOptions = Readonly<{
 export const glossaryFileName = (region: GameDataRegion) => `glossary-${region}`;
 
 function defaultHashes(): HashTable {
-  return Object.fromEntries(regions.map((region) => [region, { ...gameDataTableHashes[region], range_table: gameDataSkillTableHashes[region].range_table, gamedata_const: gameDataSkillTableHashes[region].gamedata_const }])) as unknown as HashTable;
+  return Object.fromEntries(regions.map((region) => [region, { ...gameDataTableHashes[region], range_table: gameDataSkillTableHashes[region].range_table, gamedata_const: gameDataSkillTableHashes[region].gamedata_const, ...gameDataFavorTableHashes[region] }])) as unknown as HashTable;
 }
 
 export function buildModulesDataset(input: Readonly<Record<GameDataRegion, Readonly<Record<ModulesTable, unknown>>>>, catalog: ReadonlyMap<string, GameDataRegion>, hashes: HashTable): ModulesDataset {

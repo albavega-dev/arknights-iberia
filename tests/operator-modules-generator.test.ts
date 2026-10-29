@@ -10,7 +10,8 @@ import { buildOperatorModules, buildOperatorTrait, isOriginalModule, operatorMod
 import { buildModulesDataset, checkModuleIcons, glossaryFileName, main, modulesDatasetFiles, readModulesDataset, type ModulesGeneratorOptions } from "../scripts/generate-operator-modules";
 import { tableFlag } from "../scripts/operator-dataset-io";
 
-const tables = ["character_table", "uniequip_table", "battle_equip_table", "range_table", "gamedata_const"] as const;
+const tables = ["character_table", "uniequip_table", "battle_equip_table", "range_table", "gamedata_const", "favor_table"] as const;
+const favorTable = { maxFavor: 25570, favorFrames: [[0, 0], [8, 1], [2732, 50], [10070, 100]].map(([favorPoint, percent]) => ({ level: favorPoint, data: { favorPoint, percent, battlePhase: 0 } })) };
 const unlock = (phase: string, level = 1) => ({ phase, level });
 const talentCandidate = (name: string, rank = 0) => ({ unlockCondition: unlock("PHASE_0"), requiredPotentialRank: rank, name, description: `${name} text`, rangeId: null, blackboard: [], isHideTalent: false });
 const character = (name: string, extra: Record<string, unknown> = {}) => ({ name, description: "Attacks <@ba.kw>{cnt}</> enemies", trait: { candidates: [{ unlockCondition: unlock("PHASE_0"), requiredPotentialRank: 0, blackboard: [{ key: "cnt", value: 2 }], overrideDescripton: null }] }, talents: [{ candidates: [talentCandidate("First"), talentCandidate("First+", 4)] }, { candidates: [{ ...talentCandidate("Hidden"), isHideTalent: true }] }], ...extra });
@@ -40,6 +41,7 @@ const fixtures: Record<GameDataRegion, Record<(typeof tables)[number], unknown>>
     battle_equip_table: { uniequip_002_a: battle() },
     range_table: { "r-2": { direction: 1, grids: [{ row: 0, col: 1 }] } },
     gamedata_const: { termDescriptionDict: { "ba.stun": { termName: "Stun", description: "Stops" } } },
+    favor_table: favorTable,
   },
   cn: {
     character_table: { char_a: character("A"), char_cn: character("C"), token_a_summon: { name: "召唤物" } },
@@ -51,6 +53,7 @@ const fixtures: Record<GameDataRegion, Record<(typeof tables)[number], unknown>>
     battle_equip_table: { uniequip_003_a: { phases: [phase(1, [talentPart("TALENT", [{ name: "First", upgradeDescription: "加强 <$ba.root>x</>" }])])] }, uniequip_002_cn: { phases: [phase(1, [])] } },
     range_table: { "r-2": { direction: 1, grids: [{ row: 0, col: 1 }] } },
     gamedata_const: { termDescriptionDict: { "ba.root": { termName: "束缚", description: "无法移动" } } },
+    favor_table: favorTable,
   },
 };
 const sourceTables = fixtures as unknown as Record<GameDataRegion, SourceModuleTables>;
@@ -90,8 +93,8 @@ test("a Global operator keeps its modules and adds the CN-only ones; ORIGINAL mo
 
 test("module levels keep attributes, trait changes, talent changes and the range change shown in the game", () => {
   const [level1, level2] = buildOperatorModules("char_a", "en", sourceTables).modules[0].levels;
-  assert.deepEqual(level1, { level: 1, favorPoints: 0, attributes: { atk: 10 }, traits: [{ token: false, addition: "Gains <@ba.kw>{scale:0%}</>", blackboard: [{ key: "scale", value: 0.2 }] }], talents: [] });
-  assert.equal(level2.favorPoints, 2732);
+  assert.deepEqual(level1, { level: 1, trust: 0, attributes: { atk: 10 }, traits: [{ token: false, addition: "Gains <@ba.kw>{scale:0%}</>", blackboard: [{ key: "scale", value: 0.2 }] }], talents: [] });
+  assert.equal(level2.trust, 50, "2732 trust points are the 50% frame");
   assert.equal(level2.rangeId, "r-2", "data-only trait parts and hidden talents with a displayed range change the range");
   assert.deepEqual(level2.traits, [{ token: false, override: "New trait" }], "data-only trait texts are not shown");
   assert.deepEqual(level2.tokenAttributes, { token_a_summon: { atk: 5 } });
@@ -111,6 +114,10 @@ test("module extraction rejects unknown talents, conflicting repeats, unknown ta
   assert.throws(() => buildOperatorModules("char_a", "en", withPhase([traitPart("TRAIT", { additionalDescription: "{missing}" })])), /unresolved marker \{missing\}/);
   assert.throws(() => buildOperatorModules("char_a", "en", withPhase([traitPart("TRAIT", { rangeId: "r-9" })])), /unknown range r-9/);
   assert.throws(() => buildOperatorModules("char_a", "en", withPhase([talentPart("TALENT", [{ name: "First", upgradeDescription: "{v}" }])])), /unresolved marker \{v\}/, "talent values must come written in");
+  const oddTrust = { ...sourceTables, en: { ...sourceTables.en, uniequip_table: { ...sourceTables.en.uniequip_table, equipDict: { ...sourceTables.en.uniequip_table.equipDict, uniequip_002_a: equip("uniequip_002_a", "char_a", { unlockFavors: { 1: 0, 2: 2733, 3: 10070 } }) } } } } as Record<GameDataRegion, SourceModuleTables>;
+  assert.throws(() => buildOperatorModules("char_a", "en", oddTrust), /needs 2733 trust points, which match no favor frame/, "no interpolation between frames");
+  const noFavors = { ...sourceTables, en: { ...sourceTables.en, uniequip_table: { ...sourceTables.en.uniequip_table, equipDict: { ...sourceTables.en.uniequip_table.equipDict, uniequip_002_a: equip("uniequip_002_a", "char_a", { unlockFavors: null }) } } } } as Record<GameDataRegion, SourceModuleTables>;
+  assert.deepEqual(buildOperatorModules("char_a", "en", noFavors).modules[0].levels.map((level) => level.trust), [null, null]);
   const noBattle = { ...sourceTables, en: { ...sourceTables.en, battle_equip_table: {} } } as Record<GameDataRegion, SourceModuleTables>;
   assert.throws(() => buildOperatorModules("char_a", "en", noBattle), /missing from the en battle table/);
   assert.throws(() => buildOperatorModules("char_zz", "en", sourceTables), /char_zz is missing from the en character table/);

@@ -33,7 +33,7 @@ test("Kal'tsit (EN): X, Y and Limited Modality modules, Mon3tr changes and the l
   assert.equal(x.icon, "/assets/operator-modules/phy-x.png");
   assert.deepEqual(x.unlock, { elite: 2, level: 60 });
   assert.equal(x.missions.length, 2);
-  assert.deepEqual(x.levels.map((level) => level.favorPoints), [0, 2732, 10070]);
+  assert.deepEqual(x.levels.map((level) => level.trust), [0, 50, 100]);
   assert.deepEqual(x.levels[1].attributes, { atk: 50, def: 20 });
   assert.match(textOf(x.levels[1].traits[0].addition!), /increases heal amount by 15%/);
   assert.deepEqual(x.levels[1].talents.map((change) => [change.index, change.potential, change.token]), [[1, 1, false], [1, 5, false], [1, 1, true], [1, 5, true]], "the summon's own copy is marked as a summon change");
