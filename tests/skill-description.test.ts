@@ -76,6 +76,18 @@ describe("parseSkillDescription markup", () => {
     ]);
   });
 
+  it("gives the potential bonus tag its own tone, apart from increase (Amiya talent at P6)", () => {
+    assert.deepEqual(parseSkillDescription("Restores 3 <@ba.talpu>(+1)</> extra Skill Points", []), [
+      text("Restores 3 "),
+      { type: "style", tag: "@ba.talpu", tone: "potential", children: [text("(+1)")] },
+      text(" extra Skill Points"),
+    ]);
+    assert.deepEqual(parseSkillDescription("攻击力13%<@ba.talpu>（+5%）</>", []), [
+      text("攻击力13%"),
+      { type: "style", tag: "@ba.talpu", tone: "potential", children: [text("（+5%）")] },
+    ]);
+  });
+
   it("gives every glossary term the status tone and keeps its id", () => {
     assert.deepEqual(parseSkillDescription("<$ba.sluggish>Slow</> and <$ba.dt.element>Elemental</> and <$cc.bd_A>x</>", []), [
       { type: "style", tag: "$ba.sluggish", tone: "status", termId: "ba.sluggish", children: [text("Slow")] },

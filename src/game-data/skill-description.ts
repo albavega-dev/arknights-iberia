@@ -6,7 +6,7 @@ export type SkillBlackboardEntry = {
   valueStr?: string | null;
 };
 
-export type SkillDescriptionTone = "increase" | "decrease" | "keyword" | "status";
+export type SkillDescriptionTone = "increase" | "decrease" | "keyword" | "status" | "potential";
 
 export type SkillDescriptionNode =
   | { type: "text"; text: string }
@@ -21,6 +21,7 @@ const knownTags: Record<string, SkillDescriptionTone> = {
   "@ba.vdown": "decrease",
   "@ba.rem": "keyword",
   "@ba.kw": "keyword",
+  "@ba.talpu": "potential",
   "@cc.vup": "increase",
   "@cc.vdown": "decrease",
   "@cc.rem": "keyword",
