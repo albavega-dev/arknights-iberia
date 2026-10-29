@@ -1,0 +1,36 @@
+{
+  "purpose": "Names of the game modes (validInGameTag) and Integrated Strategies themes (validInMapTag) that module effects are limited to.",
+  "gameTags": {
+    "roguelike": {
+      "name": "Integrated Strategies",
+      "source": { "kind": "wiki", "url": "https://arknights.wiki.gg/wiki/Integrated_Strategies", "retrieved": "2026-10-29" }
+    },
+    "sandbox": {
+      "name": "Reclamation Algorithm",
+      "source": { "kind": "wiki", "url": "https://arknights.wiki.gg/wiki/Reclamation_Algorithm", "retrieved": "2026-10-29" }
+    }
+  },
+  "mapTags": {
+    "rogue_6": {
+      "name": "沉沦者的黑流树海",
+      "region": "cn",
+      "source": {
+        "kind": "gamedata",
+        "repository": "ArknightsAssets/ArknightsGamedata",
+        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+        "path": "cn/gamedata/excel/roguelike_topic_table.json",
+        "field": "topics.rogue_6.name",
+        "sha256": "9C9B9527A3B22A8776A3554117506623EBEBAE7DFF2E688B12F7C0864DD19850"
+      }
+    },
+    "rogue_yan": {
+      "name": "Sui's Garden of Grotesqueries",
+      "source": {
+        "kind": "wiki",
+        "url": "https://arknights.wiki.gg/wiki/Integrated_Strategies",
+        "retrieved": "2026-10-29",
+        "note": "The game data has no name for rogue_yan; the only module that uses it (uniequip_003_radian) names the theme in its own text."
+      }
+    }
+  }
+}

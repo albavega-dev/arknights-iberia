@@ -3,6 +3,7 @@ import { join } from "node:path";
 import { gameDataFavorTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { modulesDatasetContractVersion, modulesDatasetLimits, sharedFileName, validateDatasetIndex, type DatasetFile, type DatasetIndex, type DatasetSharedFile, type DatasetSource } from "../src/game-data/operator-dataset";
 import { buildOperatorModules, buildOperatorTrait, moduleDescriptions, traitDescriptions, type OperatorModulesProfile, type SourceModuleTables } from "../src/game-data/operator-modules";
+import { unnamedModeTags } from "../src/game-data/operator-module-modes";
 import { buildGlossary, type GlossaryEntry, type GlossaryTable } from "../src/game-data/operator-skills";
 import { arg, exists, operatorDatasetFile, readCatalog, readJson, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
 
@@ -105,6 +106,8 @@ export async function main(argv: readonly string[] = process.argv, options: Modu
   const input = Object.fromEntries(await Promise.all(regions.map(async (region) => [region, Object.fromEntries(await Promise.all(tables.map(async (table) => [table, await readJson(paths[region][table])])))]))) as Record<GameDataRegion, Record<ModulesTable, unknown>>;
   const catalog = await readCatalog(options.releaseManifest ?? "data/operator-cn-release-manifest.json", options.regionalManifest ?? "data/operator-regional-manifest.json", options.catalogSize ?? catalogSize);
   const dataset = buildModulesDataset(input, catalog, expectedHashes);
+  const unnamed = unnamedModeTags(dataset.profiles.flatMap((profile) => profile.modules.flatMap((item) => item.levels.flatMap((level) => level.modes ?? []))));
+  if (unnamed.length) throw new Error(`Mode tags without a name in data/operator-module-modes.json: ${unnamed.join(", ")}`);
   await checkModuleIcons(dataset, options.iconDirectory ?? "public/assets/operator-modules");
   const result = await writeModulesDataset(output, dataset, { force, limits: options.limits });
   for (const warning of result.warnings) console.warn(`Warning: ${warning}`);

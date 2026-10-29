@@ -10,6 +10,7 @@ Este documento recoge las fuentes de datos, recursos gráficos y herramientas ut
 ## Wikis y documentación comunitaria
 
 - [Terra Wiki](https://arknights.wiki.gg/): contraste de nombres, fechas y relaciones.
+  - Nombres oficiales en inglés de los modos y temas a los que se limitan algunos efectos de módulo, que los datos del juego no incluyen: [Integrated Strategies](https://arknights.wiki.gg/wiki/Integrated_Strategies) (también el tema Sui's Garden of Grotesqueries) y [Reclamation Algorithm](https://arknights.wiki.gg/wiki/Reclamation_Algorithm). Consultado el 29 de octubre de 2026; registrados con su fuente en `data/operator-module-modes.json`.
 - [PRTS Wiki](https://prts.wiki/): referencia comunitaria para información CN.
 
 ## Recursos gráficos

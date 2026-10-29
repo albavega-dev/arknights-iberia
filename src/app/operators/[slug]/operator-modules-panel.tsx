@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import { formatNumber } from "../../../game-data/number-format";
 import { highlightChangedNumbers, modulePotentials, talentChangesAt, visibleModules, type ModuleLevelView, type ModuleModeEffectsView, type ModuleTalentChangeView, type ModuleTraitChangeView, type OperatorModulesView, type OperatorModuleView, type TraitStageView } from "../../../game-data/operator-modules-view";
+import { moduleModeNames } from "../../../game-data/operator-module-modes";
 import { formatModuleTypeLabel, moduleAttributeLabels } from "../../../game-data/operator-stats";
 import { followPointer } from "../pointer-light";
 import { RangeGrid } from "../range-grid";
@@ -19,8 +20,6 @@ export function CnModulesToggle({ checked, onChange }: { checked: boolean; onCha
 const attributeOrder = ["max_hp", "atk", "def", "magic_resistance", "cost", "block_cnt", "attack_speed", "respawn_time", "max_deploy_count", "max_deck_stack_cnt"];
 const attributeLabels: Readonly<Record<string, string>> = { ...moduleAttributeLabels, max_deploy_count: "Despliegue máximo", max_deck_stack_cnt: "Unidades disponibles" };
 
-const gameTagLabels: Readonly<Record<string, string>> = { roguelike: "Integrated Strategies", sandbox: "Reclamation Algorithm" };
-const mapTagLabels: Readonly<Record<string, string>> = { rogue_yan: "Sui's Garden of Grotesqueries" };
 
 function signed(value: number): string {
   return `${value > 0 ? "+" : ""}${formatNumber(value)}`;
@@ -151,7 +150,7 @@ function modeKey(mode: { gameTag: string | null; mapTag: string | null }): strin
 }
 
 function modeLabel(mode: { gameTag: string | null; mapTag: string | null }): string {
-  return [mode.gameTag ? gameTagLabels[mode.gameTag] ?? mode.gameTag : null, mode.mapTag ? mapTagLabels[mode.mapTag] ?? mode.mapTag : null].filter(Boolean).join(" · ");
+  return [mode.gameTag ? moduleModeNames.gameTags[mode.gameTag]?.name ?? mode.gameTag : null, mode.mapTag ? moduleModeNames.mapTags[mode.mapTag]?.name ?? mode.mapTag : null].filter(Boolean).join(" · ");
 }
 
 /** Mode effects of a level at the potential, without those whose text repeats a normal effect of the level; null when none is left. */
