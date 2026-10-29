@@ -6,6 +6,7 @@ import test from "node:test";
 import { checkDatasetLimits, modulesDatasetContractVersion, modulesDatasetLimits, validateDatasetIndex, type DatasetIndex } from "../src/game-data/operator-dataset";
 import { gameDataFavorTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
 import { moduleDescriptions, traitDescriptions, type OperatorModulesProfile } from "../src/game-data/operator-modules";
+import type { ModuleArtManifest } from "../src/game-data/operator-module-art";
 import { termIdsOf, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { parseSkillDescription, type SkillBlackboardEntry, type SkillDescriptionNode } from "../src/game-data/skill-description";
 
@@ -120,4 +121,26 @@ test("modules are E2 modules with three ordered levels, readable texts, known ra
     }
   }
   for (const icon of icons) await access(path.resolve("public/assets/operator-modules", `${icon}.png`));
+});
+
+test("every module has its illustration, and the art and level icons match the manifest", async () => {
+  const manifest = JSON.parse(await readFile(path.resolve("data/operator-module-art-manifest.json"), "utf8")) as ModuleArtManifest;
+  assert.equal(manifest.source.revision, "1a41341cc634461a5abe3456722801a39b9a9d32");
+  const { index } = await readIndex(directory);
+  const ids = (await readProfiles(index)).flatMap((profile) => profile.modules.map((module) => module.id)).sort();
+  assert.deepEqual(Object.keys(manifest.art).sort(), ids.map((id) => `${id}.webp`), "one illustration per module, no extra files");
+  const artDirectory = path.resolve("public/assets/operator-modules-art");
+  assert.deepEqual((await readdir(artDirectory)).sort(), Object.keys(manifest.art).sort());
+  for (const [file, entry] of Object.entries(manifest.art)) {
+    const content = await readFile(path.join(artDirectory, file));
+    assert.equal(content.subarray(8, 12).toString("ascii"), "WEBP", file);
+    assert.deepEqual([content.byteLength, hash(content)], [entry.converted.bytes, entry.converted.sha256], file);
+    assert.ok(Math.max(entry.converted.width, entry.converted.height) <= manifest.conversion.maxSize, file);
+    assert.equal(entry.url, `https://raw.githubusercontent.com/${manifest.source.repository}/${manifest.source.revision}/${entry.source}`);
+  }
+  assert.deepEqual(Object.keys(manifest.stages), ["stage-1.png", "stage-2.png", "stage-3.png"]);
+  for (const [file, entry] of Object.entries(manifest.stages)) {
+    const content = await readFile(path.resolve("public/assets/operator-module-stages", file));
+    assert.deepEqual([content.byteLength, hash(content)], [entry.bytes, entry.sha256], file);
+  }
 });
