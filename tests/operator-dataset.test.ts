@@ -78,13 +78,13 @@ test("each dataset declares its own limits in the index and is checked against t
 
 test("each dataset declares its own contract version and is validated against the expected one", () => {
   assert.equal(datasetContractVersion, "2");
-  assert.equal(skillsDatasetContractVersion, "3");
+  assert.equal(skillsDatasetContractVersion, "4");
   const stats = buildDatasetIndex("operator-stats", { en: source, cn: source }, [file("char_a", "en", 10)]);
   const skills = buildDatasetIndex("operator-skills", { en: source, cn: source }, [file("char_a", "en", 10)], { contractVersion: skillsDatasetContractVersion });
   assert.equal(stats.contractVersion, "2");
-  assert.equal(skills.contractVersion, "3");
+  assert.equal(skills.contractVersion, "4");
   assert.deepEqual(validateDatasetIndex(stats), []);
   assert.deepEqual(validateDatasetIndex(skills, skillsDatasetContractVersion), []);
-  assert.deepEqual(validateDatasetIndex(skills), ["Unsupported contract: 3"]);
+  assert.deepEqual(validateDatasetIndex(skills), ["Unsupported contract: 4"]);
   assert.deepEqual(validateDatasetIndex(stats, skillsDatasetContractVersion), ["Unsupported contract: 2"]);
 });

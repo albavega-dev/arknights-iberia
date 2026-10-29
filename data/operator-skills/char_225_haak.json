@@ -490,5 +490,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Drug Cocktail Administration",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack will randomly trigger one of the following effects: Restores own HP by 13%, that attack deals 130% damage, <$ba.sluggish>Slows</> the enemy for 1 second, or <$ba.stun>Stuns</> the enemy for 0.6 seconds"
+        },
+        {
+          "name": "Drug Cocktail Administration",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack will randomly trigger one of the following effects: Restores own HP by 14%, that attack deals 140% damage, <$ba.sluggish>Slows</> the enemy for 1.2 seconds, or <$ba.stun>Stuns</> the enemy for 0.8 seconds"
+        },
+        {
+          "name": "Drug Cocktail Administration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack will randomly trigger one of the following effects: Restores own HP by 15%, that attack deals 150% damage, <$ba.sluggish>Slows</> the enemy for 1.4 seconds, or <$ba.stun>Stuns</> the enemy for 1 second"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Pharmaceutical Diffusion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases healing effects on this unit by 20%"
+        },
+        {
+          "name": "Pharmaceutical Diffusion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases healing effects on this unit by 25%<@ba.talpu>(+5%)</>"
+        }
+      ]
+    }
   ]
 }

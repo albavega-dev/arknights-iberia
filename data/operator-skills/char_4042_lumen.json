@@ -507,5 +507,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "An Everyman's Wish",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Healing targets gain <$ba.buffres>status resistance</> for 2 seconds. If the target's HP is above 75%, they gain <$ba.buffres>status resistance</> for 4 seconds instead."
+        },
+        {
+          "name": "An Everyman's Wish",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Healing targets gain <$ba.buffres>status resistance</> for 4 seconds. If the target's HP is above 75%, they gain <$ba.buffres>status resistance</> for 6 seconds instead."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Quick Fix",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When an ally within range receives a negative status, heal them for 80% of Lumen's ATK. 12 seconds cooldown."
+        },
+        {
+          "name": "Quick Fix",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When an ally within range receives a negative status, heal them for 80% of Lumen's ATK. 10<@ba.talpu>(-2)</> seconds cooldown."
+        }
+      ]
+    }
   ]
 }

@@ -333,5 +333,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "From Paper Comes Life",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When <Substitute> is summoned, it will deal 150% of its ATK as Arts Damage to enemies in the surrounding 8 tiles"
+        },
+        {
+          "name": "From Paper Comes Life",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When <Substitute> is summoned, it will deal 155% <@ba.talpu>(+5%)</> of its ATK as Arts Damage to enemies in the surrounding 8 tiles"
+        },
+        {
+          "name": "From Paper Comes Life",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When <Substitute> is summoned, it will deal 225% of its ATK as Arts Damage to enemies in the surrounding 8 tiles"
+        },
+        {
+          "name": "From Paper Comes Life",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When <Substitute> is summoned, it will deal 230% <@ba.talpu>(+5%)</> of its ATK as Arts Damage to enemies in the surrounding 8 tiles"
+        },
+        {
+          "name": "From Paper Comes Life",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When <Substitute> is summoned, it will deal 270% of its ATK as Arts Damage to enemies in the surrounding 8 tiles"
+        },
+        {
+          "name": "From Paper Comes Life",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When <Substitute> is summoned, it will deal 275% <@ba.talpu>(+5%)</> of its ATK as Arts Damage to enemies in the surrounding 8 tiles"
+        }
+      ]
+    }
   ]
 }

@@ -445,5 +445,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Safe Landing",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DP Cost -2, Redeployment Time -8 seconds. This unit is <$ba.stun>Stunned</> for 10 seconds upon deployment."
+        },
+        {
+          "name": "Safe Landing",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DP Cost -4, Redeployment Time -15 seconds. This unit is <$ba.stun>Stunned</> for 10 seconds upon deployment."
+        }
+      ]
+    }
   ]
 }

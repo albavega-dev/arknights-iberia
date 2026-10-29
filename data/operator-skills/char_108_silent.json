@@ -306,5 +306,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Booster Injection",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "All [Medic] Operators' ASPD +6 when Silence is deployed"
+        },
+        {
+          "name": "Booster Injection",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "All [Medic] Operators' ASPD +8 <@ba.talpu>(+2)</> when Silence is deployed"
+        },
+        {
+          "name": "Booster Injection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "All [Medic] Operators' ASPD +12 when Silence is deployed"
+        },
+        {
+          "name": "Booster Injection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "All [Medic] Operators' ASPD +14 <@ba.talpu>(+2)</> when Silence is deployed"
+        }
+      ]
+    }
   ]
 }

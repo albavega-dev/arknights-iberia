@@ -333,5 +333,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Extreme Evasion",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "15% Physical Dodge; After a successful dodge, gains +6 ASPD (Lasts for 5s, does not stack)"
+        },
+        {
+          "name": "Extreme Evasion",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "18% <@ba.talpu>(+3%)</> Physical Dodge; After a successful dodge, gains +6 ASPD (Lasts for 5s, does not stack)"
+        },
+        {
+          "name": "Extreme Evasion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "30% Physical Dodge; After a successful dodge, gains +12 ASPD (Lasts for 5s, does not stack)"
+        },
+        {
+          "name": "Extreme Evasion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "33% <@ba.talpu>(+3%)</> Physical Dodge; After a successful dodge, gains +12 ASPD (Lasts for 5s, does not stack)"
+        }
+      ]
+    }
   ]
 }

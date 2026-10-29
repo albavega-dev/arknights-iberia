@@ -335,5 +335,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Geological Survey",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Extends <$ba.sluggish>Slow</> duration slightly"
+        },
+        {
+          "name": "Geological Survey",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Extends <$ba.sluggish>Slow</> duration moderately"
+        }
+      ]
+    }
   ]
 }

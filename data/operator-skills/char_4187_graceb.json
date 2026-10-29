@@ -407,5 +407,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Opportune Mercy",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +5%, which becomes ATK +10% after defeating an enemy under the burst effect of <$ba.dt.neural2>Nervous Impairment</>"
+        },
+        {
+          "name": "Opportune Mercy",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +8% <@ba.talpu>(+3%)</>, which becomes ATK +13% <@ba.talpu>(+3%)</> after defeating an enemy under the burst effect of <$ba.dt.neural2>Nervous Impairment</>"
+        },
+        {
+          "name": "Opportune Mercy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +10%, which becomes ATK +15% after defeating an enemy under the burst effect of <$ba.dt.neural2>Nervous Impairment</>"
+        },
+        {
+          "name": "Opportune Mercy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +13% <@ba.talpu>(+3%)</>, which becomes ATK +18% <@ba.talpu>(+3%)</> after defeating an enemy under the burst effect of <$ba.dt.neural2>Nervous Impairment</>"
+        }
+      ]
+    }
   ]
 }

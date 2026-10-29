@@ -365,5 +365,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Solidly Grounded",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.dt.element>Elemental Injury</> recovery +10% when healing ground units"
+        },
+        {
+          "name": "Solidly Grounded",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<$ba.dt.element>Elemental Injury</> recovery +13% <@ba.talpu>(+3%)</> when healing ground units"
+        },
+        {
+          "name": "Solidly Grounded",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.dt.element>Elemental Injury</> recovery +20% when healing ground units"
+        },
+        {
+          "name": "Solidly Grounded",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<$ba.dt.element>Elemental Injury</> recovery +23%<@ba.talpu>(+3%)</> when healing ground units"
+        }
+      ]
+    }
   ]
 }

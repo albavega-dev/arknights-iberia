@@ -348,5 +348,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mounted Police",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "All [Vanguard] Operators obtain 10% Physical Dodge when Grani is deployed"
+        },
+        {
+          "name": "Mounted Police",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "All [Vanguard] Operators obtain 15% <@ba.talpu>(+5%)</> Physical Dodge when Grani is deployed"
+        },
+        {
+          "name": "Mounted Police",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "All [Vanguard] Operators obtain 20% Physical Dodge when Grani is deployed"
+        },
+        {
+          "name": "Mounted Police",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "All [Vanguard] Operators obtain 25% <@ba.talpu>(+5%)</> Physical Dodge when Grani is deployed"
+        }
+      ]
+    }
   ]
 }

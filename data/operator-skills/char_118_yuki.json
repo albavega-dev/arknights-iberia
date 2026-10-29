@@ -333,5 +333,21 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Heavy Shuriken",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attack Interval increases slightly, but ATK +20%"
+        }
+      ]
+    }
   ]
 }

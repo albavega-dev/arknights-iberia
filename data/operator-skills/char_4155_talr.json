@@ -429,5 +429,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Select Your Customers!",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals +10% damage when attacking enemies that are not blocked by this unit"
+        },
+        {
+          "name": "Select Your Customers!",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals +15% <@ba.talpu>(+5%)</> damage when attacking enemies that are not blocked by this unit"
+        },
+        {
+          "name": "Select Your Customers!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals +20% damage when attacking enemies that are not blocked by this unit"
+        },
+        {
+          "name": "Select Your Customers!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals +25% <@ba.talpu>(+5%)</> damage when attacking enemies that are not blocked by this unit"
+        }
+      ]
+    }
   ]
 }

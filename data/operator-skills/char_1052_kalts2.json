@@ -576,6 +576,75 @@
           "col": 1
         }
       ]
+    },
+    "y-6": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
     }
   },
   "baseSkills": [
@@ -625,6 +694,92 @@
             "level": 1
           },
           "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+30%</>; for every facility in the Base with an <$cc.g.elite><@cc.kw>Elite Operator</></> assigned (excluding Assistants and Activity Rooms), HR contacting speed <@cc.vup>+4%</> (max <@cc.kw>5</> facilities)"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Sentinelo de Polvo",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP and DEF +5%, Block +1, and Block range expands; life restoration unit lifts off after deployment, causing Kal'tsit Esperanta to <$ba.liftoff>Take Off</>"
+        },
+        {
+          "name": "Sentinelo de Polvo",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Max HP and DEF +10% <@ba.talpu>(+5%)</>, Block +1, and Block range expands; life restoration unit lifts off after deployment, causing Kal'tsit Esperanta to <$ba.liftoff>Take Off</>"
+        },
+        {
+          "name": "Sentinelo de Polvo",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP and DEF +10%, Block +1, and Block range expands; life restoration unit lifts off after deployment, causing Kal'tsit Esperanta to <$ba.liftoff>Take Off</>"
+        },
+        {
+          "name": "Sentinelo de Polvo",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Max HP and DEF +15% <@ba.talpu>(+5%)</>, Block +1, and Block range expands; life restoration unit lifts off after deployment, causing Kal'tsit Esperanta to <$ba.liftoff>Take Off</>"
+        },
+        {
+          "name": "Sentinelo de Polvo",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP and DEF +25%, Block +1, and Block range expands; life restoration unit lifts off after deployment, causing Kal'tsit Esperanta to <$ba.liftoff>Take Off</>"
+        },
+        {
+          "name": "Sentinelo de Polvo",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Max HP and DEF +30% <@ba.talpu>(+5%)</>, Block +1, and Block range expands; life restoration unit lifts off after deployment, causing Kal'tsit Esperanta to <$ba.liftoff>Take Off</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Majstraĵo de Kuracisto",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Other allied Operators gain 1 <$ba.shield>Shield</> when entering Kal'tsit Esperanta's Attack Range, and also gain a buff that restores 50 HP per second for 30s (does not stack); buff heals [Rhodes Island] Operators for double the amount",
+          "rangeId": "y-6"
+        },
+        {
+          "name": "Majstraĵo de Kuracisto",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Other allied Operators gain 1 <$ba.shield>Shield</> when entering Kal'tsit Esperanta's Attack Range, and also gain a buff that restores 60 <@ba.talpu>(+10)</> HP per second for 30s (does not stack); buff heals [Rhodes Island] Operators for double the amount",
+          "rangeId": "y-6"
         }
       ]
     }

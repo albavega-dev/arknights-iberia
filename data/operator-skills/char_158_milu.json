@@ -317,5 +317,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Assassin",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK increases to 120% when attacking ranged enemies"
+        },
+        {
+          "name": "Assassin",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK increases to 125% <@ba.talpu>(+5%)</> when attacking ranged enemies"
+        },
+        {
+          "name": "Assassin",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK increases to 140% when attacking ranged enemies"
+        },
+        {
+          "name": "Assassin",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK increases to 145% <@ba.talpu>(+5%)</> when attacking ranged enemies"
+        }
+      ]
+    }
   ]
 }

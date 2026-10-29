@@ -328,5 +328,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Blessing",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Apply 12% <$ba.protect>Sanctuary</> effect to allies within range with less than 40% HP"
+        },
+        {
+          "name": "Blessing",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Apply 14% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect to allies within range with less than 40% HP"
+        },
+        {
+          "name": "Blessing",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Apply 18% <$ba.protect>Sanctuary</> effect to allies within range with less than 40% HP"
+        },
+        {
+          "name": "Blessing",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Apply 20% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> effect to allies within range with less than 40% HP"
+        }
+      ]
+    }
   ]
 }

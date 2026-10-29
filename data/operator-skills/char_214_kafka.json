@@ -383,5 +383,57 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Misdirection",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is active, Block becomes 0 and gain <$ba.camou>Camouflage</>"
+        },
+        {
+          "name": "Misdirection",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is active, ATK +8%, Block becomes 0 and Kafka gains <$ba.camou>Camouflage</>"
+        },
+        {
+          "name": "Misdirection",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is active, ATK +11% <@ba.talpu>(+3%)</>, Block becomes 0 and Kafka gains <$ba.camou>Camouflage</>"
+        },
+        {
+          "name": "Misdirection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is active, ATK +15%, Block becomes 0 and Kafka gains <$ba.camou>Camouflage</>"
+        },
+        {
+          "name": "Misdirection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is active, ATK +18% <@ba.talpu>(+3%)</>, Block becomes 0 and Kafka gains <$ba.camou>Camouflage</>"
+        }
+      ]
+    }
   ]
 }

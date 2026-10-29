@@ -641,5 +641,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Clarity of Judgment",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 50% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active"
+        },
+        {
+          "name": "Clarity of Judgment",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 50% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active"
+        },
+        {
+          "name": "Clarity of Judgment",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 80% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active; while skill is active, ATK increases to 104%"
+        },
+        {
+          "name": "Clarity of Judgment",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 80% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active; while skill is active, ATK increases to 108% <@ba.talpu>(+4%)</>"
+        },
+        {
+          "name": "Clarity of Judgment",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 100% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active; while skill is active, ATK increases to 107%"
+        },
+        {
+          "name": "Clarity of Judgment",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 100% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active; while skill is active, ATK increases to 111% <@ba.talpu>(+4%)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Call to Account",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Upon skill activation, all ground tiles within Attack Range are struck by lightning, dealing 100% of Leizi the Thunderbringer's ATK as Arts damage to all enemies on them and <$ba.tremble>Frightening</> these enemies for 2s"
+        },
+        {
+          "name": "Call to Account",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Upon skill activation, all ground tiles within Attack Range are struck by lightning, dealing 100% of Leizi the Thunderbringer's ATK as Arts damage to all enemies on them and <$ba.tremble>Frightening</> these enemies for 3 <@ba.talpu>(+1)</>s"
+        }
+      ]
+    }
   ]
 }

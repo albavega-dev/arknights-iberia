@@ -320,5 +320,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Boxer's Concentration",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each consecutive attack on the same target increases ATK by 3%, stacking up to 5 times. Stacks will be lost upon switching targets."
+        },
+        {
+          "name": "Boxer's Concentration",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Each consecutive attack on the same target increases ATK by 4% <@ba.talpu>(+1%)</>, stacking up to 5 times. Stacks will be lost upon switching targets."
+        },
+        {
+          "name": "Boxer's Concentration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each consecutive attack on the same target increases ATK by 5%, stacking up to 5 times. Stacks will be lost upon switching targets."
+        },
+        {
+          "name": "Boxer's Concentration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Each consecutive attack on the same target increases ATK by 6% <@ba.talpu>(+1%)</>, stacking up to 5 times. Stacks will be lost upon switching targets."
+        }
+      ]
+    }
   ]
 }

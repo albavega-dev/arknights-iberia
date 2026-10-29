@@ -414,5 +414,57 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Heavy Firepower",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attack Range +1 tile, Redeployment Time +20 seconds"
+        },
+        {
+          "name": "Heavy Firepower",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attack Range +1 tile, DEF +5%, Redeployment Time +20 seconds"
+        },
+        {
+          "name": "Heavy Firepower",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attack Range +1 tile, DEF +10% <@ba.talpu>(+5%)</>, Redeployment Time +20 seconds"
+        },
+        {
+          "name": "Heavy Firepower",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attack Range +2 tiles, DEF +10%, Redeployment Time +20 seconds"
+        },
+        {
+          "name": "Heavy Firepower",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attack Range +2 tile, DEF +15% <@ba.talpu>(+5%)</>, Redeployment Time +20 seconds"
+        }
+      ]
+    }
   ]
 }

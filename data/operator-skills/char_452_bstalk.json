@@ -355,5 +355,39 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Professional Breeder",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon Metal Crabs to assist in combat from a Tactical Point; Metal Crabs will automatically respawn 20s after being defeated"
+        },
+        {
+          "name": "Professional Breeder",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon Metal Crabs to assist in combat from a Tactical Point; Metal Crabs will automatically respawn 17s after being defeated"
+        },
+        {
+          "name": "Professional Breeder",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon Metal Crabs to assist in combat from a Tactical Point; Metal Crabs will automatically respawn 15s after being defeated"
+        }
+      ]
+    }
   ]
 }

@@ -432,5 +432,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Film Set Operational Manual",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If not attacked for 13 seconds, dodge the next Physical or Arts attack"
+        },
+        {
+          "name": "Film Set Operational Manual",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "If not attacked for 12 <@ba.talpu>(-1)</> seconds, dodge the next Physical or Arts attack"
+        },
+        {
+          "name": "Film Set Operational Manual",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If not attacked for 9 seconds, dodge the next Physical or Arts attack"
+        },
+        {
+          "name": "Film Set Operational Manual",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "If not attacked for 8 <@ba.talpu>(-1)</> seconds, dodge the next Physical or Arts attack"
+        }
+      ]
+    }
   ]
 }

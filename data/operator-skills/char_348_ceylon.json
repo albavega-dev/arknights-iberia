@@ -344,5 +344,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lake Walker",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +3%, when there is water terrain on the battlefield, the effect becomes ATK +9%"
+        },
+        {
+          "name": "Lake Walker",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +4%<@ba.talpu> (+1%)</>, when there is water terrain on the battlefield, the effect becomes ATK +15%<@ba.talpu> (+6%)</>"
+        },
+        {
+          "name": "Lake Walker",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +5%, when there is water terrain on the battlefield, the effect becomes ATK +18%"
+        },
+        {
+          "name": "Lake Walker",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +6%<@ba.talpu> (+1%)</>, when there is water terrain on the battlefield, the effect becomes ATK +24%<@ba.talpu> (+6%)</>"
+        }
+      ]
+    }
   ]
 }

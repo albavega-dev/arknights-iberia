@@ -366,5 +366,39 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Camera Squad",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon 3 Buggy Cams; Buggy Cams will reveal <$ba.invisible>Invisible</> enemies within the surrounding 8 tiles"
+        },
+        {
+          "name": "Camera Squad",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon 4 Buggy Cams; Buggy Cams will reveal <$ba.invisible>Invisible</> enemies within the surrounding 8 tiles"
+        },
+        {
+          "name": "Camera Squad",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon 5 Buggy Cams; Buggy Cams will reveal <$ba.invisible>Invisible</> enemies within the surrounding 8 tiles"
+        }
+      ]
+    }
   ]
 }

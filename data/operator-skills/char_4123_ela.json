@@ -674,5 +674,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 1 GRZMOT Mine (Can store up to 2); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 2 <@ba.talpu>(+1)</> GRZMOT Mines (Can store up to 2); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 2 GRZMOT Mines (Can store up to 3); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 3 <@ba.talpu>(+1)</> GRZMOT Mines (Can store up to 3); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 3 GRZMOT Mines (Can store up to 4); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 4 <@ba.talpu>(+1)</> GRZMOT Mines (Can store up to 4); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "'Bullseye'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks have a 30% chance to deal 150% of ATK as Physical damage; The chance is increased to 100% when attacking a target that's affected by a GRZMOT Mine"
+        },
+        {
+          "name": "'Bullseye'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks have a 30% chance to deal 160% <@ba.talpu>(+10%)</> of ATK as Physical damage; The chance is increased to 100% when attacking a target that's affected by a GRZMOT Mine"
+        }
+      ]
+    }
   ]
 }

@@ -613,5 +613,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Battleaxe",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases ATK and DEF by 5%, increased by a further 3% for each blocked enemy"
+        },
+        {
+          "name": "Battleaxe",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Increases ATK and DEF by 7% <@ba.talpu>(+2%)</>, increased by a further 4% <@ba.talpu>(+1%)</> for each blocked enemy"
+        },
+        {
+          "name": "Battleaxe",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases ATK and DEF by 10%, increased by a further 4% for each blocked enemy"
+        },
+        {
+          "name": "Battleaxe",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Increases ATK and DEF by 12% <@ba.talpu>(+2%)</>, increased by a further 5% <@ba.talpu>(+1%)</> for each blocked enemy"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Medical Background",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases this unit's healing received by 20%, increased to 40% when under half HP"
+        },
+        {
+          "name": "Medical Background",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases this unit's healing received by 25% <@ba.talpu>(+5%)</>, increased to 45% <@ba.talpu>(+5%)</> when under half HP"
+        }
+      ]
+    }
   ]
 }

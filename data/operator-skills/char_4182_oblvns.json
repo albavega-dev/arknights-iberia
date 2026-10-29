@@ -540,6 +540,76 @@
     }
   ],
   "ranges": {
+    "2-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    },
+    "3-12": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    },
     "3-21": {
       "direction": 1,
       "grids": [
@@ -657,6 +727,98 @@
             "level": 1
           },
           "description": "When this Operator is assigned to the Control Center, self Morale loss per hour <@cc.vdown>+0.05</> when Passion is <@cc.kw>40</> or higher"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Notes of Ode",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Sakiko Togawa can <$ba.permanentatk>continuously attack</>, creating notes that pursue enemies; notes disappear shortly after floating out of her Attack Range",
+          "rangeId": "2-3"
+        },
+        {
+          "name": "Notes of Ode",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Sakiko Togawa can <$ba.permanentatk>continuously attack</>, creating notes that pursue enemies; notes disappear shortly after floating out of her Attack Range; for every note on the field, <$ba.mujica>Ave Mujica</> members ignore 2.5% DEF and 1.5% RES of the enemies (stacks up to 10 times)",
+          "rangeId": "3-12"
+        },
+        {
+          "name": "Notes of Ode",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Sakiko Togawa can <$ba.permanentatk>continuously attack</>, creating notes that pursue enemies; notes disappear shortly after floating out of her Attack Range; for every note on the field, <$ba.mujica>Ave Mujica</> members ignore 3% DEF and 2% RES of the enemies (stacks up to 10 times)",
+          "rangeId": "3-12"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Do Not Fear Forgetting",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +1 whenever dealing damage to enemies",
+          "rangeId": "2-3"
+        },
+        {
+          "name": "Do Not Fear Forgetting",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +2 whenever dealing damage to enemies; if another <$ba.mujica>Ave Mujica</> member's Attack Range overlaps with Sakiko Togawa's, their Attack Range will be treated as an extension of her own; Operators within her Attack Range have ASPD +5",
+          "rangeId": "3-12"
+        },
+        {
+          "name": "Do Not Fear Forgetting",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<$ba.fever>Fever</> +2 whenever dealing damage to enemies; if another <$ba.mujica>Ave Mujica</> member's Attack Range overlaps with Sakiko Togawa's, their Attack Range will be treated as an extension of her own; Operators within her Attack Range have ASPD +9 <@ba.talpu>(+4)</>",
+          "rangeId": "3-12"
+        },
+        {
+          "name": "Do Not Fear Forgetting",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +3 whenever dealing damage to enemies; if another <$ba.mujica>Ave Mujica</> member's Attack Range overlaps with Sakiko Togawa's, their Attack Range will be treated as an extension of her own; Operators within her Attack Range have ASPD +12",
+          "rangeId": "3-12"
+        },
+        {
+          "name": "Do Not Fear Forgetting",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<$ba.fever>Fever</> +3 whenever dealing damage to enemies; if another <$ba.mujica>Ave Mujica</> member's Attack Range overlaps with Sakiko Togawa's, their Attack Range will be treated as an extension of her own; Operators within her Attack Range have ASPD +16 <@ba.talpu>(+4)</>",
+          "rangeId": "3-12"
         }
       ]
     }

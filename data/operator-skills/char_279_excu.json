@@ -320,5 +320,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Final Modification",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 80 DEF"
+        },
+        {
+          "name": "Final Modification",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 95 <@ba.talpu>(+15)</> DEF"
+        },
+        {
+          "name": "Final Modification",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 160 DEF"
+        },
+        {
+          "name": "Final Modification",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 175 <@ba.talpu>(+15)</> DEF"
+        }
+      ]
+    }
   ]
 }

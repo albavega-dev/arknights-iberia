@@ -333,5 +333,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Vegetative Regeneration",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<Substitute> restores 2% HP per second"
+        },
+        {
+          "name": "Vegetative Regeneration",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<Substitute> restores 2.5% <@ba.talpu>(+0.5%)</> HP per second"
+        },
+        {
+          "name": "Vegetative Regeneration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<Substitute> restores 3.5% HP per second"
+        },
+        {
+          "name": "Vegetative Regeneration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<Substitute> restores 4% <@ba.talpu>(+0.5%)</> HP per second"
+        }
+      ]
+    }
   ]
 }

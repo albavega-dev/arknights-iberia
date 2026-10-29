@@ -650,5 +650,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Alpha Wolf",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every 30s on the field, Drones gain one of the following effects in order: max Drone damage +6%; disables enemies' special abilities for 1s when dealing damage to them; +1 Drone"
+        },
+        {
+          "name": "Alpha Wolf",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Every 26s <@ba.talpu>(-4)</> on the field, Drones gain one of the following effects in order: max Drone damage +6%; disables enemies' special abilities for 1s when dealing damage to them; +1 Drone"
+        },
+        {
+          "name": "Alpha Wolf",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every 20s on the field, Drones gain one of the following effects in order: max Drone damage +10%; disables enemies' special abilities for 2s when dealing damage to them; +1 Drone"
+        },
+        {
+          "name": "Alpha Wolf",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Every 16s <@ba.talpu>(-4)</> on the field, Drones gain one of the following effects in order: max Drone damage +10%; disables enemies' special abilities for 2s when dealing damage to them; +1 Drone"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Honor of Siracusa",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is in the squad, all [Siracusa] Operators gain +5 Starting SP"
+        },
+        {
+          "name": "Honor of Siracusa",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When this unit is in the squad, all [Siracusa] Operators gain +6 <@ba.talpu>(+1)</> Starting SP"
+        }
+      ]
+    }
   ]
 }

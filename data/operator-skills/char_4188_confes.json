@@ -40,5 +40,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Pay-Per-Confession I",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "The first time blocking an enemy, gains 2 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 5s"
+        },
+        {
+          "name": "Pay-Per-Confession II",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 2,
+          "description": "The first time blocking an enemy, gains 2 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 6s"
+        },
+        {
+          "name": "Pay-Per-Confession III",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "The first time blocking an enemy, gains 3 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 6s"
+        },
+        {
+          "name": "Pay-Per-Confession IV",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 4,
+          "description": "The first time blocking an enemy, gains 3 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 7s"
+        },
+        {
+          "name": "Pay-Per-Confession V",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "The first time blocking an enemy, gains 4 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 7s"
+        },
+        {
+          "name": "Pay-Per-Confession VI",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "The first time blocking an enemy, gains 4 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 8s"
+        }
+      ]
+    }
   ]
 }

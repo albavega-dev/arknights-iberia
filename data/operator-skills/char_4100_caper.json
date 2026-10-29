@@ -322,5 +322,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Larking About",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, 25% chance to increase that attack's ATK to 130%"
+        },
+        {
+          "name": "Larking About",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, 25% chance to increase that attack's ATK to 140% <@ba.talpu>(+10%)</>"
+        },
+        {
+          "name": "Larking About",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, 25% chance to increase that attack's ATK to 150%"
+        },
+        {
+          "name": "Larking About",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, 25% chance to increase that attack's ATK to 160% <@ba.talpu>(+10%)</>"
+        }
+      ]
+    }
   ]
 }

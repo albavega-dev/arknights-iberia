@@ -375,5 +375,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Herbalist Número Uno",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK -5%, but allied Operators within range receive 5% more healing"
+        },
+        {
+          "name": "Herbalist Número Uno",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK -5%, but allied Operators within range receive 7% <@ba.talpu>(+2%)</> more healing"
+        },
+        {
+          "name": "Herbalist Número Uno",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK -5%, but allied Operators within range receive 10% more healing"
+        },
+        {
+          "name": "Herbalist Número Uno",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK -5%, but allied Operators within range receive 12% <@ba.talpu>(+2%)</> more healing"
+        },
+        {
+          "name": "Herbalist Número Uno",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK -5%, but allied Operators within range receive 15% more healing"
+        },
+        {
+          "name": "Herbalist Número Uno",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK -5%, but allied Operators within range receive 17% <@ba.talpu>(+2%)</> more healing"
+        }
+      ]
+    }
   ]
 }

@@ -401,5 +401,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Tactical Delivery",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains 1 extra DP when Texas is in the squad"
+        },
+        {
+          "name": "Tactical Delivery",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains 2 extra DP when Texas is in the squad"
+        }
+      ]
+    }
   ]
 }

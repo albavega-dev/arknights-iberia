@@ -661,5 +661,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Patrol Partner",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy a sandbeast within Attack Range to scout an area for 15s, extending Attack Range into that area. Prioritizes attacking targets within this area, and deals 10% more Physical damage to them"
+        },
+        {
+          "name": "Patrol Partner",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy a sandbeast within Attack Range to scout an area for 25s, extending Attack Range into that area. Prioritizes attacking targets within this area, and deals 15% more Physical damage to them"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Extreme Focus",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking the same target, each attack increases ATK by 8%, stacking up to 3 times"
+        },
+        {
+          "name": "Extreme Focus",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking the same target, each attack increases ATK by 9% <@ba.talpu>(+1%)</>, stacking up to 3 times"
+        }
+      ]
+    }
   ]
 }

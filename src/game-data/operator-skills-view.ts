@@ -1,6 +1,6 @@
 import { isOperatorId, type DatasetIndex, type DatasetSource } from "./operator-dataset";
 import type { GameDataRegion } from "./gamedata-revisions";
-import { baseSkillDescriptions, expandSkillLevel, termIdsOf, type OperatorSkillsProfile, type SkillLevelData, type SkillUnlock } from "./operator-skills";
+import { baseSkillDescriptions, expandSkillLevel, talentDescriptions, termIdsOf, type OperatorSkillsProfile, type SkillLevelData, type SkillUnlock } from "./operator-skills";
 import { parseSkillDescription, type SkillDescriptionNode } from "./skill-description";
 
 // What the Skills tab receives: built on the server from one operator's skills file, serializable, with descriptions already parsed.
@@ -66,6 +66,22 @@ export type OperatorBaseSkillView = {
   /** Glossary terms used by any stage, including terms nested inside other explanations. */
   terms: Record<string, SkillTermView>;
 };
+export type TalentStageView = {
+  name: string;
+  unlock: SkillUnlock;
+  /** Official potential (1-6) the stage needs. */
+  potential: number;
+  rangeId: string | null;
+  description: SkillDescriptionNode[];
+};
+/** One talent: its visible stages in unlock order (elite, level, then potential), each replacing the earlier ones it covers. */
+export type OperatorTalentView = {
+  /** Position in the source list (0-based), the one module talent changes reference. */
+  index: number;
+  stages: TalentStageView[];
+  /** Glossary terms used by any stage, including terms nested inside other explanations. */
+  terms: Record<string, SkillTermView>;
+};
 /**
  * `status: "empty"` means the operator has no combat skills (the dataset file exists with `skills: []`), which the interface
  * shows as a message; base skills are independent of it. A missing view (`null` from the loader) means the dataset has no
@@ -76,10 +92,11 @@ export type OperatorSkillsView = {
   operatorId: string;
   region: GameDataRegion;
   source: DatasetSource;
-  /** Only the ranges the skills use, as stored (range_table shape). */
+  /** Only the ranges the skills and talents use, as stored (range_table shape). */
   ranges: Record<string, OperatorSkillRangeView>;
   skills: OperatorSkillView[];
   baseSkills: OperatorBaseSkillView[];
+  talents: OperatorTalentView[];
 };
 export type BaseSkillIconResolvers = { skill: (iconId: string) => SkillIconView | null; room: (room: string) => SkillIconView | null };
 const noBaseIcons: BaseSkillIconResolvers = { skill: () => null, room: () => null };
@@ -142,7 +159,16 @@ export function buildOperatorSkillsView(profile: StoredSkillsProfile, region: Ga
     })),
     terms: termsOf(baseSkillDescriptions([slot]), glossary),
   }));
-  return { status: skills.length ? "available" : "empty", operatorId: profile.operatorId, region, source, ranges: Object.fromEntries(Object.entries(ranges).sort(([a], [b]) => a.localeCompare(b, "en"))), skills, baseSkills };
+  const talents = profile.talents.map((talent): OperatorTalentView => ({
+    index: talent.index,
+    stages: talent.stages.map((stage): TalentStageView => {
+      const rangeId = stage.rangeId && profile.ranges[stage.rangeId] ? stage.rangeId : null;
+      if (rangeId) ranges[rangeId] = { direction: profile.ranges[rangeId].direction, grids: profile.ranges[rangeId].grids.map((cell) => ({ row: cell.row, col: cell.col })) };
+      return { name: stage.name, unlock: { ...stage.unlock }, potential: stage.potential, rangeId, description: parseSkillDescription(stage.description, []) };
+    }),
+    terms: termsOf(talentDescriptions([talent]), glossary),
+  }));
+  return { status: skills.length ? "available" : "empty", operatorId: profile.operatorId, region, source, ranges: Object.fromEntries(Object.entries(ranges).sort(([a], [b]) => a.localeCompare(b, "en"))), skills, baseSkills, talents };
 }
 
 export type SkillsDatasetReaders = {

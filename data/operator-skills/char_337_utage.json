@@ -355,5 +355,39 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Serious Mode",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +50 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)"
+        },
+        {
+          "name": "Serious Mode",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +75 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)"
+        },
+        {
+          "name": "Serious Mode",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +100 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 70% Max HP)"
+        }
+      ]
+    }
   ]
 }

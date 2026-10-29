@@ -366,5 +366,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Wilderness Wanderer",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "HP +4%, ATK +4%"
+        },
+        {
+          "name": "Wilderness Wanderer",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "HP +5% <@ba.talpu>(+1%)</>, ATK +5% <@ba.talpu>(+1%)</>"
+        },
+        {
+          "name": "Wilderness Wanderer",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "HP +8%, ATK +8%"
+        },
+        {
+          "name": "Wilderness Wanderer",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "HP +9% <@ba.talpu>(+1%)</>, ATK +9% <@ba.talpu>(+1%)</>"
+        }
+      ]
+    }
   ]
 }

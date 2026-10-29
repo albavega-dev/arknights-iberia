@@ -637,5 +637,107 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Self-Repair",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +3% ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken"
+        },
+        {
+          "name": "Self-Repair",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +8% <@ba.talpu>(+5%)</> ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken"
+        },
+        {
+          "name": "Self-Repair",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +5% ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken"
+        },
+        {
+          "name": "Self-Repair",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +10% <@ba.talpu>(+5%)</> ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken"
+        },
+        {
+          "name": "Self-Repair",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +15% ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken"
+        },
+        {
+          "name": "Self-Repair",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +20% <@ba.talpu>(+5%)</> ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Tactical Coordination",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever Mon3tr or the Reconstruction heals a target, grants Mon3tr and the target +10 ASPD for 10s (does not stack)"
+        },
+        {
+          "name": "Tactical Coordination",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Whenever Mon3tr or the Reconstruction heals a target, grants Mon3tr and the target +12 <@ba.talpu>(+2)</> ASPD for 10s (does not stack)"
+        },
+        {
+          "name": "Tactical Coordination",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever Mon3tr or the Reconstruction heals a target, grants Mon3tr and the target +20 ASPD for 10s (does not stack)"
+        },
+        {
+          "name": "Tactical Coordination",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Whenever Mon3tr or the Reconstruction heals a target, grants Mon3tr and the target +22 <@ba.talpu>(+2)</> ASPD for 10s (does not stack)"
+        }
+      ]
+    }
   ]
 }

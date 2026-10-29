@@ -518,5 +518,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Spiritual Dissolution",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES of enemies within range -15%"
+        },
+        {
+          "name": "Spiritual Dissolution",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "RES of enemies within range -19% <@ba.talpu>(+4%)</>"
+        },
+        {
+          "name": "Spiritual Dissolution",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES of enemies within range -27%"
+        },
+        {
+          "name": "Spiritual Dissolution",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "RES of enemies within range -31% <@ba.talpu>(+4%)</>"
+        },
+        {
+          "name": "Spiritual Dissolution",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES of enemies within range -40%"
+        },
+        {
+          "name": "Spiritual Dissolution",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "RES of enemies within range -44% <@ba.talpu>(+4%)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Rhine Loop",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 2 extra Skill Points every 6 seconds"
+        },
+        {
+          "name": "Rhine Loop",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Restores 2 extra Skill Points every 5.5 seconds <@ba.talpu>(-0.5)</>"
+        }
+      ]
+    }
   ]
 }

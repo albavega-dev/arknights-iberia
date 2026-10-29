@@ -328,5 +328,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lonesome Protector",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 1% HP per second. If there are no allied Operators in the surrounding 8 tiles, restores 2% HP per second instead"
+        },
+        {
+          "name": "Lonesome Protector",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores 1% HP per second. If there are no allied Operators in the surrounding 8 tiles, restores 2.5% <@ba.talpu>(+0.5%)</> HP per second instead"
+        },
+        {
+          "name": "Lonesome Protector",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 2% HP per second. If there are no allied Operators in the surrounding 8 tiles, restores 3.5% HP per second instead"
+        },
+        {
+          "name": "Lonesome Protector",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores 2% HP per second. If there are no allied Operators in the surrounding 8 tiles, restores 4% <@ba.talpu>(+0.5%)</> HP per second instead"
+        }
+      ]
+    }
   ]
 }

@@ -366,5 +366,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Victorian Agent",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +4%, ASPD +4"
+        },
+        {
+          "name": "Victorian Agent",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +5% <@ba.talpu>(+1%)</>, ASPD +5 <@ba.talpu>(+1)</>"
+        },
+        {
+          "name": "Victorian Agent",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +7%, ASPD +7"
+        },
+        {
+          "name": "Victorian Agent",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +8% <@ba.talpu>(+1%)</>, ASPD +8 <@ba.talpu>(+1)</>"
+        }
+      ]
+    }
   ]
 }

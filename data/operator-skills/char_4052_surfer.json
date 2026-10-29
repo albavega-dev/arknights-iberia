@@ -361,5 +361,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Solo Traveler",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 1 DP"
+        },
+        {
+          "name": "Solo Traveler",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 2 <@ba.talpu>(+1)</> DP"
+        },
+        {
+          "name": "Solo Traveler",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 2 DP"
+        },
+        {
+          "name": "Solo Traveler",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 3 <@ba.talpu>(+1)</> DP"
+        }
+      ]
+    }
   ]
 }

@@ -402,5 +402,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Baptize the Blade",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases damage dealt to enemies above 80% HP by 10%"
+        },
+        {
+          "name": "Baptize the Blade",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases damage dealt to enemies above 80% HP by 12% <@ba.talpu>(+2%)</>"
+        },
+        {
+          "name": "Baptize the Blade",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases damage dealt to enemies above 80% HP by 18%"
+        },
+        {
+          "name": "Baptize the Blade",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases damage dealt to enemies above 80% HP by 20% <@ba.talpu>(+2%)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Cut Without Mercy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "In [The Whirlpool that is Passion], ATK is increased to 120% against [Sarkaz] enemies, and stores an additional attack charge that only fires against [Sarkaz] enemies"
+        }
+      ]
+    }
   ]
 }

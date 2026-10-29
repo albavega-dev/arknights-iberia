@@ -419,5 +419,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lethal Fragmentation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "This unit gains +3% ATK for every enemy in range (stacks up to 5 times)"
+        },
+        {
+          "name": "Lethal Fragmentation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "This unit gains +3% ATK for every enemy in range (stacks up to 6 <@ba.talpu>(+1)</> times)"
+        },
+        {
+          "name": "Lethal Fragmentation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "This unit gains +4% ATK for every enemy in range (stacks up to 5 times)"
+        },
+        {
+          "name": "Lethal Fragmentation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "This unit gains +4% ATK for every enemy in range (stacks up to 6 <@ba.talpu>(+1)</> times)"
+        }
+      ]
+    }
   ]
 }

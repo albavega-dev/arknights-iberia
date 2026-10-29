@@ -613,5 +613,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Candlelight",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deal +5% Arts damage and take -5% Physical and Arts damage. Double effect if there is an elite or leader enemy within attack range"
+        },
+        {
+          "name": "Candlelight",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deal +6% <@ba.talpu>(+1%)</> Arts damage and take -6% <@ba.talpu>(-1%)</> Physical and Arts damage. Double effect if there is an elite or leader enemy within attack range"
+        },
+        {
+          "name": "Candlelight",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deal +8% Arts damage and take -8% Physical and Arts damage. Double effect if there is an elite or leader enemy within attack range"
+        },
+        {
+          "name": "Candlelight",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deal +9% <@ba.talpu>(+1%)</> Arts damage and take -9% <@ba.talpu>(-1%)</> Physical and Arts damage. Double effect if there is an elite or leader enemy within attack range"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Nova",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking an elite or leader enemy, there is an 18% chance to gain a <$ba.shield>Shield</> that only blocks melee attacks (max 1 stack)"
+        },
+        {
+          "name": "Nova",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When attacking an elite or leader enemy, there is a 20% <@ba.talpu>(+2%)</> chance to gain a <$ba.shield>Shield</> that only blocks melee attacks (max 1 stack)"
+        }
+      ]
+    }
   ]
 }

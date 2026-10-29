@@ -700,5 +700,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "生死定夺",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "造成物理伤害时有25%概率攻击力提升至120%，目标防御力低于初始值时概率提升至50%"
+        },
+        {
+          "name": "生死定夺",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "造成物理伤害时有25%概率攻击力提升至135%<@ba.talpu>（+15%）</>，目标防御力低于初始值时概率提升至50%"
+        },
+        {
+          "name": "生死定夺",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "造成物理伤害时有25%概率攻击力提升至135%，目标防御力低于初始值时概率提升至50%"
+        },
+        {
+          "name": "生死定夺",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "造成物理伤害时有25%概率攻击力提升至150%<@ba.talpu>（+15%）</>，目标防御力低于初始值时概率提升至50%"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "习得性防御",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "受到来自自身前方单位造成的物理和法术伤害降低30%，若伤害来源为【海怪】，则降低50%"
+        },
+        {
+          "name": "习得性防御",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "受到来自自身前方单位造成的物理和法术伤害降低35%<@ba.talpu>（+5%）</>，若伤害来源为【海怪】，则降低55%<@ba.talpu>（+5%）</>"
+        }
+      ]
+    }
   ]
 }

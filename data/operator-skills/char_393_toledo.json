@@ -346,5 +346,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "“贵族血统”",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "攻击范围内被阻挡的敌人获得8%的<$ba.fragile>脆弱</>效果"
+        },
+        {
+          "name": "“贵族血统”",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "攻击范围内被阻挡的敌人获得10%<@ba.talpu>（+2%）</>的<$ba.fragile>脆弱</>效果"
+        },
+        {
+          "name": "“贵族血统”",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "攻击范围内被阻挡的敌人获得16%的<$ba.fragile>脆弱</>效果"
+        },
+        {
+          "name": "“贵族血统”",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "攻击范围内被阻挡的敌人获得18%<@ba.talpu>（+2%）</>的<$ba.fragile>脆弱</>效果"
+        }
+      ]
+    }
   ]
 }

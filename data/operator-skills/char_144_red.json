@@ -369,5 +369,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Chill",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals at least 20% of ATK damage every attack"
+        },
+        {
+          "name": "Chill",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals at least 23% <@ba.talpu>(+3%)</> of ATK damage every attack"
+        },
+        {
+          "name": "Chill",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals at least 30% of ATK damage every attack"
+        },
+        {
+          "name": "Chill",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals at least 33% <@ba.talpu>(+3%)</> of ATK damage every attack"
+        }
+      ]
+    }
   ]
 }

@@ -3,8 +3,8 @@ import type { GameDataRegion } from "./gamedata-revisions";
 // Per-operator datasets (stats and skills): one JSON file per operator plus an index, and optionally shared files (for example a glossary).
 // Each dataset declares its contract in its index; this is the default and the one stats uses.
 export const datasetContractVersion = "2";
-// Version 3 adds base skills (`baseSkills`) to every skills file.
-export const skillsDatasetContractVersion = "3";
+// Version 3 adds base skills (`baseSkills`) to every skills file; version 4 adds talents (`talents`).
+export const skillsDatasetContractVersion = "4";
 export type DatasetLimits = Readonly<{ fileBytes: number; totalBytes: number }>;
 // Each dataset declares its own limits (written into its index); this is the default and the one stats uses.
 export const datasetLimits: DatasetLimits = { fileBytes: 32_768, totalBytes: 6_000_000 };

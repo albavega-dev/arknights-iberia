@@ -333,5 +333,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Hurry Up Already!",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is activated, [Ursus Student Self-government Group] Operators gain +10 ASPD for the duration"
+        },
+        {
+          "name": "Hurry Up Already!",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is activated, [Ursus Student Self-government Group] Operators gain +13 ASPD <@ba.talpu>(+3)</> for the duration"
+        },
+        {
+          "name": "Hurry Up Already!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is activated, [Ursus Student Self-government Group] Operators gain +21 ASPD for the duration"
+        },
+        {
+          "name": "Hurry Up Already!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is activated, [Ursus Student Self-government Group] Operators gain +24 ASPD <@ba.talpu>(+3)</> for the duration"
+        }
+      ]
+    }
   ]
 }

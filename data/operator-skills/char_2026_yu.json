@@ -624,5 +624,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "You Feed Me, I Feed You",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When blocking enemies, gains 15% <$ba.protect>Sanctuary</>; blocked enemies receive 25% ATK as Arts damage and 8% ATK as <$ba.dt.burning2>Burn</> per second"
+        },
+        {
+          "name": "You Feed Me, I Feed You",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When blocking enemies, gains 20% <@ba.talpu>(+5%)</> <$ba.protect>Sanctuary</>; blocked enemies receive 25% ATK as Arts damage and 8% ATK as <$ba.dt.burning2>Burn</> per second"
+        },
+        {
+          "name": "You Feed Me, I Feed You",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When blocking enemies, gains 25% <$ba.protect>Sanctuary</>; blocked enemies receive 40% ATK as Arts damage and 12% ATK as <$ba.dt.burning2>Burn</> per second"
+        },
+        {
+          "name": "You Feed Me, I Feed You",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When blocking enemies, gains 30% <@ba.talpu>(+5%)</> <$ba.protect>Sanctuary</>; blocked enemies receive 40% ATK as Arts damage and 12% ATK as <$ba.dt.burning2>Burn</> per second"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Midst Markets, Dragons Dwell",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there are at least 4 Operators on the field, recovers 1.5% Max HP as both HP and <$ba.dt.element>Elemental Injury</> per second"
+        },
+        {
+          "name": "Midst Markets, Dragons Dwell",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When there are at least 4 Operators on the field, recovers 2% <@ba.talpu>(+0.5%)</> Max HP as both HP and <$ba.dt.element>Elemental Injury</> per second"
+        }
+      ]
+    }
   ]
 }

@@ -333,5 +333,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Dungeon Monster Expert",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After defeating an enemy, Laios ignores 20% DEF with every attack against enemies with the same name"
+        },
+        {
+          "name": "Dungeon Monster Expert",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After defeating an enemy, Laios ignores 40% DEF with every attack against enemies with the same name"
+        }
+      ]
+    }
   ]
 }

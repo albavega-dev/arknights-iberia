@@ -620,5 +620,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Natural Holdfast",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 80 HP whenever taking damage; if HP is below 50%, restores 120 HP instead"
+        },
+        {
+          "name": "Natural Holdfast",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 100 HP whenever taking damage; if HP is below 50%, restores 160 HP instead"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Nourish the Blood",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases Max HP by 120 and ATK by 30 after defeating an enemy, stacking up to 9 times; other [Abyssal Hunter] Operators gain 50% of this boost effect"
+        },
+        {
+          "name": "Nourish the Blood",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases Max HP by 120 and ATK by 30 after defeating an enemy, stacking up to 10 <@ba.talpu>(+1)</> times; other [Abyssal Hunter] Operators gain 50% of this boost effect"
+        }
+      ]
+    }
   ]
 }

@@ -345,5 +345,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Forward March",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After the first deployment, all undeployed Guard Operators get DP Cost -1"
+        },
+        {
+          "name": "Forward March",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, all undeployed Guard Operators get DP Cost -1 (each Operator can have a maximum of -5 DP Cost before each deployment)"
+        }
+      ]
+    }
   ]
 }

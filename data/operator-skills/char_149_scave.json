@@ -322,5 +322,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lone Wolf",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK and DEF +5% when there are no allies in the four adjacent tiles"
+        },
+        {
+          "name": "Lone Wolf",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK and DEF +7% <@ba.talpu>(+2%)</> when there are no allies in the four adjacent tiles"
+        },
+        {
+          "name": "Lone Wolf",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK and DEF +11% when there are no allies in the four adjacent tiles"
+        },
+        {
+          "name": "Lone Wolf",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK and DEF +13% <@ba.talpu>(+2%)</> when there are no allies in the four adjacent tiles"
+        }
+      ]
+    }
   ]
 }

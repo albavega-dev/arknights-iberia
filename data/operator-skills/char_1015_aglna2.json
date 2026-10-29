@@ -1147,5 +1147,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "飘浮大地之上",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "予愿安洁莉娜攻击额外造成相当于攻击力13%的法术伤害，攻击重量较轻（小于等于3）的敌人时则额外造成相当于攻击力20%的法术伤害；处于<$ba.liftoff>起飞</>状态时使攻击范围内的敌人<$ba.weightless>失重</>"
+        },
+        {
+          "name": "飘浮大地之上",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "予愿安洁莉娜攻击额外造成相当于攻击力18%<@ba.talpu>（+5%）</>的法术伤害，攻击重量较轻（小于等于3）的敌人时则额外造成相当于攻击力30%<@ba.talpu>（+10%）</>的法术伤害；处于<$ba.liftoff>起飞</>状态时使攻击范围内的敌人<$ba.weightless>失重</>"
+        },
+        {
+          "name": "飘浮大地之上",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "予愿安洁莉娜攻击额外造成相当于攻击力25%的法术伤害，攻击重量较轻（小于等于3）的敌人时则额外造成相当于攻击力35%的法术伤害；处于<$ba.liftoff>起飞</>状态时使攻击范围内的敌人<$ba.weightless>失重</>"
+        },
+        {
+          "name": "飘浮大地之上",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "予愿安洁莉娜攻击额外造成相当于攻击力30%<@ba.talpu>（+5%）</>的法术伤害，攻击重量较轻（小于等于3）的敌人时则额外造成相当于攻击力45%<@ba.talpu>（+10%）</>的法术伤害；处于<$ba.liftoff>起飞</>状态时使攻击范围内的敌人<$ba.weightless>失重</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "天穹间的舞步",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "在场时，所有处于<$ba.liftoff>起飞</>状态的友方干员攻击力+13%且阻挡时每秒回复8%的最大生命值"
+        },
+        {
+          "name": "天穹间的舞步",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "在场时，所有处于<$ba.liftoff>起飞</>状态的友方干员攻击力+18%<@ba.talpu>（+5%）</>且阻挡时每秒回复10%<@ba.talpu>（+2%）</>的最大生命值"
+        }
+      ]
+    }
   ]
 }

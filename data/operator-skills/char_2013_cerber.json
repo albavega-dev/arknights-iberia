@@ -552,5 +552,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Thresher",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack deals additional Arts damage to the target equal to 25% of its DEF"
+        },
+        {
+          "name": "Thresher",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Each attack deals additional Arts damage to the target equal to 29%<@ba.talpu>(+4%)</> of its DEF"
+        },
+        {
+          "name": "Thresher",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack deals additional Arts damage to the target equal to 40% of its DEF"
+        },
+        {
+          "name": "Thresher",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Each attack deals additional Arts damage to the target equal to 44%<@ba.talpu>(+4%)</> of its DEF"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Lone Journey",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there are no other friendly units in the surrounding 4 tiles, ATK +8% and ASPD +8"
+        }
+      ]
+    }
   ]
 }

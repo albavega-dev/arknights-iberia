@@ -141,3 +141,37 @@ test("every catalog operator has base skills: stages in unlock order, one room p
   }
   assert.equal(replaced, 169, "168 slots replace a stage, one of them twice");
 });
+
+test("every catalog operator has talents: stages in unlock order, official potentials, known tags, ranges and glossary terms", async () => {
+  const { index } = await readIndex(directory);
+  const glossaries = Object.fromEntries(await Promise.all((["en", "cn"] as const).map(async (region) => [region, JSON.parse(await readFile(path.join(directory, `glossary-${region}.json`), "utf8")) as { terms: Record<string, unknown> }])));
+  let talents = 0;
+  let stages = 0;
+  for (const profile of await readProfiles(index)) {
+    assert.ok(profile.talents.length >= 1, `${profile.operatorId} talents`);
+    let previousIndex = -1;
+    for (const talent of profile.talents) {
+      assert.ok(talent.index > previousIndex, `${profile.operatorId} talent order`);
+      previousIndex = talent.index;
+      assert.ok(talent.stages.length >= 1, `${profile.operatorId} talent ${talent.index} stages`);
+      talents += 1;
+      stages += talent.stages.length;
+      let previous = -1;
+      for (const stage of talent.stages) {
+        const where = `${profile.operatorId} talent ${talent.index}`;
+        assert.ok(stage.name && stage.name !== "？？？", `${where} name`);
+        assert.ok([0, 1, 2].includes(stage.unlock.elite) && stage.unlock.level >= 1, `${where} unlock`);
+        assert.ok(Number.isInteger(stage.potential) && stage.potential >= 1 && stage.potential <= 6, `${where} potential`);
+        const order = (stage.unlock.elite * 1000 + stage.unlock.level) * 10 + stage.potential;
+        assert.ok(order > previous, `${where} stage order`);
+        previous = order;
+        if (stage.rangeId) assert.ok(profile.ranges[stage.rangeId], `${where} range ${stage.rangeId}`);
+        assert.deepEqual(unknownMarkers(parseSkillDescription(stage.description, [])), [], `${where} markers`);
+        for (const [, tag] of stage.description.matchAll(/<(@[^<>\s]*)>/g)) assert.equal(parseSkillDescription(`<${tag}>x</>`, [])[0].type, "style", `${where} tag ${tag}`);
+        for (const term of termIdsOf(stage.description)) assert.ok(glossaries[profile.region].terms[term], `${where} term ${term}`);
+      }
+    }
+  }
+  assert.equal(talents, 588, "visible talents in the catalog");
+  assert.equal(stages, 1868, "visible talent stages in the catalog");
+});

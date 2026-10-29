@@ -624,5 +624,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Vanguard Swordsmanship",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After dodging an attack, the next attack deals two hits"
+        },
+        {
+          "name": "Vanguard Swordsmanship",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After dodging an attack, the next attack deals two hits and attacks all blocked enemies"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Pinus Sylvestris Leader",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all 'Kazimierz' Operators gain 22% Physical Dodge"
+        },
+        {
+          "name": "Pinus Sylvestris Leader",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all 'Kazimierz' Operators gain 25% <@ba.talpu>(+3%)</> Physical Dodge"
+        }
+      ]
+    }
   ]
 }

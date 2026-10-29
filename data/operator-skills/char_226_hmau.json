@@ -406,5 +406,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Gatekeeper",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF +6%"
+        },
+        {
+          "name": "Gatekeeper",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "DEF +8% <@ba.talpu>(+2%)</>"
+        },
+        {
+          "name": "Gatekeeper",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF +6%, if the tile behind this unit is an elevated tile, this unit receives +75% healing"
+        },
+        {
+          "name": "Gatekeeper",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "DEF +8%<@ba.talpu>(+2%)</>, if the tile behind this unit is an elevated tile, this unit receives 85%<@ba.talpu>(+10%)</> healing"
+        }
+      ]
+    }
   ]
 }

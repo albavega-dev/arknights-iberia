@@ -377,5 +377,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Sequence",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK increased to 110% and recover 1 additional SP when hitting an enemy with full HP"
+        },
+        {
+          "name": "Sequence",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK increased to 115% <@ba.talpu>(+5%)</> and recover 1 additional SP when hitting an enemy with full HP"
+        },
+        {
+          "name": "Sequence",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK increased to 120% and recover 2 additional SP when hitting an enemy with full HP"
+        },
+        {
+          "name": "Sequence",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK increased to 125% <@ba.talpu>(+5%)</> and recover 2 additional SP when hitting an enemy with full HP"
+        }
+      ]
+    }
   ]
 }

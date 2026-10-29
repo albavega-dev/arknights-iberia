@@ -317,7 +317,29 @@
       ]
     }
   ],
-  "ranges": {},
+  "ranges": {
+    "1-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 0
+        }
+      ]
+    }
+  },
   "baseSkills": [
     {
       "slot": 1,
@@ -352,6 +374,73 @@
             "level": 1
           },
           "description": "When this Operator is assigned to be the Trainer in the Training Room, increases the Specialization training speed of <@cc.kw>Caster</> Operators by <@cc.vup>+30%</>, and further increases this speed by <@cc.vup>+45%</> if training the skill to Specialization Level <@cc.vup>1</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Arts of the Wild",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Range reduces, attacks now deal Physical damage (only to ground enemies), ATK +50% when this skill is activated",
+          "rangeId": "1-2"
+        },
+        {
+          "name": "Arts of the Wild",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Range reduces, attacks now deal Physical damage (only to ground enemies), ATK +70% <@ba.talpu>(+20%)</> when this skill is activated",
+          "rangeId": "1-2"
+        },
+        {
+          "name": "Arts of the Wild",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Range reduces, attacks now deal Physical damage (only to ground enemies), ATK +75% when this skill is activated",
+          "rangeId": "1-2"
+        },
+        {
+          "name": "Arts of the Wild",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Range reduces, attacks now deal Physical damage (only to ground enemies), ATK +95% <@ba.talpu>(+20%)</> when this skill is activated",
+          "rangeId": "1-2"
+        },
+        {
+          "name": "Arts of the Wild",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Range reduces, attacks now deal Physical damage (only to ground enemies), ATK +100% when this skill is activated",
+          "rangeId": "1-2"
+        },
+        {
+          "name": "Arts of the Wild",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Range reduces, attacks now deal Physical damage (only to ground enemies), ATK +120% <@ba.talpu>(+20%)</> when this skill is activated",
+          "rangeId": "1-2"
         }
       ]
     }

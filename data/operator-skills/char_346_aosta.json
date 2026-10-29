@@ -355,5 +355,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Sharp Nails",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks inflict Bleed to unblocked enemies, dealing 12% ATK as Arts damage (unaffected by trait) every second for 3 seconds"
+        },
+        {
+          "name": "Sharp Nails",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks inflict Bleed to unblocked enemies, dealing 14% <@ba.talpu>(+2%)</> ATK as Arts damage (unaffected by trait) every second for 3 seconds"
+        },
+        {
+          "name": "Sharp Nails",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks inflict Bleed to unblocked enemies, dealing 18% ATK as Arts damage (unaffected by trait) every second for 3 seconds"
+        },
+        {
+          "name": "Sharp Nails",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks inflict Bleed to unblocked enemies, dealing 20% <@ba.talpu>(+2%)</> ATK as Arts damage (unaffected by trait) every second for 3 seconds"
+        }
+      ]
+    }
   ]
 }

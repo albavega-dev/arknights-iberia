@@ -789,5 +789,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Meltdown",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever an enemy triggers a <$ba.dt.burning2>Burn</> burst, immediately deals 250% ATK as Elemental Damage to that enemy and recovers 6% Max HP"
+        },
+        {
+          "name": "Meltdown",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Whenever an enemy triggers a <$ba.dt.burning2>Burn</> burst, immediately deals 280% <@ba.talpu>(+30%)</> ATK as Elemental Damage to that enemy and recovers 9% <@ba.talpu>(+3%)</> Max HP"
+        },
+        {
+          "name": "Meltdown",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever an enemy triggers a <$ba.dt.burning2>Burn</> burst, immediately deals 350% ATK as Elemental Damage to that enemy and recovers 12% Max HP"
+        },
+        {
+          "name": "Meltdown",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Whenever an enemy triggers a <$ba.dt.burning2>Burn</> burst, immediately deals 380% <@ba.talpu>(+30%)</> ATK as Elemental Damage to that enemy and recovers 15% <@ba.talpu>(+3%)</> Max HP"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "From the Ashes",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When defeated, becomes downed instead and gains 6000 <$ba.barrier>Barrier</>; cannot attack or be healed while downed, but recovers 3% HP per second; once HP is full, revives and <$ba.stun>stuns</> nearby enemies for 5s"
+        },
+        {
+          "name": "From the Ashes",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When defeated, becomes downed instead and gains 6000 <$ba.barrier>Barrier</>; cannot attack or be healed while downed, but recovers 3.5% <@ba.talpu>(+0.5%)</> HP per second; once HP is full, revives and <$ba.stun>stuns</> nearby enemies for 5s"
+        }
+      ]
+    }
   ]
 }

@@ -588,5 +588,80 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "White Fiend's Protection",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES of allies within range +5"
+        },
+        {
+          "name": "White Fiend's Protection",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "RES of allies within range +7 <@ba.talpu>(+2)</>"
+        },
+        {
+          "name": "White Fiend's Protection",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES of allies within range +10"
+        },
+        {
+          "name": "White Fiend's Protection",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "RES of allies within range +12 <@ba.talpu>(+2)</>"
+        },
+        {
+          "name": "White Fiend's Protection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES of allies within range +15"
+        },
+        {
+          "name": "White Fiend's Protection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "RES of allies within range +17 <@ba.talpu>(+2)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Fleeting Phantom",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon Phantoms. Phantoms cannot attack or block enemies, but have 75 RES and 30% Physical Dodge and are more likely to be targeted by enemies. Phantoms lose 3% Max HP per second"
+        }
+      ]
+    }
   ]
 }

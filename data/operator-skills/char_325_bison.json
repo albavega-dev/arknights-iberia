@@ -306,6 +306,19 @@
     }
   ],
   "ranges": {
+    "b-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ]
+    },
     "x-5": {
       "direction": 1,
       "grids": [
@@ -361,6 +374,53 @@
             "level": 1
           },
           "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</> and the order limit <@cc.vup>+1</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Interlocked Shield",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF +25; If a Vanguard or Guard is deployed behind Bison, that Vanguard or Guard gains the same effect.",
+          "rangeId": "b-1"
+        },
+        {
+          "name": "Interlocked Shield",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "DEF +45 <@ba.talpu>(+20)</>; If a Vanguard or Guard is deployed behind Bison, that Vanguard or Guard gains the same effect.",
+          "rangeId": "b-1"
+        },
+        {
+          "name": "Interlocked Shield",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF +50; If a Vanguard or Guard is deployed behind Bison, that Vanguard or Guard gains the same effect.",
+          "rangeId": "b-1"
+        },
+        {
+          "name": "Interlocked Shield",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "DEF +70 <@ba.talpu>(+20)</>; If a Vanguard or Guard is deployed behind Bison, that Vanguard or Guard gains the same effect.",
+          "rangeId": "b-1"
         }
       ]
     }

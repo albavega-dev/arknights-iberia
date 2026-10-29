@@ -322,5 +322,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Hunter's Wisdom",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Improves own Skill Point recovery rate by +0.15/second"
+        },
+        {
+          "name": "Hunter's Wisdom",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Improves own Skill Point recovery rate by +0.3/second"
+        }
+      ]
+    }
   ]
 }

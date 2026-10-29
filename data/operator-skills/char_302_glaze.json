@@ -333,5 +333,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Precise Strike",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 25% chance to <$ba.stun>Stun</> target for 2 seconds when attacking an enemy outside this unit's normal Attack Range"
+        },
+        {
+          "name": "Precise Strike",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Has a 28% <@ba.talpu>(+3%)</> chance to <$ba.stun>Stun</> target for 2 seconds when attacking an enemy outside this unit's normal Attack Range"
+        }
+      ]
+    }
   ]
 }

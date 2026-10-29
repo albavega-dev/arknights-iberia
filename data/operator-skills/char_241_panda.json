@@ -415,5 +415,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Kung Fu",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Obtains 20% Physical Dodge"
+        },
+        {
+          "name": "Kung Fu",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Obtains 23% <@ba.talpu>(+3%)</> Physical Dodge"
+        },
+        {
+          "name": "Kung Fu",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Obtains 40% Physical Dodge"
+        },
+        {
+          "name": "Kung Fu",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Obtains 43% <@ba.talpu>(+3%)</> Physical Dodge"
+        }
+      ]
+    }
   ]
 }

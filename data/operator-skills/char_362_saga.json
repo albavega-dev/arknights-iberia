@@ -581,5 +581,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Preaching",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing lethal damage, leave the enemy with 1 HP and inflict <$ba.dying>Critically Wounded</> (gives +1 SP to the attacker when killed); Saga will not attack <$ba.dying>Critically Wounded</> targets"
+        },
+        {
+          "name": "Preaching",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing lethal damage, leave the enemy with 1 HP and inflict <$ba.dying>Critically Wounded</> (gives +2 SP to the attacker when killed); Saga will not attack <$ba.dying>Critically Wounded</> targets"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Clear Mind",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When HP falls below 40%, gain 70% Physical Dodge and restore 5% Max HP every second, lasting for 15 seconds. Can only activate once"
+        },
+        {
+          "name": "Clear Mind",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When HP falls below 40%, gain 70% Physical Dodge and restore 6% <@ba.talpu>(+1%)</> Max HP every second, lasting for 17 <@ba.talpu>(+2)</> seconds. Can only activate once"
+        }
+      ]
+    }
   ]
 }

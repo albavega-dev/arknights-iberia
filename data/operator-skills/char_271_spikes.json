@@ -391,5 +391,57 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Structural Decomposition",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Prioritize attacking drones"
+        },
+        {
+          "name": "Structural Decomposition",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Prioritize attacking drones; ATK +20% when attacking drones"
+        },
+        {
+          "name": "Structural Decomposition",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Prioritize attacking drones; ATK +23% <@ba.talpu>(+3%)</> when attacking drones"
+        },
+        {
+          "name": "Structural Decomposition",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Prioritize attacking drones; ATK +40% when attacking drones"
+        },
+        {
+          "name": "Structural Decomposition",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Prioritize attacking drones; ATK +43% <@ba.talpu>(+3%)</> when attacking drones"
+        }
+      ]
+    }
   ]
 }

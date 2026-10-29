@@ -826,5 +826,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Unending Snows",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Snow falls every 10 seconds onto tiles within attack range, dealing 20% ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 10%, stacking up to 5 times (Snow on the tile disappears when the first enemy on it leaves the tile)"
+        },
+        {
+          "name": "Unending Snows",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Snow falls every 10 seconds onto tiles within attack range, dealing 25% <@ba.talpu>(+5%)</> ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 10%, stacking up to 5 times (Snow on the tile disappears when the first enemy on it leaves the tile)"
+        },
+        {
+          "name": "Unending Snows",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Snow falls every 7.5 seconds onto tiles within attack range, dealing 50% ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 10%, stacking up to 5 times (Snow on the tile disappears when the first enemy on it leaves the tile)"
+        },
+        {
+          "name": "Unending Snows",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Snow falls every 7.5 seconds onto tiles within attack range, dealing 55% <@ba.talpu>(+5%)</> ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 10%, stacking up to 5 times (Snow on the tile disappears when the first enemy on it leaves the tile)"
+        },
+        {
+          "name": "Unending Snows",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Snow falls every 5.5 seconds onto tiles within attack range, dealing 75% ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 12%, stacking up to 5 times (Snow on the tile disappears when the first enemy on it leaves the tile)"
+        },
+        {
+          "name": "Unending Snows",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Snow falls every 5.5 seconds onto tiles within attack range, dealing 80% <@ba.talpu>(+5%)</> ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 12%, stacking up to 5 times (Snow on the tile disappears when the first enemy on it leaves the tile)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Blessing of Karlan",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Upon taking damage, inflicts <$ba.cold>Cold</> on enemies for 1.5 seconds; if taking lethal damage, recovers all HP (once only) and <$ba.frozen>Freezes</> herself for 4 seconds, while <$ba.frozen>Freezing</> all enemies for 8 seconds"
+        },
+        {
+          "name": "Blessing of Karlan",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Upon taking damage, inflicts <$ba.cold>Cold</> on enemies for 2 <@ba.talpu>(+0.5)</> seconds; if taking lethal damage, recovers all HP (once only) and <$ba.frozen>Freezes</> herself for 4 seconds, while <$ba.frozen>Freezing</> all enemies for 8 seconds"
+        }
+      ]
+    }
   ]
 }

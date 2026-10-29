@@ -523,5 +523,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Construction Ahead",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can carry 2 <Support Devices> (deploy up to 1), with different effects depending on Skill"
+        },
+        {
+          "name": "Construction Ahead",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can carry 2 <Support Devices> (deploy up to 2), with different effects depending on Skill"
+        },
+        {
+          "name": "Construction Ahead",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can carry 3 <Support Devices> (deploy up to 2), with different effects depending on Skill"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Safety First",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains 10% <$ba.protect>Sanctuary</>; after a ranged enemy appears, instead grants herself and all High Ground Operators 15% <$ba.protect>Sanctuary</>, and also 1 SP every 6 seconds"
+        },
+        {
+          "name": "Safety First",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Gains 12% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>; after a ranged enemy appears, instead grants herself and all High Ground Operators 18% <@ba.talpu>(+3%)</> <$ba.protect>Sanctuary</>, and also 1 SP every 6 seconds"
+        }
+      ]
+    }
   ]
 }

@@ -589,5 +589,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Cinder",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing damage, 30% chance to inflict Cinder: ATK -10%, 15% <$ba.magicfragile>[Arts Fragility]</>, does not stack, lasts 6s"
+        },
+        {
+          "name": "Cinder",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When dealing damage, 30% chance to inflict Cinder: ATK -12%<@ba.talpu> (+2)</>, 17%<@ba.talpu> (+2)</> <$ba.magicfragile>[Arts Fragility]</>, does not stack, lasts 6s."
+        },
+        {
+          "name": "Cinder",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing damage, 30% chance to inflict Cinder: ATK -20%, 30% <$ba.magicfragile>[Arts Fragility]</>, does not stack, lasts 6s"
+        },
+        {
+          "name": "Cinder",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When dealing damage, 30% chance to inflict Cinder: ATK -22%<@ba.talpu> (+2)</>, 32%<@ba.talpu> (+2)</> <$ba.magicfragile>[Arts Fragility]</>, does not stack, lasts 6s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Reflected Shine",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing an ally, Reed the Flame Shadow heals herself for 50% of the amount healed"
+        },
+        {
+          "name": "Reflected Shine",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "When healing an ally, Reed the Flame Shadow heals herself for 55%<@ba.talpu> (+5)</> of the amount healed"
+        }
+      ]
+    }
   ]
 }

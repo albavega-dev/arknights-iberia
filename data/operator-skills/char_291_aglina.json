@@ -555,5 +555,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Accelerator Field",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "All allies' ASPD +3"
+        },
+        {
+          "name": "Accelerator Field",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "All allies' ASPD +4 <@ba.talpu>(+1)</>"
+        },
+        {
+          "name": "Accelerator Field",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "All allies' ASPD +7"
+        },
+        {
+          "name": "Accelerator Field",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "All allies' ASPD +8 <@ba.talpu>(+1)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Part-time Job",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores the HP of all allies by 20 per second when the skill is not activated"
+        },
+        {
+          "name": "Part-time Job",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Restores the HP of all allies by 25 <@ba.talpu>(+5)</> per second when the skill is not activated"
+        }
+      ]
+    }
   ]
 }

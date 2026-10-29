@@ -333,5 +333,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Vulnerability Deconstruction",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all blocked enemies take +7% Physical damage"
+        },
+        {
+          "name": "Vulnerability Deconstruction",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all blocked enemies take +9% <@ba.talpu>(+2%)</> Physical damage"
+        },
+        {
+          "name": "Vulnerability Deconstruction",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all blocked enemies take +14% Physical damage"
+        },
+        {
+          "name": "Vulnerability Deconstruction",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all blocked enemies take +16% <@ba.talpu>(+2%)</> Physical damage"
+        }
+      ]
+    }
   ]
 }

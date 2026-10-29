@@ -587,5 +587,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Military Fortress",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is on the field, Defender Operators gain +10% ATK"
+        },
+        {
+          "name": "Military Fortress",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When this unit is on the field, Defender Operators gain +13%<@ba.talpu>(+3%)</> ATK"
+        },
+        {
+          "name": "Military Fortress",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is on the field, Defender Operators gain +20% ATK"
+        },
+        {
+          "name": "Military Fortress",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When this unit is on the field, Defender Operators gain +23%<@ba.talpu>(+3%)</> ATK"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Bloodbath",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Instead of retreating when defeated, recover HP to max and gain -50% Max HP, +18 ASPD, and +18% DEF (triggers once per deployment)"
+        },
+        {
+          "name": "Bloodbath",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Instead of retreating when defeated, recover HP to max and gain -50% Max HP, +21<@ba.talpu>(+3)</> ASPD, and +21%<@ba.talpu>(+3%)</> DEF (triggers once per deployment)"
+        }
+      ]
+    }
   ]
 }

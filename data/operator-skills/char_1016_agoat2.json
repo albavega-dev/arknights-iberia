@@ -492,5 +492,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Replenishing Mist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Normal heals additionally restore HP and <$ba.dt.element>Elemental Injury</> per second equal to 8% of the original amount, lasting for 4 seconds (stacks up to 3 times)"
+        },
+        {
+          "name": "Replenishing Mist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Normal heals additionally restore HP and <$ba.dt.element>Elemental Injury</> per second equal to 10% of the original amount, lasting for 6 seconds (stacks up to 3 times)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Volcanic Ash Remedy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases the Max HP of friendly units within range by +6%, and reduces the <$ba.dt.element>Elemental Injury</> they take by 12%"
+        },
+        {
+          "name": "Volcanic Ash Remedy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases the Max HP of friendly units within range by +8% <@ba.talpu>(+2%)</>, and reduces the <$ba.dt.element>Elemental Injury</> they take by 12%"
+        }
+      ]
+    }
   ]
 }

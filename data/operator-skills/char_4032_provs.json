@@ -452,5 +452,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Kazimierz Legal Expertise",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +6; the same buff is given to a random [Kazimierz] Operator when deployed"
+        },
+        {
+          "name": "Kazimierz Legal Expertise",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ASPD +8<@ba.talpu>(+2)</>; the same buff is given to a random [Kazimierz] Operator when deployed"
+        },
+        {
+          "name": "Kazimierz Legal Expertise",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +10; the same buff is given to a random [Kazimierz] Operator when deployed"
+        },
+        {
+          "name": "Kazimierz Legal Expertise",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ASPD +12<@ba.talpu>(+2)</>; the same buff is given to a random [Kazimierz] Operator when deployed"
+        }
+      ]
+    }
   ]
 }

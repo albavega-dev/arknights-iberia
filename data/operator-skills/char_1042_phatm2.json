@@ -1023,5 +1023,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mind Over Matter",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks deal an additional 20% of ATK as <$ba.dt.neural2>Nervous Impairment</>, and deal 10% of ATK as <$ba.dt.neural2>Nervous Impairment</> to enemies around the target"
+        },
+        {
+          "name": "Mind Over Matter",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Attacks deal an additional 23% <@ba.talpu>(+3%)</> of ATK as <$ba.dt.neural2>Nervous Impairment</>, and deal 13% <@ba.talpu>(+3%)</> of ATK as <$ba.dt.neural2>Nervous Impairment</> to enemies around the target"
+        },
+        {
+          "name": "Mind Over Matter",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks deal an additional 25% of ATK as <$ba.dt.neural2>Nervous Impairment</>, and deal 15% of ATK as <$ba.dt.neural2>Nervous Impairment</> to enemies around the target"
+        },
+        {
+          "name": "Mind Over Matter",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Attacks deal an additional 28% <@ba.talpu>(+3%)</> of ATK as <$ba.dt.neural2>Nervous Impairment</>, and deal 18% <@ba.talpu>(+3%)</> of ATK as <$ba.dt.neural2>Nervous Impairment</> to enemies around the target"
+        },
+        {
+          "name": "Mind Over Matter",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks deal an additional 30% of ATK as <$ba.dt.neural2>Nervous Impairment</>, and deal 20% of ATK as <$ba.dt.neural2>Nervous Impairment</> to enemies around the target"
+        },
+        {
+          "name": "Mind Over Matter",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Attacks deal an additional 33% <@ba.talpu>(+3%)</> of ATK as <$ba.dt.neural2>Nervous Impairment</>, and deal 23% <@ba.talpu>(+3%)</> of ATK as <$ba.dt.neural2>Nervous Impairment</> to enemies around the target"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Descend into Dream",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all enemies on the field under the burst effect of <$ba.dt.neural2>Nervous Impairment</> have ASPD -12; when enemies within Attack Range perform normal attacks, they take 70 points of <$ba.dt.neural2>Nervous Impairment</>"
+        },
+        {
+          "name": "Descend into Dream",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all enemies on the field under the burst effect of <$ba.dt.neural2>Nervous Impairment</> have ASPD -16 <@ba.talpu>(+4)</>; when enemies within Attack Range perform normal attacks, they take 70 points of <$ba.dt.neural2>Nervous Impairment</>"
+        }
+      ]
+    }
   ]
 }

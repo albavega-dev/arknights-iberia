@@ -612,5 +612,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Inherited End",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking aerial targets, increases ATK to 110%, and silences targets for 1 second"
+        },
+        {
+          "name": "Inherited End",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking aerial targets, increases ATK to 113% <@ba.talpu>(+3%)</>, and silences targets for 1 second"
+        },
+        {
+          "name": "Inherited End",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking aerial targets, increases ATK to 120%, and silences targets for 3 seconds"
+        },
+        {
+          "name": "Inherited End",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking aerial targets, increases ATK to 123% <@ba.talpu>(+3%)</>, and silences targets for 3 seconds"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Bygone Wings",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Applies <$ba.weightless>Weightless</> to enemies with 80% or more HP within Attack Range"
+        }
+      ]
+    }
   ]
 }

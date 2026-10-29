@@ -284,7 +284,49 @@
       ]
     }
   ],
-  "ranges": {},
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
   "baseSkills": [
     {
       "slot": 1,
@@ -319,6 +361,53 @@
             "level": 1
           },
           "description": "When this Operator is assigned to a Dormitory, self Morale recovered <@cc.vup>+0.7</> per hour"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Self-Healing",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores HP by 7% of Max HP when there is an enemy killed within the 8 surrounding tiles",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Self-Healing",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores HP by 9% <@ba.talpu>(+2%)</> of Max HP when there is an enemy killed within the 8 surrounding tiles",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Self-Healing",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores HP by 12% of Max HP when there is an enemy killed within the 8 surrounding tiles",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Self-Healing",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores HP by 14% <@ba.talpu>(+2%)</> of Max HP when there is an enemy killed within the 8 surrounding tiles",
+          "rangeId": "x-4"
         }
       ]
     }

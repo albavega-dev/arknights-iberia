@@ -346,5 +346,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Focused Attention",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing, heal an extra 80 HP if target HP is below 40%"
+        },
+        {
+          "name": "Focused Attention",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When healing, heal an extra 90<@ba.talpu>(+10)</> HP if target HP is below 40%"
+        },
+        {
+          "name": "Focused Attention",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing, heal an extra 140 HP if target HP is below 40%"
+        },
+        {
+          "name": "Focused Attention",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When healing, heal an extra 150<@ba.talpu>(+10)</> HP if target HP is below 40%"
+        }
+      ]
+    }
   ]
 }

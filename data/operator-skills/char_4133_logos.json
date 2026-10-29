@@ -696,5 +696,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lexical Evolution",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking a target, there is a 40% chance to deal 40% ATK as Arts damage to a random target in attack range."
+        },
+        {
+          "name": "Lexical Evolution",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking a target, there is a 40% chance to deal 45% <@ba.talpu>(+5%)</> ATK as Arts damage to a random target in attack range."
+        },
+        {
+          "name": "Lexical Evolution",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking a target, there is a 40% chance to deal 60% ATK as Arts damage to a random target in attack range and <$ba.sluggish>Slow</> it for 0.8s."
+        },
+        {
+          "name": "Lexical Evolution",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking a target, there is a 40% chance to deal 65% <@ba.talpu>(+5%)</> ATK as Arts damage to a random target in attack range and <$ba.sluggish>Slow</> it for 0.8s."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Requiem Aeternam",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks inflict RES -10 and Arts damage taken +150 on targets for 5s."
+        },
+        {
+          "name": "Requiem Aeternam",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Attacks inflict RES -10 and Arts damage taken +165 <@ba.talpu>(+15)</> on targets for 5s."
+        }
+      ]
+    }
   ]
 }

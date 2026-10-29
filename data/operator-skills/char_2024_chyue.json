@@ -553,5 +553,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "An End to War",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "18% chance for normal attacks to increase the damage Chongyue deals to the target by 55% for 2.5s"
+        },
+        {
+          "name": "An End to War",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "20%<@ba.talpu> (+2%)</> chance for normal attacks to increase the damage Chongyue deals to the target by 60%<@ba.talpu> (+5%)</> for 2.5s"
+        },
+        {
+          "name": "An End to War",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "23% chance for normal attacks to increase the damage Chongyue deals to the target by 65% for 2.5s"
+        },
+        {
+          "name": "An End to War",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "25%<@ba.talpu> (+2%)</> chance for normal attacks to increase the damage Chongyue deals to the target by 70%<@ba.talpu> (+5%)</> for 2.5s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "All Are Guests",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Chongyue recovers 3 SP if he defeats at least one enemy with a skill"
+        }
+      ]
+    }
   ]
 }

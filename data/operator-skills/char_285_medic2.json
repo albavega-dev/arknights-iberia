@@ -40,5 +40,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Support Spray 1",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Immediately restores the HP of all allies by 200 after deployment"
+        },
+        {
+          "name": "Support Spray 2",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 2,
+          "description": "Immediately restores the HP of all allies by 260 after deployment"
+        },
+        {
+          "name": "Support Spray 3",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Immediately restores the HP of all allies by 320 after deployment"
+        },
+        {
+          "name": "Support Spray 4",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 4,
+          "description": "Immediately restores the HP of all allies by 380 after deployment"
+        },
+        {
+          "name": "Support Spray 5",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Immediately restores the HP of all allies by 440 after deployment"
+        },
+        {
+          "name": "Support Spray 6",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Immediately restores the HP of all allies by 500 after deployment"
+        }
+      ]
+    }
   ]
 }

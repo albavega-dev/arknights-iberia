@@ -359,5 +359,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "'Clip' Specialist",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 4 'Clip' traps (Can store up to 6); The first enemy that steps on a trap will trigger its effect"
+        },
+        {
+          "name": "'Clip' Specialist",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Can deploy up to 6 <@ba.talpu>(+2)</> 'Clip' traps (Can store up to 6); The first enemy that steps on a trap will trigger its effect"
+        },
+        {
+          "name": "'Clip' Specialist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 6 'Clip' traps (Can store up to 8); The first enemy that steps on a trap will trigger its effect"
+        },
+        {
+          "name": "'Clip' Specialist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Can deploy up to 8 <@ba.talpu>(+2)</> 'Clip' traps (Can store up to 8); The first enemy that steps on a trap will trigger its effect"
+        },
+        {
+          "name": "'Clip' Specialist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 8 'Clip' traps (Can store up to 10); The first enemy that steps on a trap will trigger its effect"
+        },
+        {
+          "name": "'Clip' Specialist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Can deploy up to 10 <@ba.talpu>(+2)</> 'Clip' traps (Can store up to 10); The first enemy that steps on a trap will trigger its effect"
+        }
+      ]
+    }
   ]
 }

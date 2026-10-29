@@ -361,5 +361,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Protean",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +6 when not blocking an enemy, ATK +6% when blocking an enemy"
+        },
+        {
+          "name": "Protean",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ASPD +8 <@ba.talpu>(+2)</> when not blocking an enemy, ATK +8% <@ba.talpu>(+2%)</> when blocking an enemy"
+        },
+        {
+          "name": "Protean",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +12 when not blocking an enemy, ATK +12% when blocking an enemy"
+        },
+        {
+          "name": "Protean",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ASPD +14 <@ba.talpu>(+2)</> when not blocking an enemy, ATK +14% <@ba.talpu>(+2%)</> when blocking an enemy"
+        }
+      ]
+    }
   ]
 }

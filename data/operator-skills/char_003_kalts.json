@@ -501,5 +501,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mon3tr",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use and heal Mon3tr, and Mon3tr has a 35 second redeployment time. Kal'tsit will prioritize healing herself and Mon3tr; If Mon3tr is not within Kal'tsit's Attack Range, Mon3tr's DEF is reduced to 0"
+        },
+        {
+          "name": "Mon3tr",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use and heal Mon3tr, and Mon3tr has a 30 second redeployment time. Kal'tsit will prioritize healing herself and Mon3tr; If Mon3tr is not within Kal'tsit's Attack Range, Mon3tr's DEF is reduced to 0"
+        },
+        {
+          "name": "Mon3tr",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use and heal Mon3tr, and Mon3tr has a 25 second redeployment time. Kal'tsit will prioritize healing herself and Mon3tr; If Mon3tr is not within Kal'tsit's Attack Range, Mon3tr's DEF is reduced to 0"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Non-Damaging Restructuring",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Mon3tr is defeated (excluding retreat), all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 3 seconds and receive 1200 True damage"
+        },
+        {
+          "name": "Non-Damaging Restructuring",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Mon3tr is defeated (excluding retreat), all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 3.5 <@ba.talpu>(+0.5)</> seconds and receive 1400 <@ba.talpu>(+200)</> True damage"
+        }
+      ]
+    }
   ]
 }

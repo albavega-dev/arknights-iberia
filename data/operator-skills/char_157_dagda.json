@@ -328,5 +328,44 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Gang Spirit",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 30% chance of increasing ATK to 130% when attacking. When deployed, this multiplier increases by +5% for every enemy defeated within the 4 adjacent tiles of a [Glasgow Gang] Operator (max 190%)"
+        },
+        {
+          "name": "Gang Spirit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has 30% chance of increasing ATK to 150% when attacking. When deployed, this multiplier increases by +5% for every enemy defeated within the 4 adjacent tiles of a [Glasgow Gang] Operator (max 240%)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Knight's Honor",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "In [Return to Mist], HP +20%, and each attack restores HP equal to 20% of damage dealt"
+        }
+      ]
+    }
   ]
 }

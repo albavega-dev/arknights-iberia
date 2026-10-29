@@ -400,5 +400,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP +3%, attacks ignore 30 DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Max HP +3%, attacks ignore 50 <@ba.talpu>(+20)</> DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP +6%, attacks ignore 60 DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Max HP +6%, attacks ignore 80 <@ba.talpu>(+20)</> DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP +12%, attacks ignore 120 DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Max HP +12%, attacks ignore 140 <@ba.talpu>(+20)</> DEF"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Sympathicus Simulation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing an allied unit, any healing in excess of that unit's Max HP will be converted into a rapidly-decaying <$ba.barrier>Barrier</>"
+        },
+        {
+          "name": "Sympathicus Simulation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing an allied unit, any healing in excess of that unit's Max HP will be converted into a decaying <$ba.barrier>Barrier</>"
+        }
+      ]
+    }
   ]
 }

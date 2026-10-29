@@ -357,5 +357,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Collective Consciousness",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Ranged Operators within Attack Range gain Max HP +5%"
+        },
+        {
+          "name": "Collective Consciousness",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Ranged Operators within Attack Range gain Max HP +7% <@ba.talpu>(+2%)</>"
+        },
+        {
+          "name": "Collective Consciousness",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Ranged Operators within Attack Range gain Max HP +10%"
+        },
+        {
+          "name": "Collective Consciousness",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Ranged Operators within Attack Range gain Max HP +12% <@ba.talpu>(+2%)</>"
+        }
+      ]
+    }
   ]
 }

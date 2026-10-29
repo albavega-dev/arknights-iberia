@@ -628,5 +628,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Diploma Persecutionis Internationalis",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Elite or leader enemies who are within a Laterano Operator's Attack Range for more than 10 seconds become Wanted; Lemuen can attack all Wanted enemies"
+        },
+        {
+          "name": "Diploma Persecutionis Internationalis",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Elite or leader enemies who are within a Laterano Operator's Attack Range for more than 8 <@ba.talpu>(-2)</> seconds become Wanted; Lemuen can attack all Wanted enemies"
+        },
+        {
+          "name": "Diploma Persecutionis Internationalis",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Elite or leader enemies who are within a Laterano Operator's Attack Range for more than 8 seconds become Wanted, taking 15% more damage from Laterano Operators; Lemuen can attack all Wanted enemies"
+        },
+        {
+          "name": "Diploma Persecutionis Internationalis",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Elite or leader enemies who are within a Laterano Operator's Attack Range for more than 6 <@ba.talpu>(-2)</> seconds become Wanted, taking 18% <@ba.talpu>(+3%)</> more damage from Laterano Operators; Lemuen can attack all Wanted enemies"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Modus Extraditio Fugitivi",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After being deployed for 20 seconds, ATK +10% and Lemuen's ammo-type skills have +1 Ammo capacity"
+        }
+      ]
+    }
   ]
 }

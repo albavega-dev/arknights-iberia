@@ -417,5 +417,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Frying Pan Specialist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 10% chance to deal 150% damage and <$ba.stun>Stun</> the target for 0.5 seconds"
+        },
+        {
+          "name": "Frying Pan Specialist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, has a 13% <@ba.talpu>(+3%)</> chance to deal 150% damage and <$ba.stun>Stun</> the target for 0.5 seconds"
+        },
+        {
+          "name": "Frying Pan Specialist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 15% chance to deal 200% damage and <$ba.stun>Stun</> the target for 1 second"
+        },
+        {
+          "name": "Frying Pan Specialist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, has a 18% <@ba.talpu>(+3%)</> chance to deal 200% damage and <$ba.stun>Stun</> the target for 1 second"
+        }
+      ]
+    }
   ]
 }

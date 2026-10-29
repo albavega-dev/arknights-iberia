@@ -377,5 +377,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Sheathed Blade, Studied Foe",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Trait ATK increase reaches its maximum, each attack is followed by an additional attack of 25% ATK"
+        },
+        {
+          "name": "Sheathed Blade, Studied Foe",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Trait ATK increase reaches its maximum, each attack is followed by an additional attack of 28% <@ba.talpu>(+3%)</> ATK"
+        },
+        {
+          "name": "Sheathed Blade, Studied Foe",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Trait ATK increase reaches its maximum, each attack is followed by an additional attack of 40% ATK"
+        },
+        {
+          "name": "Sheathed Blade, Studied Foe",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Trait ATK increase reaches its maximum, each attack is followed by an additional attack of 43% <@ba.talpu>(+3%)</> ATK"
+        }
+      ]
+    }
   ]
 }

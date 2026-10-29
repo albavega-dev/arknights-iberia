@@ -357,5 +357,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Friendship Fair, Together Tied",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Grants 7% <$ba.protect>Sanctuary</> to 2 other allies within range"
+        },
+        {
+          "name": "Friendship Fair, Together Tied",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Grants 9% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> to 2 other allies within range"
+        },
+        {
+          "name": "Friendship Fair, Together Tied",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Grants 10% <$ba.protect>Sanctuary</> to 2 other allies within range"
+        },
+        {
+          "name": "Friendship Fair, Together Tied",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Grants 12% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</> to 2 other allies within range"
+        }
+      ]
+    }
   ]
 }

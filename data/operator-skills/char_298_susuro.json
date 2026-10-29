@@ -333,5 +333,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Minimally Invasive Surgery",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases healing effects by 10% on all Operators with DP Cost no more than 10 when Sussurro is in the squad"
+        },
+        {
+          "name": "Minimally Invasive Surgery",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases healing effects by 13%<@ba.talpu> (+3%)</> on all Operators with DP Cost no more than 10 when Sussurro is in the squad"
+        },
+        {
+          "name": "Minimally Invasive Surgery",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases healing effects by 20% on all Operators with DP Cost no more than 10 when Sussurro is in the squad"
+        },
+        {
+          "name": "Minimally Invasive Surgery",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases healing effects by 23%<@ba.talpu> (+3%)</> on all Operators with DP Cost no more than 10 when Sussurro is in the squad"
+        }
+      ]
+    }
   ]
 }

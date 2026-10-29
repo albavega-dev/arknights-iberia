@@ -348,5 +348,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Baton Mastery",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there are 3 or more enemies within an attack's splash area, that attack deals 110% damage"
+        },
+        {
+          "name": "Baton Mastery",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When there are 3 or more enemies within an attack's splash area, that attack deals 115% <@ba.talpu>(+5%)</> damage"
+        },
+        {
+          "name": "Baton Mastery",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there are 3 or more enemies within an attack's splash area, that attack deals 120% damage"
+        },
+        {
+          "name": "Baton Mastery",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When there are 3 or more enemies within an attack's splash area, that attack deals 125% <@ba.talpu>(+5%)</> damage"
+        }
+      ]
+    }
   ]
 }

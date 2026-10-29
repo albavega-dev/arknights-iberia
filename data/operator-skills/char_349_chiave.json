@@ -412,5 +412,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Technical Expertise",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all [Support Robot] Operators have -60% Redeployment Time; For every [Support Robot] Operator currently deployed, this unit gains +7% ATK and DEF"
+        },
+        {
+          "name": "Technical Expertise",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all [Robot] Operators have -60% Redeployment Time; For every [Robot] Operator currently deployed, this unit gains +9% <@ba.talpu>(+2%)</> ATK and DEF"
+        },
+        {
+          "name": "Technical Expertise",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all [Robot] Operators have -75% Redeployment Time; For every [Robot] Operator currently deployed, this unit gains +11% ATK and DEF"
+        },
+        {
+          "name": "Technical Expertise",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all [Robot] Operators have -75% Redeployment Time; For every [Robot] Operator currently deployed, this unit gains +13% <@ba.talpu>(+2%)</> ATK and DEF"
+        }
+      ]
+    }
   ]
 }

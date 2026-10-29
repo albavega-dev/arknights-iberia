@@ -567,5 +567,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Souvenir",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks attach an afterimage to the main target. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 120% ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 0.5s."
+        },
+        {
+          "name": "Souvenir",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks attach an afterimage to the main target. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 130% <@ba.talpu>(+10%)</> ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 0.5s."
+        },
+        {
+          "name": "Souvenir",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks have 115% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 150% ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s."
+        },
+        {
+          "name": "Souvenir",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks have 115% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 160% <@ba.talpu>(+10%)</> ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Revenant's Echo",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, immediately summons a Revenant's Shadow in attack range, and gains <$ba.camou>Camouflage</> when near a Revenant's Shadow."
+        }
+      ]
+    }
   ]
 }

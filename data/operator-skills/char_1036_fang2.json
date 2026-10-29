@@ -355,5 +355,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lightweight Gambit",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Initial DP Cost -2; after retreating, the next Operator has DP Cost -1."
+        },
+        {
+          "name": "Lightweight Gambit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Initial DP Cost -3; after retreating, the next Operator has DP Cost -1."
+        }
+      ]
+    }
   ]
 }

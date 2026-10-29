@@ -328,5 +328,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Bloody Slaughter",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases Max HP by 20 after defeating an enemy, stacking up to 30 times."
+        },
+        {
+          "name": "Bloody Slaughter",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases Max HP by 30 <@ba.talpu>(+10) </>after defeating an enemy, stacking up to 30 times."
+        },
+        {
+          "name": "Bloody Slaughter",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases Max HP by 40 after defeating an enemy, stacking up to 30 times."
+        },
+        {
+          "name": "Bloody Slaughter",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases Max HP by 50 <@ba.talpu>(+10) </>after defeating an enemy, stacking up to 30 times."
+        }
+      ]
+    }
   ]
 }

@@ -333,5 +333,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Wilderness Instinct",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains <$ba.camou>Camouflage</> while this unit's skill is not active"
+        },
+        {
+          "name": "Wilderness Instinct",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains <$ba.camou>Camouflage</> while this unit's skill is not active; Attack Interval reduced slightly after skill activation"
+        }
+      ]
+    }
   ]
 }

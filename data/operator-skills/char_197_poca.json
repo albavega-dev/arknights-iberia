@@ -490,5 +490,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Bone Piercer",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking a heavy enemy, ignores 40% of its DEF (enemies with 3 weight or higher count for this effect)"
+        },
+        {
+          "name": "Bone Piercer",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking a heavy enemy, ignores 60% of its DEF (enemies with 3 weight or higher count for this effect)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Ideal Student",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is in the squad, all [Ursus Student Self-government Group] Operators gain +8% ATK"
+        },
+        {
+          "name": "Ideal Student",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit is in the squad, all [Ursus Student Self-government Group] Operators gain +10% ATK <@ba.talpu>(+2%)</>"
+        }
+      ]
+    }
   ]
 }

@@ -393,5 +393,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Cell Activity Suppressant",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals 40 Arts damage per second to targets on attacking, lasting 3 seconds (Damage is doubled against [Sea Monster] enemies)"
+        },
+        {
+          "name": "Cell Activity Suppressant",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals 50 <@ba.talpu>(+10)</> Arts damage per second to targets on attacking, lasting 3 seconds (Damage is doubled against [Sea Monster] enemies)"
+        },
+        {
+          "name": "Cell Activity Suppressant",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals 80 Arts damage per second to targets on attacking, lasting 3 seconds (Damage is doubled against [Sea Monster] enemies)"
+        },
+        {
+          "name": "Cell Activity Suppressant",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals 90 <@ba.talpu>(+10)</> Arts damage per second to targets on attacking, lasting 3 seconds (Damage is doubled against [Sea Monster] enemies)"
+        }
+      ]
+    }
   ]
 }

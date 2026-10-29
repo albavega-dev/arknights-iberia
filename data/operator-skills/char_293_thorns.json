@@ -642,5 +642,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Nerve Corrosion",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Poisons the targets when attacking, dealing 65 Arts damage to them per second, lasting 3 seconds (damage is doubled against Ranged enemies)"
+        },
+        {
+          "name": "Nerve Corrosion",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Poisons the targets when attacking, dealing 80 <@ba.talpu>（+15）</> Arts damage to them per second, lasting 3 seconds (damage is doubled against Ranged enemies)"
+        },
+        {
+          "name": "Nerve Corrosion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Poisons the targets when attacking, dealing 125 Arts damage to them per second, lasting 3 seconds (damage is doubled against Ranged enemies)"
+        },
+        {
+          "name": "Nerve Corrosion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Poisons the targets when attacking, dealing 140 <@ba.talpu>（+15）</> Arts damage to them per second, lasting 3 seconds (damage is doubled against Ranged enemies)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Echoes of Ancestral Waves",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If this unit hasn't attacked for 2 seconds, restores 3.5% of Max HP every second"
+        },
+        {
+          "name": "Echoes of Ancestral Waves",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "If this unit hasn't attacked for 2 seconds, restores 4% <@ba.talpu>(+0.5%)</> of Max HP every second"
+        }
+      ]
+    }
   ]
 }

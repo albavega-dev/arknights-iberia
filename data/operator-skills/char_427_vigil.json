@@ -512,5 +512,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Leader of the Wolfpack",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Wolfpack initially consisting of 2 'Wolf Shadows' at the Tactical Point to assist in combat; The number of 'Wolf Shadows' increases by 1 every 30 seconds (up to a maximum of 3; each 'Wolf Shadow' increases the Wolfpack's Block by 1 and causes its attacks to deal an additional instance of damage)"
+        },
+        {
+          "name": "Leader of the Wolfpack",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Wolfpack initially consisting of 2 'Wolf Shadows' at the Tactical Point to assist in combat; The number of 'Wolf Shadows' increases by 1 every 27 seconds (up to a maximum of 3; each 'Wolf Shadow' increases the Wolfpack's Block by 1 and causes its attacks to deal an additional instance of damage)"
+        },
+        {
+          "name": "Leader of the Wolfpack",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Wolfpack initially consisting of 2 'Wolf Shadows' at the Tactical Point to assist in combat; The number of 'Wolf Shadows' increases by 1 every 25 seconds (up to a maximum of 3; each 'Wolf Shadow' increases the Wolfpack's Block by 1 and causes its attacks to deal an additional instance of damage)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Wolven Nature",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Vigil and the Wolfpack's attacks ignore 175 DEF when attacking enemies blocked by the Wolfpack"
+        },
+        {
+          "name": "Wolven Nature",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Vigil and the Wolfpack's attacks ignore 200 <@ba.talpu>(+25)</> DEF when attacking enemies blocked by the Wolfpack"
+        }
+      ]
+    }
   ]
 }

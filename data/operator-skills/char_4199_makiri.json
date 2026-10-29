@@ -444,5 +444,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Slowpoke's Gambit",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After being deployed for 30s, all Defender and Supporter Operators on the field and in the Deployment Waiting Zone gain ATK +5%; can only activate once"
+        },
+        {
+          "name": "Slowpoke's Gambit",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After being deployed for 30s, all Defender and Supporter Operators on the field and in the Deployment Waiting Zone gain ATK +7% <@ba.talpu>(+2%)</>; can only activate once"
+        },
+        {
+          "name": "Slowpoke's Gambit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After being deployed for 30s, all Defender and Supporter Operators on the field and in the Deployment Waiting Zone gain ATK +10%; can only activate once"
+        },
+        {
+          "name": "Slowpoke's Gambit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After being deployed for 30s, all Defender and Supporter Operators on the field and in the Deployment Waiting Zone gain ATK +12% <@ba.talpu>(+2%)</>; can only activate once"
+        }
+      ]
+    }
   ]
 }

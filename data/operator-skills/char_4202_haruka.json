@@ -693,5 +693,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Fleeting Foam",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every Attack Interval, an allied unit within range gains a bubble granting 10% <$ba.protect>Sanctuary</>; bubbles will pop shortly after being damaged by an enemy"
+        },
+        {
+          "name": "Fleeting Foam",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every Attack Interval, an allied unit within range gains a bubble granting 20% <$ba.protect>Sanctuary</>; bubbles will pop shortly after being damaged by an enemy"
+        },
+        {
+          "name": "Fleeting Foam",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every Attack Interval, an allied unit within range gains a bubble granting 30% <$ba.protect>Sanctuary</>; bubbles will pop shortly after being damaged by an enemy"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Soaring Fireworks",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever a bubble pops, the unit at its former location is healed for 25% of Haruka's ATK"
+        },
+        {
+          "name": "Soaring Fireworks",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Whenever a bubble pops, the unit at its former location is healed for 28% <@ba.talpu>(+3%)</> of Haruka's ATK"
+        }
+      ]
+    }
   ]
 }

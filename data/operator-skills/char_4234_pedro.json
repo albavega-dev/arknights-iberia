@@ -372,5 +372,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "掩护战术",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "攻击范围内至少有2名其他干员时，自身攻击力+5%"
+        },
+        {
+          "name": "掩护战术",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "攻击范围内至少有2名其他干员时，自身攻击力+7%<@ba.talpu>（+2%）</>"
+        },
+        {
+          "name": "掩护战术",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "攻击范围内至少有2名其他干员时，自身攻击力+10%"
+        },
+        {
+          "name": "掩护战术",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "攻击范围内至少有2名其他干员时，自身攻击力+12%<@ba.talpu>（+2%）</>"
+        }
+      ]
+    }
   ]
 }

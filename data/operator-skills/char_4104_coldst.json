@@ -333,5 +333,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Not to be Outdone",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If no attack is made for 2 seconds, the next attack deals 120% ATK as Physical damage"
+        },
+        {
+          "name": "Not to be Outdone",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "If no attack is made for 2 seconds, the next attack deals 123% <@ba.talpu>(+3%)</> ATK as Physical damage"
+        },
+        {
+          "name": "Not to be Outdone",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If no attack is made for 2 seconds, the next attack deals 130% ATK as Physical damage"
+        },
+        {
+          "name": "Not to be Outdone",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "If no attack is made for 2 seconds, the next attack deals 133% <@ba.talpu>(+3%)</> ATK as Physical damage"
+        }
+      ]
+    }
   ]
 }

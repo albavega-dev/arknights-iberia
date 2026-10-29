@@ -395,5 +395,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Healing Boost",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Nearl's healing effect increases by 10%"
+        },
+        {
+          "name": "Healing Boost",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Nearl's healing effect increases by 12% <@ba.talpu>(+2%)</>"
+        },
+        {
+          "name": "Pegasus's Halo",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases the healing effect received by all allies by 10% when deployed"
+        },
+        {
+          "name": "Pegasus's Halo",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases the healing effect received by all allies in battlefield by 12% <@ba.talpu>(+2%)</> when deployed"
+        }
+      ]
+    }
   ]
 }

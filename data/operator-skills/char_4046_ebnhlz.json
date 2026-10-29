@@ -559,5 +559,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Dynamics",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Stored attacks deal 120% damage; Can store 1 extra charge that is only used when attacking elite or boss enemies"
+        },
+        {
+          "name": "Dynamics",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Stored attacks deal 135% damage; Can store 1 extra charge that is only used when attacking elite or boss enemies"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Appoggiatura",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If there are no other enemies near the target, attacks deal an additional 15% ATK as Arts damage"
+        },
+        {
+          "name": "Appoggiatura",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "If there are no other enemies near the target, attacks deal an additional 17% <@ba.talpu>(+2%)</> ATK as Arts damage"
+        }
+      ]
+    }
   ]
 }

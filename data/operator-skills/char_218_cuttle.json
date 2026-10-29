@@ -328,5 +328,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Abyssal Intuition",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is in the squad, all [Abyssal Hunters] Operators gain +6 ASPD"
+        },
+        {
+          "name": "Abyssal Intuition",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit is in the squad, all [Abyssal Hunters] Operators gain +8 <@ba.talpu>(+2)</> ASPD"
+        },
+        {
+          "name": "Abyssal Intuition",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is in the squad, all [Abyssal Hunters] Operators gain +12 ASPD"
+        },
+        {
+          "name": "Abyssal Intuition",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit is in the squad, all [Abyssal Hunters] Operators gain +14 <@ba.talpu>(+2)</> ASPD"
+        }
+      ]
+    }
   ]
 }

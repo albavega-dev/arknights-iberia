@@ -357,5 +357,39 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Differential Reloading Experiment",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack has a 30% chance to trigger one of the following effects: the attack instead hits twice; the target is <$ba.stun>Stunned</> for 0.5 seconds; the attack ignores 60% of the target's DEF"
+        },
+        {
+          "name": "Differential Reloading Experiment",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack has a 50% chance to trigger one of the following effects: the attack instead hits twice; the target is <$ba.stun>Stunned</> for 1 second; the attack ignores 60% of the target's DEF"
+        },
+        {
+          "name": "Differential Reloading Experiment",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack has a 70% chance to trigger one of the following effects: the attack instead hits twice; the target is <$ba.stun>Stunned</> for 1 second; the attack ignores 80% of the target's DEF"
+        }
+      ]
+    }
   ]
 }

@@ -396,5 +396,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Hong Mei Wing Chun",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 20% chance to increase ATK to 125% and slightly knock the target back"
+        },
+        {
+          "name": "Hong Mei Wing Chun",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, has a 20% chance to increase ATK to 135% <@ba.talpu>(+10%)</> and slightly knock the target back"
+        },
+        {
+          "name": "Hong Mei Wing Chun",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 20% chance to increase ATK to 150% and slightly knock the target back"
+        },
+        {
+          "name": "Hong Mei Wing Chun",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, has a 20% chance to increase ATK to 160% <@ba.talpu>(+10%)</> and slightly knock the target back"
+        }
+      ]
+    }
   ]
 }

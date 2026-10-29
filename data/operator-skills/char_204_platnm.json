@@ -393,5 +393,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "All-Out Attack",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "The longer the interval from the last attack is, the higher the ATK of the next attack will be (The longest interval is 2.5 seconds and the corresponding ATK increases to 140%)"
+        },
+        {
+          "name": "All-Out Attack",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "The longer the interval from the last attack is, the higher the ATK of the next attack will be (The longest interval is 2.5 seconds and the corresponding ATK increases to 150% <@ba.talpu>(+10%)</> )"
+        },
+        {
+          "name": "All-Out Attack",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "The longer the interval from the last attack is, the higher the ATK of the next attack will be (The longest interval is 2.5 seconds and the corresponding ATK increases to 180%)"
+        },
+        {
+          "name": "All-Out Attack",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "The longer the interval from the last attack is, the higher the ATK of the next attack will be (The longest interval is 2.5 seconds and the corresponding ATK increases to 190% <@ba.talpu>(+10%)</> )"
+        }
+      ]
+    }
   ]
 }

@@ -40,5 +40,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Delayed Detonation 1",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "3 seconds after deployment, inflicts 300% ATK as Physical damage to enemies in the nearby 8 tiles and applies 10% <$ba.fragile>Fragile</> effect for 8 seconds, then automatically retreats from battle"
+        },
+        {
+          "name": "Delayed Detonation 2",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 2,
+          "description": "3 seconds after deployment, inflicts 320% ATK as Physical damage to enemies in the nearby 8 tiles and applies 18% <$ba.fragile>Fragile</> effect for 8 seconds, then automatically retreats from battle"
+        },
+        {
+          "name": "Delayed Detonation 3",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "3 seconds after deployment, inflicts 340% ATK as Physical damage to enemies in the nearby 8 tiles and applies 21% <$ba.fragile>Fragile</> effect for 8 seconds, then automatically retreats from battle"
+        },
+        {
+          "name": "Delayed Detonation 4",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 4,
+          "description": "3 seconds after deployment, inflicts 360% ATK as Physical damage to enemies in the nearby 8 tiles and applies 24% <$ba.fragile>Fragile</> effect for 8 seconds, then automatically retreats from battle"
+        },
+        {
+          "name": "Delayed Detonation 5",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "3 seconds after deployment, inflicts 380% ATK as Physical damage to enemies in the nearby 8 tiles and applies 27% <$ba.fragile>Fragile</> effect for 8 seconds, then automatically retreats from battle"
+        },
+        {
+          "name": "Delayed Detonation 6",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "3 seconds after deployment, inflicts 400% ATK as Physical damage to enemies in the nearby 8 tiles and applies 30% <$ba.fragile>Fragile</> effect for 8 seconds, then automatically retreats from battle"
+        }
+      ]
+    }
   ]
 }

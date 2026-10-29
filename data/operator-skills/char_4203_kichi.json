@@ -372,5 +372,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lucky Combo!",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "For every type of enemy defeated after deployment, damage dealt by Kichisei +6%, stacking up to 2 times"
+        },
+        {
+          "name": "Lucky Combo!",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "For every type of enemy defeated after deployment, damage dealt by Kichisei +7% <@ba.talpu>(+1%)</>, stacking up to 2 times"
+        },
+        {
+          "name": "Lucky Combo!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "For every type of enemy defeated after deployment, damage dealt by Kichisei +6%, stacking up to 3 times"
+        },
+        {
+          "name": "Lucky Combo!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "For every type of enemy defeated after deployment, damage dealt by Kichisei +7% <@ba.talpu>(+1%)</>, stacking up to 3 times"
+        }
+      ]
+    }
   ]
 }

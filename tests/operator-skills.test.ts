@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { baseSkillDescriptions, buildGlossary, buildOperatorBaseSkills, buildOperatorSkills, expandSkillLevel, reachableSkillLevels, skillDescriptions, skillLevelLabel, termIdsOf } from "../src/game-data/operator-skills";
+import { baseSkillDescriptions, buildGlossary, buildOperatorBaseSkills, buildOperatorSkills, buildOperatorTalents, expandSkillLevel, reachableSkillLevels, skillDescriptions, skillLevelLabel, talentDescriptions, termIdsOf } from "../src/game-data/operator-skills";
 import { absentValueDisplay, baseSkillTextFixes, findSkillDataGap, fixBaseSkillText, skillDataGaps } from "../src/game-data/skill-data-gaps";
 
 const level = (description = "Deals <@ba.vup>{atk_scale:0%}</> damage", extra: Record<string, unknown> = {}) => ({
@@ -186,4 +186,46 @@ test("the unlock of each skill comes from character_table and a missing or inval
   assert.throws(() => build([{ skillId: "s1", unlockCond: { phase: "PHASE_3", level: 1 } }]), /no valid unlock condition/);
   assert.throws(() => build([{ skillId: "s1", unlockCond: { phase: "PHASE_1" } }]), /no valid unlock condition/);
   assert.throws(() => build([{ skillId: "s1", unlockCond: { phase: "PHASE_1", level: 0 } }]), /no valid unlock condition/);
+});
+
+const candidate = (phase: number, level: number, rank: number, extra: Record<string, unknown> = {}) => ({
+  unlockCondition: { phase: `PHASE_${phase}`, level }, requiredPotentialRank: rank, name: "Talent", description: `ATK +${phase}${rank}%`, rangeId: null, blackboard: [{ key: "atk", value: 0.1, valueStr: null }], isHideTalent: false, ...extra,
+});
+
+test("talents keep visible stages with official potentials and drop hidden, locked and empty candidates", () => {
+  const character = {
+    talents: [
+      { candidates: [candidate(0, 1, 0, { name: "？？？", description: "？？？？？", blackboard: {} }), candidate(2, 1, 0), candidate(2, 1, 4, { blackboard: {} })] },
+      { candidates: null },
+      { candidates: [candidate(0, 1, 0, { name: null, description: null, isHideTalent: true })] },
+      { candidates: [candidate(0, 1, 0, { name: null, description: null })] },
+      { candidates: [candidate(1, 1, 0, { name: "Spray 1", rangeId: "x-1" }), candidate(1, 55, 0, { name: "Spray 2" })] },
+    ],
+  };
+  const { talents, ranges } = buildOperatorTalents("char_test", character, rangeTable);
+  assert.deepEqual(talents, [
+    { index: 0, stages: [
+      { name: "Talent", unlock: { elite: 2, level: 1 }, potential: 1, description: "ATK +20%" },
+      { name: "Talent", unlock: { elite: 2, level: 1 }, potential: 5, description: "ATK +24%" },
+    ] },
+    { index: 4, stages: [
+      { name: "Spray 1", unlock: { elite: 1, level: 1 }, potential: 1, description: "ATK +10%", rangeId: "x-1" },
+      { name: "Spray 2", unlock: { elite: 1, level: 55 }, potential: 1, description: "ATK +10%" },
+    ] },
+  ]);
+  assert.deepEqual(ranges, { "x-1": rangeTable["x-1"] });
+  assert.deepEqual(talentDescriptions(talents), ["ATK +20%", "ATK +24%", "ATK +10%", "ATK +10%"]);
+  assert.deepEqual(buildOperatorTalents("char_test", {}, rangeTable), { talents: [], ranges: {} });
+  assert.deepEqual(buildOperatorTalents("char_test", { talents: null }, rangeTable).talents, []);
+});
+
+test("talents reject a stage without text, out of order, with an unknown potential, range or marker", () => {
+  const build = (...candidates: ReturnType<typeof candidate>[]) => buildOperatorTalents("char_test", { talents: [{ candidates }] }, rangeTable);
+  assert.throws(() => build(candidate(0, 1, 0, { description: null })), /without name or description/);
+  assert.throws(() => build(candidate(2, 1, 0), candidate(1, 1, 0)), /out of unlock order/);
+  assert.throws(() => build(candidate(1, 1, 2), candidate(1, 1, 2)), /out of unlock order/);
+  assert.throws(() => build(candidate(0, 1, 6)), /unknown potential rank 6/);
+  assert.throws(() => build(candidate(0, 1, 0, { unlockCondition: { phase: "PHASE_3", level: 1 } })), /no valid unlock condition/);
+  assert.throws(() => build(candidate(0, 1, 0, { rangeId: "y-9" })), /unknown range y-9/);
+  assert.throws(() => build(candidate(0, 1, 0, { description: "ATK +{missing}" })), /unresolved marker \{missing\}/);
 });

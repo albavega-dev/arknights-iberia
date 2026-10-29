@@ -556,5 +556,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "'I See, I Take'",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, each attack <$ba.steal>Steals</> 15 ATK (Caps at 150) and 10 DEF (Caps at 100) from the target"
+        },
+        {
+          "name": "'I See, I Take'",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, each attack <$ba.steal>Steals</> 17 <@ba.talpu>(+2)</> ATK (Caps at 170 <@ba.talpu>(+20)</>) and 11 <@ba.talpu>(+1)</> DEF (Caps at 110 <@ba.talpu>(+10)</>) from the target"
+        },
+        {
+          "name": "'I See, I Take'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, each attack <$ba.steal>Steals</> 25 ATK (Caps at 250) and 20 DEF (Caps at 200) from the target"
+        },
+        {
+          "name": "'I See, I Take'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, each attack <$ba.steal>Steals</> 27 <@ba.talpu>(+2)</> ATK (Caps at 270 <@ba.talpu>(+20)</>) and 21 <@ba.talpu>(+1)</> DEF (Caps at 210 <@ba.talpu>(+10)</>) from the target"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Graceful Shadow",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains 35% Physical and Arts Dodge and reduces the hit rate of Physical and Arts attacks from enemies in the surrounding 8 tiles by 20%"
+        },
+        {
+          "name": "Graceful Shadow",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Gains 38% <@ba.talpu>(+3%)</> Physical and Arts Dodge and reduces the hit rate of Physical and Arts attacks from enemies in the surrounding 8 tiles by 20%"
+        }
+      ]
+    }
   ]
 }

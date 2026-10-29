@@ -40,5 +40,21 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Improved Armor",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "potential": 1,
+          "description": "Max HP and DEF +12%"
+        }
+      ]
+    }
   ]
 }

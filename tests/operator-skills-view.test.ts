@@ -132,9 +132,9 @@ test("the loader checks id and region against the index before reading any file"
   assert.equal(await loadOperatorSkillsView(readers, "char_4218_aigis", "en"), null);
   assert.equal(await loadOperatorSkillsView(readers, "char_9999_missing", "en"), null);
   assert.equal(reads, before);
-  const wrongFile: SkillsDatasetReaders = { ...readers, readProfile: async () => ({ operatorId: "char_003_kalts", region: "en", skills: [], ranges: {}, baseSkills: [] }) };
+  const wrongFile: SkillsDatasetReaders = { ...readers, readProfile: async () => ({ operatorId: "char_003_kalts", region: "en", skills: [], ranges: {}, baseSkills: [], talents: [] }) };
   assert.equal(await loadOperatorSkillsView(wrongFile, "char_002_amiya", "en"), null);
-  const wrongRegion: SkillsDatasetReaders = { ...readers, readProfile: async () => ({ operatorId: "char_002_amiya", region: "cn", skills: [], ranges: {}, baseSkills: [] }) };
+  const wrongRegion: SkillsDatasetReaders = { ...readers, readProfile: async () => ({ operatorId: "char_002_amiya", region: "cn", skills: [], ranges: {}, baseSkills: [], talents: [] }) };
   assert.equal(await loadOperatorSkillsView(wrongRegion, "char_002_amiya", "en"), null);
 });
 
@@ -264,4 +264,56 @@ test("a base skill icon with an ampersand resolves to its normalised file, and t
   const glossary = await readJson<StoredSkillsGlossary>("operator-skills/glossary-en.json");
   const bare = buildOperatorSkillsView(profile, "en", index.sources.en, glossary, () => null);
   assert.ok(bare.baseSkills.flatMap((slot) => slot.stages).every((item) => item.icon === null && item.roomIcon === null));
+});
+
+const talentStagesOf = (talent: OperatorSkillsView["talents"][number]) => talent.stages.map((stage) => `${stage.name} E${stage.unlock.elite} Nv${stage.unlock.level} P${stage.potential}`);
+const tonesOf = (nodes: readonly SkillDescriptionNode[]): string[] => nodes.flatMap((node) => node.type === "style" ? [node.tone, ...tonesOf(node.children)] : []);
+
+test("talents: Frostleaf has one E2 stage with its own range", async () => {
+  const view = await load("char_193_frostl", "en");
+  assert.equal(view.talents.length, 1);
+  assert.deepEqual(talentStagesOf(view.talents[0]), ["Covered Strike E2 Nv1 P1"]);
+  assert.equal(view.talents[0].stages[0].rangeId, "3-1");
+  assert.ok(view.ranges["3-1"].grids.length > 0);
+  assert.equal(textOf(view.talents[0].stages[0].description), "Range expands, but Attack Interval increases slightly");
+});
+
+test("talents: Amiya drops the locked placeholder and marks the P6 bonus with the potential tone", async () => {
+  const view = await load("char_002_amiya", "en");
+  assert.deepEqual(view.talents.map((talent) => talent.index), [0]);
+  assert.deepEqual(talentStagesOf(view.talents[0]), ["Emotional Absorption E2 Nv1 P1", "Emotional Absorption E2 Nv1 P6"]);
+  const [base, p6] = view.talents[0].stages;
+  assert.deepEqual(tonesOf(base.description), []);
+  assert.deepEqual(tonesOf(p6.description), ["potential", "potential"]);
+  assert.equal(textOf(p6.description), "Restores 3 (+1) extra Skill Points when attacking an enemy and 10 (+2) extra Skill Points when killing an enemy");
+});
+
+test("talents: Lancet-2 renames its single talent at each potential", async () => {
+  const view = await load("char_285_medic2", "en");
+  assert.deepEqual(talentStagesOf(view.talents[0]), [1, 2, 3, 4, 5, 6].map((potential) => `Support Spray ${potential} E0 Nv1 P${potential}`));
+  assert.match(textOf(view.talents[0].stages[5].description), /by 500 after deployment/);
+});
+
+test("talents: Hibiscus improves at E1 level 55", async () => {
+  const view = await load("char_120_hibisc", "en");
+  assert.deepEqual(talentStagesOf(view.talents[0]), ["Healing Up E1 Nv1 P1", "Healing Up E1 Nv55 P1"]);
+  assert.deepEqual(view.talents[0].stages.map((stage) => textOf(stage.description)), ["ATK +4%", "ATK +8%"]);
+});
+
+test("talents: the CN-only char_1015_aglna2 varies by elite and potential and resolves its CN glossary terms", async () => {
+  const view = await load("char_1015_aglna2", "cn");
+  assert.deepEqual(view.talents.map((talent) => talent.index), [0, 1]);
+  assert.deepEqual(view.talents[0].stages.map((stage) => [stage.unlock.elite, stage.potential]), [[1, 1], [1, 3], [2, 1], [2, 3]]);
+  assert.deepEqual(view.talents[1].stages.map((stage) => [stage.unlock.elite, stage.potential]), [[2, 1], [2, 5]]);
+  assert.deepEqual(Object.keys(view.talents[0].terms), ["ba.liftoff", "ba.weightless"]);
+  for (const term of Object.values(view.talents[0].terms)) assert.ok(term.name && term.description.length > 0);
+  assert.ok(tonesOf(view.talents[0].stages[1].description).includes("potential"));
+});
+
+test("talents: SilverAsh the Reignfrost keeps only its two visible talents out of eight", async () => {
+  const view = await load("char_1045_svash2", "en");
+  assert.deepEqual(view.talents.map((talent) => talent.index), [0, 1]);
+  assert.deepEqual(talentStagesOf(view.talents[0]), ["Open Game E0 Nv1 P1", "Open Game E1 Nv1 P1", "Open Game E2 Nv1 P1"]);
+  assert.deepEqual(talentStagesOf(view.talents[1]), ["Snow Realm Trailblazer E2 Nv1 P1", "Snow Realm Trailblazer E2 Nv1 P5"]);
+  for (const talent of view.talents) for (const stage of talent.stages) assert.deepEqual(unknownMarkers(stage.description), []);
 });

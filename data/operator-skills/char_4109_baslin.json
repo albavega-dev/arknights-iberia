@@ -419,5 +419,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Authoritarian Teachings",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +6; if there are allied Operators in the 8 surrounding tiles, gain another RES +2"
+        },
+        {
+          "name": "Authoritarian Teachings",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +12; if there are allied Operators in the 8 surrounding tiles, gain another RES +4"
+        }
+      ]
+    }
   ]
 }

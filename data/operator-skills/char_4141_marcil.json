@@ -701,5 +701,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "The Most Brilliant Student In the School's History",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Skills use <$ba.magicpoint>Mana</> and can be activated at any time. <$ba.magicpoint>Mana</> does not recover naturally (recovers 1 point per second when not on the field). When having <$ba.magicpoint>Mana</>, ATK +10%, attacks have increased splash area"
+        },
+        {
+          "name": "The Most Brilliant Student In the School's History",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Skills use <$ba.magicpoint>Mana</> and can be activated at any time. <$ba.magicpoint>Mana</> does not recover naturally (recovers 1 point per second when not on the field). When having <$ba.magicpoint>Mana</>, ATK +15% <@ba.talpu>(+5%)</>, attacks have increased splash area"
+        },
+        {
+          "name": "The Most Brilliant Student In the School's History",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Skills use <$ba.magicpoint>Mana</> and can be activated at any time. <$ba.magicpoint>Mana</> does not recover naturally (recovers 1 point per second when not on the field). When having <$ba.magicpoint>Mana</>, ATK +20%, attacks have increased splash area"
+        },
+        {
+          "name": "The Most Brilliant Student In the School's History",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Skills use <$ba.magicpoint>Mana</> and can be activated at any time. <$ba.magicpoint>Mana</> does not recover naturally (recovers 1 point per second when not on the field). When having <$ba.magicpoint>Mana</>, ATK +25% <@ba.talpu>(+5%)</>, attacks have increased splash area"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Reliable Companion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Initial <$ba.magicpoint>Mana</> +25; when there are 4 <$ba.laiosteam>[Laios's Party]</> Operators in the squad, all <$ba.laiosteam>[Laios's Party]</> Operators gain +25 ASPD and +35% DEF"
+        }
+      ]
+    }
   ]
 }

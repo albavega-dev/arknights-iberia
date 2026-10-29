@@ -405,5 +405,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Waiting Game",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is inactive, deals 10% of Tequila's ATK as Arts damage to the attacker when Tequila is attacked"
+        },
+        {
+          "name": "Waiting Game",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is inactive, deals 13% <@ba.talpu>(+3%)</> of Tequila's ATK as Arts damage to the attacker when Tequila is attacked"
+        },
+        {
+          "name": "Waiting Game",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is inactive, deals 20% of Tequila's ATK as Arts damage to the attacker when Tequila is attacked"
+        },
+        {
+          "name": "Waiting Game",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is inactive, deals 23% <@ba.talpu>(+3%)</> of Tequila's ATK as Arts damage to the attacker when Tequila is attacked"
+        }
+      ]
+    }
   ]
 }

@@ -466,5 +466,98 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 15% of ATK every 5s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 20% <@ba.talpu>(+5%)</> of ATK every 5s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 20% of ATK every 4s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 25% <@ba.talpu>(+5%)</> of ATK every 4s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 30% of ATK every 4s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 35% <@ba.talpu>(+5%)</> of ATK every 4s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Do Not Fear Sorrow",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +2 whenever healing an <$ba.mujica>Ave Mujica</> member"
+        },
+        {
+          "name": "Do Not Fear Sorrow",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +3 whenever restoring an <$ba.mujica>Ave Mujica</> member's HP; when <$ba.mujica>Ave Mujica</> members within Attack Range attack, they deal an extra 15% of Uika Misumi's ATK as Arts damage"
+        },
+        {
+          "name": "Do Not Fear Sorrow",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +5 whenever restoring an <$ba.mujica>Ave Mujica</> member's HP; when <$ba.mujica>Ave Mujica</> members within Attack Range attack, they deal an extra 30% of Uika Misumi's ATK as Arts damage"
+        }
+      ]
+    }
   ]
 }

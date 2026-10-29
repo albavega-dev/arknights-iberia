@@ -317,5 +317,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Spiritual Destruction",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Disables the target's special ability when attacking, lasting 1 second"
+        },
+        {
+          "name": "Spiritual Destruction",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Disables the target's special ability when attacking, lasting 2 <@ba.talpu>(+1)</> seconds"
+        },
+        {
+          "name": "Spiritual Destruction",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Disables the target's special ability when attacking, lasting 5 seconds"
+        },
+        {
+          "name": "Spiritual Destruction",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Disables the target's special ability when attacking, lasting 6 <@ba.talpu>(+1)</> seconds"
+        }
+      ]
+    }
   ]
 }

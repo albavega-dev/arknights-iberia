@@ -366,5 +366,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Explorer's Stash",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use 1 Ore 'Killer' (can hold up to 2); once an Ore 'Killer' is deployed, can be manually detonated after an arming period"
+        },
+        {
+          "name": "Explorer's Stash",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Can use 2 <@ba.talpu>(+1)</> Ore 'Killers' (can hold up to 2); once an Ore 'Killer' is deployed, can be manually detonated after an arming period"
+        },
+        {
+          "name": "Explorer's Stash",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use 2 Ore 'Killers' (can hold up to 3); once an Ore 'Killer' is deployed, can be manually detonated after an arming period"
+        },
+        {
+          "name": "Explorer's Stash",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Can use 3 <@ba.talpu>(+1)</> Ore 'Killers' (can hold up to 3); once an Ore 'Killer' is deployed, can be manually detonated after an arming period"
+        },
+        {
+          "name": "Explorer's Stash",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use 3 Ore 'Killers' (can hold up to 4); once an Ore 'Killer' is deployed, can be manually detonated after an arming period"
+        },
+        {
+          "name": "Explorer's Stash",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Can use 4 <@ba.talpu>(+1)</> Ore 'Killers' (can hold up to 4); once an Ore 'Killer' is deployed, can be manually detonated after an arming period"
+        }
+      ]
+    }
   ]
 }

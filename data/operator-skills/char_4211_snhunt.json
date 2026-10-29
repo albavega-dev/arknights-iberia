@@ -328,5 +328,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Cloud-Rifting Shot",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "On skill activation, sends out Rift Cloudbeast to attack, dealing 150% ATK as Physical damage and inflicting <$ba.cold>Cold</> for 2 seconds"
+        },
+        {
+          "name": "Cloud-Rifting Shot",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "On skill activation, sends out Rift Cloudbeast to attack, dealing 155% <@ba.talpu>(+5%)</> ATK as Physical damage and inflicting <$ba.cold>Cold</> for 2 seconds"
+        },
+        {
+          "name": "Cloud-Rifting Shot",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "On skill activation, sends out Rift Cloudbeast to attack, dealing 180% ATK as Physical damage and inflicting <$ba.cold>Cold</> for 3 seconds"
+        },
+        {
+          "name": "Cloud-Rifting Shot",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "On skill activation, sends out Rift Cloudbeast to attack, dealing 185% <@ba.talpu>(+5%)</> ATK as Physical damage and inflicting <$ba.cold>Cold</> for 3 seconds"
+        }
+      ]
+    }
   ]
 }

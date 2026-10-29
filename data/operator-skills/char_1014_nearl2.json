@@ -574,6 +574,31 @@
           "col": 2
         }
       ]
+    },
+    "x-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 0
+        }
+      ]
     }
   },
   "baseSkills": [
@@ -605,6 +630,56 @@
             "level": 1
           },
           "description": "When this Operator is assigned to be the Trainer in the Training Room, for each <$cc.tag.knight><@cc.kw>Knight</></> Operator in the Base (excluding Assistants and Activity Room users), Operators' Specialization training speed <@cc.vup>+5%</> (caps at <@cc.kw>8</> Operators)"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Brave the Darkness",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deploying, deals 50% ATK as True damage to enemies in the four adjacent tiles and <$ba.stun>Stuns</> them for 2 seconds. If the previously deployed Operator is from Kazimierz, deals an additional hit",
+          "rangeId": "x-5"
+        },
+        {
+          "name": "Brave the Darkness",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deploying, deals 80% ATK as True damage to enemies in the four adjacent tiles and <$ba.stun>Stuns</> them for 3 seconds. If the previously deployed Operator is from Kazimierz, deals an additional hit",
+          "rangeId": "x-5"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Daybreak",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 20% DEF"
+        },
+        {
+          "name": "Daybreak",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 23% <@ba.talpu>(+3%)</> DEF"
         }
       ]
     }

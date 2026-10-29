@@ -407,5 +407,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Precise Aim",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Ignores 90 DEF when attacking enemies with weight greater than or equal to 3"
+        },
+        {
+          "name": "Precise Aim",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Ignores 110 <@ba.talpu>(+20)</> DEF when attacking enemies with weight greater than or equal to 3"
+        },
+        {
+          "name": "Precise Aim",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Ignores 180 DEF when attacking enemies with weight greater than or equal to 3"
+        },
+        {
+          "name": "Precise Aim",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Ignores 200 <@ba.talpu>(+20)</> DEF when attacking enemies with weight greater than or equal to 3"
+        }
+      ]
+    }
   ]
 }

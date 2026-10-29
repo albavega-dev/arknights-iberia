@@ -518,5 +518,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Emergency Defibrillation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 3 seconds"
+        },
+        {
+          "name": "Emergency Defibrillation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 4<@ba.talpu>(+1)</> seconds"
+        },
+        {
+          "name": "Emergency Defibrillation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 6 seconds"
+        },
+        {
+          "name": "Emergency Defibrillation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 7<@ba.talpu>(+1)</> seconds"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Harsh Training",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains <$ba.buffres>status resistance</> after being deployed for 15 seconds"
+        },
+        {
+          "name": "Harsh Training",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Gains <$ba.buffres>status resistance</> after being deployed for 12 <@ba.talpu>(-3)</> seconds"
+        }
+      ]
+    }
   ]
 }

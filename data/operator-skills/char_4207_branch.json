@@ -396,5 +396,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Simple Bandages",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 40% of Max HP when skill ends"
+        },
+        {
+          "name": "Simple Bandages",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores 50% <@ba.talpu>(+10%)</> of Max HP when skill ends"
+        },
+        {
+          "name": "Simple Bandages",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 50% of Max HP when skill ends"
+        },
+        {
+          "name": "Simple Bandages",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores 60% <@ba.talpu>(+10%)</> of Max HP when skill ends"
+        }
+      ]
+    }
   ]
 }

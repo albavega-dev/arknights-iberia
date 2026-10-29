@@ -317,5 +317,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Stamina Up",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP +10%"
+        },
+        {
+          "name": "Stamina Up",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Max HP +12% <@ba.talpu>(+2%)</>"
+        },
+        {
+          "name": "Abyssal Regeneration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP +10%; Restores HP by 2% of Max HP per second"
+        },
+        {
+          "name": "Abyssal Regeneration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Max HP +12% <@ba.talpu>(+2%)</>; Restores HP by 2.5% <@ba.talpu>(+0.5%)</> of Max HP per second"
+        }
+      ]
+    }
   ]
 }

@@ -148,5 +148,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Casting Speed Up",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +5"
+        },
+        {
+          "name": "Casting Speed Up",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 1,
+          "description": "ASPD +9"
+        }
+      ]
+    }
   ]
 }

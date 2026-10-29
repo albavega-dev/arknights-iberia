@@ -418,5 +418,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Forward Together",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Carries 2 Reliable Batteries that only take effect on Casters and Supporters (max 2 deployed at once). Equipped units gain +5% ATK (lasts 20 seconds)"
+        },
+        {
+          "name": "Forward Together",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Carries 2 Reliable Batteries that only take effect on Casters and Supporters (max 2 deployed at once). Equipped units gain +7% ATK <@ba.talpu>(+2%)</> (lasts 20 seconds)"
+        },
+        {
+          "name": "Forward Together",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Carries 3 Reliable Batteries that only take effect on Casters and Supporters (max 2 deployed at once). Equipped units gain +10% ATK (lasts 30 seconds)"
+        },
+        {
+          "name": "Forward Together",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Carries 3 Reliable Batteries that only take effect on Casters and Supporters (max 2 deployed at once). Equipped units gain +12% ATK <@ba.talpu>(+2%)</> (lasts 30 seconds)"
+        },
+        {
+          "name": "Forward Together",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Carries 3 Reliable Batteries that only take effect on Casters and Supporters (max 2 deployed at once). Equipped units gain +15% ATK (lasts 30 seconds)"
+        },
+        {
+          "name": "Forward Together",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Carries 3 Reliable Batteries that only take effect on Casters and Supporters (max 2 deployed at once). Equipped units gain +17% ATK <@ba.talpu>(+2%)</> (lasts 30 seconds)"
+        }
+      ]
+    }
   ]
 }

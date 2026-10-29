@@ -602,5 +602,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Roiling Rage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Physical damage caused by Trait splash effect increases by 24%; any high ground tile touched by the splash deals 24% ATK as Physical damage to all ground enemies in the four adjacent tiles"
+        },
+        {
+          "name": "Roiling Rage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Physical damage caused by Trait splash effect increases by 24%; any high ground tile touched by the splash deals 27%<@ba.talpu>(+3%)</> ATK as Physical damage to all ground enemies in the four adjacent tiles"
+        },
+        {
+          "name": "Roiling Rage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Physical damage caused by Trait splash effect increases by 24%; any high ground tile touched by the splash deals 24% ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+        },
+        {
+          "name": "Roiling Rage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Physical damage caused by Trait splash effect increases by 24%; any high ground tile touched by the splash deals 27%<@ba.talpu>(+3%)</> ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Human Tide",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is active, all Operators gain +14% ATK and DEF; [Ursus Student Self-Government Group] Operators receive double the effect"
+        },
+        {
+          "name": "Human Tide",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When skill is active, all Operators gain +18% <@ba.talpu>(+4%)</> ATK and DEF; [Ursus Student Self-Government Group] Operators receive double the effect"
+        }
+      ]
+    }
   ]
 }

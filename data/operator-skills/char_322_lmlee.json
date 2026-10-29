@@ -619,5 +619,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Kindness Begets Prosperity",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Lee is blocking an enemy, the enemy has ASPD -7 and Lee has ASPD +7; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+        },
+        {
+          "name": "Kindness Begets Prosperity",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Lee is blocking an enemy, the enemy has ASPD -8 <@ba.talpu>(+1)</> and Lee has ASPD +8 <@ba.talpu>(+1)</>; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+        },
+        {
+          "name": "Kindness Begets Prosperity",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Lee is blocking an enemy, the enemy has ASPD -14 and Lee has ASPD +14; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+        },
+        {
+          "name": "Kindness Begets Prosperity",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Lee is blocking an enemy, the enemy has ASPD -15 <@ba.talpu>(+1)</> and Lee has ASPD +15 <@ba.talpu>(+1)</>; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Preparedness Averts Peril",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When DP is consumed by this unit's Trait, if there is sufficient DP, consumes 5 DP instead to block the next <$ba.stun>Stun</>/<$ba.frozen>Freeze</> effect inflicted on this unit, and stuns the attacker for 3 seconds"
+        }
+      ]
+    }
   ]
 }

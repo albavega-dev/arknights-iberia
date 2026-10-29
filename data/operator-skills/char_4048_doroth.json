@@ -556,5 +556,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Resonator",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 4 Resonators (Can store up to 6); The first enemy that steps on a Resonator will trigger its effect"
+        },
+        {
+          "name": "Resonator",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 6 <@ba.talpu>(+2)</> Resonators (Can store up to 6); The first enemy that steps on a Resonator will trigger its effect"
+        },
+        {
+          "name": "Resonator",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 6 Resonators (Can store up to 8); The first enemy that steps on a Resonator will trigger its effect. On deployment, immediately deploys 1 Resonator within Attack Range"
+        },
+        {
+          "name": "Resonator",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 8 <@ba.talpu>(+2)</> Resonators (Can store up to 8); The first enemy that steps on a Resonator will trigger its effect. On deployment, immediately deploys 1 Resonator within Attack Range"
+        },
+        {
+          "name": "Resonator",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 8 Resonators (Can store up to 10); The first enemy that steps on a Resonator will trigger its effect. On deployment, immediately deploys 2 Resonators within Attack Range"
+        },
+        {
+          "name": "Resonator",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 10 <@ba.talpu>(+2)</> Resonators (Can store up to 10); The first enemy that steps on a Resonator will trigger its effect. On deployment, immediately deploys 2 Resonators within Attack Range"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Dreamer",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After a trap activates, Dorothy gains +2% ATK, stacking up to 10 times"
+        },
+        {
+          "name": "Dreamer",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After a trap activates, Dorothy gains +2% ATK, stacking up to 12 <@ba.talpu>(+2)</> times"
+        }
+      ]
+    }
   ]
 }

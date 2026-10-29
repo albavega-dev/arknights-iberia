@@ -140,5 +140,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Shortcoming Breakthrough",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +4; Attacks ranged enemies first"
+        },
+        {
+          "name": "Shortcoming Breakthrough",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 1,
+          "description": "ASPD +8; Attacks ranged enemies first"
+        }
+      ]
+    }
   ]
 }

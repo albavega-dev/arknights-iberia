@@ -428,6 +428,47 @@
           "col": 0
         }
       ]
+    },
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
     }
   },
   "baseSkills": [
@@ -464,6 +505,53 @@
             "level": 1
           },
           "description": "进驻会客室时，线索搜集速度提升<@cc.vup>20%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "淑女风范",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "部署后，嘉辛塔自身与周围八格的友方单位获得8%的<$ba.airprotect>对空庇护</>",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "淑女风范",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "部署后，嘉辛塔自身与周围八格的友方单位获得10%<@ba.talpu>（+2%）</>的<$ba.airprotect>对空庇护</>",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "淑女风范",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "部署后，嘉辛塔自身与周围八格的友方单位获得13%的<$ba.airprotect>对空庇护</>",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "淑女风范",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "部署后，嘉辛塔自身与周围八格的友方单位获得15%<@ba.talpu>（+2%）</>的<$ba.airprotect>对空庇护</>",
+          "rangeId": "x-4"
         }
       ]
     }

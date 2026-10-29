@@ -40,5 +40,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Tactical Configuration 1",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases the ATK and DEF of all [Melee] allies by 10% for 10 seconds after deployment"
+        },
+        {
+          "name": "Tactical Configuration 2",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 2,
+          "description": "Increases the ATK and DEF of all [Melee] allies by 12% for 12 seconds after deployment"
+        },
+        {
+          "name": "Tactical Configuration 3",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Increases the ATK and DEF of all [Melee] allies by 14% for 14 seconds after deployment"
+        },
+        {
+          "name": "Tactical Configuration 4",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 4,
+          "description": "Increases the ATK and DEF of all [Melee] allies by 16% for 16 seconds after deployment"
+        },
+        {
+          "name": "Tactical Configuration 5",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases the ATK and DEF of all [Melee] allies by 18% for 18 seconds after deployment"
+        },
+        {
+          "name": "Tactical Configuration 6",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Increases the ATK and DEF of all [Melee] allies by 20% for 20 seconds after deployment"
+        }
+      ]
+    }
   ]
 }

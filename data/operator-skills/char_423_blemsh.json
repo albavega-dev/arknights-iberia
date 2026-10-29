@@ -641,5 +641,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Knight of Sword and Shield",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, allies that have a Defensive Recovery skill also gain 1 SP when attacking"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Mercy",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Blemishine can attack and will prioritize <$ba.sleep>Sleeping</> enemies; Increase ATK to 120% when attacking <$ba.sleep>Sleeping</> enemies"
+        },
+        {
+          "name": "Mercy",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Blemishine can attack and will prioritize <$ba.sleep>Sleeping</> enemies; Increase ATK to 124% <@ba.talpu>(+4%)</> when attacking <$ba.sleep>Sleeping</> enemies"
+        },
+        {
+          "name": "Mercy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Blemishine can attack and will prioritize <$ba.sleep>Sleeping</> enemies; Increase ATK to 140% when attacking <$ba.sleep>Sleeping</> enemies"
+        },
+        {
+          "name": "Mercy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Blemishine can attack and will prioritize <$ba.sleep>Sleeping</> enemies; Increase ATK to 144% <@ba.talpu>(+4%)</> when attacking <$ba.sleep>Sleeping</> enemies"
+        }
+      ]
+    }
   ]
 }

@@ -377,5 +377,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Fiery Instinct",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking Sarkaz enemies, increase ATK to 130%"
+        },
+        {
+          "name": "Fiery Instinct",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking Sarkaz enemies, increase ATK to 135% <@ba.talpu>(+5%)</>"
+        },
+        {
+          "name": "Fiery Instinct",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking Sarkaz enemies, increase ATK to 145%"
+        },
+        {
+          "name": "Fiery Instinct",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking Sarkaz enemies, increase ATK to 150% <@ba.talpu>(+5%)</>"
+        }
+      ]
+    }
   ]
 }

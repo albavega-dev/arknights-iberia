@@ -311,5 +311,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Demonic Physique",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF -20%; Max HP +20%"
+        },
+        {
+          "name": "Demonic Physique",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "DEF -20%; Max HP +23% <@ba.talpu>(+3%)</>"
+        }
+      ]
+    }
   ]
 }

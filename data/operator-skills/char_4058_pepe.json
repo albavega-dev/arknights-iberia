@@ -598,5 +598,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Legacy of the Past",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every enemy defeated while her skill is active grants Pepe 1 SP when the skill ends; restores up to 10 SP"
+        },
+        {
+          "name": "Legacy of the Past",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Every enemy defeated while her skill is active grants Pepe 1 SP when the skill ends; restores up to 13 <@ba.talpu>(+3)</> SP"
+        },
+        {
+          "name": "Legacy of the Past",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every enemy defeated while her skill is active grants Pepe 1 SP when the skill ends; restores up to 14 SP"
+        },
+        {
+          "name": "Legacy of the Past",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Every enemy defeated while her skill is active grants Pepe 1 SP when the skill ends; restores up to 17 <@ba.talpu>(+3)</> SP"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Perfuse With Lotus",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all [Guard] Operators gain +16% ATK"
+        },
+        {
+          "name": "Perfuse With Lotus",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When deployed, all [Guard] Operators gain +20% <@ba.talpu>(+4%)</> ATK"
+        }
+      ]
+    }
   ]
 }

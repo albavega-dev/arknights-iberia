@@ -644,5 +644,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "探险理论",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "珊比受到的<$ba.dt.element>元素损伤</>降低5%；珊比造成物理伤害时，附带攻击力8%的<$ba.dt.erosion2>侵蚀损伤</>，并使目标的<$ba.dt.erosion2>侵蚀损伤</>冷却减少1秒"
+        },
+        {
+          "name": "探险理论",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "珊比受到的<$ba.dt.element>元素损伤</>降低10%<@ba.talpu>（+5%）</>；珊比造成物理伤害时，附带攻击力10%<@ba.talpu>（+2%）</>的<$ba.dt.erosion2>侵蚀损伤</>，并使目标的<$ba.dt.erosion2>侵蚀损伤</>冷却减少1.2<@ba.talpu>（+0.2）</>秒"
+        },
+        {
+          "name": "探险理论",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "珊比受到的<$ba.dt.element>元素损伤</>降低15%；珊比造成物理伤害时，附带攻击力10%的<$ba.dt.erosion2>侵蚀损伤</>，并使目标的<$ba.dt.erosion2>侵蚀损伤</>冷却减少1秒"
+        },
+        {
+          "name": "探险理论",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "珊比受到的<$ba.dt.element>元素损伤</>降低20%<@ba.talpu>（+5%）</>；珊比造成物理伤害时，附带攻击力12%<@ba.talpu>（+2%）</>的<$ba.dt.erosion2>侵蚀损伤</>，并使目标的<$ba.dt.erosion2>侵蚀损伤</>冷却减少1.2<@ba.talpu>（+0.2）</>秒"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "坚硬脚板",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "受到过来自珊比伤害的敌人<$ba.dt.erosion2>侵蚀损伤</>爆发时，珊比获得8点防御力（最多叠加30层）和250点<$ba.barrier>屏障</>（不超过最大生命值的300%）"
+        },
+        {
+          "name": "坚硬脚板",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "受到过来自珊比伤害的敌人<$ba.dt.erosion2>侵蚀损伤</>爆发时，珊比获得11<@ba.talpu>（+3）</>点防御力（最多叠加30层）和330<@ba.talpu>（+80）</>点<$ba.barrier>屏障</>（不超过最大生命值的300%）"
+        }
+      ]
+    }
   ]
 }

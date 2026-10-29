@@ -625,5 +625,44 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Industrial Water Cannon",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy a Reserve Water Cannon that lasts for 15s; the Water Cannon can attack 1 target and push it away slightly"
+        },
+        {
+          "name": "Industrial Water Cannon",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy a Reserve Water Cannon that lasts for 20s; the Water Cannon can attack 1 target and push it away slightly"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Upgraded Water Cannon",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases the shift level of the Water Cannon's normal attacks and skills by 1, and Weedy will restore 1 SP per 3 seconds if the Water Cannon is located within 4 tiles around her"
+        }
+      ]
+    }
   ]
 }

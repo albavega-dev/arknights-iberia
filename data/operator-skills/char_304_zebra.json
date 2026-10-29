@@ -474,5 +474,52 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Striped Camouflage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Heavyrain and allies on high ground tiles within the 8 surrounding tiles gain 10% Physical Dodge",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Striped Camouflage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Heavyrain and allies on high ground tiles within the 8 surrounding tiles gain 13% <@ba.talpu>(+3%)</> Physical Dodge",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Striped Camouflage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Heavyrain and allies on high ground tiles within the 8 surrounding tiles gain 20% Physical Dodge",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Striped Camouflage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Heavyrain and allies on high ground tiles within the 8 surrounding tiles gain 23% <@ba.talpu>(+3%)</> Physical Dodge",
+          "rangeId": "x-4"
+        }
+      ]
+    }
   ]
 }

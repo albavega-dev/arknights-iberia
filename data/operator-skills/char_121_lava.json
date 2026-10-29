@@ -140,5 +140,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Quick Skill Usage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Immediately obtains 15 Skill Points after deployment"
+        },
+        {
+          "name": "Quick Skill Usage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Immediately obtains 20 <@ba.talpu>(+5)</> Skill Points after deployment"
+        },
+        {
+          "name": "Quick Skill Usage",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 1,
+          "description": "Immediately obtains 30 Skill Points after deployment"
+        },
+        {
+          "name": "Quick Skill Usage",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 5,
+          "description": "Immediately obtains 35 <@ba.talpu>(+5)</> Skill Points after deployment"
+        }
+      ]
+    }
   ]
 }

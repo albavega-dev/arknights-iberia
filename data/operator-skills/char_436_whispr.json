@@ -366,5 +366,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Tower of Life",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 3% of Whisperain's ATK (Unaffected by this unit's Trait)"
+        },
+        {
+          "name": "Tower of Life",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 4% <@ba.talpu>(+1%)</> of Whisperain's ATK (Unaffected by this unit's Trait)"
+        },
+        {
+          "name": "Tower of Life",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 6% of Whisperain's ATK (Unaffected by this unit's Trait)"
+        },
+        {
+          "name": "Tower of Life",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 7% <@ba.talpu>(+1%)</> of Whisperain's ATK (Unaffected by this unit's Trait)"
+        }
+      ]
+    }
   ]
 }

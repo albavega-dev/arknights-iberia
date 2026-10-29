@@ -749,5 +749,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Born Warrior",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing damage, there is a 10% chance to increase ATK to 130% and <$ba.tremble>Frighten</> the target for 5s"
+        },
+        {
+          "name": "Born Warrior",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When dealing damage, there is a 10% chance to increase ATK to 135% <@ba.talpu>(+5%)</> and <$ba.tremble>Frighten</> the target for 5s"
+        },
+        {
+          "name": "Born Warrior",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing damage, there is a 10% chance to increase ATK to 160% and <$ba.tremble>Frighten</> the target for 5s."
+        },
+        {
+          "name": "Born Warrior",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When dealing damage, there is a 10% chance to increase ATK to 165% <@ba.talpu>(+5%)</> and <$ba.tremble>Frighten</> the target for 5s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Living Legend",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Ignore 25% DEF when attacking <$ba.tremble>Frightened</> targets"
+        },
+        {
+          "name": "Living Legend",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Ignore 30% <@ba.talpu>(+5%)</> DEF when attacking <$ba.tremble>Frightened</> targets"
+        }
+      ]
+    }
   ]
 }

@@ -339,5 +339,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Hidden Killer - Medium",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Stays <$ba.invisible>Invisible</> normally. The first attack made gains +25% ATK and removes <$ba.invisible>Invisibility</>. Regains <$ba.invisible>Invisible</> state after not attacking for 6 seconds"
+        },
+        {
+          "name": "Hidden Killer - Medium",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Stays <$ba.invisible>Invisible</> normally. The first attack made gains +29% <@ba.talpu>(+4%)</> ATK and removes <$ba.invisible>Invisibility</>. Regains <$ba.invisible>Invisible</> state after not attacking for 6 seconds"
+        },
+        {
+          "name": "Hidden Killer - Elite",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Stays <$ba.invisible>Invisible</> normally. The first attack made gains +50% ATK and removes <$ba.invisible>Invisibility</>. Regains <$ba.invisible>Invisible</> state after not attacking for 5 seconds"
+        },
+        {
+          "name": "Hidden Killer - Elite",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Stays <$ba.invisible>Invisible</> normally. The first attack made gains +54% <@ba.talpu>(+4%)</> ATK and removes <$ba.invisible>Invisibility</>. Regains <$ba.invisible>Invisible</> state after not attacking for 5 seconds"
+        }
+      ]
+    }
   ]
 }

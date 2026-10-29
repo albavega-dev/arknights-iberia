@@ -366,5 +366,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Helper",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +6% ATK"
+        },
+        {
+          "name": "Helper",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +7% <@ba.talpu>(+1%)</> ATK"
+        },
+        {
+          "name": "Helper",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +10% ATK"
+        },
+        {
+          "name": "Helper",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +11% <@ba.talpu>(+1%)</> ATK"
+        }
+      ]
+    }
   ]
 }

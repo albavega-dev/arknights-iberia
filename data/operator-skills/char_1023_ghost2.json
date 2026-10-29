@@ -566,5 +566,65 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Embraced Self",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<Substitute> reduces Movement Speed of nearby enemies by 20%, and deals 20% ATK as Arts damage to them per second",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Embraced Self",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<Substitute> reduces Movement Speed of nearby enemies by 30%, and deals 30% ATK as Arts damage to them per second",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Embraced Self",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<Substitute> reduces Movement Speed of nearby enemies by 40%, and deals 40% ATK as Arts damage to them per second",
+          "rangeId": "x-4"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Ægir's Depths",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +20% Max HP"
+        },
+        {
+          "name": "Ægir's Depths",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +23% <@ba.talpu>(+3%)</> Max HP"
+        }
+      ]
+    }
   ]
 }

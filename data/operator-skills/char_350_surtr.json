@@ -549,5 +549,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Molten Flame",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 12 RES"
+        },
+        {
+          "name": "Molten Flame",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 14 <@ba.talpu>(+2)</> RES"
+        },
+        {
+          "name": "Molten Flame",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 20 RES"
+        },
+        {
+          "name": "Molten Flame",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 22 <@ba.talpu>(+2)</> RES"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Remnant Ash",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 4 seconds later"
+        },
+        {
+          "name": "Remnant Ash",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 5 <@ba.talpu>(+1)</> seconds later"
+        },
+        {
+          "name": "Remnant Ash",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 8 seconds later"
+        },
+        {
+          "name": "Remnant Ash",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 9 <@ba.talpu>(+1)</> seconds later"
+        }
+      ]
+    }
   ]
 }

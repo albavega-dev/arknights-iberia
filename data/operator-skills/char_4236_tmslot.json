@@ -333,5 +333,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "新产品测评",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "攻击力+4%，浮游单元攻击时有15%概率使目标<$ba.sluggish>停顿</>1.5秒"
+        },
+        {
+          "name": "新产品测评",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "攻击力+7%<@ba.talpu>（+3%）</>，浮游单元攻击时有15%概率使目标<$ba.sluggish>停顿</>1.5秒"
+        },
+        {
+          "name": "新产品测评",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "攻击力+8%，浮游单元攻击时有15%概率使目标<$ba.sluggish>停顿</>1.5秒"
+        },
+        {
+          "name": "新产品测评",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "攻击力+11%<@ba.talpu>（+3%）</>，浮游单元攻击时有15%概率使目标<$ba.sluggish>停顿</>1.5秒"
+        }
+      ]
+    }
   ]
 }

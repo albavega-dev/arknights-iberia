@@ -361,5 +361,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Ingenius Usage of Survey Equipment",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Applies 8% <$ba.fragile>Fragile</> effect to enemies that are not Elites or Leaders within range"
+        },
+        {
+          "name": "Ingenius Usage of Survey Equipment",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Applies 10% <@ba.talpu>(+2%)</> <$ba.fragile>Fragile</> effect to enemies that are not Elites or Leaders within range"
+        },
+        {
+          "name": "Ingenius Usage of Survey Equipment",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Applies 16% <$ba.fragile>Fragile</> effect to enemies that are not Elites or Leaders within range"
+        },
+        {
+          "name": "Ingenius Usage of Survey Equipment",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Applies 18% <@ba.talpu>(+2%)</> <$ba.fragile>Fragile</> effect to enemies that are not Elites or Leaders within range"
+        }
+      ]
+    }
   ]
 }

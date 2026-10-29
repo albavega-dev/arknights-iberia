@@ -344,5 +344,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Illuminating Eyes",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can attack <$ba.invisible>Invisible</> enemies. If there are <$ba.invisible>Invisible</> enemies within attack range, ATK +4%"
+        },
+        {
+          "name": "Illuminating Eyes",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Can attack <$ba.invisible>Invisible</> enemies. If there are <$ba.invisible>Invisible</> enemies within attack range, ATK +7% <@ba.talpu>(+3%)</>"
+        },
+        {
+          "name": "Illuminating Eyes",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can attack <$ba.invisible>Invisible</> enemies. If there are <$ba.invisible>Invisible</> enemies within attack range, ATK +10%"
+        },
+        {
+          "name": "Illuminating Eyes",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Can attack <$ba.invisible>Invisible</> enemies. If there are <$ba.invisible>Invisible</> enemies within attack range, ATK +13% <@ba.talpu>(+3%)</>"
+        },
+        {
+          "name": "Illuminating Eyes",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can attack <$ba.invisible>Invisible</> enemies. If there are <$ba.invisible>Invisible</> enemies within attack range, ATK +17%"
+        },
+        {
+          "name": "Illuminating Eyes",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Can attack <$ba.invisible>Invisible</> enemies. If there are <$ba.invisible>Invisible</> enemies within attack range, ATK +20% <@ba.talpu>(+3%)</>"
+        }
+      ]
+    }
   ]
 }

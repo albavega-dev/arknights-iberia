@@ -420,5 +420,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Explanation Saturation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals 4% ATK as <$ba.dt.neural2>Nervous Impairment</> every second to enemies blocked by herself"
+        },
+        {
+          "name": "Explanation Saturation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals 5% <@ba.talpu>(+1%)</> ATK as <$ba.dt.neural2>Nervous Impairment</> every second to enemies blocked by herself"
+        },
+        {
+          "name": "Explanation Saturation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals 9% ATK as <$ba.dt.neural2>Nervous Impairment</> every second to enemies blocked by herself"
+        },
+        {
+          "name": "Explanation Saturation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals 10% <@ba.talpu>(+1%)</> ATK as <$ba.dt.neural2>Nervous Impairment</> every second to enemies blocked by herself"
+        }
+      ]
+    }
   ]
 }

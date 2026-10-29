@@ -368,5 +368,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Hammerfall",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +9% after this unit deals Physical damage 45 times."
+        },
+        {
+          "name": "Hammerfall",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +12%<@ba.talpu> (+3%)</> after this unit deals Physical damage 45 times."
+        },
+        {
+          "name": "Hammerfall",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +15% after this unit deals Physical damage 30 times."
+        },
+        {
+          "name": "Hammerfall",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +18%<@ba.talpu> (+3%)</> after this unit deals Physical damage 30 times."
+        }
+      ]
+    }
   ]
 }

@@ -328,5 +328,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Soil Fertilizer Enhancement",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "The ally with the highest Max HP within range receives 8% more healing"
+        },
+        {
+          "name": "Soil Fertilizer Enhancement",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "The ally with the highest Max HP within range receives 11% <@ba.talpu>(+3%)</> more healing"
+        },
+        {
+          "name": "Soil Fertilizer Enhancement",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "The ally with the highest Max HP within range receives 15% more healing"
+        },
+        {
+          "name": "Soil Fertilizer Enhancement",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "The ally with the highest Max HP within range receives 18% <@ba.talpu>(+3%)</> more healing"
+        }
+      ]
+    }
   ]
 }

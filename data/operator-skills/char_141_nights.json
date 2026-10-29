@@ -333,5 +333,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Black Mist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks reduce the target's RES by 10% for 1 second"
+        },
+        {
+          "name": "Black Mist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks reduce the target's RES by 13% <@ba.talpu>(+3%)</> for 1 second"
+        },
+        {
+          "name": "Black Mist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks reduce the target's RES by 20% for 1 second"
+        },
+        {
+          "name": "Black Mist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks reduce the target's RES by 23% <@ba.talpu>(+3%)</> for 1 second"
+        }
+      ]
+    }
   ]
 }

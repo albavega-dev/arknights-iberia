@@ -557,5 +557,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Auxiliary Equipment",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, immediately throw a Stun Grenade at an enemy within range, <$ba.stun>Stunning</> them and nearby enemies for 3 seconds"
+        },
+        {
+          "name": "Auxiliary Equipment",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, immediately throw a Stun Grenade at an enemy within range, <$ba.stun>Stunning</> them and nearby enemies for 4 seconds"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Breaching Specialist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "During the first deployment, DP Cost -3 and gain 17 SP after deployment"
+        },
+        {
+          "name": "Breaching Specialist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "During the first deployment, DP Cost -3 and gain 20 <@ba.talpu>(+3)</> SP after deployment"
+        }
+      ]
+    }
   ]
 }

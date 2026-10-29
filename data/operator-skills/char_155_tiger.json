@@ -328,5 +328,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Quick Fists",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 15% chance to Dodge the enemy's Physical Melee Attack. ATK +80% in the next attack if the Dodge is successful"
+        },
+        {
+          "name": "Quick Fists",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Has a 18% <@ba.talpu>(+3%)</> chance to Dodge the enemy's Physical Melee Attack. ATK +80% in the next attack if the Dodge is successful"
+        },
+        {
+          "name": "Quick Fists",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 30% chance to Dodge the enemy's Physical Melee Attack. ATK +100% in the next attack if the Dodge is successful"
+        },
+        {
+          "name": "Quick Fists",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Has a 33% <@ba.talpu>(+3%)</> chance to Dodge the enemy's Physical Melee Attack. ATK +100% in the next attack if the Dodge is successful"
+        }
+      ]
+    }
   ]
 }

@@ -399,5 +399,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Demolition Team's Code",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After being deployed for 30 seconds, Max HP +8%"
+        },
+        {
+          "name": "Demolition Team's Code",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After being deployed for 30 seconds, Max HP +11% <@ba.talpu>(+3%)</>"
+        },
+        {
+          "name": "Demolition Team's Code",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After being deployed for 30 seconds, Max HP +15%"
+        },
+        {
+          "name": "Demolition Team's Code",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After being deployed for 30 seconds, Max HP +18% <@ba.talpu>(+3%)</>"
+        }
+      ]
+    }
   ]
 }

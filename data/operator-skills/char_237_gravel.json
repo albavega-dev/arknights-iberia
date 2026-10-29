@@ -333,5 +333,39 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Fast Deployment",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DP Cost -1"
+        },
+        {
+          "name": "Support of the Little",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DP Cost -1; All units that cost 10 or less DP gain +6% DEF"
+        },
+        {
+          "name": "Support of the Little",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "DP Cost -1; All units that cost 10 or less DP gain +6% <@ba.talpu>(+2%)</> DEF"
+        }
+      ]
+    }
   ]
 }

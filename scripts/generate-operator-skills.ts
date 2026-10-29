@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { gameDataBuildingTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { sharedFileName, skillsDatasetContractVersion, skillsDatasetLimits, validateDatasetIndex, type DatasetFile, type DatasetIndex, type DatasetSharedFile, type DatasetSource } from "../src/game-data/operator-dataset";
-import { baseSkillDescriptions, buildGlossary, buildOperatorBaseSkills, buildOperatorSkills, skillDescriptions, type GlossaryEntry, type GlossaryTable, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
+import { baseSkillDescriptions, buildGlossary, buildOperatorBaseSkills, buildOperatorSkills, buildOperatorTalents, skillDescriptions, talentDescriptions, type GlossaryEntry, type GlossaryTable, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { arg, exists, operatorDatasetFile, readCatalog, readJson, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
 
 export const skillsDatasetName = "operator-skills";
@@ -43,9 +43,12 @@ export function buildSkillsDataset(input: Readonly<Record<GameDataRegion, Readon
       if (!character) throw new Error(`Catalog operator ${operatorId} is missing from the ${region} character table`);
       const buildingCharacter = building.chars[operatorId];
       if (!buildingCharacter) throw new Error(`Catalog operator ${operatorId} is missing from the ${region} building data`);
-      const profile: OperatorSkillsProfile = { ...buildOperatorSkills(operatorId, region, character, skillTable, rangeTable), baseSkills: buildOperatorBaseSkills(operatorId, buildingCharacter, building.buffs) };
+      const skills = buildOperatorSkills(operatorId, region, character, skillTable, rangeTable);
+      const { talents, ranges: talentRanges } = buildOperatorTalents(operatorId, character as Parameters<typeof buildOperatorTalents>[1], rangeTable);
+      const ranges = Object.fromEntries(Object.entries({ ...skills.ranges, ...talentRanges }).sort(([a], [b]) => a.localeCompare(b, "en")));
+      const profile: OperatorSkillsProfile = { ...skills, ranges, baseSkills: buildOperatorBaseSkills(operatorId, buildingCharacter, building.buffs), talents };
       for (const skill of profile.skills) descriptions.push(...skillDescriptions(skill));
-      descriptions.push(...baseSkillDescriptions(profile.baseSkills));
+      descriptions.push(...baseSkillDescriptions(profile.baseSkills), ...talentDescriptions(profile.talents));
       profiles.push(profile);
     }
     const dictionary = (input[region].gamedata_const as { termDescriptionDict?: GlossaryTable }).termDescriptionDict;

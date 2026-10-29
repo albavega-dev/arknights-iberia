@@ -585,5 +585,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Cassette Inspiration",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use up to 3 summons (max 3 deployed at once). Summons’ effect changes based upon Skill"
+        },
+        {
+          "name": "Cassette Inspiration",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use up to 4 summons (max 3 deployed at once). Summons’ effect changes based upon Skill"
+        },
+        {
+          "name": "Cassette Inspiration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use up to 5 summons (max 3 deployed at once). Summons’ effect changes based upon Skill"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Do Your Best~",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Raidian's summons gain <$ba.inspire>Inspiration</> equal to 12% of her ATK, DEF, and HP"
+        },
+        {
+          "name": "Do Your Best~",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Raidian's summons gain <$ba.inspire>Inspiration</> equal to 15% <@ba.talpu>(+3%)</> of her ATK, DEF, and HP"
+        }
+      ]
+    }
   ]
 }

@@ -529,5 +529,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Landen Tactics",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every 3 seconds when deployed, restores 1 Skill Point to all deployed Sniper allies that have an Offensive Recovery skill."
+        },
+        {
+          "name": "Landen Tactics",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every 2.5 seconds when deployed, restores 1 Skill Point to all deployed Sniper allies that have an Offensive Recovery skill."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Iron Bowstring",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, this unit gains 1 <$ba.shield>Shield</>. Restores 7 Skill Points after the Shield breaks"
+        },
+        {
+          "name": "Iron Bowstring",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, this unit gains 1 <$ba.shield>Shield</>. Restores 9 <@ba.talpu>(+2)</> Skill Points after the Shield breaks"
+        }
+      ]
+    }
   ]
 }

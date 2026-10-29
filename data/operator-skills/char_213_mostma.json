@@ -562,5 +562,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Skill Aura - Caster",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, increases the SP recovery rate of all Casters by +0.2/second (only the highest effect of this type takes place)"
+        },
+        {
+          "name": "Skill Aura - Caster",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, increases the SP recovery rate of all Casters by +0.4/second (only the highest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Subjective Time Dilation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Slows the movement speed of enemies within this unit's attack range by 15%"
+        },
+        {
+          "name": "Subjective Time Dilation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Slows the movement speed of enemies within this unit's attack range by 18%<@ba.talpu>(+3%)</>"
+        }
+      ]
+    }
   ]
 }

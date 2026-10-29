@@ -379,5 +379,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Fireproof Suit",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +7"
+        },
+        {
+          "name": "Fireproof Suit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +15"
+        }
+      ]
+    }
   ]
 }

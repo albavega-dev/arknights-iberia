@@ -400,5 +400,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Bug Catcher",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dragging an 'Infected Creature,' silence it for 4 seconds"
+        },
+        {
+          "name": "Bug Catcher",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When dragging an 'Infected Creature,' silence it for 8 <@ba.talpu>(+4)</> seconds"
+        },
+        {
+          "name": "Bug Catcher",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dragging an 'Infected Creature,' the strength of the shift increases by 1 degree, and silences the target for 4 seconds"
+        },
+        {
+          "name": "Bug Catcher",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When dragging an 'Infected Creature,' the strength of the shift increases by 1 degree, and silences the target for 8 <@ba.talpu>(+4)</> seconds"
+        }
+      ]
+    }
   ]
 }

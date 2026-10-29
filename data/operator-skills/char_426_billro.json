@@ -605,5 +605,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Meal of Life",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 30% Max HP when skill is activated; \nEffect is doubled when <$ba.charged>Charged</>"
+        },
+        {
+          "name": "Meal of Life",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores 35% <@ba.talpu>(+5%)</> Max HP when skill is activated; \nEffect is doubled when <$ba.charged>Charged</>"
+        },
+        {
+          "name": "Meal of Life",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 40% Max HP when skill is activated; \nEffect is doubled when <$ba.charged>Charged</>"
+        },
+        {
+          "name": "Meal of Life",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores 45% <@ba.talpu>(+5%)</> Max HP when skill is activated; \nEffect is doubled when <$ba.charged>Charged</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Poised for Action",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Improves own SP recovery rate by +0.6/second when SP is above the limit"
+        }
+      ]
+    }
   ]
 }

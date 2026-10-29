@@ -350,5 +350,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Blood Sample Recycle",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 1 Skill Point to this Operator and a random ally within range when an enemy within range is killed"
+        },
+        {
+          "name": "Blood Sample Recycle",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 2 Skill Points to this Operator and a random ally within range when an enemy within range is killed"
+        }
+      ]
+    }
   ]
 }

@@ -339,5 +339,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Swift Stenography",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +5; this effect is lost when damage is received"
+        },
+        {
+          "name": "Swift Stenography",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ASPD +7 <@ba.talpu>(+2)</>; this effect is lost when damage is received"
+        },
+        {
+          "name": "Swift Stenography",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +10; this effect is lost when damage is received"
+        },
+        {
+          "name": "Swift Stenography",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ASPD +12 <@ba.talpu>(+2)</>; this effect is lost when damage is received"
+        }
+      ]
+    }
   ]
 }

@@ -344,5 +344,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Rebuke",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all Melee allies with 3 or more Block gain +2 ASPD and +4% DEF"
+        },
+        {
+          "name": "Rebuke",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all Melee allies with 3 or more Block gain +4 <@ba.talpu>(+2)</> ASPD and +6% <@ba.talpu>(+2%)</> DEF"
+        },
+        {
+          "name": "Rebuke",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all Melee allies with 3 or more Block gain +4 ASPD and +8% DEF"
+        },
+        {
+          "name": "Rebuke",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all Melee allies with 3 or more Block gain +6 <@ba.talpu>(+2)</> ASPD and +10% <@ba.talpu>(+2%)</> DEF"
+        },
+        {
+          "name": "Rebuke",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all Melee allies with 3 or more Block gain +6 ASPD and +12% DEF"
+        },
+        {
+          "name": "Rebuke",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all Melee allies with 3 or more Block gain +8 <@ba.talpu>(+2)</> ASPD and +14% <@ba.talpu>(+2%)</> DEF"
+        }
+      ]
+    }
   ]
 }

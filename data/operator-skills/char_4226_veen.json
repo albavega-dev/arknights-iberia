@@ -547,5 +547,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "'Before the Sword's Swing'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Trait reaches 3 stored charges, they combine into 1 Transposed Energy (can store up to equivalent of 9 charges); ATK +2% when in possession of Transposed Energy, and ASPD +5 when not in possession of Transposed Energy"
+        },
+        {
+          "name": "'Before the Sword's Swing'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Trait reaches 3 stored charges, they combine into 1 Transposed Energy (can store up to equivalent of 9 charges); ATK +4% <@ba.talpu>(+2%)</> when in possession of Transposed Energy, and ASPD +5 when not in possession of Transposed Energy"
+        },
+        {
+          "name": "'Before the Sword's Swing'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Trait reaches 3 stored charges, they combine into 1 Transposed Energy (can store up to equivalent of 9 charges); ATK +10% when in possession of Transposed Energy, and ASPD +15 when not in possession of Transposed Energy"
+        },
+        {
+          "name": "'Before the Sword's Swing'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Trait reaches 3 stored charges, they combine into 1 Transposed Energy (can store up to equivalent of 9 charges); ATK +12% <@ba.talpu>(+2%)</> when in possession of Transposed Energy, and ASPD +15 when not in possession of Transposed Energy"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Arts of War",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacking with stored charges makes the target suffer 90 Arts damage per second for 5s (stacks up to 3 times; Transposed Energy inflicts 3 stacks); Viy does not attack targets under this effect"
+        }
+      ]
+    }
   ]
 }

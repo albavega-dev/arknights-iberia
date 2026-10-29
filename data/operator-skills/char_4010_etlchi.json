@@ -551,5 +551,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Blood Bank",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks <$ba.steal>Steal</> 50 Max HP from the target (Caps at 900) and deal 100 Arts damage per second to the target for 5s"
+        },
+        {
+          "name": "Blood Bank",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks <$ba.steal>Steal</> 50 Max HP from the target (Caps at 900) and deal 150 <@ba.talpu>(+50)</> Arts damage per second to the target for 5s"
+        },
+        {
+          "name": "Blood Bank",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks <$ba.steal>Steal</> 75 Max HP from the target (Caps at 1350) and deal 200 Arts damage per second to the target for 5s"
+        },
+        {
+          "name": "Blood Bank",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks <$ba.steal>Steal</> 75 Max HP from the target (Caps at 1350) and deal 250 <@ba.talpu>(+50)</> Arts damage per second to the target for 5s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Second Serving",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When HP drops below 25% for the first time, immediately recovers 50% of Max HP and reduces Physical damage taken by 10% from that point onwards"
+        },
+        {
+          "name": "Second Serving",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When HP drops below 25% for the first time, immediately recovers 55% <@ba.talpu>(+5%)</> of Max HP and reduces Physical damage taken by 15% <@ba.talpu>(+5%)</> from that point onwards"
+        }
+      ]
+    }
   ]
 }

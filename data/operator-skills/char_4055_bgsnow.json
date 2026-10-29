@@ -576,5 +576,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Automatic Typewriter",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a 'Typewriter' for 15s; the 'Typewriter' has the same skill as this unit, and has its own Redeployment Time"
+        },
+        {
+          "name": "Automatic Typewriter",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a 'Typewriter' for 20s; the 'Typewriter' has the same skill as this unit, and has its own Redeployment Time"
+        },
+        {
+          "name": "Automatic Typewriter",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a 'Typewriter' for 25s; the 'Typewriter' has the same skill as this unit, and has its own Redeployment Time"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Stenographer of Weaknesses",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks from the 'Typewriter' reduce the target's DEF by 18% for 4 seconds; if the 'Typewriter' is placed within the 4 tiles adjacent to Pozëmka, this effect increases to 23%"
+        },
+        {
+          "name": "Stenographer of Weaknesses",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks from the 'Typewriter' reduce the target's DEF by 20% <@ba.talpu>(+2%)</> for 5 <@ba.talpu>(+1)</> seconds; if the 'Typewriter' is placed within the 4 tiles adjacent to Pozëmka, this effect increases to <@ba.talpu>25% (+2%)</>"
+        }
+      ]
+    }
   ]
 }

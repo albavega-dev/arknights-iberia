@@ -197,5 +197,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Smoke Installation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Heals an ally and then provides 10% Physical Dodge for 3 seconds"
+        },
+        {
+          "name": "Smoke Installation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Heals an ally and then provides 15% <@ba.talpu>(+5%)</> Physical Dodge for 3 seconds"
+        },
+        {
+          "name": "Smoke Installation",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 1,
+          "description": "Heals an ally and then provides 20% Physical Dodge for 3 seconds"
+        },
+        {
+          "name": "Smoke Installation",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 5,
+          "description": "Heals an ally and then provides 25% <@ba.talpu>(+5%)</> Physical Dodge for 3 seconds"
+        }
+      ]
+    }
   ]
 }

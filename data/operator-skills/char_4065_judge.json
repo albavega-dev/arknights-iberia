@@ -575,5 +575,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Guardian of the Law",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 30% Max HP"
+        },
+        {
+          "name": "Guardian of the Law",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 35% <@ba.talpu>(+5%)</> Max HP"
+        },
+        {
+          "name": "Guardian of the Law",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 30% Max HP; When defeating an enemy, gains a <$ba.barrier>Barrier</> equal to 6% Max HP (Cannot exceed 300% Max HP)"
+        },
+        {
+          "name": "Guardian of the Law",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 35% <@ba.talpu>(+5%)</> Max HP; When defeating an enemy, gains a <$ba.barrier>Barrier</> equal to 6% Max HP (Cannot exceed 300% Max HP)"
+        },
+        {
+          "name": "Guardian of the Law",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 50% Max HP; When defeating an enemy, gains a <$ba.barrier>Barrier</> equal to 10% Max HP (Cannot exceed 300% Max HP)"
+        },
+        {
+          "name": "Guardian of the Law",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 55% <@ba.talpu>(+5%)</> Max HP; When defeating an enemy, gains a <$ba.barrier>Barrier</> equal to 10% Max HP (Cannot exceed 300% Max HP)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Wreathed in Thorns",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each time this unit is attacked while under the effect of her own <$ba.barrier>Barrier</>, deals 50% ATK as Arts damage to the attacker"
+        },
+        {
+          "name": "Wreathed in Thorns",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Each time this unit is attacked while under the effect of her own <$ba.barrier>Barrier</>, deals 53% <@ba.talpu>(+3%)</> ATK as Arts damage to the attacker"
+        }
+      ]
+    }
   ]
 }

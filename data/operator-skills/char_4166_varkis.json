@@ -339,5 +339,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Never Forgotten",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all [Minos] Operators have their ATK increased to 107% when attacking enemies with an HP percentage equal to or lower than their own"
+        },
+        {
+          "name": "Never Forgotten",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all [Minos] Operators have their ATK increased to 109% <@ba.talpu>(+2%)</> when attacking enemies with an HP percentage equal to or lower than their own"
+        },
+        {
+          "name": "Never Forgotten",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all [Minos] Operators have their ATK increased to 110% when attacking enemies with an HP percentage equal to or lower than their own"
+        },
+        {
+          "name": "Never Forgotten",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all [Minos] Operators have their ATK increased to 112% <@ba.talpu>(+2%)</> when attacking enemies with an HP percentage equal to or lower than their own"
+        }
+      ]
+    }
   ]
 }

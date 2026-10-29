@@ -410,5 +410,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Battlefield Medic",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After Gavial is deployed, all [Medic] Operators' ATK +5% and DEF +50, lasting 15 seconds"
+        },
+        {
+          "name": "Battlefield Medic",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After Gavial is deployed, all [Medic] Operators' ATK +7% <@ba.talpu>(+2%)</> and DEF +70 <@ba.talpu>(+20)</>, lasting 17 <@ba.talpu>(+2)</> seconds"
+        },
+        {
+          "name": "Battlefield Medic",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployed, all [Medic] Operators' ATK +10% and DEF +100, lasting 15 seconds"
+        },
+        {
+          "name": "Battlefield Medic",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After deployed, all [Medic] Operators' ATK +12% <@ba.talpu>(+2%)</> and DEF +120 <@ba.talpu>(+20)</>, lasting 17 <@ba.talpu>(+2)</> seconds"
+        }
+      ]
+    }
   ]
 }

@@ -339,7 +339,33 @@
       ]
     }
   ],
-  "ranges": {},
+  "ranges": {
+    "x-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 0
+        }
+      ]
+    }
+  },
   "baseSkills": [
     {
       "slot": 1,
@@ -369,6 +395,46 @@
             "level": 1
           },
           "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+20%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Tactical Defense",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores 1 Skill Point to this Operator and a random ally in the surrounding tiles when attacked",
+          "rangeId": "x-5"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Thunder Resistance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +10"
+        },
+        {
+          "name": "Thunder Resistance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "RES +13 <@ba.talpu>(+3)</>"
         }
       ]
     }

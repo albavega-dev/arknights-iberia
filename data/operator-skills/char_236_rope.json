@@ -398,5 +398,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Auditory Training",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Obtains 15% Physical Dodge"
+        },
+        {
+          "name": "Auditory Training",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Obtains 19% <@ba.talpu>(+4%)</> Physical Dodge"
+        },
+        {
+          "name": "Auditory Training",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Obtains 30% Physical Dodge"
+        },
+        {
+          "name": "Auditory Training",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Obtains 34% <@ba.talpu>(+4%)</> Physical Dodge"
+        }
+      ]
+    }
   ]
 }

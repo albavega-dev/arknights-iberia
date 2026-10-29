@@ -675,5 +675,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Unwavering Banner",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deploys with a banner; Within the surrounding 8 tiles of the banner, allied units have ASPD +5 and enemies have ASPD -5"
+        },
+        {
+          "name": "Unwavering Banner",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deploys with a banner; Within the surrounding 8 tiles of the banner, allied units have ASPD +7 <@ba.talpu>(+2)</> and enemies have ASPD -7 <@ba.talpu>(+2)</>"
+        },
+        {
+          "name": "Unwavering Banner",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deploys with a banner; Within the surrounding 8 tiles of the banner, allied units have ASPD +10 and enemies have ASPD -10"
+        },
+        {
+          "name": "Unwavering Banner",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deploys with a banner; Within the surrounding 8 tiles of the banner, allied units have ASPD +12 <@ba.talpu>(+2)</> and enemies have ASPD -12 <@ba.talpu>(+2)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Spiritual Influence",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, the next Operator has -2 DP Cost"
+        }
+      ]
+    }
   ]
 }

@@ -492,5 +492,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Pain Focus",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When blocking, take 20% less Physical and Arts damage from enemies not blocked by this unit"
+        },
+        {
+          "name": "Pain Focus",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When blocking, take 35% less Physical and Arts damage from enemies not blocked by this unit"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Whetted With Pain",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When damage is taken, ATK +12% for 15s (does not stack)"
+        },
+        {
+          "name": "Whetted With Pain",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When damage is taken, ATK +16%<@ba.talpu>(+4%)</> for 15s (does not stack)"
+        }
+      ]
+    }
   ]
 }

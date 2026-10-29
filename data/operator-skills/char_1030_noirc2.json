@@ -409,5 +409,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Decisive",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +30 ASPD and +30% DEF <$ba.berserk>Tenacity</> (reaches maximum bonus when missing 50% Max HP)"
+        },
+        {
+          "name": "Decisive",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +40 ASPD and +40% DEF <$ba.berserk>Tenacity</> (reaches maximum bonus when missing 60% Max HP)"
+        },
+        {
+          "name": "Decisive",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +50 ASPD and +50% DEF <$ba.berserk>Tenacity</> (reaches maximum bonus when missing 70% Max HP)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Spirit",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains +3% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)"
+        },
+        {
+          "name": "Spirit",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains +5% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)"
+        },
+        {
+          "name": "Spirit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains +7% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)"
+        }
+      ]
+    }
   ]
 }

@@ -390,5 +390,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Brutal Blows",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 15% chance to increase ATK to 140%"
+        },
+        {
+          "name": "Brutal Blows",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Has a 17% <@ba.talpu>(+2%)</> chance to increase ATK to 140%"
+        },
+        {
+          "name": "Brutal Blows",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 20% chance to increase ATK to 140%"
+        },
+        {
+          "name": "Brutal Blows",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Has a 22% <@ba.talpu>(+2%)</> chance to increase ATK to 140%"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "A Matter of Habit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "In [Tales Within the Sand], whenever a skill is activated, all resources carried by this unit will be sent to the backpack"
+        }
+      ]
+    }
   ]
 }

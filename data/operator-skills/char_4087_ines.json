@@ -593,5 +593,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Shadow Weaver",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "The first hit on each enemy <$ba.root>Binds</> the target for 3 seconds and <$ba.steal>Steals</> 50 ATK (effect expires when enemy is defeated or Ines retreats)"
+        },
+        {
+          "name": "Shadow Weaver",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "The first hit on each enemy <$ba.root>Binds</> the target for 3 seconds and <$ba.steal>Steals</> 60 <@ba.talpu>(+10)</> ATK (effect expires when enemy is defeated or Ines retreats)"
+        },
+        {
+          "name": "Shadow Weaver",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "The first hit on each enemy <$ba.root>Binds</> the target for 5 seconds and <$ba.steal>Steals</> 90 ATK (effect expires when enemy is defeated or Ines retreats)"
+        },
+        {
+          "name": "Shadow Weaver",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "The first hit on each enemy <$ba.root>Binds</> the target for 5 seconds and <$ba.steal>Steals</> 100 <@ba.talpu>(+10)</> ATK (effect expires when enemy is defeated or Ines retreats)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Shadow Sentry",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within Attack Range lose <$ba.invisible>Invisibility</> and have -30% Movement Speed; after retreating, Ines leaves behind a Shadow Sentry with the same effect (Max 1)"
+        }
+      ]
+    }
   ]
 }

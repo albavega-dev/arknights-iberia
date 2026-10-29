@@ -388,5 +388,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Captivating Delicacy",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within Attack Range take 80% of ATK as Elemental damage when they trigger <$ba.palsy>Paralysis</>"
+        },
+        {
+          "name": "Captivating Delicacy",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies within Attack Range take 90% <@ba.talpu>(+10%)</> of ATK as Elemental damage when they trigger <$ba.palsy>Paralysis</>"
+        },
+        {
+          "name": "Captivating Delicacy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within Attack Range take 120% of ATK as Elemental damage when they trigger <$ba.palsy>Paralysis</>"
+        },
+        {
+          "name": "Captivating Delicacy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies within Attack Range take 130% <@ba.talpu>(+10%)</> of ATK as Elemental damage when they trigger <$ba.palsy>Paralysis</>"
+        }
+      ]
+    }
   ]
 }

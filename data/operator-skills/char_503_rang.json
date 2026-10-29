@@ -40,5 +40,21 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Anti-Air Master",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "potential": 1,
+          "description": "ATK +50% when attacking aerial targets"
+        }
+      ]
+    }
   ]
 }

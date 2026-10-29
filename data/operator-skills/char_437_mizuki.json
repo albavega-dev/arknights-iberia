@@ -635,5 +635,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Traumatic Hysteria",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks deal an additional 20% of ATK as Arts damage to the target with the lowest HP"
+        },
+        {
+          "name": "Traumatic Hysteria",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks deal an additional 30% of ATK as Arts damage to the target with the lowest HP"
+        },
+        {
+          "name": "Traumatic Hysteria",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks deal an additional 50% of ATK as Arts damage to the target with the lowest HP"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Countertransference",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there are enemies with less than 50% HP within Attack Range, ATK +10%"
+        },
+        {
+          "name": "Countertransference",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When there are enemies with less than 50% HP within Attack Range, ATK +12% <@ba.talpu>(+2%)</>"
+        }
+      ]
+    }
   ]
 }

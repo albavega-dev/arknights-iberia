@@ -58,12 +58,27 @@ export type BaseSkillStage = {
 };
 export type OperatorBaseSkill = { slot: number; stages: BaseSkillStage[] };
 
+// Talents from character_table: each talent lists its visible stages in unlock order (elite, level, then potential), and a
+// later stage replaces the earlier ones it covers. Descriptions carry their values written in, so they have no blackboard.
+export type TalentStage = {
+  /** Some talents rename a stage, such as "Support Spray 1" to "Support Spray 6". */
+  name: string;
+  unlock: SkillUnlock;
+  /** Official potential (1-6) the stage needs; the source `requiredPotentialRank` plus one. */
+  potential: number;
+  description: string;
+  rangeId?: string;
+};
+/** `index` is the talent's position in the source list (0-based), the one module talent changes reference. */
+export type OperatorTalent = { index: number; stages: TalentStage[] };
+
 export type OperatorSkillsProfile = {
   operatorId: string;
   region: string;
   skills: OperatorSkill[];
   ranges: Record<string, SkillRange>;
   baseSkills: OperatorBaseSkill[];
+  talents: OperatorTalent[];
 };
 
 type SourceLevel = {
@@ -73,6 +88,13 @@ type SourceLevel = {
 };
 type SourceUnlock = { unlockCond?: { phase?: string } };
 type SourceCharacter = { phases?: unknown[]; skills?: { skillId: string; unlockCond?: { phase?: string; level?: number }; levelUpCostCond?: SourceUnlock[] }[] | Record<string, never> | null; allSkillLvlup?: SourceUnlock[] };
+/** A hidden or locked candidate may lack its name and description; an empty blackboard can come as `{}`. */
+type SourceTalentCandidate = {
+  unlockCondition?: { phase?: string; level?: number }; requiredPotentialRank?: number; name?: string | null; description?: string | null;
+  rangeId?: string | null; blackboard?: SkillBlackboardEntry[] | Record<string, never> | null; isHideTalent?: boolean;
+};
+/** `candidates` can be null for a talent with no data. */
+type SourceTalentCharacter = { talents?: { candidates?: SourceTalentCandidate[] | null }[] | null };
 type SourceSkillTable = Record<string, { levels?: SourceLevel[] } | undefined>;
 type SourceRangeTable = Record<string, { direction: number; grids: { row: number; col: number }[] } | undefined>;
 type SourceBaseStage = { buffId: string; cond?: { phase?: string; level?: number } };
@@ -120,7 +142,7 @@ export function termIdsOf(description: string): string[] {
   return [...description.matchAll(/<\$([^<>\s]+)>/g)].map((match) => match[1]);
 }
 
-export function buildOperatorSkills(operatorId: string, region: string, character: SourceCharacter, skillTable: SourceSkillTable, rangeTable: SourceRangeTable, gaps: readonly SkillDataGap[] = skillDataGaps): Omit<OperatorSkillsProfile, "baseSkills"> {
+export function buildOperatorSkills(operatorId: string, region: string, character: SourceCharacter, skillTable: SourceSkillTable, rangeTable: SourceRangeTable, gaps: readonly SkillDataGap[] = skillDataGaps): Omit<OperatorSkillsProfile, "baseSkills" | "talents"> {
   const ranges: Record<string, SkillRange> = {};
   const skills = (Array.isArray(character.skills) ? character.skills : []).map((entry, skillIndex): OperatorSkill => {
     const source = skillTable[entry.skillId]?.levels;
@@ -191,6 +213,52 @@ export function buildOperatorBaseSkills(operatorId: string, building: SourceBuil
 
 export function baseSkillDescriptions(baseSkills: readonly OperatorBaseSkill[]): string[] {
   return baseSkills.flatMap((slot) => slot.stages.map((stage) => stage.description));
+}
+
+/** "？？？" stands for a talent the operator has not unlocked yet; it is not a stage of its own. */
+const lockedTalentName = "？？？";
+
+function isVisibleTalentStage(candidate: SourceTalentCandidate): boolean {
+  if (candidate.isHideTalent || candidate.name === lockedTalentName) return false;
+  // A candidate with neither name nor description carries no text to show, even when it is not marked as hidden.
+  return candidate.name != null || candidate.description != null;
+}
+
+/**
+ * Talents with their visible stages; hidden, locked and empty candidates are dropped, and a talent left without stages is
+ * omitted. A stage without name or description, out of unlock order, needing an unknown potential, using an unknown range or
+ * with a marker the parser cannot resolve is an error.
+ */
+export function buildOperatorTalents(operatorId: string, character: SourceTalentCharacter, rangeTable: SourceRangeTable): { talents: OperatorTalent[]; ranges: Record<string, SkillRange> } {
+  const ranges: Record<string, SkillRange> = {};
+  const talents = (character.talents ?? []).flatMap((talent, index): OperatorTalent[] => {
+    let previous = -1;
+    const stages = (talent.candidates ?? []).filter(isVisibleTalentStage).map((candidate): TalentStage => {
+      const id = `talent ${index + 1}`;
+      if (!candidate.name || !candidate.description) throw new Error(`${operatorId}: ${id} has a stage without name or description`);
+      const unlock = skillUnlock(operatorId, id, candidate.unlockCondition);
+      const rank = candidate.requiredPotentialRank ?? 0;
+      if (!Number.isInteger(rank) || rank < 0 || rank > 5) throw new Error(`${operatorId}: ${id} needs an unknown potential rank ${rank}`);
+      const order = (unlock.elite * 1000 + unlock.level) * 10 + rank;
+      if (order <= previous) throw new Error(`${operatorId}: ${id} has stages out of unlock order`);
+      previous = order;
+      const blackboard = Array.isArray(candidate.blackboard) ? candidate.blackboard : [];
+      const markers = unknownMarkers(parseSkillDescription(candidate.description, blackboard));
+      if (markers.length) throw new Error(`${operatorId}: ${id} has an unresolved marker ${markers[0]}`);
+      if (candidate.rangeId) {
+        const range = rangeTable[candidate.rangeId];
+        if (!range) throw new Error(`${operatorId}: ${id} uses unknown range ${candidate.rangeId}`);
+        ranges[candidate.rangeId] = { direction: range.direction, grids: range.grids.map((grid) => ({ row: grid.row, col: grid.col })) };
+      }
+      return { name: candidate.name, unlock, potential: rank + 1, description: candidate.description, ...(candidate.rangeId ? { rangeId: candidate.rangeId } : {}) };
+    });
+    return stages.length ? [{ index, stages }] : [];
+  });
+  return { talents, ranges };
+}
+
+export function talentDescriptions(talents: readonly OperatorTalent[]): string[] {
+  return talents.flatMap((talent) => talent.stages.map((stage) => stage.description));
 }
 
 export type GlossaryTable =Record<string, { termId?: string; termName: string; description: string } | undefined>;

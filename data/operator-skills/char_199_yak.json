@@ -344,5 +344,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Snowfield Guard",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +7"
+        },
+        {
+          "name": "Snowfield Guard",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +15"
+        }
+      ]
+    }
   ]
 }

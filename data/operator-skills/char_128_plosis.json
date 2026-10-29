@@ -391,5 +391,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Skill Aura",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, increases the SP recovery of all allies by 0.15/sec (only the highest effect of this type will be applied)"
+        },
+        {
+          "name": "Skill Aura",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, increases the SP recovery of all allies by 0.3/sec (only the highest effect of this type will be applied)"
+        }
+      ]
+    }
   ]
 }

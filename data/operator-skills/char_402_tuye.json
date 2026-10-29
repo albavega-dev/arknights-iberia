@@ -350,5 +350,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Water Storage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After 4 seconds without healing, increase the amount of the next heal to 130% ATK"
+        },
+        {
+          "name": "Water Storage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After 4 seconds without healing, increase the amount of the next heal to 135%<@ba.talpu>(+5%)</> ATK"
+        },
+        {
+          "name": "Water Storage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After 4 seconds without healing, increase the amount of the next heal to 150% ATK"
+        },
+        {
+          "name": "Water Storage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After 4 seconds without healing, increase the amount of the next heal to 155%<@ba.talpu>(+5%)</> ATK"
+        }
+      ]
+    }
   ]
 }

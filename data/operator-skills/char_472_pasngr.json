@@ -705,5 +705,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mechanism Analysis",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking enemies with 80% or more HP, Passenger will deal 10% increased damage to them for 3 seconds"
+        },
+        {
+          "name": "Mechanism Analysis",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "When attacking enemies with 80% or more HP, Passenger will deal 15% <@ba.talpu>(+5%)</> increased damage to them for 3 seconds"
+        },
+        {
+          "name": "Mechanism Analysis",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking enemies with 80% or more HP, Passenger will deal 20% increased damage to them for 3 seconds"
+        },
+        {
+          "name": "Mechanism Analysis",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "When attacking enemies with 80% or more HP, Passenger will deal 25% <@ba.talpu>(+5%)</> increased damage to them for 3 seconds"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Lone Soldier",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there are no enemies in the surrounding 4 tiles, ATK +8%"
+        },
+        {
+          "name": "Lone Soldier",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When there are no enemies in the surrounding 4 tiles, ATK +10% <@ba.talpu>(+2%)</>"
+        }
+      ]
+    }
   ]
 }

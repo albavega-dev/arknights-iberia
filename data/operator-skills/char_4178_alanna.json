@@ -368,5 +368,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Carries 2 Support Devices (max 2 deployed at once) that allow an Operator to ignore 40 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Carries 2 Support Devices (max 2 deployed at once) that allow an Operator to ignore 50 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 60 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 70 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 80 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 90 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        }
+      ]
+    }
   ]
 }

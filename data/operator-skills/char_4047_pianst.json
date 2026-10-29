@@ -399,5 +399,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Reverberation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +5. Deals 50% of Czerny's ATK as Arts damage to the attacker whenever Czerny receives Arts attacks"
+        },
+        {
+          "name": "Reverberation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "RES +5. Deals 55% <@ba.talpu>(+5%)</> of Czerny's ATK as Arts damage to the attacker whenever Czerny receives Arts attacks"
+        },
+        {
+          "name": "Reverberation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +10. Deals 80% of Czerny's ATK as Arts damage to the attacker whenever Czerny receives Arts attacks"
+        },
+        {
+          "name": "Reverberation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "RES +10. Deals 85% <@ba.talpu>(+5%)</> of Czerny's ATK as Arts damage to the attacker whenever Czerny receives Arts attacks"
+        }
+      ]
+    }
   ]
 }

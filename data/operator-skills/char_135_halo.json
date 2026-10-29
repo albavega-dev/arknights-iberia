@@ -425,5 +425,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Passion for Research",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains +3 ASPD for every 15 seconds this unit remains on the battlefield, stacking up to 5 times"
+        },
+        {
+          "name": "Passion for Research",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains +4 ASPD for every 15 seconds this unit remains on the battlefield, stacking up to 5 times"
+        }
+      ]
+    }
   ]
 }

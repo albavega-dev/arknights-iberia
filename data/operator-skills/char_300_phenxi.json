@@ -512,5 +512,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Sufferer of Tribulations",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Continually loses HP over time (HP cannot drop to 0 as a result of this effect); While HP is above 50%, this unit gains <$ba.strong>Vigor</>, increasing ATK by 15%; this effect is doubled above 80% HP."
+        },
+        {
+          "name": "Sufferer of Tribulations",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Continually loses HP over time (HP cannot drop to 0 as a result of this effect); While HP is above 50%, this unit gains <$ba.strong>Vigor</>, increasing ATK by 20%; this effect is doubled above 80% HP."
+        },
+        {
+          "name": "Sufferer of Tribulations",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Continually loses HP over time (HP cannot drop to 0 as a result of this effect); While HP is above 50%, this unit gains <$ba.strong>Vigor</>, increasing ATK by 25%; this effect is doubled above 80% HP."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Herald of Revelations",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "While this unit has no skill active, ASPD +27"
+        },
+        {
+          "name": "Herald of Revelations",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "While this unit has no skill active, ASPD +30 <@ba.talpu>(+3)</>"
+        }
+      ]
+    }
   ]
 }

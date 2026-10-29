@@ -403,6 +403,31 @@
           "col": 1
         }
       ]
+    },
+    "x-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 0
+        }
+      ]
     }
   },
   "baseSkills": [
@@ -452,6 +477,53 @@
             "level": 1
           },
           "description": "When this Operator is assigned to a Factory, <@cc.kw>Originium</> formula related productivity <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Geologist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's skill is not active, adjacent allies gain +5% DEF",
+          "rangeId": "x-5"
+        },
+        {
+          "name": "Geologist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit's skill is not active, adjacent allies gain +7% <@ba.talpu>(+2%)</> DEF",
+          "rangeId": "x-5"
+        },
+        {
+          "name": "Geologist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's skill is not active, adjacent allies gain +10% DEF; When this unit's skill is active, become less likely to be targeted by enemies",
+          "rangeId": "x-5"
+        },
+        {
+          "name": "Geologist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit's skill is not active, adjacent allies gain +12% <@ba.talpu>(+2%)</> DEF; When this unit's skill is active, become less likely to be targeted by enemies",
+          "rangeId": "x-5"
         }
       ]
     }

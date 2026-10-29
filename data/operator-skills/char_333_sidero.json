@@ -337,5 +337,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mercenary's Tenacity",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After defeating 7 enemies, Sideroca gains +15 ASPD and <$ba.buffres>status resistance</>"
+        },
+        {
+          "name": "Mercenary's Tenacity",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After defeating 5 <@ba.talpu>(-2)</> enemies, Sideroca gains +15 ASPD and <$ba.buffres>status resistance</>"
+        }
+      ]
+    }
   ]
 }

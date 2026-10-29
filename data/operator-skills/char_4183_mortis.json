@@ -337,6 +337,19 @@
     }
   ],
   "ranges": {
+    "1-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ]
+    },
     "2-1": {
       "direction": 1,
       "grids": [
@@ -413,6 +426,105 @@
             "level": 1
           },
           "description": "When this Operator is assigned to the Control Center with <@cc.kw>Sakiko Togawa</>, ignores the self Morale loss effect from her own base skill"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +5",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +9% <@ba.talpu>(+4%)</>",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +10%; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 10% chance <Substitute> duration shortens by 1s",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +14% <@ba.talpu>(+4%)</>; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 10% chance <Substitute> duration shortens by 1s",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +20%; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 20% chance <Substitute> duration shortens by 1s",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +24% <@ba.talpu>(+4%)</>; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 20% chance <Substitute> duration shortens by 1s",
+          "rangeId": "1-1"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Do Not Fear Death",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +1 whenever Mutsumi Wakaba receives damage or Injury"
+        },
+        {
+          "name": "Do Not Fear Death",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +2 whenever Mutsumi Wakaba receives damage or Injury; when deployed, <$ba.mujica>Ave Mujica</> members gain +5% Max HP"
+        },
+        {
+          "name": "Do Not Fear Death",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +3 whenever Mutsumi Wakaba receives damage or Injury; when deployed, <$ba.mujica>Ave Mujica</> members gain +10% Max HP"
         }
       ]
     }

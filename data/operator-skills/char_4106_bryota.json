@@ -333,5 +333,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Cautious and Calculated",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +4%; while blocking enemies, increases this unit's DEF by +4%"
+        },
+        {
+          "name": "Cautious and Calculated",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +6% <@ba.talpu>(+2%)</>; while blocking enemies, increases this unit's DEF by +6% <@ba.talpu>(+2%)</>"
+        },
+        {
+          "name": "Cautious and Calculated",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +8%; while blocking enemies, increases this unit's DEF by +8%"
+        },
+        {
+          "name": "Cautious and Calculated",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +10% <@ba.talpu>(+2%)</>; while blocking enemies, increases this unit's DEF by +10% <@ba.talpu>(+2%)</>"
+        },
+        {
+          "name": "Cautious and Calculated",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +12%; while blocking enemies, increases this unit's DEF by +12%"
+        },
+        {
+          "name": "Cautious and Calculated",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +14% <@ba.talpu>(+2%)</>; while blocking enemies, increases this unit's DEF by +14% <@ba.talpu>(+2%)</>"
+        }
+      ]
+    }
   ]
 }

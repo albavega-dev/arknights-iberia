@@ -381,5 +381,39 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Nightwalker",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Slumberfoot to assist in combat from a Tactical Point; The Slumberfoot will automatically respawn 20s after being defeated"
+        },
+        {
+          "name": "Nightwalker",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Slumberfoot to assist in combat from a Tactical Point; The Slumberfoot will automatically respawn 17s after being defeated"
+        },
+        {
+          "name": "Nightwalker",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Slumberfoot to assist in combat from a Tactical Point; The Slumberfoot will automatically respawn 15s after being defeated"
+        }
+      ]
+    }
   ]
 }

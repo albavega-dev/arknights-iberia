@@ -346,5 +346,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Flash of Insight",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 10% chance to increase that ATK to 150%"
+        },
+        {
+          "name": "Flash of Insight",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, has a 15% <@ba.talpu>(+5%)</> chance to increase that ATK to 150%"
+        },
+        {
+          "name": "Flash of Insight",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 25% chance to increase that ATK to 150%"
+        },
+        {
+          "name": "Flash of Insight",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, has a 30% <@ba.talpu>(+5%)</> chance to increase that ATK to 150%"
+        }
+      ]
+    }
   ]
 }

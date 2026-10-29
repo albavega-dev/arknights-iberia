@@ -333,5 +333,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Spiked Shield",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies that attack Bubble have their ATK reduced by 5% for 5 seconds"
+        },
+        {
+          "name": "Spiked Shield",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies that attack Bubble have their ATK reduced by 8% for 5 seconds"
+        }
+      ]
+    }
   ]
 }

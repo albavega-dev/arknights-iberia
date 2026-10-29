@@ -668,5 +668,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至105%"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至110%<@ba.talpu>（+5%）</>"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至110%"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至115%<@ba.talpu>（+5%）</>"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至115%"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至120%<@ba.talpu>（+5%）</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "翔虫机动",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "再部署时间-15秒；部署至上次部署位置周围时，30秒内攻击力+10%并且可以部署在近战位"
+        },
+        {
+          "name": "翔虫机动",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "再部署时间-15秒且不提高部署费用；部署至上次部署位置周围时，30秒内攻击力+15%并且可以部署在近战位"
+        }
+      ]
+    }
   ]
 }

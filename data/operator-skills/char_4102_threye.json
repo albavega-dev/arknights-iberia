@@ -339,5 +339,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "The One Who Reveals",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "During [Expeditioner's Jǫklumarkar], attacks deal an additional 15% of ATK as <$ba.dt.apoptosis2>Necrosis</>"
+        },
+        {
+          "name": "The One Who Reveals",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "During [Expeditioner's Jǫklumarkar], attacks deal an additional 30% of ATK as <$ba.dt.apoptosis2>Necrosis</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "The Reclusive One",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +6%, ASPD +6"
+        },
+        {
+          "name": "The Reclusive One",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +7% <@ba.talpu>(+1%)</>, ASPD +7 <@ba.talpu>(+1)</>"
+        }
+      ]
+    }
   ]
 }

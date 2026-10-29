@@ -479,5 +479,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Rigid Ice",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; Apply 15% <$ba.fragile>Fragile</> effect to <$ba.cold>Cold</> enemies within range. <$ba.frozen>Frozen</> enemies within range receive double the <$ba.fragile>Fragile</> effect"
+        },
+        {
+          "name": "Rigid Ice",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; Apply 17% <@ba.talpu>(+2%)</> <$ba.fragile>Fragile</> effect to <$ba.cold>Cold</> enemies within range. <$ba.frozen>Frozen</> enemies within range receive double the <$ba.fragile>Fragile</> effect"
+        },
+        {
+          "name": "Rigid Ice",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; Apply 25% <$ba.fragile>Fragile</> effect to <$ba.cold>Cold</> enemies within range. <$ba.frozen>Frozen</> enemies within range receive double the <$ba.fragile>Fragile</> effect"
+        },
+        {
+          "name": "Rigid Ice",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; Apply 27% <@ba.talpu>(+2%)</> <$ba.fragile>Fragile</> effect to <$ba.cold>Cold</> enemies within range. <$ba.frozen>Frozen</> enemies within range receive double the <$ba.fragile>Fragile</> effect"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Two Paths, One Goal",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Grants <$ba.buffres>Resist</> to all [Kjerag] Operators after Gnosis has been deployed for 10 seconds"
+        }
+      ]
+    }
   ]
 }

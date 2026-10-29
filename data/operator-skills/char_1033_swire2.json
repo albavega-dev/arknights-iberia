@@ -594,5 +594,80 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Big Spendthrift",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait (can be spent through skills)"
+        },
+        {
+          "name": "Big Spendthrift",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait (can be spent through skills), and +3% ATK (stacks up to 5 times)"
+        },
+        {
+          "name": "Big Spendthrift",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait (can be spent through skills) and +3% ATK (stacks up to 6 <@ba.talpu>(+1)</> times)"
+        },
+        {
+          "name": "Big Spendthrift",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 8 times)"
+        },
+        {
+          "name": "Big Spendthrift",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 9 <@ba.talpu>(+1)</> times)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Cash Claps Calamity",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Upon receiving lethal damage, as long as enough DP is available, consumes 5 DP to restore this unit's HP to 70%; the cost of this Talent doubles every time it is activated"
+        },
+        {
+          "name": "Cash Claps Calamity",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Upon receiving lethal damage, as long as enough DP is available, consumes 5 DP to restore this unit's HP to 80% <@ba.talpu>(+10%)</>; the cost of this Talent doubles every time it is activated"
+        }
+      ]
+    }
   ]
 }

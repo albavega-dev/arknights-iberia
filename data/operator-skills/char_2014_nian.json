@@ -634,5 +634,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Tectonic Armor",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is in the squad, all Defenders gain +8% Max HP"
+        },
+        {
+          "name": "Tectonic Armor",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit is in the squad, all Defenders gain +12%<@ba.talpu>(+4%)</> Max HP"
+        },
+        {
+          "name": "Tectonic Armor",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is in the squad, all Defenders gain +16% Max HP"
+        },
+        {
+          "name": "Tectonic Armor",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit is in the squad, all Defenders gain +20%<@ba.talpu>(+4%)</> Max HP"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Clairvoyance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, immediately gains 3 <$ba.shield>Shields</>"
+        }
+      ]
+    }
   ]
 }

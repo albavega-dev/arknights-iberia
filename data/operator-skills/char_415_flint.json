@@ -350,5 +350,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Featherweight",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals 20% more damage to enemies that are not blocked by this unit"
+        },
+        {
+          "name": "Featherweight",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals 25% <@ba.talpu>(+5%)</> more damage to enemies that are not blocked by this unit"
+        },
+        {
+          "name": "Featherweight",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deals 40% more damage to enemies that are not blocked by this unit"
+        },
+        {
+          "name": "Featherweight",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deals 45% <@ba.talpu>(+5%)</> more damage to enemies that are not blocked by this unit"
+        }
+      ]
+    }
   ]
 }

@@ -763,5 +763,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Myriad Grains, Everlasting",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 40 HP/s, grants 5% <$ba.protect>Sanctuary</>"
+        },
+        {
+          "name": "Myriad Grains, Everlasting",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 45 <@ba.talpu>(+5)</> HP/s, grants 7% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>"
+        },
+        {
+          "name": "Myriad Grains, Everlasting",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 70 HP/s, grants 10% <$ba.protect>Sanctuary</>"
+        },
+        {
+          "name": "Myriad Grains, Everlasting",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 75 <@ba.talpu>(+5)</> HP/s, grants 12% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "From Seasons Fourfold",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If there are Operators with at least 3 different classes on the field, all Operators gain +12% Max HP; if there are at least 3 Operators with the same class on the field, all Operators gain +12 ASPD; if there are at least 4 [Sui] Operators in the squad, all Operators gain +12% ATK, and 1 SP every 4 seconds"
+        }
+      ]
+    }
   ]
 }

@@ -404,5 +404,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Child of the Wilds",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever DP is spent through deployment, skill activation, or <$ba.alter>Equipment Alteration</>, +2% ATK and <$ba.stun>Stuns</> all enemies within attack range for 2 seconds (ATK can increase up to 3 times)"
+        },
+        {
+          "name": "Child of the Wilds",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Whenever DP is spent through deployment, skill activation, or <$ba.alter>Equipment Alteration</>, +3% <@ba.talpu>(+1%)</> ATK and <$ba.stun>Stuns</> all enemies within range for 2 seconds (ATK can increase up to 3 times)"
+        },
+        {
+          "name": "Child of the Wilds",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever DP is spent through deployment, skill activation, or <$ba.alter>Equipment Alteration</>, +4% ATK and <$ba.stun>Stuns</> all enemies within range for 2 seconds (ATK can increase up to 5 times)"
+        },
+        {
+          "name": "Child of the Wilds",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Whenever DP is spent through deployment, skill activation, or <$ba.alter>Equipment Alteration</>, +5% <@ba.talpu>(+1%)</> ATK and <$ba.stun>Stuns</> all enemies within range for 2 seconds (ATK can increase up to 5 times)"
+        }
+      ]
+    }
   ]
 }

@@ -421,5 +421,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Anchor Dandelion",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Flying allies within Attack Range gain 3% <$ba.protect>Sanctuary</>, Block +1"
+        },
+        {
+          "name": "Anchor Dandelion",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Flying allies within Attack Range gain 5% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>, Block +1"
+        },
+        {
+          "name": "Anchor Dandelion",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Flying allies within Attack Range gain 7% <$ba.protect>Sanctuary</>, Block +1"
+        },
+        {
+          "name": "Anchor Dandelion",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Flying allies within Attack Range gain 9% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>, Block +1"
+        },
+        {
+          "name": "Anchor Dandelion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Flying allies within Attack Range gain 10% <$ba.protect>Sanctuary</>, Block +1"
+        },
+        {
+          "name": "Anchor Dandelion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Flying allies within Attack Range gain 12% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>, Block +1"
+        }
+      ]
+    }
   ]
 }

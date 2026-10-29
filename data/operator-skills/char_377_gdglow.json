@@ -568,5 +568,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Beacon's Wrath",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 200% of Goldenglow's ATK as Arts damage to enemies in a small area"
+        },
+        {
+          "name": "Beacon's Wrath",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 215% <@ba.talpu>(+15%)</> of Goldenglow's ATK as Arts damage to enemies in a small area"
+        },
+        {
+          "name": "Beacon's Wrath",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 300% of Goldenglow's ATK as Arts damage to enemies in a small area"
+        },
+        {
+          "name": "Beacon's Wrath",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 315% <@ba.talpu>(+15%)</> of Goldenglow's ATK as Arts damage to enemies in a small area"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Precise Redirection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Goldenglow and her Drones' attacks ignore 15 RES"
+        },
+        {
+          "name": "Precise Redirection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Goldenglow and her Drones' attacks ignore 18 <@ba.talpu>(+3)</> RES"
+        }
+      ]
+    }
   ]
 }

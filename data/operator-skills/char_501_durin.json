@@ -35,5 +35,21 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lucky Lass",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "potential": 1,
+          "description": "50% Arts Dodge"
+        }
+      ]
+    }
   ]
 }

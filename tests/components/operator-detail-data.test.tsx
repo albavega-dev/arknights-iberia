@@ -301,7 +301,7 @@ describe("OperatorDetailData skills tab", () => {
   const level = { index: 0, label: "1" as const, group: "level" as const, name: "Test Skill", icon: null, spCost: 30, initialSp: 10, duration: 20, durationKind: "seconds" as const, rangeId: null, description: [{ type: "text" as const, text: "Efecto" }] };
   const combat: SkillsView["skills"] = [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [level], defaultLevelIndex: 0, terms: {} }];
   const base: SkillsView["baseSkills"] = [{ slot: 1, stages: [{ buffId: "buff_test", name: "Test Base", room: "CONTROL", icon: null, roomIcon: null, color: "#005752", textColor: "#ffffff", unlock: { elite: 0, level: 1 }, description: [{ type: "text", text: "Efecto de base" }] }], terms: {} }];
-  const view = (skills: SkillsView["skills"], baseSkills: SkillsView["baseSkills"]): SkillsView => ({ status: skills.length ? "available" : "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills, baseSkills });
+  const view = (skills: SkillsView["skills"], baseSkills: SkillsView["baseSkills"]): SkillsView => ({ status: skills.length ? "available" : "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills, baseSkills, talents: [] });
 
   it("hides the Skills tab without a view or without combat and base skills", () => {
     const { rerender } = render(detail(null));

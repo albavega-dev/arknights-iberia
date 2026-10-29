@@ -386,5 +386,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Precise Prescription",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Healing increases to 110% when healing an ally affected by negative status"
+        },
+        {
+          "name": "Precise Prescription",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Healing increases to 113% <@ba.talpu>(+3%)</> when healing an Operator affected by negative status"
+        },
+        {
+          "name": "Precise Prescription",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Healing increases to 120% when healing an Operator affected by negative status"
+        },
+        {
+          "name": "Precise Prescription",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Healing increases to 123% <@ba.talpu>(+3%)</> when healing an Operator affected by negative status"
+        }
+      ]
+    }
   ]
 }

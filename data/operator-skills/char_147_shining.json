@@ -496,5 +496,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Black Fiend's Protection",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF of allies within range +20"
+        },
+        {
+          "name": "Black Fiend's Protection",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "DEF of allies within range +25 <@ba.talpu>(+5)</>"
+        },
+        {
+          "name": "Black Fiend's Protection",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF of allies within range +40"
+        },
+        {
+          "name": "Black Fiend's Protection",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "DEF of allies within range +45 <@ba.talpu>(+5)</>"
+        },
+        {
+          "name": "Black Fiend's Protection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF of allies within range +60"
+        },
+        {
+          "name": "Black Fiend's Protection",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "DEF of allies within range +65 <@ba.talpu>(+5)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Code of Law",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +10"
+        },
+        {
+          "name": "Code of Law",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "ASPD +13 <@ba.talpu>(+3)</>"
+        }
+      ]
+    }
   ]
 }

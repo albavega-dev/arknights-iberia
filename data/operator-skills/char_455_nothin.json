@@ -399,5 +399,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Unexpected Strike",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 125% and <$ba.stun>Stun</> the target for 3 seconds"
+        },
+        {
+          "name": "Unexpected Strike",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 130% <@ba.talpu>(+5%)</> and <$ba.stun>Stun</> the target for 3 seconds"
+        },
+        {
+          "name": "Unexpected Strike",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 150% and <$ba.stun>Stun</> the target for 4 seconds"
+        },
+        {
+          "name": "Unexpected Strike",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 155% <@ba.talpu>(+5%)</> and <$ba.stun>Stun</> the target for 4 seconds"
+        }
+      ]
+    }
   ]
 }

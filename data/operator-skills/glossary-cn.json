@@ -17,13 +17,41 @@
       "name": "屏障",
       "description": "可以吸收一定数值的伤害"
     },
+    "ba.dt.apoptosis": {
+      "name": "凋亡损伤",
+      "description": "凋亡损伤累计至1000时，15秒内无法开启技能，每秒损失1点技力并受到100点法术伤害"
+    },
+    "ba.dt.burning": {
+      "name": "灼燃损伤",
+      "description": "灼燃损伤累计至1000时，10秒内降低20法术抗性并受到1200点法术伤害"
+    },
+    "ba.dt.element": {
+      "name": "元素损伤",
+      "description": "包括<$ba.dt.neural>神经损伤</>、<$ba.dt.erosion>侵蚀损伤</>、<$ba.dt.burning>灼燃损伤</>、<$ba.dt.apoptosis>凋亡损伤</>、<$ba.dt.rampage>狂躁损伤</>"
+    },
+    "ba.dt.erosion": {
+      "name": "侵蚀损伤",
+      "description": "侵蚀损伤累计至1000时，永久降低100点防御力并受到800点物理伤害"
+    },
     "ba.dt.erosion2": {
       "name": "侵蚀损伤·我方",
       "description": "累计满时爆发（普通、精英敌人1000点、领袖2000点累计值），敌人立即受到5000点元素伤害且永久降低120点防御力（可叠加）。8秒冷却"
     },
+    "ba.dt.neural": {
+      "name": "神经损伤",
+      "description": "神经损伤累计至1000时，受到1000点真实伤害并<$ba.stun>晕眩</>10秒"
+    },
+    "ba.dt.rampage": {
+      "name": "狂躁损伤",
+      "description": "狂躁损伤累计至1000时，15秒内攻击速度+50，但每秒受到100点真实伤害（每次攻击时提升50，最多600）"
+    },
     "ba.fear": {
       "name": "恐惧",
       "description": "无法被阻挡并四散逃跑"
+    },
+    "ba.fragile": {
+      "name": "脆弱",
+      "description": "受到的物理、法术、真实伤害提升相应比例（同名效果取最高）"
     },
     "ba.groundbind": {
       "name": "缚地",
@@ -44,6 +72,10 @@
     "ba.overdrive": {
       "name": "过载",
       "description": "技能持续拥有两段计量槽，技能进行到一半时触发额外效果"
+    },
+    "ba.sees": {
+      "name": "S.E.E.S.",
+      "description": "包括结城理、埃癸斯、岳羽由加莉、虎狼丸"
     },
     "ba.sluggish": {
       "name": "停顿",
@@ -68,6 +100,10 @@
     "ba.weaknessatk": {
       "name": "弱点伤害",
       "description": "造成物理或法术伤害时，根据目标防御力和法术抗性变更伤害类型"
+    },
+    "ba.weightless": {
+      "name": "失重",
+      "description": "重量下降一个等级（同名效果不可叠加）"
     },
     "cc.tag.mh": {
       "name": "怪物猎人小队",

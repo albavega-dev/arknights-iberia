@@ -649,5 +649,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Flames of Castigation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Physical damage has a 50% chance to ignore 30% DEF. Chance increases to 100% against aerial units."
+        },
+        {
+          "name": "Flames of Castigation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Physical damage has a 50% chance to ignore 50% DEF. Chance increases to 100% against aerial units."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Sword of Cleansing",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +18. Effect doubles when there are [Sea Monster] enemies on the battlefield."
+        },
+        {
+          "name": "Sword of Cleansing",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ASPD +21<@ba.talpu>(+3)</>. Effect doubles when there are [Sea Monster] enemies on the battlefield."
+        }
+      ]
+    }
   ]
 }

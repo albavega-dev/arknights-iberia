@@ -357,5 +357,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Deference",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +5%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +11%"
+        },
+        {
+          "name": "Deference",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +8% <@ba.talpu>(+3%)</>, when there are two or more ground tiles within Attack Range, the effect becomes ATK +14% <@ba.talpu>(+3%)</>"
+        },
+        {
+          "name": "Deference",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +10%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +16%"
+        },
+        {
+          "name": "Deference",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +13% <@ba.talpu>(+3%)</>, when there are two or more ground tiles within Attack Range, the effect becomes ATK +19% <@ba.talpu>(+3%)</>"
+        }
+      ]
+    }
   ]
 }

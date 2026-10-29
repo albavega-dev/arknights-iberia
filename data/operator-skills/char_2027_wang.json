@@ -661,5 +661,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mold Stones",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 4 weiqi stones (can hold up to 5); stones link together and activate each other; enemies that enter a tile with an active stone will trigger its effects"
+        },
+        {
+          "name": "Mold Stones",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 5 <@ba.talpu>(+1)</> weiqi stones (can hold up to 6 <@ba.talpu>(+1)</>); stones link together and activate each other; enemies that enter a tile with an active stone will trigger its effects"
+        },
+        {
+          "name": "Mold Stones",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 5 weiqi stones (can hold up to 6); stones link together and activate each other; enemies that enter a tile with an active stone will trigger its effects; when manually deploying a stone, Wang will deploy an additional stone on a tile next to it (at most 8 stones, prioritize deploying on undeployable tiles with enemies)"
+        },
+        {
+          "name": "Mold Stones",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 6 <@ba.talpu>(+1)</> weiqi stones (can hold up to 7 <@ba.talpu>(+1)</>); stones link together and activate each other; enemies that enter a tile with an active stone will trigger its effects; when manually deploying a stone, Wang will deploy an additional stone on a tile next to it (at most 9 <@ba.talpu>(+1)</> stones, prioritize deploying on undeployable tiles with enemies)"
+        },
+        {
+          "name": "Mold Stones",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 6 weiqi stones (can hold up to 7); stones link together and activate each other; enemies that enter a tile with an active stone will trigger its effects; when manually deploying a stone, Wang will deploy an additional stone on a tile next to it (at most 9 stones, prioritize deploying on undeployable tiles with enemies)"
+        },
+        {
+          "name": "Mold Stones",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 7 <@ba.talpu>(+1)</> weiqi stones (can hold up to 8 <@ba.talpu>(+1)</>); stones link together and activate each other; enemies that enter a tile with an active stone will trigger its effects; when manually deploying a stone, Wang will deploy an additional stone on a tile next to it (at most 10 <@ba.talpu>(+1)</> stones, prioritize deploying on undeployable tiles with enemies)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Every Move Anticipated",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When a stone is activated, for every stone in the same straight chain, all stones within that chain deal an additional 10% damage and ignore 9 RES (stacks up to 3 times)"
+        },
+        {
+          "name": "Every Move Anticipated",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When a stone is activated, for every stone in the same straight chain, all stones within that chain deal an additional 12% <@ba.talpu>(+2%)</> damage and ignore 10 <@ba.talpu>(+1)</> RES (stacks up to 3 times)"
+        }
+      ]
+    }
   ]
 }

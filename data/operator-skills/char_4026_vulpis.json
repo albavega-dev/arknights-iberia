@@ -644,5 +644,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Fox Hunt",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 20% ATK as Arts damage whenever she deals damage to this enemy during the next 10s"
+        },
+        {
+          "name": "Fox Hunt",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 30% ATK as Arts damage whenever she deals damage to this enemy during the next 10s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Accelerando",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Natural DP regeneration rate +10% while on the field; if Vulpisfoglia does not take damage for 4s, recovers 4% of Max HP every second"
+        },
+        {
+          "name": "Accelerando",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Natural DP regeneration rate +10% while on the field; if Vulpisfoglia does not take damage for 4s, recovers 5% <@ba.talpu>(+1%)</> of Max HP every second"
+        }
+      ]
+    }
   ]
 }

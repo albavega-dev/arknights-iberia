@@ -1421,5 +1421,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Open Game",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When on field, adds an 'Eye of the Blizzard' to the Deployment Waiting Zone and rearranges undeployed Operators according to their DP Cost. Self and the Operators to the left of the Eye gain +2 starting SP and -10% Redeployment Time"
+        },
+        {
+          "name": "Open Game",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When on field, adds an 'Eye of the Blizzard' to the Deployment Waiting Zone and rearranges undeployed Operators according to their DP Cost. Self and the Operators to the left of the Eye gain +3 starting SP and -15% Redeployment Time"
+        },
+        {
+          "name": "Open Game",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When on field, adds an 'Eye of the Blizzard' to the Deployment Waiting Zone and rearranges undeployed Operators according to their DP Cost. Self and the Operators to the left of the Eye gain +4 starting SP and -20% Redeployment Time"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Snow Realm Trailblazer",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When on field, all Kjerag Operators gain <$ba.frozen>Frozen</> immunity, +60 DEF, and recover 1.5% Max HP every second; after being deployed for 15 seconds, DEF and HP recovery effects double"
+        },
+        {
+          "name": "Snow Realm Trailblazer",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When on field, all Kjerag Operators gain <$ba.frozen>Frozen</> immunity, +80 <@ba.talpu>(+20)</> DEF, and recover 2% <@ba.talpu>(+0.5%)</> Max HP every second; after being deployed for 15 seconds, DEF and HP recovery effects double"
+        }
+      ]
+    }
   ]
 }

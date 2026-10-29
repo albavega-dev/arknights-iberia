@@ -317,7 +317,65 @@
       ]
     }
   ],
-  "ranges": {},
+  "ranges": {
+    "y-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
   "baseSkills": [
     {
       "slot": 1,
@@ -352,6 +410,82 @@
             "level": 1
           },
           "description": "When this Operator is assigned to the Control Center, all <$cc.g.siracusa><@cc.kw>Siracusa</></> Operators assigned to Trading Posts gain order acquisition efficiency <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Professional",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies damaged by Umiri Yahata have a 15% chance of being <$ba.sluggish>Slowed</> for 3s"
+        },
+        {
+          "name": "Professional",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies damaged by Umiri Yahata have a 18% chance of being <$ba.sluggish>Slowed</> for 3s"
+        },
+        {
+          "name": "Professional",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies damaged by Umiri Yahata have a 21% chance of being <$ba.sluggish>Slowed</> for 3s; when skill is active, Umiri Yahata's Attack Range expands",
+          "rangeId": "y-3"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Do Not Fear Being Afraid",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +2 whenever inflicting <$ba.sluggish>Slow</> or <$ba.fear>Fear</>\nWhen deployed, <$ba.mujica>Ave Mujica</> members deal 3% more damage to <$ba.sluggish>Slowed</> or <$ba.fear>Feared</> enemies"
+        },
+        {
+          "name": "Do Not Fear Being Afraid",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<$ba.fever>Fever</> +2 whenever inflicting <$ba.sluggish>Slow</> or <$ba.fear>Fear</>\nWhen deployed, <$ba.mujica>Ave Mujica</> members deal 8% <@ba.talpu>(+5%)</> more damage to <$ba.sluggish>Slowed</> or <$ba.fear>Feared</> enemies"
+        },
+        {
+          "name": "Do Not Fear Being Afraid",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +2 whenever inflicting <$ba.sluggish>Slow</> or <$ba.fear>Fear</>\nWhen deployed, <$ba.mujica>Ave Mujica</> members deal 10% more damage to <$ba.sluggish>Slowed</> or <$ba.fear>Feared</> enemies"
+        },
+        {
+          "name": "Do Not Fear Being Afraid",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<$ba.fever>Fever</> +2 whenever inflicting <$ba.sluggish>Slow</> or <$ba.fear>Fear</>\nWhen deployed, <$ba.mujica>Ave Mujica</> members deal 15% <@ba.talpu>(+5%)</> more damage to <$ba.sluggish>Slowed</> or <$ba.fear>Feared</> enemies"
         }
       ]
     }

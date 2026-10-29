@@ -699,5 +699,44 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Precision Deployment",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Command Center to assist in combat from a Tactical Point; the Command Center will automatically respawn 15s after being defeated; Tactical Point effect range changes based on skill, and friendly units within effect range are considered Closure's Reinforcements"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Scheduler, Max Settings!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Closure is in the squad, <$ba.costlowerbound>DP lower limit</> reduced by 3, and [Rhodes Island] Operator ATK +4%"
+        },
+        {
+          "name": "Scheduler, Max Settings!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When Closure is in the squad, <$ba.costlowerbound>DP lower limit</> reduced by 4 <@ba.talpu>(+1)</>, and [Rhodes Island] Operator ATK +4%"
+        }
+      ]
+    }
   ]
 }

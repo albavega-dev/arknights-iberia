@@ -529,7 +529,21 @@
       ]
     }
   ],
-  "ranges": {},
+  "ranges": {
+    "b-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        }
+      ]
+    }
+  },
   "baseSkills": [
     {
       "slot": 1,
@@ -559,6 +573,56 @@
             "level": 1
           },
           "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</>; when <@cc.kw>Ines</> or <@cc.kw>W</> are assigned to any <$cc.c.room3><@cc.kw>Work Area</></> (excluding Assistants), order acquisition efficiency additionally <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Do or Die",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK increases to 105% when attacking an enemy; if the target is <$ba.stun>stunned</> or <$ba.root>bound</>, ATK further increases to 125%"
+        },
+        {
+          "name": "Do or Die",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK increases to 110% when attacking an enemy; if the target is <$ba.stun>stunned</> or <$ba.root>bound</>, ATK further increases to 140%"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Cloak of Lingering Flame",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Provides an 18% <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit",
+          "rangeId": "b-1"
+        },
+        {
+          "name": "Cloak of Lingering Flame",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Provides a 21% <@ba.talpu>(+3%)</> <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit",
+          "rangeId": "b-1"
         }
       ]
     }

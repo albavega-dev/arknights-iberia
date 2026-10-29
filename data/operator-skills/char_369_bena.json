@@ -317,7 +317,49 @@
       ]
     }
   ],
-  "ranges": {},
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
   "baseSkills": [
     {
       "slot": 1,
@@ -352,6 +394,63 @@
             "level": 1
           },
           "description": "When this Operator is assigned to a Trading Post, the chance of getting <@cc.kw>higher-yield Precious Metal orders</> is <@cc.kw>increased slightly</> (rate is influenced by length of work time), and Morale consumed per hour is reduced by <@cc.vup>-0.25</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Bena's Protractor",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<Substitute> deals Arts damage",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Bena's Protractor",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 20%",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Bena's Protractor",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 23%<@ba.talpu> (+3%)</>",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Bena's Protractor",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 40%",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Bena's Protractor",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<Substitute> deals Arts damage and reduces Physical and Arts damage taken by 43%<@ba.talpu> (+3%)</>",
+          "rangeId": "x-4"
         }
       ]
     }

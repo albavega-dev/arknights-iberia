@@ -411,5 +411,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Encore",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 50% chance to immediately restore Skill Point by 25% of Max Skill Points when the skill ends"
+        },
+        {
+          "name": "Encore",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 50% chance to immediately restore Skill Point by 50% of Max Skill Points when the skill ends"
+        }
+      ]
+    }
   ]
 }

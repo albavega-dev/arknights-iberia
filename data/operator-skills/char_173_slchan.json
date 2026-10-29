@@ -429,5 +429,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Karlan Hunter",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK and DEF +6% when Cliffheart is not blocking any enemies"
+        },
+        {
+          "name": "Karlan Hunter",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK and DEF +8% <@ba.talpu>(+2%)</> when Cliffheart is not blocking any enemies"
+        },
+        {
+          "name": "Karlan Hunter",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK and DEF +12% when Cliffheart is not blocking any enemies"
+        },
+        {
+          "name": "Karlan Hunter",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK and DEF +14% <@ba.talpu>(+2%)</> when Cliffheart is not blocking any enemies"
+        }
+      ]
+    }
   ]
 }

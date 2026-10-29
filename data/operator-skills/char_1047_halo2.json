@@ -668,5 +668,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Data Modeling",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When inflicting <$ba.sluggish>Slow</> on an enemy, +1 ASPD, stacking up to 12 times"
+        },
+        {
+          "name": "Data Modeling",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When inflicting <$ba.sluggish>Slow</> on an enemy, +1 ASPD, stacking up to 18 times"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Energy Source Analysis",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within attack range gain 10% <$ba.fragile>Fragile</>, increasing to 14% <$ba.fragile>Fragile</> after being in Astgenne the Lightchaser's attack range for more than 7 seconds"
+        },
+        {
+          "name": "Energy Source Analysis",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies within attack range gain 12% <@ba.talpu>(+2%)</> <$ba.fragile>Fragile</>, increasing to 16% <@ba.talpu>(+2%)</> <$ba.fragile>Fragile</> after being in Astgenne the Lightchaser's attack range for more than 7 seconds"
+        }
+      ]
+    }
   ]
 }

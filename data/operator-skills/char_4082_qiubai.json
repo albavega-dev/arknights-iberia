@@ -704,5 +704,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Find an Opening",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deal an additional 25% of ATK as Arts damage when attacking enemies affected by <$ba.sluggish>Slow</> or <$ba.root>Bind</>"
+        },
+        {
+          "name": "Find an Opening",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deal an additional 28%<@ba.talpu> (+3%)</> of ATK as Arts damage when attacking enemies affected by <$ba.sluggish>Slow</> or <$ba.root>Bind</>"
+        },
+        {
+          "name": "Find an Opening",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deal an additional 40% of ATK as Arts damage when attacking enemies affected by <$ba.sluggish>Slow</> or <$ba.root>Bind</>"
+        },
+        {
+          "name": "Find an Opening",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deal an additional 43%<@ba.talpu> (+3%)</> of ATK as Arts damage when attacking enemies affected by <$ba.sluggish>Slow</> or <$ba.root>Bind</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Falling Petals",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks have a 20% chance to <$ba.root>Bind</> the target for 1.5s"
+        },
+        {
+          "name": "Falling Petals",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Attacks have a 23%<@ba.talpu> (+3%)</> chance to <$ba.root>Bind</> the target for 1.5s"
+        }
+      ]
+    }
   ]
 }

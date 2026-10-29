@@ -339,5 +339,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Celestial Globe",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "For every 20 seconds Astesia stays on the battlefield, ASPD +3, stacking up to 5 times"
+        },
+        {
+          "name": "Celestial Globe",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "For every 20 seconds Astesia stays on the battlefield, ASPD +5, stacking up to 5 times"
+        }
+      ]
+    }
   ]
 }

@@ -622,5 +622,89 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Adaptable",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use a Mobile Riot Shield that lasts for 20 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 5%"
+        },
+        {
+          "name": "Adaptable",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can use a Mobile Riot Shield that lasts for 20 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 8% <@ba.talpu>(+3%)</>"
+        },
+        {
+          "name": "Adaptable",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use a Mobile Riot Shield that lasts for 35 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 10%"
+        },
+        {
+          "name": "Adaptable",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can use a Mobile Riot Shield that lasts for 35 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 13% <@ba.talpu>(+3%)</>"
+        },
+        {
+          "name": "Adaptable",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use a Mobile Riot Shield that lasts for 50 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 15%"
+        },
+        {
+          "name": "Adaptable",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can use a Mobile Riot Shield that lasts for 50 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 18% <@ba.talpu>(+3%)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Charge and Release",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When the Mobile Riot Shield receives damage, 50% chance to restore 1 SP to Jessica the Liberated"
+        },
+        {
+          "name": "Charge and Release",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When the Mobile Riot Shield receives damage, 55% <@ba.talpu>(+5%)</> chance to restore 1 SP to Jessica the Liberated"
+        }
+      ]
+    }
   ]
 }

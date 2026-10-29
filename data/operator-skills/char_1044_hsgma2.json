@@ -645,5 +645,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Gouka",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When HP drops to 0, enters 'Ātmagrāha': cannot be healed by allies, damage received will accumulate, and once accumulated damage reaches 100% of Max HP, Hoshiguma the Breacher will be defeated; after 5 seconds without receiving damage, recovers 5% HP every second; once HP is greater than 0, leaves 'Ātmagrāha'"
+        },
+        {
+          "name": "Gouka",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When HP drops to 0, enters 'Ātmagrāha': cannot be healed by allies, damage received will accumulate, and once accumulated damage reaches 100% of Max HP, Hoshiguma the Breacher will be defeated; after 4 <@ba.talpu>(-1)</> seconds without receiving damage, recovers 5% HP every second; once HP is greater than 0, leaves 'Ātmagrāha'"
+        },
+        {
+          "name": "Gouka",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When HP drops to 0, enters 'Ātmagrāha': cannot be healed by allies, damage received will accumulate, and once accumulated damage reaches 200% of Max HP, Hoshiguma the Breacher will be defeated; after 5 seconds without receiving damage, recovers 5% HP every second; once HP is greater than 0, leaves 'Ātmagrāha'"
+        },
+        {
+          "name": "Gouka",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When HP drops to 0, enters 'Ātmagrāha': cannot be healed by allies, damage received will accumulate, and once accumulated damage reaches 200% of Max HP, Hoshiguma the Breacher will be defeated; after 4 <@ba.talpu>(-1)</> seconds without receiving damage, recovers 5% HP every second; once HP is greater than 0, leaves 'Ātmagrāha'"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Oni Battle Stance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +50 RES and 35% ATK <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 70% of Max HP)"
+        }
+      ]
+    }
   ]
 }

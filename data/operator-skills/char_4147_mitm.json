@@ -457,5 +457,39 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Scrapheap Buggies",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon Cherry-3 to assist in combat from a Tactical Point; after being defeated, Cherry-3 will spawn Wreckage in the four adjacent tiles, then automatically respawn 20s later"
+        },
+        {
+          "name": "Scrapheap Buggies",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon Cherry-3 to assist in combat from a Tactical Point; after being defeated, Cherry-3 will spawn Wreckage in the four adjacent tiles, then automatically respawn 17s later"
+        },
+        {
+          "name": "Scrapheap Buggies",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon Cherry-3 to assist in combat from a Tactical Point; after being defeated, Cherry-3 will spawn Wreckage in the four adjacent tiles, then automatically respawn 15s later"
+        }
+      ]
+    }
   ]
 }

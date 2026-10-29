@@ -663,5 +663,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Waves of Ægir",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all [Abyssal Hunter] Operators recover 1.5% Max HP every second and receive 15% less Physical and Arts damage from [Sea Monster] enemies"
+        },
+        {
+          "name": "Waves of Ægir",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all [Abyssal Hunter] Operators recover 2.5% Max HP every second and receive 25% less Physical and Arts damage from [Sea Monster] enemies"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Survival of the Fittest",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking enemies with 3 or less weight, increase ATK to 130%"
+        },
+        {
+          "name": "Survival of the Fittest",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking enemies with 3 or less weight, increase ATK to 136% <@ba.talpu>(+6%)</>"
+        }
+      ]
+    }
   ]
 }

@@ -570,5 +570,44 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Phantom in the Mirror",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a clone with the same abilities as Phantom, but has its own redeployment time"
+        },
+        {
+          "name": "Phantom in the Mirror",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Phantom Mastery",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Redeployment time of clone is reduced by 10 seconds"
+        }
+      ]
+    }
   ]
 }

@@ -427,5 +427,39 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Robotter",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon 3 Robotters; Enemies have -10 ASPD when blocked by Robotters"
+        },
+        {
+          "name": "Robotter",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon 4 Robotters; Enemies have -25 ASPD when blocked by Robotters"
+        },
+        {
+          "name": "Robotter",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon 5 Robotters; Enemies have -25 ASPD when blocked by Robotters"
+        }
+      ]
+    }
   ]
 }

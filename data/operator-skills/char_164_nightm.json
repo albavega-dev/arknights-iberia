@@ -366,5 +366,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Dual Personality",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Obtains 20% Physical and Arts Dodge when equipped with skill 1; Obtains 9% ATK when equipped with skill 2"
+        },
+        {
+          "name": "Dual Personality",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Obtains 25% <@ba.talpu>(+5%)</> Physical and Arts Dodge when equipped with skill 1; Obtains 12% <@ba.talpu>(+3%)</> ATK when equipped with skill 2"
+        },
+        {
+          "name": "Dual Personality",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Obtains 40% Physical and Arts Dodge when equipped with skill 1; Obtains 15% ATK when equipped with skill 2"
+        },
+        {
+          "name": "Dual Personality",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Obtains 45% <@ba.talpu>(+5%)</> Physical and Arts Dodge when equipped with skill 1; Obtains 18% <@ba.talpu>(+3%)</> ATK when equipped with skill 2"
+        }
+      ]
+    }
   ]
 }

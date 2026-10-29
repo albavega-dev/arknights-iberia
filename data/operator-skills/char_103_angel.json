@@ -494,5 +494,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Fast Cartridge",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +6"
+        },
+        {
+          "name": "Fast Cartridge",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "ASPD +9 <@ba.talpu>(+3)</>"
+        },
+        {
+          "name": "Fast Cartridge",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +12"
+        },
+        {
+          "name": "Fast Cartridge",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "ASPD +15 <@ba.talpu>(+3)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Angel's Blessings",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +6%; Max HP +10%; The same buff is given to a random ally when Exusiai is deployed"
+        },
+        {
+          "name": "Angel's Blessings",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "ATK +8% <@ba.talpu>(+2%)</>; Max HP +13% <@ba.talpu>(+3%)</>; The same buff is given to a random ally when Exusiai is deployed"
+        }
+      ]
+    }
   ]
 }

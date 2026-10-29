@@ -525,5 +525,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Ancient Kin",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use a Seaborn that lasts for 15 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range"
+        },
+        {
+          "name": "Ancient Kin",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use a Seaborn that lasts for 25 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Predatory Habits",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +6% when there is an allied unit within range of self or the Seaborn; If the allied unit is an [Abyssal Hunter] Operator, gain ATK +15% instead"
+        },
+        {
+          "name": "Predatory Habits",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +9% <@ba.talpu>(+3%)</> when there is an allied unit within range of self or the Seaborn; If the allied unit is an Abyssal Hunter operator, gain ATK +18% <@ba.talpu>(+3%)</> instead"
+        }
+      ]
+    }
   ]
 }

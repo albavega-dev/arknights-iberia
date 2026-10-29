@@ -388,5 +388,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Leaf of Thyme",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Other allies within Attack Range with current HP percentage less than or equal to Perfumer the Distilled's gain 8% <$ba.protect>Sanctuary</>"
+        },
+        {
+          "name": "Leaf of Thyme",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Other allies within Attack Range with current HP percentage less than or equal to Perfumer the Distilled's gain 10% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>"
+        },
+        {
+          "name": "Leaf of Thyme",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Other allies within Attack Range with current HP percentage less than or equal to Perfumer the Distilled's gain 14% <$ba.protect>Sanctuary</>"
+        },
+        {
+          "name": "Leaf of Thyme",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Other allies within Attack Range with current HP percentage less than or equal to Perfumer the Distilled's gain 16% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>"
+        }
+      ]
+    }
   ]
 }

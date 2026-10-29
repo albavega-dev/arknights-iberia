@@ -534,5 +534,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Sharp as a Beast's Fang",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Continuous attacks gradually ignore increasing amounts of the target's DEF, up to a maximum of 40% of its DEF (each attack increases the DEF ignored by 5%, additive). This bonus is lost when no attacks have been made within 3 seconds"
+        },
+        {
+          "name": "Sharp as a Beast's Fang",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Continuous attacks gradually ignore increasing amounts of the target's DEF, up to a maximum of 50% of its DEF (each attack increases the DEF ignored by 10%, additive). This bonus is lost when no attacks have been made within 8 seconds"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Heavy as the Swamp's Mire",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When damaging an enemy for the first time while a skill is active, ATK increases to 160% and <$ba.sluggish>Slows</> targets for 3 seconds"
+        },
+        {
+          "name": "Heavy as the Swamp's Mire",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When damaging an enemy for the first time while a skill is active, ATK increases to 170% <@ba.talpu>(+10%)</> and <$ba.sluggish>Slows</> targets for 3 seconds"
+        }
+      ]
+    }
   ]
 }

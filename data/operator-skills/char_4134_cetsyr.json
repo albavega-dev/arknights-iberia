@@ -658,5 +658,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Dust of the Past",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "3 Particles orbit Civilight Eterna at all times. When a Particle collides with an allied Operator, it disappears and increases Civilight Eterna's Trait effect on that Operator to 1.2x for 6s. The disappeared Particle respawns after 6s."
+        },
+        {
+          "name": "Dust of the Past",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "3 Particles orbit Civilight Eterna at all times. When a Particle collides with an allied Operator, it disappears and increases Civilight Eterna's Trait effect on that Operator to 1.5x for 6s. The disappeared Particle respawns after 6s."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "The Echo of Kings",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all allied units take 10% less damage from [Sarkaz] enemies."
+        },
+        {
+          "name": "The Echo of Kings",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all allied units take 15%<@ba.talpu> (+5%)</> less damage from [Sarkaz] enemies."
+        }
+      ]
+    }
   ]
 }

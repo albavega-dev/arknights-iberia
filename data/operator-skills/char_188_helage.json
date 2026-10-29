@@ -505,5 +505,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Waxing Moon",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +50 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)"
+        },
+        {
+          "name": "Waxing Moon",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +75 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)"
+        },
+        {
+          "name": "Waxing Moon",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +100 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 70% Max HP)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Ingenious Strategist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Regenerate 60 HP per second when this unit is not blocking an enemy."
+        },
+        {
+          "name": "Ingenious Strategist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Regenerate 70 <@ba.talpu>(+10)</> HP per second when this unit is not blocking an enemy."
+        }
+      ]
+    }
   ]
 }

@@ -485,5 +485,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Abyssal Predator",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +7% ATK"
+        },
+        {
+          "name": "Abyssal Predator",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +9% <@ba.talpu>(+2%)</> ATK"
+        },
+        {
+          "name": "Abyssal Predator",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +14% ATK"
+        },
+        {
+          "name": "Abyssal Predator",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +16% <@ba.talpu>(+2%)</> ATK"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Swift Action",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Redeployment Time -10 seconds"
+        }
+      ]
+    }
   ]
 }

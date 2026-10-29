@@ -490,5 +490,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Silent Sentinel",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Applies 8% <$ba.protect>Sanctuary</> to allies within Attack Range; effect increases as ally's HP decreases (reaches maximum of 15% <$ba.protect>Sanctuary</> when below 30% HP)"
+        },
+        {
+          "name": "Silent Sentinel",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Applies 10% <$ba.protect>Sanctuary</> to allies within Attack Range; effect increases as ally's HP decreases (reaches maximum gain of 24% <$ba.protect>Sanctuary</> when below 30% HP)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Plumes of Plenty",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 5% of this unit's ATK every second; effect doubles for [Rhine Lab] Operators"
+        },
+        {
+          "name": "Plumes of Plenty",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 6% <@ba.talpu>(+1%)</> of this unit's ATK every second; effect doubles for [Rhine Lab] Operators"
+        }
+      ]
+    }
   ]
 }

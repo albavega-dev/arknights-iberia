@@ -629,5 +629,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Wordless Elegy",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within attack range take 6% ATK as <$ba.dt.apoptosis2>Necrosis</> per second"
+        },
+        {
+          "name": "Wordless Elegy",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within attack range take 8% ATK as <$ba.dt.apoptosis2>Necrosis</> per second, and are <$ba.sluggish>Slowed</> for 0.2s"
+        },
+        {
+          "name": "Wordless Elegy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within attack range take 10% ATK as <$ba.dt.apoptosis2>Necrosis</> per second, and are <$ba.sluggish>Slowed</> for 0.2s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Mental Inversion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within attack range take 20% more <$ba.dt.apoptosis2>Necrosis</>"
+        },
+        {
+          "name": "Mental Inversion",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies within attack range take 22% more <$ba.dt.apoptosis2>Necrosis</> <@ba.talpu>(+2%)</>"
+        }
+      ]
+    }
   ]
 }

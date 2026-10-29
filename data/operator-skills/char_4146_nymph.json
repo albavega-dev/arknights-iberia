@@ -644,5 +644,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Soul Stolen",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking enemies under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, deals an additional 30% ATK as Elemental Damage per second, lasting until the end of the <$ba.dt.apoptosis2>Necrosis</> burst"
+        },
+        {
+          "name": "Soul Stolen",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking enemies under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, deals an additional 40% ATK as Elemental Damage per second, lasting until the end of the <$ba.dt.apoptosis2>Necrosis</> burst"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Key to the Heart",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever a <$ba.dt.apoptosis2>Necrosis</> burst effect is triggered within Nymph's attack range, ATK +2%, stacking up to 10 times"
+        },
+        {
+          "name": "Key to the Heart",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Whenever a <$ba.dt.apoptosis2>Necrosis</> burst effect is triggered within Nymph's attack range, ATK +2%, stacking up to 12 <@ba.talpu>(+2)</> times"
+        }
+      ]
+    }
   ]
 }

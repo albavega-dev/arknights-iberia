@@ -605,5 +605,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Scolding",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every 5 seconds when deployed, restores 1 Skill Point to all deployed allies that have an ATK Recovery or DEF Recovery skill."
+        },
+        {
+          "name": "Scolding",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Every 4 seconds when deployed, restores 1 Skill Point to all deployed allies that have an ATK Recovery or DEF Recovery skill."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Blade Art",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +5%; DEF +5%; Physical Dodge +10%"
+        },
+        {
+          "name": "Blade Art",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +6% <@ba.talpu>(+1%)</>; DEF +6% <@ba.talpu>(+1%)</>; Physical Dodge +13% <@ba.talpu>(+3%)</>"
+        }
+      ]
+    }
   ]
 }

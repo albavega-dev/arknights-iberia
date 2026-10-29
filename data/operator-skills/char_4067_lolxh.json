@@ -389,5 +389,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Executor-in-Training",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing lethal damage, leave the enemy with 1 HP and inflict <$ba.dying>Critically Wounded</> (gives +1 SP to the attacker when killed); Luo Xiaohei will not attack <$ba.dying>Critically Wounded</> targets"
+        },
+        {
+          "name": "Executor-in-Training",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing lethal damage, leave the enemy with 1 HP and inflict <$ba.dying>Critically Wounded</> (gives +2 SP to the attacker when killed); Luo Xiaohei will not attack <$ba.dying>Critically Wounded</> targets"
+        }
+      ]
+    }
   ]
 }

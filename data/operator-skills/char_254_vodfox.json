@@ -333,5 +333,66 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Omen of Defeat",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Apply 10% <$ba.fragile>Fragile</> effect to enemies within range with less than 40% HP"
+        },
+        {
+          "name": "Omen of Defeat",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Apply 13% <@ba.talpu>(+3%)</> <$ba.fragile>Fragile</> effect to enemies within range with less than 40% HP"
+        },
+        {
+          "name": "Omen of Defeat",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Apply 20% <$ba.fragile>Fragile</> effect to enemies within range with less than 40% HP"
+        },
+        {
+          "name": "Omen of Defeat",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Apply 23% <@ba.talpu>(+3%)</> <$ba.fragile>Fragile</> effect to enemies within range with less than 40% HP"
+        },
+        {
+          "name": "Omen of Defeat",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Apply 30% <$ba.fragile>Fragile</> effect to enemies within range with less than 40% HP"
+        },
+        {
+          "name": "Omen of Defeat",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Apply 33% <@ba.talpu>(+3%)</> <$ba.fragile>Fragile</> effect to enemies within range with less than 40% HP"
+        }
+      ]
+    }
   ]
 }

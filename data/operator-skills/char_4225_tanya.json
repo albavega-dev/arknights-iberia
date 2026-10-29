@@ -407,5 +407,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Shoddy Solvent Tolerance",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Receives -5% <$ba.dt.element>Elemental Injury</>, and an additional -5% against <$ba.dt.erosion>Corrosion</>"
+        },
+        {
+          "name": "Shoddy Solvent Tolerance",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Receives -7% <@ba.talpu>(+2%)</> <$ba.dt.element>Elemental Injury</>, and an additional -7% <@ba.talpu>(+2%)</> against <$ba.dt.erosion>Corrosion</>"
+        },
+        {
+          "name": "Shoddy Solvent Tolerance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Receives -10% <$ba.dt.element>Elemental Injury</>, and an additional -10% against <$ba.dt.erosion>Corrosion</>"
+        },
+        {
+          "name": "Shoddy Solvent Tolerance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Receives -12% <@ba.talpu>(+2%)</> <$ba.dt.element>Elemental Injury</>, and an additional -12% <@ba.talpu>(+2%)</> against <$ba.dt.erosion>Corrosion</>"
+        }
+      ]
+    }
   ]
 }

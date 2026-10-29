@@ -311,5 +311,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Slideshot Style",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack deals at least 20% of this unit's ATK damage (increases to 30% of ATK when the enemy is in the two frontal tiles)"
+        },
+        {
+          "name": "Slideshot Style",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack deals at least 25% of this unit's ATK damage (increases to 40% of ATK when the enemy is in the two frontal tiles)"
+        }
+      ]
+    }
   ]
 }

@@ -688,5 +688,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Rekindle",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When an enemy is defeated within Attack Range, summons a Servant of Lamentation (max 2); if no more Servants can be summoned, upgrades a Servant instead (increases HP, ATK, and DEF)"
+        },
+        {
+          "name": "Rekindle",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When an enemy is defeated within Attack Range, summons a Servant of Lamentation (max 3); if no more Servants can be summoned, upgrades a Servant instead (increases Block, HP, ATK, and DEF)"
+        },
+        {
+          "name": "Rekindle",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When an enemy is defeated within Attack Range, summons a Servant of Lamentation (max 3); if no more Servants can be summoned, upgrades a Servant instead (increases Block, and increases HP, ATK, and DEF by more)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Deathbed Deliverance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Necrass or her summons attack enemies with less than 50% HP, increases ATK to 140%"
+        },
+        {
+          "name": "Deathbed Deliverance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When Necrass or her summons attack enemies with less than 60% <@ba.talpu>(+10%)</> HP, increases ATK to 145% <@ba.talpu>(+5%)</>"
+        }
+      ]
+    }
   ]
 }

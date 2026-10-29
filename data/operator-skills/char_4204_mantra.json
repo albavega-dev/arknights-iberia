@@ -703,5 +703,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Quiet Zone",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies take 100% of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is an 8% chance to not consume a <$ba.palsy>Paralysis</> stack"
+        },
+        {
+          "name": "Quiet Zone",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies take 110% <@ba.talpu>(+10%)</> of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is an 11% <@ba.talpu>(+3%)</> chance to not consume a <$ba.palsy>Paralysis</> stack"
+        },
+        {
+          "name": "Quiet Zone",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies take 135% of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is a 10% chance to not consume a <$ba.palsy>Paralysis</> stack"
+        },
+        {
+          "name": "Quiet Zone",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies take 145% <@ba.talpu>(+10%)</> of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is an 13% <@ba.talpu>(+3%)</> chance to not consume a <$ba.palsy>Paralysis</> stack"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Total Grasp",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies entering the field from the closest Incursion Point to Mantra immediately gain 1 stack of <$ba.palsy>Paralysis</>"
+        }
+      ]
+    }
   ]
 }

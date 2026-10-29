@@ -385,5 +385,98 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Ambidextrous",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Nyamu Yūtenji can <$ba.permanentatk>continuously attack</>; attacks have a 10% chance to inflict 3% <$ba.fragile>Fragile</> on enemies for 1.2s"
+        },
+        {
+          "name": "Ambidextrous",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Nyamu Yūtenji can <$ba.permanentatk>continuously attack</>; attacks have a 10% chance to inflict 6% <$ba.fragile>Fragile</> on enemies for 1.5s"
+        },
+        {
+          "name": "Ambidextrous",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Nyamu Yūtenji can <$ba.permanentatk>continuously attack</>; attacks have a 10% chance to inflict 8% <$ba.fragile>Fragile</> on enemies for 2s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Do Not Fear Love",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, <$ba.fever>Fever</> +3 per second"
+        },
+        {
+          "name": "Do Not Fear Love",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, <$ba.fever>Fever</> +3 per second"
+        },
+        {
+          "name": "Do Not Fear Love",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, <$ba.fever>Fever</> +3 per second; <$ba.mujica>Ave Mujica</> members gain +3% ATK"
+        },
+        {
+          "name": "Do Not Fear Love",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, <$ba.fever>Fever</> +3 per second; <$ba.mujica>Ave Mujica</> members gain +4% <@ba.talpu>(+1%)</> ATK"
+        },
+        {
+          "name": "Do Not Fear Love",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, <$ba.fever>Fever</> +3 per second; <$ba.mujica>Ave Mujica</> members gain +8% ATK"
+        },
+        {
+          "name": "Do Not Fear Love",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, <$ba.fever>Fever</> +3 per second; <$ba.mujica>Ave Mujica</> members gain +9% <@ba.talpu>(+1%)</> ATK"
+        }
+      ]
+    }
   ]
 }

@@ -372,5 +372,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Frigid Respite",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's skill is not active and SP is less than or equal half the maximum, stops attacking and restores 1.5% Max HP every second"
+        },
+        {
+          "name": "Frigid Respite",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit's skill is not active and SP is less than or equal half the maximum, stops attacking and restores 2% <@ba.talpu>(+0.5%)</> Max HP every second"
+        },
+        {
+          "name": "Frigid Respite",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's skill is not active and SP is less than or equal half the maximum, stops attacking and restores 3% Max HP every second"
+        },
+        {
+          "name": "Frigid Respite",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When this unit's skill is not active and SP is less than or equal half the maximum, stops attacking and restores 3.5% <@ba.talpu>(+0.5%)</> Max HP every second"
+        }
+      ]
+    }
   ]
 }

@@ -751,5 +751,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Rhine Charged Suit",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "For every 20 seconds Saria is deployed, ATK +2% and DEF +2%, stacking up to 5 times"
+        },
+        {
+          "name": "Rhine Charged Suit",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "For every 20 seconds Saria is deployed, ATK +3% <@ba.talpu>(+1%)</> and DEF +3% <@ba.talpu>(+1%)</>, stacking up to 5 times"
+        },
+        {
+          "name": "Rhine Charged Suit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "For every 20 seconds Saria is deployed, ATK +5% and DEF +4%, stacking up to 5 times"
+        },
+        {
+          "name": "Rhine Charged Suit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "For every 20 seconds Saria is deployed, ATK +6% <@ba.talpu>(+1%)</> and DEF +5% <@ba.talpu>(+1%)</>, stacking up to 5 times"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Refreshment",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Saria restores an ally's HP, she also restores 1 extra Skill Point to them"
+        }
+      ]
+    }
   ]
 }

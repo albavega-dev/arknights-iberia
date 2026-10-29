@@ -333,5 +333,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Entwined",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 25% chance to <$ba.root>Bind</> the target for 2 seconds"
+        },
+        {
+          "name": "Entwined",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 25% chance to <$ba.root>Bind</> the target for 3 seconds"
+        }
+      ]
+    }
   ]
 }

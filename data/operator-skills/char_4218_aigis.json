@@ -355,5 +355,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "反暗影特殊压制兵装",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "造成的物理伤害+5%，受到的物理伤害-5%"
+        },
+        {
+          "name": "反暗影特殊压制兵装",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "造成的物理伤害+7%<@ba.talpu>（+2%）</>，受到的物理伤害-7%<@ba.talpu>（+2%）</>"
+        },
+        {
+          "name": "反暗影特殊压制兵装",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "造成的物理伤害+10%，受到的物理伤害-10%"
+        },
+        {
+          "name": "反暗影特殊压制兵装",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "造成的物理伤害+12%<@ba.talpu>（+2%）</>，受到的物理伤害-12%<@ba.talpu>（+2%）</>"
+        }
+      ]
+    }
   ]
 }

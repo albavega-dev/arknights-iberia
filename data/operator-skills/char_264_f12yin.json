@@ -589,5 +589,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Forceful Fist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "20% chance for attacks to deal 140% damage and reduce the target's ATK by 10% for 3 seconds (Does not stack)"
+        },
+        {
+          "name": "Forceful Fist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "20% chance for attacks to deal 145% <@ba.talpu>(+5%)</> damage and reduce the target's ATK by 10% for 3 seconds (Does not stack)"
+        },
+        {
+          "name": "Forceful Fist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "20% chance for attacks to deal 160% damage and reduce the target's ATK by 15% for 3 seconds (Does not stack)"
+        },
+        {
+          "name": "Forceful Fist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "20% chance for attacks to deal 165% <@ba.talpu>(+5%)</> damage and reduce the target's ATK by 15% for 3 seconds (Does not stack)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Sturdy Constitution",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF +10%; Physical Dodge +15%"
+        }
+      ]
+    }
   ]
 }

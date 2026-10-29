@@ -355,5 +355,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Karlan Patrol",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF +8% when two or more enemies are blocked"
+        },
+        {
+          "name": "Karlan Patrol",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "DEF +11% <@ba.talpu>(+3%)</> when two or more enemies are blocked"
+        },
+        {
+          "name": "Karlan Patrol",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "DEF +16% when two or more enemies are blocked"
+        },
+        {
+          "name": "Karlan Patrol",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "DEF +19% <@ba.talpu>(+3%)</> when two or more enemies are blocked"
+        }
+      ]
+    }
   ]
 }

@@ -635,5 +635,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Texas Tradition",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains +10% ATK during the duration of the passive skill; When defeating an enemy for the first time, fully restores HP and reactivates the effects of the passive skill"
+        },
+        {
+          "name": "Texas Tradition",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains +20% ATK during the duration of the passive skill; When defeating an enemy for the first time, fully restores HP and reactivates the effects of the passive skill"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Texas Swordsmanship",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Before defeating an enemy for the first time after each deployment, gains +8 ASPD and reduces all damage taken by 25%"
+        },
+        {
+          "name": "Texas Swordsmanship",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Before defeating an enemy for the first time after each deployment, gains +10 <@ba.talpu>(+2)</> ASPD and reduces all damage taken by 30% <@ba.talpu>(+5%)</>"
+        }
+      ]
+    }
   ]
 }

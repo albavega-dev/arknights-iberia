@@ -399,5 +399,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Shielded Shooting",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Prioritize <$ba.stun>Stunned</> enemies; Increase ATK to 130% when attacking <$ba.stun>Stunned</> enemies"
+        },
+        {
+          "name": "Shielded Shooting",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Prioritize <$ba.stun>Stunned</> enemies; Increase ATK to 135% <@ba.talpu>(+5%)</> when attacking <$ba.stun>Stunned</> enemies"
+        },
+        {
+          "name": "Shielded Shooting",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Prioritize <$ba.stun>Stunned</> enemies; Increase ATK to 160% when attacking <$ba.stun>Stunned</> enemies"
+        },
+        {
+          "name": "Shielded Shooting",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Prioritize <$ba.stun>Stunned</> enemies; Increase ATK to 165% <@ba.talpu>(+5%)</> when attacking <$ba.stun>Stunned</> enemies"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Bunker Defense",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there is a High Ground tile beside or behind this operator, gain 25% chance to shrug off physical damage"
+        }
+      ]
+    }
   ]
 }

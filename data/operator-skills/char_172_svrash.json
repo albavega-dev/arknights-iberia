@@ -585,5 +585,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Leader",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +5%, all allied units' Redeployment Time -5% when this unit is in the squad."
+        },
+        {
+          "name": "Leader",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +7% <@ba.talpu>(+2%)</>, all allied units' Redeployment Time -7% <@ba.talpu> (+2%)</> when this unit is in the squad."
+        },
+        {
+          "name": "Leader",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +10%, all allied units' Redeployment Time -10% when this unit is in the squad."
+        },
+        {
+          "name": "Leader",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +12% <@ba.talpu>(+2%)</>, all allied units' Redeployment Time -12% <@ba.talpu> (+2%)</> when this unit is in the squad."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Eagle Eyes",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Reveals <$ba.invisible>Invisible</> enemies within range"
+        }
+      ]
+    }
   ]
 }

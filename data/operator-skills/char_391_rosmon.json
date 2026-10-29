@@ -569,5 +569,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Armaments of Annihilation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 90 DEF"
+        },
+        {
+          "name": "Armaments of Annihilation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 105 <@ba.talpu>(+15)</> DEF"
+        },
+        {
+          "name": "Armaments of Annihilation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 160 DEF"
+        },
+        {
+          "name": "Armaments of Annihilation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 175 <@ba.talpu>(+15)</> DEF"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Stable Esthesia",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, grants +8% ATK to this unit and a random deployed Caster Operator"
+        }
+      ]
+    }
   ]
 }

@@ -481,5 +481,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Concentration",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When no damage is taken within the past 10 seconds, ATK +10%"
+        },
+        {
+          "name": "Concentration",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When no damage is taken within the past 10 seconds, ATK +13% <@ba.talpu>(+3%)</>"
+        },
+        {
+          "name": "Concentration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When no damage is taken within the past 10 seconds, ATK +15%"
+        },
+        {
+          "name": "Concentration",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When no damage is taken within the past 10 seconds, ATK +18% <@ba.talpu>(+3%)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Stilled Breath",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's skill is active, becomes less likely to be targeted by enemies and attacks ignore the target's Physical Dodge"
+        }
+      ]
+    }
   ]
 }

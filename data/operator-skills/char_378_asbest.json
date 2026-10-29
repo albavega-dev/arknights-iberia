@@ -434,5 +434,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Moist Skin",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +5, restores 1 SP when hit by an enemy's normal Arts attack"
+        },
+        {
+          "name": "Moist Skin",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +10, restores 3 SP when hit by an enemy's normal Arts attack"
+        }
+      ]
+    }
   ]
 }

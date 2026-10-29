@@ -631,5 +631,62 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mortal Interrogation",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks inflict the following effect on enemies: Movement Speed reduced by 12% and take 6% of Ascalon's current ATK as Arts damage per second for 18s, stacking up to 3 times."
+        },
+        {
+          "name": "Mortal Interrogation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks inflict the following effect on enemies: Movement Speed reduced by 15% and take 8% of Ascalon's current ATK as Arts damage per second for 18s, stacking up to 3 times."
+        },
+        {
+          "name": "Mortal Interrogation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks inflict the following effect on enemies: Movement Speed reduced by 18% and take 10% of Ascalon's current ATK as Arts damage per second for 25s, stacking up to 3 times."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Penumbral Image",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +8; gain an additional ASPD +6 if there is high ground in the 4 adjacent tiles."
+        },
+        {
+          "name": "Penumbral Image",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ASPD +10 <@ba.talpu>(+2)</>; gain an additional ASPD +6 if there is high ground in the 4 adjacent tiles."
+        }
+      ]
+    }
   ]
 }

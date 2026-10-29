@@ -616,5 +616,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "All-Seeing Eye",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +8%, ASPD +8, and attacks deal <$ba.weaknessatk>Weakness damage</>"
+        },
+        {
+          "name": "All-Seeing Eye",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +11% <@ba.talpu>(+3%)</>, ASPD +11 <@ba.talpu>(+3)</>, and attacks deal <$ba.weaknessatk>Weakness damage</>"
+        },
+        {
+          "name": "All-Seeing Eye",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +13%, ASPD +13, and attacks deal <$ba.weaknessatk>Weakness damage</>"
+        },
+        {
+          "name": "All-Seeing Eye",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +16% <@ba.talpu>(+3%)</>, ASPD +16 <@ba.talpu>(+3)</>, and attacks deal <$ba.weaknessatk>Weakness damage</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "To Know Time's Flow",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When not taking damage, every 7s restores a random amount of HP equal to 30% to 160% of ATK and dodges the next Physical or Arts attack received"
+        },
+        {
+          "name": "To Know Time's Flow",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When not taking damage, every 7s restores a random amount of HP equal to 35% <@ba.talpu>(+5%)</> to 165% <@ba.talpu>(+5%)</> of ATK and dodges the next Physical or Arts attack received"
+        }
+      ]
+    }
   ]
 }

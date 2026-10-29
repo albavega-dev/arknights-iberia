@@ -344,5 +344,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Blueprint Corrections",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains 6% Physical damage reduction; effect doubles after being deployed for 35 seconds"
+        },
+        {
+          "name": "Blueprint Corrections",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Gains 9% <@ba.talpu>(+3%)</> Physical damage reduction; effect doubles after being deployed for 35 seconds"
+        },
+        {
+          "name": "Blueprint Corrections",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains 12% Physical damage reduction; effect doubles after being deployed for 35 seconds"
+        },
+        {
+          "name": "Blueprint Corrections",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Gains 15% <@ba.talpu>(+3%)</> Physical damage reduction; effect doubles after being deployed for 35 seconds"
+        }
+      ]
+    }
   ]
 }

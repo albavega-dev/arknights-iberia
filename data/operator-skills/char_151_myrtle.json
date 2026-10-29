@@ -418,5 +418,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Glistening",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "All [Vanguard] Operators recover 25 HP per second while Myrtle is deployed"
+        },
+        {
+          "name": "Glistening",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "All [Vanguard] Operators recover 28<@ba.talpu> (+3)</> HP per second while Myrtle is deployed"
+        }
+      ]
+    }
   ]
 }

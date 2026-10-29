@@ -617,5 +617,53 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Machine-Gun Welcome Ceremony",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever Sankta Miksaparato deals damage, he gains DEF +20 and ASPD +2 for 10 seconds, stacking up to 3 times"
+        },
+        {
+          "name": "Machine-Gun Welcome Ceremony",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Whenever Sankta Miksaparato deals damage, he gains DEF +30 and ASPD +3 for 10 seconds, stacking up to 3 times"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Shield-Up Farewell Ceremony",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Sankta Miksaparato has not attacked for 8 seconds, he gains a <$ba.barrier>Barrier</> equal to 15% Max HP; this timer restarts once the Barrier is lost"
+        },
+        {
+          "name": "Shield-Up Farewell Ceremony",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Sankta Miksaparato has not attacked for 8 seconds, he gains a <$ba.barrier>Barrier</> equal to 18% <@ba.talpu>(+3%)</> Max HP; this timer restarts once the Barrier is lost"
+        }
+      ]
+    }
   ]
 }

@@ -474,5 +474,71 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Tactical Armor",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "12% chance to resist damage"
+        },
+        {
+          "name": "Tactical Armor",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "15%<@ba.talpu>(+3%)</> chance to resist damage"
+        },
+        {
+          "name": "Tactical Armor",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "25% chance to resist damage"
+        },
+        {
+          "name": "Tactical Armor",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "28%<@ba.talpu>(+3%)</> chance to resist damage"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Special Operation Strategy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, allied Defender Operators gain +6% DEF"
+        },
+        {
+          "name": "Special Operation Strategy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "When deployed, allied Defender Operators gain +8%<@ba.talpu>(+2%)</> DEF"
+        }
+      ]
+    }
   ]
 }

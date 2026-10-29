@@ -21,6 +21,10 @@
       "name": "Barrier",
       "description": "Absorbs a certain amount of damage."
     },
+    "ba.berserk": {
+      "name": "Tenacity",
+      "description": "Increases stats proportionally based on lost HP, reaching the maximum bonus once a certain percentage has been lost (only the strongest effect of this type applies)"
+    },
     "ba.binding": {
       "name": "Tied",
       "description": "When the corresponding Tied unit is no longer on the battlefield, this unit's skill immediately ends, SP is set to 0, and SP can no longer be gained"
@@ -45,9 +49,17 @@
       "name": "Cold",
       "description": "Reduces ASPD by 30 and causes subsequent applications of the Cold status during the debuff duration to inflict <$ba.frozen>Frozen</>"
     },
+    "ba.costlowerbound": {
+      "name": "DP Lower Limit",
+      "description": "DP can drop below the DP Lower Limit; when DP is below 0, natural DP regeneration rate -50%"
+    },
     "ba.debuff": {
       "name": "Negative Status",
       "description": "Includes <$ba.stun>Stun</>, <$ba.cold>Cold</>, <$ba.frozen>Freeze</>, etc."
+    },
+    "ba.dmgresistance": {
+      "name": "Damage Reduction",
+      "description": "Reduces incoming damage by a fixed amount (only the strongest effect of this type applies)"
     },
     "ba.dt.apoptosis": {
       "name": "Necrosis",
@@ -89,6 +101,10 @@
       "name": "Critically Wounded",
       "description": "Movement Speed reduced, cannot be blocked, dies after 10s, restores SP to the attacker when defeated."
     },
+    "ba.elementfragile": {
+      "name": "Elemental Fragility",
+      "description": "Amplifies all Elemental Damage taken by the corresponding amount (only the strongest effect of this type applies)"
+    },
     "ba.epbarrier": {
       "name": "Protective Barrier",
       "description": "Absorbs a certain amount of <$ba.dt.element>Elemental Injury</>."
@@ -117,6 +133,10 @@
       "name": "Invisible",
       "description": "Prevents being targeted by enemy attacks if the unit is not blocking"
     },
+    "ba.laiosteam": {
+      "name": "Laios's Party",
+      "description": "Includes Marcille, Senshi, Laios, and Chilchuck"
+    },
     "ba.levitate": {
       "name": "Levitate",
       "description": "Target becomes aerial and cannot move, attack, or use skills. Duration halved if Weight is greater than 3."
@@ -144,6 +164,10 @@
     "ba.palsy": {
       "name": "Paralysis",
       "description": "Each stack of Paralysis can interrupt an enemy when it attempts to perform a normal attack, max 3 stacks; Paralysis has unlimited duration when not consumed, but units with status resistance lose 1 stack every 5s"
+    },
+    "ba.permanentatk": {
+      "name": "Continuously Attack",
+      "description": "Continuously attacks, regardless of whether there is a target within Attack Range"
     },
     "ba.protect": {
       "name": "Sanctuary",
@@ -188,6 +212,10 @@
     "ba.weaken": {
       "name": "Enfeeble",
       "description": "Reduces the target's ATK by the corresponding amount (only the strongest effect with this name applies)"
+    },
+    "ba.weaknessatk": {
+      "name": "Weakness damage",
+      "description": "When dealing Physical or Arts damage, changes damage type depending on the target's DEF and RES"
     },
     "ba.weightless": {
       "name": "Weightless",

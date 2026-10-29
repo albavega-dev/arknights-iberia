@@ -453,5 +453,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Silent No Longer",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there are enemies in attack range under the burst effect of <$ba.dt.erosion2>Corrosion</>, ASPD +4; stacks up to 3 times"
+        },
+        {
+          "name": "Silent No Longer",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When there are enemies in attack range under the burst effect of <$ba.dt.erosion2>Corrosion</>, ASPD +5 <@ba.talpu>(+1)</>; stacks up to 3 times"
+        },
+        {
+          "name": "Silent No Longer",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there are enemies in attack range under the burst effect of <$ba.dt.erosion2>Corrosion</>, ASPD +6; stacks up to 3 times"
+        },
+        {
+          "name": "Silent No Longer",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When there are enemies in attack range under the burst effect of <$ba.dt.erosion2>Corrosion</>, ASPD +7 <@ba.talpu>(+1)</>; stacks up to 3 times"
+        }
+      ]
+    }
   ]
 }

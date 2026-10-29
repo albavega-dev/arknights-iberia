@@ -355,5 +355,30 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "治愈之风",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "技能结束后，治疗自身和攻击范围内最多2名干员相当于岳羽由加莉攻击力50%的生命值"
+        },
+        {
+          "name": "治愈之风",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "技能结束后，治疗自身和攻击范围内最多3名干员相当于岳羽由加莉攻击力100%的生命值"
+        }
+      ]
+    }
   ]
 }

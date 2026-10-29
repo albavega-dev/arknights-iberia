@@ -322,5 +322,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "I Am the Camp",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 12% less <$ba.dt.element>Elemental Injury</>"
+        },
+        {
+          "name": "I Am the Camp",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 15% <@ba.talpu>(+3%)</> less <$ba.dt.element>Elemental Injury</>"
+        },
+        {
+          "name": "I Am the Camp",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 15% less <$ba.dt.element>Elemental Injury</>"
+        },
+        {
+          "name": "I Am the Camp",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 18% <@ba.talpu>(+3%)</> less <$ba.dt.element>Elemental Injury</>"
+        }
+      ]
+    }
   ]
 }

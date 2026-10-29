@@ -556,5 +556,80 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lantern Lit, Thy Dream Sought",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use up to 3 summons (max 3 deployed at once). Summons’ effect changes based upon Skill"
+        },
+        {
+          "name": "Lantern Lit, Thy Dream Sought",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use up to 4 summons (max 3 deployed at once). Summons’ effect changes based upon Skill"
+        },
+        {
+          "name": "Lantern Lit, Thy Dream Sought",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can use up to 5 summons (max 3 deployed at once). Summons’ effect changes based upon Skill"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "So is Writ, an Ode to Wine",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When a summon is defeated/absorbed/retrieved, Ling gains 2 SP and ATK +2% (ATK increase stacks up to 5 times)"
+        },
+        {
+          "name": "So is Writ, an Ode to Wine",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When a summon is defeated/absorbed/retrieved, Ling gains 3 <@ba.talpu>(+1)</> SP and ATK +2% (ATK increase stacks up to 5 times)"
+        },
+        {
+          "name": "So is Writ, an Ode to Wine",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When a summon is defeated/absorbed/retrieved, Ling gains 3 SP and ATK +3% (ATK increase stacks up to 5 times)"
+        },
+        {
+          "name": "So is Writ, an Ode to Wine",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When a summon is defeated/absorbed/retrieved, Ling gains 4 <@ba.talpu>(+1)</> SP and ATK +3% (ATK increase stacks up to 5 times)"
+        }
+      ]
+    }
   ]
 }

@@ -326,5 +326,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Bombardment Studies",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +4%. If the four adjacent tiles are ground tiles, ATK +8% instead"
+        },
+        {
+          "name": "Bombardment Studies",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +6% <@ba.talpu>(+2%)</>. If the four adjacent tiles are ground tiles, ATK +10% <@ba.talpu>(+2%)</> instead"
+        },
+        {
+          "name": "Bombardment Studies",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ATK +8%. If the four adjacent tiles are ground tiles, ATK +16% instead"
+        },
+        {
+          "name": "Bombardment Studies",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ATK +10% <@ba.talpu>(+2%)</>. If the four adjacent tiles are ground tiles, ATK +18% <@ba.talpu>(+2%)</> instead"
+        }
+      ]
+    }
   ]
 }

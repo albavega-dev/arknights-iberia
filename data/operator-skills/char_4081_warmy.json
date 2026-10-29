@@ -368,5 +368,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Overflowing Pot",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within Attack Range take 200% ATK as Elemental Damage when they trigger a <$ba.dt.burning2>Burn</> burst"
+        },
+        {
+          "name": "Overflowing Pot",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies within Attack Range take 220%<@ba.talpu> (+20%) </>ATK as Elemental Damage when they trigger a <$ba.dt.burning2>Burn</> burst"
+        },
+        {
+          "name": "Overflowing Pot",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies within Attack Range take 300% ATK as Elemental Damage when they trigger a <$ba.dt.burning2>Burn</> burst"
+        },
+        {
+          "name": "Overflowing Pot",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies within Attack Range take 320%<@ba.talpu> (+20%) </>ATK as Elemental Damage when they trigger a <$ba.dt.burning2>Burn</> burst"
+        }
+      ]
+    }
   ]
 }

@@ -488,5 +488,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Sniper Support",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all [Sniper] Operators have -1 DP Cost and gain +10 ASPD when Elysium's skill is active"
+        },
+        {
+          "name": "Sniper Support",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all [Sniper] Operators have -1 DP Cost and gain +13 <@ba.talpu>(+3)</> ASPD when Elysium's skill is active"
+        },
+        {
+          "name": "Sniper Support",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, all [Sniper] Operators have -2 DP Cost and gain +20 ASPD when Elysium's skill is active"
+        },
+        {
+          "name": "Sniper Support",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, all [Sniper] Operators have -2 DP Cost and gain +23 <@ba.talpu>(+3)</> ASPD when Elysium's skill is active"
+        }
+      ]
+    }
   ]
 }

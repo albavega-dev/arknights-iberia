@@ -322,5 +322,48 @@
         }
       ]
     }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Lavender",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores the HP of all allies by 3% of Perfumer's ATK per second"
+        },
+        {
+          "name": "Lavender",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores the HP of all allies by 3.5% <@ba.talpu>(+0.5%)</> of Perfumer's ATK per second"
+        },
+        {
+          "name": "Lavender's Fragrance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Restores the HP of all allies by 5% of Perfumer's ATK per second"
+        },
+        {
+          "name": "Lavender's Fragrance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Restores the HP of all allies by 5.5% <@ba.talpu>(+0.5%)</> of Perfumer's ATK per second"
+        }
+      ]
+    }
   ]
 }
