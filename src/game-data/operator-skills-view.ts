@@ -118,7 +118,8 @@ export function skillDurationKind(level: Pick<SkillLevelData, "duration" | "dura
   return level.duration === 0 ? "instant" : "unlimited";
 }
 
-function termsOf(descriptions: readonly string[], glossary: StoredSkillsGlossary): Record<string, SkillTermView> {
+/** Glossary terms used by the descriptions, including terms nested inside other explanations. */
+export function termsOf(descriptions: readonly string[], glossary: StoredSkillsGlossary): Record<string, SkillTermView> {
   const result: Record<string, SkillTermView> = {};
   const pending = descriptions.flatMap(termIdsOf);
   for (let id = pending.pop(); id !== undefined; id = pending.pop()) {
