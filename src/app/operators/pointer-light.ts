@@ -1,0 +1,8 @@
+import type { MouseEvent } from "react";
+
+/** Moves the hover light of the tabs and icon selectors to the pointer. */
+export function followPointer(event: MouseEvent<HTMLElement>) {
+  const rect = event.currentTarget.getBoundingClientRect();
+  event.currentTarget.style.setProperty("--pointer-x", `${event.clientX - rect.left}px`);
+  event.currentTarget.style.setProperty("--pointer-y", `${event.clientY - rect.top}px`);
+}

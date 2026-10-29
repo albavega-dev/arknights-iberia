@@ -2,6 +2,16 @@
   --operator-accent: #b49a68;
   --operator-accent-light: #d0bc91;
   --operator-accent-dark: #79643f;
+  /* Light of the icon selectors */
+  --choice-light: brightness(1.15)
+    drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 90%, transparent))
+    drop-shadow(0 0 7px color-mix(in srgb, var(--color-brass) 60%, transparent));
+  --choice-light-soft: brightness(1.08)
+    drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 55%, transparent))
+    drop-shadow(0 0 5px color-mix(in srgb, var(--color-brass) 35%, transparent));
+  --choice-text-light:
+    0 0 2px color-mix(in srgb, var(--operator-accent-light) 90%, transparent),
+    0 0 7px color-mix(in srgb, var(--color-brass) 60%, transparent);
   --rarity-6: #ff7a24;
   --rarity-5: #f5c542;
   --rarity-4: #b68ae5;
@@ -1138,7 +1148,8 @@
   min-width: 0;
   border-bottom: 1px solid color-mix(in srgb, var(--border-subtle) 48%, transparent);
 }
-.operator-tab::before {
+.operator-tab::before,
+.operator-pointer-light::before {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -1156,6 +1167,25 @@
 .operator-tab-label {
   position: relative;
   z-index: 2;
+}
+/* Icon selectors without a box: the same light, fading out before the edges */
+.operator-pointer-light {
+  position: relative;
+  isolation: isolate;
+}
+.operator-pointer-light > * {
+  position: relative;
+  z-index: 2;
+}
+.operator-pointer-light::before {
+  mask-image: radial-gradient(closest-side, #000 55%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  /* The light stays centred instead of following the pointer. */
+  .operator-pointer-light::before {
+    --pointer-x: 50%;
+    --pointer-y: 50%;
+  }
 }
 .operator-tab-indicator {
   position: absolute;
@@ -1189,7 +1219,8 @@
   .operator-tab:not([aria-selected="true"]):hover {
     color: var(--color-ivory);
   }
-  .operator-tab:hover::before {
+  .operator-tab:hover::before,
+  .operator-pointer-light:hover::before {
     opacity: 1;
   }
 }
@@ -1208,7 +1239,8 @@
   .operator-tab {
     transition: none;
   }
-  .operator-tab::before {
+  .operator-tab::before,
+  .operator-pointer-light::before {
     transition: none;
   }
   .operator-tab-indicator {
@@ -1222,7 +1254,7 @@
 }
 .operator-panel-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.65fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
 }
 .operator-stats-calculator {
@@ -1232,21 +1264,29 @@
   max-width: 100%;
   align-items: start;
   gap: 0;
-  margin: 1rem 0 0;
+  margin: 0;
+}
+.operator-stats-calculator:has(.operator-stats-talents) {
+  grid-template-columns: max-content 1rem max-content var(--space-6) minmax(0, 1fr);
+  width: 100%;
 }
 .operator-stats-attributes {
   display: contents;
 }
+/* Talents: right of the selectors, below them on narrower screens */
+.operator-stats-talents {
+  grid-column: 5;
+  grid-row: 1 / span 2;
+  min-width: 0;
+  max-width: 47.5rem;
+  contain: inline-size;
+}
+/* Section headings, styled as the other tab headings */
 .operator-stats-heading {
   grid-column: 1 / 4;
   grid-row: 1;
   width: auto;
   justify-self: stretch;
-  color: var(--color-brass);
-  font-size: 0.88rem;
-  letter-spacing: 0.02em;
-  margin: 0 0 0.65rem;
-  text-align: center;
 }
 .operator-stats-card {
   grid-column: 1;
@@ -1458,36 +1498,48 @@
   flex-wrap: wrap;
   gap: 0.4rem;
 }
-.operator-stats-potential-choices {
-  gap: 6px;
+/* Icon choices, lit like the skill selectors */
+.operator-stats-choice-list:has(.operator-stats-light-choice) {
+  gap: 0;
 }
-.operator-stats-potential-choices .operator-filter-button.is-text {
-  flex: 0 0 38px;
-  width: 38px;
-  min-width: 38px;
-  height: 38px;
+.operator-stats-controls > fieldset:first-of-type .operator-stats-choice-list {
+  justify-content: center;
+}
+.operator-stats-light-choice {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
   padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
 }
-.operator-potential-icon {
-  display: block;
-  width: 30px;
-  height: 30px;
+.operator-stats-light-choice img {
+  width: 32px;
+  height: 32px;
   object-fit: contain;
+  transition: filter 180ms ease;
 }
-.operator-stats-potential-choices button:nth-child(1) .operator-potential-icon {
-  transform: translate(-0.25px, 1.45px);
+.operator-stats-light-choice.is-active img {
+  filter: var(--choice-light);
 }
-.operator-stats-potential-choices button:nth-child(2) .operator-potential-icon {
-  transform: translate(-0.45px, 1.4px);
+.operator-stats-potential-choices .operator-stats-light-choice img {
+  width: auto;
+  height: 28px;
 }
-.operator-stats-potential-choices button:nth-child(3) .operator-potential-icon {
-  transform: translate(-0.4px, 1.4px);
+/* Potential: a dimmer light */
+.operator-stats-potential-choices .operator-stats-light-choice.is-active img {
+  filter: var(--choice-light-soft);
 }
-.operator-stats-potential-choices button:nth-child(4) .operator-potential-icon {
-  transform: translate(-0.25px, 1.1px);
+.operator-stats-light-choice:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
 }
-.operator-stats-potential-choices button:nth-child(5) .operator-potential-icon {
-  transform: translate(-0.25px, 1.2px);
+@media (prefers-reduced-motion: reduce) {
+  .operator-stats-light-choice img {
+    transition: none;
+  }
 }
 .operator-stats-module-button.operator-filter-button.is-text {
   box-sizing: border-box;
@@ -1719,6 +1771,19 @@
     grid-template-columns: repeat(auto-fill, minmax(145px, 170px));
   }
 }
+@media (max-width: 1100px) {
+  .operator-stats-calculator:has(.operator-stats-talents) {
+    grid-template-columns: max-content 1rem max-content;
+    width: fit-content;
+    max-width: 100%;
+  }
+  .operator-stats-talents {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    max-width: none;
+    margin-top: var(--space-4);
+  }
+}
 @media (max-width: 900px) {
   .operators-primary-controls {
     gap: 0.55rem 0.65rem;
@@ -1765,6 +1830,7 @@
   }
   .operator-panel-layout,
   .operator-stats-calculator,
+  .operator-stats-calculator:has(.operator-stats-talents),
   .operator-module-placeholder,
   .operator-record-placeholder {
     grid-template-columns: 1fr;
@@ -1772,7 +1838,8 @@
   }
   .operator-stats-heading,
   .operator-stats-card,
-  .operator-stats-controls {
+  .operator-stats-controls,
+  .operator-stats-talents {
     grid-column: 1;
     grid-row: auto;
   }
@@ -3331,8 +3398,7 @@
   --skill-tone-decrease: var(--color-danger);
   --skill-tone-keyword: var(--color-brass);
   --skill-tone-status: var(--color-muted);
-  /* Game color of ba.talpu */
-  --skill-tone-potential: #0098dc;
+  --skill-tone-potential: var(--color-cyan);
   --skill-level-button: 2rem;
   min-width: 0;
 }
@@ -3458,13 +3524,7 @@
   transition: filter 180ms ease;
 }
 .operator-skill-mastery.is-active img {
-  filter: brightness(1.15) drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 90%, transparent))
-    drop-shadow(0 0 7px color-mix(in srgb, var(--color-brass) 60%, transparent));
-}
-@media (hover: hover) and (pointer: fine) {
-  .operator-skill-mastery:not(.is-active):hover img {
-    filter: drop-shadow(0 0 4px color-mix(in srgb, var(--color-brass) 45%, transparent));
-  }
+  filter: var(--choice-light);
 }
 .operator-skill-mastery:focus-visible {
   outline: 2px solid var(--focus-ring);
@@ -3680,8 +3740,7 @@ button.operator-base-skill-unlock {
 /* Active or fixed stage */
 .operator-base-skill-unlock.is-active img,
 span.operator-base-skill-unlock img {
-  filter: brightness(1.15) drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 90%, transparent))
-    drop-shadow(0 0 7px color-mix(in srgb, var(--color-brass) 60%, transparent));
+  filter: var(--choice-light);
 }
 /* Unlock level, lit like its icon */
 .operator-base-skill-unlock-level {
@@ -3689,17 +3748,7 @@ span.operator-base-skill-unlock img {
 }
 .operator-base-skill-unlock.is-active .operator-base-skill-unlock-level,
 span.operator-base-skill-unlock .operator-base-skill-unlock-level {
-  text-shadow:
-    0 0 2px color-mix(in srgb, var(--operator-accent-light) 90%, transparent),
-    0 0 7px color-mix(in srgb, var(--color-brass) 60%, transparent);
-}
-@media (hover: hover) and (pointer: fine) {
-  button.operator-base-skill-unlock:not(.is-active):hover img {
-    filter: drop-shadow(0 0 4px color-mix(in srgb, var(--color-brass) 45%, transparent));
-  }
-  button.operator-base-skill-unlock:not(.is-active):hover .operator-base-skill-unlock-level {
-    text-shadow: 0 0 4px color-mix(in srgb, var(--color-brass) 45%, transparent);
-  }
+  text-shadow: var(--choice-text-light);
 }
 @media (prefers-reduced-motion: reduce) {
   .operator-base-skill-unlock-icon img,
@@ -3732,16 +3781,19 @@ button.operator-base-skill-unlock:focus-visible {
   align-items: center;
   gap: var(--space-3);
 }
-.operator-talent-selectors {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: var(--space-3);
-  min-width: 0;
+/* Locked talent: dimmed, with its requirement */
+.operator-talent-card.is-locked h3 {
+  color: var(--color-muted);
 }
-.operator-talent-potential .operator-base-skill-unlock-icon img {
-  width: auto;
-  height: 28px;
+.operator-talent-requirement {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+.operator-talent-requirement img {
+  opacity: 0.55;
 }
 .operator-talent-body.has-range {
   display: grid;
@@ -3818,11 +3870,7 @@ button.operator-base-skill-unlock:focus-visible {
   .operator-skill-level-group .operator-skill-mastery {
     width: 100%;
   }
-  .operator-talent-header,
   .operator-talent-body.has-range {
     grid-template-columns: minmax(0, 1fr);
-  }
-  .operator-talent-selectors {
-    justify-content: flex-start;
   }
 }

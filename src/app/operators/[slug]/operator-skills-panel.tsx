@@ -10,6 +10,7 @@ import type { BaseSkillStageView, OperatorBaseSkillView, OperatorSkillsView, Ope
 import type { SkillUnlock } from "../../../game-data/operator-skills";
 import type { SkillDescriptionNode, SkillDescriptionTone } from "../../../game-data/skill-description";
 import { OperatorControlButton } from "../operator-control-button";
+import { followPointer } from "../pointer-light";
 import { RangeGrid } from "../range-grid";
 
 const recoveryLabels: Record<OperatorSkillView["spRecovery"], string | null> = { time: "Automática", attack: "Ofensiva", defense: "Defensiva", none: null, unknown: null };
@@ -142,7 +143,7 @@ function SkillLevelSelector({ skill, selected, onSelect }: { skill: OperatorSkil
   return <div className="operator-skill-levels"><span className="operator-skill-levels-label" aria-hidden="true">Nv.</span><div className="operator-skill-level-groups" role="radiogroup" aria-label={`Nivel de S${skill.slot}`}>{groups.map((levels) => <div className="operator-stats-choice-list operator-skill-level-group" key={levels[0].group}>{levels.map((level) => {
     const radio = { id: `${id}-${level.index}`, role: "radio", "aria-checked": level.index === selected, tabIndex: level.index === selected ? 0 : -1, onClick: () => onSelect(level.index), onKeyDown: move } as const;
     // Masteries show only their icon.
-    if (level.icon) return <button type="button" key={level.index} {...radio} aria-label={level.label} className={`operator-skill-mastery${level.index === selected ? " is-active" : ""}`}><Image src={level.icon.src} alt="" width={level.icon.width} height={level.icon.height} unoptimized /></button>;
+    if (level.icon) return <button type="button" key={level.index} {...radio} aria-label={level.label} className={`operator-skill-mastery operator-pointer-light${level.index === selected ? " is-active" : ""}`} onMouseMove={followPointer}><Image src={level.icon.src} alt="" width={level.icon.width} height={level.icon.height} unoptimized /></button>;
     return <OperatorControlButton appearance="naval" size="compact" type="button" key={level.index} {...radio} className={`operator-filter-button is-text${level.index === selected ? " is-active" : ""}`}>{level.label}</OperatorControlButton>;
   })}</div>)}</div></div>;
 }
@@ -231,10 +232,11 @@ function UnlockIcon({ unlock }: { unlock: SkillUnlock }) {
   return <><span className="operator-base-skill-unlock-icon"><Image src={`/assets/operator-elite/elite-${unlock.elite}.png`} alt="" width={40} height={40} unoptimized /></span>{unlock.level > 1 ? <span className="operator-base-skill-unlock-level" aria-hidden="true">Nv. {unlock.level}</span> : null}</>;
 }
 
-/** Promotion icons as a radio group, with the same keys as the level selector. */
-function UnlockSelector({ unlocks, label, selected, onSelect }: { unlocks: readonly SkillUnlock[]; label: string; selected: number; onSelect: (index: number) => void }) {
+/** Unlock of each stage as a radio group, with the same keys as the level selector; a single stage keeps a fixed tag. */
+function BaseStageSelector({ slot, selected, onSelect }: { slot: OperatorBaseSkillView; selected: number; onSelect: (index: number) => void }) {
   const id = useId();
-  const last = unlocks.length - 1;
+  if (slot.stages.length === 1) return <span className="operator-base-skill-unlock"><span className="sr-only">Desbloqueo {unlockLabel(slot.stages[0].unlock)}</span><UnlockIcon unlock={slot.stages[0].unlock} /></span>;
+  const last = slot.stages.length - 1;
   const move = (event: KeyboardEvent<HTMLButtonElement>) => {
     const next = event.key === "Home" ? 0 : event.key === "End" ? last : event.key === "ArrowRight" || event.key === "ArrowDown" ? (selected + 1) % (last + 1) : event.key === "ArrowLeft" || event.key === "ArrowUp" ? (selected + last) % (last + 1) : null;
     if (next === null) return;
@@ -242,13 +244,7 @@ function UnlockSelector({ unlocks, label, selected, onSelect }: { unlocks: reado
     onSelect(next);
     document.getElementById(`${id}-${next}`)?.focus();
   };
-  return <div className="operator-base-skill-stage-selector" role="radiogroup" aria-label={label}>{unlocks.map((unlock, index) => <button type="button" key={index} id={`${id}-${index}`} role="radio" aria-checked={index === selected} aria-label={unlockLabel(unlock)} tabIndex={index === selected ? 0 : -1} className={`operator-base-skill-unlock${index === selected ? " is-active" : ""}`} onClick={() => onSelect(index)} onKeyDown={move}><UnlockIcon unlock={unlock} /></button>)}</div>;
-}
-
-/** Unlock of each stage; a single stage keeps a fixed tag. */
-function BaseStageSelector({ slot, selected, onSelect }: { slot: OperatorBaseSkillView; selected: number; onSelect: (index: number) => void }) {
-  if (slot.stages.length === 1) return <span className="operator-base-skill-unlock"><span className="sr-only">Desbloqueo {unlockLabel(slot.stages[0].unlock)}</span><UnlockIcon unlock={slot.stages[0].unlock} /></span>;
-  return <UnlockSelector unlocks={slot.stages.map((stage) => stage.unlock)} label={`Promoción de la habilidad de base ${slot.slot}`} selected={selected} onSelect={onSelect} />;
+  return <div className="operator-base-skill-stage-selector" role="radiogroup" aria-label={`Promoción de la habilidad de base ${slot.slot}`}>{slot.stages.map((stage, index) => <button type="button" key={stage.buffId} id={`${id}-${index}`} role="radio" aria-checked={index === selected} aria-label={unlockLabel(stage.unlock)} tabIndex={index === selected ? 0 : -1} className={`operator-base-skill-unlock operator-pointer-light${index === selected ? " is-active" : ""}`} onClick={() => onSelect(index)} onKeyDown={move} onMouseMove={followPointer}><UnlockIcon unlock={stage.unlock} /></button>)}</div>;
 }
 
 /** One slot showing one stage at a time, the highest by default; each stage replaces the previous one. */
@@ -281,49 +277,41 @@ export function OperatorSkillsPanel({ view, tactical }: { view: OperatorSkillsVi
   </div>;
 }
 
-function unlockAtOrBelow(unlock: SkillUnlock, limit: SkillUnlock): boolean {
+/** Elite, level and official potential (1-6) chosen in Stats. */
+export type TalentSelection = { elite: number; level: number; potential: number };
+
+function unlockAtOrBelow(unlock: SkillUnlock, limit: Omit<TalentSelection, "potential">): boolean {
   return unlock.elite < limit.elite || (unlock.elite === limit.elite && unlock.level <= limit.level);
 }
 
-/** Distinct unlocks in stage order, which is ascending. */
-function talentUnlocks(talent: OperatorTalentView): SkillUnlock[] {
-  return talent.stages.reduce<SkillUnlock[]>((unlocks, { unlock }) => unlocks.some((item) => item.elite === unlock.elite && item.level === unlock.level) ? unlocks : [...unlocks, unlock], []);
+/** The last stage whose unlock and potential the selection meets; null while the talent is still locked. */
+function talentStageFor(talent: OperatorTalentView, selection: TalentSelection): TalentStageView | null {
+  return talent.stages.findLast((stage) => unlockAtOrBelow(stage.unlock, selection) && stage.potential <= selection.potential) ?? null;
 }
 
-/** The last stage whose unlock and potential the selection meets; the first stage always needs P1 at the lowest unlock. */
-function talentStageFor(talent: OperatorTalentView, unlock: SkillUnlock, potential: number): TalentStageView {
-  return talent.stages.findLast((stage) => unlockAtOrBelow(stage.unlock, unlock) && stage.potential <= potential) ?? talent.stages[0];
-}
-
-/** Potential icons of Stats as toggles: pressing the active one goes back to P1. */
-function PotentialSelector({ potentials, label, selected, onSelect }: { potentials: readonly number[]; label: string; selected: number; onSelect: (potential: number) => void }) {
-  return <div className="operator-base-skill-stage-selector" role="group" aria-label={label}>{potentials.map((potential) => <button type="button" key={potential} aria-label={`Potencial ${potential}`} aria-pressed={potential === selected} className={`operator-base-skill-unlock operator-talent-potential${potential === selected ? " is-active" : ""}`} onClick={() => onSelect(potential === selected ? 1 : potential)}><span className="operator-base-skill-unlock-icon"><Image src={`/assets/operator-potential/potential-${potential}.png`} alt="" width={36} height={34} unoptimized /></span></button>)}</div>;
-}
-
-/** One talent showing one stage, by default at the highest promotion and P1; a single stage has no selectors. */
-function TalentCard({ view, talent, position, glossary }: { view: OperatorSkillsView; talent: OperatorTalentView; position: number; glossary: Omit<GlossaryContext, "terms"> }) {
+/** A locked talent keeps its place, dimmed, with the name and requirement of its first stage. */
+function TalentCard({ view, talent, selection, glossary }: { view: OperatorSkillsView; talent: OperatorTalentView; selection: TalentSelection; glossary: Omit<GlossaryContext, "terms"> }) {
   const id = useId();
-  const unlocks = talentUnlocks(talent);
-  const potentials = [...new Set(talent.stages.map((stage) => stage.potential))].filter((potential) => potential > 1).sort((a, b) => a - b);
-  const [unlockIndex, setUnlockIndex] = useState(unlocks.length - 1);
-  const [potential, setPotential] = useState(1);
-  const stage = talentStageFor(talent, unlocks[unlockIndex], potential);
+  const stage = talentStageFor(talent, selection);
+  if (!stage) {
+    const { name, unlock } = talent.stages[0];
+    return <article className="operator-skill-card operator-talent-card is-locked" aria-labelledby={`${id}-name`}>
+      <header className="operator-talent-header"><div className="operator-skill-title"><h3 id={`${id}-name`}>{name}</h3></div><span className="operator-talent-requirement"><span className="sr-only">Se desbloquea en {unlockLabel(unlock)}</span><UnlockIcon unlock={unlock} /></span></header>
+    </article>;
+  }
   const range = stage.rangeId ? view.ranges[stage.rangeId] : undefined;
-  const selectors = talent.stages.length > 1 ? <div className="operator-talent-selectors">
-    {unlocks.length > 1 ? <UnlockSelector unlocks={unlocks} label={`Promoción del talento ${position}`} selected={unlockIndex} onSelect={setUnlockIndex} /> : null}
-    {potentials.length ? <PotentialSelector potentials={potentials} label={`Potencial del talento ${position}`} selected={potential} onSelect={setPotential} /> : null}
-  </div> : null;
   return <article className="operator-skill-card operator-talent-card" aria-labelledby={`${id}-name`}>
-    <header className="operator-talent-header"><div className="operator-skill-title"><h3 id={`${id}-name`}>{stage.name}</h3></div>{selectors}</header>
+    <header className="operator-talent-header"><div className="operator-skill-title"><h3 id={`${id}-name`}>{stage.name}</h3></div></header>
     <div className={`operator-talent-body${range ? " has-range" : ""}`}><p className="operator-skill-description"><SkillDescription nodes={stage.description} glossary={{ ...glossary, terms: talent.terms }} /></p>{range ? <div className="operator-skill-range"><RangeGrid grids={range.grids} /></div> : null}</div>
   </article>;
 }
 
-export function OperatorTalentsPanel({ view }: { view: OperatorSkillsView }) {
+/** Talent cards driven by the Stats selection. */
+export function OperatorTalentsPanel({ view, selection }: { view: OperatorSkillsView; selection: TalentSelection }) {
   const [openId, setOpenId] = useState<string | null>(null);
   const [layer, setLayer] = useState<HTMLElement | null>(null);
   const glossary = { openId, setOpenId, layer };
   return <div className="operator-skills" ref={setLayer}>
-    <div className="operator-skill-cards">{view.talents.map((talent, index) => <TalentCard key={talent.index} view={view} talent={talent} position={index + 1} glossary={glossary} />)}</div>
+    <div className="operator-skill-cards">{view.talents.map((talent) => <TalentCard key={talent.index} view={view} talent={talent} selection={selection} glossary={glossary} />)}</div>
   </div>;
 }

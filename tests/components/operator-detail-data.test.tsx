@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
 vi.mock("next/image", () => ({
@@ -304,12 +304,11 @@ describe("OperatorDetailData skills tab", () => {
   const talents: SkillsView["talents"] = [{ index: 0, stages: [{ name: "Test Talent", unlock: { elite: 0, level: 1 }, potential: 1, rangeId: null, description: [{ type: "text", text: "Efecto del talento" }] }], terms: {} }];
   const view = (skills: SkillsView["skills"], baseSkills: SkillsView["baseSkills"], talentList: SkillsView["talents"] = []): SkillsView => ({ status: skills.length ? "available" : "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills, baseSkills, talents: talentList });
 
-  it("hides the Skills and Talents tabs without a view or without their data", () => {
+  it("hides the Skills tab without a view or without combat and base skills", () => {
     const { rerender } = render(detail(null));
     expect(tabNames()).toEqual(["Estadísticas", "Módulos", "Expediente", "Voces"]);
     rerender(detail(view([], [])));
     expect(screen.queryByRole("tab", { name: "Habilidades" })).not.toBeInTheDocument();
-    expect(screen.queryByRole("tab", { name: "Talentos" })).not.toBeInTheDocument();
     fireEvent.keyDown(screen.getByRole("tab", { name: "Estadísticas" }), { key: "ArrowRight" });
     expect(screen.getByRole("tab", { name: "Módulos" })).toHaveAttribute("aria-selected", "true");
     expect(document.activeElement).toBe(screen.getByRole("tab", { name: "Módulos" }));
@@ -351,15 +350,47 @@ describe("OperatorDetailData skills tab", () => {
     expect(screen.getByRole("heading", { name: "Test Base" })).toBeInTheDocument();
   });
 
-  it("shows the Talents tab with its cards and opens Stats when the operator has no talents", () => {
+  it("shows the talents in Stats, driven by its promotion, level and potential selectors", () => {
+    const stage = (name: string, elite: 0 | 1 | 2, level: number, potential: number) => ({ name, unlock: { elite, level }, potential, rangeId: null, description: [{ type: "text" as const, text: `Efecto de ${name}` }] });
+    const list: SkillsView["talents"] = [
+      { index: 0, stages: [stage("Inicial", 0, 1, 1), stage("Promovido", 1, 1, 1), stage("Potenciado", 1, 1, 5)], terms: {} },
+      { index: 1, stages: [stage("Tardío", 1, 30, 1)], terms: {} },
+    ];
+    render(<OperatorDetailData operator={operator} stats={statsFixture} skills={view(combat, base, list)} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />);
+    expect(tabNames()).toEqual(["Estadísticas", "Habilidades", "Módulos", "Expediente", "Voces"]);
+    const section = screen.getByRole("region", { name: "Talentos" });
+    expect(within(section).getByRole("heading", { level: 2, name: "Talentos" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 2, name: /Élite 1 nivel 50/ })).toHaveClass("operator-stats-heading");
+    const names = () => within(section).getAllByRole("article").map((item) => item.querySelector("h3")!.textContent);
+    expect(names()).toEqual(["Promovido", "Tardío"]);
+    expect(screen.getAllByRole("button", { name: /^Potencial/ }).map((button) => button.getAttribute("aria-label"))).toEqual(["Potencial 2", "Potencial 3", "Potencial 5"]);
+    fireEvent.click(screen.getByRole("button", { name: "Potencial 5" }));
+    expect(names()).toEqual(["Potenciado", "Tardío"]);
+    fireEvent.click(screen.getByRole("button", { name: "Potencial 5" }));
+    expect(names()[0]).toBe("Promovido");
+    fireEvent.change(document.getElementById("stats-level") as HTMLInputElement, { target: { value: "29" } });
+    expect(within(section).getByRole("article", { name: "Tardío" })).toHaveClass("is-locked");
+    fireEvent.click(screen.getByRole("button", { name: "Élite 0" }));
+    expect(names()).toEqual(["Inicial", "Tardío"]);
+    expect(screen.getByRole("button", { name: "Élite 0" })).toHaveClass("operator-stats-light-choice", "is-active");
+    expect(screen.getByRole("button", { name: /SPC-X: Test Module/ })).toHaveClass("operator-filter-button", "operator-stats-module-button", "is-text");
+  });
+
+  it("moves the hover light of tabs and icon selectors to the pointer", () => {
+    render(<OperatorDetailData operator={operator} stats={statsFixture} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />);
+    for (const element of [screen.getByRole("tab", { name: "Estadísticas" }), screen.getByRole("button", { name: "Élite 0" }), screen.getByRole("button", { name: "Potencial 2" })]) {
+      element.getBoundingClientRect = () => ({ left: 10, top: 20, right: 54, bottom: 64, width: 44, height: 44, x: 10, y: 20, toJSON: () => ({}) });
+      fireEvent.mouseMove(element, { clientX: 30, clientY: 25 });
+      expect(element.style.getPropertyValue("--pointer-x")).toBe("20px");
+      expect(element.style.getPropertyValue("--pointer-y")).toBe("5px");
+    }
+    expect(screen.getByRole("button", { name: "Élite 0" })).toHaveClass("operator-pointer-light");
+  });
+
+  it("shows the talents at the highest promotion and P1 without stats, and no section without talents", () => {
     const { rerender } = render(detail(view(combat, base, talents)));
-    expect(tabNames()).toEqual(["Estadísticas", "Habilidades", "Talentos", "Módulos", "Expediente", "Voces"]);
-    fireEvent.click(screen.getByRole("tab", { name: "Talentos" }));
-    expect(screen.getByRole("heading", { level: 2, name: "Talentos" })).toBeInTheDocument();
-    expect(screen.getByRole("article", { name: "Test Talent" })).toHaveTextContent("Efecto del talento");
+    expect(within(screen.getByRole("region", { name: "Talentos" })).getByRole("article", { name: "Test Talent" })).toHaveTextContent("Efecto del talento");
     rerender(detail(view(combat, base)));
-    expect(screen.queryByRole("tab", { name: "Talentos" })).not.toBeInTheDocument();
-    expect(screen.getByRole("tab", { name: "Estadísticas" })).toHaveAttribute("aria-selected", "true");
-    expect(screen.getByRole("tabpanel")).toHaveAttribute("aria-labelledby", screen.getByRole("tab", { name: "Estadísticas" }).id);
+    expect(screen.queryByRole("region", { name: "Talentos" })).not.toBeInTheDocument();
   });
 });

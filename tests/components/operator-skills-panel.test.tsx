@@ -5,7 +5,7 @@ vi.mock("next/image", () => ({
   default: ({ unoptimized, ...props }: Record<string, unknown>) => <img {...props} alt={typeof props.alt === "string" ? props.alt : ""} data-testid="next-image" data-unoptimized={unoptimized === true ? "true" : "false"} />,
 }));
 
-import { OperatorSkillsPanel, OperatorTalentsPanel } from "../../src/app/operators/[slug]/operator-skills-panel";
+import { OperatorSkillsPanel, OperatorTalentsPanel, type TalentSelection } from "../../src/app/operators/[slug]/operator-skills-panel";
 import type { OperatorTacticalEntry } from "../../src/game-data/operator-tactical";
 import type { BaseSkillStageView, OperatorBaseSkillView, OperatorSkillsView, OperatorSkillView, OperatorTalentView, SkillLevelLabel, SkillLevelView, TalentStageView } from "../../src/game-data/operator-skills-view";
 import type { SkillDescriptionNode } from "../../src/game-data/skill-description";
@@ -415,86 +415,76 @@ describe("OperatorTalentsPanel", () => {
     name, unlock: { elite, level: 1 }, potential, rangeId: null, description: [{ type: "text", text: `Efecto de ${name}` }], ...overrides,
   });
   const talent = (index: number, stages: TalentStageView[], terms: OperatorTalentView["terms"] = {}): OperatorTalentView => ({ index, stages, terms });
-  const talents = (list: OperatorTalentView[], overrides: Partial<OperatorSkillsView> = {}) => render(<OperatorTalentsPanel view={view([], { status: "empty", talents: list, ...overrides })} />);
+  const talentsView = (list: OperatorTalentView[], overrides: Partial<OperatorSkillsView> = {}) => view([], { status: "empty", talents: list, ...overrides });
+  const highest = { elite: 2, level: 90, potential: 1 };
+  const talents = (list: OperatorTalentView[], selection: TalentSelection = highest, overrides: Partial<OperatorSkillsView> = {}) => render(<OperatorTalentsPanel view={talentsView(list, overrides)} selection={selection} />);
   const heading = () => screen.getByRole("article").querySelector("h3")!.textContent;
-  const promotions = (position = 1) => within(screen.getByRole("radiogroup", { name: `Promoción del talento ${position}` })).getAllByRole("radio");
-  const potentials = (position = 1) => within(screen.getByRole("group", { name: `Potencial del talento ${position}` })).getAllByRole("button");
 
   it("renders a single-stage talent without selectors (Frostleaf)", () => {
     talents([talent(0, [stage("Frost Bite", 2)]), talent(1, [stage("Segundo", 0)])]);
-    expect(screen.getAllByRole("article").map((item) => within(item).getByRole("heading").textContent)).toEqual(["Frost Bite", "Segundo"]);
+    expect(screen.getAllByRole("article").map((item) => within(item).getByRole("heading", { level: 3 }).textContent)).toEqual(["Frost Bite", "Segundo"]);
     expect(card("Frost Bite")).toHaveTextContent("Efecto de Frost Bite");
-    expect(within(card("Frost Bite")).queryByRole("radiogroup")).toBeNull();
     expect(within(card("Frost Bite")).queryByRole("button")).toBeNull();
-    expect(within(card("Frost Bite")).queryByTestId("next-image")).toBeNull();
+    expect(within(card("Frost Bite")).queryByRole("radio")).toBeNull();
   });
 
-  it("shows the highest promotion by default and switches stages from the elite icons", () => {
-    talents([talent(0, [stage("Base", 0), stage("Mejor", 1), stage("Máximo", 2)])]);
-    expect(promotions().map((radio) => radio.getAttribute("aria-label"))).toEqual(["E0", "E1", "E2"]);
-    expect(promotions().map((radio) => within(radio).getByTestId("next-image").getAttribute("src"))).toEqual([0, 1, 2].map((elite) => `/assets/operator-elite/elite-${elite}.png`));
-    expect(promotions()[2]).toHaveAttribute("aria-checked", "true");
-    expect(promotions()[2]).toHaveClass("is-active");
-    expect(heading()).toBe("Máximo");
-    fireEvent.click(promotions()[1]);
-    expect(card("Mejor")).toHaveTextContent("Efecto de Mejor");
-    fireEvent.keyDown(promotions()[1], { key: "Home" });
-    expect(heading()).toBe("Base");
-    expect(document.activeElement).toBe(promotions()[0]);
-    expect(screen.queryByRole("group", { name: "Potencial del talento 1" })).toBeNull();
+  it("follows the promotion of the selection (SilverAsh the Reignfrost)", () => {
+    const list = [talent(0, [0, 1, 2].map((elite) => stage("Open Game", elite as 0 | 1 | 2, 1, { description: [{ type: "text", text: `E${elite}` }] })))];
+    const { rerender } = talents(list);
+    expect(card("Open Game")).toHaveTextContent("E2");
+    rerender(<OperatorTalentsPanel view={talentsView(list)} selection={{ elite: 1, level: 1, potential: 1 }} />);
+    expect(card("Open Game")).toHaveTextContent("E1");
   });
 
-  it("changes the stage and its name with the potential toggles, P1 when none is pressed (Lancet-2)", () => {
-    talents([talent(0, [1, 2, 3, 4, 5, 6].map((potential) => stage(`Support Spray ${potential}`, 0, potential)))]);
-    expect(screen.queryByRole("radiogroup")).toBeNull();
-    expect(potentials().map((button) => button.getAttribute("aria-label"))).toEqual(["Potencial 2", "Potencial 3", "Potencial 4", "Potencial 5", "Potencial 6"]);
-    expect(potentials().map((button) => within(button).getByTestId("next-image").getAttribute("src"))).toEqual([2, 3, 4, 5, 6].map((potential) => `/assets/operator-potential/potential-${potential}.png`));
-    expect(potentials().every((button) => button.getAttribute("aria-pressed") === "false")).toBe(true);
+  it("changes the stage and its name with the potential (Lancet-2)", () => {
+    const list = [talent(0, [1, 2, 3, 4, 5, 6].map((potential) => stage(`Support Spray ${potential}`, 0, potential)))];
+    const { rerender } = talents(list, { elite: 0, level: 1, potential: 1 });
     expect(heading()).toBe("Support Spray 1");
-    fireEvent.click(potentials()[3]);
+    rerender(<OperatorTalentsPanel view={talentsView(list)} selection={{ elite: 0, level: 1, potential: 5 }} />);
     expect(heading()).toBe("Support Spray 5");
-    expect(potentials()[3]).toHaveAttribute("aria-pressed", "true");
-    expect(potentials()[3]).toHaveClass("is-active");
-    fireEvent.click(potentials()[3]);
-    expect(heading()).toBe("Support Spray 1");
   });
 
-  it("lists only the potentials that change the talent and combines them with the promotion (char_1015_aglna2)", () => {
-    talents([talent(0, [stage("A", 1), stage("A+", 1, 3), stage("B", 2), stage("B+", 2, 3)])]);
-    expect(potentials().map((button) => button.getAttribute("aria-label"))).toEqual(["Potencial 3"]);
-    expect(heading()).toBe("B");
-    fireEvent.click(potentials()[0]);
+  it("combines promotion and potential (char_1015_aglna2) and shows the potential tone (Amiya)", () => {
+    const tone: TalentStageView["description"] = [{ type: "style", tag: "@ba.talpu", tone: "potential", children: [{ type: "text", text: "extra" }] }];
+    const list = [talent(0, [stage("A", 1), stage("A+", 1, 3, { description: tone }), stage("B", 2), stage("B+", 2, 3)])];
+    const { rerender } = talents(list, { elite: 2, level: 1, potential: 3 });
     expect(heading()).toBe("B+");
-    fireEvent.click(promotions()[0]);
+    rerender(<OperatorTalentsPanel view={talentsView(list)} selection={{ elite: 1, level: 1, potential: 6 }} />);
     expect(heading()).toBe("A+");
-    fireEvent.click(potentials()[0]);
+    expect(card("A+").querySelector(".operator-skill-tone.is-potential")).toHaveTextContent("extra");
+    rerender(<OperatorTalentsPanel view={talentsView(list)} selection={{ elite: 1, level: 1, potential: 1 }} />);
     expect(heading()).toBe("A");
   });
 
-  it("uses the last stage whose unlock and potential are met (Amiya P6)", () => {
-    talents([talent(0, [stage("Mind Reading", 0), stage("Mind Reading", 1), stage("Mind Reading", 2), stage("Mind Reading", 2, 6, { description: [{ type: "style", tag: "@ba.talpu", tone: "potential", children: [{ type: "text", text: "extra" }] }] })])]);
-    expect(card("Mind Reading").querySelector(".operator-skill-tone.is-potential")).toBeNull();
-    fireEvent.click(potentials()[0]);
-    expect(card("Mind Reading").querySelector(".operator-skill-tone.is-potential")).toHaveTextContent("extra");
-    fireEvent.click(promotions()[1]);
-    expect(card("Mind Reading")).toHaveTextContent("Efecto de Mind Reading");
+  it("uses the level within the promotion (Hibiscus)", () => {
+    const list = [talent(0, [stage("Healing Up", 1), stage("Healing Up", 1, 1, { unlock: { elite: 1, level: 55 }, description: [{ type: "text", text: "Mejorado" }] })])];
+    const { rerender } = talents(list, { elite: 1, level: 54, potential: 1 });
+    expect(card("Healing Up")).toHaveTextContent("Efecto de Healing Up");
+    rerender(<OperatorTalentsPanel view={talentsView(list)} selection={{ elite: 1, level: 55, potential: 1 }} />);
+    expect(card("Healing Up")).toHaveTextContent("Mejorado");
   });
 
-  it("labels a level variant with the elite icon and its level (Hibiscus)", () => {
-    talents([talent(0, [stage("Healing Up", 1), stage("Healing Up", 1, 1, { unlock: { elite: 1, level: 55 }, description: [{ type: "text", text: "Mejorado" }] })])]);
-    expect(promotions().map((radio) => radio.getAttribute("aria-label"))).toEqual(["E1", "E1 · Nv. 55"]);
-    expect(promotions().map((radio) => radio.textContent)).toEqual(["", "Nv. 55"]);
-    expect(card("Healing Up")).toHaveTextContent("Mejorado");
-    fireEvent.click(promotions()[0]);
-    expect(card("Healing Up")).toHaveTextContent("Efecto de Healing Up");
+  it("dims a locked talent with the name and requirement of its first stage", () => {
+    const list = [talent(0, [stage("Siempre", 0)]), talent(1, [stage("Tardío", 1, 1, { unlock: { elite: 1, level: 55 } }), stage("Tardío+", 2)])];
+    const { rerender } = talents(list, { elite: 1, level: 30, potential: 1 });
+    const locked = card("Tardío");
+    expect(locked).toHaveClass("is-locked");
+    expect(locked).not.toHaveTextContent("Efecto de Tardío");
+    expect(locked.querySelector(".operator-talent-requirement")).toHaveTextContent("Se desbloquea en E1 · Nv. 55Nv. 55");
+    expect(within(locked).getByTestId("next-image")).toHaveAttribute("src", "/assets/operator-elite/elite-1.png");
+    expect(card("Siempre")).not.toHaveClass("is-locked");
+    rerender(<OperatorTalentsPanel view={talentsView(list)} selection={{ elite: 2, level: 1, potential: 1 }} />);
+    expect(card("Tardío+")).not.toHaveClass("is-locked");
+    expect(card("Tardío+")).toHaveTextContent("Efecto de Tardío+");
   });
 
   it("shows the stage's own range only when it has one", () => {
     const ranges = { "3-1": { direction: 1, grids: [{ row: 0, col: 1 }, { row: 0, col: 2 }] } };
-    talents([talent(0, [stage("Sin rango", 1), stage("Con rango", 2, 1, { rangeId: "3-1" })])], { ranges });
+    const list = [talent(0, [stage("Sin rango", 1), stage("Con rango", 2, 1, { rangeId: "3-1" })])];
+    const { rerender } = talents(list, highest, { ranges });
     expect(card("Con rango").querySelector(".operator-talent-body")).toHaveClass("has-range");
     expect(within(card("Con rango")).getAllByLabelText("Casilla alcanzable")).toHaveLength(2);
-    fireEvent.click(promotions()[0]);
+    rerender(<OperatorTalentsPanel view={talentsView(list, { ranges })} selection={{ elite: 1, level: 1, potential: 1 }} />);
     expect(card("Sin rango").querySelector(".operator-skill-range")).toBeNull();
     expect(card("Sin rango").querySelector(".operator-talent-body")).not.toHaveClass("has-range");
   });
