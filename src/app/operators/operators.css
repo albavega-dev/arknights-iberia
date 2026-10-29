@@ -2333,7 +2333,7 @@
   }
 }
 
-/* Refinamiento de controles: criterio y dirección forman una sola unidad. */
+/* Sort controls: criterion and direction form a single unit. */
 .operators-sort-field {
   order: 2;
   flex: 0 1 auto;
@@ -2483,8 +2483,7 @@
   color: var(--color-ivory);
 }
 
-/* El selector de facciones mantiene una anchura estable aunque cambie la opción. */
-/* El selector de facciones mantiene una anchura estable aunque cambie la opción. */
+/* The faction selector keeps a stable width when the option changes. */
 .operators-faction-field {
   flex: 0 0 240px;
   width: 240px;
