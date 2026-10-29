@@ -1,0 +1,119 @@
+{
+  "operatorId": "char_4125_rdoc",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has <@ba.kw>extended</> attack range; When attacking enemies not blocked by self, increase ATK to 120%",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_rdoc",
+      "name": "'The Third Power'",
+      "region": "en",
+      "type": "INS-Y",
+      "icon": "ins-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Doc use Stim Pistol a total of 8 times (excluding Support Units)",
+        "Clear Main Theme 2-5 with a 3-star rating; You must deploy your own Doc, and cannot include any Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 25,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can also be deployed on Ranged tiles"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 30,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can also be deployed on Ranged tiles"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Field Medic",
+              "description": "Max HP +15%, attacks ignore 150 DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Field Medic",
+              "description": "Max HP +15%, attacks ignore 170 <@ba.talpu>(+20)</> DEF"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 35,
+            "def": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can also be deployed on Ranged tiles"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Field Medic",
+              "description": "Max HP +18%, attacks ignore 180 DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Field Medic",
+              "description": "Max HP +18%, attacks ignore 200 <@ba.talpu>(+20)</> DEF"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

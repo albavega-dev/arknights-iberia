@@ -1,0 +1,143 @@
+{
+  "operatorId": "char_241_panda",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can attack <@ba.kw>all blocked enemies</>\nCan be deployed on Ranged Tiles"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_panda",
+      "name": "Shangshu-Style Homemade Chili Sauce",
+      "region": "en",
+      "type": "PUS-Y",
+      "icon": "pus-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own FEater, and cause at least 2 enemies to fall in a pit in each battle",
+        "Clear Who is Real WR-7 with a 3-star rating; You must deploy your own FEater, and use Destructive Fist at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 25,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Simultaneously attacks <@ba.kw>all blocked enemies</>; When blocking 2 or more enemies, increases shift level by 1\nCan be deployed on ranged tiles",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 2
+                },
+                {
+                  "key": "base_force_level",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 32,
+            "def": 32
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Simultaneously attacks <@ba.kw>all blocked enemies</>; When blocking 2 or more enemies, increases shift level by 1\nCan be deployed on ranged tiles",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 2
+                },
+                {
+                  "key": "base_force_level",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Kung Fu",
+              "description": "Obtains 47% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Kung Fu",
+              "description": "Obtains 50% <@ba.talpu>(+3%)</> Physical Dodge"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 35,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Simultaneously attacks <@ba.kw>all blocked enemies</>; When blocking 2 or more enemies, increases shift level by 1\nCan be deployed on ranged tiles",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 2
+                },
+                {
+                  "key": "base_force_level",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Kung Fu",
+              "description": "Obtains 52% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Kung Fu",
+              "description": "Obtains 55% <@ba.talpu>(+3%)</> Physical Dodge"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

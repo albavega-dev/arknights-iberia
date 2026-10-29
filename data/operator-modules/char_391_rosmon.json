@@ -1,0 +1,223 @@
+{
+  "operatorId": "char_391_rosmon",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>two instances</> of Physical damage to <@ba.kw>ground</> enemies in a small area (The second instance is a shockwave that has half the normal ATK)",
+      "blackboard": [
+        {
+          "key": "attack@append_atk_scale",
+          "value": 0.5
+        },
+        {
+          "key": "attack@times",
+          "value": 2
+        }
+      ]
+    }
+  ],
+  "tokens": {
+    "token_10012_rosmon_shield": "Rosmontis's Tactical Equipment"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_rosmon",
+      "name": "'Notes'",
+      "region": "en",
+      "type": "BOM-X",
+      "icon": "bom-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with Rosmontis (excluding Support Units)",
+        "Clear Main Theme 4-1 with a 3-star rating; You must deploy your own Rosmontis, and have Rosmontis defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 175,
+            "atk": 55
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 65
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Armaments of Annihilation",
+              "description": "Attacks ignore 190 DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Armaments of Annihilation",
+              "description": "Attacks ignore 205 <@ba.talpu>(+15)</> DEF"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 275,
+            "atk": 75
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Armaments of Annihilation",
+              "description": "Attacks ignore 220 DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Armaments of Annihilation",
+              "description": "Attacks ignore 235 <@ba.talpu>(+15)</> DEF"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_rosmon",
+      "name": "Rosmontis's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 45,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, attacks deal <@ba.kw>1</> additional instance of <@ba.kw>100%</> ATK as Arts damage"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 70,
+            "attack_speed": 6
+          },
+          "tokenAttributes": {
+            "token_10012_rosmon_shield": {
+              "max_deploy_count": 18
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, attacks deal <@ba.kw>1</> additional instance of <@ba.kw>100%</> ATK as Arts damage"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Stable Esthesia",
+              "description": "When deployed, grants +8% ATK to this unit and a random deployed [Caster] Operator; in <@ba.kw>Integrated Strategies</>, Rosmontis also benefits from [Caster] Collectibles, and when any [Sniper] or [Caster] Operator is deployed, 1 piece of Tactical Equipment will be summoned within their Attack Range"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 90,
+            "attack_speed": 7
+          },
+          "tokenAttributes": {
+            "token_10012_rosmon_shield": {
+              "max_deploy_count": 18
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, attacks deal <@ba.kw>1</> additional instance of <@ba.kw>100%</> ATK as Arts damage"
+            },
+            {
+              "token": true,
+              "override": "Blocks 2 enemies. In <@ba.kw>Integrated Strategies</>, its Stun effect extends to 5s, and its ability of reducing the DEF of blocked enemies changes to reducing the DEF of ground enemies on the surrounding 8 tiles by <@ba.kw>400</>, and their RES by <@ba.kw>20</> (does not stack)",
+              "blackboard": [
+                {
+                  "key": "def",
+                  "value": -400
+                },
+                {
+                  "key": "magic_resistance",
+                  "value": -20
+                },
+                {
+                  "key": "stun",
+                  "value": 5
+                },
+                {
+                  "key": "rosmon_e_003_token[passive].max_hp",
+                  "value": 1750
+                },
+                {
+                  "key": "rosmon_e_003_token[passive].def",
+                  "value": 330
+                },
+                {
+                  "key": "rosmon_e_003_token[passive].magic_resistance",
+                  "value": 35
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Stable Esthesia",
+              "description": "When deployed, grants +8% ATK to this unit and a random deployed [Caster] Operator; in <@ba.kw>Integrated Strategies</>, Rosmontis also benefits from [Caster] Collectibles, and when any [Sniper] or [Caster] Operator is deployed, 1 stronger piece of Tactical Equipment with special effects will be summoned within their Attack Range"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

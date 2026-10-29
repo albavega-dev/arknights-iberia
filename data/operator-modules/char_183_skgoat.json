@@ -1,0 +1,101 @@
+{
+  "operatorId": "char_183_skgoat",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</> and <$ba.sluggish>Slows</> the target for a short time",
+      "blackboard": [
+        {
+          "key": "sluggish",
+          "value": 0.8
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_skgoat",
+      "name": "Application Forms, To Be Confirmed",
+      "region": "en",
+      "type": "DEC-Y",
+      "icon": "dec-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Have Earthspirit use Quicksand Conversion a total of 6 times (excluding Support Units)",
+        "Clear Darknights Memoir DM-2 with a 3-star rating; You must deploy your own Earthspirit, and only Vanguard and Sniper Operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 90,
+            "def": 20
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 110,
+            "def": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Geological Survey",
+              "description": "Extends the duration of<$ba.sluggish>Slow</> caused by the Trait"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Geological Survey",
+              "description": "Extends the duration of<$ba.sluggish>Slow</> caused by the Trait greatly"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 130,
+            "def": 38
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Geological Survey",
+              "description": "Further the duration of<$ba.sluggish>Slow</> caused by the Trait"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Geological Survey",
+              "description": "Further the duration of<$ba.sluggish>Slow</> caused by the Trait significantly"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

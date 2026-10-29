@@ -1,0 +1,150 @@
+{
+  "operatorId": "char_4071_peper",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 25% per bounce.",
+      "blackboard": [
+        {
+          "key": "attack@chain.max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@chain.atk_scale",
+          "value": 0.75
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_peper",
+      "name": "'Colorful Life'",
+      "region": "en",
+      "type": "XAH-X",
+      "icon": "xah-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Paprika use Camaraderie a total of 5 times",
+        "Clear Main Theme 3-5 with a 3-star rating; You must deploy your own Paprika, and use Camaraderie at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 36
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 15% per bounce.",
+              "blackboard": [
+                {
+                  "key": "attack@chain.max_target",
+                  "value": 3
+                },
+                {
+                  "key": "attack@chain.atk_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 51
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 15% per bounce.",
+              "blackboard": [
+                {
+                  "key": "attack@chain.max_target",
+                  "value": 3
+                },
+                {
+                  "key": "attack@chain.atk_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Focused Attention",
+              "description": "When healing, heal an extra 170 HP if target HP is below 40%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Focused Attention",
+              "description": "When healing, heal an extra 180 <@ba.talpu>(+10)</> HP if target HP is below 40%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 61
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 15% per bounce.",
+              "blackboard": [
+                {
+                  "key": "attack@chain.max_target",
+                  "value": 3
+                },
+                {
+                  "key": "attack@chain.atk_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Focused Attention",
+              "description": "When healing, heal an extra 200 HP if target HP is below 50%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Focused Attention",
+              "description": "When healing, heal an extra 210 <@ba.talpu>(+10)</> HP if target HP is below 50%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "operatorId": "char_1028_texas2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Significantly <@ba.kw>reduced</> Redeployment Time"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_texas2",
+      "name": "Blueberry & Dark Chocolate",
+      "region": "en",
+      "type": "EXE-Y",
+      "icon": "exe-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with Texas the Omertosa (excluding Support Units)",
+        "Clear Code of Brawl CB-8 with a 3-star rating; You must deploy your own Texas the Omertosa, and have her defeat at least 2 Greytails"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 53
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Texas Tradition",
+              "description": "Gains +25% ATK during the duration of the passive skill; When defeating an enemy for the first time, fully restores HP and reactivates the effects of the passive skill"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Texas Tradition",
+              "description": "Gains +28% ATK during the duration of the passive skill; When defeating an enemy for the first time, fully restores HP and reactivates the effects of the passive skill"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_texas2",
+      "name": "'New Car and New Life'",
+      "region": "en",
+      "type": "EXE-X",
+      "icon": "exe-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with your own Texas the Omertosa",
+        "Clear Main Theme 5-3 with a 3-star rating; You must deploy your own Texas the Omertosa, and have her defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 46
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+              "blackboard": [
+                {
+                  "key": "withdraw_cost_recover_ratio",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 62
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+              "blackboard": [
+                {
+                  "key": "withdraw_cost_recover_ratio",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Texas Swordsmanship",
+              "description": "Before defeating an enemy for the first time after each deployment, gains +12 ASPD and reduces all damage taken by 30%; after defeating an enemy, -10% to next Redeployment Time"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Texas Swordsmanship",
+              "description": "Before defeating an enemy for the first time after each deployment, gains +14 <@ba.talpu>(+2)</> ASPD and reduces all damage taken by 35% <@ba.talpu>(+5%)</>; after defeating an enemy, -10% to next Redeployment Time"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 69
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+              "blackboard": [
+                {
+                  "key": "withdraw_cost_recover_ratio",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Texas Swordsmanship",
+              "description": "Before defeating an enemy for the first time after each deployment, gains +15 ASPD and reduces all damage taken by 30%; after defeating an enemy, -20% to next Redeployment Time"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Texas Swordsmanship",
+              "description": "Before defeating an enemy for the first time after each deployment, gains +17 <@ba.talpu>(+2)</> ASPD and reduces all damage taken by 35% <@ba.talpu>(+5%)</>; after defeating an enemy, -20% to next Redeployment Time"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

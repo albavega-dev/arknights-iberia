@@ -1,0 +1,114 @@
+{
+  "operatorId": "char_4109_baslin",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can heal allies by using skill(s)"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_baslin",
+      "name": "Bestowed Trinket",
+      "region": "en",
+      "type": "GUA-Y",
+      "icon": "gua-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Bassline, and unleash Calming Bass at least 1 time in each battle",
+        "Clear Lingering Echoes LE-4 with a 3-star rating; You must deploy your own Bassline, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 265,
+            "atk": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Reduces damage taken by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "damage_resistance",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 345,
+            "atk": 28
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Reduces damage taken by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "damage_resistance",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Authoritarian Teachings",
+              "description": "RES +12; if there are allied Operators in the 8 surrounding tiles, both this unit and them gain another RES +4"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 410,
+            "atk": 32
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Reduces damage taken by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "damage_resistance",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Authoritarian Teachings",
+              "description": "RES +14; if there are allied Operators in the 8 surrounding tiles, both this unit and them gain another RES +5"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

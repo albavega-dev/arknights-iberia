@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_155_tiger",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 1 enemy"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_tiger",
+      "name": "'Hannah's Dislocation Rehabilitation Set'",
+      "region": "en",
+      "type": "FGT-Y",
+      "icon": "fgt-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Indra (excluding Support Units)",
+        "Clear Main Theme 11-5 with a 3-star rating under Standard Environment; You must deploy your own Indra, and can only include 6 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Quick Fists",
+              "description": "Has a 30% chance to Dodge the enemy's Physical Melee Attack. ATK +110% in the next attack if the Dodge is successful"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Quick Fists",
+              "description": "Has a 33% <@ba.talpu>(+3%)</> chance to Dodge the enemy's Physical Melee Attack. ATK +110% in the next attack if the Dodge is successful"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Quick Fists",
+              "description": "Has a 30% chance to Dodge the enemy's Physical Melee Attack. ATK +120% in the next attack if the Dodge is successful"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Quick Fists",
+              "description": "Has a 33% <@ba.talpu>(+3%)</> chance to Dodge the enemy's Physical Melee Attack. ATK +120% in the next attack if the Dodge is successful"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "operatorId": "char_4015_spuria",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Continually loses HP over time",
+      "blackboard": [
+        {
+          "key": "hp_ratio",
+          "value": 0.01
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_spuria",
+      "name": "Drone Spraying Kit",
+      "region": "en",
+      "type": "GEE-X",
+      "icon": "gee-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 60,000 damage with Spuria (excluding Support Units)",
+        "Clear Darknights Memoir DM-2 with a 3-star rating; You must deploy your own Spuria, and use On-the-Fly Weapon Modding at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 25,
+            "def": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.25/second while above 80% HP"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 35,
+            "def": 31
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.25/second while above 80% HP"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Differential Reloading Experiment",
+              "description": "Each attack has a 70% chance to trigger one of the following effects: the attack instead hits twice, the target is Stunned for 1 second, or the attack ignores 80% of the target's DEF; when this effect is triggered, the attack deals 110% damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 40,
+            "def": 38
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.25/second while above 80% HP"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Differential Reloading Experiment",
+              "description": "Each attack has a 70% chance to trigger one of the following effects: the attack instead hits twice, the target is Stunned for 1 second, or the attack ignores 80% of the target's DEF; when this effect is triggered, the attack deals 115% damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

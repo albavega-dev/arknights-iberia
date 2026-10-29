@@ -1,0 +1,114 @@
+{
+  "operatorId": "char_190_clour",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks aerial enemies first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_clour",
+      "name": "'Still Alive'",
+      "region": "en",
+      "type": "MAR-X",
+      "icon": "mar-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Deal a total of 60,000 damage with Vermeil (excluding Support Units)",
+        "Clear Main Theme 3-1 with a 3-star rating; You must deploy your own Vermeil, and only Vanguard Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 28
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Hunter's Wisdom",
+              "description": "Improves own SP recovery rate by +0.35/second"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 31
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Hunter's Wisdom",
+              "description": "Improves own SP recovery rate by +0.4/second"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

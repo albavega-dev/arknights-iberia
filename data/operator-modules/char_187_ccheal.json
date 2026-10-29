@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_187_ccheal",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ccheal",
+      "name": "'Follow Your Doctor's Orders'",
+      "region": "en",
+      "type": "PHY-Y",
+      "icon": "phy-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Gavial use Vitality Restoration - Wide Range a total of 12 times (excluding Support Units)",
+        "Clear Main Theme S4-5 with a 3-star rating; You must deploy your own Gavial, and use Vitality Restoration - Wide Range at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 30,
+            "atk": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 50,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Battlefield Medic",
+              "description": "After deployment, all [Medic] Operators' ATK +10% and DEF +100, lasting 20 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Battlefield Medic",
+              "description": "After deployment, all [Medic] Operators' ATK +12%<@ba.talpu>(+2%)</> and DEF +120<@ba.talpu>(+20)</>, lasting 22<@ba.talpu>(+2)</> seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Battlefield Medic",
+              "description": "After deployment, all [Medic] Operators' ATK +10% and DEF +100, lasting 25 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Battlefield Medic",
+              "description": "After deployment, all [Medic] Operators' ATK +12%<@ba.talpu>(+2%)</> and DEF +120<@ba.talpu>(+20)</>, lasting 27<@ba.talpu>(+2)</> seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

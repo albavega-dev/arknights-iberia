@@ -1,0 +1,117 @@
+{
+  "operatorId": "char_378_asbest",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normal attacks deal Arts damage while the skill is active"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_asbest",
+      "name": "'Asbestos vs. Two-headed Gloompincer'",
+      "region": "en",
+      "type": "AST-X",
+      "icon": "ast-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 3 battles; You must deploy your own Asbestos, and unleash Thermal Power Mode at least 1 time in each battle",
+        "Clear Main Theme 6-2 with a 3-star rating; You must deploy your own Asbestos, and use Thermal Power Mode at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 28,
+            "def": 18
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 35,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Moist Skin",
+              "description": "RES +12, restores 3 SP when hit by an enemy's normal Arts attack"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 45,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Moist Skin",
+              "description": "RES +12, restores 4 SP when hit by an enemy's normal Arts attack"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

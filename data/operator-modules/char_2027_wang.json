@@ -1,0 +1,130 @@
+{
+  "operatorId": "char_2027_wang",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can use traps to assist in combat, but traps cannot be placed <@ba.kw>on tiles already occupied by an enemy</>"
+    }
+  ],
+  "tokens": {
+    "token_10064_wang_stone1": "Stone"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_wang",
+      "name": "Beast-Shaped Stone Container",
+      "region": "en",
+      "type": "TRP-X",
+      "icon": "trp-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Wang use All-Dominating Fight a total of 3 times",
+        "Clear Here A People Sows HS-7 with a 3-star rating; You must deploy your own Wang, and can only include 7 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 36
+          },
+          "tokenAttributes": {
+            "token_10064_wang_stone1": {
+              "cost": -1,
+              "max_deploy_count": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Can use traps <@ba.kw>with a lower DP cost</> to assist in combat, but traps cannot be placed on tiles already occupied by an enemy; trap Deployment Limit increases"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 50
+          },
+          "tokenAttributes": {
+            "token_10064_wang_stone1": {
+              "cost": -1,
+              "max_deploy_count": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Can use traps <@ba.kw>with a lower DP cost</> to assist in combat, but traps cannot be placed on tiles already occupied by an enemy; trap Deployment Limit increases"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Every Move Anticipated",
+              "description": "When a stone is activated, for every stone in the same straight chain, all stones within that chain deal an additional 12% damage and ignore 11 RES (stacks up to 3 times)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Every Move Anticipated",
+              "description": "When a stone is activated, for every stone in the same straight chain, all stones within that chain deal an additional 14% <@ba.talpu>(+2%)</> damage and ignore 12 <@ba.talpu>(+1)</> RES (stacks up to 3 times)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 60
+          },
+          "tokenAttributes": {
+            "token_10064_wang_stone1": {
+              "cost": -1,
+              "max_deploy_count": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Can use traps <@ba.kw>with a lower DP cost</> to assist in combat, but traps cannot be placed on tiles already occupied by an enemy; trap Deployment Limit increases"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Every Move Anticipated",
+              "description": "When a stone is activated, for every stone in the same straight chain, all stones within that chain deal an additional 13% damage and ignore 12 RES (stacks up to 3 times)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Every Move Anticipated",
+              "description": "When a stone is activated, for every stone in the same straight chain, all stones within that chain deal an additional 15% <@ba.talpu>(+2%)</> damage and ignore 13 <@ba.talpu>(+1)</> RES (stacks up to 3 times)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

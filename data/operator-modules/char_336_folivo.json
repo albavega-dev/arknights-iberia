@@ -1,0 +1,116 @@
+{
+  "operatorId": "char_336_folivo",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>\nCan use <@ba.kw>Summons</> in battles"
+    }
+  ],
+  "tokens": {
+    "token_10010_folivo_car": "Mobile Buggy Cam"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_folivo",
+      "name": "Improved Lens.P",
+      "region": "en",
+      "type": "SUM-X",
+      "icon": "sum-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete 5 operations and summon Scene's summoned units at least 5 times in each operation (Scene cannot be a Support Unit)",
+        "Clear Main Theme 3-1 with a 3-star rating using a squad of at most 2 units (including Support Units); a non-Support Scene must be deployed during the operation and only Sniper operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 20,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first summoned unit <@ba.kw>does not consume</> deployment slots (The last summoned unit on the field does not return a deployment slot when retreated or defeated)",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 28,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first summoned unit <@ba.kw>does not consume</> deployment slots (The last summoned unit on the field does not return a deployment slot when retreated or defeated)",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Camera Squad",
+              "description": "Can summon 5 Buggy Cams; Buggy Cams will reveal <$ba.invisible>Invisible</> enemies within the surrounding 8 tiles and inflict -5% Movement Speed"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 36,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first summoned unit <@ba.kw>does not consume</> deployment slots (The last summoned unit on the field does not return a deployment slot when retreated or defeated)",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Camera Squad",
+              "description": "Can summon 5 Buggy Cams; Buggy Cams will reveal <$ba.invisible>Invisible</> enemies within the surrounding 8 tiles and inflict -8% Movement Speed"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

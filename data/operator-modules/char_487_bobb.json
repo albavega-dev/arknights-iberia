@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_487_bobb",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts damage</>, and can inflict <@ba.kw>Elemental Injury</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_bobb",
+      "name": "Second-hand Textbook for Social Work",
+      "region": "en",
+      "type": "RIT-X",
+      "icon": "rit-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Trigger a total of 30 Burn Bursts with your own Bobbing",
+        "Clear Main Theme 4-8 with a 3-star rating; You must deploy your own Bobbing, and have him use 'You Shall Not Pass' at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 25,
+            "def": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Elemental Injury dealt to Elite and Leader enemies increases by <@ba.kw>18%</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.18
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 30,
+            "def": 27
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Elemental Injury dealt to Elite and Leader enemies increases by <@ba.kw>18%</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.18
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Focused Guidance",
+              "description": "The first attack against an enemy deals 17% ATK as <$ba.dt.burning2>Burn</> every second for 5s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Focused Guidance",
+              "description": "The first attack against an enemy deals 19% <@ba.talpu>(+2%)</> ATK as <$ba.dt.burning2>Burn</> every second for 5s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 35,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Elemental Injury dealt to Elite and Leader enemies increases by <@ba.kw>18%</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.18
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Focused Guidance",
+              "description": "The first attack against an enemy deals 18% ATK as <$ba.dt.burning2>Burn</> every second for 5s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Focused Guidance",
+              "description": "The first attack against an enemy deals 20% <@ba.talpu>(+2%)</> ATK as <$ba.dt.burning2>Burn</> every second for 5s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "operatorId": "char_446_aroma",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Arts damage in a long line</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_aroma",
+      "name": "Lemon-flavored Childhood",
+      "region": "en",
+      "type": "BLA-X",
+      "icon": "bla-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Aroma, and unleash Caution! Wet Floor! at least once in each battle",
+        "Clear Grani and the Knights' Treasure GT-HX-3 with a 3-star rating; You must deploy your own Aroma, and have her defeat at least 20 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 49
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks deal <@ba.kw>extremely long-ranged AoE Arts damage</>; damage dealt increases with distance, up to <@ba.kw>110%</>",
+              "blackboard": [
+                {
+                  "key": "min_dist",
+                  "value": 0
+                },
+                {
+                  "key": "max_dist",
+                  "value": 4
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 175,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks deal <@ba.kw>extremely long-ranged AoE Arts damage</>; damage dealt increases with distance, up to <@ba.kw>110%</>",
+              "blackboard": [
+                {
+                  "key": "min_dist",
+                  "value": 0
+                },
+                {
+                  "key": "max_dist",
+                  "value": 4
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Let's Get Saponaceous!",
+              "description": "The first attack against each enemy has ATK increased to 115% and <$ba.levitate>Levitates</> the target for 2.5s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Let's Get Saponaceous!",
+              "description": "The first attack against each enemy has ATK increased to 120% <@ba.talpu>(+5%)</> and <$ba.levitate>Levitates</> the target for 2.5s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks deal <@ba.kw>extremely long-ranged AoE Arts damage</>; damage dealt increases with distance, up to <@ba.kw>110%</>",
+              "blackboard": [
+                {
+                  "key": "min_dist",
+                  "value": 0
+                },
+                {
+                  "key": "max_dist",
+                  "value": 4
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Let's Get Saponaceous!",
+              "description": "The first attack against each enemy has ATK increased to 120% and <$ba.levitate>Levitates</> the target for 2.5s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Let's Get Saponaceous!",
+              "description": "The first attack against each enemy has ATK increased to 125% <@ba.talpu>(+5%)</> and <$ba.levitate>Levitates</> the target for 2.5s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

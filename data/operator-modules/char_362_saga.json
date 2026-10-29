@@ -1,0 +1,221 @@
+{
+  "operatorId": "char_362_saga",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 2 enemies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_saga",
+      "name": "Walk The World",
+      "region": "en",
+      "type": "SOL-Y",
+      "icon": "sol-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must include your own Saga, and Saga must be the first Operator deployed",
+        "Clear Who is Real WR-1 with a 3-star rating; You must deploy your own Saga, and can only include 2 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 75,
+            "atk": 45,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first Deployment Cost -4"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 105,
+            "atk": 50,
+            "def": 18
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first Deployment Cost -4"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Clear Mind",
+              "description": "When HP falls below 40%, gain 70% Physical Dodge and restore 5.5% Max HP every second, lasting for 17 seconds. Can only activate once"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Clear Mind",
+              "description": "When HP falls below 40%, gain 70% Physical Dodge and restore 6.5% <@ba.talpu>(+1%)</> Max HP every second, lasting for 19 <@ba.talpu>(+2)</> seconds. Can only activate once"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 55,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first Deployment Cost -4"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Clear Mind",
+              "description": "When HP falls below 40%, gain 70% Physical Dodge and restore 6% Max HP every second, lasting for 18 seconds. Can only activate once"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Clear Mind",
+              "description": "When HP falls below 40%, gain 70% Physical Dodge and restore 7% <@ba.talpu>(+1%)</> Max HP every second, lasting for 20 <@ba.talpu>(+2)</> seconds. Can only activate once"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_saga",
+      "name": "Where to Find the Burdenbeast?",
+      "region": "en",
+      "type": "SOL-X",
+      "icon": "sol-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with Saga (excluding Support Units)",
+        "Clear Who is Real WR-3 with a 3-star rating; You must deploy your own Saga, Saga must be the first deployed, and Saga cannot retreat or be defeated for the entire stage"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 50,
+            "def": 28
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 62,
+            "def": 38
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Preaching",
+              "description": "Increases damage dealt to enemies below half HP by 10%; when dealing lethal damage, leaves the target with 1 HP and inflicts <$ba.dying>Critically Wounded</> (gives +2 SP to the attacker when killed); Saga will not attack <$ba.dying>Critically Wounded</> targets"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 70,
+            "def": 44
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Preaching",
+              "description": "Increases damage dealt to enemies below half HP by 15%; when dealing lethal damage, leaves the target with 1 HP and inflicts <$ba.dying>Critically Wounded</> (gives +2 SP to the attacker when killed); Saga will not attack <$ba.dying>Critically Wounded</> targets"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

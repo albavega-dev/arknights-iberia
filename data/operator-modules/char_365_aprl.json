@@ -1,0 +1,96 @@
+{
+  "operatorId": "char_365_aprl",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks aerial enemies first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_aprl",
+      "name": "Hi-Fi Headset",
+      "region": "en",
+      "type": "MAR-Y",
+      "icon": "mar-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, deploy April a total of 8 times (excluding Support Units)",
+        "Clear Main Theme 5-3 with a 3-star rating; You must deploy your own April, and have April defeat at least 2 Spec Ops Caster Leaders"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 28
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Experienced Hunter",
+              "description": "Redeployment Time -25 seconds, DP Cost -2"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 32
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Experienced Hunter",
+              "description": "Redeployment Time -28 seconds, DP Cost -2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

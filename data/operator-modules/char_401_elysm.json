@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_401_elysm",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Cannot block enemies during the skill duration"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_elysm",
+      "name": "Emergency Callbook",
+      "region": "en",
+      "type": "BEA-X",
+      "icon": "bea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Elysium use Support γ a total of 10 times (excluding Support Units)",
+        "Clear Main Theme S3-6 with a 3-star rating; You must deploy your own Elysium, and cannot include any other Vanguard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 110,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Cannot block enemies during the skill duration, but grants <@ba.kw>+1</> Block to an Operator in front of this unit",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Cannot block enemies during the skill duration, but grants <@ba.kw>+1</> Block to an Operator in front of this unit",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sniper Support",
+              "description": "When deployed, all Sniper Operators have -2 DP Cost and gain +23 ASPD while this unit's skill is active"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sniper Support",
+              "description": "When deployed, all Sniper Operators have -2 DP Cost and gain +26 <@ba.talpu>(+3)</> ASPD while this unit's skill is active"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "def": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Cannot block enemies during the skill duration, but grants <@ba.kw>+1</> Block to an Operator in front of this unit",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sniper Support",
+              "description": "When deployed, all Sniper Operators have -2 DP Cost and gain +25 ASPD while this unit's skill is active"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sniper Support",
+              "description": "When deployed, all Sniper Operators have -2 DP Cost and gain +28 <@ba.talpu>(+3)</> ASPD while this unit's skill is active"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

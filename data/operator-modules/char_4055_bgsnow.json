@@ -1,0 +1,249 @@
+{
+  "operatorId": "char_4055_bgsnow",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "High accuracy point-blank shot"
+    }
+  ],
+  "tokens": {
+    "token_10026_bgsnow_subbow": "'Typewriter'"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_bgsnow",
+      "name": "Typewriter Ribbon",
+      "region": "en",
+      "type": "ARC-Y",
+      "icon": "arc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Summon a total of 10 'Typewriters' with Pozëmka (excluding Support Units)",
+        "Clear Main Theme 2-10 with a 3-star rating; You must deploy your own Pozëmka, and have Pozëmka or a 'Typewriter' defeat Skullshatterer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.05
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 65
+          },
+          "tokenAttributes": {
+            "token_10026_bgsnow_subbow": {
+              "atk": 50
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.05
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Automatic Typewriter",
+              "description": "Can summon a stronger 'Typewriter' for 25s; the 'Typewriter' has the same skill as this unit, and has its own Redeployment Time"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 75
+          },
+          "tokenAttributes": {
+            "token_10026_bgsnow_subbow": {
+              "atk": 70
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.05
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Automatic Typewriter",
+              "description": "Can summon a much stronger 'Typewriter' for 25s; the 'Typewriter' has the same skill as this unit, and has its own Redeployment Time"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_bgsnow",
+      "name": "чувство ритуала",
+      "region": "en",
+      "type": "ARC-X",
+      "icon": "arc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Pozëmka, and unleash Opprobrium at least 1 time in each battle",
+        "Clear Main Theme 9-7 with a 3-star rating under Standard Environment; You must deploy your own Pozëmka and have her defeat at least 10 enemies, including at least 1 Dublinn Heavy Defender"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 80,
+            "def": 10,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 100,
+            "def": 13,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Stenographer of Weaknesses",
+              "description": "Attacks from the 'Typewriter' reduce the target's DEF by 23% for 4 seconds; if the 'Typewriter' is placed within the 8 tiles adjacent to Pozëmka, this effect increases to 28%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Stenographer of Weaknesses",
+              "description": "Attacks from the 'Typewriter' reduce the target's DEF by 25% <@ba.talpu>(+2%)</> for 5 <@ba.talpu>(+1)</> seconds; if the 'Typewriter' is placed within the 8 tiles adjacent to Pozëmka, this effect increases to 30% <@ba.talpu>(+2%)</>"
+            },
+            {
+              "index": 1,
+              "potential": 1,
+              "token": true,
+              "name": "Stenographer of Weaknesses",
+              "description": "Attacks from the 'Typewriter' reduce the target's DEF by 23% for 4 seconds; if the 'Typewriter' is placed within the 8 tiles adjacent to Pozëmka, this effect increases to 28%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": true,
+              "name": "Stenographer of Weaknesses",
+              "description": "Attacks from the 'Typewriter' reduce the target's DEF by 25% <@ba.talpu>(+2%)</> for 5 <@ba.talpu>(+1)</> seconds; if the 'Typewriter' is placed within the 8 tiles adjacent to Pozëmka, this effect increases to 30% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 120,
+            "def": 16,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Stenographer of Weaknesses",
+              "description": "Attacks from the 'Typewriter' reduce the target's DEF by 28% for 4 seconds; if the 'Typewriter' is placed within the 8 tiles adjacent to Pozëmka, this effect increases to 33%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Stenographer of Weaknesses",
+              "description": "Attacks from the 'Typewriter' reduce the target's DEF by 30% <@ba.talpu>(+2%)</> for 5 <@ba.talpu>(+1)</> seconds; if the 'Typewriter' is placed within the 8 tiles adjacent to Pozëmka, this effect increases to 35% <@ba.talpu>(+2%)</>"
+            },
+            {
+              "index": 1,
+              "potential": 1,
+              "token": true,
+              "name": "Stenographer of Weaknesses",
+              "description": "Attacks from the 'Typewriter' reduce the target's DEF by 28% for 4 seconds; if the 'Typewriter' is placed within the 8 tiles adjacent to Pozëmka, this effect increases to 33%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": true,
+              "name": "Stenographer of Weaknesses",
+              "description": "Attacks from the 'Typewriter' reduce the target's DEF by 30% <@ba.talpu>(+2%)</> for 5 <@ba.talpu>(+1)</> seconds; if the 'Typewriter' is placed within the 8 tiles adjacent to Pozëmka, this effect increases to 35% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

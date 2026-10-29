@@ -1,0 +1,113 @@
+{
+  "operatorId": "char_4013_kjera",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Controls a <@ba.kw>Drone</> that deals <@ba.kw>Arts damage</>; When the Drone attacks the same enemy, its damage will increase (up to 110% of the operator's ATK)",
+      "blackboard": [
+        {
+          "key": "init_atk_scale",
+          "value": 0.2
+        },
+        {
+          "key": "delta_atk_scale",
+          "value": 0.15
+        },
+        {
+          "key": "max_atk_scale",
+          "value": 1.1
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 6
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_kjera",
+      "name": "In the Woolen of Snow",
+      "region": "en",
+      "type": "FUN-Y",
+      "icon": "fun-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with Kjera (excluding Support Units)",
+        "Clear Break the Ice BI-7 with a 3-star rating; You must deploy your own Kjera, and use Unrestrained Heart at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 65,
+            "atk": 18
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 23
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Deference",
+              "description": "ATK +15%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +21%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Deference",
+              "description": "ATK +18% <@ba.talpu>(+3%)</>, when there are two or more ground tiles within Attack Range, the effect becomes ATK +24% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 102,
+            "atk": 28
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Deference",
+              "description": "ATK +18%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +24%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Deference",
+              "description": "ATK +21% <@ba.talpu>(+3%)</>, when there two or more ground tiles within Attack Range, the effect becomes ATK +27% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

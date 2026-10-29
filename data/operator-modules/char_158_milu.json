@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_158_milu",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Prioritizes attacking the enemy with <@ba.kw>lowest DEF</> within range first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_milu",
+      "name": "Field Sniper Equipment",
+      "region": "en",
+      "type": "DEA-Y",
+      "icon": "dea-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 25 enemy ranged units with Firewatch (Firewatch cannot be a Support Unit)",
+        "Clear Main Theme 2-10 with a 3-star rating; a non-Support Firewatch must be deployed during the operation, and Firewatch must defeat Skullshatterer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 75
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Assassin",
+              "description": "ATK increases to 145% when attacking ranged enemies and enemies that do not attack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Assassin",
+              "description": "ATK increases to 150% <@ba.talpu>(+5%)</> when attacking ranged enemies and enemies that do not attack"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 87
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Assassin",
+              "description": "ATK increases to 150% when attacking ranged enemies and enemies that do not attack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Assassin",
+              "description": "ATK increases to 155% <@ba.talpu>(+5%)</> when attacking ranged enemies and enemies that do not attack"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "operatorId": "char_298_susuro",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_susuro",
+      "name": "...Who Heals Not Herself",
+      "region": "en",
+      "type": "PHY-X",
+      "icon": "phy-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Sussurro use Deep Healing a total of 6 times (excluding Support Units)",
+        "Clear Main Theme 4-7 with a 3-star rating; you must deploy your own Sussurro, and cannot include any Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 50,
+            "attack_speed": 3
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 80,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Minimally Invasive Surgery",
+              "description": "Increases healing effects by 23% on all Operators with DP Cost no more than 10 when Sussurro is in the squad"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Minimally Invasive Surgery",
+              "description": "Increases healing effects by 26%<@ba.talpu>(+3%)</> on all Operators with DP Cost no more than 10 when Sussurro is in the squad"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 100,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Minimally Invasive Surgery",
+              "description": "Increases healing effects by 25% on all Operators with DP Cost no more than 10 when Sussurro is in the squad"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Minimally Invasive Surgery",
+              "description": "Increases healing effects by 28%<@ba.talpu>(+3%)</> on all Operators with DP Cost no more than 10 when Sussurro is in the squad"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

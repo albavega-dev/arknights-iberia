@@ -1,0 +1,140 @@
+{
+  "operatorId": "char_4126_fuze",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks <@ba.kw>all blocked enemies</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_fuze",
+      "name": "Sublinguistical Sign Showing System",
+      "region": "en",
+      "type": "CEN-Y",
+      "icon": "cen-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with Fuze (excluding Support Units)",
+        "Clear Main Theme 3-1 with a 3-star rating; You must deploy your own Fuze, and have Fuze defeat at least 30 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Ballistic Shield",
+              "description": "Gains 30% ranged Physical resist, +3% DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Ballistic Shield",
+              "description": "Gains 33% <@ba.talpu>(+3%)</> ranged Physical resist, +3% DEF"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Ballistic Shield",
+              "description": "Gains 32% ranged Physical resist, +6% DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Ballistic Shield",
+              "description": "Gains 35% <@ba.talpu>(+3%)</> ranged Physical resist, +6% DEF"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

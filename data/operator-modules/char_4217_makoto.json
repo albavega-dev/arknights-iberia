@@ -1,0 +1,104 @@
+{
+  "operatorId": "char_4217_makoto",
+  "region": "cn",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "受到致命伤时不撤退，切换成<替身>作战（替身阻挡数为0），持续20秒后自身再次替换<替身>",
+      "blackboard": [
+        {
+          "key": "duration",
+          "value": 20
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_makoto",
+      "name": "彼此的声音",
+      "region": "cn",
+      "type": "PUM-Y",
+      "icon": "pum-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "由非助战结城理累计造成30歼灭数",
+        "3星通关主题曲4-3；必须编入非助战结城理并上场，其他成员不可编入医疗干员"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 18,
+            "def": 18
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 257,
+            "atk": 27,
+            "def": 27
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "不羁之力",
+              "description": "结城理切换为<替身>状态时<$ba.sluggish>停顿</>周围一定范围内敌人9秒；<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+88%，生命值+38%，作战能力随技能选择而改变"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "不羁之力",
+              "description": "结城理切换为<替身>状态时<$ba.sluggish>停顿</>周围一定范围内敌人9秒；<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+93%<@ba.talpu>（+5%）</>，生命值+38%，作战能力随技能选择而改变"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 304,
+            "atk": 34,
+            "def": 34
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "不羁之力",
+              "description": "结城理切换为<替身>状态时<$ba.sluggish>停顿</>周围一定范围内敌人10秒；<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+95%，生命值+40%，作战能力随技能选择而改变"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "不羁之力",
+              "description": "结城理切换为<替身>状态时<$ba.sluggish>停顿</>周围一定范围内敌人10秒；<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+100%<@ba.talpu>（+5%）</>，生命值+40%，作战能力随技能选择而改变"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "operatorId": "char_383_snsant",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can <@ba.kw>Shift</> enemies by using skills\nCan be deployed on Ranged Tiles"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_snsant",
+      "name": "Snowsant's Precious Money Bank",
+      "region": "en",
+      "type": "HOK-X",
+      "icon": "hok-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Snowsant, and cause at least 2 enemies to fall in a pit in each battle",
+        "Clear Main Theme 4-6 with a 3-star rating; You must deploy your own Snowsant, and use Telescoping Electric Net at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 110,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+              "blackboard": [
+                {
+                  "key": "dist",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 800
+                },
+                {
+                  "key": "interval",
+                  "value": 0.066
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 170,
+            "def": 27
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+              "blackboard": [
+                {
+                  "key": "dist",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 800
+                },
+                {
+                  "key": "interval",
+                  "value": 0.066
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Bug Catcher",
+              "description": "When pulling an [Infected Creature], increases the strength of the shift by 1 degree, and silences the target for 6 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Bug Catcher",
+              "description": "When pulling an [Infected Creature], increases the strength of the shift by 1 degree, and silences the target for 10 <@ba.talpu>(+4)</> seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 210,
+            "def": 31
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+              "blackboard": [
+                {
+                  "key": "dist",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 800
+                },
+                {
+                  "key": "interval",
+                  "value": 0.066
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Bug Catcher",
+              "description": "When pulling an [Infected Creature], increases the strength of the shift by 1 degree, and silences the target for 8 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Bug Catcher",
+              "description": "When pulling an [Infected Creature], increases the strength of the shift by 1 degree, and silences the target for 12 <@ba.talpu>(+4)</> seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

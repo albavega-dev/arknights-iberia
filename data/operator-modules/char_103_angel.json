@@ -1,0 +1,250 @@
+{
+  "operatorId": "char_103_angel",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks aerial enemies first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_angel",
+      "name": "Exusiai's Surprise",
+      "region": "en",
+      "type": "MAR-X",
+      "icon": "mar-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with Exusiai (excluding Support Units)",
+        "Clear Main Theme 4-10 with a 3-star rating; You must deploy your own Exusiai, and have Exusiai defeat FrostNova"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 27
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Angel's Blessings",
+              "description": "ATK +6%; Max HP +10%; The same buff is given to two random allies when Exusiai is deployed"
+            },
+            {
+              "index": 1,
+              "potential": 6,
+              "token": false,
+              "name": "Angel's Blessings",
+              "description": "ATK +8%<@ba.talpu>(+2%)</>; Max HP +13% <@ba.talpu>(+3%)</>; The same buff is given to two random allies when Exusiai is deployed"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 41
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Angel's Blessings",
+              "description": "ATK +8%; Max HP +14%; The same buff is given to two random allies when Exusiai is deployed"
+            },
+            {
+              "index": 1,
+              "potential": 6,
+              "token": false,
+              "name": "Angel's Blessings",
+              "description": "ATK +10%<@ba.talpu>(+2%)</>; Max HP +17% <@ba.talpu>(+3%)</>; The same buff is given to two random allies when Exusiai is deployed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_angel",
+      "name": "Welcome to Penguin Logistics",
+      "region": "en",
+      "type": "MAR-Y",
+      "icon": "mar-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Exusiai, and unleash Overloading Mode at least 2 times in each battle",
+        "Clear Main Theme 2-8 with a 3-star rating; You must deploy your own Exusiai, and have her defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 26,
+            "def": 26
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                },
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 37,
+            "def": 37
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                },
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Fast Cartridge",
+              "description": "ASPD +12; continuous attacks gradually ignore increasing amounts of the target's DEF, up to a maximum of 150 DEF (each attack increases the DEF ignored by 6); this bonus is lost when no attacks have been made within 5 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Fast Cartridge",
+              "description": "ASPD +15 <@ba.talpu>(+3)</>; continuous attacks gradually ignore increasing amounts of the target's DEF, up to a maximum of 150 DEF (each attack increases the DEF ignored by 6); this bonus is lost when no attacks have been made within 5 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 43,
+            "def": 43
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                },
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Fast Cartridge",
+              "description": "ASPD +12; continuous attacks gradually ignore increasing amounts of the target's DEF, up to a maximum of 250 DEF (each attack increases the DEF ignored by 10); this bonus is lost when no attacks have been made within 5 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Fast Cartridge",
+              "description": "ASPD +15 <@ba.talpu>(+3)</>; continuous attacks gradually ignore increasing amounts of the target's DEF, up to a maximum of 250 DEF (each attack increases the DEF ignored by 10); this bonus is lost when no attacks have been made within 5 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

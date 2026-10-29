@@ -1,0 +1,285 @@
+{
+  "operatorId": "char_332_archet",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks aerial enemies first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_archet",
+      "name": "'Seeds of Tomorrow'",
+      "region": "en",
+      "type": "MAR-Y",
+      "icon": "mar-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Archetto, and have Archetto defeat at least 5 enemies",
+        "Clear Main Theme 2-9 with a 3-star rating; You must deploy your own Archetto, and cannot include any other Sniper Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 17,
+            "def": 17,
+            "attack_speed": 2
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 22,
+            "def": 22,
+            "attack_speed": 3
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Iron Bowstring",
+              "description": "When deployed, this unit gains 1 <$ba.shield>Shield</> and 5 Skill Points. Restores 7 Skill Points when the Shield breaks"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Iron Bowstring",
+              "description": "When deployed, this unit gains 1 <$ba.shield>Shield</> and 5 Skill Points. Restores 9 <@ba.talpu>(+2)</> Skill Points when the Shield breaks"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 24,
+            "def": 24,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Iron Bowstring",
+              "description": "When deployed, this unit gains 1 <$ba.shield>Shield</> and 9 Skill Points. Restores 7 Skill Points when the Shield breaks"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Iron Bowstring",
+              "description": "When deployed, this unit gains 1 <$ba.shield>Shield</> and 9 Skill Points. Restores 9 <@ba.talpu>(+2)</> Skill Points when the Shield breaks"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_archet",
+      "name": "Yesterday Once More",
+      "region": "en",
+      "type": "MAR-X",
+      "icon": "mar-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with Archetto (excluding Support Units)",
+        "Clear Under Tides SV-4 with a 3-star rating; You must deploy your own Archetto, and cannot include any other Sniper Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 32
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Landen Tactics",
+              "description": "Every 2.3 seconds when deployed, restores 1 Skill Point to all deployed Sniper allies that have an Offensive Recovery skill; this unit restores 1 SP every 2s when there is another Sniper Operator deployed"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 48
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Landen Tactics",
+              "description": "Every 2.2 seconds when deployed, restores 1 Skill Point to all deployed Sniper allies that have an Offensive Recovery skill; this unit restores 1 SP every 1.8s when there is another Sniper Operator deployed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_archet",
+      "name": "Archetto's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 32,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, for every deployed Operator with an Offensive Recovery skill, Archetto's Attack Range +1 (Max +3)"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 45,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, for every deployed Operator with an Offensive Recovery skill, Archetto's Attack Range +1 (Max +3)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Landen Tactics",
+              "description": "Every 2.5 seconds when deployed, restores 1 Skill Point to all deployed Sniper allies that have an Offensive Recovery skill; in <@ba.kw>Integrated Strategies</>, all Operators with Offensive Recovery skills will benefit from this effect and will gain SP from Archetto's attacks"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 55,
+            "attack_speed": 8
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, for every deployed Operator with an Offensive Recovery skill, Archetto's Attack Range +1 (Max +3)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Landen Tactics",
+              "description": "Every 2.5 seconds when deployed, restores 1 Skill Point to all deployed Sniper allies that have an Offensive Recovery skill; in <@ba.kw>Integrated Strategies</>, all Operators with Offensive Recovery skills will benefit from this effect and will gain SP from Archetto's attacks, and all Operators with Offensive Recovery skills have ATK +50% while their skill is active"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

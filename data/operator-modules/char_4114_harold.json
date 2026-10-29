@@ -1,0 +1,101 @@
+{
+  "operatorId": "char_4114_harold",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+      "blackboard": [
+        {
+          "key": "ep_heal_ratio",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_harold",
+      "name": "Legs Care Kit",
+      "region": "en",
+      "type": "WDM-X",
+      "icon": "wdm-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Harold use Triage a total of 8 times (excluding Support Units)",
+        "Clear Main Theme 9-13 with a 3-star rating under Standard Environment; You must deploy your own Harold, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 20
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 27
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "I Am the Camp",
+              "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 20% less <$ba.dt.element>Elemental Injury</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "I Am the Camp",
+              "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 23%<$ba.dt.element> (+3%)</> less <@ba.talpu>Elemental Injury</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 32
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "I Am the Camp",
+              "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 23% less <$ba.dt.element>Elemental Injury</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "I Am the Camp",
+              "description": "Targets within Attack Range that have taken more than 50% Elemental Injury take 26%<$ba.dt.element> (+3%)</> less <@ba.talpu>Elemental Injury</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

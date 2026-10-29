@@ -1,0 +1,206 @@
+{
+  "operatorId": "char_1016_agoat2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+      "blackboard": [
+        {
+          "key": "ep_heal_ratio",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_agoat2",
+      "name": "Sounds I Want to Retain",
+      "region": "en",
+      "type": "WDM-X",
+      "icon": "wdm-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Eyjafjalla the Hvít Aska, and unleash Volcanic Echoes at least 1 time in each battle",
+        "Clear What the Firelight Casts FC-5 with a 3-star rating; You must deploy your own Eyjafjalla the Hvít Aska, and cannot include any other Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 25
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 36
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Volcanic Ash Remedy",
+              "description": "Increases the Max HP of friendly units within range by +6%, and reduces the <$ba.dt.element>Elemental Injury</> they take by 14%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Volcanic Ash Remedy",
+              "description": "Increases the Max HP of friendly units within range by +8% <@ba.talpu>(+2%)</>, and reduces the <$ba.dt.element>Elemental Injury</> they take by 14%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 44
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Volcanic Ash Remedy",
+              "description": "Increases the Max HP of friendly units within range by +8%, and reduces the <$ba.dt.element>Elemental Injury</> they take by 14%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Volcanic Ash Remedy",
+              "description": "Increases the Max HP of friendly units within range by +10% <@ba.talpu>(+2%)</>, and reduces the <$ba.dt.element>Elemental Injury</> they take by 14%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_agoat2",
+      "name": "Life I Want to Retain",
+      "region": "en",
+      "type": "WDM-Y",
+      "icon": "wdm-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 3 battles; You must deploy your own Eyjafjalla the Hvít Aska, and unleash Soundless Sustenance at least 1 time in each battle",
+        "Clear Stultifera Navis SN-5 with a 3-star rating; You must deploy your own Eyjafjalla the Hvít Aska, and cannot include any other Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+{attack_speed}</> when there is an ally within Attack Range affected by Elemental Injury",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                },
+                {
+                  "key": "ep_heal_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 48
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+{attack_speed}</> when there is an ally within Attack Range affected by Elemental Injury",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                },
+                {
+                  "key": "ep_heal_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Replenishing Mist",
+              "description": "Normal heals additionally restore HP and <$ba.dt.element>Elemental Injury</> per second equal to 12% of the original amount, lasting for 7 seconds (stacks up to 3 times)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+{attack_speed}</> when there is an ally within Attack Range affected by Elemental Injury",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                },
+                {
+                  "key": "ep_heal_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Replenishing Mist",
+              "description": "Normal heals additionally restore HP and <$ba.dt.element>Elemental Injury</> per second equal to 13% of the original amount, lasting for 8 seconds (stacks up to 3 times)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "operatorId": "char_118_yuki",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Physical damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_yuki",
+      "name": "Shuriken",
+      "region": "en",
+      "type": "ART-Y",
+      "icon": "art-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with Shirayuki (excluding Support Units)",
+        "Clear Main Theme S2-11 with a 3-star rating; You must deploy your own Shirayuki, and have Shirayuki defeat at least 15 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 80,
+            "attack_speed": 3
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 100
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 20,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 100
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Circling Wind",
+              "description": "Improves own SP recovery rate by +0.2/second for 10 seconds after defeating an enemy"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 30,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 100
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Circling Wind",
+              "description": "Improves own SP recovery rate by +0.3/second for 10 seconds after defeating an enemy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

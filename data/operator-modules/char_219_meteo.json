@@ -1,0 +1,114 @@
+{
+  "operatorId": "char_219_meteo",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Physical damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_meteo",
+      "name": "Tag of Nameless",
+      "region": "en",
+      "type": "ART-Y",
+      "icon": "art-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Meteorite, and have Meteorite defeat at least 10 enemies",
+        "Clear Main Theme 2-4 with a 3-star rating; You must deploy your own Meteorite and only Vanguard and Medic Operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 37
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 100
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 52
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 100
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Blast Attachment Refit",
+              "description": "Normal attacks and skills have a 40% chance to deal +60% damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 100
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Blast Attachment Refit",
+              "description": "Normal attacks and skills have a 50% chance to deal +60% damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "operatorId": "char_363_toddi",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks the heaviest enemy first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_toddi",
+      "name": "Arrow Adjustment Box",
+      "region": "en",
+      "type": "SIE-X",
+      "icon": "sie-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 20 Sarkaz enemies with Toddifons (excluding Support Units)",
+        "Clear Main Theme 4-6 with a 3-star rating; You must deploy your own Toddifons, and can only include 6 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 50,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 65,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Fiery Instinct",
+              "description": "When attacking Sarkaz enemies, increase ATK to 155%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Fiery Instinct",
+              "description": "When attacking Sarkaz enemies, increase ATK to 160% <@ba.talpu>(+5%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 75,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Fiery Instinct",
+              "description": "When attacking Sarkaz enemies, increase ATK to 165%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Fiery Instinct",
+              "description": "When attacking Sarkaz enemies, increase ATK to 170% <@ba.talpu>(+5%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

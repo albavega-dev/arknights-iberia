@@ -1,0 +1,114 @@
+{
+  "operatorId": "char_143_ghost",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks <@ba.kw>all blocked enemies</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ghost",
+      "name": "Dim Candlelight",
+      "region": "en",
+      "type": "CEN-X",
+      "icon": "cen-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Specter, and unleash Bone Fracture at least 1 time in each battle",
+        "Clear Stultifera Navis SN-EX-1 with a 3-star rating; You must deploy your own Specter, and have her defeat at least 10 Nourished Sliders"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 34,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks <@ba.kw>all blocked enemies</>; ATK is increased to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 52,
+            "def": 42
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks <@ba.kw>all blocked enemies</>; ATK is increased to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Experiences Dissolved in Blood",
+              "description": "While deployed, increases the damage dealt by all Abyssal Hunter Operators by 3%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 60,
+            "def": 48
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks <@ba.kw>all blocked enemies</>; ATK is increased to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Experiences Dissolved in Blood",
+              "description": "While deployed, increases the damage dealt by all Abyssal Hunter Operators by 5%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "operatorId": "char_106_franka",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 1 enemy"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_franka",
+      "name": "Cutting-edge Thermite Unit",
+      "region": "en",
+      "type": "DRE-X",
+      "icon": "dre-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Franka, and have Franka deal at least 18,000 damage",
+        "Clear Main Theme 9-3 with a 3-star rating under Standard Environment; You must deploy your own Franka and have Franka defeat at least 1 Dublinn Heavy Defender"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Thermite Blade",
+              "description": "Attacks have a 25% chance to ignore the target's DEF"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 220,
+            "atk": 95
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Thermite Blade",
+              "description": "Attacks have a 28% chance to ignore the target's DEF"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

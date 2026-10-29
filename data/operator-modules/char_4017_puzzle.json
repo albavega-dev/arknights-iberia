@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4017_puzzle",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has <@ba.kw>reduced</> Redeployment Time, can use ranged attacks"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_puzzle",
+      "name": "Top Priority",
+      "region": "en",
+      "type": "AGE-X",
+      "icon": "age-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Puzzle, and have Puzzle defeat at least 3 enemies",
+        "Clear Main Theme 9-4 with a 3-star rating in Standard Environment; You must deploy your own Puzzle and cannot include any other Vanguard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 18
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 28
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sequence",
+              "description": "When hitting an enemy with full HP, ATK increases to 128%, reduce that enemy's Movement Speed by 50% for 3.5s, and recover 2 additional SP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sequence",
+              "description": "When hitting an enemy with full HP, ATK increases to 133% <@ba.talpu>(+5%)</>, reduce that enemy's Movement Speed by 50% for 3.5s, and recover 2 additional SP"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 220,
+            "atk": 33
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sequence",
+              "description": "When hitting an enemy with full HP, ATK increases to 130%, reduce that enemy's Movement Speed by 50% for 3.5s, and recover 2 additional SP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sequence",
+              "description": "When hitting an enemy with full HP, ATK increases to 135% <@ba.talpu>(+5%)</>, reduce that enemy's Movement Speed by 50% for 3.5s, and recover 2 additional SP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "operatorId": "char_149_scave",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 2 enemies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_scave",
+      "name": "'Designer Dinnerware'",
+      "region": "en",
+      "type": "SOL-X",
+      "icon": "sol-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Scavenger (excluding Support Units)",
+        "Clear Main Theme 1-3 with a 3-star rating; You must deploy your own Scavenger, and have Scavenger defeat at least 12 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 27,
+            "def": 18
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 32,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lone Wolf",
+              "description": "Gains +14% ATK and DEF when there are no allies in the four adjacent tiles"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lone Wolf",
+              "description": "Gains +16% <@ba.talpu>(+2%)</> ATK and DEF when there are no allies in the four adjacent tiles"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 36,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lone Wolf",
+              "description": "Gains +16% ATK and DEF when there are no allies in the four adjacent tiles"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lone Wolf",
+              "description": "Gains +18% <@ba.talpu>(+2%)</> ATK and DEF when there are no allies in the four adjacent tiles"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

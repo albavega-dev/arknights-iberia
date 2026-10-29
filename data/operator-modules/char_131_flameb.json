@@ -1,0 +1,164 @@
+{
+  "operatorId": "char_131_flameb",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 1 enemy"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_flameb",
+      "name": "Rusty Broken Blade",
+      "region": "en",
+      "type": "DRE-Y",
+      "icon": "dre-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Flamebringer, and have Flamebringer use Blade Demon at least 1 time",
+        "Clear Main Theme S4-3 with a 3-star rating; You must deploy your own Flamebringer, and have Flamebringer defeat at least 3 Sarkaz enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 300,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 30
+                },
+                {
+                  "key": "max_hp",
+                  "value": 0.4
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 0.6
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 370,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 30
+                },
+                {
+                  "key": "max_hp",
+                  "value": 0.4
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 0.6
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Bloody Slaughter",
+              "description": "Increases Max HP by 60 after an enemy is defeated in the adjacent 4 tiles, stacking up to 30 times."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Bloody Slaughter",
+              "description": "Increases Max HP by 70 <@ba.talpu>(+10)</> after an enemy is defeated in the adjacent 4 tiles, stacking up to 30 times."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 430,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 30
+                },
+                {
+                  "key": "max_hp",
+                  "value": 0.4
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 0.6
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Bloody Slaughter",
+              "description": "Increases Max HP by 70 after an enemy is defeated in the adjacent 4 tiles, stacking up to 30 times."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Bloody Slaughter",
+              "description": "Increases Max HP by 80 <@ba.talpu>(+10)</> after an enemy is defeated in the adjacent 4 tiles, stacking up to 30 times."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

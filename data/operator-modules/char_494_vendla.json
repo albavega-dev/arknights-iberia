@@ -1,0 +1,101 @@
+{
+  "operatorId": "char_494_vendla",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and heal the HP of an ally within Attack Range for <@ba.kw>{scale:0%}</> of the damage dealt",
+      "blackboard": [
+        {
+          "key": "scale",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_vendla",
+      "name": "Broken Rose",
+      "region": "en",
+      "type": "INC-X",
+      "icon": "inc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Vendela use Umbrage of Thorns a total of 10 times (excluding Support Units)",
+        "Clear Ideal City: Endless Carnival IC-2 with a 3-star rating; You must deploy your own Vendela, and cannot include any other Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 105,
+            "atk": 23
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 122,
+            "atk": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Soil Fertilizer Enhancement",
+              "description": "The ally with the highest max HP within range receives 20% more healing"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Soil Fertilizer Enhancement",
+              "description": "The ally with the highest max HP within range receives 23% <@ba.talpu>(+3%)</> more healing"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 143,
+            "atk": 38
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Soil Fertilizer Enhancement",
+              "description": "The ally with the highest max HP within range receives 23% more healing"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Soil Fertilizer Enhancement",
+              "description": "The ally with the highest max HP within range receives 26% <@ba.talpu>(+3%)</> more healing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "operatorId": "char_4221_ju",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks the heaviest enemy first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ju",
+      "name": "Scarecrow in the Field",
+      "region": "en",
+      "type": "SIE-X",
+      "icon": "sie-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with your own Ju",
+        "Clear Where Vernal Winds Will Never Blow WB-4 with a 3-star rating; You must deploy your own Ju, and use Fine Wings, Difficult Flight at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 115,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Dogmatist",
+              "description": "Increases damage dealt to enemies below half HP by 8%; when dealing lethal damage, leaves the target with 1 HP and inflicts <$ba.dying>Critically Wounded</> (gives +2 SP to the attacker when killed); Ju will not attack <$ba.dying>Critically Wounded</> targets"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Dogmatist",
+              "description": "Increases damage dealt to enemies below half HP by 12%; when dealing lethal damage, leaves the target with 1 HP and inflicts <$ba.dying>Critically Wounded</> (gives +2 SP to the attacker when killed); Ju will not attack <$ba.dying>Critically Wounded</> targets"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

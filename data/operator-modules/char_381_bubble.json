@@ -1,0 +1,114 @@
+{
+  "operatorId": "char_381_bubble",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 3 enemies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_bubble",
+      "name": "Bubble's Shining Sword",
+      "region": "en",
+      "type": "PRO-X",
+      "icon": "pro-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Bubble, and unleash 'Beaten Up' at least 1 time in each battle",
+        "Clear Main Theme 4-6 with a 3-star rating; You must deploy your own Bubble, and have Bubble defeat at least 8 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 180,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "DEF <@ba.kw>+20%</> when blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "def",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 220,
+            "def": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "DEF <@ba.kw>+20%</> when blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "def",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Spiked Shield",
+              "description": "Enemies that attack Bubble have their ATK reduced by 10% for 5 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 250,
+            "def": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "DEF <@ba.kw>+20%</> when blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "def",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Spiked Shield",
+              "description": "Enemies that attack Bubble have their ATK reduced by 12% for 5 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

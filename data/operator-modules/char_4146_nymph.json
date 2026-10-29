@@ -1,0 +1,206 @@
+{
+  "operatorId": "char_4146_nymph",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts damage</>, and can inflict <@ba.kw>Elemental Damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_nymph",
+      "name": "'Aspiration'",
+      "region": "en",
+      "type": "PRI-X",
+      "icon": "pri-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 60,000 Elemental damage with your own Nymph",
+        "Clear Main Theme 14-7 with a 3-star rating under Standard Environment; You must deploy your own Nymph, and have Nymph deal at least 5000 Elemental damage"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage dealt to enemies under an Elemental Burst effect increased to 110%",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage dealt to enemies under an Elemental Burst effect increased to 110%",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Key to the Heart",
+              "description": "Whenever a <$ba.dt.apoptosis2>Necrosis</> burst effect is triggered, ATK +2%, stacking up to 10 times; at 10 stacks, ASPD +7"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Key to the Heart",
+              "description": "Whenever a <$ba.dt.apoptosis2>Necrosis</> burst effect is triggered, ATK +2%, stacking up to 12 <@ba.talpu>(+2)</> times; at 10 stacks, ASPD +7"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage dealt to enemies under an Elemental Burst effect increased to 110%",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Key to the Heart",
+              "description": "Whenever a <$ba.dt.apoptosis2>Necrosis</> burst effect is triggered, ATK +3%, stacking up to 10 times; at 10 stacks, ASPD +12"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Key to the Heart",
+              "description": "Whenever a <$ba.dt.apoptosis2>Necrosis</> burst effect is triggered, ATK +3%, stacking up to 12 <@ba.talpu>(+2)</> times; at 10 stacks, ASPD +12"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_nymph",
+      "name": "Consultation Toolkit",
+      "region": "en",
+      "type": "PRI-Y",
+      "icon": "pri-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Nymph use Fear Blast a total of 20 times",
+        "Clear Main Theme 11-13 with a 3-star rating under Standard Environment; You must deploy your own Nymph, and have Nymph defeat at least 6 enemies, at least 1 of which must be a Sarkaz Wither Tank or Londinium Mobile Defense Artillery"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies under the burst effect of Elemental Injury within range"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies under the burst effect of Elemental Injury within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Soul Stolen",
+              "description": "When attacking enemies under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, deals an additional 40% ATK as Elemental Damage per 0.8s, lasting until the end of the <$ba.dt.apoptosis2>Necrosis</> burst"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 75
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies under the burst effect of Elemental Injury within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Soul Stolen",
+              "description": "When attacking enemies under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, deals an additional 40% ATK as Elemental Damage per 0.7s, lasting until the end of the <$ba.dt.apoptosis2>Necrosis</> burst"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

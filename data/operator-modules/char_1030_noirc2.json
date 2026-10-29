@@ -1,0 +1,148 @@
+{
+  "operatorId": "char_1030_noirc2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 2)",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 70
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_noirc2",
+      "name": "Noir Corne's Personal Notes",
+      "region": "en",
+      "type": "SBL-X",
+      "icon": "sbl-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with Rathalos S Noir Corne (excluding Support Units)",
+        "Clear Main Theme 3-8 with a 3-star rating; You must deploy your own Rathalos S Noir Corne, and have Rathalos S Noir Corne defeat Skullshatterer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 24
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 70
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 32
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 70
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Spirit",
+              "description": "Gains +8% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 500,
+            "atk": 36
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 70
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Spirit",
+              "description": "Gains +9% ATK for every 5 attacks made while skill is inactive (stacks up to 3 times)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

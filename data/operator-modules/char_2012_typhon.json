@@ -1,0 +1,320 @@
+{
+  "operatorId": "char_2012_typhon",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks the heaviest enemy first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_typhon",
+      "name": "Ammadikshu",
+      "region": "en",
+      "type": "SIE-X",
+      "icon": "sie-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with Typhon (excluding Support Units)",
+        "Clear Main Theme S2-1 with a 3-star rating; You must deploy your own Typhon, and only Melee Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 78
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sharp as a Beast's Fang",
+              "description": "Continuous attacks gradually ignore increasing amounts of the target's DEF, up to a maximum of 55% of its DEF (each attack increases the DEF ignored by 11%, additive). This bonus is lost when no attacks have been made within 8 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 90
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sharp as a Beast's Fang",
+              "description": "Continuous attacks gradually ignore increasing amounts of the target's DEF, up to a maximum of 60% of its DEF (each attack increases the DEF ignored by 12%, additive). This bonus is lost when no attacks have been made within 10 seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_typhon",
+      "name": "Shadow of the Icefield",
+      "region": "en",
+      "type": "SIE-Y",
+      "icon": "sie-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with your own Typhon",
+        "Clear Main Theme 4-8 with a 3-star rating; You must deploy your own Typhon, and cannot include any other Sniper Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 70,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "max_dist",
+                  "value": 4.5
+                },
+                {
+                  "key": "min_dist",
+                  "value": 1
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.12
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 84,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "max_dist",
+                  "value": 4.5
+                },
+                {
+                  "key": "min_dist",
+                  "value": 1
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.12
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Heavy as the Swamp's Mire",
+              "description": "When damaging an enemy for the first and second time while a skill is active, ATK increases to 200% and <$ba.sluggish>Slows</> targets for 3s"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Heavy as the Swamp's Mire",
+              "description": "When damaging an enemy for the first and second time while a skill is active, ATK increases to 210% <@ba.talpu>(+10%)</> and <$ba.sluggish>Slows</> targets for 3s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 94,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "max_dist",
+                  "value": 4.5
+                },
+                {
+                  "key": "min_dist",
+                  "value": 1
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.12
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Heavy as the Swamp's Mire",
+              "description": "When damaging an enemy for the first and second time while a skill is active, ATK increases to 220% and <$ba.sluggish>Slows</> targets for 3s"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Heavy as the Swamp's Mire",
+              "description": "When damaging an enemy for the first and second time while a skill is active, ATK increases to 230% <@ba.talpu>(+10%)</> and <$ba.sluggish>Slows</> targets for 3s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_typhon",
+      "name": "Typhon's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, when attacking a heavy enemy (with 3 weight or higher), ignores Physical Dodge and deal 40% more Physical damage"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 81
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, when attacking a heavy enemy (with 3 weight or higher), ignores Physical Dodge and deal 40% more Physical damage"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Heavy as the Swamp's Mire",
+              "description": "When damaging an enemy for the first time while a skill is active, ATK increases to 160% and Slows targets for 3 seconds;\nIn <@ba.kw>Integrated Strategies</>, marks the heaviest enemy on the field when deployed: whenever the marked enemy is <$ba.sluggish>Slowed</> or <$ba.stun>Stunned</>, fire a hail of arrows at it (8s cooldown). The barrage makes 8 attacks against random enemies around the target, each dealing 90% ATK as Physical damage and a 0.1s <$ba.stun>Stun</>"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Heavy as the Swamp's Mire",
+              "description": "When damaging an enemy for the first time while a skill is active, ATK increases to 170% <@ba.talpu>(+10%)</> and <$ba.sluggish>Slows</> targets for 3 seconds;\nIn <@ba.kw>Integrated Strategies</>, marks the heaviest enemy on the field when deployed: whenever the marked enemy is <$ba.sluggish>Slowed</> or <$ba.stun>Stunned</>, fire a hail of arrows at it (8s cooldown). The barrage makes 8 attacks against random enemies around the target, each dealing 90% ATK as Physical damage and a 0.1s <$ba.stun>Stun</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 90
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, when attacking a heavy enemy (with 3 weight or higher), ignores Physical Dodge and deal 40% more Physical damage"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Heavy as the Swamp's Mire",
+              "description": "When damaging an enemy for the first time while a skill is active, ATK increases to 160% and Slows targets for 3 seconds;\nIn <@ba.kw>Integrated Strategies</>, marks the heaviest enemy on the field when deployed: whenever the marked enemy is <$ba.sluggish>Slowed</> or <$ba.stun>Stunned</>, fire a hail of arrows at it (8s cooldown). The barrage makes 8 attacks against random enemies around the target, each dealing 110% ATK as Physical damage and a 0.1s <$ba.stun>Stun</>"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Heavy as the Swamp's Mire",
+              "description": "When damaging an enemy for the first time while a skill is active, ATK increases to 170% <@ba.talpu>(+10%)</> and <$ba.sluggish>Slows</> targets for 3 seconds;\nIn <@ba.kw>Integrated Strategies</>, marks the heaviest enemy on the field when deployed: whenever the marked enemy is <$ba.sluggish>Slowed</> or <$ba.stun>Stunned</>, fire a hail of arrows at it (8s cooldown). The barrage makes 8 attacks against random enemies around the target, each dealing 110% ATK as Physical damage and a 0.1s <$ba.stun>Stun</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

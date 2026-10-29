@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_1050_chen3",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_chen3",
+      "name": "Remnant Pages of Memory",
+      "region": "en",
+      "type": "AFT-X",
+      "icon": "aft-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Ch'en the Dawnstreak use Chi Xiao - Heaven's Plaint a total of 5 times",
+        "Clear Main Theme 5-10 with a 3-star rating; You must deploy your own Ch'en the Dawnstreak, and have her defeat at least 3 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 340,
+            "atk": 48
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "To Know Time's Flow",
+              "description": "When not taking damage, every 6s restores a random amount of HP equal to 40% to 180% of ATK and dodges the next Physical or Arts attack received"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "To Know Time's Flow",
+              "description": "When not taking damage, every 6s restores a random amount of HP equal to 45% <@ba.talpu>(+5%)</> to 185% <@ba.talpu>(+5%)</> of ATK and dodges the next Physical or Arts attack received"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 420,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "To Know Time's Flow",
+              "description": "When not taking damage, every 6s restores a random amount of HP equal to 50% to 200% of ATK and dodges the next Physical or Arts attack received"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "To Know Time's Flow",
+              "description": "When not taking damage, every 6s restores a random amount of HP equal to 55% <@ba.talpu>(+5%)</> to 205% <@ba.talpu>(+5%)</> of ATK and Dodges the next Physical or Arts attack received"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

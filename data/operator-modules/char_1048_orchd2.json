@@ -1,0 +1,99 @@
+{
+  "operatorId": "char_1048_orchd2",
+  "region": "cn",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "高精度的近距离射击"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_orchd2",
+      "name": "梓兰特制箭靶",
+      "region": "cn",
+      "type": "ARC-X",
+      "icon": "arc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "由非助战焰狐龙梓兰累计造成100000点伤害",
+        "3星通关主题曲6-1；必须编入非助战焰狐龙梓兰并上场，且至少使用2次“飞翔瞪射”"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 80,
+            "def": 10,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "再部署时间<@ba.kw>减少</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 100,
+            "def": 13,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "再部署时间<@ba.kw>减少</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "翔虫机动",
+              "description": "再部署时间-17秒且不提高部署费用；部署至上次部署位置周围时，30秒内攻击力+20%并且可以部署在近战位"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 120,
+            "def": 16,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "再部署时间<@ba.kw>减少</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "翔虫机动",
+              "description": "再部署时间-18秒且不提高部署费用；部署至上次部署位置周围更大范围时，30秒内攻击力+20%并且可以部署在近战位"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

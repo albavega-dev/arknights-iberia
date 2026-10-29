@@ -1,0 +1,114 @@
+{
+  "operatorId": "char_274_astesi",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_astesi",
+      "name": "Unpredictable Star Chart",
+      "region": "en",
+      "type": "AFT-Y",
+      "icon": "aft-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with your own Astesia",
+        "Clear Dorothy's Vision DV-2 with a 3-star rating; You must deploy your own Astesia, and have her defeat at least 2 Experimental Power Armors"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 25,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 36,
+            "def": 36
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Celestial Globe",
+              "description": "Gains +6 ASPD and +3% DEF for every 20s this unit remains on the battlefield, stacking up to 5 times"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 42,
+            "def": 42
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Celestial Globe",
+              "description": "Gains +7 ASPD and +4% DEF for every 20s this unit remains on the battlefield, stacking up to 5 times"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

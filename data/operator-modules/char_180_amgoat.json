@@ -1,0 +1,238 @@
+{
+  "operatorId": "char_180_amgoat",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_amgoat",
+      "name": "'Missed Sounds'",
+      "region": "en",
+      "type": "CCR-X",
+      "icon": "ccr-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with Eyjafjalla (excluding Support Units)",
+        "Clear Heart of Surging Flame OF-5 with a 3-star rating; You must deploy your own Eyjafjalla, and can only include 3 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+              "blackboard": [
+                {
+                  "key": "magic_resist_penetrate_fixed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+              "blackboard": [
+                {
+                  "key": "magic_resist_penetrate_fixed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Pyrobreath",
+              "description": "All [Caster] Operators' ATK +18% when brought"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Pyrobreath",
+              "description": "All [Caster] Operators' ATK +20% <@ba.talpu>(+2%)</> when brought"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+              "blackboard": [
+                {
+                  "key": "magic_resist_penetrate_fixed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Pyrobreath",
+              "description": "All [Caster] Operators' ATK +22% when brought"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Pyrobreath",
+              "description": "All [Caster] Operators' ATK +24% <@ba.talpu>(+2%)</> when brought"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_amgoat",
+      "name": "Pet Contest First Prize",
+      "region": "en",
+      "type": "CCR-Y",
+      "icon": "ccr-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Eyjafjalla use Volcano a total of 6 times",
+        "Clear So Long, Adele: Home Away From Home SL-4 with a 3-star rating; You must deploy your own Eyjafjalla, and have her defeat at least 2 'Big Fellas'"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Wild Fire",
+              "description": "Immediately obtains 7 to 15 SP randomly after deployment; if there are Elite or Leader enemies within range, gains the maximum amount of SP possible"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Wild Fire",
+              "description": "Immediately obtains 10 <@ba.talpu>(+3)</> to 19 <@ba.talpu>(+4)</> SP randomly after deployment; if there are Elite or Leader enemies within range, gains the maximum amount of SP possible"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Wild Fire",
+              "description": "Immediately obtains 7 to 15 SP and 6 to 15 ASPD randomly after deployment; if there are Elite or Leader enemies within range, gains the maximum amount of SP and ASPD possible"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Wild Fire",
+              "description": "Immediately obtains 10 <@ba.talpu>(+3)</> to 19 <@ba.talpu>(+4)</> SP and 6 to 15 ASPD randomly after deployment; if there are Elite or Leader enemies within range, gains the maximum amount of SP and ASPD possible"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

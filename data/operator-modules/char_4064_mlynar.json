@@ -1,0 +1,148 @@
+{
+  "operatorId": "char_4064_mlynar",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normally does not attack and has 0 Block; When skill is inactive, ATK gradually increases up to <@ba.kw>+{atk:0%}</> over <@ba.kw>{max_stack_cnt}</> seconds. ATK is reset when the skill ends",
+      "blackboard": [
+        {
+          "key": "atk",
+          "value": 2
+        },
+        {
+          "key": "mid_stack_cnt",
+          "value": 20
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 40
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mlynar",
+      "name": "'Man in Scabbard'",
+      "region": "en",
+      "type": "LIB-X",
+      "icon": "lib-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with your own Młynar",
+        "Clear Main Theme 11-15 with a 3-star rating under Standard Environment; You must deploy your own Młynar, and use Unbrilliant Glory at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 225,
+            "atk": 18,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment",
+              "blackboard": [
+                {
+                  "key": "init_atk",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 27,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment",
+              "blackboard": [
+                {
+                  "key": "init_atk",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Wanderer",
+              "description": "ATK increased to 115% when attacking. If there are 3 or more enemies nearby, ATK increased to 120%, and takes 20% less damage"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Wanderer",
+              "description": "ATK increased to 118% <@ba.talpu>(+3%)</> when attacking. If there are 3 or more enemies nearby, ATK increased to 123% <@ba.talpu>(+3%)</>, and takes 20% less damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 360,
+            "atk": 35,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment",
+              "blackboard": [
+                {
+                  "key": "init_atk",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Wanderer",
+              "description": "ATK increased to 120% when attacking. If there are 3 or more enemies nearby, ATK increased to 125%, and takes 25% less damage"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Wanderer",
+              "description": "ATK increased to 123% <@ba.talpu>(+3%)</> when attacking. If there are 3 or more enemies nearby, ATK increased to 128% <@ba.talpu>(+3%)</>, and takes 25% less damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

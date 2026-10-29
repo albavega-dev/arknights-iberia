@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4235_thumpy",
+  "region": "cn",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "能够阻挡三个敌人，可以造成元素损伤"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_thumpy",
+      "name": "出发的勇气",
+      "region": "cn",
+      "type": "PRP-X",
+      "icon": "prp-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "战斗中非助战珊比累计造成8次侵蚀爆发",
+        "3星通关插曲玛莉娅·临光MN-EX-4；必须编入非助战珊比并上场，且使用1次“不准走！”"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "阻挡敌人时，自身造成的元素损伤提升<@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 350,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "阻挡敌人时，自身造成的元素损伤提升<@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "坚硬脚板",
+              "description": "受到过来自珊比伤害的敌人<$ba.dt.erosion2>侵蚀损伤</>爆发时，珊比获得10点防御力和3点攻击力（最多叠加30层），以及350点<$ba.barrier>屏障</>（不超过最大生命值的300%）"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "坚硬脚板",
+              "description": "受到过来自珊比伤害的敌人<$ba.dt.erosion2>侵蚀损伤</>爆发时，珊比获得13<@ba.talpu>（+3）</>点防御力和4<@ba.talpu>（+1）</>点攻击力（最多叠加30层），以及430<@ba.talpu>（+80）</>点<$ba.barrier>屏障</>（不超过最大生命值的300%）"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 450,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "阻挡敌人时，自身造成的元素损伤提升<@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "坚硬脚板",
+              "description": "受到过来自珊比伤害的敌人<$ba.dt.erosion2>侵蚀损伤</>爆发时，珊比获得12点防御力和5点攻击力（最多叠加30层），以及400点<$ba.barrier>屏障</>（不超过最大生命值的300%）"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "坚硬脚板",
+              "description": "受到过来自珊比伤害的敌人<$ba.dt.erosion2>侵蚀损伤</>爆发时，珊比获得15<@ba.talpu>（+3）</>点防御力和6<@ba.talpu>（+1）</>点攻击力（最多叠加30层），以及480<@ba.talpu>（+80）</>点<$ba.barrier>屏障</>（不超过最大生命值的300%）"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "operatorId": "char_1041_angel2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Continually loses HP over time",
+      "blackboard": [
+        {
+          "key": "hp_ratio",
+          "value": 0.01
+        }
+      ]
+    }
+  ],
+  "tokens": {
+    "token_10056_angel2_target": "Delivery Coordinates"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_angel2",
+      "name": "Convenience Kit for New Friends",
+      "region": "en",
+      "type": "GEE-X",
+      "icon": "gee-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Exusiai the New Covenant use Shootoholic a total of 8 times",
+        "Clear Guide Ahead GA-EX-5 with a 3-star rating; You must deploy your own Exusiai the New Covenant and have her use Shootoholic 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.25/second while above 80% HP",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.01
+                },
+                {
+                  "key": "angel2_tr[e].hp_ratio",
+                  "value": 0.8
+                },
+                {
+                  "key": "angel2_tr[e].sp_recovery_per_sec",
+                  "value": 0.25
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 58
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.25/second while above 80% HP",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.01
+                },
+                {
+                  "key": "angel2_tr[e].hp_ratio",
+                  "value": 0.8
+                },
+                {
+                  "key": "angel2_tr[e].sp_recovery_per_sec",
+                  "value": 0.25
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Firepower FM",
+              "description": "When deployed, recovers 6% HP whenever an allied Operator consumes ammo; in addition, there is a 30% chance to bombard the enemies within that Operator's Attack Range, dealing 165% of Exusiai the New Covenant's ATK as Physical splash damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Firepower FM",
+              "description": "When deployed, recovers 6% HP whenever an allied Operator consumes ammo; in addition, there is a 30% chance to bombard the enemies within that Operator's Attack Range, dealing 180% <@ba.talpu>(+15%)</> of Exusiai the New Covenant's ATK as Physical splash damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.25/second while above 80% HP",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.01
+                },
+                {
+                  "key": "angel2_tr[e].hp_ratio",
+                  "value": 0.8
+                },
+                {
+                  "key": "angel2_tr[e].sp_recovery_per_sec",
+                  "value": 0.25
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Firepower FM",
+              "description": "When deployed, recovers 6% HP whenever an allied Operator consumes ammo; in addition, there is a 35% chance to bombard the enemies within that Operator's Attack Range, dealing 185% of Exusiai the New Covenant's ATK as Physical splash damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Firepower FM",
+              "description": "When deployed, recovers 6% HP whenever an allied Operator consumes ammo; in addition, there is a 35% chance to bombard the enemies within that Operator's Attack Range, dealing 200% <@ba.talpu>(+15%)</> of Exusiai the New Covenant's ATK as Physical splash damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "operatorId": "char_4147_mitm",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; ATK is increased to 150% when attacking enemies blocked by Reinforcements",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.5
+        }
+      ]
+    }
+  ],
+  "tokens": {
+    "token_10037_mitm_trshrb": "Cherry-3"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mitm",
+      "name": "Beware of the Edges",
+      "region": "en",
+      "type": "TAC-Y",
+      "icon": "tac-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Mitm use Power Under Pressure a total of 8 times",
+        "Clear Main Theme 3-1 with a 3-star rating; You must deploy your own Mitm and use Power Under Pressure at least 3 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 25
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 35
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Scrapheap Buggies",
+              "description": "Can summon Cherry-3 to assist in combat from a Tactical Point; after being defeated, Cherry-3 will spawn Wreckage with higher HP in the four adjacent tiles, then automatically respawn 15s later"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Scrapheap Buggies",
+              "description": "When in Buggy form, will spawn Wreckage with higher HP in the four adjacent tiles after being defeated, then automatically respawn 15s later; when in Wreckage form, can block 1 enemy"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 40
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Scrapheap Buggies",
+              "description": "Can summon Cherry-3 to assist in combat from a Tactical Point; after being defeated, Cherry-3 will spawn Wreckage with even higher HP in the four adjacent tiles, then automatically respawn 15s later"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Scrapheap Buggies",
+              "description": "When in Buggy form, will spawn Wreckage with even higher HP in the four adjacent tiles after being defeated, then automatically respawn 15s later; when in Wreckage form, can block 1 enemy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

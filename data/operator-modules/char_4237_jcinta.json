@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4237_jcinta",
+  "region": "cn",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "技能发动期间阻挡数变为0"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_jcinta",
+      "name": "弹射起步",
+      "region": "cn",
+      "type": "BEA-X",
+      "icon": "bea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "完成5次战斗；必须编入非助战嘉辛塔，并确定第一位部署的干员是嘉辛塔",
+        "3星通关主题曲7-2；必须编入非助战嘉辛塔并上场，且所有干员不被击倒"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "技能发动期间阻挡数变为0，但使身前一名干员阻挡数<@ba.kw>+1</>",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 125,
+            "def": 52
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "技能发动期间阻挡数变为0，但使身前一名干员阻挡数<@ba.kw>+1</>",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "淑女风范",
+              "description": "部署后，嘉辛塔自身与周围八格的友方单位获得15%的<$ba.airprotect>对空庇护</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "淑女风范",
+              "description": "部署后，嘉辛塔自身与周围八格的友方单位获得17%<@ba.talpu>（+2%）</>的<$ba.airprotect>对空庇护</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 135,
+            "def": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "技能发动期间阻挡数变为0，但使身前一名干员阻挡数<@ba.kw>+1</>",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "淑女风范",
+              "description": "部署后，嘉辛塔自身与周围八格的友方单位获得18%的<$ba.airprotect>对空庇护</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "淑女风范",
+              "description": "部署后，嘉辛塔自身与周围八格的友方单位获得20%<@ba.talpu>（+2%）</>的<$ba.airprotect>对空庇护</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

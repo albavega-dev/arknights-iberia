@@ -1,0 +1,130 @@
+{
+  "operatorId": "char_108_silent",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allies"
+    }
+  ],
+  "tokens": {
+    "token_10000_silent_healrb": "Medic Drone"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_silent",
+      "name": "Emergency Self-Defense Procedures",
+      "region": "en",
+      "type": "PHY-Y",
+      "icon": "phy-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Silence use Medical Drone a total of 14 times (excluding Support Units)",
+        "Clear Main Theme 4-8 with a 3-star rating; you must deploy your own Silence, and cannot include any Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 70,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 100,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Booster Injection",
+              "description": "When deployed, all Medic Operators gain +15 ASPD"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Booster Injection",
+              "description": "When deployed, all Medic Operators gain +17<@ba.talpu>(+2)</> ASPD"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 120,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Booster Injection",
+              "description": "When deployed, all Medic Operators gain +17 ASPD"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Booster Injection",
+              "description": "When deployed, all Medic Operators gain +19<@ba.talpu>(+2)</> ASPD"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

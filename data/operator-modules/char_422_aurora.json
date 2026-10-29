@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_422_aurora",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Only restores SP when blocking enemies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_aurora",
+      "name": "Shield Photography Module",
+      "region": "en",
+      "type": "HES-X",
+      "icon": "hes-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 40,000 damage with Aurora (excluding Support Units)",
+        "Clear Main Theme 3-8 with a 3-star rating; You must deploy your own Aurora, and have Aurora defeat Skullshatterer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP recovery is slowed except when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 320,
+            "atk": 75
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP recovery is slowed except when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Frigid Respite",
+              "description": "When this unit's skill is not active and SP is less than or equal half the maximum, stops attacking and restores 3.5% Max HP every second"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Frigid Respite",
+              "description": "When this unit's skill is not active and SP is less than or equal half the maximum, stops attacking and restores 4% <@ba.talpu>(+0.5%)</> Max HP every second"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 380,
+            "atk": 90
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP recovery is slowed except when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Frigid Respite",
+              "description": "When this unit's skill is not active and SP is less than or equal half the maximum, stops attacking and restores 4% Max HP every second"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Frigid Respite",
+              "description": "When this unit's skill is not active and SP is less than or equal half the maximum, stops attacking and restores 4.5% <@ba.talpu>(+0.5%)</> Max HP every second"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

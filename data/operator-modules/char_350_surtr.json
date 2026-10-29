@@ -1,0 +1,238 @@
+{
+  "operatorId": "char_350_surtr",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_surtr",
+      "name": "Heart of Sami",
+      "region": "en",
+      "type": "AFT-X",
+      "icon": "aft-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Surtr, and unleash Twilight at least 1 time in each battle",
+        "Clear Main Theme 3-8 with a 3-star rating; You must deploy your own Surtr, and have her defeat Skullshatterer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 30,
+            "magic_resistance": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 48,
+            "magic_resistance": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Molten Flame",
+              "description": "Attacks ignore 24 RES"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Molten Flame",
+              "description": "Attacks ignore 26 <@ba.talpu>(+2)</> RES"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 60,
+            "magic_resistance": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Molten Flame",
+              "description": "Attacks ignore 26 RES"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Molten Flame",
+              "description": "Attacks ignore 28 <@ba.talpu>(+2)</> RES"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_surtr",
+      "name": "Travel Necessities",
+      "region": "en",
+      "type": "AFT-Y",
+      "icon": "aft-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with your own Surtr",
+        "Clear The Rides to Lake Silberneherze RS-7 with a 3-star rating; You must deploy your own Surtr, and use Twilight at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 45,
+            "def": 42
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 55,
+            "def": 56
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Remnant Ash",
+              "description": "After receiving fatal damage, continuously prevents HP from falling below 1 and gains ASPD +20; retreats from the battlefield 8 seconds later"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Remnant Ash",
+              "description": "After receiving fatal damage, continuously prevents HP from falling below 1 and gains ASPD +20; retreats from the battlefield 9 <@ba.talpu>(+1)</> seconds later"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 60,
+            "def": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Remnant Ash",
+              "description": "After receiving fatal damage, continuously prevents HP from falling below 1 and gains ASPD +30; retreats from the battlefield 9 seconds later"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Remnant Ash",
+              "description": "After receiving fatal damage, continuously prevents HP from falling below 1 and gains ASPD +30; retreats from the battlefield 10 <@ba.talpu>(+1)</> seconds later"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

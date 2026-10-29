@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4083_chimes",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks <@ba.kw>all blocked enemies</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_chimes",
+      "name": "To My Successor",
+      "region": "en",
+      "type": "CRU-X",
+      "icon": "cru-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Wind Chimes use Longing for Home a total of 6 times",
+        "Clear Main Theme 2-1 with a 3-star rating; You must deploy your own Wind Chimes and use Longing for Home 3 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 85
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Have <@ba.kw>+20%</> healing effectiveness",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 305,
+            "atk": 89
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Have <@ba.kw>+20%</> healing effectiveness",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mountain Traveler",
+              "description": "Max HP +7%, gains <$ba.strong>Vigor</> effect of +28% ATK when HP is above 50%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Mountain Traveler",
+              "description": "Max HP +7%, gains <$ba.strong>Vigor</> effect of +30% <@ba.talpu>(+2%)</>ATK when HP is above 50%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 350,
+            "atk": 100
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Have <@ba.kw>+20%</> healing effectiveness",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mountain Traveler",
+              "description": "Max HP +8%, gains <$ba.strong>Vigor</> effect of +33% ATK when HP is above 50%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Mountain Traveler",
+              "description": "Max HP +8%, gains <$ba.strong>Vigor</> effect of +35% <@ba.talpu>(+2%)</>ATK when HP is above 50%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

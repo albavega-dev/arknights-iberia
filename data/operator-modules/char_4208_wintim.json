@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4208_wintim",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has <@ba.kw>reduced</> Redeployment Time, can use ranged attacks"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_wintim",
+      "name": "An Invalid Access Card",
+      "region": "en",
+      "type": "AGE-X",
+      "icon": "age-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, deploy your own Snegurochka a total of 12 times",
+        "Clear Main Theme R8-2 with a 3-star rating; You must deploy your own Snegurochka and use Rational Attribution at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 150,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 175,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Swift Stenography",
+              "description": "ASPD +13; this effect is lost when damage is received"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Swift Stenography",
+              "description": "ASPD +15 <@ba.talpu>(+2)</>; this effect is lost when damage is received"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 210,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Swift Stenography",
+              "description": "ASPD +15; this effect is lost when damage is received"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Swift Stenography",
+              "description": "ASPD +17 <@ba.talpu>(+2)</>; this effect is lost when damage is received"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

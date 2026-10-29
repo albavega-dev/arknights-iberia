@@ -1,0 +1,96 @@
+{
+  "operatorId": "char_235_jesica",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks aerial enemies first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_jesica",
+      "name": "Jessica's Order",
+      "region": "en",
+      "type": "MAR-Y",
+      "icon": "mar-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Jessica use Smokescreen a total of 5 times (excluding Support Units)",
+        "Clear Under Tides SV-4 with a 3-star rating; You must deploy your own Jessica, and use Smokescreen at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 20,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 25,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Fast Cartridge",
+              "description": "ASPD +14, ATK +3%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 30,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are ground enemies within range, ASPD <@ba.kw>+8</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Fast Cartridge",
+              "description": "ASPD +16, ATK +6%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

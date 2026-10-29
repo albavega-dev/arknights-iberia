@@ -1,0 +1,90 @@
+{
+  "operatorId": "char_421_crow",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_crow",
+      "name": "Aqua Blue Dawn",
+      "region": "en",
+      "type": "REA-X",
+      "icon": "rea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own La Pluma, and have La Pluma deal at least 12,000 damage",
+        "Clear Main Theme 11-6 with a 3-star rating under Standard Environment; You must deploy your own La Pluma, and have La Pluma defeat at least 15 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 18,
+            "def": 18
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 24,
+            "def": 24
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Into the Groove",
+              "description": "ASPD +3 after defeating an enemy (stacks up to 12 times); while at max stacks, ATK +5%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 30,
+            "def": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Into the Groove",
+              "description": "ASPD +3 after defeating an enemy (stacks up to 12 times); while at max stacks, ATK +8%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

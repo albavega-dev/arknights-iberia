@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_379_sesa",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Physical damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_sesa",
+      "name": "'Soul Resonance'",
+      "region": "en",
+      "type": "ART-X",
+      "icon": "art-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Sesa, and have Sesa deal at least 25,000 damage",
+        "Clear Main Theme S3-6 with a 3-star rating; You must deploy your own Sesa, and have Sesa defeat at least 10 Originium Slugs β"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 38,
+            "def": 24
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 50,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Vulnerability Deconstruction",
+              "description": "When deployed, all blocked enemies take +18% Physical damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Vulnerability Deconstruction",
+              "description": "When deployed, all blocked enemies take +20% <@ba.talpu>(+2%)</> Physical damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 60,
+            "def": 43
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Vulnerability Deconstruction",
+              "description": "When deployed, all blocked enemies take +22% Physical damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Vulnerability Deconstruction",
+              "description": "When deployed, all blocked enemies take +24% <@ba.talpu>(+2%)</> Physical damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

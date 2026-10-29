@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4148_philae",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 3 enemies, and can inflict Elemental Injury"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_philae",
+      "name": "The Days Rubbed to Silence",
+      "region": "en",
+      "type": "PRP-X",
+      "icon": "prp-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Trigger a total of 3 Necrosis Bursts with your own Philae",
+        "Clear Main Theme 10-2 with a 3-star rating under Standard Environment; You must deploy your own Philae, and use Curse of the River of Death at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 57
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Herald of the Divine River",
+              "description": "Receives -16% Elemental Injury, and recovers 2 SP when receiving Necrosis"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Herald of the Divine River",
+              "description": "Receives -18% <@ba.talpu>(+2%)</> Elemental Injury, and recovers 2 SP when receiving Necrosis"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Herald of the Divine River",
+              "description": "Receives -20% Elemental Injury, and recovers 2 SP when receiving Necrosis"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Herald of the Divine River",
+              "description": "Receives -22% <@ba.talpu>(+2%)</> Elemental Injury, and recovers 2 SP when receiving Necrosis"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

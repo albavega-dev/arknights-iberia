@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_466_qanik",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_qanik",
+      "name": "Homemade Trekking Poles",
+      "region": "en",
+      "type": "CCR-Y",
+      "icon": "ccr-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Qanipalaat use Falling Snow a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 2-3 with a 3-star rating; You must deploy your own Qanipalaat, and have Qanipalaat defeat at least 2 Heavy Defenders"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Tundra Survival",
+              "description": "Inflicts 25% <$ba.magicfragile>[Arts Fragility]</> on all Aerial units within range"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Tundra Survival",
+              "description": "Inflicts 27% <@ba.talpu>(+2%)</> <$ba.magicfragile>[Arts Fragility]</> on all Aerial units within range"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Tundra Survival",
+              "description": "Inflicts 28% <$ba.magicfragile>[Arts Fragility]</> on all Aerial units within range"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Tundra Survival",
+              "description": "Inflicts 30% <@ba.talpu>(+2%)</> <$ba.magicfragile>[Arts Fragility]</> on all Aerial units within range"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

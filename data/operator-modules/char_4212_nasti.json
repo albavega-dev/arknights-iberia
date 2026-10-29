@@ -1,0 +1,163 @@
+{
+  "operatorId": "char_4212_nasti",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 2 enemies; Can use <Support Devices> in battles"
+    }
+  ],
+  "tokens": {
+    "token_10059_nasti_nstdef": "'Quality Inspector'",
+    "token_10060_nasti_nstchr": "'Overseer'",
+    "token_10061_nasti_nstbld": "'Emergency Load-Bearing Squad'"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_nasti",
+      "name": "The Engineers",
+      "region": "en",
+      "type": "CRA-X",
+      "icon": "cra-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Nasti deploy a total of 25 Support Devices",
+        "Clear Main Theme 5-9 with a 3-star rating; You must deploy your own Nasti, and use Roosting Grounds at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 78,
+            "atk": 26,
+            "def": 25
+          },
+          "tokenAttributes": {
+            "token_10059_nasti_nstdef": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10060_nasti_nstchr": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10061_nasti_nstbld": {
+              "cost": -3,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 102,
+            "atk": 32,
+            "def": 35
+          },
+          "tokenAttributes": {
+            "token_10059_nasti_nstdef": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10060_nasti_nstchr": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10061_nasti_nstbld": {
+              "cost": -3,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Construction Ahead",
+              "description": "Can carry 3 <Support Devices> (deploy up to 2), with different effects depending on Skill; first device has reduced Deployment Cost"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 40,
+            "def": 45
+          },
+          "tokenAttributes": {
+            "token_10059_nasti_nstdef": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10060_nasti_nstchr": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10061_nasti_nstbld": {
+              "cost": -3,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Construction Ahead",
+              "description": "Can carry 3 <Support Devices> (deploy up to 2), with different effects depending on Skill; first device has reduced Deployment Cost; each device can combine effects with other devices in its attack range"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

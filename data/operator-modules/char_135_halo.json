@@ -1,0 +1,109 @@
+{
+  "operatorId": "char_135_halo",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@chain.max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</> (improved after Elite 2)",
+      "blackboard": [
+        {
+          "key": "attack@chain.max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@chain.max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</>",
+      "blackboard": [
+        {
+          "key": "attack@chain.max_target",
+          "value": 4
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_halo",
+      "name": "Unassembled Clock",
+      "region": "en",
+      "type": "CHA-Y",
+      "icon": "cha-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 40 enemies with Astgenne (excluding Support Units)",
+        "Clear Main Theme 4-3 with a 3-star rating; You must deploy your own Astgenne, and only Defender Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 50,
+            "atk": 45
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 62
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Passion for Research",
+              "description": "Gains +4 ASPD for every 10 seconds this unit remains on the battlefield, stacking up to 6 times"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 74
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Passion for Research",
+              "description": "Gains +4 ASPD for every 10 seconds this unit remains on the battlefield, stacking up to 7 times"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

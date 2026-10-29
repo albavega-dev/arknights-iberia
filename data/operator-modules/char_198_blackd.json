@@ -1,0 +1,140 @@
+{
+  "operatorId": "char_198_blackd",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 2 enemies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_blackd",
+      "name": "Low Temperature Resistant Communication Equipment",
+      "region": "en",
+      "type": "SOL-X",
+      "icon": "sol-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must include your own Courier, and Courier must be the first Operator deployed",
+        "Clear Main Theme S2-2 with a 3-star rating; You must deploy your own Courier, and only Ranged Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 135,
+            "def": 24
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 170,
+            "def": 27
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Karlan Patrol",
+              "description": "Gains +21% DEF when blocking two or more enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Karlan Patrol",
+              "description": "Gains +24% <@ba.talpu>(+3%)</> DEF when blocking two or more enemies"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 195,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Karlan Patrol",
+              "description": "Gains +24% DEF when blocking two or more enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Karlan Patrol",
+              "description": "Gains +27% <@ba.talpu>(+3%)</> DEF when blocking two or more enemies"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

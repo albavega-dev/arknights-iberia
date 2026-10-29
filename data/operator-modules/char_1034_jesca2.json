@@ -1,0 +1,237 @@
+{
+  "operatorId": "char_1034_jesca2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 3 enemies and attacks from long range."
+    }
+  ],
+  "tokens": {
+    "token_10032_jesca2_jckshd": "Mobile Riot Shield"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_jesca2",
+      "name": "This Hero of Mine",
+      "region": "en",
+      "type": "SPT-X",
+      "icon": "spt-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Jessica the Liberated (excluding Support Units)",
+        "Clear Main Theme 3-8 with a 3-star rating; You must deploy your own Jessica the Liberated, and have Jessica the Liberated defeat Skullshatterer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 50,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Reveals <$ba.invisible>Invisible</> enemies within range"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 220,
+            "atk": 57,
+            "def": 31
+          },
+          "tokenAttributes": {
+            "token_10032_jesca2_jckshd": {
+              "max_hp": 300,
+              "def": 57
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Reveals <$ba.invisible>Invisible</> enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Adaptable",
+              "description": "Can use a stronger Mobile Riot Shield that lasts for 55 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 15%"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Adaptable",
+              "description": "Can use a stronger Mobile Riot Shield that lasts for 55 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 18% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 65,
+            "def": 37
+          },
+          "tokenAttributes": {
+            "token_10032_jesca2_jckshd": {
+              "max_hp": 380,
+              "def": 79
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Reveals <$ba.invisible>Invisible</> enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Adaptable",
+              "description": "Can use an even stronger Mobile Riot Shield that lasts for 60 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 15%"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Adaptable",
+              "description": "Can use an even stronger Mobile Riot Shield that lasts for 60 seconds. The Mobile Riot Shield can only be deployed in the four tiles adjacent to Jessica the Liberated, and when deployed, Jessica the Liberated immediately turns to face the shield and increases the DEF of herself and units behind her by 18% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_jesca2",
+      "name": "Unweathered",
+      "region": "en",
+      "type": "SPT-Y",
+      "icon": "spt-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Jessica the Liberated deploy a total of 20 Mobile Riot Shields",
+        "Clear A Walk in the Dust WD-5 with a 3-star rating; You must deploy your own Jessica the Liberated, and use Saturation Burst at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 52
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range +1 (unaffected by skill Attack Range changes)",
+              "blackboard": [
+                {
+                  "key": "ability_range_forward_extend",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 69
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range +1 (unaffected by skill Attack Range changes)",
+              "blackboard": [
+                {
+                  "key": "ability_range_forward_extend",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Charge and Release",
+              "description": "When the Mobile Riot Shield receives damage, 55% chance to restore 1 SP to Jessica the Liberated and reduce Mobile Riot Shield Redeployment Time by 1s (max -11s)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Charge and Release",
+              "description": "When the Mobile Riot Shield receives damage, 60% <@ba.talpu>(+5%)</> chance to restore 1 SP to Jessica the Liberated and reduce Mobile Riot Shield Redeployment Time by 1s (max -11s)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 325,
+            "atk": 83
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range +1 (unaffected by skill Attack Range changes)",
+              "blackboard": [
+                {
+                  "key": "ability_range_forward_extend",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Charge and Release",
+              "description": "When the Mobile Riot Shield receives damage, 60% chance to restore 1 SP to Jessica the Liberated and reduce Mobile Riot Shield Redeployment Time by 1s (max -14s)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Charge and Release",
+              "description": "When the Mobile Riot Shield receives damage, 65% <@ba.talpu>(+5%)</> chance to restore 1 SP to Jessica the Liberated and reduce Mobile Riot Shield Redeployment Time by 1s (max -14s)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "operatorId": "char_476_blkngt",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; ATK is increased to 150% when attacking enemies blocked by Reinforcements",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.5
+        }
+      ]
+    }
+  ],
+  "tokens": {
+    "token_10021_blkngt_hypnos": "Slumberfoot"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_blkngt",
+      "name": "The Stars and The Sleepyhead",
+      "region": "en",
+      "type": "TAC-X",
+      "icon": "tac-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Blacknight use Peaceful Slumber a total of 10 times",
+        "Clear Main Theme 3-1 with a 3-star rating; You must deploy your own Blacknight, and use Peaceful Slumber at least 3 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 15,
+            "def": 10
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; Reinforcements take <@ba.kw>15%</> less damage from units they are blocking, and this unit's ATK is increased to 150% when attacking enemies blocked by Reinforcements"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 17,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; Reinforcements take <@ba.kw>15%</> less damage from units they are blocking, and this unit's ATK is increased to 150% when attacking enemies blocked by Reinforcements"
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Counting Dreams",
+              "description": "This unit and the slumberfoot gain ATK +5% when there is a Sleeping enemy in attack range."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 20,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; Reinforcements take <@ba.kw>15%</> less damage from units they are blocking, and this unit's ATK is increased to 150% when attacking enemies blocked by Reinforcements"
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Counting Dreams",
+              "description": "This unit and the slumberfoot gain ATK +10% when there is a Sleeping enemy in attack range."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

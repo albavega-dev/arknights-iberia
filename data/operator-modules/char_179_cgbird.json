@@ -1,0 +1,258 @@
+{
+  "operatorId": "char_179_cgbird",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of 3 allies simultaneously"
+    }
+  ],
+  "tokens": {
+    "token_10003_cgbird_bird": "Mirage"
+  },
+  "ranges": {
+    "y-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_cgbird",
+      "name": "'Closed Hope'",
+      "region": "en",
+      "type": "RIN-X",
+      "icon": "rin-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Summon a total of 10 summoned units with Nightingale (Nightingale cannot be a Support Unit)",
+        "Clear Main Theme 3-6 with a 3-star rating; a non-Support Nightingale must be deployed during the operation, and Nightingale must use Arts Shield 10 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 40,
+            "magic_resistance": 5
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 55,
+            "magic_resistance": 5
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "White Fiend's Protection",
+              "description": "Allies within range gain +15 RES and receive 3% more healing"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "White Fiend's Protection",
+              "description": "Allies within range gain +17 <@ba.talpu>(+2)</> RES and receive 3% more healing"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 65,
+            "magic_resistance": 5
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "White Fiend's Protection",
+              "description": "Allies within range gain +15 RES and receive 5% more healing"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "White Fiend's Protection",
+              "description": "Allies within range gain +17 <@ba.talpu>(+2)</> RES and receive 5% more healing"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_cgbird",
+      "name": "'Nocturnal Echoes'",
+      "region": "en",
+      "type": "RIN-Y",
+      "icon": "rin-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Nightingale use Sanctuary a total of 6 times (excluding Support Units)",
+        "Clear Twilight of Wolumonde TW-3 with a 3-star rating; You must deploy your own Nightingale, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 160,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores the HP of <@ba.kw>4</> allied units simultaneously"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 195,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores the HP of <@ba.kw>4</> allied units simultaneously"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Fleeting Phantom",
+              "description": "Can summon Phantoms. Phantoms cannot attack or block enemies, but have 75 RES and 30% Physical Dodge and are more likely to be targeted by enemies. Phantoms lose 3% Max HP per second; Nightingale gains 3 Phantoms on deployment"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 220,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores the HP of <@ba.kw>4</> allied units simultaneously"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Fleeting Phantom",
+              "description": "Has 75 RES, 40% Physical Dodge, and is more likely to be targeted by enemies, but loses 3% Max HP per second"
+            },
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Fleeting Phantom",
+              "description": "Can summon Phantoms. Phantoms cannot attack or block enemies, but have 75 RES and 40% Physical Dodge and are more likely to be targeted by enemies. Phantoms lose 3% Max HP per second; Nightingale gains 3 Phantoms on deployment"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

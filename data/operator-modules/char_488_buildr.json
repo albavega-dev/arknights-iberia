@@ -1,0 +1,140 @@
+{
+  "operatorId": "char_488_buildr",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 2 enemies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_buildr",
+      "name": "The Morning Star of the Homeseeker",
+      "region": "en",
+      "type": "SOL-X",
+      "icon": "sol-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must include your own Poncirus, and Poncirus must be the first Operator deployed",
+        "Clear Heart of Surging Flame OF-5 with a 3-star rating; You must deploy your own Poncirus, and cannot include any other Vanguard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 180,
+            "def": 32
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 225,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Demolition Team's Code",
+              "description": "After being deployed for 30 seconds, Max HP +18%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Demolition Team's Code",
+              "description": "After being deployed for 30 seconds, Max HP +21% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 260,
+            "def": 37
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Demolition Team's Code",
+              "description": "After being deployed for 30 seconds, Max HP +20%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Demolition Team's Code",
+              "description": "After being deployed for 30 seconds, Max HP +23% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

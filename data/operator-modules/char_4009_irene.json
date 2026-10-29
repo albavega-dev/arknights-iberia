@@ -1,0 +1,312 @@
+{
+  "operatorId": "char_4009_irene",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normal attacks deal damage <@ba.kw>twice</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_irene",
+      "name": "Liber Sacer",
+      "region": "en",
+      "type": "SWO-Y",
+      "icon": "swo-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 50 enemies with Irene's skills (excluding Support Units)",
+        "Clear Under Tides SV-4 with a 3-star rating; You must deploy your own Irene, and have her defeat 15 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 50,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 70
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 59,
+            "def": 44
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 70
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Sword of Cleansing",
+              "description": "ASPD +18, ATK +3%. Effect doubles when there are [Sea Monster] enemies on the battlefield."
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Sword of Cleansing",
+              "description": "ASPD +21 <@ba.talpu>(+3)</>, ATK +3%. Effect doubles when there are [Sea Monster] enemies on the battlefield."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 65,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 70
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Sword of Cleansing",
+              "description": "ASPD +18, ATK +5%. Effect doubles when there are [Sea Monster] enemies on the battlefield."
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Sword of Cleansing",
+              "description": "ASPD +21 <@ba.talpu>(+3)</>, ATK +5%. Effect doubles when there are [Sea Monster] enemies on the battlefield."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_irene",
+      "name": "Inquisitor's Ration",
+      "region": "en",
+      "type": "SWO-X",
+      "icon": "swo-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Irene",
+        "Clear Under Tides SV-EX-1 with a 3-star rating; You must deploy your own Irene and have her use Judgment 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 50,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.vup>{value:0%}</> more damage with skills",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                },
+                {
+                  "key": "value",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 65,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.vup>{value:0%}</> more damage with skills",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                },
+                {
+                  "key": "value",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flames of Castigation",
+              "description": "Physical damage has a 50% chance to ignore 50% DEF. Chance increases to 100% against aerial units; if an aerial unit is defeated when skill is active, restores 4 SP after skill ends"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 80,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.vup>{value:0%}</> more damage with skills",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                },
+                {
+                  "key": "value",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flames of Castigation",
+              "description": "Physical damage has a 50% chance to ignore 55% DEF. Chance increases to 100% against aerial units; if an aerial unit is defeated when skill is active, restores 6 SP after skill ends"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_irene",
+      "name": "Irene's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, Redeployment Time -60%, and immediately gains 8 SP after deployment"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, Redeployment Time -60%, and immediately gains 8 SP after deployment"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flames of Castigation",
+              "description": "Physical damage has a 50% chance to ignore 50% DEF, chance increases to 100% against aerial units;\nIn <@ba.kw>Integrated Strategies</>, aerial enemies within skill range receive 100% more Physical damage; when deploying other Operators within this range, ground enemies within skill range are Levitated for 3s; this range persists after Irene retreats"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, Redeployment Time -60%, and immediately gains 8 SP after deployment"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flames of Castigation",
+              "description": "Physical damage has a 50% chance to ignore 50% DEF, chance increases to 100% against aerial units;\nIn <@ba.kw>Integrated Strategies</>, aerial enemies within skill range receive 140% more Physical damage; when deploying other Operators within this range, ground enemies within skill range are Levitated for 3s; this range persists after Irene retreats; when enemies within this range lose Levitation, Irene in the Deployment Waiting Zone will immediately be deployed at her former position and activate her skill, if deployment conditions allow (costs no DP)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

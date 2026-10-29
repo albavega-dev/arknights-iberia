@@ -1,0 +1,87 @@
+{
+  "operatorId": "char_265_sophia",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has <@ba.kw>extended</> attack range; When attacking enemies not blocked by self, increase ATK to 120%",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_sophia",
+      "name": "Whipsword Wire.L",
+      "region": "en",
+      "type": "INS-X",
+      "icon": "ins-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 50 enemies with Whislash (Whislash cannot be a Support Unit)",
+        "Clear Main Theme S3-6 with a 3-star rating; a non-Support Whislash must be deployed during the operation and only Defender operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 35,
+            "def": 35
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 47,
+            "def": 47
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Vision of Unity",
+              "description": "On deployment, all Melee allies with 3 or more Block gain 1 <$ba.physhield>Physical Shield</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 52,
+            "def": 52
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Vision of Unity",
+              "description": "On deployment, all Melee allies with 3 or more Block gain 1 <$ba.physhield>Physical Shield</>; [Kazimierz] Operators gain 1 additional stack"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

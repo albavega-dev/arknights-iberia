@@ -1,0 +1,240 @@
+{
+  "operatorId": "char_1019_siege2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {
+    "token_10040_siege2_vlion": "Golden Vows"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_siege2",
+      "name": "The Adventure of the Lioness",
+      "region": "en",
+      "type": "AFT-X",
+      "icon": "aft-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with your own Vina Victoria",
+        "Clear Main Theme 9-5 with a 3-star rating under Standard Environment; You must deploy your own Vina Victoria, and can only include 5 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 28
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 360,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "The Kings' Sighs",
+              "description": "This unit and friendly units within the surrounding 8 tiles take 24% less Physical damage, and Vina gains +6% ATK for each friendly unit within this range"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "The Kings' Sighs",
+              "description": "This unit and friendly units within the surrounding 8 tiles take 26% <@ba.talpu>(+2%)</> less Physical damage, and Vina gains +7% <@ba.talpu>(+1%)</> ATK for each friendly unit within this range"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 440,
+            "atk": 56
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "The Kings' Sighs",
+              "description": "This unit and friendly units within the surrounding 8 tiles take 26% less Physical damage, and Vina gains +7% ATK for each friendly unit within this range"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "The Kings' Sighs",
+              "description": "This unit and friendly units within the surrounding 8 tiles take 28% <@ba.talpu>(+2%)</> less Physical damage, and Vina gains +8% <@ba.talpu>(+1%)</> ATK for each friendly unit within this range"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_siege2",
+      "name": "'Speed and Bag'",
+      "region": "en",
+      "type": "AFT-Y",
+      "icon": "aft-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Vina Victoria",
+        "Clear Main Theme 7-18 with a 3-star rating; You must deploy your own Vina Victoria, and use And All Be In My Name at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 50,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by her or her own Summons receive <@ba.kw>10%</> <$ba.fragile>Fragile</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 65,
+            "def": 38
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by her or her own Summons receive <@ba.kw>10%</> <$ba.fragile>Fragile</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Unsheathed Sword",
+              "description": "When damaging an enemy for the first time, inflicts <$ba.tremble>Frighten</> on regular enemies for 4 seconds, while Elite and Leader enemies are <$ba.tremble>Frightened</> for 8 seconds. Vina Victoria and her summons deal 10% more damage to Frightened targets"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Unsheathed Sword",
+              "description": "When damaging an enemy for the first time, inflicts <$ba.tremble>Frighten</> on regular enemies for 5 <@ba.talpu>(+1)</> seconds, while Elite and Leader enemies are <$ba.tremble>Frightened</> for 8 seconds. Vina Victoria and her summons deal 10% more damage to Frightened targets"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 75,
+            "def": 43
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by her or her own Summons receive <@ba.kw>10%</> <$ba.fragile>Fragile</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Unsheathed Sword",
+              "description": "When damaging an enemy for the first time, inflicts <$ba.tremble>Frighten</> on regular enemies for 6 seconds, while Elite and Leader enemies are <$ba.tremble>Frightened</> for 12 seconds. Vina Victoria and her summons deal 15% more damage to Frightened targets"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Unsheathed Sword",
+              "description": "When damaging an enemy for the first time, inflicts <$ba.tremble>Frighten</> on regular enemies for 7 <@ba.talpu>(+1)</> seconds, while Elite and Leader enemies are <$ba.tremble>Frightened</> for 12 seconds. Vina Victoria and her summons deal 15% more damage to Frightened targets"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

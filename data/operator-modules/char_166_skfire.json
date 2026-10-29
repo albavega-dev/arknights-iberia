@@ -1,0 +1,113 @@
+{
+  "operatorId": "char_166_skfire",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_skfire",
+      "name": "Fire Retardant Treatment",
+      "region": "en",
+      "type": "SPC-Y",
+      "icon": "spc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Skyfire, and unleash Fire of Heaven at least 1 time in each battle",
+        "Clear Main Theme S3-5 with a 3-star rating; You must deploy your own Skyfire, and have Skyfire defeat at least 10 enemies, including at least 2 Butchers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "cost": -8,
+            "atk": 40,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "cost": -8,
+            "atk": 58,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Arts Sniper",
+              "description": "When deployed, all blocked enemies take +20% Arts damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Arts Sniper",
+              "description": "When deployed, all blocked enemies take +23% <@ba.talpu>(+3%)</> Arts damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "cost": -8,
+            "atk": 70,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Arts Sniper",
+              "description": "When deployed, all blocked enemies take +23% Arts damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Arts Sniper",
+              "description": "When deployed, all blocked enemies take +26% <@ba.talpu>(+3%)</> Arts damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

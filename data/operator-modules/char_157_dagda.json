@@ -1,0 +1,114 @@
+{
+  "operatorId": "char_157_dagda",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 1 enemy"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_dagda",
+      "name": "Backstreet Shield",
+      "region": "en",
+      "type": "FGT-Y",
+      "icon": "fgt-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Dagda (excluding Support Units)",
+        "Clear Main Theme 11-5 with a 3-star rating under Standard Environment; You must deploy your own Dagda, and have Dagda defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Gang Spirit",
+              "description": "Has a 30% chance of increasing the current attack's ATK to 156% when attacking. When deployed, this multiplier further increases by +6% for every enemy defeated within the 4 adjacent tiles of a [Glasgow] Operator (max 240%)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Gang Spirit",
+              "description": "Has a 30% chance of increasing the current attack's ATK to 162% when attacking. When deployed, this multiplier further increases by +6% for every enemy defeated within the 4 adjacent tiles of a [Glasgow] Operator (max 240%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

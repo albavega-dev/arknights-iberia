@@ -1,0 +1,223 @@
+{
+  "operatorId": "char_1012_skadi2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Does not attack but continuously restores the <@ba.kw>HP</> of all allies within range (the HP restored per second is equal to <@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</> of self ATK). Self is unaffected by <$ba.inspire>Inspiration</>",
+      "blackboard": [
+        {
+          "key": "attack@atk_to_hp_recovery_ratio",
+          "value": 0.1
+        }
+      ]
+    }
+  ],
+  "tokens": {
+    "token_10017_skadi2_dedant": "Skadi's Seaborn"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_skadi2",
+      "name": "An Exuvia of Her Past",
+      "region": "en",
+      "type": "BAR-X",
+      "icon": "bar-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles with your own Skadi the Corrupting Heart, and unleash Wish of Burial Beyond the Light at least 1 time in each battle",
+        "Clear Under Tides SV-5 with a 3-star rating; You must deploy your own Skadi the Corrupting Heart, and cannot include any Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 84,
+            "atk": 26,
+            "def": 12
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 32,
+            "def": 15
+          },
+          "tokenAttributes": {
+            "token_10017_skadi2_dedant": {
+              "respawn_time": -3
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Ancient Kin",
+              "description": "Can use a Seaborn that lasts for 28 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range; Seaborn Redeployment Time -3s"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Ancient Kin",
+              "description": "Lasts 28 seconds after deployment"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 35,
+            "def": 17
+          },
+          "tokenAttributes": {
+            "token_10017_skadi2_dedant": {
+              "respawn_time": -5
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Ancient Kin",
+              "description": "Can use a Seaborn that lasts for 30 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range; Seaborn Redeployment Time -5s"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Ancient Kin",
+              "description": "Lasts 30 seconds after deployment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_skadi2",
+      "name": "New Generation",
+      "region": "en",
+      "type": "BAR-Y",
+      "icon": "bar-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete 5 operations and use your own Skadi the Corrupting Heart's summon at least 2 times in each operation",
+        "Clear Stultifera Navis SN-4 with a 3-star rating; You must deploy your own Skadi the Corrupting Heart, and use 'The Tide Surges, The Tide Recedes' at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 22,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When this unit's skill is active, allies within Attack Range gain 30 Physical and Arts <$ba.dmgresistance>Damage Reduction</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 27,
+            "def": 29
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When this unit's skill is active, allies within Attack Range gain 30 Physical and Arts <$ba.dmgresistance>Damage Reduction</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Predatory Habits",
+              "description": "ATK +8% and DEF +6% when there is an allied unit within Attack Range of self or the Seaborn; if the allied unit is an [Abyssal Hunter] Operator, gain ATK +15% and DEF +6% instead; when allied Operators are deployed within range of self or the Seaborn, this unit gains 2 SP"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Predatory Habits",
+              "description": "ATK +11% <@ba.talpu>(+3%)</> and DEF +6% when there is an allied unit within range of self or the Seaborn; if the allied unit is an [Abyssal Hunter] operator, gain ATK +18% <@ba.talpu>(+3%)</> and DEF +6% instead; when allied Operators are deployed within range of self or the Seaborn, this unit gains 2 SP"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 30,
+            "def": 33
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When this unit's skill is active, allies within Attack Range gain 30 Physical and Arts <$ba.dmgresistance>Damage Reduction</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Predatory Habits",
+              "description": "ATK +9% and DEF +8% when there is an allied unit within Attack Range of self or the Seaborn; if the allied unit is an [Abyssal Hunter] Operator, gain ATK +20% and DEF +8% instead; when allied Operators are deployed within range of self or the Seaborn, this unit gains 3 SP"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Predatory Habits",
+              "description": "ATK +12% <@ba.talpu>(+3%)</> and DEF +8% when there is an allied unit within range of self or the Seaborn; if the allied unit is an [Abyssal Hunter] operator, gain ATK +23% <@ba.talpu>(+3%)</> and DEF +8% instead; when allied Operators are deployed within range of self or the Seaborn, this unit gains 3 SP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

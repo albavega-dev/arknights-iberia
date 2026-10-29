@@ -1,0 +1,110 @@
+{
+  "operatorId": "char_4151_tinman",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can throw <@ba.kw>Alchemical Units</> to assist in combat"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_tinman",
+      "name": "'Phrenology'",
+      "region": "en",
+      "type": "ALC-X",
+      "icon": "alc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Tin Man use 'Big Larry' a total of 8 times",
+        "Clear Main Theme 4-3 with a 3-star rating; You must deploy your own Tin Man, and cannot include any other Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.1/s while an Alchemical Unit is on the field"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.1/s while an Alchemical Unit is on the field"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Shriveled Soul",
+              "description": "Increases the continuous damage dealt to ground enemies in range of Tin Man's Alchemical Units by 23%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Shriveled Soul",
+              "description": "Increases the continuous damage dealt to ground enemies in range of Tin Man's Alchemical Units by 25% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.1/s while an Alchemical Unit is on the field"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Shriveled Soul",
+              "description": "Increases the continuous damage dealt to ground enemies in range of Tin Man's Alchemical Units by 25%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Shriveled Soul",
+              "description": "Increases the continuous damage dealt to ground enemies in range of Tin Man's Alchemical Units by 27% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

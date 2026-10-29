@@ -1,0 +1,101 @@
+{
+  "operatorId": "char_473_mberry",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+      "blackboard": [
+        {
+          "key": "ep_heal_ratio",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mberry",
+      "name": "Serenity Inside",
+      "region": "en",
+      "type": "WDM-X",
+      "icon": "wdm-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Mulberry, and unleash Safe Zone at least 1 time in each battle",
+        "Clear Under Tides SV-5 with a 3-star rating; You must deploy your own Mulberry, and can only include 7 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 22
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Helper",
+              "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +13% ATK"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Helper",
+              "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +14% <@ba.talpu>(+1%)</> ATK"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 35
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Helper",
+              "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +15% ATK"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Helper",
+              "description": "When Mulberry and at least one more Medic Operator are on the battlefield, all Medic Operators gain +16% <@ba.talpu>(+1%)</> ATK"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "operatorId": "char_366_acdrop",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "High accuracy point-blank shot"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_acdrop",
+      "name": "'Freedom, Onion Rings, and Me'",
+      "region": "en",
+      "type": "ARC-X",
+      "icon": "arc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Defeat a total of 50 enemies with Aciddrop (excluding Support Units)",
+        "Clear Main Theme 2-8 with a 3-star rating; You must deploy your own Aciddrop, and have Aciddrop defeat at least 1 Metal Crab"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "def": 30,
+            "attack_speed": 3,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "def": 40,
+            "attack_speed": 4,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Slideshot Style",
+              "description": "Each attack deals at least 30% of this unit's ATK damage (increases to 45% of ATK when the enemy is in the two frontal tiles)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "def": 50,
+            "attack_speed": 5,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Slideshot Style",
+              "description": "Each attack deals at least 35% of this unit's ATK damage (increases to 50% of ATK when the enemy is in the two frontal tiles)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

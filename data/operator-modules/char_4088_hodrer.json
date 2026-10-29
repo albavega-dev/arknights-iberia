@@ -1,0 +1,224 @@
+{
+  "operatorId": "char_4088_hodrer",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks <@ba.kw>all blocked enemies</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_hodrer",
+      "name": "A New Life",
+      "region": "en",
+      "type": "CRU-X",
+      "icon": "cru-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 5 elite or leader enemies with your own Hoederer",
+        "Clear Invitation to Wine IW-7 with a 3-star rating; You must deploy your own Hoederer and have him defeat at least 2 Sinkingsands"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 290,
+            "atk": 92
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Have <@ba.kw>+20%</> healing effectiveness",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 380,
+            "atk": 112
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Have <@ba.kw>+20%</> healing effectiveness",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Cloak of Lingering Flame",
+              "description": "Provides a 24% <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit, and deals +6% Physical damage to enemies"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Cloak of Lingering Flame",
+              "description": "Provides a 27% <@ba.talpu>(+3%)</> <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit, and deals +6% Physical damage to enemies"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 450,
+            "atk": 130
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Have <@ba.kw>+20%</> healing effectiveness",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Cloak of Lingering Flame",
+              "description": "Provides a 28% <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit, and deals +10% Physical damage to enemies"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Cloak of Lingering Flame",
+              "description": "Provides a 31% <@ba.talpu>(+3%)</> <$ba.protect>Sanctuary</> effect to self and the allied unit directly behind this unit, and deals +10% Physical damage to enemies"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_hodrer",
+      "name": "The Handwriting",
+      "region": "en",
+      "type": "CRU-Y",
+      "icon": "cru-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with your own Hoederer",
+        "Clear Main Theme 10-10 with a 3-star rating under Standard Environment; You must deploy your own Hoederer, and have him defeat at least 6 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 110
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage increases to <@ba.kw>{damage_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 350,
+            "atk": 140
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage increases to <@ba.kw>{damage_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Do or Die",
+              "description": "ATK increases to 120% when attacking an enemy; if the target is <$ba.stun>Stunned</> or <$ba.root>Bound</>, ATK further increases to 150%; the first instance of damage dealt to a blocked enemy also <$ba.stun>Stuns</> for 1.5s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 400,
+            "atk": 160
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage increases to <@ba.kw>{damage_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Do or Die",
+              "description": "ATK increases to 130% when attacking an enemy; if the target is <$ba.stun>Stunned</> or <$ba.root>Bound</>, ATK further increases to 160%; the first instance of damage dealt to a blocked enemy also <$ba.stun>Stuns</> for 2.5s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "operatorId": "char_4211_snhunt",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}, improved at Elite 1).",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 4
+        },
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}, improved at Elite 2).",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 6
+        },
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks consume Ammo to increase ATK to <@ba.kw>{atk_scale:0%}</>; While not attacking, Ammo will be slowly reloaded (max capacity {value}).",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 8
+        },
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_snhunt",
+      "name": "Hunts of the Past",
+      "region": "en",
+      "type": "HUN-X",
+      "icon": "hun-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Snow Hunter use Twin Blizzard Bolts a total of 10 times",
+        "Clear Break the Ice BI-1 with a 3-star rating; You must deploy your own Snow Hunter, and use Twin Blizzard Bolts at least 3 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 50
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 65
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Cloud-Rifting Shot",
+              "description": "On skill activation, sends out Rift Cloudbeast to attack, dealing 195% ATK as Physical damage and inflicting <$ba.cold>Cold</> for 3 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Cloud-Rifting Shot",
+              "description": "On skill activation, sends out Rift Cloudbeast to attack, dealing 200% <@ba.talpu>(+5%)</> ATK as Physical damage and inflicting <$ba.cold>Cold</> for 3 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 75
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Cloud-Rifting Shot",
+              "description": "On skill activation, sends out Rift Cloudbeast to attack, dealing 205% ATK as Physical damage and inflicting <$ba.cold>Cold</> for 3 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Cloud-Rifting Shot",
+              "description": "On skill activation, sends out Rift Cloudbeast to attack, dealing 210% <@ba.talpu>(+5%)</> ATK as Physical damage and inflicting <$ba.cold>Cold</> for 3 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

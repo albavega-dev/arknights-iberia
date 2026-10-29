@@ -1,0 +1,121 @@
+{
+  "operatorId": "char_4228_closur",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; ATK is increased to 150% when attacking enemies blocked by Reinforcements",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.5
+        }
+      ]
+    }
+  ],
+  "tokens": {
+    "token_10066_closur_ourbase": "Command Center"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_closur",
+      "name": "Little Trophy for Herself",
+      "region": "en",
+      "type": "TAC-X",
+      "icon": "tac-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must include your own Closure in your squad, and Closure must be the first Operator deployed",
+        "Clear Babel BB-4 with a 3-star rating; You must deploy your own Closure and cannot include any other Vanguard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 20,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; Reinforcements take <@ba.kw>15%</> less damage from units they are blocking, and this unit's ATK is increased to 150% when attacking enemies blocked by Reinforcements"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 25,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; Reinforcements take <@ba.kw>15%</> less damage from units they are blocking, and this unit's ATK is increased to 150% when attacking enemies blocked by Reinforcements"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Scheduler, Max Settings!",
+              "description": "When Closure is in the squad, <$ba.costlowerbound>DP lower limit</> reduced by 4, and [Rhodes Island] Operator ATK +6%"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Scheduler, Max Settings!",
+              "description": "When Closure is in the squad, <$ba.costlowerbound>DP lower limit</> reduced by 5 <@ba.talpu>(+1)</>, and [Rhodes Island] Operator ATK +6%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 30,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; Reinforcements take <@ba.kw>15%</> less damage from units they are blocking, and this unit's ATK is increased to 150% when attacking enemies blocked by Reinforcements"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Scheduler, Max Settings!",
+              "description": "When Closure is in the squad, <$ba.costlowerbound>DP lower limit</> reduced by 5, and [Rhodes Island] Operator ATK +8%"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Scheduler, Max Settings!",
+              "description": "When Closure is in the squad, <$ba.costlowerbound>DP lower limit</> reduced by 6 <@ba.talpu>(+1)</>, and [Rhodes Island] Operator ATK +8%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

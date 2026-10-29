@@ -1,0 +1,101 @@
+{
+  "operatorId": "char_469_indigo",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts damage</>; When unable to find a target, attacks can be <@ba.kw>stored up</> and fired all at once (Up to 3 charges)",
+      "blackboard": [
+        {
+          "key": "times",
+          "value": 3
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_indigo",
+      "name": "Staff Maintenance Kit",
+      "region": "en",
+      "type": "MSC-X",
+      "icon": "msc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Deal a total of 60,000 damage with Indigo (excluding Support Units)",
+        "Clear Under Tides SV-5 with a 3-star rating; You must deploy your own Indigo, and use Labyrinth of Light 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 45,
+            "attack_speed": 3
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 59,
+            "attack_speed": 4
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Gentle Binding Gaze",
+              "description": "When attacking, has a 23% chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Gentle Binding Gaze",
+              "description": "When attacking, has a 25% <@ba.talpu>(+2%)</> chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 70,
+            "attack_speed": 4
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Gentle Binding Gaze",
+              "description": "When attacking, has a 25% chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Gentle Binding Gaze",
+              "description": "When attacking, has a 27% <@ba.talpu>(+2%)</> chance to <$ba.root>Bind</> the target for 4 seconds. Will not target Bound enemies"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

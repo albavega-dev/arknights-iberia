@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_214_kafka",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Significantly <@ba.kw>reduced</> Redeployment Time"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_kafka",
+      "name": "Rubik's Cube Pendant",
+      "region": "en",
+      "type": "EXE-Y",
+      "icon": "exe-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 50 enemies with Kafka's skills (Kafka cannot be a Support Unit)",
+        "Clear Main Theme 2-7 with a 3-star rating; You must deploy your own Kafka, and have Kafka's skills defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 54
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Misdirection",
+              "description": "When skill is active, ATK +22%, Block becomes 0 and gain <$ba.camou>Camouflage</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Misdirection",
+              "description": "When skill is active, ATK +25% <@ba.talpu>(+3%)</>, Block becomes 0 and gain <$ba.camou>Camouflage</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Misdirection",
+              "description": "When skill is active, ATK +25%, Block becomes 0 and gain <$ba.camou>Camouflage</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Misdirection",
+              "description": "When skill is active, ATK +28% <@ba.talpu>(+3%)</>, Block becomes 0 and gain <$ba.camou>Camouflage</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "operatorId": "char_4105_almond",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can <@ba.kw>Shift</> enemies by using skills\nCan be deployed on Ranged Tiles"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_almond",
+      "name": "'Capstone Project'",
+      "region": "en",
+      "type": "HOK-X",
+      "icon": "hok-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Almond use Power Traction a total of 10 times (excluding Support Units)",
+        "Clear Break the Ice BI-2 with a 3-star rating; You must deploy your own Almond, and use Power Traction at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 130,
+            "def": 17
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+              "blackboard": [
+                {
+                  "key": "dist",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 800
+                },
+                {
+                  "key": "interval",
+                  "value": 0.066
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 220,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+              "blackboard": [
+                {
+                  "key": "dist",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 800
+                },
+                {
+                  "key": "interval",
+                  "value": 0.066
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Engineer's Backpack",
+              "description": "Immediately restores 10 SP after activating a skill for the first time each battle"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Engineer's Backpack",
+              "description": "Immediately restores 12 <@ba.talpu>(+2)</> SP after activating a skill for the first time each battle"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 280,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+              "blackboard": [
+                {
+                  "key": "dist",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 800
+                },
+                {
+                  "key": "interval",
+                  "value": 0.066
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Engineer's Backpack",
+              "description": "Immediately restores 12 SP after activating a skill for the first time each battle"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Engineer's Backpack",
+              "description": "Immediately restores 14 <@ba.talpu>(+2)</> SP after activating a skill for the first time each battle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

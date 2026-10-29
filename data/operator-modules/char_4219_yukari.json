@@ -1,0 +1,117 @@
+{
+  "operatorId": "char_4219_yukari",
+  "region": "cn",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "可以使用<$ba.triggereffect>触发型效果</>协助作战"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_yukari",
+      "name": "命运的奖赏",
+      "region": "cn",
+      "type": "RAN-X",
+      "icon": "ran-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "战斗中累计部署非助战岳羽由加莉5次",
+        "3星通关主题曲4-1，必须编入非助战岳羽由加莉上场，并使用2次“明镜止水” "
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 36,
+            "def": 10
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "攻击范围内有干员处于技能持续期间时，自身攻击力<@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 42,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "攻击范围内有干员处于技能持续期间时，自身攻击力<@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "治愈之风",
+              "description": "技能结束后，治疗自身和攻击范围内最多3名干员相当于岳羽由加莉攻击力110%的生命值"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 48,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "攻击范围内有干员处于技能持续期间时，自身攻击力<@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "治愈之风",
+              "description": "技能结束后，治疗自身和攻击范围内最多3名干员相当于岳羽由加莉攻击力120%的生命值"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

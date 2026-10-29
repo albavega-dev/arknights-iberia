@@ -1,0 +1,90 @@
+{
+  "operatorId": "char_4186_tmoris",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals Damage to <@ba.kw>all targets</> within range\n50% chance to dodge Physical and Arts attacks and is less likely to be <@ba.kw>targeted</> by enemies",
+      "blackboard": [
+        {
+          "key": "prob",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_tmoris",
+      "name": "Extra Training",
+      "region": "en",
+      "type": "AMB-Y",
+      "icon": "amb-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Umiri Yahata, and use Drifting Soul at least 1 time in each battle",
+        "Clear Babel BB-7 with a 3-star rating; You must deploy your own Umiri Yahata and have her defeat at least 1 Rogue Mercenary 'Bass'"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 105,
+            "atk": 35,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 135,
+            "atk": 45,
+            "attack_speed": 6
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Professional",
+              "description": "Enemies damaged by Umiri Yahata have a 25% chance of being <$ba.sluggish>Slowed</> for 3s; when skill is active, Umiri Yahata's Attack Range expands"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 70,
+            "attack_speed": 7
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Professional",
+              "description": "Enemies damaged by Umiri Yahata have a 30% chance of being <$ba.sluggish>Slowed</> for 3s; when skill is active, Umiri Yahata's Attack Range expands"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

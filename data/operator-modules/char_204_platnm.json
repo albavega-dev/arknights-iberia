@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_204_platnm",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks aerial enemies first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_platnm",
+      "name": "Solo Travel Kit",
+      "region": "en",
+      "type": "MAR-X",
+      "icon": "mar-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Platinum (excluding Support Units)",
+        "Clear Main Theme 5-7 with a 3-star rating; You must deploy your own Platinum, and have Platinum defeat at least 2 Frosts"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 33
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "All-Out Attack",
+              "description": "The longer the interval from the last attack is, the higher the ATK of the next attack will be (The longest interval is 2.5 seconds and the corresponding ATK increases to 190%)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "All-Out Attack",
+              "description": "The longer the interval from the last attack is, the higher the ATK of the next attack will be (The longest interval is 2.5 seconds and the corresponding ATK increases to 200% <@ba.talpu>(+10%)</>)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "All-Out Attack",
+              "description": "The longer the interval from the last attack is, the higher the ATK of the next attack will be (The longest interval is 2.5 seconds and the corresponding ATK increases to 200%)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "All-Out Attack",
+              "description": "The longer the interval from the last attack is, the higher the ATK of the next attack will be (The longest interval is 2.5 seconds and the corresponding ATK increases to 210% <@ba.talpu>(+10%)</>)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

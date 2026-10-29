@@ -1,0 +1,407 @@
+{
+  "operatorId": "char_003_kalts",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allies",
+      "blackboard": [
+        {
+          "key": "char_id",
+          "value": 0,
+          "valueStr": "char_4179_monstr"
+        }
+      ]
+    }
+  ],
+  "tokens": {
+    "token_10002_kalts_mon3tr": "Mon3tr"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_kalts",
+      "name": "Mon2tr",
+      "region": "en",
+      "type": "PHY-X",
+      "icon": "phy-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 150,000 damage with Kal'tsit (excluding Support Units)",
+        "Clear Main Theme 5-10 with a 3-star rating; You must deploy your own Kal'tsit, and use Command: Meltdown 4 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 35,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 50,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Non-Damaging Restructuring",
+              "description": "When Mon3tr is defeated (excluding retreat) or if its HP drops below 50% for the first time, all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 3 seconds and receive 1200 True damage"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Non-Damaging Restructuring",
+              "description": "When Mon3tr is defeated (excluding retreat) or if its HP drops below 50% for the first time, all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 3.5 <@ba.talpu>(+0.5)</> seconds and receive 1400 <@ba.talpu>(+200)</> True damage"
+            },
+            {
+              "index": 1,
+              "potential": 1,
+              "token": true,
+              "name": "Non-Damaging Restructuring",
+              "description": "When defeated (excluding retreat) or on falling below 50% HP for the first time, all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 3 seconds and receive 1200 True damage"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": true,
+              "name": "Non-Damaging Restructuring",
+              "description": "When defeated (excluding retreat) or on falling below 50% HP for the first time, all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 3.5 <@ba.talpu>(+0.5)</> seconds and receive 1400 <@ba.talpu>(+200)</> True damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 60,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Non-Damaging Restructuring",
+              "description": "When Mon3tr is defeated (excluding retreat) or if its HP drops below 50% for the first time, all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 3.5 seconds and receive 1500 True damage"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Non-Damaging Restructuring",
+              "description": "When Mon3tr is defeated (excluding retreat) or if its HP drops below 50% for the first time, all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 4 <@ba.talpu>(+0.5)</> seconds and receive 1700 <@ba.talpu>(+200)</> True damage"
+            },
+            {
+              "index": 1,
+              "potential": 1,
+              "token": true,
+              "name": "Non-Damaging Restructuring",
+              "description": "When defeated (excluding retreat) or on falling below 50% HP for the first time, all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 3.5. seconds and receive 1500 True damage"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": true,
+              "name": "Non-Damaging Restructuring",
+              "description": "When defeated (excluding retreat) or on falling below 50% HP for the first time, all enemies in the surrounding 8 tiles are <$ba.stun>Stunned</> for 4 <@ba.talpu>(+0.5)</> seconds and receive 1700 <@ba.talpu>(+200)</> True damage"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_kalts",
+      "name": "Panacea",
+      "region": "en",
+      "type": "PHY-Y",
+      "icon": "phy-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Kal'tsit use Command: Meltdown a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 5-10 with a 3-star rating; You must deploy your own Kal'tsit and have Mon3tr defeat Mephisto"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 115,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 155,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mon3tr",
+              "description": "Can use and heal Mon3tr, and Mon3tr has a 25 second redeployment time. Kal'tsit will prioritize healing herself and Mon3tr; Mon3tr gains +12 ASPD and +15% DEF when in Kal'tsit's Attack Range; If Mon3tr is not within Kal'tsit's Attack Range, Mon3tr's DEF is reduced to 0"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Mon3tr",
+              "description": "Can be healed by Kal'tsit. When within Kal'tsit's Attack Range, gains +12 ASPD and +15% DEF; when not within Kal'tsit's Attack Range, DEF decreases to 0"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 195,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mon3tr",
+              "description": "Can use and heal Mon3tr, and Mon3tr has a 25 second redeployment time. Kal'tsit will prioritize healing herself and Mon3tr; Mon3tr gains +20 ASPD and +20% DEF when in Kal'tsit's Attack Range; If Mon3tr is not within Kal'tsit's Attack Range, Mon3tr's DEF is reduced to 0"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Mon3tr",
+              "description": "Can be healed by Kal'tsit. When within Kal'tsit's Attack Range, gains +20 ASPD and +20% DEF; when not within Kal'tsit's Attack Range, DEF decreases to 0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_kalts",
+      "name": "Kal'tsit's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 24,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, heals <@ba.kw>2</> targets simultaneously",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 38,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, heals <@ba.kw>2</> targets simultaneously",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mon3tr",
+              "description": "Can use and heal Mon3tr, and Mon3tr has a 25 second redeployment time. Kal'tsit will prioritize healing herself and Mon3tr; If Mon3tr is not within Kal'tsit's Attack Range, Mon3tr's DEF is reduced to 0; in <@ba.kw>Integrated Strategies</>, Mon3tr does not take up a deployment slot and has +25% Max HP and ATK"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Mon3tr",
+              "description": "Can be healed by Kal'tsit; has 0 DEF when not within Kal'tsit's Attack Range; in <@ba.kw>Integrated Strategies</>, does not take up a deployment slot, and Max HP and ATK +25%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 50,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, heals <@ba.kw>2</> targets simultaneously",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mon3tr",
+              "description": "Can use and heal Mon3tr, and Mon3tr has a 25 second redeployment time. Kal'tsit will prioritize healing herself and Mon3tr; If Mon3tr is not within Kal'tsit's Attack Range, Mon3tr's DEF is reduced to 0; in <@ba.kw>Integrated Strategies</>, Mon3tr does not take up a deployment slot and has +50% Max HP and ATK, and receives 50% more healing"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Mon3tr",
+              "description": "Can be healed by Kal'tsit; has 0 DEF when not within Kal'tsit's Attack Range; in <@ba.kw>Integrated Strategies</>, does not take up a deployment slot, and Max HP and ATK +50%, and receives 50% more healing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

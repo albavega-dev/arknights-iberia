@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_415_flint",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 1 enemy"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_flint",
+      "name": "Meaning of Flowers",
+      "region": "en",
+      "type": "FGT-Y",
+      "icon": "fgt-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Flint use Display of Might a total of 8 times (excluding Support Units)",
+        "Clear The Great Chief Returns RI-9 with a 3-star rating; You must deploy your own Flint, and have her defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Featherweight",
+              "description": "Deals 45% more damage to enemies that are not blocked by this unit"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Featherweight",
+              "description": "Deals 50% <@ba.talpu>(+5%)</> more damage to enemies that are not blocked by this unit"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 185,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Featherweight",
+              "description": "Deals 50% more damage to enemies that are not blocked by this unit"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Featherweight",
+              "description": "Deals 55% <@ba.talpu>(+5%)</> more damage to enemies that are not blocked by this unit"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

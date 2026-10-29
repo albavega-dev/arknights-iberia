@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4204_mantra",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts damage</>, and can inflict <@ba.kw>Elemental Damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mantra",
+      "name": "Central Nerve Detection Module",
+      "region": "en",
+      "type": "PRI-X",
+      "icon": "pri-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 60,000 Elemental Damage with your own Mantra",
+        "Clear What the Firelight Casts FC-5 with a 3-star rating; You must deploy your own Mantra, and have her defeat at least 6 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 43
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage dealt to enemies under an Elemental Burst effect increased to 110%",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 69
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage dealt to enemies under an Elemental Burst effect increased to 110%",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Quiet Zone",
+              "description": "Enemies take 155% of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is a 10% chance to not consume a <$ba.palsy>Paralysis</> stack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Quiet Zone",
+              "description": "Enemies take 165% <@ba.talpu>(+10%)</> of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is a 13% <@ba.talpu>(+3%)</> chance to not consume a <$ba.palsy>Paralysis</> stack"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 87
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage dealt to enemies under an Elemental Burst effect increased to 110%",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Quiet Zone",
+              "description": "Enemies take 160% of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is a 15% chance to not consume a <$ba.palsy>Paralysis</> stack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Quiet Zone",
+              "description": "Enemies take 170% <@ba.talpu>(+10%)</> of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is an 18% <@ba.talpu>(+3%)</> chance to not consume a <$ba.palsy>Paralysis</> stack"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

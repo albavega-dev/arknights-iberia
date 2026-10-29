@@ -1,0 +1,109 @@
+{
+  "operatorId": "char_4004_pudd",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</> (Upgraded after reaching Elite 2)",
+      "blackboard": [
+        {
+          "key": "attack@max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</>",
+      "blackboard": [
+        {
+          "key": "attack@max_target",
+          "value": 4
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_pudd",
+      "name": "Portable Electrical Measuring Equipment",
+      "region": "en",
+      "type": "CHA-Y",
+      "icon": "cha-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Deal a total of 150,000 damage with Pudding (Pudding cannot be a Support Unit)",
+        "Clear Main Theme 2-10 with a 3-star rating; You must deploy your own Pudding, and have Pudding's skill Diffusion Current defeat at least 2 Heavy Defenders"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 70,
+            "attack_speed": 4
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 100,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Electromagnetic Waves",
+              "description": "ATK +13%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 130,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Electromagnetic Waves",
+              "description": "ATK +16%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

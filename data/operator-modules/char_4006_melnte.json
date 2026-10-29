@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4006_melnte",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "High accuracy point-blank shot"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_melnte",
+      "name": "Fragrance Earrings",
+      "region": "en",
+      "type": "ARC-Y",
+      "icon": "arc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Melanite, and unleash Critical Burst at least 1 time in each battle",
+        "Clear Main Theme S3-5 with a 3-star rating; You must deploy your own Melanite, and can only include 6 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 45,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.05
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 60,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.05
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Calibrating Parameters",
+              "description": "Damage when skill is active increases by 19% from second skill activation onward"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Calibrating Parameters",
+              "description": "Damage when skill is active increases by 20% <@ba.talpu>(+1%)</> from second skill activation onward"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 75,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.05
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Calibrating Parameters",
+              "description": "Damage when skill is active increases by 24% from second skill activation onward"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Calibrating Parameters",
+              "description": "Damage when skill is active increases by 25% <@ba.talpu>(+1%)</> from second skill activation onward"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

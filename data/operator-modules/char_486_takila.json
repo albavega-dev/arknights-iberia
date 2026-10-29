@@ -1,0 +1,148 @@
+{
+  "operatorId": "char_486_takila",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normally does not attack and has 0 Block; When skill is inactive, ATK gradually increases up to <@ba.kw>+{atk:0%}</> over <@ba.kw>{max_stack_cnt}</> seconds. ATK is reset when the skill ends",
+      "blackboard": [
+        {
+          "key": "atk",
+          "value": 2
+        },
+        {
+          "key": "mid_stack_cnt",
+          "value": 20
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 40
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_takila",
+      "name": "'Two Faces'",
+      "region": "en",
+      "type": "LIB-X",
+      "icon": "lib-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with your own Tequila",
+        "Clear Main Theme 7-11 with a 3-star rating; You must deploy your own Tequila, and use Esoteric Bladework 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 178,
+            "atk": 13,
+            "def": 13
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment",
+              "blackboard": [
+                {
+                  "key": "init_atk",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 215,
+            "atk": 19,
+            "def": 19
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment",
+              "blackboard": [
+                {
+                  "key": "init_atk",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Waiting Game",
+              "description": "When skill is inactive, deals 25% of Tequila's ATK as Arts damage to the attacker when Tequila or the unit behind him is attacked"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Waiting Game",
+              "description": "When skill is inactive, deals 28% <@ba.talpu>(+3%)</> of Tequila's ATK as Arts damage to the attacker when Tequila or the unit behind is attacked"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 25,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment",
+              "blackboard": [
+                {
+                  "key": "init_atk",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Waiting Game",
+              "description": "When skill is inactive, deals 35% of Tequila's ATK as Arts damage to the attacker when Tequila or the unit behind him is attacked"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Waiting Game",
+              "description": "When skill is inactive, deals 38% <@ba.talpu>(+3%)</> of Tequila's ATK as Arts damage to the attacker when Tequila or the unit behind is attacked"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4214_cairn",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 3 enemies, and can inflict Elemental Injury"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_cairn",
+      "name": "'Parachute'",
+      "region": "en",
+      "type": "PRP-X",
+      "icon": "prp-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Trigger a total of 3 Nervous Impairment Bursts with your own Cairn",
+        "Clear Twilight of Wolumonde TW-7 with a 3-star rating; You must deploy your own Cairn, and use Stunning Directives at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 200,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 270,
+            "def": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Explanation Saturation",
+              "description": "Deals 10% ATK as <$ba.dt.neural2>Nervous Impairment</> every second to enemies blocked by self"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Explanation Saturation",
+              "description": "Deals 11% <@ba.talpu>(+1%)</> ATK as <$ba.dt.neural2>Nervous Impairment</> every second to enemies blocked by self"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 350,
+            "def": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Explanation Saturation",
+              "description": "Deals 11% ATK as <$ba.dt.neural2>Nervous Impairment</> every second to enemies blocked by self"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Explanation Saturation",
+              "description": "Deals 12% <@ba.talpu>(+1%)</> ATK as <$ba.dt.neural2>Nervous Impairment</> every second to enemies blocked by self"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

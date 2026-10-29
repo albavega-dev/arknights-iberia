@@ -1,0 +1,260 @@
+{
+  "operatorId": "char_263_skadi",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 1 enemy"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_skadi",
+      "name": "Moist Sword Bag",
+      "region": "en",
+      "type": "DRE-Y",
+      "icon": "dre-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Skadi, and have Skadi defeat at least 5 enemies",
+        "Clear Grani and the Knights' Treasure GT-6 with a 3-star rating; You must deploy your own Skadi, and have her defeat at least 1 Big Bob"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 30
+                },
+                {
+                  "key": "max_hp",
+                  "value": 0.4
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 0.6
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 400,
+            "atk": 75
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 30
+                },
+                {
+                  "key": "max_hp",
+                  "value": 0.4
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 0.6
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Abyssal Predator",
+              "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +18% ATK and +10% Max HP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Abyssal Predator",
+              "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +20% <@ba.talpu>(+2%)</> ATK and +10% Max HP"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 450,
+            "atk": 85
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 30
+                },
+                {
+                  "key": "max_hp",
+                  "value": 0.4
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 0.6
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Abyssal Predator",
+              "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +22% ATK and +20% Max HP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Abyssal Predator",
+              "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +24% <@ba.talpu>(+2%)</> ATK and +20% Max HP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_skadi",
+      "name": "No Ending to This Dream",
+      "region": "en",
+      "type": "DRE-X",
+      "icon": "dre-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Skadi (excluding Support Units)",
+        "Clear Grani and the Knights' Treasure GT-4 with a 3-star rating; You must deploy your own Skadi, and have her defeat at least 2 Loggers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 90
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Swift Action",
+              "description": "Redeployment Time -20 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 320,
+            "atk": 105
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Swift Action",
+              "description": "Redeployment Time -30 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

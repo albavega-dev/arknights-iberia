@@ -1,0 +1,110 @@
+{
+  "operatorId": "char_1049_catap2",
+  "region": "cn",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "可消耗部署费用来强化作战能力"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_catap2",
+      "name": "狩猎之路",
+      "region": "cn",
+      "type": "MCN-X",
+      "icon": "mcn-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "完成2次战斗；必须编入非助战雷狼龙S空爆并上场，且每次战斗至少使用3次装备应变",
+        "3星通关主题曲S3-5；必须编入非助战雷狼龙S空爆并上场，且至少使用2次“超高输出属性解放斩”"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 200,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "特性消耗费用时，每消耗1点费用使本次技能期间攻击力<@ba.kw>+2%</>（上限10层）"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 250,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "特性消耗费用时，每消耗1点费用使本次技能期间攻击力<@ba.kw>+2%</>（上限10层）"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "斧模式变形",
+              "description": "技能期间攻击距离延长。开启技能时施展变形斩造成伤害，同时消耗所有充能，每层使技能持续时间增加40%且攻击力增加2%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "斧模式变形",
+              "description": "技能期间攻击距离延长。开启技能时施展变形斩造成伤害，同时消耗所有充能，每层使技能持续时间增加50%<@ba.talpu>（+10%）</>且攻击力增加3%<@ba.talpu>（+1%）</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 280,
+            "def": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "特性消耗费用时，每消耗1点费用使本次技能期间攻击力<@ba.kw>+2%</>（上限10层）"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "斧模式变形",
+              "description": "技能期间攻击距离延长。开启技能时施展变形斩造成伤害，同时消耗所有充能，每层使技能持续时间增加40%且攻击力增加3%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "斧模式变形",
+              "description": "技能期间攻击距离延长。开启技能时施展变形斩造成伤害，同时消耗所有充能，每层使技能持续时间增加50%<@ba.talpu>（+10%）</>且攻击力增加4%<@ba.talpu>（+1%）</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

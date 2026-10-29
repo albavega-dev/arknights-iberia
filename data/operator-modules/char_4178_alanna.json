@@ -1,0 +1,143 @@
+{
+  "operatorId": "char_4178_alanna",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 2 enemies; Can use <Support Devices> in battles"
+    }
+  ],
+  "tokens": {
+    "token_10045_alanna_crane": "Nutty"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_alanna",
+      "name": "'Carry-On Bumper'",
+      "region": "en",
+      "type": "CRA-X",
+      "icon": "cra-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Alanna deploy a total of 15 Support Devices",
+        "Clear Main Theme 7-14 with a 3-star rating; You must deploy your own Alanna, and use 'Million-Pound Jack' at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 45,
+            "def": 25
+          },
+          "tokenAttributes": {
+            "token_10045_alanna_crane": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 50,
+            "def": 30
+          },
+          "tokenAttributes": {
+            "token_10045_alanna_crane": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Makeshift Modification",
+              "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 90 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Makeshift Modification",
+              "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 100 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Makeshift Modification",
+              "description": "Allows an Operator within Attack Range to ignore 90 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": true,
+              "name": "Makeshift Modification",
+              "description": "Allows an Operator within Attack Range to ignore 100 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 55,
+            "def": 35
+          },
+          "tokenAttributes": {
+            "token_10045_alanna_crane": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Makeshift Modification",
+              "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 100 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Makeshift Modification",
+              "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 110 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Makeshift Modification",
+              "description": "Allows an Operator within Attack Range to ignore 100 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": true,
+              "name": "Makeshift Modification",
+              "description": "Allows an Operator within Attack Range to ignore 110 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

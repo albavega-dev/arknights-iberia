@@ -1,0 +1,349 @@
+{
+  "operatorId": "char_1026_gvial2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks <@ba.kw>all blocked enemies</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_gvial2",
+      "name": "The Binding of Gavial",
+      "region": "en",
+      "type": "CEN-X",
+      "icon": "cen-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Gavial the Invincible use Chainsaw Assault a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 9-2 with a 3-star rating under Standard Environment; You must deploy your own Gavial the Invincible, and have Gavial the Invincible defeat at least 15 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 45,
+            "def": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks <@ba.kw>all blocked enemies</>; ATK is increased to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 60,
+            "def": 29
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks <@ba.kw>all blocked enemies</>; ATK is increased to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Battleaxe",
+              "description": "Increases ATK and DEF by 13%, increased by a further 4% for each blocked enemy"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Battleaxe",
+              "description": "Increases ATK and DEF by 15% <@ba.talpu>(+2%)</>, increased by a further 5% <@ba.talpu>(+1%)</> for each blocked enemy"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 73,
+            "def": 34
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks <@ba.kw>all blocked enemies</>; ATK is increased to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Battleaxe",
+              "description": "Increases ATK and DEF by 13%, increased by a further 5% for each blocked enemy"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Battleaxe",
+              "description": "Increases ATK and DEF by 15% <@ba.talpu>(+2%)</>, increased by a further 6% <@ba.talpu>(+1%)</> for each blocked enemy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_gvial2",
+      "name": "Sanding and Polishing",
+      "region": "en",
+      "type": "CEN-Y",
+      "icon": "cen-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 40 enemies with your own Gavial the Invincible",
+        "Clear The Great Chief Returns RI-9 with a 3-star rating; You must deploy your own Gavial the Invincible, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 155,
+            "atk": 21,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 26,
+            "def": 63
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Medical Background",
+              "description": "Enemies blocked by this unit receive 5% <$ba.physicfragile>Physical Fragility</>; increases this unit's healing received by 25%, increased to 50% when under half HP"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Medical Background",
+              "description": "Enemies blocked by this unit receive 5% <$ba.physicfragile>Physical Fragility</>; increases this unit's healing received by 30% <@ba.talpu>(+5%)</>, increased to 55% <@ba.talpu>(+5%)</> when under half HP"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 29,
+            "def": 71
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Medical Background",
+              "description": "Enemies blocked by this unit receive 10% <$ba.physicfragile>Physical Fragility</>; increases this unit's healing received by 30%, increased to 60% when under half HP"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Medical Background",
+              "description": "Enemies blocked by this unit receive 10% <$ba.physicfragile>Physical Fragility</>; increases this unit's healing received by 35% <@ba.talpu>(+5%)</>, increased to 65% <@ba.talpu>(+5%)</> when under half HP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_gvial2",
+      "name": "百炼嘉维尔特限证章",
+      "region": "cn",
+      "type": "RA-A",
+      "icon": "ra-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 46,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "在<@ba.kw>生息演算</>中，首次开启技能后，生命上限、攻击力、防御力提升至150%"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 54,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "在<@ba.kw>生息演算</>中，首次开启技能后，生命上限、攻击力、防御力提升至150%"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "战地巨斧",
+              "description": "攻击力和防御力提升10%，每再阻挡一个敌人提升4%；\n在<@ba.kw>生息演算</>中，技能期间，每5秒以自身为中心造成一次相当于100%攻击力的群体物理伤害并中等力度拖拽未被阻挡的敌人，击倒敌人时回复5%生命值，并获取该敌人2%的攻击力与防御力（持续至百炼嘉维尔离场，最多不超过初始属性的300%），所有地面干员阻挡数+2"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "战地巨斧",
+              "description": "攻击力和防御力提升12%<@ba.talpu>（+2%）</>，每再阻挡一个敌人提升5%<@ba.talpu>（+1%）</>；\n在<@ba.kw>生息演算</>中，技能期间，每5秒以自身为中心造成一次相当于100%攻击力的群体物理伤害并中等力度拖拽未被阻挡的敌人，击倒敌人时回复5%生命值，并获取该敌人2%的攻击力与防御力（持续至百炼嘉维尔离场，最多不超过初始属性的300%），所有地面干员阻挡数+2"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 62,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "在<@ba.kw>生息演算</>中，首次开启技能后，生命上限、攻击力、防御力提升至150%"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "战地巨斧",
+              "description": "攻击力和防御力提升10%，每再阻挡一个敌人提升4%；\n在<@ba.kw>生息演算</>中，技能期间，每5秒以自身为中心造成一次相当于100%攻击力的群体物理伤害并中等力度拖拽未被阻挡的敌人，击倒敌人时回复10%生命值，并获取该敌人3%的攻击力与防御力（持续至百炼嘉维尔离场，最多不超过初始属性的300%），所有地面干员阻挡数+3"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "战地巨斧",
+              "description": "攻击力和防御力提升12%<@ba.talpu>（+2%）</>，每再阻挡一个敌人提升5%<@ba.talpu>（+1%）</>；\n在<@ba.kw>生息演算</>中，技能期间，每5秒以自身为中心造成一次相当于100%攻击力的群体物理伤害并中等力度拖拽未被阻挡的敌人，击倒敌人时回复10%生命值，并获取该敌人3%的攻击力与防御力（持续至百炼嘉维尔离场，最多不超过初始属性的300%），所有地面干员阻挡数+3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

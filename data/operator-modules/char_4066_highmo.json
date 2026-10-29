@@ -1,0 +1,101 @@
+{
+  "operatorId": "char_4066_highmo",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_highmo",
+      "name": "'Weighing Anchor'",
+      "region": "en",
+      "type": "REA-X",
+      "icon": "rea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Highmore, and have Highmore deal at least 12,000 damage",
+        "Clear Stultifera Navis SN-2 with a 3-star rating; You must deploy your own Highmore, and can only include 2 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 160,
+            "attack_speed": 4
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 230,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sustenance from the Reaper",
+              "description": "Recover 35 <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sustenance from the Reaper",
+              "description": "Recover 40 <@ba.talpu>(+5)</> <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 300,
+            "attack_speed": 6
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sustenance from the Reaper",
+              "description": "Recover 40 <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sustenance from the Reaper",
+              "description": "Recover 45 <@ba.talpu>(+5)</> <$ba.dt.element>Elemental Injury</> for each enemy hit during attacks, up to Block count"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

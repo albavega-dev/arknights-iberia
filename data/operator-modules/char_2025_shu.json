@@ -1,0 +1,242 @@
+{
+  "operatorId": "char_2025_shu",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can heal allies by using skill(s)"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_shu",
+      "name": "On Architecture of Time",
+      "region": "en",
+      "type": "GUA-X",
+      "icon": "gua-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Shu, and unleash Samsara at least 1 time in each battle",
+        "Clear Main Theme 11-11 with a 3-star rating under Standard Environment; You must deploy your own Shu, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 30,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 40,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Myriad Grains, Everlasting",
+              "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 80 HP/s, grants 10% <$ba.protect>Sanctuary</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Myriad Grains, Everlasting",
+              "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 85 <@ba.talpu>(+5)</> HP/s, grants 12% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 50,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Myriad Grains, Everlasting",
+              "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 80 HP/s, grants 15% <$ba.protect>Sanctuary</>; Immediately applies these effects on the tile when deployed"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Myriad Grains, Everlasting",
+              "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 85 <@ba.talpu>(+5)</> HP/s, grants 17% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>; Immediately applies these effects on the tile when deployed"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_shu",
+      "name": "好时节",
+      "region": "cn",
+      "type": "GUA-Y",
+      "icon": "gua-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "战斗中非助战黍累计使用5次“离离枯荣”",
+        "3星通关插曲怀黍离HS-8；必须编入非助战黍并上场，且不可编入医疗与辅助干员"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 25,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "受到的伤害减少<@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "damage_resistance",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 33,
+            "def": 48
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "受到的伤害减少<@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "damage_resistance",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "天有四时",
+              "description": "场上有三名不同职业干员时所有干员生命上限+14%、三名相同职业干员时所有干员攻击速度+14，编队中有四名【岁】干员时所有干员攻击力+14%且4秒获得1点技力；上述三个条件达成两种或以上时，则额外使所有干员攻击力+3%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 40,
+            "def": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "受到的伤害减少<@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "damage_resistance",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "天有四时",
+              "description": "场上有三名不同职业干员时所有干员生命上限+16%、三名相同职业干员时所有干员攻击速度+16，编队中有四名【岁】干员时所有干员攻击力+16%且4秒获得1点技力；上述三个条件达成两种或以上时，则额外使所有干员攻击力+5%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

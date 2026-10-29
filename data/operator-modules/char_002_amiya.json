@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_002_amiya",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_amiya",
+      "name": "DWDB-221E",
+      "region": "en",
+      "type": "CCR-Y",
+      "icon": "ccr-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with Amiya (excluding Support Units)",
+        "Clear Main Theme 3-8 with a 3-star rating; You must deploy your own Core Caster-form Amiya, and have Core Caster-form Amiya defeat Skullshatterer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Emotional Absorption",
+              "description": "Restores 3 extra Skill Points when attacking an enemy and 8 extra Skill Points when killing an enemy"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Emotional Absorption",
+              "description": "Restores 4 <@ba.talpu>(+1)</> extra Skill Points when attacking an enemy and 10 <@ba.talpu>(+2)</> extra Skill Points when killing an enemy"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Emotional Absorption",
+              "description": "Restores 3 extra Skill Points when attacking an enemy and 10 extra Skill Points when killing an enemy"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Emotional Absorption",
+              "description": "Restores 4 <@ba.talpu>(+1)</> extra Skill Points when attacking an enemy and 12 <@ba.talpu>(+2)</> extra Skill Points when killing an enemy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

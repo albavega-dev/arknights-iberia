@@ -1,0 +1,101 @@
+{
+  "operatorId": "char_195_glassb",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</> and <$ba.sluggish>Slows</> the target for a short time",
+      "blackboard": [
+        {
+          "key": "sluggish",
+          "value": 0.8
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_glassb",
+      "name": "Reading Notes",
+      "region": "en",
+      "type": "DEC-Y",
+      "icon": "dec-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Istina, and have Istina deal at least 25,000 damage",
+        "Clear Main Theme 2-3 with a 3-star rating; You must deploy your own Istina, and only 6 Operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 80,
+            "attack_speed": 3
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 120,
+            "attack_speed": 4
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Explorer",
+              "description": "DEF -35%; ASPD +21. While this unit's skill is active, further increase ASPD by 5"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Explorer",
+              "description": "DEF -35%; ASPD +24 <@ba.talpu>(+3)</>. While this unit's skill is active, further increase ASPD by 5"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 160,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Explorer",
+              "description": "DEF -35%; ASPD +21. While this unit's skill is active, further increase ASPD by 10"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Explorer",
+              "description": "DEF -35%; ASPD +24 <@ba.talpu>(+3)</>. While this unit's skill is active, further increase ASPD by 10"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "operatorId": "char_4185_amoris",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>{attack@atk_scale_2:0%}</> ATK as <@ba.kw>AOE</> Physical damage to enemies around the target.",
+      "blackboard": [
+        {
+          "key": "attack@ability_range_radius",
+          "value": 1
+        },
+        {
+          "key": "attack@atk_scale_2",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_amoris",
+      "name": "A Young Wheat",
+      "region": "en",
+      "type": "HAM-X",
+      "icon": "ham-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with your own Nyamu Yūtenji",
+        "Clear Zwillingstürme im Herbst ZT-4 with a 3-star rating; You must deploy your own Nyamu Yūtenji and have her defeat at least 2 Remnant Orchestra Drummer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 139,
+            "atk": 56,
+            "def": 13
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+              "blackboard": [
+                {
+                  "key": "attack@atk_scale_2",
+                  "value": 0.5
+                },
+                {
+                  "key": "attack@ability_range_radius",
+                  "value": 1
+                },
+                {
+                  "key": "atk_scale_e",
+                  "value": 1.15
+                },
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 156,
+            "atk": 61,
+            "def": 18
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+              "blackboard": [
+                {
+                  "key": "attack@atk_scale_2",
+                  "value": 0.5
+                },
+                {
+                  "key": "attack@ability_range_radius",
+                  "value": 1
+                },
+                {
+                  "key": "atk_scale_e",
+                  "value": 1.15
+                },
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Ambidextrous",
+              "description": "Nyamu Yūtenji can <$ba.permanentatk>continuously attack</>; attacks have a 12% chance to inflict 10% <$ba.fragile>Fragile</> on enemies for 2.5s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 178,
+            "atk": 67,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+              "blackboard": [
+                {
+                  "key": "attack@atk_scale_2",
+                  "value": 0.5
+                },
+                {
+                  "key": "attack@ability_range_radius",
+                  "value": 1
+                },
+                {
+                  "key": "atk_scale_e",
+                  "value": 1.15
+                },
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Ambidextrous",
+              "description": "Nyamu Yūtenji can <$ba.permanentatk>continuously attack</>; attacks have a 15% chance to inflict 12% <$ba.fragile>Fragile</> on enemies for 3s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

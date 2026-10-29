@@ -1,0 +1,131 @@
+{
+  "operatorId": "char_4144_chilc",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has <@ba.kw>reduced</> Redeployment Time, can use ranged attacks"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_chilc",
+      "name": "Authentic Locksmith's Instruments",
+      "region": "en",
+      "type": "AGE-X",
+      "icon": "age-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Chilchuck use Improvisation a total of 6 times",
+        "Clear Main Theme 4-3 with a 3-star rating; You must deploy your own Chilchuck and cannot include any other Vanguard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 150,
+            "def": 20,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 200,
+            "def": 23,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Keen Senses",
+              "description": "For 53 seconds after deployment, Chilchuck and allied units within his range will not take damage from environmental effects or <$ba.dt.element>Elemental Injury</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Keen Senses",
+              "description": "For 58 <$ba.dt.element>(+5)</> seconds after deployment, Chilchuck and allied units within his range will not take damage from environmental effects or <@ba.talpu>Elemental Injury</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 300,
+            "def": 25,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Keen Senses",
+              "description": "For 60 seconds after deployment, Chilchuck and allied units within his range will not take damage from environmental effects or <$ba.dt.element>Elemental Injury</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Keen Senses",
+              "description": "For 65 <$ba.dt.element>(+5)</> seconds after deployment, Chilchuck and allied units within his range will not take damage from environmental effects or <@ba.talpu>Elemental Injury</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

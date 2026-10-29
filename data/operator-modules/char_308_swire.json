@@ -1,0 +1,87 @@
+{
+  "operatorId": "char_308_swire",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has <@ba.kw>extended</> attack range; When attacking enemies not blocked by self, increase ATK to 120%",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_swire",
+      "name": "Self-defense Lipstick",
+      "region": "en",
+      "type": "INS-X",
+      "icon": "ins-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Clear 5 operations with Swire (Swire cannot be a Support Unit); only Guard operators are allowed for the remaining units",
+        "Clear Main Theme S2-3 with a 3-star rating using a squad of at most 2 units (including Support Units); a non-Support Swire must be deployed during the operation and only Melee operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 50
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 65
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Keeping Pace",
+              "description": "When there are Melee allies in the 8 surrounding tiles, recover 1 SP every 4 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 75
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Keeping Pace",
+              "description": "When there are Melee allies in the 8 surrounding tiles, recover 1 SP every 3 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

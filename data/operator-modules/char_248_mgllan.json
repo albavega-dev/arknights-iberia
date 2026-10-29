@@ -1,0 +1,304 @@
+{
+  "operatorId": "char_248_mgllan",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>\nCan use <@ba.kw>Summons</> in battles"
+    }
+  ],
+  "tokens": {
+    "token_10005_mgllan_drone1": "Soaring Dragon F",
+    "token_10005_mgllan_drone2": "Soaring Dragon L",
+    "token_10005_mgllan_drone3": "Soaring Dragon A"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mgllan",
+      "name": "Drone Control Module.P",
+      "region": "en",
+      "type": "SUM-X",
+      "icon": "sum-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete 5 operations and summon Magallan's summoned units at least 5 times in each operation (Magallan cannot be a Support Unit)",
+        "Clear Main Theme 2-5 with a 3-star rating using a squad of at most 2 units (including Support Units); a non-Support Magallan must be deployed during the operation and only Vanguard operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first summoned unit <@ba.kw>does not consume</> deployment slots (The last summoned unit on the field does not return a deployment slot when retreated or defeated)",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first summoned unit <@ba.kw>does not consume</> deployment slots (The last summoned unit on the field does not return a deployment slot when retreated or defeated)",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Optical Refraction Accessories",
+              "description": "Drones gain <$ba.invisible>Invisibility</> for 23 seconds after deployment (cannot be targeted by enemy ranged attacks). If Magallan is adjacent to the drone, she gains the same effect"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Optical Refraction Accessories",
+              "description": "Drones gain <$ba.invisible>Invisibility</> for 25 <@ba.talpu>(+2)</> seconds after deployment (cannot be targeted by enemy ranged attacks). If Magallan is adjacent to the drone, she gains the same effect"
+            },
+            {
+              "index": 1,
+              "potential": 1,
+              "token": true,
+              "name": "Optical Refraction Accessories",
+              "description": "<$ba.invisible>Invisible</> for 23 seconds after deployment"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": true,
+              "name": "Optical Refraction Accessories",
+              "description": "<$ba.invisible>Invisible</> for 25 <@ba.talpu>(+2)</> seconds after deployment"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first summoned unit <@ba.kw>does not consume</> deployment slots (The last summoned unit on the field does not return a deployment slot when retreated or defeated)",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Optical Refraction Accessories",
+              "description": "Drones gain <$ba.invisible>Invisibility</> for 26 seconds after deployment (cannot be targeted by enemy ranged attacks). If Magallan is adjacent to the drone, she gains the same effect"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Optical Refraction Accessories",
+              "description": "Drones gain <$ba.invisible>Invisibility</> for 28 <@ba.talpu>(+2)</> seconds after deployment (cannot be targeted by enemy ranged attacks). If Magallan is adjacent to the drone, she gains the same effect"
+            },
+            {
+              "index": 1,
+              "potential": 1,
+              "token": true,
+              "name": "Optical Refraction Accessories",
+              "description": "<$ba.invisible>Invisible</> for 26 seconds after deployment"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": true,
+              "name": "Optical Refraction Accessories",
+              "description": "<$ba.invisible>Invisible</> for 28 <@ba.talpu>(+2)</> seconds after deployment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_mgllan",
+      "name": "Instructional Soaring Dragon Drone",
+      "region": "en",
+      "type": "SUM-Y",
+      "icon": "sum-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Summon a total of 45 summoned units with Magallan (excluding Support Units)",
+        "Clear Main Theme 2-2 with a 3-star rating; You must deploy your own Magallan, and only Vanguard Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 25,
+            "def": 25
+          },
+          "tokenAttributes": {
+            "token_10005_mgllan_drone1": {
+              "cost": -1,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10005_mgllan_drone2": {
+              "cost": -3,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10005_mgllan_drone3": {
+              "cost": -3,
+              "max_deck_stack_cnt": 3
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can hold <@ba.kw>+{cnt}</> additional summoned units and summoned unit deployment costs are <@ba.kw>reduced</>",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 34,
+            "def": 34
+          },
+          "tokenAttributes": {
+            "token_10005_mgllan_drone1": {
+              "cost": -1,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10005_mgllan_drone2": {
+              "cost": -3,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10005_mgllan_drone3": {
+              "cost": -3,
+              "max_deck_stack_cnt": 3
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can hold <@ba.kw>+{cnt}</> additional summoned units and summoned unit deployment costs are <@ba.kw>reduced</>",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Support Drone - Soaring Dragon",
+              "description": "Can use up to 5 drones that do not block (max 4 deployed at once). Drones' effect changes based upon Skill."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 40,
+            "def": 40
+          },
+          "tokenAttributes": {
+            "token_10005_mgllan_drone1": {
+              "cost": -1,
+              "max_hp": 100,
+              "def": 50,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10005_mgllan_drone2": {
+              "cost": -3,
+              "atk": 40,
+              "attack_speed": 3,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10005_mgllan_drone3": {
+              "cost": -3,
+              "atk": 50,
+              "attack_speed": 3,
+              "max_deck_stack_cnt": 3
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can hold <@ba.kw>+{cnt}</> additional summoned units and summoned unit deployment costs are <@ba.kw>reduced</>",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Support Drone - Soaring Dragon",
+              "description": "Can use up to 5 stronger drones that do not block (max 4 deployed at once). Drones' effect changes based upon Skill."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

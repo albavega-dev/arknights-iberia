@@ -1,0 +1,113 @@
+{
+  "operatorId": "char_4054_malist",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Controls a <@ba.kw>Drone</> that deals <@ba.kw>Arts damage</>; When the Drone attacks the same enemy, its damage will increase (up to 110% of the operator's ATK)",
+      "blackboard": [
+        {
+          "key": "init_atk_scale",
+          "value": 0.2
+        },
+        {
+          "key": "delta_atk_scale",
+          "value": 0.15
+        },
+        {
+          "key": "max_atk_scale",
+          "value": 1.1
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 6
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_malist",
+      "name": "'New Home'",
+      "region": "en",
+      "type": "FUN-Y",
+      "icon": "fun-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Minimalist use Prodigious Craftsmanship a total of 20 times (excluding Support Units)",
+        "Clear Ideal City: Endless Carnival IC-8 with a 3-star rating; You must deploy your own Minimalist, and have him defeat at least 2 Mead-Grade Waker-Uppers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 20
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 85,
+            "atk": 25
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flash of Insight",
+              "description": "When attacking, 30% chance to increase that attack's ATK to 155%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Flash of Insight",
+              "description": "When attacking, 35% <@ba.talpu>(+5%)</> chance to increase that ATK to 155%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flash of Insight",
+              "description": "When attacking, 30% chance to increase that attack's ATK to 160%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Flash of Insight",
+              "description": "When attacking, 35% <@ba.talpu>(+5%)</> chance to increase that ATK to 160%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

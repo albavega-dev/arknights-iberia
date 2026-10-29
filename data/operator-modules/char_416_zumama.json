@@ -1,0 +1,342 @@
+{
+  "operatorId": "char_416_zumama",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Only restores SP when blocking enemies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_zumama",
+      "name": "Zumama's Tool Box",
+      "region": "en",
+      "type": "HES-X",
+      "icon": "hes-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 60,000 damage with Eunectes (excluding Support Units)",
+        "Clear The Great Chief Returns RI-EX-4 with a 3-star rating; You must deploy your own Eunectes, and have her defeat at least 1 Tiacauh Champion"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 80,
+            "def": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP recovery is slowed except when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 95,
+            "def": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP recovery is slowed except when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Resilience",
+              "description": "Increases this unit's SP recovery by 0.4/sec when blocking enemies"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 105,
+            "def": 85
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP recovery is slowed except when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Resilience",
+              "description": "Increases this unit's SP recovery by 0.55/sec when blocking enemies"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_zumama",
+      "name": "'The Little Ugly Thing'",
+      "region": "en",
+      "type": "HES-Y",
+      "icon": "hes-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with Eunectes (excluding Support Units)",
+        "Clear The Great Chief Returns RI-7 with a 3-star rating; You must deploy your own Eunectes, and have her defeat at least 2 Tiacauh Braves"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 70,
+            "def": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP does not recover when not blocking an enemy. When blocking an enemy, gain SP recovery, ATK +15%, and DEF +15%",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.999
+                },
+                {
+                  "key": "atk",
+                  "value": 0.15
+                },
+                {
+                  "key": "def",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 80,
+            "def": 95
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP does not recover when not blocking an enemy. When blocking an enemy, gain SP recovery, ATK +15%, and DEF +15%",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.999
+                },
+                {
+                  "key": "atk",
+                  "value": 0.15
+                },
+                {
+                  "key": "def",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Peerless Bravery",
+              "description": "When HP is above 50%, attacks deal 120% damage; when HP is 50% or lower, gain 25% <$ba.protect>Sanctuary</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Peerless Bravery",
+              "description": "When HP is above 50%, attacks deal 122%<@ba.talpu>(+2%)</> damage; when HP is 50% or lower, gain 27%<@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 85,
+            "def": 110
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP does not recover when not blocking an enemy. When blocking an enemy, gain SP recovery, ATK +15%, and DEF +15%",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.999
+                },
+                {
+                  "key": "atk",
+                  "value": 0.15
+                },
+                {
+                  "key": "def",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Peerless Bravery",
+              "description": "When HP is above 50%, attacks deal 123% damage; when HP is 50% or lower, gain 28% <$ba.protect>Sanctuary</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Peerless Bravery",
+              "description": "When HP is above 50%, attacks deal 125%<@ba.talpu>(+2%)</> damage; when HP is 50% or lower, gain 30%<@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_zumama",
+      "name": "Eunectes's Specialized Badge",
+      "region": "en",
+      "type": "RA-A",
+      "icon": "ra-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 280,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Reclamation Algorithm</>, able to recover SP while under the effect of food; attracts enemies over a wide area to this unit's position when skill is activated",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 340,
+            "atk": 110
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Reclamation Algorithm</>, able to recover SP while under the effect of food; attracts enemies over a wide area to this unit's position when skill is activated",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Resilience",
+              "description": "Increases this unit's SP recovery rate by 0.2/sec when blocking enemies; in <@ba.kw>Reclamation Algorithm</>, increases this unit's SP recovery rate by 0.4/sec when blocking enemies, Block +1, and attacks all blocked enemies when skill is active; enemies blocked by this unit receive 20% <$ba.physicfragile>[Physical Fragility]</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 380,
+            "atk": 130
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Reclamation Algorithm</>, able to recover SP while under the effect of food; attracts enemies over a wide area to this unit's position when skill is activated",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Resilience",
+              "description": "Increases this unit's SP recovery rate by 0.2/sec when blocking enemies; in <@ba.kw>Reclamation Algorithm</>, increases this unit's SP recovery rate by 0.4/sec when blocking enemies, Block +2, and attacks all blocked enemies when skill is active; enemies blocked by this unit receive 40% <$ba.physicfragile>[Physical Fragility]</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

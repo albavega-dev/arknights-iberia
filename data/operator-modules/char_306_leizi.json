@@ -1,0 +1,123 @@
+{
+  "operatorId": "char_306_leizi",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</> (Upgraded after reaching Elite 2)",
+      "blackboard": [
+        {
+          "key": "attack@max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</>",
+      "blackboard": [
+        {
+          "key": "attack@max_target",
+          "value": 4
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_leizi",
+      "name": "'All the Thunderlight'",
+      "region": "en",
+      "type": "CHA-X",
+      "icon": "cha-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 50 enemies with Leizi's skill Thunderclap (Leizi cannot be a Support Unit)",
+        "Clear Main Theme S3-6 with a 3-star rating; You must deploy your own Leizi, and have Leizi defeat at least 1 Butcher"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 55
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 95,
+            "atk": 65
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Unobstructed Flow",
+              "description": "Increases ATK to 123% and recover 1 SP when attacking unblocked enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Unobstructed Flow",
+              "description": "Increases ATK to 126% <@ba.talpu>(+3%)</> and recover 1 SP when attacking unblocked enemies"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 105,
+            "atk": 75
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Unobstructed Flow",
+              "description": "Increases ATK to 126% and recover 1 SP when attacking unblocked enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Unobstructed Flow",
+              "description": "Increases ATK to 129% <@ba.talpu>(+3%)</> and recover 1 SP when attacking unblocked enemies"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

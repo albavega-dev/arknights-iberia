@@ -1,0 +1,99 @@
+{
+  "operatorId": "char_4141_marcil",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_marcil",
+      "name": "Book Collection of the Best Magician",
+      "region": "en",
+      "type": "SPC-Y",
+      "icon": "spc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Marcille",
+        "Clear Main Theme 5-10 with a 3-star rating; You must deploy your own Marcille and have her defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "cost": -8,
+            "atk": 51,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "cost": -8,
+            "atk": 68,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Reliable Companion",
+              "description": "Initial <$ba.magicpoint>Mana</> +35; when there are 4 <$ba.laiosteam>[Laios's Party]</> Operators in the squad, all <$ba.laiosteam>[Laios's Party]</> Operators gain +25 ASPD and +35% DEF"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "cost": -8,
+            "atk": 82,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Reliable Companion",
+              "description": "Initial <$ba.magicpoint>Mana</> +40; when there are 4 <$ba.laiosteam>[Laios's Party]</> Operators in the squad, all <$ba.laiosteam>[Laios's Party]</> Operators gain +25 ASPD and +35% DEF"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

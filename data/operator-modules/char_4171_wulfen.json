@@ -1,0 +1,142 @@
+{
+  "operatorId": "char_4171_wulfen",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can use traps to assist in combat, but traps cannot be placed <@ba.kw>on tiles already occupied by an enemy</>"
+    }
+  ],
+  "tokens": {
+    "token_10044_wulfen_mine": "Ore 'Killer'"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_wulfen",
+      "name": "Mineral Display Cabinet",
+      "region": "en",
+      "type": "TRP-Y",
+      "icon": "trp-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Wulfenite deploy a total of 30 Ore 'Killers'",
+        "Clear Main Theme 9-6 with a 3-star rating under Standard Environment; You must deploy your own Wulfenite and have her defeat at least 1 Dublinn Heavy Defender"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 30,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Has 20% chance to deploy a trap that deals double damage",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.2
+                },
+                {
+                  "key": "atk_scale",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 40,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Has 20% chance to deploy a trap that deals double damage",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.2
+                },
+                {
+                  "key": "atk_scale",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Explorer's Ease",
+              "description": "If there are 2 or more enemies within range of an Ore 'Killer' detonation, damage dealt increases by 8%"
+            },
+            {
+              "index": null,
+              "potential": 1,
+              "token": true,
+              "name": "Explorer's Ease",
+              "description": "If there are 2 or more enemies within range of an Ore 'Killer' detonation, damage dealt increases by 8%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 50,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Has 20% chance to deploy a trap that deals double damage",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.2
+                },
+                {
+                  "key": "atk_scale",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Explorer's Ease",
+              "description": "If there are 2 or more enemies within range of an Ore 'Killer' detonation, damage dealt increases by 12%"
+            },
+            {
+              "index": null,
+              "potential": 1,
+              "token": true,
+              "name": "Explorer's Ease",
+              "description": "If there are 2 or more enemies within range of an Ore 'Killer' detonation, damage dealt increases by 12%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

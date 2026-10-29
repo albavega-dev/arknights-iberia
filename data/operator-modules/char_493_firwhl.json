@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_493_firwhl",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "When not blocking enemies, prioritizes dealing <@ba.kw>ranged AoE</> Physical damage"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_firwhl",
+      "name": "'Footprints Growing'",
+      "region": "en",
+      "type": "FOR-X",
+      "icon": "for-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Firewhistle use Scorched Earth a total of 8 times (excluding Support Units)",
+        "Clear Main Theme S4-6 with a 3-star rating; You must deploy your own Firewhistle, and only Ranged Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 42,
+            "def": 42
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 52,
+            "def": 52
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flexible Fighter",
+              "description": "ATK +16% when not blocking an enemy, DEF +16% when blocking an enemy"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Flexible Fighter",
+              "description": "ATK +18% <@ba.talpu>(+2%)</> when not blocking an enemy, DEF +18% <@ba.talpu>(+2%)</> when blocking an enemy"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 58,
+            "def": 58
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flexible Fighter",
+              "description": "ATK +18% when not blocking an enemy, DEF +18% when blocking an enemy"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Flexible Fighter",
+              "description": "ATK +20% <@ba.talpu>(+2%)</> when not blocking an enemy, DEF +20% <@ba.talpu>(+2%)</> when blocking an enemy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

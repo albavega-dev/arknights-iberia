@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_2026_yu",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 3 enemies, and can inflict Elemental Injury"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_yu",
+      "name": "Tastes of Life",
+      "region": "en",
+      "type": "PRP-X",
+      "icon": "prp-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Trigger a total of 8 Burn Bursts with your own Yu",
+        "Clear Who is Real WR-4 with a 3-star rating; You must deploy your own Yu, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Midst Markets, Dragons Dwell",
+              "description": "When there are at least 3 Operators on the field, recovers 1.5% Max HP as both HP and <$ba.dt.element>Elemental Injury</> per second; when there are at least 5, Arts damage dealt by this unit against targets under the burst effect of <$ba.dt.burning2>Burn</> increases by 9%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Midst Markets, Dragons Dwell",
+              "description": "When there are at least 3 Operators on the field, recovers 2% <@ba.talpu>(+0.5%)</> Max HP as both HP and <$ba.dt.element>Elemental Injury</> per second; when there are at least 5, Arts damage dealt by this unit against targets under the burst effect of <$ba.dt.burning2>Burn</> increases by 9%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 400,
+            "atk": 85
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Midst Markets, Dragons Dwell",
+              "description": "When there are at least 2 Operators on the field, recovers 1.5% Max HP as both HP and <$ba.dt.element>Elemental Injury</> per second; when there are at least 4, Arts damage dealt by this unit against targets under the burst effect of <$ba.dt.burning2>Burn</> increases by 14%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Midst Markets, Dragons Dwell",
+              "description": "When there are at least 2 Operators on the field, recovers 2% <@ba.talpu>(+0.5%)</> Max HP as both HP and <$ba.dt.element>Elemental Injury</> per second; when there are at least 4, Arts damage dealt by this unit against targets under the burst effect of <$ba.dt.burning2>Burn</> increases by 14%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

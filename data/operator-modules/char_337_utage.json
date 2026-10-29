@@ -1,0 +1,115 @@
+{
+  "operatorId": "char_337_utage",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 2)",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 70
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_utage",
+      "name": "Flip Phone",
+      "region": "en",
+      "type": "SBL-X",
+      "icon": "sbl-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Utage use Descending Strike - Earth Splitter a total of 5 times (excluding Support Units)",
+        "Clear Main Theme 1-12 with a 3-star rating; You must deploy your own Utage, and cannot include any other Guard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 45
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 55
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Cold-Blooded",
+              "description": "+3% ATK and +3% DEF when HP below 50%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 60
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Cold-Blooded",
+              "description": "+4% ATK and +4% DEF when HP below 50%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

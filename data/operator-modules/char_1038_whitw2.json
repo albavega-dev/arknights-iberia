@@ -1,0 +1,113 @@
+{
+  "operatorId": "char_1038_whitw2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Controls a <@ba.kw>Drone</> that deals <@ba.kw>Arts damage</>; When the Drone attacks the same enemy, its damage will increase (up to 110% of the operator's ATK)",
+      "blackboard": [
+        {
+          "key": "init_atk_scale",
+          "value": 0.2
+        },
+        {
+          "key": "delta_atk_scale",
+          "value": 0.15
+        },
+        {
+          "key": "max_atk_scale",
+          "value": 1.1
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 6
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_whitw2",
+      "name": "Hour of the Wolf",
+      "region": "en",
+      "type": "FUN-X",
+      "icon": "fun-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 150,000 damage with your own Lappland the Decadenza",
+        "Clear Il Siracusano IS-8 with a 3-star rating; You must deploy your own Lappland the Decadenza, and have her use Hurricane Chase or Finale: Catastrofe at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 95,
+            "atk": 20
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 29
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Honor of Siracusa",
+              "description": "When this unit is in the squad, all [Siracusa] Operators gain +5 Starting SP, and +6 ASPD after first skill activation"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Honor of Siracusa",
+              "description": "When this unit is in the squad, all [Siracusa] Operators gain +6 <@ba.talpu>(+1)</> Starting SP, and +6 ASPD after first skill activation"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 33
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Honor of Siracusa",
+              "description": "When this unit is in the squad, all [Siracusa] Operators gain +5 Starting SP, and +10 ASPD after first skill activation"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Honor of Siracusa",
+              "description": "When this unit is in the squad, all [Siracusa] Operators gain +6 <@ba.talpu>(+1)</> Starting SP, and +10 ASPD after first skill activation"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

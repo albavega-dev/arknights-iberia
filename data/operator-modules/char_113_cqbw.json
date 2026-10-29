@@ -1,0 +1,224 @@
+{
+  "operatorId": "char_113_cqbw",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Physical damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_cqbw",
+      "name": "Mercenary's Bag",
+      "region": "en",
+      "type": "ART-X",
+      "icon": "art-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 80 enemies with W (excluding Support Units)",
+        "Clear Darknights Memoir DM-3 with a 3-star rating; You must deploy your own W and have her defeat at least 2 Sarkaz Lancers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 54
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 68
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Insult to Injury",
+              "description": "Enemies in range take +21% Physical damage when <$ba.stun>Stunned</>. Recover 1 SP when defeating an enemy"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Insult to Injury",
+              "description": "Enemies in range take +24% <@ba.talpu>(+3%)</> Physical damage when <$ba.stun>Stunned</>. Recover 1 SP when defeating an enemy"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 78
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Insult to Injury",
+              "description": "Enemies in range take +24% Physical damage when <$ba.stun>Stunned</>. Recover 1 SP when defeating an enemy"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Insult to Injury",
+              "description": "Enemies in range take +27% <@ba.talpu>(+3%)</> Physical damage when <$ba.stun>Stunned</>. Recover 1 SP when defeating an enemy"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_cqbw",
+      "name": "Lost Dull Knife",
+      "region": "en",
+      "type": "ART-Y",
+      "icon": "art-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have W use Jack in the Box a total of 10 times (excluding Support Units)",
+        "Clear Darknights Memoir DM-7 with a 3-star rating; You must deploy your own W, and cannot include any Specialist Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 100
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 100
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Ambush",
+              "description": "After remaining deployed for 10 seconds, obtains 60% Physical and Arts Dodge, and is less likely to be targeted by enemies. When no damage is taken, ATK gradually increases to +10% over 20 seconds, resetting upon taking damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 85
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 100
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Ambush",
+              "description": "After remaining deployed for 8 seconds, obtains 60% Physical and Arts Dodge, and is less likely to be targeted by enemies. When no damage is taken, ATK gradually increases to +20% over 16 seconds, resetting upon taking damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

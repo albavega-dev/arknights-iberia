@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4025_aprot2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normal attacks deal Arts damage while the skill is active"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_aprot2",
+      "name": "Ticket Stub Album",
+      "region": "en",
+      "type": "AST-X",
+      "icon": "ast-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 20 enemies with your own Shalem",
+        "Clear Main Theme 3-7 with a 3-star rating; You must deploy your own Shalem, and have him defeat at least 5 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 45,
+            "def": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 60,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Proclamation of Doom",
+              "description": "Attacks have 35% chance to reduce the target's RES by 30% for 3 seconds"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Proclamation of Doom",
+              "description": "Attacks have 40% <@ba.talpu>(+5%)</> chance to reduce the target's RES by 30% for 3 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 70,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Proclamation of Doom",
+              "description": "Attacks have 40% chance to reduce the target's RES by 30% for 6 seconds"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Proclamation of Doom",
+              "description": "Attacks have 45% <@ba.talpu>(+5%)</> chance to reduce the target's RES by 30% for 6 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

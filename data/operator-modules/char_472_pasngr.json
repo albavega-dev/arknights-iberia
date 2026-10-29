@@ -1,0 +1,290 @@
+{
+  "operatorId": "char_472_pasngr",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</> (Upgraded after reaching Elite 2)",
+      "blackboard": [
+        {
+          "key": "attack@max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts</> damage and jump between <@ba.kw>{attack@max_target}</> enemies. Each jump deals 15% less damage and inflicts a brief <$ba.sluggish>Slow</>",
+      "blackboard": [
+        {
+          "key": "attack@max_target",
+          "value": 4
+        },
+        {
+          "key": "attack@sluggish",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_pasngr",
+      "name": "Electromagnetic Regulator",
+      "region": "en",
+      "type": "CHA-X",
+      "icon": "cha-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Passenger use Glorious Shards a total of 30 times (Passenger cannot be a Support Unit)",
+        "Clear Main Theme 2-2 with a 3-star rating; You must deploy your own Passenger, and only Vanguard and Defender Operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 65,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 80,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Lone Soldier",
+              "description": "When there are no enemies in the surrounding 4 tiles, ATK +8% and own SP recovery rate +0.15/second"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Lone Soldier",
+              "description": "When there are no enemies in the surrounding 4 tiles, ATK +10% <@ba.talpu>(+2%)</> and own SP recovery rate +0.15/second"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 90,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Lone Soldier",
+              "description": "When there are no enemies in the surrounding 4 tiles, ATK +8% and own SP recovery rate +0.25/second"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Lone Soldier",
+              "description": "When there are no enemies in the surrounding 4 tiles, ATK +10% <@ba.talpu>(+2%)</> and own SP recovery rate +0.25/second"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_pasngr",
+      "name": "Gold of Crowns",
+      "region": "en",
+      "type": "CHA-Y",
+      "icon": "cha-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Passenger, and have Passenger deal at least 30,000 damage",
+        "Clear Main Theme 5-10 with a 3-star rating; You must deploy your own Passenger, and have Passenger defeat at least 2 Defense Crushers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 20,
+            "atk": 70
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 40,
+            "atk": 85
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mechanism Analysis",
+              "description": "When attacking enemies with 80% or more HP, Passenger will deal 25% increased damage to them for 4 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Mechanism Analysis",
+              "description": "When attacking enemies with 80% or more HP, Passenger will deal 30% <@ba.talpu>(+5%)</> increased damage to them for 4 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 100
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mechanism Analysis",
+              "description": "When attacking enemies with 70% or more HP, Passenger will deal 28% increased damage to them for 4 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Mechanism Analysis",
+              "description": "When attacking enemies with 70% or more HP, Passenger will deal 33% <@ba.talpu>(+5%)</> increased damage to them for 4 seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_pasngr",
+      "name": "Passenger's Specialized Badge",
+      "region": "en",
+      "type": "RA-A",
+      "icon": "ra-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Reclamation Algorithm</>, allies take -100% damage from environmental effects; Passenger gains ATK +60% and obtains 1 SP per second"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Reclamation Algorithm</>, allies take -100% damage from environmental effects; Passenger gains ATK +60% and obtains 1 SP per second"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mechanism Analysis",
+              "description": "When attacking enemies with more than 80% HP, Passenger will deal 20% increased damage to them for 3 seconds; <@ba.kw>in Reclamation Algorithm</>, 4 targets are chosen every 12s to be struck by lightning (clustered targets are more likely to be chosen), dealing 400% of Passenger's ATK as Arts damage to all units within range; strikes grant visibility within that range for 12s"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Mechanism Analysis",
+              "description": "When attacking enemies with more than 80% HP, Passenger will deal 25%<@ba.talpu>(+5%)</> increased damage to them for 3 seconds; <@ba.kw>in Reclamation Algorithm</>, 4 targets are chosen every 12s to be struck by lightning (clustered targets are more likely to be chosen), dealing 400% of Passenger's ATK as Arts damage to all units within range; strikes grant visibility within that range for 12s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 90
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Reclamation Algorithm</>, allies take -100% damage from environmental effects; Passenger gains ATK +60% and obtains 1 SP per second"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mechanism Analysis",
+              "description": "When attacking enemies with more than 80% HP, Passenger will deal 20% increased damage to them for 3s; <@ba.kw>in Reclamation Algorithm</>, 5 targets are chosen every 10s to be struck by lightning (clustered targets are more likely to be chosen), dealing 500% of Passenger's ATK as Arts damage to all units within range; strikes grant visibility within that range for 12s and give friendly units hit 2 SP"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Mechanism Analysis",
+              "description": "When attacking enemies with more than 80% HP, Passenger will deal 25%<@ba.talpu>(+5%)</> increased damage to them for 3s; <@ba.kw>in Reclamation Algorithm</>, 5 targets are chosen every 10s to be struck by lightning (clustered targets are more likely to be chosen), dealing 500% of Passenger's ATK as Arts damage to all units within range; strikes grant visibility within that range for 12s and give friendly units hit 2 SP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

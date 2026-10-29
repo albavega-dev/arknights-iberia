@@ -1,0 +1,110 @@
+{
+  "operatorId": "char_164_nightm",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_nightm",
+      "name": "'The Double'",
+      "region": "en",
+      "type": "CCR-Y",
+      "icon": "ccr-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Nightmare use Night Phantom a total of 12 times (excluding Support Units)",
+        "Clear Main Theme S4-1 with a 3-star rating; You must deploy your own Nightmare, and cannot include any other Caster Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 30,
+            "attack_speed": 3
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>1</> SP when normal attacks hit an elite or leader enemy."
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 40,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>1</> SP when normal attacks hit an elite or leader enemy."
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Dual Personality",
+              "description": "Obtains 45% Physical and Arts Dodge when equipped with skill 1; Obtains 18% ATK when equipped with skill 2"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Dual Personality",
+              "description": "Obtains 50% <@ba.talpu>(+5%)</> Physical and Arts Dodge when equipped with skill 1; Obtains 21% <@ba.talpu>(+3%)</> ATK when equipped with skill 2"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 50,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>1</> SP when normal attacks hit an elite or leader enemy."
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Dual Personality",
+              "description": "Obtains 50% Physical and Arts Dodge when equipped with skill 1; Obtains 20% ATK when equipped with skill 2"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Dual Personality",
+              "description": "Obtains 55% <@ba.talpu>(+5%)</> Physical and Arts Dodge when equipped with skill 1; Obtains 23% <@ba.talpu>(+3%)</> ATK when equipped with skill 2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

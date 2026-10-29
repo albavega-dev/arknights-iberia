@@ -1,0 +1,99 @@
+{
+  "operatorId": "char_253_greyy",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_greyy",
+      "name": "New Beginning",
+      "region": "en",
+      "type": "SPC-Y",
+      "icon": "spc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Greyy, and have Greyy defeat at least 8 enemies",
+        "Clear Main Theme 2-3 with a 3-star rating using a squad of at most 4 units (including Support Units); a non-Support Greyy must be in the squad and only Vanguard operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 75,
+            "attack_speed": 3
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 135,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Electrostatic Field",
+              "description": "<$ba.sluggish>Slows</> the target for 0.8 seconds when attacking"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 170,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Electrostatic Field",
+              "description": "<$ba.sluggish>Slows</> the target for 1 second when attacking"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

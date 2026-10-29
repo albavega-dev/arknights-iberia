@@ -1,0 +1,250 @@
+{
+  "operatorId": "char_147_shining",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_shining",
+      "name": "Withered Scabbard",
+      "region": "en",
+      "type": "PHY-Y",
+      "icon": "phy-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Shining use Creed Field a total of 6 times (excluding Support Units)",
+        "Clear Main Theme 5-8 with a 3-star rating; you must deploy your own Shining, and cannot include any Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 35,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 50,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Black Fiend's Protection",
+              "description": "DEF of allies within range +80, ground units gain another DEF +30"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Black Fiend's Protection",
+              "description": "DEF of allies within range +85<@ba.talpu>(+5)</>, ground units gain another DEF +30"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 60,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Black Fiend's Protection",
+              "description": "DEF of allies within range +100, ground units gain another DEF +40"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Black Fiend's Protection",
+              "description": "DEF of allies within range +105<@ba.talpu>(+5)</>, ground units gain another DEF +40"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_shining",
+      "name": "'Followers'",
+      "region": "en",
+      "type": "PHY-X",
+      "icon": "phy-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Shining use Auto Protect a total of 35 times (excluding Support Units)",
+        "Clear Near Light NL-5 with a 3-star rating; You must deploy your own Shining, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 45,
+            "def": 13
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 55,
+            "def": 17
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Code of Law",
+              "description": "ASPD +15; +15% ATK while Skill 2 is equipped, +0.45 SP/s while Skill 3 is equipped"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Code of Law",
+              "description": "ASPD +18 <@ba.talpu>(+3)</>; +15% ATK while Skill 2 is equipped, +0.45 SP/s while Skill 3 is equipped"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 63,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Code of Law",
+              "description": "ASPD +15; +25% ATK while Skill 2 is equipped, +0.6 SP/s while Skill 3 is equipped"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Code of Law",
+              "description": "ASPD +18 <@ba.talpu>(+3)</>; +25% ATK while Skill 2 is equipped, +0.6 SP/s while Skill 3 is equipped"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

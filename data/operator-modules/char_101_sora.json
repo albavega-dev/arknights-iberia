@@ -1,0 +1,102 @@
+{
+  "operatorId": "char_101_sora",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Does not attack but continuously restores the <@ba.kw>HP</> of all allies within range (the HP restored per second is equal to <@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</> of self ATK). Self is unaffected by <$ba.inspire>Inspiration</>",
+      "blackboard": [
+        {
+          "key": "attack@atk_to_hp_recovery_ratio",
+          "value": 0.1
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_sora",
+      "name": "'Unison'",
+      "region": "en",
+      "type": "BAR-X",
+      "icon": "bar-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Sora use Hymn of Battle a total of 8 times",
+        "Clear Code of Brawl CB-7 with a 3-star rating; You must deploy your own Sora, and cannot include any other Supporter Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 142,
+            "atk": 13
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 172,
+            "atk": 18
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Encore",
+              "description": "Has a 60% chance to immediately restore Skill Point by 50% of Max Skill Points when the skill ends"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Encore",
+              "description": "Has a 60% chance to immediately restore Skill Point by 60% of Max Skill Points when the skill ends"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

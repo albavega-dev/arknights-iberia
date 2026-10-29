@@ -1,0 +1,113 @@
+{
+  "operatorId": "char_145_prove",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "High accuracy point-blank shot"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_prove",
+      "name": "Tail-Care Suit",
+      "region": "en",
+      "type": "ARC-X",
+      "icon": "arc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Provence, and have Provence defeat at least 5 enemies",
+        "Clear Main Theme S5-1 with a 3-star rating; You must deploy your own Provence, and have Provence defeat at least 6 enemies, including at least 1 Veteran Logger"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 40,
+            "def": 30,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 50,
+            "def": 40,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Hunter's Arrow",
+              "description": "Has a 20% chance to deal 185% damage when attacking. This chance is increased to 55% when attacking an enemy in the two tiles in front of this unit."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Hunter's Arrow",
+              "description": "Has a 20% chance to deal 195% <@ba.talpu>(+10%)</> damage when attacking. This chance is increased to 55% when attacking an enemy in the two tiles in front of this unit."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 55,
+            "def": 45,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Hunter's Arrow",
+              "description": "Has a 20% chance to deal 190% damage when attacking. This chance is increased to 60% when attacking an enemy in the two tiles in front of this unit."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Hunter's Arrow",
+              "description": "Has a 20% chance to deal 200% <@ba.talpu>(+10%)</> damage when attacking. This chance is increased to 60% when attacking an enemy in the two tiles in front of this unit."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

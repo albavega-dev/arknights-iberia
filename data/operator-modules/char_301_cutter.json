@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_301_cutter",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normal attacks deal damage <@ba.kw>twice</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_cutter",
+      "name": "Replaceable Tool Set",
+      "region": "en",
+      "type": "SWO-Y",
+      "icon": "swo-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Cutter, and have Cutter defeat at least 3 enemy Drones in each battle",
+        "Clear Main Theme 2-7 with a 3-star rating; You must deploy your own Cutter, and have Cutter defeat at least 2 Defender-4s with Crimson Crescent"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 70
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 70
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Photoetched Marks",
+              "description": "When dealing damage, has 30% chance to recover 1 additional SP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Photoetched Marks",
+              "description": "When dealing damage, has 33% <@ba.talpu>(+3%)</> chance to recover 1 additional SP"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks ignore <@ba.vup>{def_penetrate_fixed}</> DEF",
+              "blackboard": [
+                {
+                  "key": "def_penetrate_fixed",
+                  "value": 70
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Photoetched Marks",
+              "description": "When dealing damage, has 33% chance to recover 1 additional SP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Photoetched Marks",
+              "description": "When dealing damage, has 36% <@ba.talpu>(+3%)</> chance to recover 1 additional SP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

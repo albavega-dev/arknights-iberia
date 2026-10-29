@@ -1,0 +1,126 @@
+{
+  "operatorId": "char_115_headbr",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 2 enemies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_headbr",
+      "name": "A Graduation Gift for Генерал Мороз",
+      "region": "en",
+      "type": "SOL-X",
+      "icon": "sol-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Zima use Ursus's Roar a total of 5 times (excluding Support Units)",
+        "Clear Main Theme 1-5 with a 3-star rating; You must deploy your own Zima, and only Vanguard and Sniper Operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 180,
+            "def": 32
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 225,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Spearheader",
+              "description": "While this unit is in the squad, reduces the DP Cost of all Vanguard Operators by 1, and further reduces the DP Cost of this unit by 1"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 260,
+            "def": 37
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Spearheader",
+              "description": "While this unit is in the squad, reduces the DP Cost of all Vanguard Operators by 1, and further reduces the DP Cost of Pioneer-branch Operators by 1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

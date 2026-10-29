@@ -1,0 +1,140 @@
+{
+  "operatorId": "char_127_estell",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks <@ba.kw>all blocked enemies</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_estell",
+      "name": "Farewell Gifts from the Wildlands",
+      "region": "en",
+      "type": "CEN-Y",
+      "icon": "cen-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Estelle, and have Estelle deal at least 12,000 damage",
+        "Clear Main Theme 7-4 with a 3-star rating; You must deploy your own Estelle, and have Estelle defeat at least 15 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 32
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 43
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Self-Healing",
+              "description": "Restores 14% of Max HP whenever an enemy is defeated in the surrounding 8 tiles"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Self-Healing",
+              "description": "Restores 16% <@ba.talpu>(+2%)</> of Max HP whenever an enemy is defeated in the surrounding 8 tiles"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 52
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Self-Healing",
+              "description": "Restores 16% of Max HP whenever an enemy is defeated in the surrounding 8 tiles"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Self-Healing",
+              "description": "Restores 18% <@ba.talpu>(+2%)</> of Max HP whenever an enemy is defeated in the surrounding 8 tiles"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

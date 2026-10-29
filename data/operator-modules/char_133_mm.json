@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_133_mm",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks aerial enemies first"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mm",
+      "name": "Novice Detective's Gift Bag",
+      "region": "en",
+      "type": "MAR-X",
+      "icon": "mar-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have May use Binding Shock a total of 5 times (excluding Support Units)",
+        "Clear Main Theme 4-4 with a 3-star rating; You must deploy your own May, and cannot include any other Sniper Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 18,
+            "attack_speed": 1
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 23,
+            "attack_speed": 2
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Victorian Agent",
+              "description": "ATK +10%, ASPD +7"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Victorian Agent",
+              "description": "ATK +11% <@ba.talpu>(+1%)</>, ASPD +8 <@ba.talpu>(+1)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 27,
+            "attack_speed": 3
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking aerial targets",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Victorian Agent",
+              "description": "ATK +12%, ASPD +7"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Victorian Agent",
+              "description": "ATK +13% <@ba.talpu>(+1%)</>, ASPD +8 <@ba.talpu>(+1)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

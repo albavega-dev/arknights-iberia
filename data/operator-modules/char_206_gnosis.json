@@ -1,0 +1,296 @@
+{
+  "operatorId": "char_206_gnosis",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_gnosis",
+      "name": "'Vow'",
+      "region": "en",
+      "type": "UMD-X",
+      "icon": "umd-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Gnosis, and unleash Hypothermia at least 1 time in each battle",
+        "Clear Break the Ice BI-7 with a 3-star rating; You must deploy your own Gnosis, and cannot include any other Supporter Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 105,
+            "atk": 15,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Applies 10% <$ba.weaken>Enfeeble</> to targets for 2 seconds",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": -0.1
+                },
+                {
+                  "key": "duration",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 20,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Applies 10% <$ba.weaken>Enfeeble</> to targets for 2 seconds",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": -0.1
+                },
+                {
+                  "key": "duration",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Rigid Ice",
+              "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; apply 28% <$ba.fragile>Fragile</> effect to <$ba.cold>Cold</> enemies within range. <$ba.frozen>Frozen</> enemies within range receive double the <$ba.fragile>Fragile</> effect"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Rigid Ice",
+              "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; apply 30% <@ba.talpu>(+2%)</> <$ba.fragile>Fragile</> effect to <$ba.cold>Cold</> enemies within range. <$ba.frozen>Frozen</> enemies within range receive double the <$ba.fragile>Fragile</> effect"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 25,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Applies 10% <$ba.weaken>Enfeeble</> to targets for 2 seconds",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": -0.1
+                },
+                {
+                  "key": "duration",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Rigid Ice",
+              "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; apply 30% <$ba.fragile>Fragile</> effect to <$ba.cold>Cold</> enemies within range. <$ba.frozen>Frozen</> enemies within range receive double the <$ba.fragile>Fragile</> effect"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Rigid Ice",
+              "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; apply 32% <@ba.talpu>(+2%)</> <$ba.fragile>Fragile</> effect to <$ba.cold>Cold</> enemies within range. <$ba.frozen>Frozen</> enemies within range receive double the <$ba.fragile>Fragile</> effect"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_gnosis",
+      "name": "Project One Model",
+      "region": "en",
+      "type": "UMD-Y",
+      "icon": "umd-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Gnosis use Hypothermia a total of 10 times",
+        "Clear Main Theme 5-6 with a 3-star rating; You must deploy your own Gnosis, and have him defeat at least 5 Arts Master A1s"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 35
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 45
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Two Paths, One Goal",
+              "description": "Grants <$ba.buffres>Resist</> and ATK +10% to all [Kjerag] Operators after Gnosis has been deployed for 10 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 55
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Two Paths, One Goal",
+              "description": "Grants <$ba.buffres>Resist</> and ATK +15% to all [Kjerag] Operators after Gnosis has been deployed for 10 seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_gnosis",
+      "name": "Gnosis's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, when Gnosis is on the field, enemies inflicted with <$ba.cold>Cold</> or <$ba.frozen>Frozen</> take 50% of Gnosis's ATK as Arts damage every 0.5 seconds"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, when Gnosis is on the field, enemies inflicted with <$ba.cold>Cold</> or <$ba.frozen>Frozen</> take 50% of Gnosis's ATK as Arts damage every 0.5 seconds"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Rigid Ice",
+              "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; In <@ba.kw>Integrated Strategies</>, when on the field, applies 25% <$ba.fragile>Fragile</> to all <$ba.cold>Cold</> enemies. <$ba.frozen>Frozen</> enemies receive double the <$ba.fragile>Fragile</> effect; other Kjerag Operators inflict 3 seconds of <$ba.cold>Cold</> to enemies within range on every skill activation"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Rigid Ice",
+              "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; In <@ba.kw>Integrated Strategies</>, when on the field, applies 25% <@ba.talpu>(+2%)</> <$ba.fragile>Fragile</> to all <$ba.cold>Cold</> enemies. <$ba.frozen>Frozen</> enemies receive double the <$ba.fragile>Fragile</> effect; other Kjerag Operators inflict 3 seconds of <$ba.cold>Cold</> to enemies within range on every skill activation"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, when Gnosis is on the field, enemies inflicted with <$ba.cold>Cold</> or <$ba.frozen>Frozen</> take 50% of Gnosis's ATK as Arts damage every 0.5 seconds"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Rigid Ice",
+              "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; In <@ba.kw>Integrated Strategies</>, when on the field, applies 30% <$ba.fragile>Fragile</> to all <$ba.cold>Cold</> enemies. <$ba.frozen>Frozen</> enemies receive double the <$ba.fragile>Fragile</> effect; <$ba.cold>Cold</> or <$ba.frozen>Frozen</> enemies take 5% more <$ba.fragile>Fragile</> every second up to a maximum of 80%; other Kjerag Operators inflict 4 seconds of <$ba.cold>Cold</> to enemies within range on every skill activation"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Rigid Ice",
+              "description": "Attacks inflict <$ba.cold>Cold</> for 1 second; In <@ba.kw>Integrated Strategies</>, when on the field, applies 32% <$ba.fragile>Fragile</> to all <$ba.cold>Cold</> enemies. <$ba.frozen>Frozen</> enemies receive double the <$ba.fragile>Fragile</> effect; <$ba.cold>Cold</> or <$ba.frozen>Frozen</> enemies take 5% more <$ba.fragile>Fragile</> every second up to a maximum of 82%; other Kjerag Operators inflict 4 seconds of <$ba.cold>Cold</> to enemies within range on every skill activation"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

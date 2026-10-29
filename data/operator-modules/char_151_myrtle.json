@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_151_myrtle",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Cannot block enemies during the skill duration"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_myrtle",
+      "name": "Private Collections",
+      "region": "en",
+      "type": "BEA-X",
+      "icon": "bea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Myrtle use Support β a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 6-3 with a 3-star rating; You must deploy your own Myrtle, and cannot include any other Vanguard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "def": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Cannot block enemies during the skill duration, but grants <@ba.kw>+1</> Block to an Operator in front of this unit",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 130,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Cannot block enemies during the skill duration, but grants <@ba.kw>+1</> Block to an Operator in front of this unit",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Glistening",
+              "description": "All Vanguard Operators recover 28 HP per second while this unit is deployed"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Glistening",
+              "description": "All Vanguard Operators recover 31 <@ba.talpu>(+3)</> HP per second while this unit is deployed"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 150,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Cannot block enemies during the skill duration, but grants <@ba.kw>+1</> Block to an Operator in front of this unit",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Glistening",
+              "description": "All Vanguard Operators recover 30 HP per second while this unit is deployed"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Glistening",
+              "description": "All Vanguard Operators recover 33 <@ba.talpu>(+3)</> HP per second while this unit is deployed"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

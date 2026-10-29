@@ -1,0 +1,332 @@
+{
+  "operatorId": "char_2015_dusk",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Arts damage</>"
+    }
+  ],
+  "tokens": {
+    "token_10015_dusk_drgn": "'Freeling'"
+  },
+  "ranges": {
+    "3-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_dusk",
+      "name": "Untitled Scroll",
+      "region": "en",
+      "type": "SPC-X",
+      "icon": "spc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Summon a total of 20 summoned units with Dusk (excluding Support Units)",
+        "Clear Main Theme 1-6 with a 3-star rating using a squad of at most 2 units (including Support Units); a non-Support Dusk must be in the squad and deployed, and only Defender operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 55
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 165,
+            "atk": 68
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sublimity",
+              "description": "When Dusk or a 'Freeling' defeats an enemy, Dusk gains ATK +2%, stacking up to 20 times"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sublimity",
+              "description": "When Dusk or a 'Freeling' defeats an enemy, Dusk gains ATK +2%, stacking up to 23 <@ba.talpu>(+3)</> times"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 80
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sublimity",
+              "description": "When Dusk or a 'Freeling' defeats an enemy, Dusk gains ATK +2%, stacking up to 21 times"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sublimity",
+              "description": "When Dusk or a 'Freeling' defeats an enemy, Dusk gains ATK +2%, stacking up to 24 <@ba.talpu>(+3)</> times"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_dusk",
+      "name": "'All Told, A Sleepless Night'",
+      "region": "en",
+      "type": "SPC-Y",
+      "icon": "spc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 80 enemies with Dusk (excluding Support Units)",
+        "Clear Main Theme 4-3 with a 3-star rating; You must deploy your own Dusk, and only Vanguard Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "cost": -8,
+            "atk": 51,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "cost": -8,
+            "atk": 68,
+            "attack_speed": 6
+          },
+          "tokenAttributes": {
+            "token_10015_dusk_drgn": {
+              "max_hp": 250,
+              "atk": 15,
+              "def": 15
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Finishing Touch",
+              "description": "The first attack after deployment will summon 2 'Freelings' (lasts for 25 seconds) at the target's location and 4 surrounding tiles (only on deployable ground tiles). Freelings are stronger and restore 1 SP to Dusk per 2.5 second"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "cost": -8,
+            "atk": 82,
+            "attack_speed": 7
+          },
+          "tokenAttributes": {
+            "token_10015_dusk_drgn": {
+              "max_hp": 400,
+              "atk": 25,
+              "def": 25
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Finishing Touch",
+              "description": "The first attack after deployment will summon 2 'Freelings' (lasts for 25 seconds) at the target's location and 4 surrounding tiles (only on deployable ground tiles). Freelings are stronger and restore 1 SP to Dusk per 1.5 second"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_dusk",
+      "name": "Dusk's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 48,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, attacks one additional target"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 62,
+            "attack_speed": 8
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, attacks one additional target"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Finishing Touch",
+              "description": "The first attack after deployment will summon 'Freeling(s)' (lasts for 25 seconds) at the target's location (only on deployable ground tiles); in <@ba.kw>Integrated Strategies</>, 'Freelings' gain 1 Shield when they spawn, and deal an additional 100% of Dusk's ATK as Arts damage when they attack"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 74,
+            "attack_speed": 10
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, attacks one additional target"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Finishing Touch",
+              "description": "The first attack after deployment will summon 'Freeling(s)' (lasts for 25 seconds) at the target's location (only on deployable ground tiles); in <@ba.kw>Integrated Strategies</>, 'Freelings' gain 1 Shield when they spawn, and deal an additional 100% of Dusk's ATK as Arts damage when they attack; when Dusk is in the squad, all Operators spawn a 'Freeling' at their target's location on their first attack"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

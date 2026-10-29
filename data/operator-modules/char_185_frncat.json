@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_185_frncat",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_frncat",
+      "name": "Clawcure Set with Duality",
+      "region": "en",
+      "type": "AFT-X",
+      "icon": "aft-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Mousse, and unleash Fury at least 1 time in each battle",
+        "Clear Main Theme 2-2 with a 3-star rating; You must deploy your own Mousse, and cannot include any Caster Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Combo",
+              "description": "Has a 23% chance to attack twice in a row when attacking"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Combo",
+              "description": "Has a 26% <@ba.talpu>(+3%)</> chance to attack twice in a row when attacking"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 220,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{attack_speed}</> when not blocking an enemy",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Combo",
+              "description": "Has a 25% chance to attack twice in a row when attacking"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Combo",
+              "description": "Has a 28% <@ba.talpu>(+3%)</> chance to attack twice in a row when attacking"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

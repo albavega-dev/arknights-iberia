@@ -1,0 +1,237 @@
+{
+  "operatorId": "char_188_helage",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 2)",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 70
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_helage",
+      "name": "Zouhou, a Sheath for Contempt",
+      "region": "en",
+      "type": "SBL-X",
+      "icon": "sbl-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with Hellagur (excluding Support Units)",
+        "Clear Main Theme 5-10 with a 3-star rating; You must deploy your own Hellagur, and have Hellagur defeat Mephisto"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 55
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 75
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Waxing Moon",
+              "description": "Gains up to +120 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 350,
+            "atk": 90
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Waxing Moon",
+              "description": "Gains up to +130 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_helage",
+      "name": "'Горячий снег'",
+      "region": "en",
+      "type": "SBL-Y",
+      "icon": "sbl-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Hellagur (excluding Support Units)",
+        "Clear Main Theme 7-10 with a 3-star rating; You must deploy your own Hellagur, and can only include 3 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 55,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and instead recovers <@ba.kw>{hp_ratio:0%}</> HP (can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 70
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.3
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 75,
+            "def": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and instead recovers <@ba.kw>{hp_ratio:0%}</> HP (can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 70
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Ingenious Strategist",
+              "description": "Regenerates 70 HP per second when not blocking an enemy, or when HP is below 30%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Ingenious Strategist",
+              "description": "Regenerates 80 <@ba.talpu>(+10)</> HP per second when not blocking an enemy, or when HP is below 30%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 90,
+            "def": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and instead recovers <@ba.kw>{hp_ratio:0%}</> HP (can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 70
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Ingenious Strategist",
+              "description": "Regenerates 80 HP per second when not blocking an enemy, or when HP is below 30%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Ingenious Strategist",
+              "description": "Regenerates 90 <@ba.talpu>(+10)</> HP per second when not blocking an enemy, or when HP is below 30%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

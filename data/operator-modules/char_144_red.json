@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_144_red",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Significantly <@ba.kw>reduced</> Redeployment Time"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_red",
+      "name": "Mystery Prop Pack",
+      "region": "en",
+      "type": "EXE-Y",
+      "icon": "exe-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; In each battle, you must deploy your own Projekt Red at least 3 times",
+        "Clear Main Theme S4-5 with a 3-star rating; You must deploy your own Projekt Red, and have Projekt Red defeat at least 4 Infused Originium Slugs"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 50,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 65,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Chill",
+              "description": "Deals at least 37% of ATK damage every attack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Chill",
+              "description": "Deals at least 40% <@ba.talpu>(+3%)</> of ATK damage every attack"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 74,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Chill",
+              "description": "Deals at least 40% of ATK damage every attack"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Chill",
+              "description": "Deals at least 43% <@ba.talpu>(+3%)</> of ATK damage every attack"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

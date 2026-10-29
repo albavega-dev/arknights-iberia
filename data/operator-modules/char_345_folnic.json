@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_345_folnic",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allies"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_folnic",
+      "name": "Mother's Cravat",
+      "region": "en",
+      "type": "PHY-Y",
+      "icon": "phy-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with Folinic (excluding Support Units)",
+        "Clear Main Theme 5-2 with a 3-star rating; You must deploy your own Folinic, and have Folinic defeat at least 8 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 70,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 100,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Drug Inhibition Technique",
+              "description": "Gains <$ba.buffres>status resistance</> and -40% damage taken from environmental effects. Other allies within range take -15% damage from environmental effects"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Drug Inhibition Technique",
+              "description": "Gains <$ba.buffres>status resistance</> and -50%<@ba.talpu>(+10%)</> damage taken from environmental effects. Other allies within range take -15% damage from environmental effects"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 120,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Healing increased by <@ba.kw>15%</> when healing a ground unit",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Drug Inhibition Technique",
+              "description": "Gains <$ba.buffres>status resistance</> and -40% damage taken from environmental effects. Other allies within range take -25% damage from environmental effects"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Drug Inhibition Technique",
+              "description": "Gains <$ba.buffres>status resistance</> and -50%<@ba.talpu>(+10%)</> damage taken from environmental effects. Other allies within range take -25% damage from environmental effects"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "operatorId": "char_2024_chyue",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 1 enemy"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_chyue",
+      "name": "'When to Wake Up'",
+      "region": "en",
+      "type": "FGT-X",
+      "icon": "fgt-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with Chongyue (excluding Support Units)",
+        "Clear Where Vernal Winds Will Never Blow WB-7 with a 3-star rating; You must deploy your own Chongyue, and can only include 4 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 25,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Has <@ba.kw>15%</> Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 35,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Has <@ba.kw>15%</> Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "All Are Guests",
+              "description": "Chongyue recovers 4 SP if he defeats at least one enemy with a skill"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 45,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Has <@ba.kw>15%</> Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "All Are Guests",
+              "description": "Chongyue recovers 4 SP if he defeats at least one enemy with a skill; if no enemy is defeated, Chongyue recovers 1 SP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_chyue",
+      "name": "Shuo",
+      "region": "en",
+      "type": "FGT-Y",
+      "icon": "fgt-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Chongyue use Anatta a total of 50 times",
+        "Clear Guide Ahead GA-5 with a 3-star rating; You must deploy your own Chongyue, and can only include 4 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 52,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 65,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "An End to War",
+              "description": "23% chance for normal attacks to increase the damage Chongyue deals to the target by 70% for 2.5s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "An End to War",
+              "description": "25% <@ba.talpu>(+2%)</> chance for normal attacks to increase the damage Chongyue deals to the target by 75% <@ba.talpu>(+5%)</> for 2.5s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 75,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "An End to War",
+              "description": "23% chance for normal attacks to increase the damage Chongyue deals to the target by 75% for 2.5s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "An End to War",
+              "description": "25% <@ba.talpu>(+2%)</> chance for normal attacks to increase the damage Chongyue deals to the target by 80% <@ba.talpu>(+5%)</> for 2.5s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

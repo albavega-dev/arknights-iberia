@@ -1,0 +1,250 @@
+{
+  "operatorId": "char_017_huang",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks <@ba.kw>all blocked enemies</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_huang",
+      "name": "Overloaded Weapons, Overheated Heart",
+      "region": "en",
+      "type": "CEN-X",
+      "icon": "cen-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 80 enemies with Blaze (excluding Support Units)",
+        "Clear Main Theme 11-13 with a 3-star rating under Standard Environment; You must deploy your own Blaze, and cannot include any other Guard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks <@ba.kw>all blocked enemies</>; ATK is increased to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks <@ba.kw>all blocked enemies</>; ATK is increased to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Harsh Training",
+              "description": "This unit gains <$ba.buffres>Status Resistance</> after being deployed for 15 seconds, +4% ATK after 30 seconds, and +7 ASPD after 45 seconds"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Harsh Training",
+              "description": "This unit gains <$ba.buffres>Status Resistance</> after being deployed for 12 <@ba.talpu>(-3)</> seconds, +4% ATK after 30 seconds, and +7 ASPD after 45 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 285,
+            "atk": 86
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks <@ba.kw>all blocked enemies</>; ATK is increased to <@ba.kw>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Harsh Training",
+              "description": "This unit gains <$ba.buffres>Status Resistance</> after being deployed for 15 seconds, +6% ATK after 30 seconds, and +12 ASPD after 45 seconds"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Harsh Training",
+              "description": "This unit gains <$ba.buffres>Status Resistance</> after being deployed for 12 <@ba.talpu>(-3)</> seconds, +6% ATK after 30 seconds, and +12 ASPD after 45 seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_huang",
+      "name": "'I'll be right back'",
+      "region": "en",
+      "type": "CEN-Y",
+      "icon": "cen-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Blaze",
+        "Clear Main Theme 11-6 with a 3-star rating under Standard Environment; You must deploy your own Blaze, and can only include 7 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 330,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Emergency Defibrillation",
+              "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 8 seconds; ignores 150 DEF of a target when HP is above 50%"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Emergency Defibrillation",
+              "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 9 <@ba.talpu>(+1)</> seconds; ignores 150 DEF of a target when HP is above 50%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 345,
+            "atk": 66
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Emergency Defibrillation",
+              "description": "When this unit's HP falls beneath 50% for the first time, and then beneath 25% for the first time, restores 50% HP and prevents HP from falling under 50% for 8 seconds; ignores 150 DEF of a target when HP is above 50%"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Emergency Defibrillation",
+              "description": "When this unit's HP falls beneath 50% for the first time, and then beneath 25% for the first time, restores 50% HP and prevents HP from falling under 50% for 9 <@ba.talpu>(+1)</> seconds; ignores 150 DEF of a target when HP is above 50%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

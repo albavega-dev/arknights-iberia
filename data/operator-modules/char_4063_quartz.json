@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_4063_quartz",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks <@ba.kw>all blocked enemies</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_quartz",
+      "name": "Watchmaker's Kit",
+      "region": "en",
+      "type": "CRU-X",
+      "icon": "cru-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 3 battles; You must deploy your own Quartz, and unleash All-Out Clash at least 1 time in each battle",
+        "Clear Dossoles Holiday DH-4 with a 3-star rating; You must deploy your own Quartz and have her defeat at least 2 Tidal Casters"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 68
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Have <@ba.kw>+20%</> healing effectiveness",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Have <@ba.kw>+20%</> healing effectiveness",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Wilderness Wanderer",
+              "description": "HP +12%, ATK +12%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Wilderness Wanderer",
+              "description": "HP +13% <@ba.talpu>(+1%)</>, ATK +13% <@ba.talpu>(+1%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 90
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Have <@ba.kw>+20%</> healing effectiveness",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Wilderness Wanderer",
+              "description": "HP +14%, ATK +14%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Wilderness Wanderer",
+              "description": "HP +15% <@ba.talpu>(+1%)</>, ATK +15% <@ba.talpu>(+1%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

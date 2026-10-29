@@ -1,0 +1,271 @@
+{
+  "operatorId": "char_4046_ebnhlz",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>Arts damage</>; When unable to find a target, attacks can be <@ba.kw>stored up</> and fired all at once (Up to 3 charges)",
+      "blackboard": [
+        {
+          "key": "times",
+          "value": 3
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ebnhlz",
+      "name": "Originium Dice Case",
+      "region": "en",
+      "type": "MSC-X",
+      "icon": "msc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with Ebenholz (excluding Support Units)",
+        "Clear Main Theme 3-7 with a 3-star rating; You must deploy your own Ebenholz, and have Ebenholz defeat at least 1 Heavy Defender Leader"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 58,
+            "attack_speed": 3
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 75,
+            "attack_speed": 4
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Dynamics",
+              "description": "Stored attacks deal 140% damage; Can store 1 extra charge that is only used when attacking elite or boss enemies"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 90,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Dynamics",
+              "description": "Stored attacks deal 143% damage; Can store 1 extra charge that is only used when attacking elite or boss enemies"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_ebnhlz",
+      "name": "'Theory Expositor'",
+      "region": "en",
+      "type": "MSC-Y",
+      "icon": "msc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Ebenholz, and have Ebenholz defeat at least 6 enemies",
+        "Clear Main Theme 3-6 with a 3-star rating; You must deploy your own Ebenholz, and have Ebenholz defeat the Veteran Butcher"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 88
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD +30 when there are stored attacks"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 112
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD +30 when there are stored attacks"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Appoggiatura",
+              "description": "If there are no other enemies near the target, attacks deal an additional 18% ATK as Arts damage. Otherwise, attacks deal 25% ATK as Arts damage to enemies near the target"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Appoggiatura",
+              "description": "If there are no other enemies near the target, attacks deal an additional 20%<@ba.talpu>(+2%)</> ATK as Arts damage. Otherwise, attacks deal 25% ATK as Arts damage to enemies near the target"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 175,
+            "atk": 135
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD +30 when there are stored attacks"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Appoggiatura",
+              "description": "If there are no other enemies near the target, attacks deal an additional 20% ATK as Arts damage. Otherwise, attacks deal 36% ATK as Arts damage to enemies near the target"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Appoggiatura",
+              "description": "If there are no other enemies near the target, attacks deal an additional 22%<@ba.talpu>(+2%)</> ATK as Arts damage. Otherwise, attacks deal 36% ATK as Arts damage to enemies near the target"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_ebnhlz",
+      "name": "Lineage of Decay",
+      "region": "en",
+      "type": "MSC-D",
+      "icon": "msc-d",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Ebenholz use Sound of Silence a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 11-12 with a 3-star rating under Standard Environment; You must deploy your own Ebenholz, and have Ebenholz defeat at least 2 Londinium Mobile Defense Artilleries"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 76,
+            "magic_resistance": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing Arts damage, deals an additional <@ba.vup>8%</> as <$ba.dt.apoptosis2>Necrosis</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 102,
+            "magic_resistance": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing Arts damage, deals an additional <@ba.vup>8%</> as <$ba.dt.apoptosis2>Necrosis</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Appoggiatura",
+              "description": "If there are no other enemies near the target, attacks deal an additional 24% ATK as Arts damage; if the target is under the burst effect from <$ba.dt.apoptosis2>Necrosis</>, the attack deals an additional 20% ATK as Elemental Damage"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Appoggiatura",
+              "description": "If there are no other enemies near the target, attacks deal an additional 26% <@ba.talpu>(+2%)</> ATK as Arts damage; if the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, the attack deals an additional 20% ATK as Elemental Damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 124,
+            "magic_resistance": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing Arts damage, deals an additional <@ba.vup>8%</> as <$ba.dt.apoptosis2>Necrosis</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Appoggiatura",
+              "description": "If there are no other enemies near the target, attacks deal an additional 30% ATK as Arts damage; if the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, the attack deals an additional 30% ATK as Elemental Damage"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Appoggiatura",
+              "description": "If there are no other enemies near the target, attacks deal an additional 32% <@ba.talpu>(+2%)</> ATK as Arts damage; if the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, the attack deals an additional 30% ATK as Elemental Damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

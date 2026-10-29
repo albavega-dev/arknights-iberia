@@ -1,0 +1,220 @@
+{
+  "operatorId": "char_4133_logos",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_logos",
+      "name": "A Pen Collection from the Convallis",
+      "region": "en",
+      "type": "CCR-D",
+      "icon": "ccr-d",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Logos",
+        "Clear Main Theme 11-6 with a 3-star rating under Standard Environment; You must deploy your own Logos, and can only include 4 other Operators in your squad"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 36
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing Arts damage, deals an additional <@ba.vup>8%</> as <$ba.dt.apoptosis2>Necrosis</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 54
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing Arts damage, deals an additional <@ba.vup>8%</> as <$ba.dt.apoptosis2>Necrosis</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lexical Evolution",
+              "description": "When attacking a target, there is a 50% chance to deal 60% ATK as Arts damage to a random target in attack range and <$ba.sluggish>Slow</> it for 0.8s. If the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, also deals Elemental Damage equal to 40% ATK."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lexical Evolution",
+              "description": "When attacking a target, there is a 50% chance to deal 65% <@ba.talpu>(+5%)</> ATK as Arts damage to a random target in attack range and <$ba.sluggish>Slow</> it for 0.8s. If the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, also deals Elemental Damage equal to 40% ATK."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 67
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing Arts damage, deals an additional <@ba.vup>8%</> as <$ba.dt.apoptosis2>Necrosis</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lexical Evolution",
+              "description": "When attacking a target, there is a 60% chance to deal 60% ATK as Arts damage to a random target in attack range and <$ba.sluggish>Slow</> it for 0.8s. If the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, also deals Elemental Damage equal to 60% ATK."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lexical Evolution",
+              "description": "When attacking a target, there is a 60% chance to deal 65% <@ba.talpu>(+5%)</> ATK as Arts damage to a random target in attack range and <$ba.sluggish>Slow</> it for 0.8s. If the target is under the burst effect of <$ba.dt.apoptosis2>Necrosis</>, also deals Elemental Damage equal to 60% ATK."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_logos",
+      "name": "Semantics Paradigm Encyclopedia",
+      "region": "en",
+      "type": "CCR-Y",
+      "icon": "ccr-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with your own Logos",
+        "Clear Main Theme 14-9 with a 3-star rating under Standard Environment; You must deploy your own Logos, and have Logos defeat at least 7 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 35,
+            "magic_resistance": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 50,
+            "magic_resistance": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lexical Evolution",
+              "description": "When attacking a target, there is a 40% chance to deal 63% ATK as Arts damage to 2 random targets within attack range and <$ba.sluggish>Slow</> them for 0.8s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lexical Evolution",
+              "description": "When attacking a target, there is a 40% chance to deal 68% <@ba.talpu>(+5%)</> ATK as Arts damage to 2 random targets within attack range and <$ba.sluggish>Slow</> them for 0.8s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 60,
+            "magic_resistance": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lexical Evolution",
+              "description": "When attacking a target, there is a 40% chance to deal 65% ATK as Arts damage to 2 random targets within attack range and <$ba.sluggish>Slow</> them for 0.8s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lexical Evolution",
+              "description": "When attacking a target, there is a 40% chance to deal 70% <@ba.talpu>(+5%)</> ATK as Arts damage to 2 random targets within attack range and <$ba.sluggish>Slow</> them for 0.8s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

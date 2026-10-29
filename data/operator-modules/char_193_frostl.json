@@ -1,0 +1,132 @@
+{
+  "operatorId": "char_193_frostl",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can launch <@ba.kw>Ranged Attacks</> that deal 80% of normal ATK",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 0.8
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_frostl",
+      "name": "The Seamless Mixtape",
+      "region": "en",
+      "type": "LOR-X",
+      "icon": "lor-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have your own Frostleaf use Ice Tomahawk a total of 8 times",
+        "Clear Main Theme 4-2 with a 3-star rating; You must deploy your own Frostleaf, and cannot include any other Guard Operators in your squad"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 34,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks deal an additional <@ba.vup>{atk_scale_m:0%}</> ATK as Arts damage.",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.8
+                },
+                {
+                  "key": "atk_scale_m",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 41,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks deal an additional <@ba.vup>{atk_scale_m:0%}</> ATK as Arts damage.",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.8
+                },
+                {
+                  "key": "atk_scale_m",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Covered Strike",
+              "description": "Range expands, and attacks have a 15% chance to inflict <$ba.cold>Cold</> for 1.5s, but Attack Interval increases slightly."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 50,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks deal an additional <@ba.vup>{atk_scale_m:0%}</> ATK as Arts damage.",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.8
+                },
+                {
+                  "key": "atk_scale_m",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Covered Strike",
+              "description": "Range expands, and attacks have a 25% chance to inflict <$ba.cold>Cold</> for 1.5s, but Attack Interval increases slightly."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

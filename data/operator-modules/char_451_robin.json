@@ -1,0 +1,128 @@
+{
+  "operatorId": "char_451_robin",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can use traps to assist in combat, but traps cannot be placed <@ba.kw>on tiles already occupied by an enemy</>"
+    }
+  ],
+  "tokens": {
+    "token_10013_robin_mine": "'Clip'"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_robin",
+      "name": "Calendar the Limited Edition",
+      "region": "en",
+      "type": "TRP-Y",
+      "icon": "trp-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Robin, and cause at least 2 enemies to fall in a pit in each battle",
+        "Clear Break the Ice BI-EX-2 with a 3-star rating; You must deploy your own Robin, and cause at least 6 Icefield Arts Guards to fall in a pit"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 36
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Has 20% chance to deploy a trap that deals double damage",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.2
+                },
+                {
+                  "key": "atk_scale",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 39
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Has 20% chance to deploy a trap that deals double damage",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.2
+                },
+                {
+                  "key": "atk_scale",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Advanced Concealment",
+              "description": "Gains Camouflage after being attacked, lasting for 4 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 185,
+            "atk": 41
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Has 20% chance to deploy a trap that deals double damage",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.2
+                },
+                {
+                  "key": "atk_scale",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Advanced Concealment",
+              "description": "Gains Camouflage after being attacked, lasting for 6 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

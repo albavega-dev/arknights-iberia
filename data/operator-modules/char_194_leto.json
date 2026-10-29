@@ -1,0 +1,116 @@
+{
+  "operatorId": "char_194_leto",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can launch <@ba.kw>Ranged Attacks</> that deal 80% of normal ATK",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 0.8
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_leto",
+      "name": "The Old Clothes",
+      "region": "en",
+      "type": "LOR-Y",
+      "icon": "lor-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with your own Leto",
+        "Clear Main Theme 4-3 with a 3-star rating; You must deploy your own Leto, and cannot include any other Guard Operators in your squad"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 40,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+12</> when there are 2 or more enemies in attack range."
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 52,
+            "def": 39
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+12</> when there are 2 or more enemies in attack range."
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Hurry Up Already!",
+              "description": "When skill is activated, [Ursus Student Self-government Group] Operators gain +27 ASPD for the duration."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Hurry Up Already!",
+              "description": "When skill is activated, [Ursus Student Self-government Group] Operators gain +30 ASPD<@ba.talpu> (+3)</> for the duration."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 59,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+12</> when there are 2 or more enemies in attack range."
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Hurry Up Already!",
+              "description": "When skill is activated, [Ursus Student Self-government Group] Operators gain +32 ASPD for the duration."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Hurry Up Already!",
+              "description": "When skill is activated, [Ursus Student Self-government Group] Operators gain +35 ASPD<@ba.talpu> (+3)</> for the duration."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

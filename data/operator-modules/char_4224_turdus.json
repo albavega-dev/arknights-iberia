@@ -1,0 +1,113 @@
+{
+  "operatorId": "char_4224_turdus",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 25% per bounce.",
+      "blackboard": [
+        {
+          "key": "attack@chain.max_target",
+          "value": 3
+        },
+        {
+          "key": "attack@chain.atk_scale",
+          "value": 0.75
+        },
+        {
+          "key": "chain.max_target",
+          "value": 3
+        },
+        {
+          "key": "chain.atk_scale",
+          "value": 0.75
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_turdus",
+      "name": "'Nighttime Stories'",
+      "region": "en",
+      "type": "XAH-X",
+      "icon": "xah-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Ukusik use 'Peekaboo!' a total of 6 times",
+        "Clear Main Theme 16-5 Standard Combat with a 3-star rating; You must deploy your own Ukusik, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 165,
+            "atk": 38
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 185,
+            "atk": 50
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Illness, the Best Teacher",
+              "description": "When receiving her own bouncing heal, Ukusik's healing amount increases to 125%, and she performs an additional unweakened healing bounce"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Illness, the Best Teacher",
+              "description": "When receiving her own bouncing heal, Ukusik's healing amount increases to 130% <@ba.talpu>(+5%)</>, and she performs an additional unweakened healing bounce"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 205,
+            "atk": 60
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Illness, the Best Teacher",
+              "description": "When receiving her own bouncing heal, Ukusik's healing amount increases to 130%, and she performs an additional unweakened healing bounce"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Illness, the Best Teacher",
+              "description": "When receiving her own bouncing heal, Ukusik's healing amount increases to 135% <@ba.talpu>(+5%)</>, and she performs an additional unweakened healing bounce"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

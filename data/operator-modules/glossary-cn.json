@@ -1,0 +1,61 @@
+{
+  "region": "cn",
+  "terms": {
+    "ba.airprotect": {
+      "name": "对空庇护",
+      "description": "受到来自空中的物理和法术伤害降低相应比例（同名效果取最高）"
+    },
+    "ba.barrier": {
+      "name": "屏障",
+      "description": "可以吸收一定数值的伤害"
+    },
+    "ba.camou": {
+      "name": "迷彩",
+      "description": "不阻挡时不成为敌方普通攻击的目标（无法躲避溅射类攻击）"
+    },
+    "ba.dt.burning2": {
+      "name": "灼燃损伤·我方",
+      "description": "累计满时爆发（普通、精英敌人1000点、领袖2000点累计值），敌人立即受到7000点元素伤害且期间法术抗性-20。10秒冷却"
+    },
+    "ba.dt.erosion2": {
+      "name": "侵蚀损伤·我方",
+      "description": "累计满时爆发（普通、精英敌人1000点、领袖2000点累计值），敌人立即受到5000点元素伤害且永久降低120点防御力（可叠加）。8秒冷却"
+    },
+    "ba.fragile": {
+      "name": "脆弱",
+      "description": "受到的物理、法术、真实伤害提升相应比例（同名效果取最高）"
+    },
+    "ba.liftoff": {
+      "name": "起飞",
+      "description": "不阻挡地面敌人且不会被地面敌人攻击，可以阻挡飞行敌人"
+    },
+    "ba.magicarcane": {
+      "name": "术法充盈",
+      "description": "造成的法术伤害提升（同名效果取最高）"
+    },
+    "ba.magicfragile": {
+      "name": "法术脆弱",
+      "description": "受到的法术伤害提升相应比例（同名效果取最高）"
+    },
+    "ba.root": {
+      "name": "束缚",
+      "description": "无法移动"
+    },
+    "ba.sluggish": {
+      "name": "停顿",
+      "description": "移动速度降低80%"
+    },
+    "ba.strong": {
+      "name": "精力充沛",
+      "description": "生命值高于一定比例时获得一定属性加成（同类属性取最高）"
+    },
+    "ba.stun": {
+      "name": "晕眩",
+      "description": "无法移动、阻挡、攻击及使用技能"
+    },
+    "ba.triggereffect": {
+      "name": "触发型效果",
+      "description": "施加于敌方/友方单位的一次性减益/增益效果，该效果仅在满足特定条件时触发"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "operatorId": "char_181_flower",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of 3 allies simultaneously"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_flower",
+      "name": "'Aegean's Kiss'",
+      "region": "en",
+      "type": "RIN-Y",
+      "icon": "rin-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; In each battle, a non-Support Perfumer must be deployed once at least",
+        "Clear Main Theme 3-4 with a 3-star rating; you must deploy your own Perfumer, and cannot include any Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 55,
+            "atk": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores the HP of <@ba.kw>4</> allied units simultaneously"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 75,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores the HP of <@ba.kw>4</> allied units simultaneously"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lavender's Fragrance",
+              "description": "When deployed, restores the HP of all allies by 6% of Perfumer's ATK each second"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lavender's Fragrance",
+              "description": "When deployed, restores the HP of all allies by 6.5% <@ba.talpu>(+0.5%)</> of Perfumer's ATK each second"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores the HP of <@ba.kw>4</> allied units simultaneously"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lavender's Fragrance",
+              "description": "When deployed, restores the HP of all allies by 6.5% of Perfumer's ATK each second"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lavender's Fragrance",
+              "description": "When deployed, restores the HP of all allies by 7% <@ba.talpu>(+0.5%)</> of Perfumer's ATK each second"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

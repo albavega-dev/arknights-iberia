@@ -1,0 +1,116 @@
+{
+  "operatorId": "char_215_mantic",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals Damage to <@ba.kw>all targets</> within range\n50% chance to dodge Physical and Arts attacks and is less likely to be <@ba.kw>targeted</> by enemies",
+      "blackboard": [
+        {
+          "key": "prob",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mantic",
+      "name": "Tail-Protection Training Tool",
+      "region": "en",
+      "type": "AMB-X",
+      "icon": "amb-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Manticore, and unleash Toxic Overload at least 1 time in each battle",
+        "Clear Main Theme 1-9 with a 3-star rating; You must deploy your own Manticore, and can only include 1 other Operator as a member"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 58,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Slows the Movement Speed of enemies within this unit's attack range by <@ba.kw>20%</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 72,
+            "def": 27
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Slows the Movement Speed of enemies within this unit's attack range by <@ba.kw>20%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Hidden Killer - Elite",
+              "description": "Stays <$ba.invisible>Invisible</> normally. The first attack made gains +55% ATK and removes <$ba.invisible>Invisibility</>. Regains <$ba.invisible>Invisible</> state after not attacking for 5 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Hidden Killer - Elite",
+              "description": "Stays <$ba.invisible>Invisible</> normally. The first attack made gains +59% <@ba.talpu>(+4%)</> ATK and removes <$ba.invisible>Invisibility</>. Regains <$ba.invisible>Invisible</> state after not attacking for 5 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 85,
+            "def": 31
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Slows the Movement Speed of enemies within this unit's attack range by <@ba.kw>20%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Hidden Killer - Elite",
+              "description": "Stays <$ba.invisible>Invisible</> normally. The first attack made gains +60% ATK and removes <$ba.invisible>Invisibility</>. Regains <$ba.invisible>Invisible</> state after not attacking for 5 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Hidden Killer - Elite",
+              "description": "Stays <$ba.invisible>Invisible</> normally. The first attack made gains +64% <@ba.talpu>(+4%)</> ATK and removes <$ba.invisible>Invisibility</>. Regains <$ba.invisible>Invisible</> state after not attacking for 5 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

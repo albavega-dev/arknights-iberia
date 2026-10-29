@@ -1,0 +1,113 @@
+{
+  "operatorId": "char_4031_liesel",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>AOE Arts damage</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_liesel",
+      "name": "'Dusk Covenant'",
+      "region": "en",
+      "type": "SPC-Y",
+      "icon": "spc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 3 battles; You must deploy your own Ripresa, and unleash Al Fine at least 1 time in each battle",
+        "Clear Main Theme 3-5 with a 3-star rating; You must deploy your own Ripresa, and have her defeat at least 3 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 75,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 95,
+            "atk": 68
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Baton Mastery",
+              "description": "When there are 3 or more enemies within an attack's splash area, that attack deals 125% damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Baton Mastery",
+              "description": "When there are 3 or more enemies within an attack's splash area, that attack deals 130% <@ba.talpu>(+5%)</> damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 120,
+            "atk": 75
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Baton Mastery",
+              "description": "When there are 3 or more enemies within an attack's splash area, that attack deals 130% damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Baton Mastery",
+              "description": "When there are 3 or more enemies within an attack's splash area, that attack deals 135% <@ba.talpu>(+5%)</> damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

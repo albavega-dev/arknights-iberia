@@ -1,0 +1,177 @@
+{
+  "operatorId": "char_1051_headb2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>{attack@atk_scale_2:0%}</> ATK as <@ba.kw>AOE</> Physical damage to enemies around the target.",
+      "blackboard": [
+        {
+          "key": "attack@ability_range_radius",
+          "value": 1
+        },
+        {
+          "key": "attack@atk_scale_2",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_headb2",
+      "name": "Unissued Medal",
+      "region": "en",
+      "type": "HAM-X",
+      "icon": "ham-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with your own Zima the Raging Tide",
+        "Clear Main Theme 16-6 Standard Combat with a 3-star rating; You must deploy your own Zima the Raging Tide, and cannot include any other Guard or Defender Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 63,
+            "def": 21
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+              "blackboard": [
+                {
+                  "key": "attack@atk_scale_2",
+                  "value": 0.5
+                },
+                {
+                  "key": "attack@ability_range_radius",
+                  "value": 1
+                },
+                {
+                  "key": "atk_scale_e",
+                  "value": 1.15
+                },
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 320,
+            "atk": 75,
+            "def": 26
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+              "blackboard": [
+                {
+                  "key": "attack@atk_scale_2",
+                  "value": 0.5
+                },
+                {
+                  "key": "attack@ability_range_radius",
+                  "value": 1
+                },
+                {
+                  "key": "atk_scale_e",
+                  "value": 1.15
+                },
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Roiling Rage",
+              "description": "Physical damage caused by Trait splash effect increases by 32%; any high ground tile touched by the splash deals 24% ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Roiling Rage",
+              "description": "Physical damage caused by Trait splash effect increases by 32%; any high ground tile touched by the splash deals 27%<@ba.talpu>(+3%)</> ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 380,
+            "atk": 83,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+              "blackboard": [
+                {
+                  "key": "attack@atk_scale_2",
+                  "value": 0.5
+                },
+                {
+                  "key": "attack@ability_range_radius",
+                  "value": 1
+                },
+                {
+                  "key": "atk_scale_e",
+                  "value": 1.15
+                },
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Roiling Rage",
+              "description": "Physical damage caused by Trait splash effect increases by 40%; any high ground tile touched by the splash deals 24% ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Roiling Rage",
+              "description": "Physical damage caused by Trait splash effect increases by 40%; any high ground tile touched by the splash deals 27%<@ba.talpu>(+3%)</> ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

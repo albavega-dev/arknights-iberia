@@ -1,0 +1,190 @@
+{
+  "operatorId": "char_377_gdglow",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Controls a <@ba.kw>Drone</> that deals <@ba.kw>Arts damage</>; When the Drone attacks the same enemy, its damage will increase (up to 110% of the operator's ATK)",
+      "blackboard": [
+        {
+          "key": "init_atk_scale",
+          "value": 0.2
+        },
+        {
+          "key": "delta_atk_scale",
+          "value": 0.15
+        },
+        {
+          "key": "max_atk_scale",
+          "value": 1.1
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 6
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_gdglow",
+      "name": "'Industrious Wings'",
+      "region": "en",
+      "type": "FUN-X",
+      "icon": "fun-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with Goldenglow (excluding Support Units)",
+        "Clear Main Theme R8-8 with a 3-star rating; You must deploy your own Goldenglow, and have Goldenglow defeat at least 2 Imperial Artillery Targeteers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 22
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 32
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Beacon's Wrath",
+              "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 340% of Goldenglow's ATK as Arts damage to enemies in a small area"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Beacon's Wrath",
+              "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 355% <@ba.talpu>(+15%)</> of Goldenglow's ATK as Arts damage to enemies in a small area"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 38
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Beacon's Wrath",
+              "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 360% of Goldenglow's ATK as Arts damage to enemies in a small area"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Beacon's Wrath",
+              "description": "When this unit's skill is active, Drones have a 10% chance to self-destruct when attacking (and then return to the Operator), dealing 375% <@ba.talpu>(+15%)</> of Goldenglow's ATK as Arts damage to enemies in a small area"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_gdglow",
+      "name": "Dream Must Come True",
+      "region": "en",
+      "type": "FUN-Y",
+      "icon": "fun-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Goldenglow use Crystalline Shine a total of 10 times",
+        "Clear Main Theme 4-7 with a 3-star rating; You must deploy your own Goldenglow, and can only include 5 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "atk": 30,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "atk": 40,
+            "attack_speed": 6
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Precise Redirection",
+              "description": "Self and Drones' attacks ignore 18 RES"
+            },
+            {
+              "index": 1,
+              "potential": 6,
+              "token": false,
+              "name": "Precise Redirection",
+              "description": "Self and Drones' attacks ignore 21 <@ba.talpu>(+3)</> RES"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "atk": 45,
+            "attack_speed": 7
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Precise Redirection",
+              "description": "Self and Drones' attacks ignore 20 RES"
+            },
+            {
+              "index": 1,
+              "potential": 6,
+              "token": false,
+              "name": "Precise Redirection",
+              "description": "Self and Drones' attacks ignore 23 <@ba.talpu>(+3)</> RES"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

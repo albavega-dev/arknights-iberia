@@ -1,0 +1,101 @@
+{
+  "operatorId": "char_4041_chnut",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Restores the HP of allied units and recovers <$ba.dt.element>Elemental Injury</> by <@ba.kw>{ep_heal_ratio:0%}</> of ATK (can recover <$ba.dt.element>Elemental Injury</> of unhurt allied units)",
+      "blackboard": [
+        {
+          "key": "ep_heal_ratio",
+          "value": 0.5
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_chnut",
+      "name": "Ground Journey Commemorative Light",
+      "region": "en",
+      "type": "WDM-X",
+      "icon": "wdm-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Chestnut, and unleash Rising Earth at least 1 time in each battle",
+        "Clear Under Tides SV-3 with a 3-star rating; You must deploy your own Chestnut, and cannot include any other Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 50,
+            "atk": 15
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 24
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Solidly Grounded",
+              "description": "<$ba.dt.element>Elemental Injury</> recovery +25% when healing ground units"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Solidly Grounded",
+              "description": "<$ba.dt.element>Elemental Injury</> recovery +28%<@ba.talpu>(+3%)</> when healing ground units"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Solidly Grounded",
+              "description": "<$ba.dt.element>Elemental Injury</> recovery +27% when healing ground units"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Solidly Grounded",
+              "description": "<$ba.dt.element>Elemental Injury</> recovery +30%<@ba.talpu>(+3%)</> when healing ground units"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "operatorId": "char_4045_heidi",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Does not attack but continuously restores the <@ba.kw>HP</> of all allies within range (the HP restored per second is equal to <@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</> of self ATK). Self is unaffected by <$ba.inspire>Inspiration</>",
+      "blackboard": [
+        {
+          "key": "attack@atk_to_hp_recovery_ratio",
+          "value": 0.1
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_heidi",
+      "name": "Luxurious Life-and-Death Struggle",
+      "region": "en",
+      "type": "BAR-X",
+      "icon": "bar-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Heidi use Tale of Fiction: A Warrior's Anger a total of 8 times",
+        "Clear Main Theme 9-7 with a 3-star rating under Standard Environment; You must deploy your own Heidi, and have her use Tale of Fiction: Rust at least 3 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 13,
+            "def": 12
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 85,
+            "atk": 17,
+            "def": 16
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Crafty Rebel",
+              "description": "When Skill 1 is equipped, allies within range gain +7% ATK; when Skill 2 is equipped, allies within range gain +7% DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Crafty Rebel",
+              "description": "When Skill 1 is equipped, allies within range gain +8% <@ba.talpu>(+1%)</> ATK; when Skill 2 is equipped, allies within range gain +8% <@ba.talpu>(+1%)</> DEF"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 21,
+            "def": 19
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Crafty Rebel",
+              "description": "When Skill 1 is equipped, allies within range gain +8% ATK; when Skill 2 is equipped, allies within range gain +8% DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Crafty Rebel",
+              "description": "When Skill 1 is equipped, allies within range gain +9% <@ba.talpu>(+1%)</> ATK; when Skill 2 is equipped, allies within range gain +9% <@ba.talpu>(+1%)</> DEF"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

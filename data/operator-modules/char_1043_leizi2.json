@@ -1,0 +1,130 @@
+{
+  "operatorId": "char_1043_leizi2",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normally does not attack and has 0 Block; When skill is inactive, ATK gradually increases up to <@ba.kw>+{atk:0%}</> over <@ba.kw>{max_stack_cnt}</> seconds. ATK is reset when the skill ends",
+      "blackboard": [
+        {
+          "key": "atk",
+          "value": 2
+        },
+        {
+          "key": "mid_stack_cnt",
+          "value": 20
+        },
+        {
+          "key": "max_stack_cnt",
+          "value": 40
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_leizi2",
+      "name": "'Within a Thought'",
+      "region": "en",
+      "type": "LIB-X",
+      "icon": "lib-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with your own Leizi the Thunderbringer",
+        "Clear Dorothy's Vision DV-7 with a 3-star rating; You must deploy your own Leizi the Thunderbringer and have her use All the Thunderlight at least once"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 225,
+            "atk": 26,
+            "def": 27
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 35,
+            "def": 31
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Clarity of Judgment",
+              "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 100% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active; while skill is active, ATK increases to 111%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Clarity of Judgment",
+              "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 100% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active; while skill is active, ATK increases to 115% <@ba.talpu>(+4%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 360,
+            "atk": 42,
+            "def": 36
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Clarity of Judgment",
+              "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 100% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active; while skill is active, ATK increases to 113%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Clarity of Judgment",
+              "description": "Tiles within Attack Range have a 10% chance every second of being struck by lightning, dealing 100% of Leizi the Thunderbringer's ATK as Arts damage; <$ba.liftoff>Takes Off</> when this unit's skill is not active; while skill is active, ATK increases to 117% <@ba.talpu>(+4%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

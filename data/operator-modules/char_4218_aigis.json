@@ -1,0 +1,113 @@
+{
+  "operatorId": "char_4218_aigis",
+  "region": "cn",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "部署后<$ba.liftoff>起飞</>，<$ba.liftoff>起飞</>后只攻击空中敌人；技能开启时降落且攻击造成<@ba.kw>群体物理伤害</>"
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_aigis",
+      "name": "约定的证明",
+      "region": "cn",
+      "type": "BRK-X",
+      "icon": "brk-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "战斗中非助战埃癸斯累计使用8次“全弹发射”",
+        "3星通关主题曲7-3；必须编入非助战埃癸斯并上场，且埃癸斯造成至少20000点伤害"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 35,
+            "atk": 35,
+            "def": 12
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "部署后<$ba.liftoff>起飞</>，<$ba.liftoff>起飞</>后只攻击空中敌人；技能开启时降落，攻击造成<@ba.kw>群体物理伤害</>且攻击地面敌人时攻击力提升至<@ba.kw>110％</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 50,
+            "def": 17
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "部署后<$ba.liftoff>起飞</>，<$ba.liftoff>起飞</>后只攻击空中敌人；技能开启时降落，攻击造成<@ba.kw>群体物理伤害</>且攻击地面敌人时攻击力提升至<@ba.kw>110％</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "反暗影特殊压制兵装",
+              "description": "造成的物理伤害+13%，受到的物理伤害-13%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "反暗影特殊压制兵装",
+              "description": "造成的物理伤害+15%<@ba.talpu>（+2%）</>，受到的物理伤害-15%<@ba.talpu>（+2%）</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 60,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "部署后<$ba.liftoff>起飞</>，<$ba.liftoff>起飞</>后只攻击空中敌人；技能开启时降落，攻击造成<@ba.kw>群体物理伤害</>且攻击地面敌人时攻击力提升至<@ba.kw>110％</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "反暗影特殊压制兵装",
+              "description": "造成的物理伤害+15%，受到的物理伤害-15%"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "反暗影特殊压制兵装",
+              "description": "造成的物理伤害+17%<@ba.talpu>（+2%）</>，受到的物理伤害-17%<@ba.talpu>（+2%）</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

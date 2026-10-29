@@ -1,0 +1,101 @@
+{
+  "operatorId": "char_4106_bryota",
+  "region": "en",
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has <@ba.kw>extended</> attack range; When attacking enemies not blocked by self, increase ATK to 120%",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.2
+        }
+      ]
+    }
+  ],
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_bryota",
+      "name": "Sobremesa",
+      "region": "en",
+      "type": "INS-X",
+      "icon": "ins-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Bryophyta, and unleash Earthen Tenacity at least 1 time in each battle",
+        "Clear Main Theme 9-3 with a 3-star rating under Standard Environment; You must deploy your own Bryophyta, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "favorPoints": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 40
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "favorPoints": 2732,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 52
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Cautious and Calculated",
+              "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +15%; while blocking enemies, increases this unit's DEF by +15%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Cautious and Calculated",
+              "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +17% <@ba.talpu>(+2%)</>; while blocking enemies, increases this unit's DEF by +17% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "favorPoints": 10070,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 60
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Cautious and Calculated",
+              "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +17%; while blocking enemies, increases this unit's DEF by +17%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Cautious and Calculated",
+              "description": "While not blocking an enemy, increases the DEF of melee Operators in the surrounding 8 tiles by +19% <@ba.talpu>(+2%)</>; while blocking enemies, increases this unit's DEF by +19% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
