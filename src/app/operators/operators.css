@@ -9,6 +9,9 @@
   --choice-light-soft: brightness(1.08)
     drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 55%, transparent))
     drop-shadow(0 0 5px color-mix(in srgb, var(--color-brass) 35%, transparent));
+  --choice-light-faint: brightness(1.03)
+    drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 28%, transparent))
+    drop-shadow(0 0 4px color-mix(in srgb, var(--color-brass) 16%, transparent));
   --choice-text-light:
     0 0 2px color-mix(in srgb, var(--operator-accent-light) 90%, transparent),
     0 0 7px color-mix(in srgb, var(--color-brass) 60%, transparent);
@@ -1365,7 +1368,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px 30px;
-  filter: var(--choice-light-soft);
+  filter: var(--choice-light-faint);
   transform: translateY(-50%);
 }
 .operator-stats-card dl > div:nth-child(1) dt::before {
