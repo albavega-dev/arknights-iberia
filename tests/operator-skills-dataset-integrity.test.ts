@@ -86,6 +86,7 @@ test("the 17 catalog operators without skills (1 and 2 star) still have a file w
 
 test("skills dataset pins the source revisions and tables and stays within its own limits", async () => {
   const { index, indexBytes } = await readIndex(directory);
+  assert.deepEqual(index.limits, { fileBytes: 65_536, totalBytes: 8_000_000 });
   assert.deepEqual(index.limits, skillsDatasetLimits);
   for (const region of ["en", "cn"] as const) {
     assert.equal(index.sources[region].revision, gameDataRevisions[region]);

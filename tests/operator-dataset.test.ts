@@ -62,7 +62,7 @@ test("shared file validation reports each problem", () => {
 
 test("each dataset declares its own limits in the index and is checked against them", () => {
   assert.deepEqual(datasetLimits, { fileBytes: 32_768, totalBytes: 6_000_000 });
-  assert.deepEqual(skillsDatasetLimits, { fileBytes: 65_536, totalBytes: 6_000_000 });
+  assert.deepEqual(skillsDatasetLimits, { fileBytes: 65_536, totalBytes: 8_000_000 });
   const stats = buildDatasetIndex("operator-stats", { en: source, cn: source }, [file("char_a", "en", 40_000)]);
   const skills = buildDatasetIndex("operator-skills", { en: source, cn: source }, [file("char_a", "en", 40_000), file("char_b", "en", 60_000)], { limits: skillsDatasetLimits });
   assert.deepEqual(stats.limits, datasetLimits);
