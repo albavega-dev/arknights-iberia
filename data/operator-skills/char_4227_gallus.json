@@ -1,0 +1,105 @@
+{
+  "operatorId": "char_4227_gallus",
+  "region": "en",
+  "skills": [],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[0010]",
+          "name": "Clucktrical Engineering",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_spd_ext&tag[000]",
+          "name": "Clucktivation Mechanism",
+          "room": "POWER",
+          "icon": "bskill_power_rec_spd_ext&tag",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to a Power Plant, if another <$cc.tag.op><@cc.kw>Operation Platform</></> is assigned to a Power Plant, drone charging speed <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "'Come And Catch Me'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "For 20s after deployment, attacks inflict -15% RES to enemies for 10s, and prioritizes enemies without this effect"
+        },
+        {
+          "name": "'Come And Catch Me'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 2,
+          "description": "For 20s after deployment, attacks inflict -17% RES to enemies for 10s, and prioritizes enemies without this effect"
+        },
+        {
+          "name": "'Come And Catch Me'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "For 20s after deployment, attacks inflict -19% RES to enemies for 10s, and prioritizes enemies without this effect"
+        },
+        {
+          "name": "'Come And Catch Me'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 4,
+          "description": "For 20s after deployment, attacks inflict -21% RES to enemies for 10s, and prioritizes enemies without this effect"
+        },
+        {
+          "name": "'Come And Catch Me'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "For 20s after deployment, attacks inflict -23% RES to enemies for 10s, and prioritizes enemies without this effect"
+        },
+        {
+          "name": "'Come And Catch Me'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "For 20s after deployment, attacks inflict -25% RES to enemies for 10s, and prioritizes enemies without this effect"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "operatorId": "char_294_ayer",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_ayer_1",
+      "name": "Shrapnel Burst",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.1,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.2,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.25,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.3,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.35,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.4,
+            1,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.45,
+            1,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.5,
+            1,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.6,
+            1,
+            3
+          ]
+        }
+      ],
+      "description": "The next attack deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage to up to <@ba.vup>{max_target}</> enemies within range and <$ba.sluggish>Slows</> them for <@ba.vup>{sluggish:0.0}</> second(s)",
+      "blackboardKeys": [
+        "atk_scale",
+        "sluggish",
+        "max_target"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_ayer_2",
+      "name": "Activate Phase Blades",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 15,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            0.7
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 16,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            0.8
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 17,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            0.9
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 54,
+          "initSp": 18,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 54,
+          "initSp": 19,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            1.1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 54,
+          "initSp": 20,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            1.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 21,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            1.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 22,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            1.4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 51,
+          "initSp": 23,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            1.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "rangeId": "3-1",
+          "values": [
+            1,
+            1.7
+          ]
+        }
+      ],
+      "description": "Range <@ba.vup>expands</>; Damage type changes to Arts Damage; Each attack deals an additional <@ba.vup>{atk_scale:0%}</> of ATK as Arts damage to all enemies blocked by friendly Operators in the surrounding 8 tiles (this damage is treated as a melee attack)",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "atk_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    },
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd[000]",
+          "name": "Clue Search α",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</>"
+        },
+        {
+          "buffId": "meet_spd[020]",
+          "name": "Clue Search β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>20%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Seek Aid",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "This unit and allied Operators in the surrounding 8 tiles gain +4 ASPD",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Seek Aid",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "This unit and allied Operators in the surrounding 8 tiles gain +6 <@ba.talpu>(+2)</> ASPD",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Seek Aid",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "This unit and allied Operators in the surrounding 8 tiles gain +8 ASPD",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Seek Aid",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "This unit and allied Operators in the surrounding 8 tiles gain +10 <@ba.talpu>(+2)</> ASPD",
+          "rangeId": "x-4"
+        }
+      ]
+    }
+  ]
+}

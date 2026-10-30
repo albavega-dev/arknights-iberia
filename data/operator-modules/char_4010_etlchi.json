@@ -1,0 +1,222 @@
+{
+  "operatorId": "char_4010_etlchi",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_etlchi",
+      "name": "A Ferry that Withers",
+      "region": "en",
+      "type": "REA-X",
+      "icon": "rea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Entelechia",
+        "Clear Main Theme 10-12 with a 3-star rating under Standard Environment; You must deploy your own Entelechia, and have her use Clinging Desire, Longing Spirit at least 3 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 50,
+            "def": 20
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 60,
+            "def": 38
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Second Serving",
+              "description": "When HP drops below 25% for the first time, immediately recovers 70% of Max HP and reduces Physical damage taken by 15% from that point onwards"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Second Serving",
+              "description": "When HP drops below 25% for the first time, immediately recovers 75% <@ba.talpu>(+5%)</> of Max HP and reduces Physical damage taken by 20% <@ba.talpu>(+5%)</> from that point onwards"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 70,
+            "def": 50
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Second Serving",
+              "description": "When HP drops below 25% for the first time, immediately recovers 85% of Max HP and reduces Physical damage taken by 20% from that point onwards"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Second Serving",
+              "description": "When HP drops below 25% for the first time, immediately recovers 90% <@ba.talpu>(+5%)</> of Max HP and reduces Physical damage taken by 25% <@ba.talpu>(+5%)</> from that point onwards"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_etlchi",
+      "name": "A Collection of Rosy Tales",
+      "region": "en",
+      "type": "REA-Y",
+      "icon": "rea-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 40 enemies with your own Entelechia",
+        "Clear Babel BB-1 with a 3-star rating; You must deploy your own Entelechia, and can only include 3 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 220,
+            "atk": 62,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more enemies within Attack Range, ASPD <@ba.kw>+{attack_speed}</>",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 12
+                },
+                {
+                  "key": "cnt",
+                  "value": 2
+                },
+                {
+                  "key": "value",
+                  "value": 50
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 70,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more enemies within Attack Range, ASPD <@ba.kw>+{attack_speed}</>",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 12
+                },
+                {
+                  "key": "cnt",
+                  "value": 2
+                },
+                {
+                  "key": "value",
+                  "value": 50
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Blood Bank",
+              "description": "Attacks <$ba.steal>Steal</> 100 Max HP from the target (Caps at 1800) and deal 350 Arts damage per second to the target for 5s; while this damage over time effect is active, Entelechia recovers 2.5% Max HP per second"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Blood Bank",
+              "description": "Attacks <$ba.steal>Steal</> 100 Max HP from the target (Caps at 1800) and deal 400 <@ba.talpu>(+50)</> Arts damage per second to the target for 5s; while this damage over time effect is active, Entelechia recovers 2.5% Max HP per second"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 75,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more enemies within Attack Range, ASPD <@ba.kw>+{attack_speed}</>",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 12
+                },
+                {
+                  "key": "cnt",
+                  "value": 2
+                },
+                {
+                  "key": "value",
+                  "value": 50
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Blood Bank",
+              "description": "Attacks <$ba.steal>Steal</> 120 Max HP from the target (Caps at 2160) and deal 450 Arts damage per second to the target for 6s; while this damage over time effect is active, Entelechia recovers 3.5% Max HP per second"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Blood Bank",
+              "description": "Attacks <$ba.steal>Steal</> 120 Max HP from the target (Caps at 2160) and deal 500 <@ba.talpu>(+50)</> Arts damage per second to the target for 6s; while this damage over time effect is active, Entelechia recovers 3.5% Max HP per second"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

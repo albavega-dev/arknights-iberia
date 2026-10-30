@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4207_branch",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_branch",
+      "name": "'Marks of Time'",
+      "region": "en",
+      "type": "UNY-X",
+      "icon": "uny-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Vetochki use Set on Survival a total of 8 times",
+        "Clear Mansfield Break MB-5 with a 3-star rating; You must deploy your own Vetochki, and cannot include any other Defender Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 210,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 300,
+            "def": 53
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Simple Bandages",
+              "description": "DEF +15% when skill is active; restores 60% of Max HP when skill ends"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Simple Bandages",
+              "description": "DEF +15% when skill is active; restores 70% <@ba.talpu>(+10%)</> of Max HP when skill ends"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 385,
+            "def": 68
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Simple Bandages",
+              "description": "DEF +18% when skill is active; restores 70% of Max HP when skill ends"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Simple Bandages",
+              "description": "DEF +18% when skill is active; restores 80% <@ba.talpu>(+10%)</> of Max HP when skill ends"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

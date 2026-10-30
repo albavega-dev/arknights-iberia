@@ -1,0 +1,100 @@
+{
+  "operatorId": "char_258_podego",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_podego",
+      "name": "'Amaranthine Nursery'",
+      "region": "en",
+      "type": "DEC-X",
+      "icon": "dec-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Podenco, and unleash Spread Spores at least 2 times in each battle",
+        "Clear Main Theme 4-6 with a 3-star rating; You must deploy your own Podenco, and have Podenco defeat at least 2 Infused Originium Slugs"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Gardener",
+              "description": "When deployed, all Supporter Operators gain +9% ATK and +3 ASPD"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Gardener",
+              "description": "When deployed, all Supporter Operators gain +11% <@ba.talpu>(+2%)</> ATK and +3 ASPD"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Gardener",
+              "description": "When deployed, all Supporter Operators gain +9% ATK and +5 ASPD"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Gardener",
+              "description": "When deployed, all Supporter Operators gain +11% <@ba.talpu>(+2%)</> ATK and +5 ASPD"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

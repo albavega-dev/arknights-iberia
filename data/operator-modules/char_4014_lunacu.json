@@ -1,0 +1,104 @@
+{
+  "operatorId": "char_4014_lunacu",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_lunacu",
+      "name": "'A Hidey-Hole That Moves'",
+      "region": "en",
+      "type": "DEA-Y",
+      "icon": "dea-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Lunacub (excluding Support Units)",
+        "Clear Main Theme 2-5 with a 3-star rating; You must deploy your own Lunacub, and have Lunacub defeat at least 2 Senior Casters"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 63
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Wilderness Instinct",
+              "description": "Gains <$ba.camou>Camouflage</> while this unit's skill is not active; Attack Interval reduced slightly after skill activation"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 68
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Wilderness Instinct",
+              "description": "Gains <$ba.camou>Camouflage</> while this unit's skill is not active; Attack Interval reduced after skill activation"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "operatorId": "char_236_rope",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_rope",
+      "name": "Tin Casket",
+      "region": "en",
+      "type": "HOK-X",
+      "icon": "hok-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Rope use Double Hook a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 3-3 with a 3-star rating; You must deploy your own Rope, and cause Crownslayer to fall into a pit"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+              "blackboard": [
+                {
+                  "key": "dist",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 800
+                },
+                {
+                  "key": "interval",
+                  "value": 0.066
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 27
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+              "blackboard": [
+                {
+                  "key": "dist",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 800
+                },
+                {
+                  "key": "interval",
+                  "value": 0.066
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Auditory Training",
+              "description": "Gains 35% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Auditory Training",
+              "description": "Gains 39% <@ba.talpu>(+4%)</> Physical Dodge"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 31
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While being pulled, enemies take Arts damage proportional to the distance traveled",
+              "blackboard": [
+                {
+                  "key": "dist",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 800
+                },
+                {
+                  "key": "interval",
+                  "value": 0.066
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Auditory Training",
+              "description": "Obtains 40% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Auditory Training",
+              "description": "Gains 44% <@ba.talpu>(+4%)</> Physical Dodge"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

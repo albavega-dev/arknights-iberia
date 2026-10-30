@@ -6,7 +6,7 @@ import { promisify } from "node:util";
 const execFileAsync = promisify(execFile);
 const root = process.cwd();
 const textExtensions = new Set([".cjs", ".css", ".csv", ".html", ".js", ".json", ".md", ".mjs", ".ps1", ".sql", ".scss", ".toml", ".ts", ".tsx", ".txt", ".yml", ".yaml"]);
-const excluded = new Set([".git", ".next", "node_modules", ".local-backups", "artifacts", ".playwright-mcp"]);
+const excluded = new Set([".git", ".next", "node_modules", ".local-backups", "artifacts", ".playwright-mcp", "coverage"]);
 const suspicious = /(?:\u00c3[\u0080-\u00bf]|\u00c2[\u0080-\u00bf]|\u00e2(?:\u0080|\u0082|\u0086|\u0088|\u0080)|\u00f0[\u0090-\u00bf]|\ufffd)/g;
 
 type Finding = { file: string; line: number; text: string; kind: "invalid-utf8" | "mojibake" };

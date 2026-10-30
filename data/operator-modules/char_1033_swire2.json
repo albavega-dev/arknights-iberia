@@ -1,0 +1,270 @@
+{
+  "operatorId": "char_1033_swire2",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_swire2",
+      "name": "'Be Resplendent and Outstanding'",
+      "region": "en",
+      "type": "MER-X",
+      "icon": "mer-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 60,000 damage with Swire the Elegant Wit (excluding Support Units)",
+        "Clear Main Theme 5-2 with a 3-star rating; You must deploy your own Swire the Elegant Wit, and have Swire the Elegant Wit defeat at least 15 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 25,
+            "def": 35
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 35,
+            "def": 43
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Big Spendthrift",
+              "description": "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +5% ATK (stacks up to 8 times)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Big Spendthrift",
+              "description": "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +5% ATK (stacks up to 9 <@ba.talpu>(+1)</> times)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 40,
+            "def": 50
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Big Spendthrift",
+              "description": "Gains 2 Coins upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +5% ATK (stacks up to 8 times)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Big Spendthrift",
+              "description": "Gains 2 Coins upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +5% ATK (stacks up to 9 <@ba.talpu>(+1)</> times)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_swire2",
+      "name": "Director Swire's Lungmen Food Guide",
+      "region": "en",
+      "type": "MER-Y",
+      "icon": "mer-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 40 enemies with your own Swire the Elegant Wit",
+        "Clear Main Theme 11-16 with a 3-star rating under Standard Environment; You must deploy your own Swire the Elegant Wit and can only include 4 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 57,
+            "def": 44
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ATK +4% whenever Trait cost is paid, stacking up to 5 times"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 71,
+            "def": 53
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ATK +4% whenever Trait cost is paid, stacking up to 5 times"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Cash Claps Calamity",
+              "description": "Upon receiving lethal damage, as long as enough DP is available, consumes 5 DP to restore this unit's HP to 70%; the cost of this Talent increases by 5 every time it is activated"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Cash Claps Calamity",
+              "description": "Upon receiving lethal damage, as long as enough DP is available, consumes 5 DP to restore this unit's HP to 80% <@ba.talpu>(+10%)</>; the cost of this Talent increases by 5 every time it is activated"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 81,
+            "def": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ATK +4% whenever Trait cost is paid, stacking up to 5 times"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Cash Claps Calamity",
+              "description": "Upon receiving lethal damage, as long as enough DP is available, consumes 3 DP to restore this unit's HP to 70%; the cost of this Talent increases by 3 every time it is activated"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Cash Claps Calamity",
+              "description": "Upon receiving lethal damage, as long as enough DP is available, consumes 3 DP to restore this unit's HP to 80% <@ba.talpu>(+10%)</>; the cost of this Talent increases by 3 every time it is activated"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_swire2",
+      "name": "Swire the Elegant Wit's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, DP consumed when deployed or on the battlefield -30%, and for every 1 DP consumed by this unit, the shortest remaining Redeployment Timer in the Deployment Waiting Zone -2s"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, DP consumed when deployed or on the battlefield -30%, and for every 1 DP consumed by this unit, the shortest remaining Redeployment Timer in the Deployment Waiting Zone -2s"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Big Spendthrift",
+              "description": "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 8 times); in <@ba.kw>Integrated Strategies</>, Coin limit +5, and gains 1 additional Coin and 2 ATK stacks whenever Trait consumes DP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Big Spendthrift",
+              "description": "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 9 <@ba.talpu>(+1)</> times); in <@ba.kw>Integrated Strategies</>, Coin limit +5, and gains 1 additional Coin and 2 ATK stacks whenever Trait consumes DP"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 320,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, DP consumed when deployed or on the battlefield -30%, and for every 1 DP consumed by this unit, the shortest remaining Redeployment Timer in the Deployment Waiting Zone -2s"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Big Spendthrift",
+              "description": "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 8 times); in <@ba.kw>Integrated Strategies</>, Coin limit +5, every Originium Ingot owned increases ATK stack limit by 1 (max to 60 stacks), and gains 1 additional Coin and 3 ATK stacks whenever Trait consumes DP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Big Spendthrift",
+              "description": "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 9 <@ba.talpu>(+1)</> times); in <@ba.kw>Integrated Strategies</>, Coin limit +5, every Originium Ingot owned increases ATK stack limit by 1 (max to 60 stacks), and gains 1 additional Coin and 3 ATK stacks whenever Trait consumes DP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

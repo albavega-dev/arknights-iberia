@@ -1,0 +1,588 @@
+{
+  "operatorId": "char_017_huang",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_huang_1",
+      "name": "Power Strike γ",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.9
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.95
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.05
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.25
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.45
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.65
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            2.9
+          ]
+        }
+      ],
+      "description": "Increases the ATK of next attack to <@ba.vup>{atk_scale:0%}</>",
+      "blackboardKeys": [
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_huang_2",
+      "name": "Chainsaw Extension Module",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 90,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            0.4,
+            0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 89,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            0.45,
+            0.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 88,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            0.5,
+            0.1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 85,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            0.55,
+            0.15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 84,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            0.6,
+            0.15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 83,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            0.65,
+            0.15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            0.7,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 77,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            0.8,
+            0.25
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 74,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            0.9,
+            0.3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 0,
+          "rangeId": "2-2",
+          "values": [
+            1,
+            0.35
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, and Attack Range <@ba.vup>increases</>\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk",
+        "def"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_huang_3",
+      "name": "Boiling Burst",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 15,
+          "values": [
+            0.3,
+            0.3,
+            0.25,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 15,
+          "values": [
+            0.35,
+            0.35,
+            0.25,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 15,
+          "values": [
+            0.4,
+            0.4,
+            0.25,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 17,
+          "values": [
+            0.45,
+            0.45,
+            0.25,
+            3.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 17,
+          "values": [
+            0.5,
+            0.5,
+            0.25,
+            3.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 17,
+          "values": [
+            0.55,
+            0.55,
+            0.25,
+            3.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 19,
+          "values": [
+            0.6,
+            0.6,
+            0.25,
+            3.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 21,
+          "values": [
+            0.65,
+            0.65,
+            0.25,
+            3.6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 23,
+          "values": [
+            0.7,
+            0.7,
+            0.25,
+            3.8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 25,
+          "values": [
+            0.8,
+            0.8,
+            0.25,
+            4
+          ]
+        }
+      ],
+      "description": "Upon skill activation, ATK and DEF gradually increases to <@ba.vup>+{atk:0%}</>, and attacks slice all enemies in front of this unit. When this skill ends, this unit loses <@ba.vdown>{hp_ratio:0%}</> HP and deals <@ba.vup>{damage_by_atk_scale:0%}</> ATK as Physical damage to all surrounding enemies",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "hp_ratio",
+        "damage_by_atk_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[001]",
+          "name": "Heat Charge α",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_probability[210]",
+          "name": "Slice Iron, Split Steel",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_build3",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Building material</>, the production rate of byproduct increases by <@cc.vup>80%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Emergency Defibrillation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 3 seconds"
+        },
+        {
+          "name": "Emergency Defibrillation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 4<@ba.talpu>(+1)</> seconds"
+        },
+        {
+          "name": "Emergency Defibrillation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 6 seconds"
+        },
+        {
+          "name": "Emergency Defibrillation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When this unit's HP falls beneath 25%, restores 50% HP (one time only) and prevents HP from falling under 50% for 7<@ba.talpu>(+1)</> seconds"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Harsh Training",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains <$ba.buffres>status resistance</> after being deployed for 15 seconds"
+        },
+        {
+          "name": "Harsh Training",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Gains <$ba.buffres>status resistance</> after being deployed for 12 <@ba.talpu>(-3)</> seconds"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4047_pianst",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_pianst",
+      "name": "'Tick-tock Tick-tock'",
+      "region": "en",
+      "type": "AST-X",
+      "icon": "ast-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Czerny use Meisterwerk a total of 5 times",
+        "Clear Lingering Echoes LE-3 with a 3-star rating; You must deploy your own Czerny, and use Meisterwerk at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 225,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Reverberation",
+              "description": "RES +10. Deals 100% of Czerny's ATK as Arts damage to the attacker whenever Czerny receives Arts attacks"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Reverberation",
+              "description": "RES +10. Deals 105% <@ba.talpu>(+5%)</> of Czerny's ATK as Arts damage to the attacker whenever Czerny receives Arts attacks"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 275,
+            "def": 57
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Reverberation",
+              "description": "RES +10. Deals 110% of Czerny's ATK as Arts damage to the attacker whenever Czerny receives Arts attacks"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Reverberation",
+              "description": "RES +10. Deals 115% <@ba.talpu>(+5%)</> of Czerny's ATK as Arts damage to the attacker whenever Czerny receives Arts attacks"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

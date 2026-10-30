@@ -1,0 +1,493 @@
+{
+  "operatorId": "char_4186_tmoris",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_tmoris_1",
+      "name": "Shuddering Strings",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            0.55,
+            5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            0.57,
+            5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            0.6,
+            5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.61,
+            5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.62,
+            5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.63,
+            5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.65,
+            5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.67,
+            5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.68,
+            5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 2.1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.7,
+            5
+          ]
+        }
+      ],
+      "description": "Performs a <@ba.vup>{times}-strike attack</>, each strike dealing <@ba.vup>{atk_scale:0%}</> of ATK as Arts damage to ground enemies within Attack Range\n<@ba.rem>When other <$ba.mujica>Ave Mujica</> members activate their skill, releases this skill one more time</>\n<@ba.rem>Can store 2 charges</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "times"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_tmoris_2",
+      "name": "Drifting Soul",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            0.7,
+            1,
+            1.5,
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 20,
+          "values": [
+            0.73,
+            1,
+            1.5,
+            1.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 20,
+          "values": [
+            0.75,
+            1,
+            1.5,
+            1.6
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 20,
+          "values": [
+            0.78,
+            1,
+            1.5,
+            1.7
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 20,
+          "values": [
+            0.82,
+            1,
+            1.5,
+            1.7
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 22,
+          "values": [
+            0.85,
+            1,
+            1.5,
+            1.8
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 22,
+          "values": [
+            0.88,
+            1,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 23,
+          "values": [
+            0.92,
+            1,
+            1.5,
+            2.1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 24,
+          "values": [
+            0.95,
+            1,
+            1.5,
+            2.1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "values": [
+            1,
+            1,
+            1.5,
+            2.2
+          ]
+        }
+      ],
+      "description": "Inflicts <$ba.fear>Fear</> on enemies within Attack Range for 1.5s; deals <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to enemies within Attack Range every second; Talent 1's chance to trigger <$ba.sluggish>Slow</> increases to <@ba.vup>{talent_scale}</>x",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "attack@interval",
+        "fear",
+        "talent_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "y-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_hire_spd&bd[000]",
+          "name": "Reliable Companion",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_hire_tmoris",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, <$cc.bd_mujica><@cc.rem>Passion</></> <@cc.vup>+10</>; HR contacting speed <@cc.vup>+10%</> (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_tra_limit&spd2[000]",
+          "name": "Famiglia Approval",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_t_limit&spd_tmoris",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, all <$cc.g.siracusa><@cc.kw>Siracusa</></> Operators assigned to Trading Posts gain order acquisition efficiency <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Professional",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies damaged by Umiri Yahata have a 15% chance of being <$ba.sluggish>Slowed</> for 3s"
+        },
+        {
+          "name": "Professional",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies damaged by Umiri Yahata have a 18% chance of being <$ba.sluggish>Slowed</> for 3s"
+        },
+        {
+          "name": "Professional",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies damaged by Umiri Yahata have a 21% chance of being <$ba.sluggish>Slowed</> for 3s; when skill is active, Umiri Yahata's Attack Range expands",
+          "rangeId": "y-3"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Do Not Fear Being Afraid",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +2 whenever inflicting <$ba.sluggish>Slow</> or <$ba.fear>Fear</>\nWhen deployed, <$ba.mujica>Ave Mujica</> members deal 3% more damage to <$ba.sluggish>Slowed</> or <$ba.fear>Feared</> enemies"
+        },
+        {
+          "name": "Do Not Fear Being Afraid",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<$ba.fever>Fever</> +2 whenever inflicting <$ba.sluggish>Slow</> or <$ba.fear>Fear</>\nWhen deployed, <$ba.mujica>Ave Mujica</> members deal 8% <@ba.talpu>(+5%)</> more damage to <$ba.sluggish>Slowed</> or <$ba.fear>Feared</> enemies"
+        },
+        {
+          "name": "Do Not Fear Being Afraid",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +2 whenever inflicting <$ba.sluggish>Slow</> or <$ba.fear>Fear</>\nWhen deployed, <$ba.mujica>Ave Mujica</> members deal 10% more damage to <$ba.sluggish>Slowed</> or <$ba.fear>Feared</> enemies"
+        },
+        {
+          "name": "Do Not Fear Being Afraid",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<$ba.fever>Fever</> +2 whenever inflicting <$ba.sluggish>Slow</> or <$ba.fear>Fear</>\nWhen deployed, <$ba.mujica>Ave Mujica</> members deal 15% <@ba.talpu>(+5%)</> more damage to <$ba.sluggish>Slowed</> or <$ba.fear>Feared</> enemies"
+        }
+      ]
+    }
+  ]
+}

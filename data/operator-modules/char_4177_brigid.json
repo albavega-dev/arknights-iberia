@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4177_brigid",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_brigid",
+      "name": "Color of the Wind",
+      "region": "en",
+      "type": "LPS-X",
+      "icon": "lps-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 20 enemies with your own Brigid",
+        "Clear Main Theme 4-6 with a 3-star rating; You must deploy your own Brigid, and use Bring to Heel at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 18
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking enemies within the 8 surrounding tiles",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking enemies within the 8 surrounding tiles",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Practiced Knot-Tier",
+              "description": "After dealing damage 18 times, gains +6% ATK, +40% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Practiced Knot-Tier",
+              "description": "After dealing damage 18 times, gains +6% ATK, +43% <@ba.talpu>(+3%)</> Physical Dodge"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking enemies within the 8 surrounding tiles",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Practiced Knot-Tier",
+              "description": "After dealing damage 16 times, gains +10% ATK, +45% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Practiced Knot-Tier",
+              "description": "After dealing damage 16 times, gains +10% ATK, +48% <@ba.talpu>(+3%)</> Physical Dodge"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

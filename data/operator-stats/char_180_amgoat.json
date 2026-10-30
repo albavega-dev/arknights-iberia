@@ -1,0 +1,351 @@
+{
+  "operatorId": "char_180_amgoat",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 732,
+            "atk": 292,
+            "def": 46,
+            "magicResistance": 10,
+            "cost": 19,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1046,
+            "atk": 406,
+            "def": 79,
+            "magicResistance": 10,
+            "cost": 19,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1046,
+            "atk": 406,
+            "def": 79,
+            "magicResistance": 15,
+            "cost": 21,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1359,
+            "atk": 535,
+            "def": 109,
+            "magicResistance": 15,
+            "cost": 21,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1359,
+            "atk": 535,
+            "def": 109,
+            "magicResistance": 20,
+            "cost": 21,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 1743,
+            "atk": 645,
+            "def": 122,
+            "magicResistance": 20,
+            "cost": 21,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.6,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": []
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 27,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "effects": []
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_amgoat",
+      "operatorId": "char_180_amgoat",
+      "region": "en",
+      "name": "'Missed Sounds'",
+      "moduleType": "CCR-X",
+      "typeIcon": "ccr-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 40
+          },
+          "specialEffects": [
+            "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 55
+          },
+          "specialEffects": [
+            "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+            "All [Caster] Operators' ATK +18% when brought",
+            "All [Caster] Operators' ATK +20% <@ba.talpu>(+2%)</> when brought"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 65
+          },
+          "specialEffects": [
+            "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+            "All [Caster] Operators' ATK +22% when brought",
+            "All [Caster] Operators' ATK +24% <@ba.talpu>(+2%)</> when brought"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_amgoat",
+      "operatorId": "char_180_amgoat",
+      "region": "en",
+      "name": "Pet Contest First Prize",
+      "moduleType": "CCR-Y",
+      "typeIcon": "ccr-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 25
+          },
+          "specialEffects": [
+            "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy."
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 40
+          },
+          "specialEffects": [
+            "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+            "Immediately obtains 7 to 15 SP randomly after deployment; if there are Elite or Leader enemies within range, gains the maximum amount of SP possible",
+            "Immediately obtains 10 <@ba.talpu>(+3)</> to 19 <@ba.talpu>(+4)</> SP randomly after deployment; if there are Elite or Leader enemies within range, gains the maximum amount of SP possible"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 50
+          },
+          "specialEffects": [
+            "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+            "Immediately obtains 7 to 15 SP and 6 to 15 ASPD randomly after deployment; if there are Elite or Leader enemies within range, gains the maximum amount of SP and ASPD possible",
+            "Immediately obtains 10 <@ba.talpu>(+3)</> to 19 <@ba.talpu>(+4)</> SP and 6 to 15 ASPD randomly after deployment; if there are Elite or Leader enemies within range, gains the maximum amount of SP and ASPD possible"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Deals <@ba.kw>Arts damage</>"
+    }
+  ]
+}

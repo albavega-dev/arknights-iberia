@@ -1,0 +1,701 @@
+{
+  "operatorId": "char_4009_irene",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_irene_1",
+      "name": "Gust",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.1,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.2,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.3,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.4,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.6,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.7,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.9,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2,
+            1
+          ]
+        }
+      ],
+      "description": "The next attack deals <@ba.vup>{atk_scale:0%}</> ATK as Physical damage, and causes the target to <$ba.levitate>Levitate </><@ba.vup>{levitate}</> second, then deals <@ba.vup>{atk_scale:0%}</> ATK as Physical damage to it again",
+      "blackboardKeys": [
+        "atk_scale",
+        "levitate"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_irene_2",
+      "name": "Shattertide",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "3-12",
+          "values": [
+            2.8,
+            1,
+            4,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "3-12",
+          "values": [
+            2.9,
+            1,
+            4,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "3-12",
+          "values": [
+            3,
+            1,
+            4,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 0,
+          "rangeId": "3-12",
+          "values": [
+            3.1,
+            2,
+            5,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 0,
+          "rangeId": "3-12",
+          "values": [
+            3.2,
+            2,
+            5,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 0,
+          "rangeId": "3-12",
+          "values": [
+            3.3,
+            2,
+            5,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 0,
+          "rangeId": "3-12",
+          "values": [
+            3.4,
+            3,
+            6,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 9,
+          "initSp": 2,
+          "rangeId": "3-12",
+          "values": [
+            3.6,
+            3,
+            6,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 4,
+          "rangeId": "3-12",
+          "values": [
+            3.8,
+            3,
+            6,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 6,
+          "rangeId": "3-12",
+          "values": [
+            4,
+            4,
+            6,
+            3
+          ]
+        }
+      ],
+      "description": "Deal <@ba.vup>{atk_scale:0%}</> ATK as Physical damage to up to <@ba.vup>{max_target}</> ground enemies in front, and cause targets with 3 or less Weight to <$ba.levitate>Levitate </><@ba.vup>{levitate}</> seconds\n<@ba.rem>Can store 2 charges</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "levitate",
+        "max_target",
+        "value"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_irene_3",
+      "name": "Judgment",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 34,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            2,
+            2,
+            1.8,
+            8,
+            0.375
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 34,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            2,
+            2,
+            1.9,
+            8,
+            0.375
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 34,
+          "initSp": 8,
+          "rangeId": "x-1",
+          "values": [
+            2,
+            2,
+            2,
+            8,
+            0.375
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 32,
+          "initSp": 8,
+          "rangeId": "x-1",
+          "values": [
+            2.5,
+            2,
+            2,
+            10,
+            0.3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 32,
+          "initSp": 12,
+          "rangeId": "x-1",
+          "values": [
+            2.5,
+            2,
+            2.1,
+            10,
+            0.3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 32,
+          "initSp": 16,
+          "rangeId": "x-1",
+          "values": [
+            2.5,
+            2,
+            2.2,
+            10,
+            0.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 30,
+          "initSp": 16,
+          "rangeId": "x-1",
+          "values": [
+            2.5,
+            3,
+            2.3,
+            10,
+            0.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 28,
+          "initSp": 16,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            3,
+            2.3,
+            12,
+            0.25
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 26,
+          "initSp": 16,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            3,
+            2.4,
+            12,
+            0.25
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 24,
+          "initSp": 16,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            4,
+            2.5,
+            12,
+            0.25
+          ]
+        }
+      ],
+      "description": "Deal <@ba.vup>{atk_scale:0%}</> ATK as Physical damage to all nearby ground enemies, and cause them to <$ba.levitate>Levitate </><@ba.vup>{levitate}</> seconds, then bombard <@ba.vup>{multi_times}</> times, each hit dealing <@ba.vup>{multi_atk_scale:0%}</> ATK as Physical damage to all enemies in a small area around a random target",
+      "blackboardKeys": [
+        "atk_scale",
+        "levitate",
+        "multi_atk_scale",
+        "multi_times",
+        "multi_hit_interval"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-12": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    },
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_doubleProf[000]",
+          "name": "Sword and Handcannon",
+          "room": "TRAINING",
+          "icon": "bskill_train_vanguard&sniper",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> and <@cc.kw>Sniper</> Operators' Specialization training speed<@cc.vup>+30%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd_reduceTime[000]",
+          "name": "Mental Training",
+          "room": "TRAINING",
+          "icon": "bskill_train_reduceTime",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Training Room to train an Operator for <@cc.vup>5</> hours, that Operator's next training time <@cc.vup>-50%</> (effect expires if either Operator leaves the Training Room)"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Flames of Castigation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Physical damage has a 50% chance to ignore 30% DEF. Chance increases to 100% against aerial units."
+        },
+        {
+          "name": "Flames of Castigation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Physical damage has a 50% chance to ignore 50% DEF. Chance increases to 100% against aerial units."
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Sword of Cleansing",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +18. Effect doubles when there are [Sea Monster] enemies on the battlefield."
+        },
+        {
+          "name": "Sword of Cleansing",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "ASPD +21<@ba.talpu>(+3)</>. Effect doubles when there are [Sea Monster] enemies on the battlefield."
+        }
+      ]
+    }
+  ]
+}

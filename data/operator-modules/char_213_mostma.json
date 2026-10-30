@@ -1,0 +1,230 @@
+{
+  "operatorId": "char_213_mostma",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "3-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_mostma",
+      "name": "Home of 'Black Lock' and 'White Key'",
+      "region": "en",
+      "type": "SPC-Y",
+      "icon": "spc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 100 enemies with Mostima (excluding Support Units)",
+        "Clear Code of Brawl CB-5 with a 3-star rating; You must deploy your own Mostima, and have her defeat at least 8 enemies, including at least 1 Bully"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "cost": -8,
+            "atk": 51,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "cost": -8,
+            "atk": 68,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Subjective Time Dilation",
+              "description": "Slows the movement speed of enemies within this unit's attack range by 25%; Slows the movement speed of enemies outside this unit's attack range by 10% (unaffected by skill)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Subjective Time Dilation",
+              "description": "Slows the movement speed of enemies within this unit's attack range by 28% <@ba.talpu>(+3%)</>; Slows the movement speed of enemies outside this unit's attack range by 10% (unaffected by skill)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "cost": -8,
+            "atk": 82,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Subjective Time Dilation",
+              "description": "Slows the movement speed of enemies within this unit's attack range by 30%; Slows the movement speed of enemies outside this unit's attack range by 18% (unaffected by skill)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Subjective Time Dilation",
+              "description": "Slows the movement speed of enemies within this unit's attack range by 33% <@ba.talpu>(+3%)</>; Slows the movement speed of enemies outside this unit's attack range by 18% (unaffected by skill)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_mostma",
+      "name": "Veteran Legatus' Customized Cloak",
+      "region": "en",
+      "type": "SPC-X",
+      "icon": "spc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Mostima use Key of Chronology a total of 5 times",
+        "Clear Darknights Memoir DM-3 with a 3-star rating; You must deploy your own Mostima and have her defeat at least 3 Sarkaz Lancers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 55
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 165,
+            "atk": 68
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Skill Aura - Caster",
+              "description": "When deployed, increases the SP recovery rate of all Casters by +0.5/second, while own SP recovery rate increases by +0.7/second (only the highest effect of this type will be applied)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 80
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Skill Aura - Caster",
+              "description": "When deployed, increases the SP recovery rate of all Casters by +0.6/second, while own SP recovery rate increases by +0.9/second (only the highest effect of this type will be applied)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

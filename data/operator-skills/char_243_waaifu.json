@@ -1,0 +1,443 @@
+{
+  "operatorId": "char_243_waaifu",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_waaifu_1",
+      "name": "One-inch Punch",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.25,
+            -0.2,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.3,
+            -0.2,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.35,
+            -0.2,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.4,
+            -0.25,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.45,
+            -0.25,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.5,
+            -0.25,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.55,
+            -0.3,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.6,
+            -0.33,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.65,
+            -0.36,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.7,
+            -0.4,
+            3
+          ]
+        }
+      ],
+      "description": "After deployment, ATK <@ba.vup>+{waaifu_s_1[self].atk:0%}</>, and the ATK of the target attacked by Waai Fu <@ba.vup>-{-attack@waaifu_s_1[debuff].atk:0%}</> for <@ba.vup>{attack@waaifu_s_1[debuff].duration}</> seconds",
+      "blackboardKeys": [
+        "waaifu_s_1[self].atk",
+        "attack@waaifu_s_1[debuff].atk",
+        "attack@waaifu_s_1[debuff].duration"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_waaifu_2",
+      "name": "Seven-styles Kick",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.8,
+            5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.9,
+            5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2,
+            5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.1,
+            6
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.2,
+            6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.3,
+            6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.4,
+            7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.55,
+            7
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.7,
+            7
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.9,
+            8
+          ]
+        }
+      ],
+      "description": "After deployment, immediately deals <@ba.vup>{atk_scale:0%}</> ATK as physical damage to surrounding enemies and silences their special abilities for <@ba.vup>{silence}</> seconds",
+      "blackboardKeys": [
+        "atk_scale",
+        "silence"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_cost_all[000]",
+          "name": "Team Spirit",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_cost_all",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>ignore</> the effects of any Operators stationed in that Factory that would affect the Morale consumption of <@cc.kw>this Operator</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_variable2[000]",
+          "name": "Cooperative Will",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_variable21",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, provides an additional <@cc.vup>5%</> productivity for every <@cc.vup>5%</> productivity provided by all other Operators assigned to that Factory (excluding the additional productivity affected by facility count), up to a maximum of <@cc.vup>40%</> productivity."
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Hong Mei Wing Chun",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 20% chance to increase ATK to 125% and slightly knock the target back"
+        },
+        {
+          "name": "Hong Mei Wing Chun",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, has a 20% chance to increase ATK to 135% <@ba.talpu>(+10%)</> and slightly knock the target back"
+        },
+        {
+          "name": "Hong Mei Wing Chun",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 20% chance to increase ATK to 150% and slightly knock the target back"
+        },
+        {
+          "name": "Hong Mei Wing Chun",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, has a 20% chance to increase ATK to 160% <@ba.talpu>(+10%)</> and slightly knock the target back"
+        }
+      ]
+    }
+  ]
+}

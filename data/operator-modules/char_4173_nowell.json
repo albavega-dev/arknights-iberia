@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_4173_nowell",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_nowell",
+      "name": "To Grandpa",
+      "region": "en",
+      "type": "WAH-Y",
+      "icon": "wah-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Nowell, and unleash Unending Life at least 1 time in each battle",
+        "Clear Main Theme 5-7 with a 3-star rating; You must deploy your own Nowell, and cannot include any other Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 25
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 33
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Precise Prescription",
+              "description": "Healing increases to 130% when healing an Operator affected by negative status"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Precise Prescription",
+              "description": "Healing increases to 133% <@ba.talpu>(+3%)</> when healing an Operator affected by negative status"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 38
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Precise Prescription",
+              "description": "Healing increases to 135% when healing an Operator affected by negative status"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Precise Prescription",
+              "description": "Healing increases to 138% <@ba.talpu>(+3%)</> when healing an Operator affected by negative status"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

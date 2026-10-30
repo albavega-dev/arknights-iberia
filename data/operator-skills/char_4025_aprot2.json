@@ -1,0 +1,453 @@
+{
+  "operatorId": "char_4025_aprot2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_aprot2_1",
+      "name": "Rapid Onslaught",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 10,
+          "description": "Attack Interval <@ba.vup>reduces slightly</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.15,
+            0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 10,
+          "description": "Attack Interval <@ba.vup>reduces slightly</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.15,
+            0.15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "description": "Attack Interval <@ba.vup>reduces slightly</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.15,
+            0.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 11,
+          "description": "Attack Interval <@ba.vup>reduces a little</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.25,
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 11,
+          "description": "Attack Interval <@ba.vup>reduces a little</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.25,
+            0.25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 11,
+          "description": "Attack Interval <@ba.vup>reduces a little</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.25,
+            0.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 24,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 12,
+          "description": "Attack Interval <@ba.vup>reduces</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.35,
+            0.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 13,
+          "description": "Attack Interval <@ba.vup>reduces</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.35,
+            0.4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 14,
+          "description": "Attack Interval <@ba.vup>reduces</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.35,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "description": "Attack Interval <@ba.vup>reduces moderately</>, Max HP <@ba.vup>+{max_hp:0%}</> and attack all blocked enemies",
+          "values": [
+            -0.45,
+            0.5
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "base_attack_time",
+        "max_hp"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_aprot2_2",
+      "name": "Carnival of Self-Immolation",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 32,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.55,
+            4,
+            0.05
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 31,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.57,
+            4,
+            0.05
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 30,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.6,
+            4,
+            0.05
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 29,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.6,
+            5,
+            0.05
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 28,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.63,
+            5,
+            0.05
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 27,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.65,
+            5,
+            0.05
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 26,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.65,
+            6,
+            0.05
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 24,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.7,
+            6,
+            0.05
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 22,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.75,
+            6,
+            0.05
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 20,
+          "initSp": 0,
+          "rangeId": "2-5",
+          "values": [
+            0.8,
+            6,
+            0.05
+          ]
+        }
+      ],
+      "description": "Lose <@ba.vdown>{hp_ratio:0%}</> HP every second, Attack Range <@ba.vup>expands</> and attacks change to firing <@ba.vup>{attack@times}</> times with <@ba.vup>{attack@atk_scale:0%}</> ATK at random enemies within Attack Range",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "attack@times",
+        "hp_ratio"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession3[130]",
+          "name": "Defender Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_defender1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Defender</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession3[131]",
+          "name": "Combat Techniques: Arts Protector",
+          "room": "TRAINING",
+          "icon": "bskill_train_artsprotector",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Defender</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Arts Protector</>, training speed will be further increased by <@cc.vup>+45%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Land of Memories",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "In [Phantom & Crimson Solitaire], ASPD +10"
+        },
+        {
+          "name": "Land of Memories",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "In [Phantom & Crimson Solitaire], ATK +5% and ASPD +20"
+        },
+        {
+          "name": "Land of Memories",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "In [Phantom & Crimson Solitaire], ATK +15% and ASPD +30"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Proclamation of Doom",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks have 20% chance to reduce the target's RES by 25% for 3 seconds"
+        },
+        {
+          "name": "Proclamation of Doom",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks have 25% <@ba.talpu>(+5%)</> chance to reduce the target's RES by 25% for 3 seconds"
+        }
+      ]
+    }
+  ]
+}

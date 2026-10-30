@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_4054_malist",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_malist",
+      "name": "'New Home'",
+      "region": "en",
+      "type": "FUN-Y",
+      "icon": "fun-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Minimalist use Prodigious Craftsmanship a total of 20 times (excluding Support Units)",
+        "Clear Ideal City: Endless Carnival IC-8 with a 3-star rating; You must deploy your own Minimalist, and have him defeat at least 2 Mead-Grade Waker-Uppers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 20
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 85,
+            "atk": 25
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flash of Insight",
+              "description": "When attacking, 30% chance to increase that attack's ATK to 155%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Flash of Insight",
+              "description": "When attacking, 35% <@ba.talpu>(+5%)</> chance to increase that ATK to 155%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Flash of Insight",
+              "description": "When attacking, 30% chance to increase that attack's ATK to 160%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Flash of Insight",
+              "description": "When attacking, 35% <@ba.talpu>(+5%)</> chance to increase that ATK to 160%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

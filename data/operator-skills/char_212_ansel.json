@@ -1,0 +1,195 @@
+{
+  "operatorId": "char_212_ansel",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_range_extend",
+      "name": "Healing Range Up",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 19,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 10,
+          "values": [
+            0.05,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 10,
+          "values": [
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 10,
+          "values": [
+            0.15,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "values": [
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 10,
+          "values": [
+            0.25,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 24,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 10,
+          "values": [
+            0.3,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            0.4,
+            2
+          ]
+        }
+      ],
+      "description": "Range <@ba.vup>+{ABILITY_RANGE_FORWARD_EXTEND} tiles</>; ATK <@ba.vup>+{atk:0%}</>",
+      "blackboardKeys": [
+        "atk",
+        "ability_range_forward_extend"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single[010]",
+          "name": "Thoughtfulness",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.55</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_probability[110]",
+          "name": "Pharmacology·α",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_evolve2",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>elite material</>, the production rate of byproduct increases by <@cc.vup>75%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Additional Healing",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "7% chance to heal 1 extra ally"
+        },
+        {
+          "name": "Additional Healing",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "10% <@ba.talpu>(+3%)</> chance to heal 1 extra ally"
+        },
+        {
+          "name": "Additional Healing",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 1,
+          "description": "15% chance to heal 1 extra ally"
+        },
+        {
+          "name": "Additional Healing",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 5,
+          "description": "18% <@ba.talpu>(+3%)</> chance to heal 1 extra ally"
+        }
+      ]
+    }
+  ]
+}

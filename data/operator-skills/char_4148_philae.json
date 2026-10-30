@@ -1,0 +1,413 @@
+{
+  "operatorId": "char_4148_philae",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_philae_1",
+      "name": "Blessing of the River of Life",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "values": [
+            0.3,
+            600
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 0,
+          "values": [
+            0.35,
+            700
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 0,
+          "values": [
+            0.4,
+            800
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "values": [
+            0.45,
+            900
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 5,
+          "values": [
+            0.5,
+            1000
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 5,
+          "values": [
+            0.55,
+            1100
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 5,
+          "values": [
+            0.6,
+            1200
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 10,
+          "values": [
+            0.7,
+            1400
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 10,
+          "values": [
+            0.8,
+            1600
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 10,
+          "values": [
+            0.9,
+            1800
+          ]
+        }
+      ],
+      "description": "Max HP <@ba.vup>+{max_hp:0%}</>, clears all <$ba.dt.element>Elemental Injury</> on self and gains a <$ba.epbarrier>Protective Barrier</> that absorbs up to <@ba.vup>{shield_value}</> Elemental Injury",
+      "blackboardKeys": [
+        "max_hp",
+        "shield_value"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_philae_2",
+      "name": "Curse of the River of Death",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 10,
+          "values": [
+            0.8,
+            0.25,
+            0.6,
+            2,
+            0.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 11,
+          "values": [
+            0.9,
+            0.25,
+            0.6,
+            2,
+            0.33
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 12,
+          "values": [
+            1,
+            0.25,
+            0.6,
+            2,
+            0.36
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 13,
+          "values": [
+            1.1,
+            0.25,
+            0.7,
+            2,
+            0.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 14,
+          "values": [
+            1.2,
+            0.25,
+            0.7,
+            2,
+            0.43
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 15,
+          "values": [
+            1.3,
+            0.25,
+            0.7,
+            2,
+            0.46
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 17,
+          "values": [
+            1.4,
+            0.25,
+            0.8,
+            2,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 18,
+          "values": [
+            1.6,
+            0.25,
+            0.85,
+            2,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 19,
+          "values": [
+            1.8,
+            0.25,
+            0.9,
+            2,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 20,
+          "values": [
+            2,
+            0.25,
+            1,
+            2,
+            0.5
+          ]
+        }
+      ],
+      "description": "Stops attacking, Max HP <@ba.vup>+{max_hp:0%}</>; when attacked, deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage to surrounding ground enemies and an additional <@ba.vup>{ep_damage_ratio:0%}</> ATK as <$ba.dt.apoptosis2>Necrosis</> (can only trigger once every <@ba.vup>{aoe_cd}</>s); if Elemental Injury is received while skill is active, ATK <@ba.vup>+{atk:0%}</> until this skill ends",
+      "blackboardKeys": [
+        "atk_scale",
+        "ep_damage_ratio",
+        "atk",
+        "aoe_cd",
+        "max_hp"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[005]",
+          "name": "River Charge α",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_spd&dorm&lv[000]",
+          "name": "River Resonance",
+          "room": "POWER",
+          "icon": "bskill_power_rec_spd&dorm&lv",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, drone recovery rate <@cc.vup>+0.5%</> for every level of each Dormitory"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Herald of the Divine River",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Receives -5% Elemental Injury, and recovers 1 SP when receiving Necrosis"
+        },
+        {
+          "name": "Herald of the Divine River",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Receives -7% <@ba.talpu>(+2%)</> Elemental Injury, and recovers 1 SP when receiving Necrosis"
+        },
+        {
+          "name": "Herald of the Divine River",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Receives -10% Elemental Injury, and recovers 2 SP when receiving Necrosis"
+        },
+        {
+          "name": "Herald of the Divine River",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Receives -12% <@ba.talpu>(+2%)</> Elemental Injury, and recovers 2 SP when receiving Necrosis"
+        }
+      ]
+    }
+  ]
+}

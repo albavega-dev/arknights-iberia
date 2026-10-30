@@ -1,0 +1,680 @@
+{
+  "operatorId": "char_322_lmlee",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_lmlee_1",
+      "name": "Stern Admonishment",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            0.1,
+            0.15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            0.15,
+            0.15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            0.2,
+            0.15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            0.25,
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            0.35,
+            0.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            0.4,
+            0.25
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            0.45,
+            0.3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.35
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            0.6,
+            0.4
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</> and gain <@ba.vup>{prob:0%}</> Arts Dodge\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk",
+        "prob"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_lmlee_2",
+      "name": "Exorcise Evil",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "values": [
+            2,
+            0.05,
+            20,
+            1,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "values": [
+            2.1,
+            0.05,
+            20,
+            1,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "values": [
+            2.2,
+            0.05,
+            20,
+            1,
+            5,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            2.3,
+            0.1,
+            20,
+            1,
+            5,
+            15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            2.4,
+            0.1,
+            20,
+            1,
+            5,
+            15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            2.5,
+            0.1,
+            20,
+            1,
+            5,
+            15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            2.6,
+            0.15,
+            25,
+            1,
+            5,
+            20
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            2.7,
+            0.15,
+            25,
+            1,
+            5,
+            20
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2.8,
+            0.15,
+            25,
+            1,
+            5,
+            20
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            3,
+            0.2,
+            30,
+            1,
+            5,
+            30
+          ]
+        }
+      ],
+      "description": "Passive Effect: ASPD <@ba.vup>+{attack_speed}</>; Active Effect: Marks the target and makes them easier to be targeted by allies. The mark explodes after <@ba.vup>{paper_duration}</> seconds, dealing <@ba.vup>{default_atk_scale:0%}</> Arts damage to nearby enemies. Every hit on the marked target by allies increases the explosion damage by <@ba.vup>{factor_atk_scale:0%}</> of Lee's ATK (increases up to <@ba.vup>{max_stack_cnt}</> times, and prematurely explodes if the limit is reached or the target is defeated)",
+      "blackboardKeys": [
+        "default_atk_scale",
+        "factor_atk_scale",
+        "max_stack_cnt",
+        "taunt_level",
+        "paper_duration",
+        "attack_speed"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_lmlee_3",
+      "name": "Honored Guest",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.25,
+            0.25,
+            1,
+            0.5,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.27,
+            0.27,
+            1,
+            0.5,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.29,
+            0.29,
+            1,
+            0.5,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.31,
+            0.31,
+            1,
+            0.55,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.33,
+            0.33,
+            1,
+            0.55,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.35,
+            0.35,
+            1,
+            0.55,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.37,
+            0.37,
+            1,
+            0.6,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.4,
+            0.4,
+            1,
+            0.6,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.45,
+            0.45,
+            1,
+            0.6,
+            1,
+            0
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            0.5,
+            0.5,
+            1,
+            0.7,
+            1,
+            0
+          ]
+        }
+      ],
+      "description": "<@ba.vup>Expands</> Attack Range, ATK and DEF <@ba.vup>+{atk:0%}</>; Besides the current target, all enemies within range are pushed away <@ba.vup>slightly</> every time Lee attacks. Increases the likelihood of being targeted by enemy attacks and gains a <@ba.vup>{prob:0%}</> chance to dodge Physical or Arts attacks coming from outside his Attack Range\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "taunt_level",
+        "prob",
+        "attack@prob_knockback",
+        "attack@force"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_allCost_condChar[000]",
+          "name": "Moment of Respite",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_lda",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned together with <@cc.kw>Aak</> to the Control Center, increases Morale recovery per hour of all Operators in the Control Center by <@cc.vup>+0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_upMeetingSpeed[000]",
+          "name": "Worldly Insight",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_spd",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, clue collection speed <@cc.vup>+25%</> (Only the strongest effect of this type takes place)."
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Kindness Begets Prosperity",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Lee is blocking an enemy, the enemy has ASPD -7 and Lee has ASPD +7; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+        },
+        {
+          "name": "Kindness Begets Prosperity",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Lee is blocking an enemy, the enemy has ASPD -8 <@ba.talpu>(+1)</> and Lee has ASPD +8 <@ba.talpu>(+1)</>; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+        },
+        {
+          "name": "Kindness Begets Prosperity",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Lee is blocking an enemy, the enemy has ASPD -14 and Lee has ASPD +14; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+        },
+        {
+          "name": "Kindness Begets Prosperity",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Lee is blocking an enemy, the enemy has ASPD -15 <@ba.talpu>(+1)</> and Lee has ASPD +15 <@ba.talpu>(+1)</>; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Preparedness Averts Peril",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When DP is consumed by this unit's Trait, if there is sufficient DP, consumes 5 DP instead to block the next <$ba.stun>Stun</>/<$ba.frozen>Freeze</> effect inflicted on this unit, and stuns the attacker for 3 seconds"
+        }
+      ]
+    }
+  ]
+}

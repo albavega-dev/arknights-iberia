@@ -1,6 +1,11 @@
 import fs from "node:fs";
 import { pathToFileURL } from "node:url";
 
+function compareCodeUnits(a, b) {
+  if (a < b) return -1;
+  return a > b ? 1 : 0;
+}
+
 const DEFAULT_SNAPSHOT = "C:/Users/albav/Documents/arknights-iberia-research/operator-range-snapshots/en/3aaa25b649fed5dedad9527602826dc487ea07d8/character_table.json";
 const DEFAULT_FACTION_MANIFEST = "data/operator-faction-manifest.json";
 const DEFAULT_AFFILIATION_MANIFEST = "data/operator-affiliation-manifest.json";
@@ -50,7 +55,7 @@ export function extractSubPowerCandidates({ characterTable, catalog, affiliation
   const duplicateKeys = [];
   const seenOriginal = new Set();
   const snapshotIds = new Set(Object.keys(characterTable));
-  for (const operatorId of [...catalogIds].sort()) {
+  for (const operatorId of [...catalogIds].sort(compareCodeUnits)) {
     const operator = characterTable[operatorId];
     if (!operator) continue;
     const subPower = Array.isArray(operator.subPower) ? operator.subPower : [];
@@ -73,7 +78,7 @@ export function extractSubPowerCandidates({ characterTable, catalog, affiliation
     const field = entry.sourceField?.includes("groupId") ? "groupId" : entry.sourceField?.includes("teamId") ? "teamId" : "nationId";
     return !sourceRelationKeys.has(relationKey(entry.operatorId, field, entry.affiliationId.replace(/^faction:/, "")));
   });
-  const missingCatalogSnapshotIds = [...catalogIds].filter((id) => !snapshotIds.has(id)).sort();
+  const missingCatalogSnapshotIds = [...catalogIds].filter((id) => !snapshotIds.has(id)).sort(compareCodeUnits);
   const summary = {
     catalogOperators: catalogIds.size,
     snapshotOperatorsInCatalog: [...catalogIds].filter((id) => snapshotIds.has(id)).length,

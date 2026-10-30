@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4225_tanya",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_tanya",
+      "name": "'The Rinsing'",
+      "region": "en",
+      "type": "PRP-X",
+      "icon": "prp-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Trigger a total of 3 Corrosion Bursts with your own Crackborne",
+        "Clear Near Light NL-7 with a 3-star rating; You must deploy your own Crackborne, and use Cracking Dam at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 200,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 270,
+            "def": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Shoddy Solvent Tolerance",
+              "description": "Receives -13% <$ba.dt.element>Elemental Injury</>, and an additional -15% against <$ba.dt.erosion>Corrosion</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Shoddy Solvent Tolerance",
+              "description": "Receives -15% <@ba.talpu>(+2%)</> <$ba.dt.element>Elemental Injury</>, and an additional -17% <@ba.talpu>(+2%)</> against <$ba.dt.erosion>Corrosion</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 350,
+            "def": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Deals <@ba.kw>15%</> more Elemental Injury when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "ep_damage_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Shoddy Solvent Tolerance",
+              "description": "Receives -13% <$ba.dt.element>Elemental Injury</>, and an additional -18% against <$ba.dt.erosion>Corrosion</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Shoddy Solvent Tolerance",
+              "description": "Receives -15% <@ba.talpu>(+2%)</> <$ba.dt.element>Elemental Injury</>, and an additional -20% <@ba.talpu>(+2%)</> against <$ba.dt.erosion>Corrosion</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,408 @@
+{
+  "operatorId": "char_4052_surfer",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_surfer_1",
+      "name": "Search and Seek",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.35,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.45,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 14,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.5,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.55,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.6,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.7,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.8,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 19,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.9,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            1,
+            1
+          ]
+        }
+      ],
+      "description": "After deployment, ATK <@ba.vup>+{atk:0%}</>. Generates <@ba.vup>{cost}</> DP after each attack",
+      "blackboardKeys": [
+        "atk",
+        "cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_surfer_2",
+      "name": "Quick Learner",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 10,
+          "values": [
+            10,
+            1,
+            10,
+            100,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            15,
+            1,
+            12,
+            120,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 10,
+          "values": [
+            20,
+            1,
+            15,
+            120,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 11,
+          "values": [
+            25,
+            1,
+            20,
+            140,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 11,
+          "values": [
+            30,
+            1,
+            25,
+            150,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 11,
+          "values": [
+            35,
+            1,
+            30,
+            180,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 12,
+          "values": [
+            40,
+            1,
+            40,
+            200,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 13,
+          "values": [
+            47,
+            1,
+            45,
+            225,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 14,
+          "values": [
+            54,
+            1,
+            50,
+            250,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 15,
+          "values": [
+            60,
+            1,
+            55,
+            275,
+            1
+          ]
+        }
+      ],
+      "description": "ASPD <@ba.vup>+{attack_speed}</>, each attack grants <@ba.vup>{cost}</> DP, and <$ba.steal>Steals</> <@ba.vup>{def_steal}</> DEF from the target (max <@ba.vup>{def_steal_max}</>, lasts until skill ends or Surfer is retreated)",
+      "blackboardKeys": [
+        "attack_speed",
+        "cost",
+        "def_steal",
+        "def_steal_max",
+        "mode"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd&sami[100]",
+          "name": "Networking Expert",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&blacksteel1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases Clue search speed by <@cc.vup>10%</>, and when assigned together with another <$cc.g.bs><@cc.kw>Blacksteel Worldwide</></> Operator, increases Clue search speed by an additional <@cc.vup>15%</> while self Morale loss per hour <@cc.vdown>+0.5</>"
+        },
+        {
+          "buffId": "meet_spd&sami[110]",
+          "name": "Information Gathering",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&blacksteel2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases Clue search speed by <@cc.vup>10%</>, and when assigned together with another <$cc.g.bs><@cc.kw>Blacksteel Worldwide</></> Operator, increases Clue search speed by an additional <@cc.vup>20%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Solo Traveler",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 1 DP"
+        },
+        {
+          "name": "Solo Traveler",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 2 <@ba.talpu>(+1)</> DP"
+        },
+        {
+          "name": "Solo Traveler",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 2 DP"
+        },
+        {
+          "name": "Solo Traveler",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 3 <@ba.talpu>(+1)</> DP"
+        }
+      ]
+    }
+  ]
+}

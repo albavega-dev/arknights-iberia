@@ -1,3 +1,4 @@
+import { compareCodeUnits } from "../src/game-data/string-order";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
@@ -37,7 +38,7 @@ const files = new Set((tree.tree ?? []).filter((entry) => entry.type === "blob" 
 const operators: IllustrationManifest["operators"] = {};
 const rawBase = `https://raw.githubusercontent.com/${repository}/${commit}/characters`;
 
-for (const operatorId of operatorIds.sort()) {
+for (const operatorId of operatorIds.sort(compareCodeUnits)) {
   const baseFile = `${operatorId}_1.png`;
   const elite2File = `${operatorId}_2.png`;
   if (!files.has(baseFile)) throw new Error(`Missing base illustration for ${operatorId}`);

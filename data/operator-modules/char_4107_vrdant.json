@@ -1,0 +1,130 @@
+{
+  "operatorId": "char_4107_vrdant",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_vrdant",
+      "name": "Trophies from the Jungle",
+      "region": "en",
+      "type": "PUM-Y",
+      "icon": "pum-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Deal a total of 60,000 damage with Verdant (excluding Support Units)",
+        "Clear Main Theme 9-3 with a 3-star rating under Standard Environment; You must deploy your own Verdant, and use Double-edged Poison Ivy at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 28
+          },
+          "rangeId": "x-4",
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 38
+          },
+          "rangeId": "x-4",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Vegetative Regeneration",
+              "description": "<Substitute> restores 3.5% HP per second and gains +5 RES"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Vegetative Regeneration",
+              "description": "<Substitute> restores 4% <@ba.talpu>(+0.5%)</> HP per second and gains +5 RES"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 185,
+            "atk": 45
+          },
+          "rangeId": "x-4",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Vegetative Regeneration",
+              "description": "<Substitute> restores 3.5% HP per second and gains +8 RES"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Vegetative Regeneration",
+              "description": "<Substitute> restores 4% <@ba.talpu>(+0.5%)</> HP per second and gains +8 RES"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

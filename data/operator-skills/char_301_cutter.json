@@ -1,0 +1,506 @@
+{
+  "operatorId": "char_301_cutter",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_cutter_1",
+      "name": "Redshift",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 16,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            2,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 16,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            2.1,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 16,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            2.2,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            2.4,
+            4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            2.5,
+            4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            2.6,
+            4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            2.8,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            3,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            3.2,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 5,
+          "rangeId": "3-12",
+          "values": [
+            3.4,
+            4
+          ]
+        }
+      ],
+      "description": "Immediately attacks random enemies within range <@ba.vup>{times}</> times with throwing knives, each knife dealing <@ba.vup>{atk_scale:0%}</> of ATK as physical damage.",
+      "blackboardKeys": [
+        "atk_scale",
+        "times"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_cutter_2",
+      "name": "Crimson Crescent",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 17,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            5,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 17,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            5,
+            3.1,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 17,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            5,
+            3.2,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 16,
+          "initSp": 1,
+          "rangeId": "x-1",
+          "values": [
+            5,
+            3.4,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 16,
+          "initSp": 1,
+          "rangeId": "x-1",
+          "values": [
+            5,
+            3.5,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 16,
+          "initSp": 1,
+          "rangeId": "x-1",
+          "values": [
+            5,
+            3.6,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 2,
+          "rangeId": "x-1",
+          "values": [
+            6,
+            3.8,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 3,
+          "rangeId": "x-1",
+          "values": [
+            6,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            6,
+            4.2,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 5,
+          "rangeId": "x-1",
+          "values": [
+            6,
+            4.5,
+            2
+          ]
+        }
+      ],
+      "description": "Deals <@ba.vup>{atk_scale:0%}</> Physical damage to up to <@ba.vup>{max_target}</> nearby enemies\n<@ba.rem>Damage is doubled against aerial enemies</>",
+      "blackboardKeys": [
+        "max_target",
+        "atk_scale",
+        "cutter_s_2[drone].atk_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-12": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    },
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_formula_probability[300]",
+          "name": "Training Record",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_asc1",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Chips</>, the production rate of byproduct increases by <@cc.vup>70%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_cost3[300]",
+          "name": "Asceticism",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_asc_cost1",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>Chips</>, reduces the Morale consumed by all corresponding formulas that cost <@cc.kw>2</> Morale by <@cc.vup>-1</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Photoetched Marks",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing damage, has 12% chance to recover 1 additional SP"
+        },
+        {
+          "name": "Photoetched Marks",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When dealing damage, has 15% <@ba.talpu>(+3%)</> chance to recover 1 additional SP"
+        },
+        {
+          "name": "Photoetched Marks",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing damage, has 20% chance to recover 1 additional SP"
+        },
+        {
+          "name": "Photoetched Marks",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When dealing damage, has 23% <@ba.talpu>(+3%)</> chance to recover 1 additional SP"
+        }
+      ]
+    }
+  ]
+}

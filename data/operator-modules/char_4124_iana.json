@@ -1,0 +1,146 @@
+{
+  "operatorId": "char_4124_iana",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_iana",
+      "name": "'Distant and Less Familiar World'",
+      "region": "en",
+      "type": "PUM-X",
+      "icon": "pum-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Iana use Omniscient Tactics a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 3-7 with a 3-star rating; You must deploy your own Iana, and use Omniscient Tactics at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 45,
+            "def": 25
+          },
+          "rangeId": "x-1",
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 55,
+            "def": 35
+          },
+          "rangeId": "x-1",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Gemini Replicator",
+              "description": "When deployed, creates a Holographic Mirage at that location; the Mirage will not attack, but when attacked, inflicts 25% Fragile to the attacker and nullifies the attacker's Invisibility for 10s, and immediately switches to a <Substitute>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Gemini Replicator",
+              "description": "When deployed, creates a Holographic Mirage at that location; the Mirage will not attack, but when attacked, inflicts 27%<@ba.talpu>（+2%）</> Fragile to the attacker and nullifies the attacker's Invisibility for 10s, and immediately switches to a <Substitute>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 65,
+            "def": 40
+          },
+          "rangeId": "x-1",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Gemini Replicator",
+              "description": "When deployed, creates a Holographic Mirage at that location; the Mirage will not attack, but when attacked, inflicts 28% Fragile to the attacker and nullifies the attacker's Invisibility for 10s, and immediately switches to a <Substitute>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Gemini Replicator",
+              "description": "When deployed, creates a Holographic Mirage at that location; the Mirage will not attack, but when attacked, inflicts 30%<@ba.talpu>（+2%）</> Fragile to the attacker and nullifies the attacker's Invisibility for 10s, and immediately switches to a <Substitute>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "operatorId": "char_4142_laios",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_laios_1",
+      "name": "Cowardly Kensuke",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.75,
+            0.25
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.7,
+            0.25
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.7,
+            0.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.65,
+            0.3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.65,
+            0.35
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.6,
+            0.35
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.55
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.7
+          ]
+        }
+      ],
+      "description": "When HP is above <@ba.vup>{peak_performance.hp_ratio:0%}</>, gains <$ba.strong>Vigor</> effect of <@ba.vup>+{peak_performance.atk:0%}</> ATK\nThe first time a Leader enemy appears on the field, Laios cannot attack for <@ba.vdown>15</> seconds",
+      "blackboardKeys": [
+        "peak_performance.hp_ratio",
+        "peak_performance.atk"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_laios_2",
+      "name": "Intimidation Tactics",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            2.8,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 10,
+          "values": [
+            2.9,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 10,
+          "values": [
+            3,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 10,
+          "values": [
+            3.2,
+            10
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 10,
+          "values": [
+            3.4,
+            10
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 10,
+          "values": [
+            3.6,
+            10
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 10,
+          "values": [
+            3.8,
+            10
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 10,
+          "values": [
+            4,
+            10
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 10,
+          "values": [
+            4.2,
+            10
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 10,
+          "values": [
+            4.5,
+            10
+          ]
+        }
+      ],
+      "description": "Stops attacking; enemies blocked during skill are <$ba.tremble>Frightened</>. Once skill ends, immediately deals <@ba.vup>{atk_scale:0%}</> ATK as Physical damage to blocked enemies",
+      "blackboardKeys": [
+        "atk_scale",
+        "not_combat"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd[021]",
+          "name": "Curiosity",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>20%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd_bd[001]",
+          "name": "Gourmand",
+          "room": "MEETING",
+          "icon": "bskill_meet_bd_dungeon",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases Clue search speed by an additional <@cc.vup>2%</> for every <@cc.vup>1</> <$cc.bd_dungeon><@cc.rem>Monster Meal</></>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Dungeon Monster Expert",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After defeating an enemy, Laios ignores 20% DEF with every attack against enemies with the same name"
+        },
+        {
+          "name": "Dungeon Monster Expert",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After defeating an enemy, Laios ignores 40% DEF with every attack against enemies with the same name"
+        }
+      ]
+    }
+  ]
+}

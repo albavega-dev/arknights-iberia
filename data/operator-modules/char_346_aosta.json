@@ -1,0 +1,110 @@
+{
+  "operatorId": "char_346_aosta",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "1-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_aosta",
+      "name": "Emergency Kit",
+      "region": "en",
+      "type": "RPR-X",
+      "icon": "rpr-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Aosta use Shadow Nails a total of 8 times",
+        "Clear Main Theme 6-8 with a 3-star rating; You must deploy your own Aosta and have him defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 35
+          },
+          "rangeId": "1-3",
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 44
+          },
+          "rangeId": "1-3",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sharp Nails",
+              "description": "Attacks inflict Bleed to unblocked enemies, dealing 23% ATK as Arts damage (unaffected by trait) every second for 4 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sharp Nails",
+              "description": "Attacks inflict Bleed to unblocked enemies, dealing 25% <@ba.talpu>(+2%)</> ATK as Arts damage (unaffected by trait) every second for 4 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 50
+          },
+          "rangeId": "1-3",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sharp Nails",
+              "description": "Attacks inflict Bleed to unblocked enemies, dealing 25% ATK as Arts damage (unaffected by trait) every second for 5 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sharp Nails",
+              "description": "Attacks inflict Bleed to unblocked enemies, dealing 27% <@ba.talpu>(+2%)</> ATK as Arts damage (unaffected by trait) every second for 5 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

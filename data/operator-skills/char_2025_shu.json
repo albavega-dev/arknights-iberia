@@ -1,0 +1,824 @@
+{
+  "operatorId": "char_2025_shu",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_shu_1",
+      "name": "Verdant Wisdom",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.1,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.15,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.2,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.3,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.35,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.4,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.6,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.7,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.8,
+            3
+          ]
+        }
+      ],
+      "description": "The next attack restores HP equal to <@ba.vup>{heal_scale:0%}</> ATK to a nearby friendly unit with less than 50% HP\n<@ba.rem>Can store {ct} charge(s)</>",
+      "blackboardKeys": [
+        "heal_scale",
+        "ct"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_shu_2",
+      "name": "Bountiful Harvest",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            0.3,
+            1.2,
+            1,
+            2,
+            1.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            0.4,
+            1.2,
+            1,
+            2,
+            1.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            0.5,
+            1.2,
+            1,
+            2,
+            1.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "x-1",
+          "values": [
+            0.6,
+            1.3,
+            1,
+            2,
+            1.3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "x-1",
+          "values": [
+            0.7,
+            1.3,
+            1,
+            2,
+            1.3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "rangeId": "x-1",
+          "values": [
+            0.8,
+            1.3,
+            1,
+            2,
+            1.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "rangeId": "x-1",
+          "values": [
+            0.9,
+            1.4,
+            1,
+            2,
+            1.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            1.4,
+            1,
+            2,
+            1.3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "rangeId": "x-1",
+          "values": [
+            1.1,
+            1.4,
+            1,
+            2,
+            1.3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 20,
+          "rangeId": "x-1",
+          "values": [
+            1.2,
+            1.5,
+            1,
+            2,
+            1.3
+          ]
+        }
+      ],
+      "description": "<@ba.vdown>Stops</> attacking to focus on healing up to <@ba.vup>2</> allied units within range; ATK <@ba.vup>+{atk:0%}</>, Block <@ba.vup>+{block_cnt}</>, Talent 1 effect increases to <@ba.vup>{extra_extend_scale}</> x\n<@ba.rem>Heals will use a special attack interval</>",
+      "blackboardKeys": [
+        "atk",
+        "extra_extend_scale",
+        "block_cnt",
+        "attack@max_target",
+        "base_attack_time"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_shu_3",
+      "name": "Samsara",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 20,
+          "rangeId": "x-2",
+          "values": [
+            0.1,
+            0.1,
+            10,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 20,
+          "rangeId": "x-2",
+          "values": [
+            0.14,
+            0.1,
+            10,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 20,
+          "rangeId": "x-2",
+          "values": [
+            0.18,
+            0.1,
+            10,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 25,
+          "rangeId": "x-2",
+          "values": [
+            0.22,
+            0.15,
+            15,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 25,
+          "rangeId": "x-2",
+          "values": [
+            0.26,
+            0.15,
+            15,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 25,
+          "rangeId": "x-2",
+          "values": [
+            0.3,
+            0.15,
+            15,
+            1,
+            4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.34,
+            0.2,
+            20,
+            1,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.38,
+            0.2,
+            20,
+            1,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.44,
+            0.25,
+            25,
+            1,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.5,
+            0.25,
+            25,
+            1,
+            2
+          ]
+        }
+      ],
+      "description": "Healing range <@ba.vup>expands</>, attacks now also heal allied Operators, and ATK <@ba.vup>+{atk:0%}</>. If there are ground enemies on sowed tiles, all allied units within skill range gain <@ba.vup>+{e_atk:0%}</> ATK and <@ba.vup>+{e_attack_speed}</> ASPD; When an enemy passes through a sowed tile, it gains the following effect: Teleport back to this location after moving more than <@ba.vup>{max_distance}</> tile(s) away",
+      "blackboardKeys": [
+        "atk",
+        "e_atk",
+        "e_attack_speed",
+        "e_max_stack_cnt",
+        "max_distance"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    },
+    "x-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": -1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -2
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": -1
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    },
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_cost[000]",
+          "name": "Spring Thunder Sounds, All Life Crowned",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_cost_room1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, Morale consumed per hour of all Operators in the Factory <@cc.vup>-0.1</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_bd[300]",
+          "name": "Where Stalks Grow Deep, Autumn Reaps",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd7",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, for every <@cc.vup>3</> <$cc.bd_b1><@cc.rem>Worldly Plight</></>, Productivity <@cc.vup>+1%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Myriad Grains, Everlasting",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 40 HP/s, grants 5% <$ba.protect>Sanctuary</>"
+        },
+        {
+          "name": "Myriad Grains, Everlasting",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 45 <@ba.talpu>(+5)</> HP/s, grants 7% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>"
+        },
+        {
+          "name": "Myriad Grains, Everlasting",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 70 HP/s, grants 10% <$ba.protect>Sanctuary</>"
+        },
+        {
+          "name": "Myriad Grains, Everlasting",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When healing an Operator, sows seeds on that tile and the adjacent 4 tiles, bestowing the following effects: Restores 75 <@ba.talpu>(+5)</> HP/s, grants 12% <@ba.talpu>(+2%)</> <$ba.protect>Sanctuary</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "From Seasons Fourfold",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "If there are Operators with at least 3 different classes on the field, all Operators gain +12% Max HP; if there are at least 3 Operators with the same class on the field, all Operators gain +12 ASPD; if there are at least 4 [Sui] Operators in the squad, all Operators gain +12% ATK, and 1 SP every 4 seconds"
+        }
+      ]
+    }
+  ]
+}

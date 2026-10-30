@@ -1,3 +1,4 @@
+import { compareCodeUnits } from "../src/game-data/string-order";
 import { readFile } from "node:fs/promises";
 import { getConfirmedModuleRanges } from "../src/game-data/operator-tactical";
 
@@ -13,15 +14,6 @@ const required = (name: string) => {
 };
 
 const legacyModules = [
-  { operatorId: "char_2015_dusk", moduleId: "uniequip_002_dusk", type: "SPC-X", mechanism: "rangeId" },
-  { operatorId: "char_109_fmout", moduleId: "uniequip_002_fmout", type: "SPC-X", mechanism: "rangeId" },
-  { operatorId: "char_1011_lava2", moduleId: "uniequip_002_lava2", type: "SPC-X", mechanism: "rangeId" },
-  { operatorId: "char_373_lionhd", moduleId: "uniequip_002_lionhd", type: "SPC-X", mechanism: "rangeId" },
-  { operatorId: "char_213_mostma", moduleId: "uniequip_003_mostma", type: "SPC-X", mechanism: "rangeId" },
-  { operatorId: "char_128_plosis", moduleId: "uniequip_002_plosis", type: "RIN-X", mechanism: "rangeId" },
-  { operatorId: "char_179_cgbird", moduleId: "uniequip_002_cgbird", type: "RIN-X", mechanism: "rangeId" },
-  { operatorId: "char_275_breeze", moduleId: "uniequip_002_breeze", type: "RIN-X", mechanism: "rangeId" },
-  { operatorId: "char_4164_tecno", moduleId: "uniequip_002_tecno", type: "SOC-Y", mechanism: "rangeId" },
   { operatorId: "char_1034_jesca2", moduleId: "uniequip_003_jesca2", type: "SPT-Y", mechanism: "forwardExtend" },
   { operatorId: "char_4194_rmixer", moduleId: "uniequip_003_rmixer", type: "SPT-Y", mechanism: "forwardExtend" },
 ] as const;
@@ -33,7 +25,7 @@ const gridList = (value: unknown): Grid[] | null => {
   return result.every((v) => Number.isInteger(v.row) && Number.isInteger(v.col)) ? result as Grid[] : null;
 };
 const key = (grid: Grid) => `${grid.row},${grid.col}`;
-const normalized = (grids: ReadonlyArray<Grid>) => [...new Set(grids.map(key))].sort();
+const normalized = (grids: ReadonlyArray<Grid>) => [...new Set(grids.map(key))].sort(compareCodeUnits);
 const collectRangeIds = (value: unknown, result = new Set<string>()): Set<string> => {
   if (Array.isArray(value)) value.forEach((item) => collectRangeIds(item, result));
   else if (value && typeof value === "object") {

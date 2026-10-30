@@ -1,0 +1,106 @@
+{
+  "operatorId": "char_450_necras",
+  "region": "en",
+  "tokens": {
+    "token_10043_necras_skeltn": "Servant of Lamentation"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_necras",
+      "name": "Unclaimed Legacy",
+      "region": "en",
+      "type": "SOC-X",
+      "icon": "soc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Necrass, and use Crown the Dead at least 2 times in each battle",
+        "Clear Main Theme 4-8 with a 3-star rating; You must deploy your own Necrass, and only Supporter Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Deals <@ba.kw>Arts damage</>; can create <@ba.kw>Summons</> by defeating enemies, and can attack enemies blocked by their own <@ba.kw>Summons</> with an ATK increased to <@ba.kw>115%</>",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Deals <@ba.kw>Arts damage</>; can create <@ba.kw>Summons</> by defeating enemies, and can attack enemies blocked by their own <@ba.kw>Summons</> with an ATK increased to <@ba.kw>115%</>",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Rekindle",
+              "description": "When an enemy is defeated within Attack Range, gains ATK +15% for 10 seconds, and summons a Servant of Lamentation (max 3); if no more Servants can be summoned, upgrades a Servant instead (increases Block, and increases HP, ATK, and DEF by more)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Deals <@ba.kw>Arts damage</>; can create <@ba.kw>Summons</> by defeating enemies, and can attack enemies blocked by their own <@ba.kw>Summons</> with an ATK increased to <@ba.kw>115%</>",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Rekindle",
+              "description": "When an enemy is defeated within Necrass's or one of her Summon's Attack Range, gains ATK +25% for 10 seconds, and summons a Servant of Lamentation (max 3); if no more Servants can be summoned, upgrades a Servant instead (increases Block, and increases HP, ATK, and DEF by more)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

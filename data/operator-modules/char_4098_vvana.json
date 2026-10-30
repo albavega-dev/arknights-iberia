@@ -1,0 +1,231 @@
+{
+  "operatorId": "char_4098_vvana",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_vvana",
+      "name": "The Unforeseeable",
+      "region": "en",
+      "type": "AFT-D",
+      "icon": "aft-d",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with your own Viviana",
+        "Clear Maria Nearl MN-3 with a 3-star rating; You must deploy your own Viviana, and have her defeat 'Brassrust' Olmer Ingra"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks against a target under the burst effect of <$ba.dt.burning2>Burn</> deal an additional <@ba.kw>{ep_damage_ratio:0%}</> ATK as Elemental Damage",
+              "blackboard": [
+                {
+                  "key": "ep_damage_ratio",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 340,
+            "atk": 48
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks against a target under the burst effect of <$ba.dt.burning2>Burn</> deal an additional <@ba.kw>{ep_damage_ratio:0%}</> ATK as Elemental Damage",
+              "blackboard": [
+                {
+                  "key": "ep_damage_ratio",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Candlelight",
+              "description": "Deals +8% Arts damage and takes -8% Physical and Arts damage, and attacks deal an additional 5% damage as <$ba.dt.burning2>Burn</>; double effect if there is an elite or leader enemy within attack range"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Candlelight",
+              "description": "Deals +9% <@ba.talpu>(+1%)</> Arts damage and takes -9% <@ba.talpu>(-1%)</> Physical and Arts damage, and attacks deal an additional 5% damage as <$ba.dt.burning2>Burn</>; double effect if there is an elite or leader enemy within attack range"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 420,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks against a target under the burst effect of <$ba.dt.burning2>Burn</> deal an additional <@ba.kw>{ep_damage_ratio:0%}</> ATK as Elemental Damage",
+              "blackboard": [
+                {
+                  "key": "ep_damage_ratio",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Candlelight",
+              "description": "Deals +8% Arts damage and takes -8% Physical and Arts damage, and attacks deal an additional 9% damage as <$ba.dt.burning2>Burn</>; double effect if there is an elite or leader enemy within attack range"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Candlelight",
+              "description": "Deals +9% <@ba.talpu>(+1%)</> Arts damage and takes -9% <@ba.talpu>(-1%)</> Physical and Arts damage, and attacks deal an additional 9% damage as <$ba.dt.burning2>Burn</>; double effect if there is an elite or leader enemy within attack range"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_vvana",
+      "name": "'Final Line'",
+      "region": "en",
+      "type": "AFT-Y",
+      "icon": "aft-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 40 enemies with your own Viviana",
+        "Clear Near Light NL-8 with a 3-star rating; You must deploy your own Viviana, and have her defeat 'The Last Kheshig' Tola"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 30,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 280,
+            "atk": 38,
+            "def": 38
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Nova",
+              "description": "When attacking an elite or leader enemy, there is a 23% chance to gain a <$ba.shield>Shield</> that only blocks melee attacks (max 1 stack)"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Nova",
+              "description": "When attacking an elite or leader enemy, there is a 25% <@ba.talpu>(+2%)</> chance to gain a <$ba.shield>Shield</> that only blocks melee attacks (max 1 stack)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 45,
+            "def": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Enemies blocked by this unit receive <@ba.kw>10%</> <$ba.magicfragile>Arts Fragility</>",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Nova",
+              "description": "When attacking an elite or leader enemy, there is a 25% chance to gain a <$ba.shield>Shield</> that only blocks melee attacks (max 2 stacks)"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Nova",
+              "description": "When attacking an elite or leader enemy, there is a 27% <@ba.talpu>(+2%)</> chance to gain a <$ba.shield>Shield</> that only blocks melee attacks (max 2 stacks)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

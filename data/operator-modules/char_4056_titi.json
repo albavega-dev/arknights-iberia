@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_4056_titi",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_titi",
+      "name": "Gifts from Columbia",
+      "region": "en",
+      "type": "INC-X",
+      "icon": "inc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Titi",
+        "Clear Adventure That Cannot Wait for the Sun AS-7 with a 3-star rating; You must deploy your own Titi, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 35
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 45
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Frozen in Time",
+              "description": "Can attack <$ba.sleep>Sleeping</> enemies, and when attacking stationary enemies, deals an additional 20% ATK as Arts damage; when deployed, <$ba.sleep>Sleeping</> enemies receive 35% of Titi's ATK as Arts damage per second"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Frozen in Time",
+              "description": "Can attack <$ba.sleep>Sleeping</> enemies, and when attacking stationary enemies, deals an additional 21% <@ba.talpu>(+1%)</> ATK as Arts damage; when deployed, <$ba.sleep>Sleeping</> enemies receive 37% <@ba.talpu>(+2%)</> of Titi's ATK as Arts damage per second"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 53
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Frozen in Time",
+              "description": "Can attack <$ba.sleep>Sleeping</> enemies, and when attacking stationary enemies, deals an additional 30% ATK as Arts damage; when deployed, <$ba.sleep>Sleeping</> enemies receive 40% of Titi's ATK as Arts damage per second"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Frozen in Time",
+              "description": "Can attack <$ba.sleep>Sleeping</> enemies, and when attacking stationary enemies, deals an additional 31% <@ba.talpu>(+1%)</> ATK as Arts damage; when deployed, <$ba.sleep>Sleeping</> enemies receive 42% <@ba.talpu>(+2%)</> of Titi's ATK as Arts damage per second"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 "use client";
 
+import { compareCodeUnits } from "../../game-data/string-order";
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import Link from "next/link";
@@ -42,8 +43,8 @@ const classLabels: Record<OperatorClass, string> = {
   Medic: "Medic",
 };
 const operatorClasses: OperatorClass[] = [
-  "Guard",
   "Vanguard",
+  "Guard",
   "Defender",
   "Sniper",
   "Caster",
@@ -586,7 +587,7 @@ export function OperatorCatalog({ records }: { records: readonly OperatorRecord[
             .filter((operator) => (!className || operator.class === className) && operator.subClassId)
             .map((operator) => operator.subClassId as string),
         ),
-      ].sort(),
+      ].sort(compareCodeUnits),
     [catalogRecords, className],
   );
   const toggleClass = (nextClass: OperatorClass) => {

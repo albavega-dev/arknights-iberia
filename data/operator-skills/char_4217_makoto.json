@@ -1,0 +1,801 @@
+{
+  "operatorId": "char_4217_makoto",
+  "region": "cn",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_makoto_1",
+      "name": "俄耳甫斯的竖琴",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            1.1,
+            0.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            1.2,
+            0.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            1.3,
+            0.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 14,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            1.5,
+            0.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            1.7,
+            0.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            1.9,
+            0.4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 4,
+          "rangeId": "x-1",
+          "values": [
+            2.1,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 5,
+          "rangeId": "x-1",
+          "values": [
+            2.3,
+            0.6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 6,
+          "rangeId": "x-1",
+          "values": [
+            2.5,
+            0.6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 7,
+          "rangeId": "x-1",
+          "values": [
+            2.8,
+            0.6
+          ]
+        }
+      ],
+      "description": "被动：<替身>状态召唤<@ba.vup>俄耳甫斯</>，攻击对敌人造成攻击力<@ba.vup>{attack@atk_scale:0%}</>的法术伤害，范围内有生命值低于<@ba.vup>50%</>的友方干员时，改为对其治疗相当于结城理攻击力<@ba.vup>{attack@heal_scale:0%}</>的生命值\\n主动：立即切换为<替身>状态作战",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "attack@heal_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_makoto_2",
+      "name": "塔纳托斯的囚锁",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            1.2,
+            0.35,
+            1.5,
+            2,
+            9999999
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            1.3,
+            0.35,
+            1.5,
+            2,
+            9999999
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            1.4,
+            0.35,
+            1.5,
+            2,
+            9999999
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 3,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            1.6,
+            0.35,
+            1.5,
+            2.3,
+            9999999
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 3,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            1.8,
+            0.35,
+            1.5,
+            2.3,
+            9999999
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 14,
+          "initSp": 5,
+          "rangeId": "x-1",
+          "values": [
+            3,
+            2,
+            0.35,
+            1.5,
+            2.3,
+            9999999
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 6,
+          "rangeId": "x-1",
+          "values": [
+            4,
+            2.2,
+            0.35,
+            1.5,
+            2.5,
+            9999999
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 7,
+          "rangeId": "x-1",
+          "values": [
+            4,
+            2.3,
+            0.35,
+            1.5,
+            2.6,
+            9999999
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 7,
+          "rangeId": "x-1",
+          "values": [
+            4,
+            2.4,
+            0.35,
+            1.5,
+            2.7,
+            9999999
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 7,
+          "rangeId": "x-1",
+          "values": [
+            4,
+            2.5,
+            0.35,
+            1.5,
+            2.8,
+            9999999
+          ]
+        }
+      ],
+      "description": "被动：<替身>状态召唤<@ba.vup>塔纳托斯</>，攻击对至多<@ba.vup>{attack@max_target}</>名敌人造成攻击力<@ba.vup>{attack@atk_scale:0%}</>的法术伤害并有<@ba.vup>{attack@prob:0%}</>概率<$ba.fear>恐惧</>敌人<@ba.vup>{attack@fear}</>秒，范围内<$ba.fear>恐惧</>中的敌人若生命值低于结城理攻击力的<@ba.vup>{attack@kill_atk_scale:0%}</>则立刻倒下\\n主动：立即切换为<替身>状态作战",
+      "blackboardKeys": [
+        "attack@max_target",
+        "attack@atk_scale",
+        "attack@prob",
+        "attack@fear",
+        "attack@kill_atk_scale",
+        "attack@kill_damage"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_makoto_3",
+      "name": "开辟明日的剑刃",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            15,
+            1.4,
+            0.2,
+            1,
+            0.25,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            20,
+            1.5,
+            0.2,
+            1,
+            0.25,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 0,
+          "rangeId": "x-1",
+          "values": [
+            25,
+            1.6,
+            0.2,
+            1,
+            0.25,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 5,
+          "rangeId": "x-1",
+          "values": [
+            30,
+            1.7,
+            0.25,
+            1,
+            0.3,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 5,
+          "rangeId": "x-1",
+          "values": [
+            35,
+            1.8,
+            0.25,
+            1,
+            0.3,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 5,
+          "rangeId": "x-1",
+          "values": [
+            40,
+            1.9,
+            0.25,
+            1,
+            0.3,
+            3,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 7,
+          "rangeId": "x-1",
+          "values": [
+            45,
+            2,
+            0.3,
+            1,
+            0.35,
+            4,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 8,
+          "rangeId": "x-1",
+          "values": [
+            50,
+            2.1,
+            0.35,
+            1,
+            0.36,
+            4,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 9,
+          "rangeId": "x-1",
+          "values": [
+            55,
+            2.2,
+            0.35,
+            1,
+            0.38,
+            4,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            60,
+            2.3,
+            0.35,
+            1,
+            0.4,
+            4,
+            4,
+            2
+          ]
+        }
+      ],
+      "description": "被动：<替身>状态初始召唤<@ba.vup>塔纳托斯</>，攻击速度<@ba.vup>+{talent@attack_speed}</>，攻击对至多<@ba.vup>{attack@max_target}</>名敌人造成攻击力<@ba.vup>{attack@atk_scale:0%}</>的<$ba.weaknessatk>弱点伤害</>，<@ba.vup>塔纳托斯</>在场时，开启技能或受到致命伤时改为召唤<@ba.vup>俄耳甫斯</>，阻挡数<@ba.vup>+{attack@block_cnt}</>，使范围内友方干员获得<@ba.vup>{attack@prob:0%}</>的物理与法术闪避并每秒治疗范围内最多<@ba.vup>{attack@max_target_heal}</>名友方干员相当于结城理攻击力<@ba.vup>{attack@heal_scale:0%}</>的生命值，直到<替身>状态结束\\n主动：立即切换为<替身>状态作战",
+      "blackboardKeys": [
+        "talent@attack_speed",
+        "attack@atk_scale",
+        "attack@heal_scale",
+        "attack@interval",
+        "attack@prob",
+        "attack@max_target",
+        "attack@max_target_heal",
+        "attack@block_cnt"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_prod_spd[999]",
+          "name": "领袖魅力",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_p_spd_p3r",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻控制中枢时，所有制造站生产力<@cc.vup>+2%</>（同种效果取最高）"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&bd[000]",
+          "name": "社群的意义",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_p3r",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻制造站时，生产力<@cc.vup>+20%</>，基建内（不包含副手）每有1名<$cc.tag.sees><@cc.kw>S.E.E.S.</></>干员（最多<@cc.kw>4</>名），生产力额外<@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "不羁之力",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+40%，生命值+35%，作战能力随技能选择而改变"
+        },
+        {
+          "name": "不羁之力",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+45%<@ba.talpu>（+5%）</>，生命值+35%，作战能力随技能选择而改变"
+        },
+        {
+          "name": "不羁之力",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "结城理切换为<替身>状态时<$ba.sluggish>停顿</>周围一定范围内敌人5秒；<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+60%，生命值+35%，作战能力随技能选择而改变"
+        },
+        {
+          "name": "不羁之力",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "结城理切换为<替身>状态时<$ba.sluggish>停顿</>周围一定范围内敌人5秒；<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+65%<@ba.talpu>（+5%）</>，生命值+35%，作战能力随技能选择而改变"
+        },
+        {
+          "name": "不羁之力",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "结城理切换为<替身>状态时<$ba.sluggish>停顿</>周围一定范围内敌人8秒；<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+80%，生命值+35%，作战能力随技能选择而改变"
+        },
+        {
+          "name": "不羁之力",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "结城理切换为<替身>状态时<$ba.sluggish>停顿</>周围一定范围内敌人8秒；<替身>状态下结城理召唤人格面具作战，攻击间隔增大，攻击力+85%<@ba.talpu>（+5%）</>，生命值+35%，作战能力随技能选择而改变"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "S.E.E.S.队长",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "结城理<替身>状态结束后，带领<$ba.sees>S.E.E.S.</>小队发动总攻击，对<$ba.sees>S.E.E.S.</>小队队员周围一定范围内的所有敌人造成相当于结城理攻击力180%的真实伤害（可叠加）"
+        },
+        {
+          "name": "S.E.E.S.队长",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "结城理<替身>状态结束后，带领<$ba.sees>S.E.E.S.</>小队发动总攻击，对<$ba.sees>S.E.E.S.</>小队队员周围一定范围内的所有敌人造成相当于结城理攻击力200%<@ba.talpu>（+20%）</>的真实伤害（可叠加）"
+        },
+        {
+          "name": "S.E.E.S.队长",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "结城理<替身>状态结束后，带领<$ba.sees>S.E.E.S.</>小队发动总攻击，对<$ba.sees>S.E.E.S.</>小队队员周围一定范围内的所有敌人造成相当于结城理攻击力280%的真实伤害（可叠加）"
+        },
+        {
+          "name": "S.E.E.S.队长",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "结城理<替身>状态结束后，带领<$ba.sees>S.E.E.S.</>小队发动总攻击，对<$ba.sees>S.E.E.S.</>小队队员周围一定范围内的所有敌人造成相当于结城理攻击力300%<@ba.talpu>（+20%）</>的真实伤害（可叠加）"
+        },
+        {
+          "name": "S.E.E.S.队长",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "结城理<替身>状态结束后，带领<$ba.sees>S.E.E.S.</>小队发动总攻击，对<$ba.sees>S.E.E.S.</>小队队员周围一定范围内的所有敌人造成相当于结城理攻击力430%的真实伤害（可叠加）"
+        },
+        {
+          "name": "S.E.E.S.队长",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "结城理<替身>状态结束后，带领<$ba.sees>S.E.E.S.</>小队发动总攻击，对<$ba.sees>S.E.E.S.</>小队队员周围一定范围内的所有敌人造成相当于结城理攻击力450%<@ba.talpu>（+20%）</>的真实伤害（可叠加）"
+        }
+      ]
+    }
+  ]
+}

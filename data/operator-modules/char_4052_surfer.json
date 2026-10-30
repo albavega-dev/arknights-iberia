@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4052_surfer",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_surfer",
+      "name": "The Delicacy",
+      "region": "en",
+      "type": "AGE-X",
+      "icon": "age-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Surfer, and have Surfer defeat at least 3 enemies",
+        "Clear Main Theme 3-5 with a 3-star rating; You must deploy your own Surfer, and use Quick Learner at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 200,
+            "def": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Solo Traveler",
+              "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 2 DP and ASPD +10 for 10s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Solo Traveler",
+              "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 3 <@ba.talpu>(+1)</> DP and ASPD +10 for 10s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Less likely to be attacked by enemies",
+              "blackboard": [
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Solo Traveler",
+              "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 2 DP and ASPD +15 for 10s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Solo Traveler",
+              "description": "If there are no other Operators in the surrounding 4 tiles when deployed, gain 3 <@ba.talpu>(+1)</> DP and ASPD +15 for 10s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

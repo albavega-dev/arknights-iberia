@@ -1,0 +1,639 @@
+{
+  "operatorId": "char_4229_aphris",
+  "region": "cn",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_aphris_1",
+      "name": "连续映射",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 0,
+          "values": [
+            0.6
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 0,
+          "values": [
+            0.7
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 0,
+          "values": [
+            0.8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 0,
+          "values": [
+            0.9
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 0,
+          "values": [
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 0,
+          "values": [
+            1.1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 0,
+          "values": [
+            1.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 0,
+          "values": [
+            1.35
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 0,
+          "values": [
+            1.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 0,
+          "values": [
+            1.65
+          ]
+        }
+      ],
+      "description": "攻击力<@ba.vup>+{atk:0%}</>，“中继器”持续时间变为无限\\n<@ba.rem>持续时间无限</>",
+      "blackboardKeys": [
+        "atk"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_aphris_2",
+      "name": "临界瞬爆",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "values": [
+            0.6,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "values": [
+            0.7,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "values": [
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 10,
+          "values": [
+            0.9,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 10,
+          "values": [
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 10,
+          "values": [
+            1.1,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "values": [
+            1.2,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 15,
+          "values": [
+            1.3,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 16,
+          "values": [
+            1.4,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 16,
+          "values": [
+            1.5,
+            0.5
+          ]
+        }
+      ],
+      "description": "向前发射一道无限长直线的光束，每<@ba.vup>{interval}</>秒造成攻击力<@ba.vup>{atk_scale:0%}</>的法术伤害，光束可被我方干员改变方向",
+      "blackboardKeys": [
+        "atk_scale",
+        "interval"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_aphris_3",
+      "name": "混沌的本质",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 20,
+          "values": [
+            3,
+            0.8,
+            1,
+            2,
+            2,
+            3,
+            1.25,
+            0.2,
+            0.2,
+            0.2,
+            -1.1,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 20,
+          "values": [
+            3,
+            0.85,
+            1,
+            2,
+            2,
+            3,
+            1.3,
+            0.2,
+            0.2,
+            0.2,
+            -1.1,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 20,
+          "values": [
+            3,
+            0.9,
+            1,
+            2,
+            2,
+            3,
+            1.35,
+            0.2,
+            0.2,
+            0.2,
+            -1.1,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "values": [
+            3,
+            0.95,
+            1,
+            2,
+            2,
+            3,
+            1.4,
+            0.2,
+            0.25,
+            0.2,
+            -1.1,
+            20
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "values": [
+            3,
+            1,
+            1,
+            2,
+            2,
+            3,
+            1.45,
+            0.2,
+            0.25,
+            0.2,
+            -1.1,
+            20
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "values": [
+            3,
+            1.05,
+            1,
+            2,
+            2,
+            3,
+            1.5,
+            0.2,
+            0.25,
+            0.2,
+            -1.1,
+            20
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 30,
+          "values": [
+            3,
+            1.15,
+            1,
+            2,
+            2,
+            3,
+            1.55,
+            0.4,
+            0.3,
+            0.4,
+            -1.1,
+            20
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 31,
+          "values": [
+            3,
+            1.25,
+            1,
+            2,
+            2,
+            3,
+            1.7,
+            0.4,
+            0.3,
+            0.4,
+            -1.1,
+            20
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 32,
+          "values": [
+            3,
+            1.35,
+            1,
+            2,
+            2,
+            3,
+            1.85,
+            0.4,
+            0.3,
+            0.4,
+            -1.1,
+            20
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 33,
+          "values": [
+            3,
+            1.45,
+            1,
+            2,
+            2,
+            3,
+            2,
+            0.4,
+            0.3,
+            0.4,
+            -1.1,
+            20
+          ]
+        }
+      ],
+      "description": "技能开启后停止攻击3秒，撤回已部署的“中继器”并重置再部署；攻击间隔<@ba.vup>较大幅度缩短</>，攻击力<@ba.vup>+{atk:0%}</>，攻击造成<@ba.vup>{attack@atk_scale:0%}</>的法术伤害，并使目标<$ba.sluggish>停顿</><@ba.vup>{attack@origin_sluggish}</>秒；攻击经过“中继器”后，额外造成一次攻击力<@ba.vup>{attack@extra_atk_scale:0%}</>的法术伤害，且<$ba.sluggish>停顿</>时间延长<@ba.vup>{attack@extra_sluggish}</>秒\\n<@ba.rem>技能期间可额外部署<@ba.vup>{token_recharge_cnt}</>个“中继器”，“中继器”不会撤退，技能结束时自动撤退</>\\n<@ba.rem>攻击装有{attack@trigger_time}发弹药，打完后结束（可随时停止技能）</>",
+      "blackboardKeys": [
+        "charge_time",
+        "atk",
+        "attack@max_times",
+        "mode_default",
+        "token_recharge_cnt",
+        "mode_down",
+        "attack@atk_scale",
+        "attack@origin_sluggish",
+        "attack@extra_atk_scale",
+        "attack@extra_sluggish",
+        "base_attack_time",
+        "attack@trigger_time"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[214]",
+          "name": "源岩解析",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_originium2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻制造站时，<@cc.kw>源石</>类配方的生产力<@cc.vup>+35%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_device[050]",
+          "name": "DIY·源岩",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_orirock",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻加工站加工<@cc.kw>源岩</>类材料时，副产品的产出概率提升<@cc.vup>90%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "链路协议",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "可以使用一个持续时间15秒的“中继器”，能改变自身的攻击方向，且使该次攻击距离+2"
+        },
+        {
+          "name": "链路协议",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "可以使用一个持续时间20秒的“中继器”，能改变自身的攻击方向，且使该次攻击距离+2；“中继器”在场时，自身攻击力+15%"
+        },
+        {
+          "name": "链路协议",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "可以使用一个持续时间25秒的“中继器”，能改变自身的攻击方向，且使该次攻击距离+2；“中继器”在场时，自身攻击力+25%"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "取样优化",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "攻击范围内的友方干员攻击时无视敌方10点法术抗性"
+        },
+        {
+          "name": "取样优化",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "攻击范围内的友方干员攻击时无视敌方13<@ba.talpu>（+3）</>点法术抗性"
+        }
+      ]
+    }
+  ]
+}

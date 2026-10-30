@@ -1,0 +1,210 @@
+{
+  "operatorId": "char_4039_horn",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_horn",
+      "name": "Exemplars",
+      "region": "en",
+      "type": "FOR-X",
+      "icon": "for-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Horn use Ultimate Line of Defense a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 7-15 with a 3-star rating; You must deploy your own Horn, and have Horn defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 65,
+            "def": 52
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 85,
+            "def": 62
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Military Fortress",
+              "description": "When this unit is on the field, Defender Operators gain +25% ATK"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Military Fortress",
+              "description": "When this unit is on the field, Defender Operators gain +28%<@ba.talpu>(+3%)</> ATK"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 100,
+            "def": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Military Fortress",
+              "description": "When this unit is on the field, Defender Operators gain +28% ATK"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Military Fortress",
+              "description": "When this unit is on the field, Defender Operators gain +31%<@ba.talpu>(+3%)</> ATK"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_horn",
+      "name": "Old Clothes, New Days",
+      "region": "en",
+      "type": "FOR-Y",
+      "icon": "for-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Horn",
+        "Clear Main Theme 9-5 with a 3-star rating under Standard Environment; You must deploy your own Horn, and can only include 4 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 225,
+            "atk": 92
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "When not blocking enemies, prioritizes dealing <@ba.kw>ranged AOE</> Physical damage and ASPD <@ba.vup>+10</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 108
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "When not blocking enemies, prioritizes dealing <@ba.kw>ranged AOE</> Physical damage and ASPD <@ba.vup>+10</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Bloodbath",
+              "description": "ASPD +5, DEF+5%; Instead of retreating when defeated, recovers HP to max and gains -50% Max HP; ASPD buff increases to +20, and DEF buff increases to +20% (triggers once per deployment)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Bloodbath",
+              "description": "ASPD +5, DEF+5%; Instead of retreating when defeated, recovers HP to max and gains -50% Max HP; ASPD buff increases to +23 <@ba.talpu>(+3)</>, and DEF buff increases to +23% <@ba.talpu>(+3%)</> (triggers once per deployment)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 350,
+            "atk": 120
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "When not blocking enemies, prioritizes dealing <@ba.kw>ranged AOE</> Physical damage and ASPD <@ba.vup>+10</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Bloodbath",
+              "description": "ASPD +8, DEF+8%; Instead of retreating when defeated, recovers HP to max and gains -50% Max HP; ASPD buff increases to +22, and DEF buff increases to +22% (triggers once per deployment)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Bloodbath",
+              "description": "ASPD +8, DEF+8%; Instead of retreating when defeated, recovers HP to max and gains -50% Max HP; ASPD buff increases to +25 <@ba.talpu>(+3)</>, and DEF buff increases to +25% <@ba.talpu>(+3%)</> (triggers once per deployment)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

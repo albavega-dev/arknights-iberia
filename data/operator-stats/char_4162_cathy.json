@@ -1,0 +1,332 @@
+{
+  "operatorId": "char_4162_cathy",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1219,
+            "atk": 232,
+            "def": 190,
+            "magicResistance": 0,
+            "cost": 16,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1670,
+            "atk": 342,
+            "def": 274,
+            "magicResistance": 0,
+            "cost": 16,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 70,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1670,
+            "atk": 342,
+            "def": 274,
+            "magicResistance": 0,
+            "cost": 18,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 70,
+          "attributes": {
+            "maxHp": 2144,
+            "atk": 456,
+            "def": 353,
+            "magicResistance": 0,
+            "cost": 18,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 2144,
+            "atk": 456,
+            "def": 353,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 2680,
+            "atk": 550,
+            "def": 420,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.5,
+            "respawnTime": 80,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 40,
+        "def": 40,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -10,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_cathy",
+      "operatorId": "char_4162_cathy",
+      "region": "en",
+      "name": "Leisure Hours",
+      "moduleType": "CRA-X",
+      "typeIcon": "cra-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 20,
+            "def": 20
+          },
+          "specialEffects": [
+            "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 25,
+            "def": 25
+          },
+          "specialEffects": [
+            "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+            "Carries 3 Support Devices (max 2 deployed at once) that grant an Operator a <$ba.barrier>Barrier</> equal to 25% of Catherine's Max HP (if target has not received an attack within 5s, <$ba.barrier>Barrier</> replenishes by 6% of Catherine's Max HP every second, cannot go over the starting limit); effects from Devices do not stack",
+            "Carries 3 Support Devices (max 2 deployed at once) that grant an Operator a <$ba.barrier>Barrier</> equal to 27% <@ba.talpu>(+2%)</> of Catherine's Max HP (if target has not received an attack within 5s, <$ba.barrier>Barrier</> replenishes by 6% of Catherine's Max HP every second, cannot go over the starting limit); effects from Devices do not stack",
+            "Grants an Operator within range a <$ba.barrier>Barrier</> equal to 25% of Catherine's Max HP (if target has not received an attack within 5s, <$ba.barrier>Barrier</> replenishes by 6% of Catherine's Max HP every second, cannot go over the starting limit); effects from Devices do not stack; Unlimited duration",
+            "Grants an Operator within range a <$ba.barrier>Barrier</> equal to 27% <@ba.talpu>(+2%)</> of Catherine's Max HP (if target has not received an attack within 5s, <$ba.barrier>Barrier</> replenishes by 6% of Catherine's Max HP every second, cannot go over the starting limit); effects from Devices do not stack; Unlimited duration"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 30,
+            "def": 30
+          },
+          "specialEffects": [
+            "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+            "Carries 3 Support Devices (max 2 deployed at once) that grant an Operator a <$ba.barrier>Barrier</> equal to 28% of Catherine's Max HP (if target has not received an attack within 5s, <$ba.barrier>Barrier</> replenishes by 6% of Catherine's Max HP every second, cannot go over the starting limit); effects from Devices do not stack",
+            "Carries 3 Support Devices (max 2 deployed at once) that grant an Operator a <$ba.barrier>Barrier</> equal to 30% <@ba.talpu>(+2%)</> of Catherine's Max HP (if target has not received an attack within 5s, <$ba.barrier>Barrier</> replenishes by 6% of Catherine's Max HP every second, cannot go over the starting limit); effects from Devices do not stack",
+            "Grants an Operator within range a <$ba.barrier>Barrier</> equal to 28% of Catherine's Max HP (if target has not received an attack within 5s, <$ba.barrier>Barrier</> replenishes by 6% of Catherine's Max HP every second, cannot go over the starting limit); effects from Devices do not stack; Unlimited duration",
+            "Grants an Operator within range a <$ba.barrier>Barrier</> equal to 30% <@ba.talpu>(+2%)</> of Catherine's Max HP (if target has not received an attack within 5s, <$ba.barrier>Barrier</> replenishes by 6% of Catherine's Max HP every second, cannot go over the starting limit); effects from Devices do not stack; Unlimited duration"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Blocks 2 enemies; Can use <Support Devices> in battles"
+    }
+  ]
+}

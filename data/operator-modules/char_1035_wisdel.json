@@ -1,0 +1,87 @@
+{
+  "operatorId": "char_1035_wisdel",
+  "region": "en",
+  "tokens": {
+    "token_10035_wisdel_wward": "Revenant's Shadow"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_wisdel",
+      "name": "'Ancestor Launcher'",
+      "region": "en",
+      "type": "BOM-X",
+      "icon": "bom-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with your own Wiš'adel",
+        "Clear Darknights Memoir DM-5 with a 3-star rating; You must deploy your own Wiš'adel, and have her defeat at least 20 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 45,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 55,
+            "attack_speed": 6
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Souvenir",
+              "description": "Attacks have 120% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 170% ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Souvenir",
+              "description": "Attacks have 120% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 180% <@ba.talpu>(+10%)</> ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 65,
+            "attack_speed": 7
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Souvenir",
+              "description": "Attacks have 125% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 175% ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Souvenir",
+              "description": "Attacks have 125% ATK against the main target and attach an afterimage to it. Afterimages have a 15% chance to explode when affected by Wiš'adel's aftershock, dealing 185% <@ba.talpu>(+10%)</> ATK as Physical damage to all nearby enemies and <$ba.stun>Stunning</> them for 1s."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

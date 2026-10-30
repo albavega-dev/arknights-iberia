@@ -1,0 +1,171 @@
+{
+  "operatorId": "char_249_mlyss",
+  "region": "en",
+  "tokens": {
+    "token_10030_mlyss_wtrman": "Flowing Shape"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mlyss",
+      "name": "Dresser Flowing Shape",
+      "region": "en",
+      "type": "TAC-X",
+      "icon": "tac-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must include your own Muelsyse in your squad, and Muelsyse must be the first Operator deployed",
+        "Clear Main Theme 3-4 with a 3-star rating; You must deploy your own Muelsyse, and can only include 4 other Operators in your squad"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 15,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; Reinforcements take <@ba.kw>15%</> less damage from units they are blocking, and this unit's ATK is increased to 150% when attacking enemies blocked by Reinforcements"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 20,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; Reinforcements take <@ba.kw>15%</> less damage from units they are blocking, and this unit's ATK is increased to 150% when attacking enemies blocked by Reinforcements"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Pure Water is Life",
+              "description": "Can summon a Flowing Shape to assist in combat. Flowing Shapes can partially copy an undeployed Operator's attributes (Max HP, ATK, DEF, RES, Block Count, Attack Interval, Attack Range, Damage Type, ability of obtaining a special trait depending on whether in melee or ranged form), gains 5 SP immediately after first deployment, and will respawn 25 seconds after being defeated."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 25,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; Reinforcements take <@ba.kw>15%</> less damage from units they are blocking, and this unit's ATK is increased to 150% when attacking enemies blocked by Reinforcements"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Pure Water is Life",
+              "description": "Can summon a Flowing Shape to assist in combat. Flowing Shapes can copy all of an undeployed Operator's attributes (Max HP, ATK, DEF, RES, Block Count, Attack Interval, Attack Range, Damage Type, ability of obtaining a special trait depending on whether in melee or ranged form), gains 5 SP immediately after first deployment, and will respawn 25 seconds after being defeated."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_mlyss",
+      "name": "Fallen Leaves of Four Seasons",
+      "region": "en",
+      "type": "TAC-Y",
+      "icon": "tac-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Muelsyse, and use Ecological Interaction at least 1 time in each battle",
+        "Clear Main Theme 6-12 with a 3-star rating; You must deploy your own Muelsyse, and use Ecological Interaction 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 142,
+            "atk": 21,
+            "def": 17
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 155,
+            "atk": 25,
+            "def": 22
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Expenditure Economization",
+              "description": "When in squad, all [Rhine Lab] Operators have -2 DP Cost, and the first Rhine Lab Operator deployed has an additional -1 DP Cost; when Flowing Shape duplicates a [Rhine Lab] Operator, Muelsyse gains 8 SP"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Expenditure Economization",
+              "description": "When in squad, all [Rhine Lab] Operators have -2 DP Cost, and the first [Rhine Lab] Operator deployed has an additional -2 <@ba.talpu>(+1)</> DP Cost; when Flowing Shape duplicates a [Rhine Lab] Operator, Muelsyse gains 8 SP"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 28,
+            "def": 28
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Expenditure Economization",
+              "description": "When in squad, all [Rhine Lab] Operators have -2 DP Cost, and the first Rhine Lab Operator deployed has an additional -1 DP Cost; when Flowing Shape duplicates a [Rhine Lab] Operator, Muelsyse gains 10 SP and the duplicated [Rhine Lab] Operator gains 10 SP when deployed"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Expenditure Economization",
+              "description": "When in squad, all [Rhine Lab] Operators have -2 DP Cost, and the first [Rhine Lab] Operator deployed has an additional -2 <@ba.talpu>(+1)</> DP Cost; when Flowing Shape duplicates a [Rhine Lab] Operator, Muelsyse gains 10 SP and the duplicated [Rhine Lab] Operator gains 10 SP when deployed"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "operatorId": "char_2023_ling",
+  "region": "en",
+  "tokens": {
+    "token_10020_ling_soul1": "'Tranquility'",
+    "token_10020_ling_soul2": "'Peripateticism'",
+    "token_10020_ling_soul3": "'Thunderer'"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ling",
+      "name": "Fond Dream with Poetry",
+      "region": "en",
+      "type": "SUM-Y",
+      "icon": "sum-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Ling, and have Ling and her summons defeat a total of 7 enemies",
+        "Clear Main Theme 3-4 with a 3-star rating; You must deploy your own Ling, while not deploying more than 4 other operators"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 30
+          },
+          "tokenAttributes": {
+            "token_10020_ling_soul1": {
+              "cost": -3,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10020_ling_soul2": {
+              "cost": -3,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10020_ling_soul3": {
+              "cost": -5,
+              "max_deck_stack_cnt": 3
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can hold <@ba.kw>+{cnt}</> additional summoned units and summoned unit deployment costs are <@ba.kw>reduced</>",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 40
+          },
+          "tokenAttributes": {
+            "token_10020_ling_soul1": {
+              "cost": -3,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10020_ling_soul2": {
+              "cost": -3,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10020_ling_soul3": {
+              "cost": -5,
+              "max_deck_stack_cnt": 3
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can hold <@ba.kw>+{cnt}</> additional summoned units and summoned unit deployment costs are <@ba.kw>reduced</>",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lantern Lit, Thy Dream Sought",
+              "description": "Can use up to 5 summons (max 4 deployed at once). Summons' effect changes based upon Skill"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 50
+          },
+          "tokenAttributes": {
+            "token_10020_ling_soul1": {
+              "cost": -3,
+              "max_hp": 150,
+              "atk": 45,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10020_ling_soul2": {
+              "cost": -3,
+              "max_hp": 100,
+              "atk": 35,
+              "max_deck_stack_cnt": 3
+            },
+            "token_10020_ling_soul3": {
+              "cost": -5,
+              "max_hp": 250,
+              "atk": 60,
+              "max_deck_stack_cnt": 3
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can hold <@ba.kw>+{cnt}</> additional summoned units and summoned unit deployment costs are <@ba.kw>reduced</>",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lantern Lit, Thy Dream Sought",
+              "description": "Can use up to 5 stronger summons (max 4 deployed at once). Summons' effect changes based upon Skill"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

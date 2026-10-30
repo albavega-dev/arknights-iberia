@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4100_caper",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_caper",
+      "name": "Where the Warmth Remains",
+      "region": "en",
+      "type": "LPS-X",
+      "icon": "lps-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have your own Caper use Double the Fun a total of 8 times",
+        "Clear Main Theme 4-2 with a 3-star rating; You must deploy your own Caper, and have her defeat at least 8 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking enemies within the 8 surrounding tiles",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking enemies within the 8 surrounding tiles",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Larking About",
+              "description": "When attacking, has a 28% chance to increase that attack's ATK to 155%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Larking About",
+              "description": "When attacking, has a 28% chance to increase that attack's ATK to 165% <@ba.talpu>(+10%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking enemies within the 8 surrounding tiles",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Larking About",
+              "description": "When attacking, has a 30% chance to increase that attack's ATK to 160%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Larking About",
+              "description": "When attacking, has a 30% chance to increase that attack's ATK to 170% <@ba.talpu>(+10%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

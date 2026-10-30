@@ -1,0 +1,385 @@
+{
+  "operatorId": "char_250_phatom",
+  "region": "en",
+  "tokens": {
+    "token_10007_phatom_twin": "Phantom in the Mirror"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_phatom",
+      "name": "Miss Christine's Felt",
+      "region": "en",
+      "type": "EXE-X",
+      "icon": "exe-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 70 enemies with Phantom (Phantom cannot be a Support Unit)",
+        "Clear Main Theme 3-6 with a 3-star rating; You must deploy your own Phantom, and have Phantom defeat at least 6 Invisible Casters"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+              "blackboard": [
+                {
+                  "key": "withdraw_cost_recover_ratio",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 62
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+              "blackboard": [
+                {
+                  "key": "withdraw_cost_recover_ratio",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Phantom Mastery",
+              "description": "Redeployment time of clone is reduced by 14 seconds"
+            },
+            {
+              "index": 1,
+              "potential": 1,
+              "token": true,
+              "name": "Phantom Mastery",
+              "description": "Redeployment Time -14 sec"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 73
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+              "blackboard": [
+                {
+                  "key": "withdraw_cost_recover_ratio",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Phantom Mastery",
+              "description": "Redeployment time of clone is reduced by 16 seconds"
+            },
+            {
+              "index": 1,
+              "potential": 1,
+              "token": true,
+              "name": "Phantom Mastery",
+              "description": "Redeployment Time -16 sec"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_phatom",
+      "name": "'Think of Me'",
+      "region": "en",
+      "type": "EXE-Y",
+      "icon": "exe-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; In each battle, you must deploy your own Phantom at least 2 times",
+        "Clear Darknights Memoir DM-5 with a 3-star rating; You must deploy your own Phantom, and have him defeat at least 2 Sarkaz Sentinels"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 40,
+            "def": 24
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 60,
+            "def": 28
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Phantom in the Mirror",
+              "description": "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time; while both Phantom and the clone are present, both have +10% ATK"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 75,
+            "def": 30
+          },
+          "tokenAttributes": {
+            "token_10007_phatom_twin": {
+              "max_hp": 100,
+              "atk": 60,
+              "def": 40
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Phantom in the Mirror",
+              "description": "Can summon an even stronger clone with the same abilities as Phantom, but has its own redeployment time; while both Phantom and the clone are present, both have +10% ATK"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_phatom",
+      "name": "Phantom's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 37,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of his summons) by <@ba.kw>1</> second when attacking; this effect also applies to his summons",
+              "blackboard": [
+                {
+                  "key": "respawn_time",
+                  "value": -1
+                },
+                {
+                  "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "token": true,
+              "addition": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of its associated Operator) by <@ba.kw>1</> second when attacking",
+              "blackboard": [
+                {
+                  "key": "respawn_time",
+                  "value": -1
+                },
+                {
+                  "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 55,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of his summons) by <@ba.kw>1</> second when attacking; this effect also applies to his summons",
+              "blackboard": [
+                {
+                  "key": "respawn_time",
+                  "value": -1
+                },
+                {
+                  "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "token": true,
+              "addition": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of its associated Operator) by <@ba.kw>1</> second when attacking",
+              "blackboard": [
+                {
+                  "key": "respawn_time",
+                  "value": -1
+                },
+                {
+                  "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Phantom in the Mirror",
+              "description": "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time; in <@ba.kw>Integrated Strategies</>, deploying the clone will refresh Phantom's skill (can stack skill effect up to 8 times)"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Phantom in the Mirror",
+              "description": "In <@ba.kw>Integrated Strategies</>, deployment will refresh Phantom's skill"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 71,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of his summons) by <@ba.kw>1</> second when attacking; this effect also applies to his summons",
+              "blackboard": [
+                {
+                  "key": "respawn_time",
+                  "value": -1
+                },
+                {
+                  "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "token": true,
+              "addition": "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of its associated Operator) by <@ba.kw>1</> second when attacking",
+              "blackboard": [
+                {
+                  "key": "respawn_time",
+                  "value": -1
+                },
+                {
+                  "key": "phatom_e_003_trait[remaining].remaining_respawn_time",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Phantom in the Mirror",
+              "description": "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time; in <@ba.kw>Integrated Strategies</>, the clone does not take up a deployment slot, and deploying the clone will refresh Phantom's skill (can stack skill effect up to 8 times)"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Phantom in the Mirror",
+              "description": "In <@ba.kw>Integrated Strategies</>, does not take up a deployment slot, and deployment will refresh Phantom's skill"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

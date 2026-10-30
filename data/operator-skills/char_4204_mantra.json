@@ -1,0 +1,764 @@
+{
+  "operatorId": "char_4204_mantra",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_mantra_1",
+      "name": "Resonance Collapse",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.9,
+            0.1,
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2.1,
+            0.1,
+            1.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2.3,
+            0.1,
+            1.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.3,
+            0.15,
+            1.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.5,
+            0.15,
+            1.6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.5,
+            0.2,
+            1.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.75,
+            0.2,
+            1.6
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.75,
+            0.25,
+            1.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            3,
+            0.3,
+            1.8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            3.25,
+            0.3,
+            2
+          ]
+        }
+      ],
+      "description": "The next attack deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage and <@ba.vup>{ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{element_atk_scale:0%}</> ATK as Elemental Damage",
+      "blackboardKeys": [
+        "atk_scale",
+        "ep_damage_ratio",
+        "element_atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_mantra_2",
+      "name": "Gestalt Consciousness",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 15,
+          "description": "Attack Interval <@ba.vup>reduces slightly</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.5,
+            1.6,
+            0.9,
+            0.12,
+            3,
+            2,
+            0.16
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "description": "Attack Interval <@ba.vup>reduces slightly</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.5,
+            1.6,
+            0.9,
+            0.12,
+            3,
+            2,
+            0.16
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 15,
+          "description": "Attack Interval <@ba.vup>reduces slightly</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.5,
+            1.6,
+            1,
+            0.12,
+            3,
+            2,
+            0.16
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 16,
+          "description": "Attack Interval <@ba.vup>reduces slightly</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.6,
+            1.7,
+            1,
+            0.13,
+            3,
+            2,
+            0.18
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 16,
+          "description": "Attack Interval <@ba.vup>reduces slightly</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.6,
+            1.7,
+            1,
+            0.13,
+            3,
+            2,
+            0.18
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 16,
+          "description": "Attack Interval <@ba.vup>reduces slightly</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.6,
+            1.9,
+            1,
+            0.13,
+            3,
+            2,
+            0.18
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 17,
+          "description": "Attack Interval <@ba.vup>reduces</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.7,
+            2.1,
+            1.1,
+            0.15,
+            4,
+            3,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 17,
+          "description": "Attack Interval <@ba.vup>reduces</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.7,
+            2.1,
+            1.2,
+            0.15,
+            4,
+            3,
+            0.22
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 17,
+          "description": "Attack Interval <@ba.vup>reduces</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.7,
+            2.1,
+            1.2,
+            0.18,
+            4,
+            3,
+            0.25
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 18,
+          "description": "Attack Interval <@ba.vup>reduces</>, attacks deal <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage and jump between up to <@ba.vup>{chain_times}</> other enemies, and jumps deal <@ba.vup>{attack@chain.atk_scale:0%}</> ATK as Arts damage; attacks and jumps deal an additional <@ba.vup>{attack@ep_damage_ratio:0%}</> of damage as <$ba.dt.neural2>Nervous Impairment</>; if target is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals an additional <@ba.vup>{attack@element_atk_scale:0%}</> ATK as Elemental Damage",
+          "values": [
+            -0.8,
+            2.4,
+            1.2,
+            0.18,
+            4,
+            3,
+            0.25
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "base_attack_time",
+        "attack@atk_scale",
+        "attack@chain.atk_scale",
+        "attack@ep_damage_ratio",
+        "attack@times",
+        "chain_times",
+        "attack@element_atk_scale"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_mantra_3",
+      "name": "Truth Unchanted",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 22,
+          "rangeId": "3-17",
+          "values": [
+            1.45,
+            2,
+            0.8,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 54,
+          "initSp": 22,
+          "rangeId": "3-17",
+          "values": [
+            1.5,
+            2,
+            0.9,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 22,
+          "rangeId": "3-17",
+          "values": [
+            1.6,
+            2,
+            1,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 24,
+          "rangeId": "3-17",
+          "values": [
+            1.7,
+            2,
+            1.1,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 24,
+          "rangeId": "3-17",
+          "values": [
+            1.8,
+            2,
+            1.2,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 24,
+          "rangeId": "3-17",
+          "values": [
+            1.9,
+            2,
+            1.3,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 26,
+          "rangeId": "3-17",
+          "values": [
+            2.1,
+            2,
+            1.45,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 26,
+          "rangeId": "3-17",
+          "values": [
+            2.3,
+            2,
+            1.65,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 28,
+          "rangeId": "3-17",
+          "values": [
+            2.5,
+            2,
+            1.65,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 31,
+          "rangeId": "3-17",
+          "values": [
+            2.75,
+            2,
+            1.85,
+            2,
+            1,
+            3,
+            1.5,
+            2
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</>; enemies within Attack Range lose <$ba.invisible>Invisibility</> and <$ba.palsy>Paralysis</> stack limit <@ba.vdown>drops to 2</>; ATK <@ba.vup>+{atk:0%}</> and attacks <@ba.vup>{attack@max_target}</> targets at once; when Operators within range activate a skill (including Mantra), enemies within range gain {per_active} stacks of <$ba.palsy>Paralysis</> (can be triggered at most {max_trigger_cnt} times); for every 1 stack of <$ba.palsy>Paralysis</> <@ba.vup>above the limit</> on enemies within range, 1 instance of <@ba.vup>{atk_scale:0%}</> ATK as Elemental Damage jumps between the target and {chain_times} other enemy; there is a short delay between jumps",
+      "blackboardKeys": [
+        "atk",
+        "attack@max_target",
+        "atk_scale",
+        "max_target",
+        "chain_times",
+        "max_trigger_cnt",
+        "interval_projectile_trigger",
+        "per_active"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-17": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 2,
+          "col": 3
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        },
+        {
+          "row": -2,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": 3
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&tag[000]",
+          "name": "Order Distribution α",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+20%</>"
+        },
+        {
+          "buffId": "trade_ord_spd&tag[010]",
+          "name": "Elite Squad",
+          "room": "TRADING",
+          "icon": "bskill_ord_spd&tag1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+25%</>; for every facility in the Base with an <$cc.g.elite><@cc.kw>Elite Operator</></> assigned (excluding Assistants and Activity Rooms), order acquisition efficiency <@cc.vup>+2%</> (max <@cc.kw>10</> facilities)"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Quiet Zone",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies take 100% of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is an 8% chance to not consume a <$ba.palsy>Paralysis</> stack"
+        },
+        {
+          "name": "Quiet Zone",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies take 110% <@ba.talpu>(+10%)</> of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is an 11% <@ba.talpu>(+3%)</> chance to not consume a <$ba.palsy>Paralysis</> stack"
+        },
+        {
+          "name": "Quiet Zone",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies take 135% of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is a 10% chance to not consume a <$ba.palsy>Paralysis</> stack"
+        },
+        {
+          "name": "Quiet Zone",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Enemies take 145% <@ba.talpu>(+10%)</> of Mantra's ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>; when <$ba.palsy>Paralysis</> is triggered, there is an 13% <@ba.talpu>(+3%)</> chance to not consume a <$ba.palsy>Paralysis</> stack"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Total Grasp",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Enemies entering the field from the closest Incursion Point to Mantra immediately gain 1 stack of <$ba.palsy>Paralysis</>"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "operatorId": "char_128_plosis",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "y-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_plosis",
+      "name": "Medic Environment Analyze System",
+      "region": "en",
+      "type": "RIN-X",
+      "icon": "rin-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Ptilopsis use Enkephalin 8 times (Ptilopsis cannot be a Support Unit)",
+        "Clear Main Theme 4-9 with a 3-star rating; a non-Support Ptilopsis must be deployed during the operation, and any other Medic Operators or Defender Operators are not allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 30
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 40
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Skill Aura",
+              "description": "When deployed, increases the SP recovery of all allies by 0.3/sec; Allies within Attack Range gain 0.33/sec instead (only the highest effect of this type will be applied)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 47
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Skill Aura",
+              "description": "When deployed, increases the SP recovery of all allies by 0.3/sec; Allies within Attack Range gain 0.35/sec instead (only the highest effect of this type will be applied)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,637 @@
+{
+  "operatorId": "char_4055_bgsnow",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_bgsnow_1",
+      "name": "Iamb",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 32,
+          "initSp": 0,
+          "values": [
+            0.2,
+            0.3,
+            1.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 31,
+          "initSp": 0,
+          "values": [
+            0.25,
+            0.3,
+            1.35
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.3,
+            1.4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 29,
+          "initSp": 0,
+          "values": [
+            0.35,
+            0.3,
+            1.45
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 28,
+          "initSp": 0,
+          "values": [
+            0.4,
+            0.3,
+            1.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 27,
+          "initSp": 0,
+          "values": [
+            0.45,
+            0.3,
+            1.55
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.3,
+            1.6
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 23,
+          "initSp": 0,
+          "values": [
+            0.53,
+            0.3,
+            1.85
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 21,
+          "initSp": 0,
+          "values": [
+            0.56,
+            0.4,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            0.6,
+            0.4,
+            2.25
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>; When attacking, has a <@ba.vup>{prob:0%}</> chance to deal <@ba.vup>{atk_scale:0%}</> damage \n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk",
+        "prob",
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_bgsnow_2",
+      "name": "Précis",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            1.6,
+            0.7
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            1.65,
+            0.7
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 3,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            1.7,
+            0.7
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 3,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            1.8,
+            0.65
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 3,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            1.85,
+            0.65
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 6,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            1.9,
+            0.65
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 6,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            2,
+            0.6
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 6,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            2.1,
+            0.6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 9,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            2.2,
+            0.6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 9,
+          "rangeId": "3-1",
+          "description": "Passive Effect: When this skill is equipped, the Redeployment Time of 'Typewriter' is reduced to <@ba.vup>{respawn_time:0%}</>\nActive Effect: Immediately attacks 3 times in front of this unit, with each attack dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            2.3,
+            0.5
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk_scale",
+        "respawn_time"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_bgsnow_3",
+      "name": "Opprobrium",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 15,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            1.4,
+            1.55
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 15,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            1.45,
+            1.65
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 15,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            1.5,
+            1.75
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 17,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            1.55,
+            1.85
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 17,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            1.6,
+            1.95
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 17,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            1.65,
+            2.05
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 19,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            1.7,
+            2.15
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 20,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            1.8,
+            2.3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 29,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 22,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            1.9,
+            2.4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 23,
+          "rangeId": "3-1",
+          "values": [
+            -0.6,
+            2,
+            2.55
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</>, Attack Interval is <@ba.vup>reduced</>, and each attack deals <@ba.vup>{atk_scale:0%}</> damage (Increased to <@ba.vup>{bgsnow_s_3[atk_up].atk_scale:0%}</> against enemies in the front 3 tiles)",
+      "blackboardKeys": [
+        "base_attack_time",
+        "atk_scale",
+        "bgsnow_s_3[atk_up].atk_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&gold[100]",
+          "name": "Sales Promotions",
+          "room": "TRADING",
+          "icon": "bskill_tra_flow_gs",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this operator is assigned to a Trading Post, for every <@cc.kw>1</> <$cc.t.flow_gold><@cc.kw> Pure Gold Production Line, </></>, Trading Post order acquisition efficiency <@cc.vup>+5%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_line_durin[010]",
+          "name": "Zeruertza Resident",
+          "room": "TRADING",
+          "icon": "bskill_tra_flow_durin",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading post, for every <@cc.kw>1</> <$cc.tag.durin><@cc.kw>Durin</></> Operator in the base (excluding Assistants and Activity Room users, caps at <@cc.kw>4</>), Trading Post gains another <@cc.kw>1</> <$cc.t.flow_gold><@cc.kw>Pure Gold Production Line</></>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Automatic Typewriter",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a 'Typewriter' for 15s; the 'Typewriter' has the same skill as this unit, and has its own Redeployment Time"
+        },
+        {
+          "name": "Automatic Typewriter",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a 'Typewriter' for 20s; the 'Typewriter' has the same skill as this unit, and has its own Redeployment Time"
+        },
+        {
+          "name": "Automatic Typewriter",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a 'Typewriter' for 25s; the 'Typewriter' has the same skill as this unit, and has its own Redeployment Time"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Stenographer of Weaknesses",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks from the 'Typewriter' reduce the target's DEF by 18% for 4 seconds; if the 'Typewriter' is placed within the 4 tiles adjacent to Pozëmka, this effect increases to 23%"
+        },
+        {
+          "name": "Stenographer of Weaknesses",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks from the 'Typewriter' reduce the target's DEF by 20% <@ba.talpu>(+2%)</> for 5 <@ba.talpu>(+1)</> seconds; if the 'Typewriter' is placed within the 4 tiles adjacent to Pozëmka, this effect increases to <@ba.talpu>25% (+2%)</>"
+        }
+      ]
+    }
+  ]
+}

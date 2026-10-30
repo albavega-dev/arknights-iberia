@@ -1,0 +1,488 @@
+{
+  "operatorId": "char_4125_rdoc",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_rdoc_1",
+      "name": "Violent Response",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 5,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>slightly reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            1,
+            -0.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 5,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>slightly reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            1.3,
+            -0.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 7,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>slightly reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            1.7,
+            -0.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 7,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            2,
+            -0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 9,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            2.3,
+            -0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 9,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            2.7,
+            -0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 11,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>greatly reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            3,
+            -0.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 11,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>greatly reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            3.5,
+            -0.7
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 13,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>greatly reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            3.8,
+            -0.7
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 15,
+          "description": "Immediately heals self by <@ba.vup>{heal_scale:0%}</> of ATK; afterwards, Attack Interval <@ba.vup>greatly reduces</>\n<@ba.rem>Skill activation grants 31 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Can only be used 3 times per deployment</>",
+          "values": [
+            3,
+            31,
+            4,
+            -0.7
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "skill_max_trigger_time",
+        "attack@trigger_time",
+        "heal_scale",
+        "base_attack_time"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_rdoc_2",
+      "name": "Stim Pistol",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "rangeId": "4-1",
+          "values": [
+            3,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 1,
+          "rangeId": "4-1",
+          "values": [
+            3.5,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 3,
+          "rangeId": "4-1",
+          "values": [
+            4,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            4.5,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 7,
+          "rangeId": "4-1",
+          "values": [
+            5,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 8,
+          "rangeId": "4-1",
+          "values": [
+            5.5,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 9,
+          "rangeId": "4-1",
+          "values": [
+            6,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 11,
+          "rangeId": "4-1",
+          "values": [
+            6.5,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 13,
+          "rangeId": "4-1",
+          "values": [
+            7,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "rangeId": "4-1",
+          "values": [
+            7.5,
+            3
+          ]
+        }
+      ],
+      "description": "Immediately fires an Epinephrine Shot forward; healing the first allied Operator it hits by <@ba.vup>{heal_scale:0%}</> of ATK\n<@ba.rem>Can only be used 3 times per deployment</>",
+      "blackboardKeys": [
+        "heal_scale",
+        "skill_max_trigger_time"
+      ]
+    }
+  ],
+  "ranges": {
+    "4-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 4
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_tag[1020]",
+          "name": "Tactic Guidance: Defense",
+          "room": "TRAINING",
+          "icon": "bskill_train_defense",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed <@cc.vup>+10%</> for each <$cc.g.Defence><@cc.kw>Defending</></> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.kw>4</> Operators)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all[026]",
+          "name": "Altruism",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all3",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.2</> Morale per hour to all Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP +3%, attacks ignore 30 DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Max HP +3%, attacks ignore 50 <@ba.talpu>(+20)</> DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP +6%, attacks ignore 60 DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Max HP +6%, attacks ignore 80 <@ba.talpu>(+20)</> DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Max HP +12%, attacks ignore 120 DEF"
+        },
+        {
+          "name": "Field Medic",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Max HP +12%, attacks ignore 140 <@ba.talpu>(+20)</> DEF"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Sympathicus Simulation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing an allied unit, any healing in excess of that unit's Max HP will be converted into a rapidly-decaying <$ba.barrier>Barrier</>"
+        },
+        {
+          "name": "Sympathicus Simulation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When healing an allied unit, any healing in excess of that unit's Max HP will be converted into a decaying <$ba.barrier>Barrier</>"
+        }
+      ]
+    }
+  ]
+}

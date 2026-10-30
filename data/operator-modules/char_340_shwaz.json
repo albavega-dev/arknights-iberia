@@ -1,0 +1,199 @@
+{
+  "operatorId": "char_340_shwaz",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_shwaz",
+      "name": "Customized Crossbow Accessory Suit",
+      "region": "en",
+      "type": "ARC-X",
+      "icon": "arc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Schwarz, and unleash Final Tactics at least 2 times in each battle",
+        "Clear Heart of Surging Flame OF-7 with a 3-star rating; You must deploy your own Schwarz, and have her defeat at least 2 Rockbreakers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 55,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 65,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Crossfire",
+              "description": "When Schwarz and at least one more Sniper Operator are in the squad, all Sniper Operators gain +11% ATK"
+            },
+            {
+              "index": 1,
+              "potential": 6,
+              "token": false,
+              "name": "Crossfire",
+              "description": "When Schwarz and at least one more Sniper Operator are in the squad, all Sniper Operators gain +13% <@ba.talpu>(+2%)</> ATK"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 75,
+            "respawn_time": -25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Crossfire",
+              "description": "When Schwarz and at least one more Sniper Operator are in the squad, all Sniper Operators gain +13% ATK"
+            },
+            {
+              "index": 1,
+              "potential": 6,
+              "token": false,
+              "name": "Crossfire",
+              "description": "When Schwarz and at least one more Sniper Operator are in the squad, all Sniper Operators gain +15% <@ba.talpu>(+2%)</> ATK"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_shwaz",
+      "name": "Old Razor",
+      "region": "en",
+      "type": "ARC-Y",
+      "icon": "arc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with Schwarz (excluding Support Units)",
+        "Clear Main Theme 2-1 with a 3-star rating; You must deploy your own Schwarz, and only Sniper Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 80,
+            "def": 10
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.05
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 100,
+            "def": 13
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.05
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Armor Penetration Arrow",
+              "description": "Attacks have a 20% chance to deal 165% damage and reduce the target's DEF by 25% for 5 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 120,
+            "def": 16
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>105%</> when attacking enemies directly in front, and ignores their Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.05
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Armor Penetration Arrow",
+              "description": "Attacks have a 20% chance to deal 170% damage and reduce the target's DEF by 25% for 5 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

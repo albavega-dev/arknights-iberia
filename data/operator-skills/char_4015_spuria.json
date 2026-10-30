@@ -1,0 +1,395 @@
+{
+  "operatorId": "char_4015_spuria",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_spuria_1",
+      "name": "Seize the Moment",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            40
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            45
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            50
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            55
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            60
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            65
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            70
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            80
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            90
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 24,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            100
+          ]
+        }
+      ],
+      "description": "After deployment, ASPD <@ba.vup>+{attack_speed}</>",
+      "blackboardKeys": [
+        "attack_speed"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_spuria_2",
+      "name": "On-the-Fly Weapon Modding",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 25,
+          "values": [
+            0.1,
+            20,
+            3,
+            0.35
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 51,
+          "initSp": 25,
+          "values": [
+            0.1,
+            20,
+            3,
+            0.35
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "values": [
+            0.1,
+            20,
+            3,
+            0.35
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 26,
+          "values": [
+            0.15,
+            25,
+            2.5,
+            0.3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 26,
+          "values": [
+            0.15,
+            25,
+            2.5,
+            0.3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 26,
+          "values": [
+            0.15,
+            25,
+            2.5,
+            0.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 27,
+          "values": [
+            0.2,
+            30,
+            2,
+            0.25
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 28,
+          "values": [
+            0.2,
+            35,
+            2,
+            0.25
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 29,
+          "values": [
+            0.25,
+            35,
+            1.8,
+            0.25
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 30,
+          "values": [
+            0.3,
+            40,
+            1.8,
+            0.2
+          ]
+        }
+      ],
+      "description": "Grants ATK <@ba.vup>+{atk:0%}</> and ASPD <@ba.vup>+{attack_speed}</> to this unit and the closest <@ba.rem>Sniper</> Operator in front of this unit (prioritizes the tile directly in front); when attacking, this unit and the <@ba.rem>Sniper</> Operator have a <@ba.vup>{prob:0%}</> chance to <@ba.vdown><$ba.stun>Stun</> themselves for {stun_time:0.0} seconds</>",
+      "blackboardKeys": [
+        "atk",
+        "attack_speed",
+        "stun_time",
+        "prob"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd&addition[000]",
+          "name": "Technology Exchange α",
+          "room": "POWER",
+          "icon": "bskill_power_rec_spd&addition1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, drone recovery rate is <@cc.vup>+10%</> in the first hour and thereafter <@cc.vup>+1%</> per hour, up to <@cc.vup>+15%</>"
+        },
+        {
+          "buffId": "power_rec_spd&addition[001]",
+          "name": "Technology Exchange β",
+          "room": "POWER",
+          "icon": "bskill_power_rec_spd&addition2",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, drone recovery rate is <@cc.vup>+15%</> in the first hour and thereafter <@cc.vup>+1%</> per hour, up to <@cc.vup>+20%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_spd&cost[010]",
+          "name": "Take-Away Fruit Tarts",
+          "room": "POWER",
+          "icon": "bskill_pow_spd&cost",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, reduces the Morale consumed each hour by <@cc.vup>-0.3</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Differential Reloading Experiment",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack has a 30% chance to trigger one of the following effects: the attack instead hits twice; the target is <$ba.stun>Stunned</> for 0.5 seconds; the attack ignores 60% of the target's DEF"
+        },
+        {
+          "name": "Differential Reloading Experiment",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack has a 50% chance to trigger one of the following effects: the attack instead hits twice; the target is <$ba.stun>Stunned</> for 1 second; the attack ignores 60% of the target's DEF"
+        },
+        {
+          "name": "Differential Reloading Experiment",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Each attack has a 70% chance to trigger one of the following effects: the attack instead hits twice; the target is <$ba.stun>Stunned</> for 1 second; the attack ignores 80% of the target's DEF"
+        }
+      ]
+    }
+  ]
+}

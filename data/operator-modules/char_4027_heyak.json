@@ -1,0 +1,307 @@
+{
+  "operatorId": "char_4027_heyak",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_heyak",
+      "name": "'Bibliotheca'",
+      "region": "en",
+      "type": "CCR-X",
+      "icon": "ccr-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with Ho'olheyak (excluding Support Units)",
+        "Clear Heart of Surging Flame OF-7 with a 3-star rating; You must deploy your own Ho'olheyak, and use Well-Read Ravings at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+              "blackboard": [
+                {
+                  "key": "magic_resist_penetrate_fixed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+              "blackboard": [
+                {
+                  "key": "magic_resist_penetrate_fixed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Inherited End",
+              "description": "When attacking aerial targets, increases ATK to 130%, and silences targets for 4 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Inherited End",
+              "description": "When attacking aerial targets, increases ATK to 133% <@ba.talpu>(+3%)</>, and silences targets for 4 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 175,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+              "blackboard": [
+                {
+                  "key": "magic_resist_penetrate_fixed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Inherited End",
+              "description": "When attacking aerial targets, increases ATK to 135%, and silences targets for 5 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Inherited End",
+              "description": "When attacking aerial targets, increases ATK to 138% <@ba.talpu>(+3%)</>, and silences targets for 5 seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_heyak",
+      "name": "Time Gallery of K'uk'ulkan",
+      "region": "en",
+      "type": "CCR-Y",
+      "icon": "ccr-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Ho'olheyak, and unleash Well-Read Ravings at least once in each battle",
+        "Clear Main Theme 4-3 with a 3-star rating; You must deploy your own Ho'olheyak, and have Ho'olheyak defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 105,
+            "atk": 32,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 40,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Bygone Wings",
+              "description": "Applies <$ba.weightless>Weightless</> to enemies with 60% or more HP within Attack Range, and inflicts 10% <$ba.magicfragile>[Arts Fragility]</> on enemies with less than 50% HP."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 45,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <@ba.kw>{sp}</> SP when normal attacks hit an elite or leader enemy.",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Bygone Wings",
+              "description": "Applies <$ba.weightless>Weightless</> to enemies with 50% or more HP within Attack Range, and inflicts 20% <$ba.magicfragile>[Arts Fragility]</> on enemies with less than 50% HP."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_heyak",
+      "name": "Ho'olheyak's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, ignores <@ba.kw>10</> RES and recovers 30% SP the first time each enemy reaches the Objective Point' tile"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, ignores <@ba.kw>10</> RES and recovers 30% SP the first time each enemy reaches the Objective Point' tile"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Inherited End",
+              "description": "When attacking aerial units, ATK increases to 140% and silences them for 4 seconds; In <@ba.kw>Integrated Strategies</>, gains 1 Temporary Life Point on first deployment, and the first time an enemy steps into the Objective tile, <$ba.levitate>Levitates</> all enemies for 15 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Inherited End",
+              "description": "When attacking aerial units, ATK increases to 143% <@ba.talpu>(+3%)</> and silences them for 4 seconds; In <@ba.kw>Integrated Strategies</>, gains 1 Temporary Life Point on first deployment, and the first time an enemy steps into the Objective tile, <$ba.levitate>Levitates</> all enemies for 15 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, ignores <@ba.kw>10</> RES and recovers 30% SP the first time each enemy reaches the Objective Point' tile"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Inherited End",
+              "description": "When attacking aerial units, ATK increases to 145% and silences them for 5 seconds; In <@ba.kw>Integrated Strategies</>, gains 1 Temporary Life Point on first deployment, and the first time an enemy steps into the Objective tile, <$ba.levitate>Levitates</> all enemies for 15 seconds; skills will simultaneously Levitate and deal damage to enemies and surrounding targets"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Inherited End",
+              "description": "When attacking aerial units, ATK increases to 148% <@ba.talpu>(+3%)</> and silences them for 5 seconds; In <@ba.kw>Integrated Strategies</>, gains 1 Temporary Life Point on first deployment, and the first time an enemy steps into the Objective tile, <$ba.levitate>Levitates</> all enemies for 15 seconds; skills will simultaneously Levitate and deal damage to enemies and surrounding targets"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

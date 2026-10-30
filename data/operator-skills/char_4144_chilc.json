@@ -1,0 +1,468 @@
+{
+  "operatorId": "char_4144_chilc",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_chilc_1",
+      "name": "Lockpicks",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 6,
+          "values": [
+            4,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            7,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 7,
+          "values": [
+            4,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            7,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 7,
+          "values": [
+            5,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            8,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 8,
+          "values": [
+            5,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            8,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 8,
+          "values": [
+            6,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            9,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 9,
+          "values": [
+            6,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            9,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 9,
+          "values": [
+            6,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            9,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 10,
+          "values": [
+            7,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            10,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 10,
+          "values": [
+            7,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            10,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 3,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 10,
+          "values": [
+            7,
+            3,
+            0.4,
+            0.2,
+            0.4,
+            10,
+            4
+          ]
+        }
+      ],
+      "description": "Stops attacking; after skill ends, obtain <@ba.vup>{ground}</>-<@ba.vup>{floor}</> DP randomly",
+      "blackboardKeys": [
+        "mid_cost",
+        "step",
+        "prob_add",
+        "prob_stay",
+        "prob_minus",
+        "floor",
+        "ground"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_chilc_2",
+      "name": "Improvisation",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 11,
+          "values": [
+            35,
+            0.3,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 11,
+          "values": [
+            37,
+            0.3,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 11,
+          "values": [
+            39,
+            0.3,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 12,
+          "values": [
+            42,
+            0.35,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 12,
+          "values": [
+            44,
+            0.35,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 12,
+          "values": [
+            46,
+            0.35,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 14,
+          "values": [
+            50,
+            0.38,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 15,
+          "values": [
+            54,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 16,
+          "values": [
+            57,
+            0.42,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 17,
+          "values": [
+            60,
+            0.45,
+            1
+          ]
+        }
+      ],
+      "description": "Gain <@ba.vup>{prob:0%}</> Physical Dodge, ASPD +<@ba.vup>{attack_speed}</>, and obtain <@ba.vup>{cost}</> DP with every attack",
+      "blackboardKeys": [
+        "attack_speed",
+        "prob",
+        "cost"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit[036]",
+          "name": "Half-foot Guild Representative",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit7",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</> and the order limit <@cc.vup>+1</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_bd[100]",
+          "name": "Familiar Flavors",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd_bd_dungeon",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+1%</> for every <@cc.vup>1</> <$cc.bd_dungeon><@cc.rem>Monster Meal</></>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Keen Senses",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "For 35 seconds after deployment, Chilchuck and allied units within his range will not take damage from environmental effects or <$ba.dt.element>Elemental Injury</>",
+          "rangeId": "2-2"
+        },
+        {
+          "name": "Keen Senses",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "For 40 <@ba.talpu>(+5)</> seconds after deployment, Chilchuck and allied units within his range will not take damage from environmental effects or <$ba.dt.element>Elemental Injury</>",
+          "rangeId": "2-2"
+        },
+        {
+          "name": "Keen Senses",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "For 45 seconds after deployment, Chilchuck and allied units within his range will not take damage from environmental effects or <$ba.dt.element>Elemental Injury</>",
+          "rangeId": "2-2"
+        },
+        {
+          "name": "Keen Senses",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "For 50 <@ba.talpu>(+5)</> seconds after deployment, Chilchuck and allied units within his range will not take damage from environmental effects or <$ba.dt.element>Elemental Injury</>",
+          "rangeId": "2-2"
+        }
+      ]
+    }
+  ]
+}

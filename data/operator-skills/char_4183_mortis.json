@@ -1,0 +1,532 @@
+{
+  "operatorId": "char_4183_mortis",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_mortis_1",
+      "name": "Belua Multorum es Capitums",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "values": [
+            0.5,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 5,
+          "values": [
+            0.55,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 5,
+          "values": [
+            0.6,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 14,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 10,
+          "values": [
+            0.65,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 14,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 10,
+          "values": [
+            0.7,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 14,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 10,
+          "values": [
+            0.75,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 15,
+          "values": [
+            0.8,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 15,
+          "values": [
+            0.9,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 15,
+          "values": [
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "values": [
+            1.2,
+            2,
+            1
+          ]
+        }
+      ],
+      "description": "DEF <@ba.vup>+{def:0%}</>, Block <@ba.vup>+{block_cnt}</>, more likely to be attacked by enemies; when defeated while skill is active, <Substitute> can also block enemies and benefits from skill effects until the <Substitute> retreats",
+      "blackboardKeys": [
+        "def",
+        "block_cnt",
+        "taunt_level"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_mortis_2",
+      "name": "Destruction and Renewal",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.6,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.65,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.7,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 7,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.75,
+            20
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 7,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.8,
+            20
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 7,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            0,
+            0.85,
+            20
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 8,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, Attack Interval reduces slightly, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            -0.3,
+            0.9,
+            20
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 9,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, Attack Interval reduces slightly, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            -0.3,
+            1,
+            20
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 10,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, Attack Interval reduces slightly, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            -0.3,
+            1.1,
+            20
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 11,
+          "rangeId": "2-1",
+          "description": "Attack Range expands, Attack Interval reduces slightly, attacks become triple attacks that deal <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to random targets within Attack Range; every attack deals <@ba.vdown>{value}</> Arts damage to self when the attack hits the enemy",
+          "values": [
+            -0.3,
+            1.2,
+            20
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "base_attack_time",
+        "attack@atk_scale",
+        "value"
+      ]
+    }
+  ],
+  "ranges": {
+    "1-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ]
+    },
+    "2-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_mp_bd&trade[000]",
+          "name": "Monster of Acting",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_trade_mortis",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, <$cc.bd_mujica><@cc.rem>Passion</></> <@cc.vup>+20</>; for every <@cc.vup>8</> <$cc.bd_mujica><@cc.rem>Passion</></>, self Morale consumed per hour <@cc.vdown>+0.01</> and all Trading Posts' order efficiency <@cc.vup>+1%</> (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_mp_cost_reset[000]",
+          "name": "Halves of a Whole",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_mp_mortis",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center with <@cc.kw>Sakiko Togawa</>, ignores the self Morale loss effect from her own base skill"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +5",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +9% <@ba.talpu>(+4%)</>",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +10%; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 10% chance <Substitute> duration shortens by 1s",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +14% <@ba.talpu>(+4%)</>; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 10% chance <Substitute> duration shortens by 1s",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +20%; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 20% chance <Substitute> duration shortens by 1s",
+          "rangeId": "1-1"
+        },
+        {
+          "name": "Another 'Her'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +24% <@ba.talpu>(+4%)</>; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 20% chance <Substitute> duration shortens by 1s",
+          "rangeId": "1-1"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Do Not Fear Death",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +1 whenever Mutsumi Wakaba receives damage or Injury"
+        },
+        {
+          "name": "Do Not Fear Death",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +2 whenever Mutsumi Wakaba receives damage or Injury; when deployed, <$ba.mujica>Ave Mujica</> members gain +5% Max HP"
+        },
+        {
+          "name": "Do Not Fear Death",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +3 whenever Mutsumi Wakaba receives damage or Injury; when deployed, <$ba.mujica>Ave Mujica</> members gain +10% Max HP"
+        }
+      ]
+    }
+  ]
+}

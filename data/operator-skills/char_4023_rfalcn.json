@@ -1,0 +1,451 @@
+{
+  "operatorId": "char_4023_rfalcn",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_charge_cost[3]",
+      "name": "Charge γ",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 10,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 12,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 14,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 16,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 18,
+          "values": [
+            12
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            12
+          ]
+        }
+      ],
+      "description": "Instantly gains <@ba.vup>{cost}</> Deployment Points.",
+      "blackboardKeys": [
+        "cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_rfalcn_2",
+      "name": "Drunken Bladedance",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 5,
+          "rangeId": "1-1",
+          "values": [
+            9,
+            10,
+            0.04,
+            1.6,
+            1,
+            1.3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 6,
+          "rangeId": "1-1",
+          "values": [
+            9,
+            10,
+            0.08,
+            1.6,
+            1,
+            1.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 7,
+          "rangeId": "1-1",
+          "values": [
+            9,
+            10,
+            0.12,
+            1.6,
+            1,
+            1.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 8,
+          "rangeId": "1-1",
+          "values": [
+            10,
+            20,
+            0.16,
+            1.5,
+            1,
+            1.6
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 9,
+          "rangeId": "1-1",
+          "values": [
+            10,
+            20,
+            0.2,
+            1.5,
+            1,
+            1.6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "rangeId": "1-1",
+          "values": [
+            10,
+            20,
+            0.24,
+            1.5,
+            1,
+            1.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 12,
+          "rangeId": "1-1",
+          "values": [
+            11,
+            30,
+            0.28,
+            1.3,
+            1,
+            1.9
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 13,
+          "rangeId": "1-1",
+          "values": [
+            11,
+            30,
+            0.32,
+            1.3,
+            1,
+            2.1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 14,
+          "rangeId": "1-1",
+          "values": [
+            11,
+            30,
+            0.36,
+            1.3,
+            1,
+            2.3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "rangeId": "1-1",
+          "values": [
+            12,
+            40,
+            0.4,
+            1.25,
+            1,
+            2.5
+          ]
+        }
+      ],
+      "description": "Gradually gains <@ba.vup>{value}</> DP over the skill duration; ATK <@ba.vup>+{atk:0%}</>, ASPD <@ba.vup>+{attack_speed}</>, and Talent 1 activation chance increases to <@ba.vup>{talent@prob_scaler:0.0}</> times",
+      "blackboardKeys": [
+        "value",
+        "attack_speed",
+        "atk",
+        "rfalcn_s_2[cost].interval",
+        "rfalcn_s_2[cost].cost",
+        "talent@prob_scaler"
+      ]
+    }
+  ],
+  "ranges": {
+    "1-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_dorm_rec[001]",
+          "name": "War Tattoos",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_leader",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, all Operators in Dormitories recover <@cc.vup>+0.05</> Morale per hour (strongest effect of the same type applies)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_mp_cost[011]",
+          "name": "Art of Defense",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_cost",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Brutal Blows",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 15% chance to increase ATK to 140%"
+        },
+        {
+          "name": "Brutal Blows",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Has a 17% <@ba.talpu>(+2%)</> chance to increase ATK to 140%"
+        },
+        {
+          "name": "Brutal Blows",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Has a 20% chance to increase ATK to 140%"
+        },
+        {
+          "name": "Brutal Blows",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Has a 22% <@ba.talpu>(+2%)</> chance to increase ATK to 140%"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "A Matter of Habit",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "In [Tales Within the Sand], whenever a skill is activated, all resources carried by this unit will be sent to the backpack"
+        }
+      ]
+    }
+  ]
+}

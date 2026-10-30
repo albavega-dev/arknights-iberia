@@ -1,0 +1,130 @@
+{
+  "operatorId": "char_4166_varkis",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_varkis",
+      "name": "Way Home",
+      "region": "en",
+      "type": "CEN-Y",
+      "icon": "cen-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 20 enemies with your own Varkáris",
+        "Clear The Great Chief Returns RI-1 with a 3-star rating; You must deploy your own Varkáris, and use The Will of His People at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 48
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 58
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Never Forgotten",
+              "description": "When deployed, all [Minos] Operators have their ATK increased to 113% when attacking enemies with an HP percentage equal to or lower than their own"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Never Forgotten",
+              "description": "When deployed, all [Minos] Operators have their ATK increased to 115% <@ba.talpu>(+2%)</> when attacking enemies with an HP percentage equal to or lower than their own"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 66
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "While above 50% HP, reduces the amount of Physical damage taken by <@ba.kw>{damage_resistance:0%}</>",
+              "blackboard": [
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                },
+                {
+                  "key": "damage_resistance",
+                  "value": 0.2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Never Forgotten",
+              "description": "When deployed, all [Minos] Operators have their ATK increased to 116% when attacking enemies with an HP percentage equal to or lower than their own"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Never Forgotten",
+              "description": "When deployed, all [Minos] Operators have their ATK increased to 118% <@ba.talpu>(+2%)</> when attacking enemies with an HP percentage equal to or lower than their own"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

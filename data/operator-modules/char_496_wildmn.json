@@ -1,0 +1,71 @@
+{
+  "operatorId": "char_496_wildmn",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_wildmn",
+      "name": "Spear Replacement Suit",
+      "region": "en",
+      "type": "CHG-X",
+      "icon": "chg-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must include your own Wild Mane, and Wild Mane must be the first Operator deployed",
+        "Clear Maria Nearl MN-2 with a 3-star rating; You must deploy your own Wild Mane, and cannot include any other Vanguard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 40,
+            "attack_speed": 3
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 50,
+            "attack_speed": 4
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Forward March",
+              "description": "Redeployment Time -10 seconds. On deployment, all undeployed Guard Operators get DP cost -1 (each operator can have a maximum of -5 DP cost before each deployment)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 60,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Forward March",
+              "description": "Redeployment Time -15 seconds. On deployment, all undeployed Guard Operators get DP cost -1 (each operator can have a maximum of -5 DP cost before each deployment)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

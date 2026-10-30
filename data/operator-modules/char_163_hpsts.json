@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_163_hpsts",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_hpsts",
+      "name": "The Shaper",
+      "region": "en",
+      "type": "UNY-X",
+      "icon": "uny-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Vulcan (excluding Support Units)",
+        "Clear Main Theme S4-4 with a 3-star rating; You must deploy your own Vulcan, and have Vulcan defeat at least 6 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 210,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 300,
+            "def": 53
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Self-Defense",
+              "description": "When skill is activated, immediately recovers 30% Max HP. Afterward, restores 4% Max HP per second and gains 25% Physical Melee Dodge while skill is active"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Self-Defense",
+              "description": "When skill is activated, immediately recovers 30% Max HP. Afterward, restores 5% <@ba.talpu>(+1%)</> Max HP per second and gains 30% <@ba.talpu>(+5%)</> Physical Melee Dodge while skill is active"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 385,
+            "def": 68
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Self-Defense",
+              "description": "When skill is activated, immediately recovers 60% Max HP. Afterward, restores 4% Max HP per second and gains 25% Physical Melee Dodge while skill is active"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Self-Defense",
+              "description": "When skill is activated, immediately recovers 60% Max HP. Afterward, restores 5% <@ba.talpu>(+1%)</> Max HP per second and gains 30% <@ba.talpu>(+5%)</> Physical Melee Dodge while skill is active"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

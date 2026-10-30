@@ -1,0 +1,316 @@
+{
+  "operatorId": "char_1046_sbell2",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1079,
+            "atk": 414,
+            "def": 173,
+            "magicResistance": 15,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1349,
+            "atk": 560,
+            "def": 202,
+            "magicResistance": 15,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1349,
+            "atk": 560,
+            "def": 202,
+            "magicResistance": 15,
+            "cost": 24,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1687,
+            "atk": 718,
+            "def": 233,
+            "magicResistance": 15,
+            "cost": 24,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1687,
+            "atk": 718,
+            "def": 233,
+            "magicResistance": 15,
+            "cost": 24,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 2058,
+            "atk": 836,
+            "def": 265,
+            "magicResistance": 15,
+            "cost": 24,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": []
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 34,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_sbell2",
+      "operatorId": "char_1046_sbell2",
+      "region": "en",
+      "name": "A Thousandth of A Heart",
+      "moduleType": "PLX-Y",
+      "typeIcon": "plx-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 50,
+            "def": 20
+          },
+          "specialEffects": [
+            "Damage increases with number of enemies in the area (max increase <@ba.kw>{damage_scale:0%}</>)"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 62,
+            "def": 30
+          },
+          "specialEffects": [
+            "Damage increases with number of enemies in the area (max increase <@ba.kw>{damage_scale:0%}</>)",
+            "Snow falls every 5 seconds onto tiles within attack range, dealing 90% ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 12%, stacking up to 5 times (Snow on tile disappears when the first enemy on it leaves the tile)",
+            "Snow falls every 5 seconds onto tiles within attack range, dealing 95% <@ba.talpu>(+5%)</> ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 12%, stacking up to 5 times (Snow on tile disappears when the first enemy on it leaves the tile)"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 75,
+            "def": 38
+          },
+          "specialEffects": [
+            "Damage increases with number of enemies in the area (max increase <@ba.kw>{damage_scale:0%}</>)",
+            "Snow falls every 5 seconds onto tiles within attack range, dealing 100% ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 12%, stacking up to 5 times (Snow on tile disappears when the first enemy on it leaves the tile), and on deployment, immediately covers all tiles within attack range with a stack of snow",
+            "Snow falls every 5 seconds onto tiles within attack range, dealing 105% <@ba.talpu>(+5%)</> ATK as Arts damage to any ground enemies passing through affected tiles. Each stack of snow reduces enemy Movement Speed by 12%, stacking up to 5 times (Snow on tile disappears when the first enemy on it leaves the tile), and on deployment, immediately covers all tiles within attack range with a stack of snow"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; When skill is active, attacks deal <@ba.kw>AoE Arts damage</>",
+      "blackboard": [
+        {
+          "key": "def",
+          "value": 2
+        },
+        {
+          "key": "magic_resistance",
+          "value": 20
+        }
+      ]
+    }
+  ]
+}

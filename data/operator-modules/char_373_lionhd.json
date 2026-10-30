@@ -1,0 +1,149 @@
+{
+  "operatorId": "char_373_lionhd",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "3-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_lionhd",
+      "name": "Inheritance and Development",
+      "region": "en",
+      "type": "SPC-X",
+      "icon": "spc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Leonhardt, and unleash Deconstruct and Detonate at least 4 times in each battle",
+        "Clear Main Theme 3-5 with a 3-star rating; You must deploy your own Leonhardt, and have Leonhardt defeat at least 10 enemies with Deconstruct and Detonate"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 45
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 60
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lethal Fragmentation",
+              "description": "Gains +5% ATK for every enemy in range (stacks up to 6 times)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lethal Fragmentation",
+              "description": "Gains +5% ATK for every enemy in range (stacks up to 7 <@ba.talpu>(+1)</> times)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 155,
+            "atk": 70
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Lethal Fragmentation",
+              "description": "Gains +5% ATK for every enemy in range (stacks up to 7 times)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Lethal Fragmentation",
+              "description": "Gains +5% ATK for every enemy in range (stacks up to 8 <@ba.talpu>(+1)</> times)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

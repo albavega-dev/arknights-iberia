@@ -1,0 +1,199 @@
+{
+  "operatorId": "char_4194_rmixer",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_rmixer",
+      "name": "Armor Cleaning Brush Set",
+      "region": "en",
+      "type": "SPT-X",
+      "icon": "spt-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Sankta Miksaparato, and use Pre-Retirement Preaching at least 1 time in each battle",
+        "Clear Main Theme 14-5 with a 3-star rating under Standard Environment; You must deploy your own Sankta Miksaparato, and have him defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 40,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Reveals <$ba.invisible>Invisible</> enemies within range"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 48,
+            "def": 37
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Reveals <$ba.invisible>Invisible</> enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Machine-Gun Welcome Ceremony",
+              "description": "Whenever Sankta Miksaparato deals damage, he gains DEF +40 and ASPD +4 for 10 seconds, stacking up to 3 times"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 280,
+            "atk": 54,
+            "def": 43
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Reveals <$ba.invisible>Invisible</> enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Machine-Gun Welcome Ceremony",
+              "description": "Whenever Sankta Miksaparato deals damage, he gains DEF +50 and ASPD +5 for 10 seconds, stacking up to 3 times; once at max stacks, all [Laterano] Operators on the field cannot have their ASPD decrease below their starting ASPD"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_rmixer",
+      "name": "'Old Friends'",
+      "region": "en",
+      "type": "SPT-Y",
+      "icon": "spt-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Sankta Miksaparato use Pre-Retirement Preaching a total of 3 times",
+        "Clear Main Theme S4-3 with a 3-star rating; You must deploy your own Sankta Miksaparato, and can only include 7 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 60,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range +1 (unaffected by skill Attack Range changes)",
+              "blackboard": [
+                {
+                  "key": "ability_range_forward_extend",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 68,
+            "def": 57
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range +1 (unaffected by skill Attack Range changes)",
+              "blackboard": [
+                {
+                  "key": "ability_range_forward_extend",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Shield-Up Farewell Ceremony",
+              "description": "When Sankta Miksaparato has not attacked for 5 seconds, he gains a <$ba.barrier>Barrier</> equal to 15% Max HP; this timer restarts once the Barrier is lost; ATK +8% when in possession of a Barrier from himself"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Shield-Up Farewell Ceremony",
+              "description": "When Sankta Miksaparato has not attacked for 5 seconds, he gains a <@ba.talpu>Barrier</> equal to 18% <$ba.barrier>(+3%)</> Max HP; this timer restarts once the Barrier is lost; ATK +8% when in possession of a Barrier from himself"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 74,
+            "def": 63
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range +1 (unaffected by skill Attack Range changes)",
+              "blackboard": [
+                {
+                  "key": "ability_range_forward_extend",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Shield-Up Farewell Ceremony",
+              "description": "When Sankta Miksaparato has not attacked for 5 seconds, he gains a <$ba.barrier>Barrier</> equal to 20% Max HP; this timer restarts once the Barrier is lost; ATK +15% when in possession of a Barrier from himself"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Shield-Up Farewell Ceremony",
+              "description": "When Sankta Miksaparato has not attacked for 5 seconds, he gains a <@ba.talpu>Barrier</> equal to 23% <$ba.barrier>(+3%)</> Max HP; this timer restarts once the Barrier is lost; ATK +15% when in possession of a Barrier from himself"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

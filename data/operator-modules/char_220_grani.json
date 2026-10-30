@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_220_grani",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_grani",
+      "name": "Cavalry Policeman Suit",
+      "region": "en",
+      "type": "CHG-X",
+      "icon": "chg-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must include your own Grani, and Grani must be the first Operator deployed",
+        "Clear Grani and the Knights' Treasure GT-6 with a 3-star rating; You must deploy your own Grani, and have her defeat 8 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "def": 45
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 175,
+            "def": 60
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mounted Police",
+              "description": "When deployed, all Vanguard Operators gain 25% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Mounted Police",
+              "description": "When deployed, all Vanguard Operators gain 30% <@ba.talpu>(+5%)</> Physical Dodge"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "def": 67
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Mounted Police",
+              "description": "When deployed, all Vanguard Operators gain 30% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Mounted Police",
+              "description": "When deployed, all Vanguard Operators gain 35% <@ba.talpu>(+5%)</> Physical Dodge"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

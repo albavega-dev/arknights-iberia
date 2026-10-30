@@ -1,0 +1,608 @@
+{
+  "operatorId": "char_4226_veen",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_veen_1",
+      "name": "'From Wailing Born'",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 5,
+          "values": [
+            50
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 6,
+          "values": [
+            50
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 6,
+          "values": [
+            55
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 7,
+          "values": [
+            60
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 7,
+          "values": [
+            65
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 8,
+          "values": [
+            65
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 9,
+          "values": [
+            75
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 10,
+          "values": [
+            80
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 11,
+          "values": [
+            90
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 12,
+          "values": [
+            100
+          ]
+        }
+      ],
+      "description": "ASPD <@ba.vup>+{attack_speed}</>",
+      "blackboardKeys": [
+        "attack_speed"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_veen_2",
+      "name": "'By Blood Cleansed'",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 0,
+          "values": [
+            -0.5,
+            0.06,
+            5,
+            7
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 2,
+          "values": [
+            -0.5,
+            0.07,
+            5,
+            7
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 2,
+          "values": [
+            -0.5,
+            0.07,
+            6,
+            7
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 4,
+          "values": [
+            -0.5,
+            0.09,
+            6,
+            8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 4,
+          "values": [
+            -0.5,
+            0.09,
+            6,
+            8
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 6,
+          "values": [
+            -0.5,
+            0.09,
+            7,
+            8
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 6,
+          "values": [
+            -0.5,
+            0.11,
+            7,
+            9
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 8,
+          "values": [
+            -0.5,
+            0.13,
+            7,
+            9
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 8,
+          "values": [
+            -0.5,
+            0.13,
+            8,
+            9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 10,
+          "values": [
+            -0.5,
+            0.15,
+            8,
+            9
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vup>decreases slightly</>; every attack or release of stored charges grants ATK <@ba.vup>+{attack@veen_s_2_buff[stack].atk:0%}</> and ASPD <@ba.vup>+{attack@veen_s_2_buff[stack].attack_speed}</> (max <@ba.vup>{attack@veen_s_2_buff[stack].max_stack_cnt}</> stacks, releasing Transposed Energy gives <@ba.vup>3</> stacks) until skill ends",
+      "blackboardKeys": [
+        "base_attack_time",
+        "attack@veen_s_2_buff[stack].atk",
+        "attack@veen_s_2_buff[stack].attack_speed",
+        "attack@veen_s_2_buff[stack].max_stack_cnt"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_veen_3",
+      "name": "'With Iron Engraved'",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 63,
+          "initSp": 20,
+          "values": [
+            80,
+            1.1,
+            0.4,
+            15,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 61,
+          "initSp": 20,
+          "values": [
+            90,
+            1.1,
+            0.4,
+            15,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 59,
+          "initSp": 20,
+          "values": [
+            100,
+            1.2,
+            0.4,
+            15,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 22,
+          "values": [
+            110,
+            1.3,
+            0.4,
+            18,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 22,
+          "values": [
+            120,
+            1.3,
+            0.4,
+            18,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 22,
+          "values": [
+            130,
+            1.3,
+            0.4,
+            18,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 51,
+          "initSp": 24,
+          "values": [
+            140,
+            1.4,
+            0.4,
+            21,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 24,
+          "values": [
+            150,
+            1.5,
+            0.4,
+            24,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 26,
+          "values": [
+            160,
+            1.5,
+            0.4,
+            24,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 28,
+          "values": [
+            180,
+            1.65,
+            0.4,
+            27,
+            3,
+            1
+          ]
+        }
+      ],
+      "description": "ASPD <@ba.vup>+{attack_speed}</>; stored charges will bounce between enemies once on being released (prioritizing different targets), dealing <@ba.vup>{attack@bounce_atk_scale:0%}</> ATK as Arts damage; <@ba.vup>Transposed Energy</> bounces <@ba.vup>{merge_hit_cnt}</> times\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo; 1 ammo is spent per stored charge released, and 3 ammo per Transposed Energy released; skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "attack_speed",
+        "attack@bounce_atk_scale",
+        "attack@delay",
+        "attack@trigger_time",
+        "merge_hit_cnt",
+        "attack@base_atk_scale"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_doubleProf[301]",
+          "name": "'I Don't Get It'",
+          "room": "TRAINING",
+          "icon": "bskill_train_caster&vanguard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> and <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd_doubleProf[310]",
+          "name": "'Learning By Analogy'",
+          "room": "TRAINING",
+          "icon": "bskill_train_caster&vanguard2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Caster</> and <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+45%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_train&lv[000]",
+          "name": "Artisan",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_veen",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, current Factory Productivity <@cc.vup>+10%</> for every level of each Training Room level, up to <@cc.vup>30%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "'Before the Sword's Swing'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Trait reaches 3 stored charges, they combine into 1 Transposed Energy (can store up to equivalent of 9 charges); ATK +2% when in possession of Transposed Energy, and ASPD +5 when not in possession of Transposed Energy"
+        },
+        {
+          "name": "'Before the Sword's Swing'",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Trait reaches 3 stored charges, they combine into 1 Transposed Energy (can store up to equivalent of 9 charges); ATK +4% <@ba.talpu>(+2%)</> when in possession of Transposed Energy, and ASPD +5 when not in possession of Transposed Energy"
+        },
+        {
+          "name": "'Before the Sword's Swing'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Trait reaches 3 stored charges, they combine into 1 Transposed Energy (can store up to equivalent of 9 charges); ATK +10% when in possession of Transposed Energy, and ASPD +15 when not in possession of Transposed Energy"
+        },
+        {
+          "name": "'Before the Sword's Swing'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When Trait reaches 3 stored charges, they combine into 1 Transposed Energy (can store up to equivalent of 9 charges); ATK +12% <@ba.talpu>(+2%)</> when in possession of Transposed Energy, and ASPD +15 when not in possession of Transposed Energy"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Arts of War",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacking with stored charges makes the target suffer 90 Arts damage per second for 5s (stacks up to 3 times; Transposed Energy inflicts 3 stacks); Viy does not attack targets under this effect"
+        }
+      ]
+    }
+  ]
+}

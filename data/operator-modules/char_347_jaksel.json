@@ -1,0 +1,121 @@
+{
+  "operatorId": "char_347_jaksel",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_jaksel",
+      "name": "D32 Steel Chair",
+      "region": "en",
+      "type": "FGT-X",
+      "icon": "fgt-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Jackie use Pay Close Attention! a total of 8 times (excluding Support Units)",
+        "Clear Code of Brawl CB-4 with a 3-star rating; You must deploy your own Jackie, and can only include 6 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 20,
+            "def": 10
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Has <@ba.kw>15%</> Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 25,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Has <@ba.kw>15%</> Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Extreme Evasion",
+              "description": "Gains 35% Physical Dodge; After a successful dodge, gains +12 ASPD (Lasts for 5s, does not stack)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Extreme Evasion",
+              "description": "Gains 38% <@ba.talpu>(+3%)</> Physical Dodge; After a successful dodge, gains +12 ASPD (lasts for 5s, does not stack)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 30,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Has <@ba.kw>15%</> Physical Dodge",
+              "blackboard": [
+                {
+                  "key": "prob",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Extreme Evasion",
+              "description": "Gains 37% Physical Dodge; After a successful dodge, gains +12 ASPD (lasts for 5s, does not stack)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Extreme Evasion",
+              "description": "Gains 40% <@ba.talpu>(+3%)</> Physical Dodge; After a successful dodge, gains +12 ASPD (lasts for 5s, does not stack)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

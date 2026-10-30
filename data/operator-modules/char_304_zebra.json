@@ -1,0 +1,103 @@
+{
+  "operatorId": "char_304_zebra",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_zebra",
+      "name": "Stickers of a Popular Character",
+      "region": "en",
+      "type": "PRO-Y",
+      "icon": "pro-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Heavyrain use Emergency Camouflage a total of 30 times (excluding Support Units)",
+        "Clear Main Theme 2-7 with a 3-star rating; You must deploy your own Heavyrain, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 200,
+            "def": 50,
+            "block_cnt": 1
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 4 enemies"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 280,
+            "def": 60,
+            "block_cnt": 1
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 4 enemies"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Striped Camouflage",
+              "description": "This unit and allies on high ground tiles within the 8 surrounding tiles gain 23% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Striped Camouflage",
+              "description": "This unit and allies on high ground tiles within the 8 surrounding tiles gain 26%<@ba.talpu>(+3%)</> Physical Dodge"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 375,
+            "def": 65,
+            "block_cnt": 1
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 4 enemies"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Striped Camouflage",
+              "description": "This unit and allies on high ground tiles within the 8 surrounding tiles gain 25% Physical Dodge"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Striped Camouflage",
+              "description": "This unit and allies on high ground tiles within the 8 surrounding tiles gain 28%<@ba.talpu>(+3%)</> Physical Dodge"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

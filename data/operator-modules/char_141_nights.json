@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_141_nights",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_nights",
+      "name": "The Witch's Hat",
+      "region": "en",
+      "type": "CCR-X",
+      "icon": "ccr-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with Haze (excluding Support Units)",
+        "Clear Main Theme S2-4 with a 3-star rating; You must deploy your own Haze, and have Haze defeat at least 2 Heavy Defenders"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 20,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+              "blackboard": [
+                {
+                  "key": "magic_resist_penetrate_fixed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 30,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+              "blackboard": [
+                {
+                  "key": "magic_resist_penetrate_fixed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Black Mist",
+              "description": "Attacks reduce the target's RES by 24% for 1 second"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Black Mist",
+              "description": "Attacks reduce the target's RES by 27%<@ba.talpu> (+3%)</> for 1 second"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 40,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Ignore <@ba.kw>{magic_resist_penetrate_fixed}</> of target's RES",
+              "blackboard": [
+                {
+                  "key": "magic_resist_penetrate_fixed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Black Mist",
+              "description": "Attacks reduce the target's RES by 27% for 1 second"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Black Mist",
+              "description": "Attacks reduce the target's RES by -30%<@ba.talpu> (+3%)</> for 1 second"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

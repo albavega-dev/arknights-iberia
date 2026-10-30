@@ -1,0 +1,617 @@
+{
+  "operatorId": "char_249_mlyss",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_mlyss_1",
+      "name": "Progressive Moisturization",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 0,
+          "values": [
+            1,
+            1.501,
+            0.1,
+            10,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 0,
+          "values": [
+            1,
+            1.501,
+            0.14,
+            14,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 0,
+          "values": [
+            1,
+            1.501,
+            0.18,
+            18,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 4,
+          "values": [
+            1,
+            1.364,
+            0.22,
+            22,
+            11
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 4,
+          "values": [
+            1,
+            1.364,
+            0.26,
+            26,
+            11
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 4,
+          "values": [
+            1,
+            1.364,
+            0.3,
+            30,
+            11
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 8,
+          "values": [
+            1,
+            1.25,
+            0.35,
+            35,
+            12
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 8,
+          "values": [
+            1,
+            1.25,
+            0.4,
+            40,
+            12
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 8,
+          "values": [
+            1,
+            1.25,
+            0.45,
+            45,
+            12
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 8,
+          "values": [
+            1,
+            1.154,
+            0.5,
+            50,
+            13
+          ]
+        }
+      ],
+      "description": "Gradually recovers <@ba.vup>{fake_cost}</> DP while skill is active, Muelsyse and her Flowing Shapes gain <@ba.vup>+{atk:0%}</> ATK, <@ba.vup>+{attack_speed}</> ASPD",
+      "blackboardKeys": [
+        "mlyss_s_1[cost].cost",
+        "mlyss_s_1[cost].interval",
+        "atk",
+        "attack_speed",
+        "fake_cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_mlyss_2",
+      "name": "Ecological Interaction",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 5,
+          "values": [
+            12,
+            0.1,
+            0.1,
+            0.01
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 5,
+          "values": [
+            12,
+            0.14,
+            0.1,
+            0.01
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 5,
+          "values": [
+            12,
+            0.18,
+            0.1,
+            0.01
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 10,
+          "values": [
+            13,
+            0.22,
+            0.15,
+            0.02
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 10,
+          "values": [
+            13,
+            0.26,
+            0.15,
+            0.02
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "values": [
+            13,
+            0.3,
+            0.15,
+            0.02
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 15,
+          "values": [
+            14,
+            0.35,
+            0.2,
+            0.03
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 16,
+          "values": [
+            14,
+            0.4,
+            0.2,
+            0.04
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 17,
+          "values": [
+            14,
+            0.45,
+            0.25,
+            0.04
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 18,
+          "values": [
+            15,
+            0.5,
+            0.25,
+            0.05
+          ]
+        }
+      ],
+      "description": "Immediately gains <@ba.vup>{cost}</> DP, Muelsyse and her Flowing Shapes gain <@ba.vup>+{atk:0%}</> ATK; if Flowing Shape is in Melee form, it recovers <@ba.vup>{hp_recovery_per_sec_by_max_hp_ratio:0%}</> HP every second and gains <@ba.vup>{damage_resistance:0%}</> <$ba.protect>Sanctuary</>, if Flowing Shape is in Ranged form, its attacks hit <@ba.vup>twice</> at random targets within attack range",
+      "blackboardKeys": [
+        "cost",
+        "atk",
+        "damage_resistance",
+        "hp_recovery_per_sec_by_max_hp_ratio"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_mlyss_3",
+      "name": "Superficial Regulation",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 5,
+          "values": [
+            12,
+            0.1,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 5,
+          "values": [
+            12,
+            0.14,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 5,
+          "values": [
+            12,
+            0.18,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 10,
+          "values": [
+            13,
+            0.22,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 10,
+          "values": [
+            13,
+            0.26,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "values": [
+            13,
+            0.3,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 15,
+          "values": [
+            14,
+            0.35,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 16,
+          "values": [
+            14,
+            0.4,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 17,
+          "values": [
+            14,
+            0.45,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 18,
+          "values": [
+            15,
+            0.5,
+            2,
+            1.5
+          ]
+        }
+      ],
+      "description": "Immediately gains <@ba.vup>{cost}</> DP, Muelsyse and her Flowing Shapes gain <@ba.vup>+{atk:0%}</> ATK, if Flowing Shape is in Melee form, pulls surrounding enemies <@ba.vup>slightly</> towards it every <@ba.vup>{mlyss_s_3[token_melee_trigger].interval}</> seconds and <$ba.stun>Stuns</> all blocked enemies; if Flowing Shape is in Ranged form, respawns all Flowing Shapes and attacks <$ba.root>Bind</> enemies for <@ba.vup>{mlyss_s_3[unmoveable].duration}</> seconds",
+      "blackboardKeys": [
+        "cost",
+        "atk",
+        "mlyss_s_3[token_melee_trigger].interval",
+        "mlyss_s_3[unmoveable].duration"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all&oneself[022]",
+          "name": "Natural Beauty",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_all&one3",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, self Morale recovered per hour <@cc.vup>+0.55</>, and restores <@cc.vup>+0.1</> Morale per hour to all other Operators assigned to that Dormitory (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_rhine[000]",
+          "name": "Ecological Section Director",
+          "room": "POWER",
+          "icon": "bskill_power_rec_rhine",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, drone charging speed <@cc.vup>+10%</>; for every other <$cc.g.rh><@cc.kw>Rhine Lab</></> Operator in base (excluding Assistants and Activity Room users, caps at <@cc.kw>5</>), additional charging speed <@cc.vup>+3%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Pure Water is Life",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Flowing Shape to assist in combat. Flowing Shapes can partially copy an undeployed Operator's attributes (Max HP, ATK, DEF, RES, Block Count, Attack Interval, Attack Range, Damage Type, and obtain a special trait depending on whether in melee or ranged form), will respawn 30 seconds after being defeated"
+        },
+        {
+          "name": "Pure Water is Life",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Flowing Shape to assist in combat. Flowing Shapes can partially copy an undeployed Operator's attributes (Max HP, ATK, DEF, RES, Block Count, Attack Interval, Attack Range, Damage Type, and obtain a special trait depending on whether in melee or ranged form), will respawn 28 seconds after being defeated"
+        },
+        {
+          "name": "Pure Water is Life",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Flowing Shape to assist in combat. Flowing Shapes can partially copy an undeployed Operator's attributes (Max HP, ATK, DEF, RES, Block Count, Attack Interval, Attack Range, Damage Type, and obtain a special trait depending on whether in melee or ranged form), will respawn 25 seconds after being defeated"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Expenditure Economization",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When in squad, all [Rhine Lab] Operators have -2 DP Cost, and the first Rhine Lab Operator deployed has an additional -1 DP Cost"
+        },
+        {
+          "name": "Expenditure Economization",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When in squad, all [Rhine Lab] Operators have -2 DP Cost, and the first [Rhine Lab] Operator deployed has an additional -2<@ba.talpu>(+1)</> DP Cost"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "operatorId": "char_4140_lasher",
+  "region": "en",
+  "tokens": {
+    "token_10036_lasher_mcbird": "Clockwork Fowlbeast"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_lasher",
+      "name": "Traces From the Past",
+      "region": "en",
+      "type": "SUM-X",
+      "icon": "sum-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Summon a total of 20 summoned units with Sand Reckoner (excluding Support Units)",
+        "Clear Dorothy's Vision DV-2 with a 3-star rating; You must deploy your own Sand Reckoner, and can only include 4 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first summoned unit <@ba.kw>does not consume</> deployment slots (The last summoned unit on the field does not return a deployment slot when retreated or defeated)",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first summoned unit <@ba.kw>does not consume</> deployment slots (The last summoned unit on the field does not return a deployment slot when retreated or defeated)",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Teachings of the Dead Craftsman",
+              "description": "Can summon 5 Clockwork Fowlbeasts. Clockwork Fowlbeasts and Sand Reckoner deal 20% more damage to Machine enemies, and Clockwork Fowlbeasts gain ASPD +5"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Teachings of the Dead Craftsman",
+              "description": "Deal 20% more damage to Machine enemies, ASPD +5"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first summoned unit <@ba.kw>does not consume</> deployment slots (The last summoned unit on the field does not return a deployment slot when retreated or defeated)",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Teachings of the Dead Craftsman",
+              "description": "Can summon 5 Clockwork Fowlbeasts. Clockwork Fowlbeasts and Sand Reckoner deal 20% more damage to Machine enemies, and Clockwork Fowlbeasts gain ASPD +8"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Teachings of the Dead Craftsman",
+              "description": "Deal 20% more damage to Machine enemies, ASPD +8"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

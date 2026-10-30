@@ -1,0 +1,402 @@
+{
+  "operatorId": "char_4126_fuze",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_fuze_1",
+      "name": "Force Recon",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 15,
+          "values": [
+            1,
+            0.1,
+            60,
+            100
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 54,
+          "initSp": 15,
+          "values": [
+            1,
+            0.11,
+            60,
+            100
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 15,
+          "values": [
+            1,
+            0.12,
+            60,
+            100
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 18,
+          "values": [
+            1,
+            0.13,
+            70,
+            100
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 51,
+          "initSp": 18,
+          "values": [
+            1,
+            0.14,
+            70,
+            100
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 18,
+          "values": [
+            1,
+            0.15,
+            70,
+            100
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 21,
+          "values": [
+            1,
+            0.17,
+            75,
+            100
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 22,
+          "values": [
+            1,
+            0.22,
+            80,
+            100
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 23,
+          "values": [
+            1,
+            0.25,
+            85,
+            100
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 25,
+          "values": [
+            1,
+            0.3,
+            90,
+            100
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</>, ATK <@ba.vup>+{atk:0%}</>, ASPD <@ba.vup>+{attack_speed}</>\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "ability_range_forward_extend",
+        "atk",
+        "attack_speed",
+        "attack@trigger_time"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_fuze_2",
+      "name": "Cluster Charge",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "values": [
+            3.8,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 10,
+          "values": [
+            3.9,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 10,
+          "values": [
+            4,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 13,
+          "values": [
+            4.1,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 13,
+          "values": [
+            4.2,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 13,
+          "values": [
+            4.3,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 16,
+          "values": [
+            4.4,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 17,
+          "values": [
+            4.5,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 18,
+          "values": [
+            4.6,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            4.8,
+            3
+          ]
+        }
+      ],
+      "description": "Upon skill activation, places a Cluster Charge on the high-ground tile in front; causing 5 explosions on the passable tile behind it; Each explosion deals <@ba.vup>{atk_scale:0%}</> of ATK as Physical damage to surrounding targets.<@ba.rem>Skill can only be used when this unit is facing a high-ground tile with a passable tile behind it; Can only be used 3 times per deployment</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "skill_max_trigger_time"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_tag[1030]",
+          "name": "Tactic Guidance: Offense",
+          "room": "TRAINING",
+          "icon": "bskill_train_attack",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed <@cc.vup>+10%</> for each <$cc.g.Attack><@cc.kw>Attacking</></> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.kw>4</> Operators)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_bd[000]",
+          "name": "Silent and Hardworking",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_fuze",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, Productivity <@cc.vup>+20%</>; for every <@cc.vup>1</> <$cc.bd_tachanka><@cc.rem>Ursus Specialty Beverage</></>, capacity limit <@cc.vup>+2</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Ballistic Shield",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains 17% ranged Physical resist"
+        },
+        {
+          "name": "Ballistic Shield",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Gains 20% <@ba.talpu>(+3%)</> ranged Physical resist"
+        },
+        {
+          "name": "Ballistic Shield",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains 27% ranged Physical resist"
+        },
+        {
+          "name": "Ballistic Shield",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Gains 30% <@ba.talpu>(+3%)</> ranged Physical resist"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "operatorId": "char_4037_demetr",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_demetr",
+      "name": "The Instrument",
+      "region": "en",
+      "type": "FGT-Y",
+      "icon": "fgt-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Bellone use Riscossione a total of 5 times",
+        "Clear Main Theme 6-2 with a 3-star rating; You must deploy your own Bellone, and have him defeat at least 4 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "The Way of the Famiglia",
+              "description": "Attacks reduce the target's DEF by 7% for 10s (stacks up to 5 times); as the target's remaining HP percentage decreases, Bellone's damage dealt increases, to a maximum of 142% when target HP is below 20%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "The Way of the Famiglia",
+              "description": "Attacks reduce the target's DEF by 7% for 10s (stacks up to 5 times); as the target's remaining HP percentage decreases, Bellone's damage dealt increases, to a maximum of 150% <@ba.talpu>(+8%)</> when target HP is below 20%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "The Way of the Famiglia",
+              "description": "Attacks reduce the target's DEF by 8% for 10s (stacks up to 5 times); as the target's remaining HP percentage decreases, Bellone's damage dealt increases, to a maximum of 142% when target HP is below 20%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "The Way of the Famiglia",
+              "description": "Attacks reduce the target's DEF by 8% for 10s (stacks up to 5 times); as the target's remaining HP percentage decreases, Bellone's damage dealt increases, to a maximum of 150% <@ba.talpu>(+8%)</> when target HP is below 20%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

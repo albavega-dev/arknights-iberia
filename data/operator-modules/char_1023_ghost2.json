@@ -1,0 +1,229 @@
+{
+  "operatorId": "char_1023_ghost2",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ghost2",
+      "name": "'Vinyl Record' Box",
+      "region": "en",
+      "type": "PUM-X",
+      "icon": "pum-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Specter the Unchained (excluding Support Units)",
+        "Clear Under Tides SV-EX-1 with a 3-star rating; You must deploy your own Specter the Unchained, and have her defeat at least 1 Pocket Sea Crawler"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 50
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 69,
+            "def": 20
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Embraced Self",
+              "description": "<Substitute> reduces Movement Speed of nearby enemies by 50%, and deals 60% ATK as Arts damage to them per second. When swapping back, gain 8 SP"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 83,
+            "def": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Embraced Self",
+              "description": "<Substitute> reduces Movement Speed of nearby enemies by 60%, and deals 80% ATK as Arts damage to them per second. When swapping back, gain 15 SP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_ghost2",
+      "name": "The Beauty in the Incomplete",
+      "region": "en",
+      "type": "PUM-Y",
+      "icon": "pum-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Specter the Unchained, and unleash The Pressure to Survive at least 1 time in each battle",
+        "Clear Main Theme S4-1 with a 3-star rating; You must deploy your own Specter the Unchained, and have Specter the Unchained defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 25,
+            "def": 40
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 33,
+            "def": 48
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Ægir's Depths",
+              "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +25% Max HP and +0.3 SP/second"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Ægir's Depths",
+              "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +28% <@ba.talpu>(+3%)</> Max HP and +0.3 SP/second (only the highest effect of this type takes place)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 40,
+            "def": 55
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Ægir's Depths",
+              "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +30% Max HP and +0.5 SP/second"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Ægir's Depths",
+              "description": "When this unit is in the squad, all [Abyssal Hunter] Operators gain +33% <@ba.talpu>(+3%)</> Max HP and +0.5 SP/second (only the highest effect of this type takes place)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_ghost2",
+      "name": "Specter the Unchained's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, Specter the Unchained and her <Substitute> deal 40% more Physical and Arts damage, and receive 40% less Physical and Arts damage"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 275,
+            "atk": 57
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, Specter the Unchained and her <Substitute> deal 40% more Physical and Arts damage, and receive 40% less Physical and Arts damage"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Embraced Self",
+              "description": "<Substitute> reduces Movement Speed of nearby enemies by 40%, and deals 40% ATK as Arts damage to them per second;\nIn <@ba.kw>Integrated Strategies</>, <Substitute> deals an additional 100% ATK as Arts damage per second"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, Specter the Unchained and her <Substitute> deal 40% more Physical and Arts damage, and receive 40% less Physical and Arts damage"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Embraced Self",
+              "description": "<Substitute> reduces Movement Speed of nearby enemies by 40%, and deals 40% ATK as Arts damage to them per second;\nIn <@ba.kw>Integrated Strategies</>, <Substitute> deals an additional 160% ATK as Arts damage per second; when other Operators on ground tiles in the surrounding 8 tiles are defeated, if Specter the Unchained's <Substitute> is not currently active, then that Operator's HP cannot fall below 1 (once only) and causes nearby enemies to receive the same effects as being near the <Substitute>; Specter the Unchained will switch to her <Substitute> afterwards, refreshing this effect once she returns"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

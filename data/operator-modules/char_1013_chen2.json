@@ -1,0 +1,191 @@
+{
+  "operatorId": "char_1013_chen2",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "1-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_chen2",
+      "name": "Beach Combat Suit",
+      "region": "en",
+      "type": "RPR-X",
+      "icon": "rpr-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with your own Ch'en the Holungday",
+        "Clear Main Theme 9-13 with a 3-star rating under Standard Environment; You must deploy your own Ch'en the Holungday and have her defeat at least 20 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 30,
+            "def": 37
+          },
+          "rangeId": "1-3",
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 45,
+            "def": 42
+          },
+          "rangeId": "1-3",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Frugality",
+              "description": "When deployed, Ch'en's ammo-based skills have 23% chance to not consume the corresponding ammo; other Sniper Operators' ammo-based skills have 20% chance instead, while other Ranged Operators have 8% chance (only the highest effect of this type will be applied)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Frugality",
+              "description": "When deployed, Ch'en's ammo-based skills have 25% <@ba.talpu>(+2%)</> chance to not consume the corresponding ammo; other Sniper Operators' ammo-based skills have 20% chance instead, while other Ranged Operators have 8% chance (only the highest effect of this type will be applied)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 60,
+            "def": 45
+          },
+          "rangeId": "1-3",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Frugality",
+              "description": "When deployed, Ch'en's ammo-based skills have 25% chance to not consume the corresponding ammo; other Sniper Operators' ammo-based skills have 20% chance instead, while other Ranged Operators have 12% chance (only the highest effect of this type will be applied)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Frugality",
+              "description": "When deployed, Ch'en's ammo-based skills have 27% <@ba.talpu>(+2%)</> chance to not consume the corresponding ammo; other Sniper Operators' ammo-based skills have 20% chance instead, while other Ranged Operators have 12% chance (only the highest effect of this type will be applied)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_chen2",
+      "name": "The Last Day of Holiday",
+      "region": "en",
+      "type": "RPR-Y",
+      "icon": "rpr-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat 40 enemies with your own Ch'en the Holungday",
+        "Clear Dossoles Holiday DH-7 with a 3-star rating; You must deploy your own Ch'en the Holungday, and have her defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 135,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 165,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Vestiges of Vacation",
+              "description": "ATK +10%, ASPD +8, when there is water terrain on the battlefield, the effect becomes ATK +15%, ASPD +12"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 180,
+            "atk": 100
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<@ba.kw>Reduces</> Deployment Cost"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Vestiges of Vacation",
+              "description": "ATK +15%, ASPD +12, when there is water terrain on the battlefield, the effect becomes ATK +28%, ASPD +20; battlefield is considered water terrain when a skill is active"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

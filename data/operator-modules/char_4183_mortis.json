@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_4183_mortis",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mortis",
+      "name": "New Friends",
+      "region": "en",
+      "type": "PUM-Y",
+      "icon": "pum-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Mutsumi Wakaba use Destruction and Renewal a total of 6 times",
+        "Clear Main Theme 13-16 with a 3-star rating under Standard Environment; You must deploy your own Mutsumi Wakaba, and cannot include any other Specialist Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 200,
+            "def": 40
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 250,
+            "def": 50
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Another 'Her'",
+              "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +24%; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 20% chance <Substitute> duration shortens by 1s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Another 'Her'",
+              "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +28% <@ba.talpu>(+4%)</>; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 20% chance <Substitute> duration shortens by 1s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 280,
+            "def": 55
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Another 'Her'",
+              "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +26%; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 20% chance <Substitute> duration shortens by 1s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Another 'Her'",
+              "description": "When Mutsumi Wakaba or her <Substitute> receive Physical or Arts damage, the damage is reduced by 30%, and half of the reduced damage is received as <$ba.dt.apoptosis>Necrosis</>; <Substitute> does not attack and has DEF +30% <@ba.talpu>(+4%)</>; whenever <$ba.mujica>Ave Mujica</> members attack, there is a 20% chance <Substitute> duration shortens by 1s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

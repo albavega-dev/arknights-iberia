@@ -12,7 +12,14 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Generated output.
+    "coverage/**",
   ]),
+  {
+    // The next/image mocks render a plain img on purpose.
+    files: ["tests/components/**/*.test.tsx"],
+    rules: { "@next/next/no-img-element": "off" },
+  },
 ]);
 
 export default eslintConfig;

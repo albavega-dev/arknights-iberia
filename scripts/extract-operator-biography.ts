@@ -1,3 +1,4 @@
+import { compareCodeUnits } from "../src/game-data/string-order";
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { extractBiography, auditBiographies, type BiographyRegion, type HandbookSource } from "../src/game-data/operator-biography";
@@ -33,9 +34,9 @@ async function main() {
   const audit = auditBiographies(records, [...enIds, ...cnIds]);
   const enAudit = auditBiographies(records.filter((record) => record.region === "en"), enIds);
   const cnAudit = auditBiographies(records.filter((record) => record.region === "cn"), [...cnIds]);
-  const unknownLabels = [...new Set(records.flatMap((record) => record.fields.filter((field) => field.key.startsWith("unrecognized:")).map((field) => `${record.region}:${field.label}`)))].sort();
+  const unknownLabels = [...new Set(records.flatMap((record) => record.fields.filter((field) => field.key.startsWith("unrecognized:")).map((field) => `${record.region}:${field.label}`)))].sort(compareCodeUnits);
   await writeFile(outPath, JSON.stringify({ sources, records }, null, 2) + "\n", "utf8");
-  await writeFile(reportPath, `# Operator biography extraction audit\n\n- EN operators: ${enIds.length}\n- CN-only operators: ${cnIds.size}\n- Extracted biographies: ${records.length}\n- Missing: ${audit.missing.length}\n- Unexpected: ${audit.unexpected.length}\n\n## Coverage by region\n\n### EN\n\n${Object.entries(enAudit.coverage).sort().map(([key, count]) => `- ${key}: ${count}/${enIds.length}`).join("\n")}\n\n### CN\n\n${Object.entries(cnAudit.coverage).sort().map(([key, count]) => `- ${key}: ${count}/${cnIds.size}`).join("\n")}\n\nCoverage counts are computed from non-empty original fields; values and labels are not translated.\n\n## Unrecognized labels\n\n${unknownLabels.length ? unknownLabels.map((label) => `- ${label}`).join("\n") : "- None"}\n\n## Sources\n\n- EN: ${sources.en.revision}, ${sources.en.sha256}\n- CN: ${sources.cn.revision}, ${sources.cn.sha256}\n`, "utf8");
+  await writeFile(reportPath, `# Operator biography extraction audit\n\n- EN operators: ${enIds.length}\n- CN-only operators: ${cnIds.size}\n- Extracted biographies: ${records.length}\n- Missing: ${audit.missing.length}\n- Unexpected: ${audit.unexpected.length}\n\n## Coverage by region\n\n### EN\n\n${Object.entries(enAudit.coverage).sort(([a], [b]) => compareCodeUnits(a, b)).map(([key, count]) => `- ${key}: ${count}/${enIds.length}`).join("\n")}\n\n### CN\n\n${Object.entries(cnAudit.coverage).sort(([a], [b]) => compareCodeUnits(a, b)).map(([key, count]) => `- ${key}: ${count}/${cnIds.size}`).join("\n")}\n\nCoverage counts are computed from non-empty original fields; values and labels are not translated.\n\n## Unrecognized labels\n\n${unknownLabels.length ? unknownLabels.map((label) => `- ${label}`).join("\n") : "- None"}\n\n## Sources\n\n- EN: ${sources.en.revision}, ${sources.en.sha256}\n- CN: ${sources.cn.revision}, ${sources.cn.sha256}\n`, "utf8");
 }
 
 if (process.argv[1]?.endsWith("extract-operator-biography.ts")) void main();

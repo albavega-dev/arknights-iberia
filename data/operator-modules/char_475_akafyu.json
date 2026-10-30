@@ -1,0 +1,71 @@
+{
+  "operatorId": "char_475_akafyu",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_akafyu",
+      "name": "Samurai Armor",
+      "region": "en",
+      "type": "SBL-X",
+      "icon": "sbl-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Akafuyu use Nobukage-ryu - Juumonji Masaru a total of 5 times (excluding Support Units)",
+        "Clear Main Theme 3-8 with a 3-star rating; You must deploy your own Akafuyu, and have Akafuyu defeat Skullshatterer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 55,
+            "def": 30
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 65,
+            "def": 42
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Nobukage-ryu - Gyakufu",
+              "description": "+8% DEF when blocking an enemy"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 70,
+            "def": 50
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Nobukage-ryu - Gyakufu",
+              "description": "+12% DEF when blocking an enemy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

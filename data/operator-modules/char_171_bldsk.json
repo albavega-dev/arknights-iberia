@@ -1,0 +1,116 @@
+{
+  "operatorId": "char_171_bldsk",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_bldsk",
+      "name": "Emergency Reserves",
+      "region": "en",
+      "type": "PHY-X",
+      "icon": "phy-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Warfarin use Unstable Plasma a total of 12 times (excluding Support Units)",
+        "Clear Main Theme 2-10 with a 3-star rating using a squad of at most 7 units (including Support Units); A non-Support Warfarin must be in the squad and deployed, and only Guard Operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 40,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 65,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Blood Sample Recycle",
+              "description": "Restores 2 SP to this Operator and a random ally within range when an enemy within range is killed. Restore 1 more SP if the enemy was an elite or boss"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 47
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Blood Sample Recycle",
+              "description": "Restores 2 SP to this Operator and a random ally within range when an enemy within range is killed. Restore 2 more SP if the enemy was an elite or boss"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

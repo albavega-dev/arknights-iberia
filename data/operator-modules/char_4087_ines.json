@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4087_ines",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ines",
+      "name": "'Horncare Set'",
+      "region": "en",
+      "type": "AGE-Y",
+      "icon": "age-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, deploy your own Ines a total of 12 times",
+        "Clear Main Theme 12-12 with a 3-star rating under Standard Environment; You must deploy your own Ines, and use Murky Night at least 3 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "First Redeployment Time reduced by <@ba.kw>35%</>",
+              "blackboard": [
+                {
+                  "key": "respawn_time",
+                  "value": -0.35
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "First Redeployment Time reduced by <@ba.kw>35%</>",
+              "blackboard": [
+                {
+                  "key": "respawn_time",
+                  "value": -0.35
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Shadow Weaver",
+              "description": "The first hit on each enemy <$ba.root>Binds</> them for 5 seconds and <$ba.steal>Steals</> 100 ATK (effect expires when enemy is defeated or Ines retreats)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Shadow Weaver",
+              "description": "The first hit on each enemy <$ba.root>Binds</> them for 5 seconds and <$ba.steal>Steals</> 110 <@ba.talpu>(+10)</> ATK (effect expires when enemy is defeated or Ines retreats)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "First Redeployment Time reduced by <@ba.kw>35%</>",
+              "blackboard": [
+                {
+                  "key": "respawn_time",
+                  "value": -0.35
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Shadow Weaver",
+              "description": "The first hit on each enemy <$ba.root>Binds</> them for 5 seconds and <$ba.steal>Steals</> 110 ATK (effect expires when enemy is defeated or Ines retreats)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Shadow Weaver",
+              "description": "The first hit on each enemy <$ba.root>Binds</> them for 5 seconds and <$ba.steal>Steals</> 120 <@ba.talpu>(+10)</> ATK (effect expires when enemy is defeated or Ines retreats)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

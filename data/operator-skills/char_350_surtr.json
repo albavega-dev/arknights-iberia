@@ -1,0 +1,637 @@
+{
+  "operatorId": "char_350_surtr",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_surtr_1",
+      "name": "Laevatain",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2.05
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2.1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            3.1
+          ]
+        }
+      ],
+      "description": "Increases the ATK of the next attack to <@ba.vup>{atk_scale:0%}</>. If the target is defeated, immediately recover all Skill Points",
+      "blackboardKeys": [
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_surtr_2",
+      "name": "Molten Giant",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 7,
+          "values": [
+            0.5,
+            1,
+            2,
+            1.4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 7,
+          "values": [
+            0.55,
+            1,
+            2,
+            1.4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 7,
+          "values": [
+            0.6,
+            1,
+            2,
+            1.4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 8,
+          "values": [
+            0.65,
+            1,
+            2,
+            1.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 8,
+          "values": [
+            0.7,
+            1,
+            2,
+            1.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 8,
+          "values": [
+            0.75,
+            1,
+            2,
+            1.4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 9,
+          "values": [
+            0.8,
+            1,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 10,
+          "values": [
+            0.9,
+            1,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 11,
+          "values": [
+            1,
+            1,
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 12,
+          "values": [
+            1.2,
+            1,
+            2,
+            1.6
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</> and attack target count <@ba.vup>+1</>. When attacking only one enemy, deal <@ba.vup>{attack@surtr_s_2[critical].atk_scale:0%}</> ATK as damage to the target",
+      "blackboardKeys": [
+        "atk",
+        "ability_range_forward_extend",
+        "attack@max_target",
+        "attack@surtr_s_2[critical].atk_scale"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_surtr_3",
+      "name": "Twilight",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+2</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            1.8,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+2</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            1.9,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+2</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            2,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+2</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            2.1,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+2</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            2.2,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+2</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            2.3,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+2</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            2.4,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+2</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            2.7,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+2</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            3,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "description": "Immediately recover all HP; ATK <@ba.vup>+{atk:0%}</>, attack range <@ba.vup>+{ability_range_forward_extend}</>, attack target count <@ba.vup>+3</> and Max HP <@ba.vup>+{max_hp}</>. Gradually lose HP (HP loss caps at {hp_ratio:0%}/second after <@ba.vup>{duration}</> seconds); <@ba.rem>Unlimited duration</>",
+          "values": [
+            3.3,
+            2,
+            5000,
+            0.2,
+            0.2,
+            60,
+            4
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk",
+        "ability_range_forward_extend",
+        "max_hp",
+        "interval",
+        "hp_ratio",
+        "duration",
+        "attack@max_target"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[020]",
+          "name": "Guard Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_guard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession[120]",
+          "name": "Bladework Memory",
+          "room": "TRAINING",
+          "icon": "bskill_train_guard3",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+60%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Molten Flame",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 12 RES"
+        },
+        {
+          "name": "Molten Flame",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 14 <@ba.talpu>(+2)</> RES"
+        },
+        {
+          "name": "Molten Flame",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 20 RES"
+        },
+        {
+          "name": "Molten Flame",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 22 <@ba.talpu>(+2)</> RES"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Remnant Ash",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 4 seconds later"
+        },
+        {
+          "name": "Remnant Ash",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 5 <@ba.talpu>(+1)</> seconds later"
+        },
+        {
+          "name": "Remnant Ash",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 8 seconds later"
+        },
+        {
+          "name": "Remnant Ash",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "After receiving fatal damage, continuously prevent HP from falling below 1. Retreat from the battlefield 9 <@ba.talpu>(+1)</> seconds later"
+        }
+      ]
+    }
+  ]
+}

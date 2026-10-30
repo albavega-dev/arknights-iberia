@@ -1,0 +1,706 @@
+{
+  "operatorId": "char_1044_hsgma2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_hsgma2_1",
+      "name": "Bitter Karma",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.25,
+            0.25,
+            0.7
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.3,
+            0.8
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.35,
+            0.35,
+            0.9
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.4,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.45,
+            0.45,
+            1.1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.5,
+            1.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.55,
+            0.55,
+            1.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.6,
+            0.6,
+            1.45
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.65,
+            0.65,
+            1.6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_TAKEN_DAMAGE",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            0.7,
+            0.7,
+            1.75
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, deals <@ba.vup>{atk_scale:0%}</> of ATK as Arts damage to targets that attack Hoshiguma the Breacher\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_hsgma2_2",
+      "name": "Anadi-Avidya",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            0.4,
+            0.5,
+            1,
+            0.5,
+            0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 0,
+          "values": [
+            0.45,
+            0.6,
+            1,
+            0.5,
+            0.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            0.5,
+            0.7,
+            1,
+            0.5,
+            0.1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            0.55,
+            0.8,
+            1,
+            0.5,
+            0.1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            0.6,
+            0.9,
+            1,
+            0.5,
+            0.1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            0.65,
+            1,
+            1,
+            0.5,
+            0.1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            0.7,
+            1.1,
+            1,
+            0.5,
+            0.15
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            0.75,
+            1.2,
+            1,
+            0.5,
+            0.15
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            0.8,
+            1.25,
+            1,
+            0.5,
+            0.15
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            0.9,
+            1.3,
+            1,
+            0.5,
+            0.15
+          ]
+        }
+      ],
+      "description": "Hoshiguma the Breacher launches her shield while hitting all blocked enemies 3 times per attack, each hit dealing <@ba.vup>{attack@atk_scale:0%}</> of ATK; the shield flies <@ba.vup>one loop</> around this unit; the shield <$ba.sluggish>Slows</> enemies on contact, dealing <@ba.vup>{shield_atk_scale:0%}</> of ATK as Arts damage every {interval}s, while Hoshiguma the Breacher recovers HP equal to <@ba.vup>{heal_ratio:0%}</> of the damage dealt by the shield",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "shield_atk_scale",
+        "sluggish",
+        "interval",
+        "heal_ratio"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_hsgma2_3",
+      "name": "Hell Itself",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 25,
+          "rangeId": "x-2",
+          "values": [
+            0.4,
+            1.2,
+            2,
+            11
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 26,
+          "rangeId": "x-2",
+          "values": [
+            0.45,
+            1.3,
+            2,
+            11
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 27,
+          "rangeId": "x-2",
+          "values": [
+            0.5,
+            1.4,
+            2,
+            11
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 28,
+          "rangeId": "x-2",
+          "values": [
+            0.55,
+            1.5,
+            2,
+            11
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 29,
+          "rangeId": "x-2",
+          "values": [
+            0.6,
+            1.6,
+            2,
+            11
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 30,
+          "rangeId": "x-2",
+          "values": [
+            0.65,
+            1.7,
+            2,
+            11
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 31,
+          "rangeId": "x-2",
+          "values": [
+            0.7,
+            1.8,
+            2,
+            11
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 33,
+          "rangeId": "x-2",
+          "values": [
+            0.8,
+            1.9,
+            3,
+            11
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 35,
+          "rangeId": "x-2",
+          "values": [
+            0.9,
+            2.1,
+            3,
+            11
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 37,
+          "rangeId": "x-2",
+          "values": [
+            1,
+            2.3,
+            3,
+            11
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</>, Max HP <@ba.vup>+{max_hp:0%}</>, ATK <@ba.vup>+{atk:0%}</>, hitting up to <@ba.vup>{attack@max_target}</> enemies twice per attack; for <@ba.vup>{before_dead_duration}</>s upon manually deactivating the skill, Hoshiguma the Breacher retains skill bonuses and becomes undefeatable, attacks hitting 4 times, fatal damage taken by allied Operators within this unit's attack range is redirected to her, and she automatically retreats after the <@ba.vup>{before_dead_duration}</>s period\n<@ba.rem>Can manually deactivate skill (skill can be interrupted at any time)</>",
+      "blackboardKeys": [
+        "max_hp",
+        "atk",
+        "attack@max_target",
+        "before_dead_duration"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": -1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -2
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": -1
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_train_spd[012]",
+          "name": "Downtown Connections",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_train_spd3",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, if an Operator is conducting Skill Specialization in the Training Room, that Operator's Specialization training speed <@cc.vup>+5%</> (Only the strongest effect of this type takes place)."
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_token_prod_spd3[000]",
+          "name": "Camaraderie",
+          "room": "CONTROL",
+          "icon": "bskill_token_prod_spd3_lungmenguard",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned together with other <$cc.g.lgd><@cc.kw>L.G.D.</></> Operators to the Control Center, all Factories' productivity <@cc.vup>+3%</> (Only the strongest effect of this type takes place)"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Gouka",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When HP drops to 0, enters 'Ātmagrāha': cannot be healed by allies, damage received will accumulate, and once accumulated damage reaches 100% of Max HP, Hoshiguma the Breacher will be defeated; after 5 seconds without receiving damage, recovers 5% HP every second; once HP is greater than 0, leaves 'Ātmagrāha'"
+        },
+        {
+          "name": "Gouka",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When HP drops to 0, enters 'Ātmagrāha': cannot be healed by allies, damage received will accumulate, and once accumulated damage reaches 100% of Max HP, Hoshiguma the Breacher will be defeated; after 4 <@ba.talpu>(-1)</> seconds without receiving damage, recovers 5% HP every second; once HP is greater than 0, leaves 'Ātmagrāha'"
+        },
+        {
+          "name": "Gouka",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When HP drops to 0, enters 'Ātmagrāha': cannot be healed by allies, damage received will accumulate, and once accumulated damage reaches 200% of Max HP, Hoshiguma the Breacher will be defeated; after 5 seconds without receiving damage, recovers 5% HP every second; once HP is greater than 0, leaves 'Ātmagrāha'"
+        },
+        {
+          "name": "Gouka",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When HP drops to 0, enters 'Ātmagrāha': cannot be healed by allies, damage received will accumulate, and once accumulated damage reaches 200% of Max HP, Hoshiguma the Breacher will be defeated; after 4 <@ba.talpu>(-1)</> seconds without receiving damage, recovers 5% HP every second; once HP is greater than 0, leaves 'Ātmagrāha'"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Oni Battle Stance",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +50 RES and 35% ATK <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 70% of Max HP)"
+        }
+      ]
+    }
+  ]
+}

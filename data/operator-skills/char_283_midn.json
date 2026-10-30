@@ -1,0 +1,187 @@
+{
+  "operatorId": "char_283_midn",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_midn_1",
+      "name": "Enchant Weapon α",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 20,
+          "values": [
+            0.05
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 79,
+          "initSp": 20,
+          "values": [
+            0.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 20,
+          "values": [
+            0.15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 75,
+          "initSp": 25,
+          "values": [
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 36,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 74,
+          "initSp": 25,
+          "values": [
+            0.25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 37,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 73,
+          "initSp": 25,
+          "values": [
+            0.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 30,
+          "values": [
+            0.35
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>; Damage dealt by Normal Attacks turn into <@ba.vup>Arts damage</>",
+      "blackboardKeys": [
+        "atk"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&cost[000]",
+          "name": "Communication",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&cost",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+30%</> and Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd[200]",
+          "name": "Originium Work α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_originium1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Originium</> formula related productivity <@cc.vup>+30%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Targeting - Primary",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 10% chance to increase the current damage of that attack to 150%"
+        },
+        {
+          "name": "Targeting - Primary",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking, has a 10% chance to increase the current damage of that attack to 160% <@ba.talpu>(+10%)</>"
+        },
+        {
+          "name": "Targeting - Primary",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 1,
+          "description": "When attacking, has a 20% chance to increase the current damage of that attack to 150%"
+        },
+        {
+          "name": "Targeting - Primary",
+          "unlock": {
+            "elite": 1,
+            "level": 55
+          },
+          "potential": 5,
+          "description": "When attacking, has a 20% chance to increase the current damage of that attack to 160% <@ba.talpu>(+10%)</>"
+        }
+      ]
+    }
+  ]
+}

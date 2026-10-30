@@ -1,0 +1,130 @@
+{
+  "operatorId": "char_117_myrrh",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_myrrh",
+      "name": "'Brevity of Life'",
+      "region": "en",
+      "type": "PHY-X",
+      "icon": "phy-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Myrrh use Medic Field a total of 5 times (excluding Support Units)",
+        "Clear Main Theme 6-11 with a 3-star rating; you must deploy your own Myrrh, and cannot include any Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 50,
+            "attack_speed": 3
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 80,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "First Aid Kit",
+              "description": "Immediately restores the HP of all allies by 170% of Myrrh's ATK after deployment"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "First Aid Kit",
+              "description": "Immediately restores the HP of all allies by 180%<@ba.talpu>(+10%)</> of Myrrh's ATK after deployment"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 100,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When healing allied units with less than 50% HP, increases heal amount by <@ba.kw>15%</>",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1.15
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "First Aid Kit",
+              "description": "Immediately restores the HP of all allies by 180% of Myrrh's ATK after deployment"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "First Aid Kit",
+              "description": "Immediately restores the HP of all allies by 190%<@ba.talpu>(+10%)</> of Myrrh's ATK after deployment"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

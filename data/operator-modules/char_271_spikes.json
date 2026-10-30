@@ -1,0 +1,100 @@
+{
+  "operatorId": "char_271_spikes",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_spikes",
+      "name": "The Book of Arene",
+      "region": "en",
+      "type": "LOR-Y",
+      "icon": "lor-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Arene, and unleash Deadly Prank at least once in each battle",
+        "Clear Main Theme 2-8 with a 3-star rating; You must deploy your own Arene, and cannot include any other Sniper Operators in your squad"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 33
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+12</> when there are 2 or more enemies in attack range."
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 39
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+12</> when there are 2 or more enemies in attack range."
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Structural Decomposition",
+              "description": "Attacks [Drone] units first, and ATK +50% when attacking [Drone] units"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Structural Decomposition",
+              "description": "Prioritizes attacking Drones; +53% <@ba.talpu>(+3%)</>% ATK when attacking Drones."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 185,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+12</> when there are 2 or more enemies in attack range."
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Structural Decomposition",
+              "description": "Prioritizes attacking Drones; +55% ATK when attacking Drones."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Structural Decomposition",
+              "description": "Prioritizes attacking Drones; +58% <@ba.talpu>(+3%)</>% ATK when attacking Drones."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

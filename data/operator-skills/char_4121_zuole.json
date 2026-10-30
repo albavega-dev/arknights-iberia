@@ -1,0 +1,691 @@
+{
+  "operatorId": "char_4121_zuole",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_zuole_1",
+      "name": "Fiendslayer",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            1.3,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            1.35,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 1 charge</>",
+          "values": [
+            1.4,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 2,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            1.45,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 2,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            1.5,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 2,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            1.55,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 4,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            1.6,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 5,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 2 charges</>",
+          "values": [
+            1.7,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 5,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 3 charges</>",
+          "values": [
+            1.8,
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 6,
+          "description": "Next attack's ATK increases to <@ba.vup>{atk_scale:0%}</>; When this unit's HP is lower than <@ba.vup>{hp_ratio_double:0%}</>, this attack strikes <@ba.vup>1</> additional time; when lower than <@ba.vup>{hp_ratio_tripple:0%}</>, this attack strikes <@ba.vup>2</> additional times\n<@ba.rem>Can store 3 charges</>",
+          "values": [
+            2,
+            0.8,
+            0.5
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk_scale",
+        "hp_ratio_double",
+        "hp_ratio_tripple"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_zuole_2",
+      "name": "Risktaker",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            0.8,
+            0.5,
+            0.6,
+            1,
+            2,
+            -200
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 0,
+          "values": [
+            0.9,
+            0.5,
+            0.65,
+            1,
+            2,
+            -200
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "values": [
+            1,
+            0.5,
+            0.7,
+            1,
+            2,
+            -200
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 5,
+          "values": [
+            1.1,
+            0.5,
+            0.75,
+            1,
+            2,
+            -200
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 5,
+          "values": [
+            1.2,
+            0.5,
+            0.8,
+            1,
+            2,
+            -200
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "values": [
+            1.3,
+            0.5,
+            0.85,
+            1,
+            2,
+            -200
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 10,
+          "values": [
+            1.4,
+            0.5,
+            0.9,
+            1,
+            2,
+            -200
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 11,
+          "values": [
+            1.5,
+            0.5,
+            1,
+            1,
+            2,
+            -200
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 12,
+          "values": [
+            1.6,
+            0.5,
+            1.1,
+            1,
+            2,
+            -200
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 13,
+          "values": [
+            1.7,
+            0.5,
+            1.2,
+            1,
+            2,
+            -200
+          ]
+        }
+      ],
+      "description": "Immediately loses <@ba.vdown>{hp_ratio:0%}</> of current HP and gains a <$ba.barrier>Barrier</> equal to <@ba.vup>{scale:0%}</> Max HP; ATK <@ba.vup>+{atk:0%}</>, Block <@ba.vup>+{block_cnt}</>, and attacks all blocked enemies\n<@ba.rem>The <$ba.barrier>Barrier</> can stack up to {max_scale}x Max HP, and gradually depletes after the skill ends</>",
+      "blackboardKeys": [
+        "atk",
+        "hp_ratio",
+        "scale",
+        "block_cnt",
+        "max_scale",
+        "shield_decrease"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_zuole_3",
+      "name": "Blessings Unto Yan",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "rangeId": "3-2",
+          "values": [
+            1.85,
+            7,
+            3,
+            2,
+            2,
+            15,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 1,
+          "rangeId": "3-2",
+          "values": [
+            1.95,
+            7,
+            3,
+            2,
+            2,
+            15,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 2,
+          "rangeId": "3-2",
+          "values": [
+            2,
+            7,
+            3,
+            2,
+            2,
+            15,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 3,
+          "rangeId": "3-2",
+          "values": [
+            2.05,
+            7,
+            3.5,
+            2,
+            2.5,
+            15,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 4,
+          "rangeId": "3-2",
+          "values": [
+            2.1,
+            7,
+            3.5,
+            2,
+            2.5,
+            15,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 5,
+          "rangeId": "3-2",
+          "values": [
+            2.15,
+            7,
+            3.5,
+            2,
+            2.5,
+            15,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 6,
+          "rangeId": "3-2",
+          "values": [
+            2.2,
+            7,
+            4,
+            2,
+            3,
+            15,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 7,
+          "rangeId": "3-2",
+          "values": [
+            2.25,
+            7,
+            4,
+            2,
+            3,
+            15,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 8,
+          "rangeId": "3-2",
+          "values": [
+            2.35,
+            7,
+            5,
+            2,
+            3,
+            15,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 10,
+          "rangeId": "3-2",
+          "values": [
+            2.45,
+            7,
+            5,
+            2,
+            3,
+            15,
+            2
+          ]
+        }
+      ],
+      "description": "Immediately performs <@ba.vup>{times}</> frontal slashes, with each slash dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage to up to <@ba.vup>3</> enemies (the last strike has a doubled damage multiplier, and <$ba.stun>Stuns</> targets for <@ba.vup>{stun}</>s); During this time, the HP recovery effect of this unit's Trait is changed to granting a <$ba.barrier>Barrier</> equal to <@ba.vup>{shield_scale}</> times the recovery amount\n<@ba.rem>The <$ba.barrier>Barrier</> can stack up to {max_scale}x Max HP, and lasts for {shield_duration}s</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "times",
+        "stun",
+        "last_atk_bonus",
+        "shield_scale",
+        "shield_duration",
+        "max_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd[001]",
+          "name": "Master of Everything α",
+          "room": "TRAINING",
+          "icon": "bskill_train_all",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed <@cc.vup>+25%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd_bd&reduceTime[000]",
+          "name": "Think Before Acting",
+          "room": "TRAINING",
+          "icon": "bskill_train_accmu_guard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer of the Training Room, for every 1 Specialization training session completed, <$cc.t.accmuguard1><@cc.rem>Martial Arts</></> is accumulated. When <$cc.t.accmuguard1><@cc.rem>Martial Arts</></> reaches its cap, the next <@cc.kw>Guard</> Operator's skill Specialization training to level <@cc.kw>1</> is completed immediately, and all <$cc.t.accmuguard1><@cc.rem>Martial Arts</></> is removed."
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Candlelight's Shadow",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +30 ASPD and SP recovery rate +0.5/s <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)"
+        },
+        {
+          "name": "Candlelight's Shadow",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +40 ASPD and SP recovery rate +1/s <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)"
+        },
+        {
+          "name": "Candlelight's Shadow",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Gains up to +50 ASPD and SP recovery rate +2/s <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 70% Max HP)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Self-Evident Virtue",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks have a 20% chance to restore 1 SP, increased to a 70% chance if below 50% HP"
+        },
+        {
+          "name": "Self-Evident Virtue",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks have a 23% <@ba.talpu>(+3%)</> chance to restore 1 SP, increased to a 75% <@ba.talpu>(+5%)</> chance if below 50% HP"
+        }
+      ]
+    }
+  ]
+}

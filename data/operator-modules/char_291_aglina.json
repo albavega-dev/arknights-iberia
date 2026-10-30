@@ -1,0 +1,270 @@
+{
+  "operatorId": "char_291_aglina",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_aglina",
+      "name": "Gravity Calibration Module",
+      "region": "en",
+      "type": "DEC-Y",
+      "icon": "dec-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Angelina, and have Angelina defeat at least 7 enemies",
+        "Clear Main Theme 4-4 with a 3-star rating; You must deploy your own Angelina, and the remaining units can consist only of 2 Specialist Operators"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 35
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 45
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Part-time Job",
+              "description": "Restores the HP of all allies by 30 per second when this unit's skill is not active"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Part-time Job",
+              "description": "Restores the HP of all allies by 35 <@ba.talpu>(+5)</> per second when this unit's skill is not active"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 50
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Part-time Job",
+              "description": "Restores the HP of all allies by 35 per second when this unit's skill is not active"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Part-time Job",
+              "description": "Restores the HP of all allies by 40 <@ba.talpu>(+5)</> per second when this unit's skill is not active"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_aglina",
+      "name": "Experimental Anti-Gravity Module",
+      "region": "en",
+      "type": "DEC-X",
+      "icon": "dec-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 120,000 damage with Angelina (excluding Support Units)",
+        "Clear Main Theme 2-7 with a 3-star rating; You must deploy your own Angelina, and the remaining units can consist only of 4 Operators"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 10,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 15,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Accelerator Field",
+              "description": "All allies gain ASPD +7, allies within range gain another ASPD +3"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Accelerator Field",
+              "description": "All allies gain ASPD +8<@ba.talpu>(+1)</>, allies within range gain another ASPD +3"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 20,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Accelerator Field",
+              "description": "All allies gain ASPD +7, allies within range gain another ASPD +5"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Accelerator Field",
+              "description": "All allies gain ASPD +8<@ba.talpu>(+1)</>, allies within range gain another ASPD +5"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_004_aglina",
+      "name": "Angelina's Specialized Badge",
+      "region": "en",
+      "type": "ISW-A",
+      "icon": "isw-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 35,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, all enemies on the field have Weight -1 while this unit is deployed"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 51,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, all enemies on the field have Weight -1 while this unit is deployed"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Accelerator Field",
+              "description": "All allies gain +7 ASPD; in <@ba.kw>Integrated Strategies</>, enemies being shifted or <$ba.levitate>Levitated</> while Angelina is on the field take 40% of her ATK as Arts damage every 0.5s"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Accelerator Field",
+              "description": "All allies gain +8 <@ba.talpu>(+1)</> ASPD; in <@ba.kw>Integrated Strategies</>, enemies being shifted or <$ba.levitate>Levitated</> while Angelina is on the field take 40% of her ATK as Arts damage every 0.5s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 65,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Integrated Strategies</>, all enemies on the field have Weight -1 while this unit is deployed"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Accelerator Field",
+              "description": "All allies gain +7 ASPD; in <@ba.kw>Integrated Strategies</>, enemies being shifted or <$ba.levitate>Levitated</> while Angelina is on the field take 60% of her ATK as Arts damage every 0.5s; when Angelina's skill is active, her attacks can <$ba.levitate>Levitate</> the target for 3s; also, hitting the <$ba.levitate>Levitated</> target can refresh the duration of <$ba.levitate>Levitate</>"
+            },
+            {
+              "index": 0,
+              "potential": 6,
+              "token": false,
+              "name": "Accelerator Field",
+              "description": "All allies gain +8 <@ba.talpu>(+1)</> ASPD; in <@ba.kw>Integrated Strategies</>, enemies being shifted or <$ba.levitate>Levitated</> while Angelina is on the field take 60% of her ATK as Arts damage every 0.5s; when Angelina's skill is active, her attacks can <$ba.levitate>Levitate</> the target for 3s; also, hitting the <$ba.levitate>Levitated</> target can refresh the duration of <$ba.levitate>Levitate</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

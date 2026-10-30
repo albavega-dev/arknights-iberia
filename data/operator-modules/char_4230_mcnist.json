@@ -1,0 +1,121 @@
+{
+  "operatorId": "char_4230_mcnist",
+  "region": "cn",
+  "tokens": {
+    "token_10069_mcnist_mcgraf": "结构性原理"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_mcnist",
+      "name": "机械师特勤证章",
+      "region": "cn",
+      "type": "SO-A",
+      "icon": "so-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 60,
+            "def": 40
+          },
+          "traits": [],
+          "talents": [],
+          "modes": [
+            {
+              "mapTag": "rogue_6",
+              "traits": [
+                {
+                  "token": false,
+                  "addition": "在【沉沦者的黑流树海】中，攻击被自身或召唤物阻挡的敌人时攻击力提升至150%"
+                }
+              ],
+              "talents": []
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "trust": 0,
+          "attributes": {
+            "atk": 80,
+            "def": 60
+          },
+          "traits": [],
+          "talents": [],
+          "modes": [
+            {
+              "mapTag": "rogue_6",
+              "traits": [
+                {
+                  "token": false,
+                  "addition": "在【沉沦者的黑流树海】中，攻击被自身或召唤物阻挡的敌人时攻击力提升至150%"
+                }
+              ],
+              "talents": [
+                {
+                  "index": 0,
+                  "potential": 1,
+                  "token": false,
+                  "name": "结构性原理",
+                  "description": "可以使用一个持续30秒的结构性原理，拥有独立的再部署时间；在【沉沦者的黑流树海】中，结构性原理的持续时间无限"
+                },
+                {
+                  "index": 0,
+                  "potential": 1,
+                  "token": true,
+                  "name": "结构性原理",
+                  "description": "持续时间无限"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 0,
+          "attributes": {
+            "atk": 100,
+            "def": 80
+          },
+          "traits": [],
+          "talents": [],
+          "modes": [
+            {
+              "mapTag": "rogue_6",
+              "traits": [
+                {
+                  "token": false,
+                  "addition": "在【沉沦者的黑流树海】中，攻击被自身或召唤物阻挡的敌人时攻击力提升至150%"
+                }
+              ],
+              "talents": [
+                {
+                  "index": 0,
+                  "potential": 1,
+                  "token": false,
+                  "name": "结构性原理",
+                  "description": "可以使用一个持续30秒的结构性原理，拥有独立的再部署时间；在【沉沦者的黑流树海】中，结构性原理的持续时间无限，5秒内未受到伤害后每秒获得4%最大生命的<$ba.barrier>屏障</>（上限为最大生命的20%）"
+                },
+                {
+                  "index": 0,
+                  "potential": 1,
+                  "token": true,
+                  "name": "结构性原理",
+                  "description": "持续时间无限"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

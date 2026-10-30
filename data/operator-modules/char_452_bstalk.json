@@ -1,0 +1,87 @@
+{
+  "operatorId": "char_452_bstalk",
+  "region": "en",
+  "tokens": {
+    "token_10014_bstalk_crab": "Metal Crab Guard Team"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_bstalk",
+      "name": "All-You-Crabs-Eat",
+      "region": "en",
+      "type": "TAC-Y",
+      "icon": "tac-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must include your own Beanstalk in your squad, and Beanstalk must be the first Operator deployed",
+        "Clear Main Theme S3-7 with a 3-star rating; You must deploy your own Beanstalk, and use 'Everyone Together!' at least once"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 15
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 20
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Professional Breeder",
+              "description": "Can summon Metal Crabs to assist in combat from a Tactical Point; Metal Crabs have DEF +10% when blocking and automatically respawn 15s after being defeated."
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Professional Breeder",
+              "description": "DEF +10% when blocking; automatically respawns 15 seconds after being defeated."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 25
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Professional Breeder",
+              "description": "Can summon Metal Crabs to assist in combat from a Tactical Point; Metal Crabs have DEF +15% when blocking and automatically respawn 15s after being defeated."
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Professional Breeder",
+              "description": "DEF +15% when blocking; automatically respawns 15 seconds after being defeated."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

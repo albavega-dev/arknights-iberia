@@ -1,0 +1,167 @@
+{
+  "operatorId": "char_4164_tecno",
+  "region": "en",
+  "tokens": {
+    "token_10042_tecno_puppet": "Puppet Dancer"
+  },
+  "ranges": {
+    "3-18": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_tecno",
+      "name": "Official Coupon Stamp of the BBQ House",
+      "region": "en",
+      "type": "SOC-Y",
+      "icon": "soc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Tecno, and use Poppin' at least 1 time in each battle",
+        "Clear Dossoles Holiday DH-6 with a 3-star rating; You must deploy your own Tecno, and can only include 7 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 25,
+            "attack_speed": 5
+          },
+          "rangeId": "3-18",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 35,
+            "attack_speed": 6
+          },
+          "rangeId": "3-18",
+          "tokenAttributes": {
+            "token_10042_tecno_puppet": {
+              "max_hp": 400,
+              "atk": 100,
+              "def": 50
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Freestyle Puppetry",
+              "description": "After defeating any ground enemy within range, a stronger Puppet Dancer spawns where they fall (up to 5 at a time); Puppet Dancers deal Arts damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 42,
+            "attack_speed": 7
+          },
+          "rangeId": "3-18",
+          "tokenAttributes": {
+            "token_10042_tecno_puppet": {
+              "max_hp": 400,
+              "atk": 100,
+              "def": 50
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Freestyle Puppetry",
+              "description": "After defeating any ground enemy within range, a stronger Puppet Dancer spawns where they fall (up to 5 at a time); Puppet Dancers deal Arts damage, and Tecno's ATK +15% when a Puppet Dancer is on the field"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

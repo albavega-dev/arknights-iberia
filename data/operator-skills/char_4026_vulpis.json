@@ -1,0 +1,696 @@
+{
+  "operatorId": "char_4026_vulpis",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_vulpis_1",
+      "name": "Discreet Discipline",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 3,
+          "values": [
+            1,
+            1.9,
+            3
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 3,
+          "values": [
+            1,
+            1.95,
+            3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 3,
+          "values": [
+            1,
+            2.1,
+            3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 4,
+          "values": [
+            1,
+            2.15,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 4,
+          "values": [
+            1,
+            2.2,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 4,
+          "values": [
+            1,
+            2.3,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 4,
+          "values": [
+            1,
+            2.45,
+            3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 6,
+          "values": [
+            1,
+            2.6,
+            3
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 7,
+          "values": [
+            1,
+            2.75,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 8,
+          "values": [
+            1,
+            2.9,
+            3
+          ]
+        }
+      ],
+      "description": "The next attack deals an additional <@ba.vup>{extra_damage_ratio:0%}</> ATK as Arts damage, and gains <@ba.vup>{cost}</> DP\n<@ba.rem>Can store {ct} charges</>",
+      "blackboardKeys": [
+        "cost",
+        "extra_damage_ratio",
+        "ct"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_vulpis_2",
+      "name": "Damoclean Interrogation",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 15,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            1.7,
+            5,
+            4,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 15,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            1.8,
+            5,
+            4,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 15,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            1.9,
+            5,
+            4,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 16,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            2,
+            5,
+            4.5,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 16,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            2.1,
+            5,
+            4.5,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 16,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            2.2,
+            5,
+            4.5,
+            4,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 17,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            2.45,
+            6,
+            4.5,
+            4.5,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 18,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            2.6,
+            6,
+            5,
+            4.5,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 19,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            2.8,
+            6,
+            5,
+            5,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 20,
+          "rangeId": "3-12",
+          "values": [
+            6,
+            3,
+            7,
+            5,
+            5,
+            2
+          ]
+        }
+      ],
+      "description": "Immediately gains <@ba.vup>{cost}</> DP, deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage to up to 6 surrounding enemies and <$ba.sluggish>Slows</> them for <@ba.vup>{sluggish}</>s; if an enemy is already <$ba.sluggish>Slowed</>, then <$ba.stun>Stuns</> them for <@ba.vup>{stun}</>s\n<@ba.rem>Can store {ct} charges</>",
+      "blackboardKeys": [
+        "max_target",
+        "atk_scale",
+        "cost",
+        "sluggish",
+        "stun",
+        "ct"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_vulpis_3",
+      "name": "La Volpe Nascosta",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 5,
+          "rangeId": "2-2",
+          "values": [
+            7,
+            0.5,
+            160,
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 5,
+          "rangeId": "2-2",
+          "values": [
+            7,
+            0.55,
+            160,
+            0.2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 5,
+          "rangeId": "2-2",
+          "values": [
+            7,
+            0.6,
+            160,
+            0.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 6,
+          "rangeId": "2-2",
+          "values": [
+            7,
+            0.65,
+            160,
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 6,
+          "rangeId": "2-2",
+          "values": [
+            7,
+            0.7,
+            160,
+            0.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 6,
+          "rangeId": "2-2",
+          "values": [
+            7,
+            0.75,
+            160,
+            0.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 7,
+          "rangeId": "2-2",
+          "values": [
+            8,
+            0.8,
+            170,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 7,
+          "rangeId": "2-2",
+          "values": [
+            8,
+            0.9,
+            170,
+            0.2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 9,
+          "rangeId": "2-2",
+          "values": [
+            8,
+            1,
+            170,
+            0.2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 10,
+          "rangeId": "2-2",
+          "values": [
+            9,
+            1.1,
+            180,
+            0.2
+          ]
+        }
+      ],
+      "description": "When skill is activated, gains <@ba.vup>{cost}</> DP immediately, Attack Range <@ba.vup>+1</>, ATK <@ba.vup>+{atk:0%}</>, ASPD gradually reduces from <@ba.vup>+{attack_speed}</> to +0; attacks all blocked enemies and each attack can <$ba.stun>Stun</> the enemy for <@ba.vup>{attack@stun}</>s\n<@ba.rem>If an enemy is defeated with this skill, the operator gains Camouflage when the skill ends. The Camouflage lasts until the next time this skill is activated</>",
+      "blackboardKeys": [
+        "cost",
+        "atk",
+        "attack_speed",
+        "attack@stun"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        }
+      ]
+    },
+    "3-12": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd[1000]",
+          "name": "Clue Search α",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>10%</>"
+        },
+        {
+          "buffId": "meet_spd[1010]",
+          "name": "Clue Search β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, Clue search speed increases by <@cc.vup>20%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd&bd[100]",
+          "name": "Assassin's Holiday",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&bd2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception room together with <@cc.kw>Suzuran</>, increases Clue search speed by an additional <@cc.vup>30%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Fox Hunt",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 20% ATK as Arts damage whenever she deals damage to this enemy during the next 10s"
+        },
+        {
+          "name": "Fox Hunt",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 30% ATK as Arts damage whenever she deals damage to this enemy during the next 10s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Accelerando",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Natural DP regeneration rate +10% while on the field; if Vulpisfoglia does not take damage for 4s, recovers 4% of Max HP every second"
+        },
+        {
+          "name": "Accelerando",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Natural DP regeneration rate +10% while on the field; if Vulpisfoglia does not take damage for 4s, recovers 5% <@ba.talpu>(+1%)</> of Max HP every second"
+        }
+      ]
+    }
+  ]
+}

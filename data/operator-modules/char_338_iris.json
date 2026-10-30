@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_338_iris",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_iris",
+      "name": "Castle Pop-Up Book",
+      "region": "en",
+      "type": "MSC-X",
+      "icon": "msc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Iris (excluding Support Units)",
+        "Clear Main Theme 2-2 with a 3-star rating; You must deploy your own Iris, and have Iris defeat at least 2 Heavy Defenders"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 50,
+            "magic_resistance": 3
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 68,
+            "magic_resistance": 4
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sealed Treasure",
+              "description": "Stored attacks deal 135% damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sealed Treasure",
+              "description": "Stored attacks deal 139% <@ba.talpu>(+4%)</> damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 82,
+            "magic_resistance": 4
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sealed Treasure",
+              "description": "Stored attacks deal 138% damage"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sealed Treasure",
+              "description": "Stored attacks deal 142% <@ba.talpu>(+4%)</> damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

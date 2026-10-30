@@ -1,0 +1,86 @@
+{
+  "operatorId": "char_4134_cetsyr",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_cetsyr",
+      "name": "Another Story",
+      "region": "en",
+      "type": "BAR-X",
+      "icon": "bar-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles with your own Civilight Eterna, and unleash The Present Reconstructed at least 1 time in each battle",
+        "Clear Main Theme 14-5 with a 3-star rating under Standard Environment; You must deploy your own Civilight Eterna, and only Melee Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 238,
+            "atk": 24
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Dust of the Past",
+              "description": "3 Particles orbit Civilight Eterna at all times. When a Particle collides with an allied Operator, it disappears and increases Civilight Eterna's Trait effect on that Operator to 1.6x for 6s, and immediately recovers the Operator's HP equal to 20% of Civilight Eterna's ATK. The disappeared Particle respawns after 6s."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 280,
+            "atk": 27
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Dust of the Past",
+              "description": "3 Particles orbit Civilight Eterna at all times. When a Particle collides with an allied Operator, it disappears and increases Civilight Eterna's Trait effect on that Operator to 1.6x for 6s, and immediately recovers the Operator's HP equal to 30% of Civilight Eterna's ATK. The disappeared Particle respawns after 6s."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

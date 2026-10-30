@@ -1,0 +1,81 @@
+{
+  "operatorId": "char_4229_aphris",
+  "region": "cn",
+  "tokens": {
+    "token_10070_aphris_pc": "中继器"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_aphris",
+      "name": "第三相态",
+      "region": "cn",
+      "type": "BLA-Y",
+      "icon": "bla-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "战斗中非助战谬因累计使用6次“混沌的本质”",
+        "3星通关插曲绿野幻梦DV-3；必须编入非助战谬因并上场，且谬因造成至少20000点伤害"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 120,
+            "atk": 45
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 165,
+            "atk": 60
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "链路协议",
+              "description": "可以使用一个持续时间35秒的“中继器”，能改变自身的攻击方向，且使该次攻击距离+2；“中继器”在场时，自身攻击力+30%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "cost": -8,
+            "max_hp": 200,
+            "atk": 70
+          },
+          "tokenAttributes": {
+            "token_10070_aphris_pc": {
+              "respawn_time": -10
+            }
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "链路协议",
+              "description": "可以使用一个持续时间35秒的“中继器”，“中继器”再部署时间变短，能改变自身的攻击方向，且使该次攻击距离+2；“中继器”在场时，自身攻击力+35%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

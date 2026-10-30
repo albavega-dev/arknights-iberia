@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_455_nothin",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_nothin",
+      "name": "'Shelter from the Rain'",
+      "region": "en",
+      "type": "MER-X",
+      "icon": "mer-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Mr. Nothing at least 2 times, and have Mr. Nothing defeat at least 4 enemies",
+        "Clear Main Theme 3-7 with a 3-star rating; You must deploy your own Mr. Nothing, and have Mr. Nothing defeat at least 2 Mortar Gunners"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 45
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 55
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Unexpected Strike",
+              "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 165% and <$ba.stun>Stun</> the target for 5 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Unexpected Strike",
+              "description": "After not attacking for 4 seconds, increase the ATK of the next attack to 170% <@ba.talpu>(+5%)</> and <$ba.stun>Stun</> the target for 5 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 65
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Unexpected Strike",
+              "description": "After not attacking for 3 seconds, increase the ATK of the next attack to 175% and <$ba.stun>Stun</> the target for 5 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Unexpected Strike",
+              "description": "After not attacking for 3 seconds, increase the ATK of the next attack to 180% <@ba.talpu>(+5%)</> and <$ba.stun>Stun</> the target for 5 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

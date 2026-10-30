@@ -1,0 +1,154 @@
+{
+  "operatorId": "char_289_gyuki",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_gyuki",
+      "name": "Bamboo Ikebana",
+      "region": "en",
+      "type": "DRE-Y",
+      "icon": "dre-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Matoimaru, and have Matoimaru deal at least 15,000 damage",
+        "Clear Main Theme S2-10 with a 3-star rating; You must deploy your own Matoimaru, and have Matoimaru defeat at least 2 Senior Casters"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 30
+                },
+                {
+                  "key": "max_hp",
+                  "value": 0.4
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 0.6
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 340,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 30
+                },
+                {
+                  "key": "max_hp",
+                  "value": 0.4
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 0.6
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Demonic Physique",
+              "description": "DEF -20%; Max HP +30%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Demonic Physique",
+              "description": "DEF -20%; Max HP +33% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 390,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When defeated, does not retreat and recovers all HP instead. However, Max HP <@ba.vdown>-{value:0%}</> and ASPD <@ba.vup>+{attack_speed}</> (Can only activate once every deployment)",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 30
+                },
+                {
+                  "key": "max_hp",
+                  "value": 0.4
+                },
+                {
+                  "key": "hp_ratio",
+                  "value": 1
+                },
+                {
+                  "key": "value",
+                  "value": 0.6
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Demonic Physique",
+              "description": "DEF -20%; Max HP +35%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Demonic Physique",
+              "description": "DEF -20%; Max HP +38% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

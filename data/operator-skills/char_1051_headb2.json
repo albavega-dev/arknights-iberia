@@ -1,0 +1,672 @@
+{
+  "operatorId": "char_1051_headb2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_headb2_1",
+      "name": "Never Bow",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 0,
+          "values": [
+            0.25,
+            30
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 0,
+          "values": [
+            0.27,
+            30
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 0,
+          "values": [
+            0.29,
+            30
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 5,
+          "values": [
+            0.32,
+            35
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 5,
+          "values": [
+            0.34,
+            35
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 5,
+          "values": [
+            0.36,
+            35
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 10,
+          "values": [
+            0.39,
+            40
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 15,
+          "values": [
+            0.42,
+            45
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 18,
+          "values": [
+            0.45,
+            45
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            0.5,
+            50
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>; ASPD <@ba.vup>+{attack_speed}</>",
+      "blackboardKeys": [
+        "atk",
+        "attack_speed"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_headb2_2",
+      "name": "Never Surrender",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 16,
+          "rangeId": "2-5",
+          "values": [
+            0.45,
+            0.3,
+            0.9,
+            0.6,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 59,
+          "initSp": 16,
+          "rangeId": "2-5",
+          "values": [
+            0.5,
+            0.3,
+            1,
+            0.6,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 16,
+          "rangeId": "2-5",
+          "values": [
+            0.55,
+            0.3,
+            1.1,
+            0.6,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 20,
+          "rangeId": "2-5",
+          "values": [
+            0.6,
+            0.4,
+            1.2,
+            0.8,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 20,
+          "rangeId": "2-5",
+          "values": [
+            0.65,
+            0.4,
+            1.3,
+            0.8,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 20,
+          "rangeId": "2-5",
+          "values": [
+            0.7,
+            0.4,
+            1.4,
+            0.8,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 24,
+          "rangeId": "2-5",
+          "values": [
+            0.75,
+            0.5,
+            1.5,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 28,
+          "rangeId": "2-5",
+          "values": [
+            0.8,
+            0.5,
+            1.6,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 51,
+          "initSp": 32,
+          "rangeId": "2-5",
+          "values": [
+            0.85,
+            0.6,
+            1.7,
+            1.2,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 36,
+          "rangeId": "2-5",
+          "values": [
+            0.9,
+            0.6,
+            1.8,
+            1.2,
+            1
+          ]
+        }
+      ],
+      "description": "Passive Effect: Whenever a high ground tile triggers Talent 1's effect, gains <@ba.vup>{sp_per_highland}</> SP\nAutomatic Effect: Attack Range <@ba.vup>increases</>, ATK <@ba.vup>+{atk:0%}</>, and DEF <@ba.vup>+{def:0%}</>\n<@ba.rem>Upon the second activation of this skill and afterwards, this skill has unlimited duration, and its bonuses are double the base amount</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "headb2_s_2[second].atk",
+        "headb2_s_2[second].def",
+        "sp_per_highland"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_headb2_3",
+      "name": "Unstoppable",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 10,
+          "values": [
+            1.7,
+            0.3,
+            3.5,
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 10,
+          "values": [
+            1.75,
+            0.3,
+            3.5,
+            1,
+            0.55
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 10,
+          "values": [
+            1.8,
+            0.3,
+            3.5,
+            1,
+            0.6
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 12,
+          "values": [
+            1.9,
+            0.3,
+            3.5,
+            1,
+            0.65
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 12,
+          "values": [
+            1.95,
+            0.3,
+            3.5,
+            1,
+            0.7
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 12,
+          "values": [
+            2,
+            0.3,
+            3.5,
+            1,
+            0.75
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 15,
+          "values": [
+            2.1,
+            0.3,
+            3.5,
+            1.5,
+            0.8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 18,
+          "values": [
+            2.2,
+            0.3,
+            3.5,
+            1.5,
+            0.9
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 18,
+          "values": [
+            2.3,
+            0.3,
+            3.5,
+            1.5,
+            0.95
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 20,
+          "values": [
+            2.4,
+            0.3,
+            3.5,
+            2,
+            1
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk_base:0%}</>, and deals a chain of five hammer blows with increased splash area to the tile ahead, each blow dealing <@ba.vup>{atk_scale:0%}</> ATK as Physical damage and granting an additional <@ba.vup>+{atk_step:0%}</> ATK; high ground tiles that trigger Talent 1 will spread its effect to adjacent high ground tiles (amount of spread increases with each attack), damage effect increases to <@ba.vup>{splash_atk_scale_bonus}</>x, and control effect becomes a <@ba.vup>{unmovable}</>s <$ba.root>Bind</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "atk_step",
+        "splash_atk_scale_bonus",
+        "unmovable",
+        "atk_base"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_formula_spd&bd[000]",
+          "name": "Fighter-in-Chief",
+          "room": "MANUFACTURE",
+          "icon": "bskill_formula_spd_headb1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula related productivity <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "manu_formula_spd&bd[001]",
+          "name": "Friends Forever",
+          "room": "MANUFACTURE",
+          "icon": "bskill_formula_spd_headb2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Battle Record</> formula productivity <@cc.vup>+30%</>; when an <$cc.g.ussg><@cc.kw>Ursus Student Self-Government Group</></> Operator is assigned to the same Factory, grants an additional <@cc.vup>+10%</> to <@cc.kw>Battle Record</> formula productivity"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_meeting_bd[000]",
+          "name": "'Got It, Boss!'",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_c_ussg",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, self Morale loss per hour <@cc.vdown>+0.5</>; for each <$cc.g.ussg><@cc.kw>Ursus Student Self-Government Group</></> Operator assigned to the Reception Room, clue collection speed <@cc.vup>+10%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Roiling Rage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Physical damage caused by Trait splash effect increases by 24%; any high ground tile touched by the splash deals 24% ATK as Physical damage to all ground enemies in the four adjacent tiles"
+        },
+        {
+          "name": "Roiling Rage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Physical damage caused by Trait splash effect increases by 24%; any high ground tile touched by the splash deals 27%<@ba.talpu>(+3%)</> ATK as Physical damage to all ground enemies in the four adjacent tiles"
+        },
+        {
+          "name": "Roiling Rage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Physical damage caused by Trait splash effect increases by 24%; any high ground tile touched by the splash deals 24% ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+        },
+        {
+          "name": "Roiling Rage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Physical damage caused by Trait splash effect increases by 24%; any high ground tile touched by the splash deals 27%<@ba.talpu>(+3%)</> ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Human Tide",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is active, all Operators gain +14% ATK and DEF; [Ursus Student Self-Government Group] Operators receive double the effect"
+        },
+        {
+          "name": "Human Tide",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When skill is active, all Operators gain +18% <@ba.talpu>(+4%)</> ATK and DEF; [Ursus Student Self-Government Group] Operators receive double the effect"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "operatorId": "char_4032_provs",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_provs",
+      "name": "Deszcz's Graduate Memento",
+      "region": "en",
+      "type": "DEC-X",
+      "icon": "dec-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Proviso use Prevailing Argument a total of 14 times (excluding Support Units)",
+        "Clear Main Theme 4-7 with a 3-star rating; You must deploy your own Proviso, and have Proviso defeat at least 3 Infused Originium Slugs."
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Kazimierz Legal Expertise",
+              "description": "ASPD +10, ATK +5%; the same buff is given to a random [Kazimierz] Operator when deployed"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Kazimierz Legal Expertise",
+              "description": "ASPD +12<@ba.talpu>(+2)</>, ATK +5%; the same buff is given to a random [Kazimierz] Operator when deployed"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Kazimierz Legal Expertise",
+              "description": "ASPD +10, ATK +8%; the same buff is given to a random [Kazimierz] Operator when deployed"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Kazimierz Legal Expertise",
+              "description": "ASPD +12<@ba.talpu>(+2)</>, ATK +8%; the same buff is given to a random [Kazimierz] Operator when deployed"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

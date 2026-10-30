@@ -1,0 +1,762 @@
+{
+  "operatorId": "char_4123_ela",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_ela_1",
+      "name": "Optical Interference",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 0,
+          "values": [
+            7,
+            7,
+            1.7,
+            -0.1,
+            -0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 0,
+          "values": [
+            7,
+            7,
+            1.7,
+            -0.15,
+            -0.15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            7,
+            7,
+            1.7,
+            -0.2,
+            -0.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "values": [
+            8,
+            8,
+            1.7,
+            -0.2,
+            -0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 0,
+          "values": [
+            8,
+            8,
+            1.7,
+            -0.25,
+            -0.25
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 0,
+          "values": [
+            8,
+            8,
+            1.7,
+            -0.3,
+            -0.3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 0,
+          "values": [
+            9,
+            9,
+            1.7,
+            -0.3,
+            -0.3
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            9,
+            9,
+            1.7,
+            -0.35,
+            -0.35
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 0,
+          "values": [
+            9,
+            9,
+            1.7,
+            -0.4,
+            -0.4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 0,
+          "values": [
+            10,
+            10,
+            1.7,
+            -0.4,
+            -0.4
+          ]
+        }
+      ],
+      "description": "Passive Effect: When a trap is triggered, <$ba.sluggish>Slows</> all surrounding targets and reduces the hit rate of Physical and Arts attacks by <@ba.vup>{damage_hitrate_physical:0%}</>, lasting for <@ba.vup>{sluggish}</>s\nActive Effect: Immediately gains 1 trap",
+      "blackboardKeys": [
+        "duration",
+        "sluggish",
+        "projectile_range",
+        "damage_hitrate_physical",
+        "damage_hitrate_magical"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_ela_2",
+      "name": "Shock Defense",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 25,
+          "initSp": 0,
+          "rangeId": "3-6",
+          "values": [
+            4,
+            1.7,
+            1.5,
+            200,
+            1.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 24,
+          "initSp": 0,
+          "rangeId": "3-6",
+          "values": [
+            4,
+            1.7,
+            1.5,
+            250,
+            1.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 23,
+          "initSp": 0,
+          "rangeId": "3-6",
+          "values": [
+            4,
+            1.7,
+            1.5,
+            300,
+            1.1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 22,
+          "initSp": 4,
+          "rangeId": "3-6",
+          "values": [
+            4,
+            1.7,
+            2,
+            350,
+            1.1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 21,
+          "initSp": 4,
+          "rangeId": "3-6",
+          "values": [
+            4,
+            1.7,
+            2,
+            400,
+            1.1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 20,
+          "initSp": 4,
+          "rangeId": "3-6",
+          "values": [
+            4,
+            1.7,
+            2,
+            450,
+            1.1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 19,
+          "initSp": 8,
+          "rangeId": "3-6",
+          "values": [
+            4,
+            1.7,
+            2.5,
+            500,
+            1.1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 18,
+          "initSp": 8,
+          "rangeId": "3-6",
+          "values": [
+            5,
+            1.7,
+            2.5,
+            600,
+            1.1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 17,
+          "initSp": 8,
+          "rangeId": "3-6",
+          "values": [
+            5,
+            1.7,
+            2.5,
+            700,
+            1.1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 16,
+          "initSp": 12,
+          "rangeId": "3-6",
+          "values": [
+            5,
+            1.7,
+            3,
+            800,
+            1.1
+          ]
+        }
+      ],
+      "description": "Passive Effect: When a trap is triggered, <$ba.stun>Stuns</> all surrounding targets, lasting for <@ba.vup>{stun}</>s\nActive Effect: Sets up Deployable Shield to increase this unit's DEF by <@ba.vup>+{def:0%}</>; Attack Range <@ba.vdown>reduces</>; Attacks deal splash Physical damage to all enemies around the target that ignores <@ba.vup>{def_penetrate_fixed}</> of their DEF\n<@ba.rem>Gains 1 trap when this skill ends</>",
+      "blackboardKeys": [
+        "stun",
+        "projectile_range",
+        "def",
+        "def_penetrate_fixed",
+        "attack@projectile_range"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_ela_3",
+      "name": "'The Bosak Tempest'",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 10,
+          "values": [
+            5,
+            5,
+            1.15,
+            0.15,
+            1.7,
+            0.3,
+            -0.35,
+            40,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 11,
+          "values": [
+            5,
+            5,
+            1.15,
+            0.15,
+            1.7,
+            0.35,
+            -0.35,
+            40,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 12,
+          "values": [
+            5,
+            5,
+            1.15,
+            0.15,
+            1.7,
+            0.4,
+            -0.35,
+            40,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 13,
+          "values": [
+            6,
+            6,
+            1.2,
+            0.2,
+            1.7,
+            0.45,
+            -0.35,
+            40,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 14,
+          "values": [
+            6,
+            6,
+            1.2,
+            0.2,
+            1.7,
+            0.5,
+            -0.35,
+            40,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 15,
+          "values": [
+            6,
+            6,
+            1.2,
+            0.2,
+            1.7,
+            0.55,
+            -0.35,
+            40,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 16,
+          "values": [
+            6,
+            6,
+            1.25,
+            0.25,
+            1.7,
+            0.6,
+            -0.35,
+            40,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 16,
+          "values": [
+            7,
+            7,
+            1.3,
+            0.3,
+            1.7,
+            0.7,
+            -0.35,
+            40,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 16,
+          "values": [
+            7,
+            7,
+            1.3,
+            0.3,
+            1.7,
+            0.8,
+            -0.35,
+            40,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 16,
+          "values": [
+            7,
+            7,
+            1.35,
+            0.35,
+            1.7,
+            0.9,
+            -0.35,
+            40,
+            2
+          ]
+        }
+      ],
+      "description": "Passive Effect: When a trap is triggered, <$ba.sluggish>Slows</> all surrounding targets and inflicts <@ba.vup>{fake_damage_scale:0%}</> <$ba.fragile>Fragile</>, lasting for <@ba.vup>{sluggish}</>s\nActive Effect: Attack Interval <@ba.vup>reduces</>; ATK <@ba.vup>+{atk:0%}</>; Attacks prioritize enemies affected by GRZMOT Mines\n<@ba.rem>Skill activation grants 40 ammo and the skill ends when all ammo is used (Can manually deactivate skill); Gains 2 traps when this skill ends</>",
+      "blackboardKeys": [
+        "sluggish",
+        "weak[limit]",
+        "damage_scale",
+        "fake_damage_scale",
+        "projectile_range",
+        "atk",
+        "base_attack_time",
+        "attack@trigger_time",
+        "cnt"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-6": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd_tag[020]",
+          "name": "Tactic Guidance: Defense",
+          "room": "TRAINING",
+          "icon": "bskill_train_defense",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Operators' Specialization training speed <@cc.vup>+10%</> for each <$cc.g.Defence><@cc.kw>Defending</></> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.kw>4</> Operators)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_clue_cost&faction[990]",
+          "name": "Resister",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_ela",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, increases the likelihood of obtaining clues that are not on the Clue Board, but increases the Morale consumed per hour of all Operators (excluding self) in the Control Center by <@cc.vdown>+0.25</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 1 GRZMOT Mine (Can store up to 2); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 2 <@ba.talpu>(+1)</> GRZMOT Mines (Can store up to 2); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 2 GRZMOT Mines (Can store up to 3); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 3 <@ba.talpu>(+1)</> GRZMOT Mines (Can store up to 3); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can deploy up to 3 GRZMOT Mines (Can store up to 4); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        },
+        {
+          "name": "GRZMOT Mine",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Can deploy up to 4 <@ba.talpu>(+1)</> GRZMOT Mines (Can store up to 4); the first enemy that passes the mine will trigger its effect. When retreats, immediately triggers the effect of a GRZMOT Mine from the tile this Operator was deployed on"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "'Bullseye'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks have a 30% chance to deal 150% of ATK as Physical damage; The chance is increased to 100% when attacking a target that's affected by a GRZMOT Mine"
+        },
+        {
+          "name": "'Bullseye'",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks have a 30% chance to deal 160% <@ba.talpu>(+10%)</> of ATK as Physical damage; The chance is increased to 100% when attacking a target that's affected by a GRZMOT Mine"
+        }
+      ]
+    }
+  ]
+}

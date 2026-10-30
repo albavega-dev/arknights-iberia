@@ -1,0 +1,264 @@
+{
+  "operatorId": "char_4080_lin",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_lin",
+      "name": "'Exquisite Heart'",
+      "region": "en",
+      "type": "PLX-X",
+      "icon": "plx-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 80 enemies with Lin (excluding Support Units)",
+        "Clear Main Theme 11-6 with a 3-star rating under Standard Environment; You must deploy your own Lin, and cannot include any Defender Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 62,
+            "def": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; when skill is active, retains some of the bonus and attacks deal <@ba.kw>AoE Arts Damage</>",
+              "blackboard": [
+                {
+                  "key": "def",
+                  "value": 2.15
+                },
+                {
+                  "key": "magic_resistance",
+                  "value": 25
+                },
+                {
+                  "key": "lin_e_002[buff].def",
+                  "value": 1
+                },
+                {
+                  "key": "lin_e_002[buff].magic_resistance",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 70,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; when skill is active, retains some of the bonus and attacks deal <@ba.kw>AoE Arts Damage</>",
+              "blackboard": [
+                {
+                  "key": "def",
+                  "value": 2.15
+                },
+                {
+                  "key": "magic_resistance",
+                  "value": 25
+                },
+                {
+                  "key": "lin_e_002[buff].def",
+                  "value": 1
+                },
+                {
+                  "key": "lin_e_002[buff].magic_resistance",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Shrouded Strength",
+              "description": "50% chance to recover 2 SP when attacked"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Shrouded Strength",
+              "description": "55% <@ba.talpu>(+5%)</> chance to recover 2 SP when attacked"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 77,
+            "def": 53
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally <@ba.kw>does not attack</>, but has <@ba.kw>greatly increased</> DEF and RES; when skill is active, retains some of the bonus and attacks deal <@ba.kw>AoE Arts Damage</>",
+              "blackboard": [
+                {
+                  "key": "def",
+                  "value": 2.15
+                },
+                {
+                  "key": "magic_resistance",
+                  "value": 25
+                },
+                {
+                  "key": "lin_e_002[buff].def",
+                  "value": 1
+                },
+                {
+                  "key": "lin_e_002[buff].magic_resistance",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Shrouded Strength",
+              "description": "75% chance to recover 2 SP when attacked"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Shrouded Strength",
+              "description": "80% <@ba.talpu>(+5%)</> chance to recover 2 SP when attacked"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_lin",
+      "name": "The Compassionate and the Just",
+      "region": "en",
+      "type": "PLX-Y",
+      "icon": "plx-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Lin, and unleash Riving Lighttails at least 1 time in each battle",
+        "Clear Main Theme 6-5 with a 3-star rating; You must deploy your own Lin, and unleash Riving Lighttails at least 3 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 50,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage increases with number of enemies in the area (max increase <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 62,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage increases with number of enemies in the area (max increase <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Foolproof Plan",
+              "description": "A Crystal Barrier blocks all damage, shattering when 200 or more damage is taken from a single source, dealing 105% of Lin's ATK as Arts damage to all nearby enemies and <$ba.stun>stunning</> them for 1s; reforms after 7s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Foolproof Plan",
+              "description": "A Crystal Barrier blocks all damage, shattering when 200 or more damage is taken from a single source, dealing 115% <@ba.talpu>(+10%)</> of Lin's ATK as Arts damage to all nearby enemies and <$ba.stun>stunning</> them for 1s; reforms after 7s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 73,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage increases with number of enemies in the area (max increase <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Foolproof Plan",
+              "description": "A Crystal Barrier blocks all damage, shattering when 200 or more damage is taken from a single source, dealing 110% of Lin's ATK as Arts damage to all nearby enemies and <$ba.stun>stunning</> them for 1s; reforms after 6s"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Foolproof Plan",
+              "description": "A Crystal Barrier blocks all damage, shattering when 200 or more damage is taken from a single source, dealing 120% <@ba.talpu>(+10%)</> of Lin's ATK as Arts damage to all nearby enemies and <$ba.stun>stunning</> them for 1s; reforms after 6s"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

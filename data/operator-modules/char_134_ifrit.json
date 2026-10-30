@@ -1,0 +1,252 @@
+{
+  "operatorId": "char_134_ifrit",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ifrit",
+      "name": "'Syntexis'",
+      "region": "en",
+      "type": "BLA-X",
+      "icon": "bla-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 80 enemies with Ifrit (excluding Support Units)",
+        "Clear Main Theme 1-5 with a 3-star rating; You must deploy your own Ifrit, and cannot include any other Sniper, Caster, or Supporter Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 50,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks deal <@ba.kw>extremely long-ranged AoE Arts damage</>; damage dealt increases with distance, up to <@ba.kw>110%</>",
+              "blackboard": [
+                {
+                  "key": "min_dist",
+                  "value": 0
+                },
+                {
+                  "key": "max_dist",
+                  "value": 4
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 64,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks deal <@ba.kw>extremely long-ranged AoE Arts damage</>; damage dealt increases with distance, up to <@ba.kw>110%</>",
+              "blackboard": [
+                {
+                  "key": "min_dist",
+                  "value": 0
+                },
+                {
+                  "key": "max_dist",
+                  "value": 4
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Rhine Loop",
+              "description": "Restores 2 SP every 6 seconds, with a 20% chance to restore an additional 5 SP."
+            },
+            {
+              "index": 1,
+              "potential": 6,
+              "token": false,
+              "name": "Rhine Loop",
+              "description": "Restores 2 SP every 5.5 <@ba.talpu>(-0.5)</> seconds, with a 20% chance to restore an additional 5 SP."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 72,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Attacks deal <@ba.kw>extremely long-ranged AoE Arts damage</>; damage dealt increases with distance, up to <@ba.kw>110%</>",
+              "blackboard": [
+                {
+                  "key": "min_dist",
+                  "value": 0
+                },
+                {
+                  "key": "max_dist",
+                  "value": 4
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Rhine Loop",
+              "description": "Restores 2 SP every 6 seconds, with a 30% chance to restore an additional 5 SP."
+            },
+            {
+              "index": 1,
+              "potential": 6,
+              "token": false,
+              "name": "Rhine Loop",
+              "description": "Restores 2 SP every 5.5 <@ba.talpu>(-0.5)</> seconds, with a 30% chance to restore an additional 5 SP."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_ifrit",
+      "name": "'Thermoformed Memory'",
+      "region": "en",
+      "type": "BLA-D",
+      "icon": "bla-d",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Ifrit use Scorched Earth a total of 10 times (excluding Support Units)",
+        "Clear Lone Trail CW-3 with a 3-star rating; You must deploy your own Ifrit, and have her defeat at least 6 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing Arts damage, deals an additional <@ba.vup>8%</> as <$ba.dt.burning2>Burn</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_ratio",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 165,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing Arts damage, deals an additional <@ba.vup>8%</> as <$ba.dt.burning2>Burn</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_ratio",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Spiritual Dissolution",
+              "description": "RES of enemies within range -40%; if target is under the burst effect of <$ba.dt.burning2>Burn</>, attacks will deal an additional 40% ATK as Elemental Damage"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Spiritual Dissolution",
+              "description": "RES of enemies within range -44% <@ba.talpu>(+4%)</>; if target is under the burst effect of <$ba.dt.burning2>Burn</>, attacks will deal an additional 40% ATK as Elemental Damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing Arts damage, deals an additional <@ba.vup>8%</> as <$ba.dt.burning2>Burn</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_ratio",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Spiritual Dissolution",
+              "description": "RES of enemies within range -40%; if target is under the burst effect of <$ba.dt.burning2>Burn</>, attacks will deal an additional 50% ATK as Elemental Damage"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Spiritual Dissolution",
+              "description": "RES of enemies within range -44% <@ba.talpu>(+4%)</>; if target is under the burst effect of <$ba.dt.burning2>Burn</>, attacks will deal an additional 50% ATK as Elemental Damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,9 +5,10 @@ import { fixedBiographyRevisions, extractBiography } from "../src/game-data/oper
 import { bundleSha256, validateOperatorBundle, type BundleSource, type OperatorBundle } from "../src/game-data/operator-bundle";
 import { getOperatorAdditionalFactionIds, getOperatorMainFactionId } from "../src/game-data/operator-factions";
 import { applyRegionalDisplayNames, type RegionalNameEntry } from "../src/game-data/operator-regional-names";
+import { gameDataRevisions, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
 
 const refs = {
-  character: { en: { revision: "3aaa25b649fed5dedad9527602826dc487ea07d8", sha256: "DDAC29AF8BF303D3DFDD92EC7D6C822605EABD0625AE544B97434DE517F9E7C3" }, cn: { revision: "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842", sha256: "12652FA249763EA1D1F8F147F2EFE6A98EFEE593F38DBEF471DDBC9A234B70E5" } },
+  character: { en: { revision: gameDataRevisions.en, sha256: gameDataTableHashes.en.character_table }, cn: { revision: gameDataRevisions.cn, sha256: gameDataTableHashes.cn.character_table } },
   handbook: { en: { revision: fixedBiographyRevisions.en, sha256: "07077CD529965C57DA1F602028F1CEEC81B43814AF0D8F131DCBED92B04E0498" }, cn: { revision: fixedBiographyRevisions.cn, sha256: "B6E6FA4CAFE118B8C0342E7643A6103775F72C173A43467AEEA22DFBEE01D108" } },
 } as const;
 type Region = "en" | "cn";

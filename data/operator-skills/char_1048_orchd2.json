@@ -1,0 +1,756 @@
+{
+  "operatorId": "char_1048_orchd2",
+  "region": "cn",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_orchd2_1",
+      "name": "刚射",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 4,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢\\n<@ba.rem>可充能1次，充能至最大层数时自动释放一次</>",
+          "values": [
+            0.8,
+            1.2,
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 5,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢\\n<@ba.rem>可充能1次，充能至最大层数时自动释放一次</>",
+          "values": [
+            0.85,
+            1.2,
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 6,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢\\n<@ba.rem>可充能1次，充能至最大层数时自动释放一次</>",
+          "values": [
+            0.9,
+            1.2,
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 7,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢，若还有充能则额外消耗1层施展<@ba.vup>刚连射</>：发射5支攻击力<@ba.vup>{atk_scale_2:0%}</>的箭矢，每支箭矢有<@ba.vup>{stun_prob:0%}</>概率使目标<$ba.stun>晕眩</><@ba.vup>{stun}</>秒\\n<@ba.rem>可充能2次，充能至最大层数时自动释放一次</>",
+          "values": [
+            1,
+            1.4,
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 8,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢，若还有充能则额外消耗1层施展<@ba.vup>刚连射</>：发射5支攻击力<@ba.vup>{atk_scale_2:0%}</>的箭矢，每支箭矢有<@ba.vup>{stun_prob:0%}</>概率使目标<$ba.stun>晕眩</><@ba.vup>{stun}</>秒\\n<@ba.rem>可充能2次，充能至最大层数时自动释放一次</>",
+          "values": [
+            1.1,
+            1.4,
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 9,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢，若还有充能则额外消耗1层施展<@ba.vup>刚连射</>：发射5支攻击力<@ba.vup>{atk_scale_2:0%}</>的箭矢，每支箭矢有<@ba.vup>{stun_prob:0%}</>概率使目标<$ba.stun>晕眩</><@ba.vup>{stun}</>秒\\n<@ba.rem>可充能2次，充能至最大层数时自动释放一次</>",
+          "values": [
+            1.15,
+            1.4,
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 10,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢，若还有充能则额外消耗1层施展<@ba.vup>刚连射</>：发射5支攻击力<@ba.vup>{atk_scale_2:0%}</>的箭矢，每支箭矢有<@ba.vup>{stun_prob:0%}</>概率使目标<$ba.stun>晕眩</><@ba.vup>{stun}</>秒\\n<@ba.rem>可充能3次，充能至最大层数时自动释放一次</>",
+          "values": [
+            1.2,
+            1.6,
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 11,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢，若还有充能则额外消耗1层施展<@ba.vup>刚连射</>：发射5支攻击力<@ba.vup>{atk_scale_2:0%}</>的箭矢，每支箭矢有<@ba.vup>{stun_prob:0%}</>概率使目标<$ba.stun>晕眩</><@ba.vup>{stun}</>秒\\n<@ba.rem>可充能3次，充能至最大层数时自动释放一次</>",
+          "values": [
+            1.3,
+            1.8,
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 12,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢，若还有充能则额外消耗1层施展<@ba.vup>刚连射</>：发射5支攻击力<@ba.vup>{atk_scale_2:0%}</>的箭矢，每支箭矢有<@ba.vup>{stun_prob:0%}</>概率使目标<$ba.stun>晕眩</><@ba.vup>{stun}</>秒\\n<@ba.rem>可充能4次，充能至最大层数时自动释放一次</>",
+          "values": [
+            1.45,
+            1.8,
+            0.2,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 4,
+          "initSp": 14,
+          "description": "发射4支攻击力<@ba.vup>{atk_scale_1:0%}</>的箭矢，若还有充能则额外消耗1层施展<@ba.vup>刚连射</>：发射5支攻击力<@ba.vup>{atk_scale_2:0%}</>的箭矢，每支箭矢有<@ba.vup>{stun_prob:0%}</>概率使目标<$ba.stun>晕眩</><@ba.vup>{stun}</>秒\\n<@ba.rem>可充能4次，充能至最大层数时自动释放一次</>",
+          "values": [
+            1.6,
+            2,
+            0.2,
+            2
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk_scale_1",
+        "atk_scale_2",
+        "stun_prob",
+        "stun"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_orchd2_2",
+      "name": "飞翔瞪射",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 8,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能1次，部署后立即释放一次</>",
+          "values": [
+            1.2,
+            2.4,
+            0.4,
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 9,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能1次，部署后立即释放一次</>",
+          "values": [
+            1.25,
+            2.45,
+            0.4,
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 10,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能1次，部署后立即释放一次</>",
+          "values": [
+            1.3,
+            2.5,
+            0.4,
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 11,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能2次，部署后立即释放一次</>",
+          "values": [
+            1.35,
+            2.55,
+            0.4,
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 12,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能2次，部署后立即释放一次</>",
+          "values": [
+            1.4,
+            2.6,
+            0.4,
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 13,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能2次，部署后立即释放一次</>",
+          "values": [
+            1.45,
+            2.65,
+            0.4,
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 14,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能3次，部署后立即释放一次</>",
+          "values": [
+            1.5,
+            2.7,
+            0.4,
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能3次，部署后立即释放一次</>",
+          "values": [
+            1.6,
+            2.8,
+            0.4,
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 16,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能3次，部署后立即释放一次</>",
+          "values": [
+            1.7,
+            2.9,
+            0.4,
+            0.2,
+            0.2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 4.2,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 17,
+          "rangeId": "4-4",
+          "description": "立刻<$ba.liftoff>起飞</>并对前方范围的所有目标射击3次，分别射出3、4、5支攻击力提升至<@ba.vup>{attack@atk_scale_loop:0%}</>的箭矢；之后降落并对前方小范围内的所有敌人造成攻击力<@ba.vup>{attack@atk_scale_end:0%}</>的物理伤害\\n<@ba.rem>可充能3次，部署后立即释放一次</>",
+          "values": [
+            1.8,
+            3,
+            0.4,
+            0.2,
+            0.2
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "attack@atk_scale_loop",
+        "attack@atk_scale_end",
+        "attack@fly_height",
+        "attack@fly_duration",
+        "attack@fly_end_duration"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_orchd2_3",
+      "name": "龙之箭",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>中等力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能1次</>",
+          "values": [
+            1.8,
+            0.2,
+            1.5,
+            0.25,
+            99,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 16,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>中等力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能1次</>",
+          "values": [
+            2,
+            0.2,
+            1.5,
+            0.25,
+            99,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 17,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>中等力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能1次</>",
+          "values": [
+            2.2,
+            0.2,
+            1.5,
+            0.25,
+            99,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 18,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>中等力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能1次</>",
+          "values": [
+            2.4,
+            0.3,
+            1.5,
+            0.25,
+            99,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 19,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>中等力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能1次</>",
+          "values": [
+            2.6,
+            0.3,
+            1.5,
+            0.25,
+            99,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 20,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>中等力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能1次</>",
+          "values": [
+            2.8,
+            0.3,
+            1.5,
+            0.25,
+            99,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 20,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>中等力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能2次</>",
+          "values": [
+            3,
+            0.4,
+            1.5,
+            0.25,
+            99,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 25,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>中等力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能2次</>",
+          "values": [
+            3.2,
+            0.45,
+            1.5,
+            0.25,
+            99,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 28,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>中等力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能2次</>",
+          "values": [
+            3.4,
+            0.5,
+            1.5,
+            0.25,
+            99,
+            1,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 30,
+          "description": "蓄力<@ba.vup>3</>秒后射出直线飞行的贯穿箭矢，箭矢以<@ba.vup>较大力度</>推动每个经过的敌人，每飞行一段距离都会对周围所有敌人造成攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和攻击力<@ba.vup>{atk_scale_magic:0%}</>的法术伤害，箭矢射程无限\\n<@ba.rem>可充能2次</>",
+          "values": [
+            3.6,
+            0.6,
+            1.5,
+            0.25,
+            99,
+            2,
+            1
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk_scale",
+        "atk_scale_magic",
+        "wait_duration",
+        "dist_interval",
+        "max_dist",
+        "force",
+        "knockback_duration"
+      ]
+    }
+  ],
+  "ranges": {
+    "4-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 1,
+          "col": 4
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 4
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 4
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_hire_spd_all[000]",
+          "name": "办公室年度人物",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_orchd2",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻控制中枢时，人力办公室联络速度<@cc.vup>+10%</>（同种效果取最高）"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit_tag[000]",
+          "name": "队长的自觉",
+          "room": "TRADING",
+          "icon": "bskill_tra_orchd2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻贸易站时，订单上限<@cc.vup>+3</>，且每有一个<$cc.tag.mh2><@cc.kw>泡影国狩猎小队</></>干员进驻贸易站，订单获取效率<@cc.vup>+20%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至105%"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至110%<@ba.talpu>（+5%）</>"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至110%"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至115%<@ba.talpu>（+5%）</>"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至115%"
+        },
+        {
+          "name": "强击瓶专家",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "部署后首次开启技能时，接下来50次攻击的攻击力提升至120%<@ba.talpu>（+5%）</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "翔虫机动",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "再部署时间-15秒；部署至上次部署位置周围时，30秒内攻击力+10%并且可以部署在近战位"
+        },
+        {
+          "name": "翔虫机动",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "再部署时间-15秒且不提高部署费用；部署至上次部署位置周围时，30秒内攻击力+15%并且可以部署在近战位"
+        }
+      ]
+    }
+  ]
+}

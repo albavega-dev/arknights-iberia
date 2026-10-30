@@ -1,0 +1,617 @@
+{
+  "operatorId": "char_340_shwaz",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_shwaz_1",
+      "name": "Charged Shot",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.6,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.65,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.7,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.75,
+            0.6
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.8,
+            0.6
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.85,
+            0.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.9,
+            0.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2,
+            0.73
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            2.1,
+            0.76
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            2.2,
+            0.8
+          ]
+        }
+      ],
+      "description": "The next attack deals <@ba.vup>{atk_scale:0%}</> damage, and increases the chance of triggering this unit's Talent to <@ba.vup>{talent@prob:0%}</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "talent@prob"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_shwaz_2",
+      "name": "Sharp Eye",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 10,
+          "values": [
+            0.7,
+            0.35
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 10,
+          "values": [
+            0.75,
+            0.35
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 10,
+          "values": [
+            0.8,
+            0.35
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 13,
+          "values": [
+            0.85,
+            0.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 34,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 13,
+          "values": [
+            0.9,
+            0.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 13,
+          "values": [
+            0.95,
+            0.4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 36,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 16,
+          "values": [
+            1,
+            0.45
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 37,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 17,
+          "values": [
+            1.1,
+            0.45
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 38,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 18,
+          "values": [
+            1.2,
+            0.45
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            1.3,
+            0.5
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, and increases the chance to activate the Talent to <@ba.vup>{talent@prob:0%}</>",
+      "blackboardKeys": [
+        "atk",
+        "talent@prob"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_shwaz_3",
+      "name": "Final Tactics",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 5,
+          "rangeId": "3-2",
+          "description": "Changes attack range to frontal <@ba.rem>3 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 5,
+          "rangeId": "3-2",
+          "description": "Changes attack range to frontal <@ba.rem>3 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1.05,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 17,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 5,
+          "rangeId": "3-2",
+          "description": "Changes attack range to frontal <@ba.rem>3 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1.1,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 18,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 7,
+          "rangeId": "3-2",
+          "description": "Changes attack range to frontal <@ba.rem>3 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1.2,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 19,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 7,
+          "rangeId": "3-2",
+          "description": "Changes attack range to frontal <@ba.rem>3 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1.25,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 7,
+          "rangeId": "3-2",
+          "description": "Changes attack range to frontal <@ba.rem>3 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1.3,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 9,
+          "rangeId": "3-2",
+          "description": "Changes attack range to frontal <@ba.rem>3 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1.4,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 10,
+          "rangeId": "4-1",
+          "description": "Changes attack range to frontal <@ba.rem>4 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1.5,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 11,
+          "rangeId": "4-1",
+          "description": "Changes attack range to frontal <@ba.rem>4 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1.6,
+            0.4,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 12,
+          "rangeId": "4-1",
+          "description": "Changes attack range to frontal <@ba.rem>4 tiles</>, Attack Interval <@ba.vdown>increases a bit</>, ATK <@ba.vup>+{atk:0%}</>, increasing Talent triggering chance to <@ba.vup>{talent@prob:0%}</>",
+          "values": [
+            1.8,
+            0.4,
+            1
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk",
+        "base_attack_time",
+        "talent@prob"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        }
+      ]
+    },
+    "4-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 4
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single_P[000]",
+          "name": "Make Tea",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single_schwarz",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.55</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); if the target is <@cc.kw>Ceylon</>, further increases Morale restored by <@cc.vup>+0.45</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_spd&profession[140]",
+          "name": "Black Arrow",
+          "room": "TRAINING",
+          "icon": "bskill_train_sniper3",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+60%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Sharp Arrow",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 20% chance to increase the current damage of that attack to 130%"
+        },
+        {
+          "name": "Armor Penetration Arrow",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 20% chance to increase the current damage of that attack to 130% and reduce the DEF of the target hit by 10% for 5 seconds"
+        },
+        {
+          "name": "Armor Penetration Arrow",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking, has a 20% chance to increase the current damage of that attack to 160% and reduce the DEF of the target hit by 20% for 5 seconds"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Crossfire",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Schwarz and at least one more [Sniper] Operator are on the battlefield, all [Sniper] Operators' ATK +8%"
+        },
+        {
+          "name": "Crossfire",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "When Schwarz and at least one more [Sniper] Operator are on the battlefield, all [Sniper] Operators' ATK +10%<@ba.talpu> (+2%)</>"
+        }
+      ]
+    }
+  ]
+}

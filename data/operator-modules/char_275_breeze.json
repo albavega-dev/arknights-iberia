@@ -1,0 +1,147 @@
+{
+  "operatorId": "char_275_breeze",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "y-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_breeze",
+      "name": "Surgical Instrument Kit",
+      "region": "en",
+      "type": "RIN-X",
+      "icon": "rin-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Breeze fire a total of 50 healing rounds (Breeze cannot be a Support Unit)",
+        "Clear Main Theme 4-1 with a 3-star rating; a non-Support Breeze must be deployed during the operation, and only 7 Operators are allowed for the remaining units"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 30
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 40
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Medic Squad Protection",
+              "description": "When this unit's skill is active, all Medic and Supporter Operators gain +10% Max HP and <$ba.buffres>status resistance</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 47
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Medic Squad Protection",
+              "description": "When this unit's skill is active, all Medic and Supporter Operators gain +15% Max HP and <$ba.buffres>status resistance</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

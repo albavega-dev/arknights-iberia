@@ -1,0 +1,100 @@
+{
+  "operatorId": "char_4110_delphn",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_delphn",
+      "name": "Gloomy Justice",
+      "region": "en",
+      "type": "MSC-Y",
+      "icon": "msc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Delphine (excluding Support Units)",
+        "Clear A Walk in the Dust WD-6 with a 3-star rating; You must deploy your own Delphine, and use Preemptive Strike at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 95,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD +30 when there are stored attacks"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 85
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD +30 when there are stored attacks"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Baptize the Blade",
+              "description": "Increases damage dealt to enemies above 80% HP by 21%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Baptize the Blade",
+              "description": "Increases damage dealt to enemies above 80% HP by 23% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 92
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD +30 when there are stored attacks"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Baptize the Blade",
+              "description": "Increases damage dealt to enemies above 80% HP by 23%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Baptize the Blade",
+              "description": "Increases damage dealt to enemies above 80% HP by 25% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

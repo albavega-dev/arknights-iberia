@@ -1,0 +1,89 @@
+{
+  "operatorId": "char_102_texas",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_texas",
+      "name": "Private Field Supply Package",
+      "region": "en",
+      "type": "SOL-Y",
+      "icon": "sol-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Texas, and unleash Sword Rain at least 1 time in each battle",
+        "Clear Code of Brawl CB-3 with a 3-star rating; You must deploy your own Texas, and cannot include any other Vanguard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 35,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first Deployment Cost -4"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 39,
+            "def": 19
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first Deployment Cost -4"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Tactical Delivery",
+              "description": "While this unit is in the squad, start with 2 additional DP. Skills deal 10% more damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 155,
+            "atk": 42,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first Deployment Cost -4"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Tactical Delivery",
+              "description": "While this unit is in the squad, start with 2 additional DP. Skills deal 15% more damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

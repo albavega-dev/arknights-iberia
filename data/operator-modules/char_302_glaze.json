@@ -1,0 +1,142 @@
+{
+  "operatorId": "char_302_glaze",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_glaze",
+      "name": "Portable Radar Equipment",
+      "region": "en",
+      "type": "DEA-X",
+      "icon": "dea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with Ambriel's Radar Sweep (Ambriel cannot be a Support Unit)",
+        "Clear Main Theme 4-7 with a 3-star rating; a non-Support Ambriel must be deployed during the operation, and Ambriel must defeat at least 6 Infused Originium Slugs"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 65,
+            "atk": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "max_dist",
+                  "value": 4.5
+                },
+                {
+                  "key": "min_dist",
+                  "value": 1
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 68
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "max_dist",
+                  "value": 4.5
+                },
+                {
+                  "key": "min_dist",
+                  "value": 1
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Precise Strike",
+              "description": "Has a 33% chance to Stun for 2.5 seconds when attacking an enemy outside this unit's normal Attack Range"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Precise Strike",
+              "description": "Has a 36% <@ba.talpu>(+3%)</> chance to Stun for 2.5 seconds when attacking an enemy outside this unit's normal Attack Range"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 95,
+            "atk": 81
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "max_dist",
+                  "value": 4.5
+                },
+                {
+                  "key": "min_dist",
+                  "value": 1
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.15
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Precise Strike",
+              "description": "Has a 33% chance to stun for 3 seconds when attacking an enemy outside this unit's normal attack range"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Precise Strike",
+              "description": "Has a 36% <@ba.talpu>(+3%)</> chance to Stun for 3 seconds when attacking an enemy outside this unit's normal Attack Range"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

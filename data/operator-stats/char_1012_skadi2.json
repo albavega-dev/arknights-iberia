@@ -1,0 +1,379 @@
+{
+  "operatorId": "char_1012_skadi2",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 613,
+            "atk": 145,
+            "def": 93,
+            "magicResistance": 0,
+            "cost": 6,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 877,
+            "atk": 228,
+            "def": 139,
+            "magicResistance": 0,
+            "cost": 6,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 877,
+            "atk": 228,
+            "def": 139,
+            "magicResistance": 0,
+            "cost": 8,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1202,
+            "atk": 305,
+            "def": 186,
+            "magicResistance": 0,
+            "cost": 8,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1202,
+            "atk": 305,
+            "def": 186,
+            "magicResistance": 0,
+            "cost": 8,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 1603,
+            "atk": 368,
+            "def": 233,
+            "magicResistance": 0,
+            "cost": 8,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 30,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -6,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 27,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_skadi2",
+      "operatorId": "char_1012_skadi2",
+      "region": "en",
+      "name": "An Exuvia of Her Past",
+      "moduleType": "BAR-X",
+      "typeIcon": "bar-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 84,
+            "atk": 26,
+            "def": 12
+          },
+          "specialEffects": [
+            "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 32,
+            "def": 15
+          },
+          "specialEffects": [
+            "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+            "Can use a Seaborn that lasts for 28 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range; Seaborn Redeployment Time -3s",
+            "Lasts 28 seconds after deployment"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 35,
+            "def": 17
+          },
+          "specialEffects": [
+            "When there are 2 or more other Operators within range, ATK <@ba.kw>+8%</> (unaffected by skill)",
+            "Can use a Seaborn that lasts for 30 seconds. The Seaborn's Attack Range is regarded as an extension of this unit's Attack Range; Seaborn Redeployment Time -5s",
+            "Lasts 30 seconds after deployment"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_skadi2",
+      "operatorId": "char_1012_skadi2",
+      "region": "en",
+      "name": "New Generation",
+      "moduleType": "BAR-Y",
+      "typeIcon": "bar-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 22,
+            "def": 22
+          },
+          "specialEffects": [
+            "When this unit's skill is active, allies within Attack Range gain 30 Physical and Arts <$ba.dmgresistance>Damage Reduction</>"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 27,
+            "def": 29
+          },
+          "specialEffects": [
+            "When this unit's skill is active, allies within Attack Range gain 30 Physical and Arts <$ba.dmgresistance>Damage Reduction</>",
+            "ATK +8% and DEF +6% when there is an allied unit within Attack Range of self or the Seaborn; if the allied unit is an [Abyssal Hunter] Operator, gain ATK +15% and DEF +6% instead; when allied Operators are deployed within range of self or the Seaborn, this unit gains 2 SP",
+            "ATK +11% <@ba.talpu>(+3%)</> and DEF +6% when there is an allied unit within range of self or the Seaborn; if the allied unit is an [Abyssal Hunter] operator, gain ATK +18% <@ba.talpu>(+3%)</> and DEF +6% instead; when allied Operators are deployed within range of self or the Seaborn, this unit gains 2 SP"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 30,
+            "def": 33
+          },
+          "specialEffects": [
+            "When this unit's skill is active, allies within Attack Range gain 30 Physical and Arts <$ba.dmgresistance>Damage Reduction</>",
+            "ATK +9% and DEF +8% when there is an allied unit within Attack Range of self or the Seaborn; if the allied unit is an [Abyssal Hunter] Operator, gain ATK +20% and DEF +8% instead; when allied Operators are deployed within range of self or the Seaborn, this unit gains 3 SP",
+            "ATK +12% <@ba.talpu>(+3%)</> and DEF +8% when there is an allied unit within range of self or the Seaborn; if the allied unit is an [Abyssal Hunter] operator, gain ATK +23% <@ba.talpu>(+3%)</> and DEF +8% instead; when allied Operators are deployed within range of self or the Seaborn, this unit gains 3 SP"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Does not attack but continuously restores the <@ba.kw>HP</> of all allies within range (the HP restored per second is equal to <@ba.kw>{attack@atk_to_hp_recovery_ratio:0%}</> of self ATK). Self is unaffected by <$ba.inspire>Inspiration</>",
+      "blackboard": [
+        {
+          "key": "attack@atk_to_hp_recovery_ratio",
+          "value": 0.1
+        }
+      ]
+    }
+  ]
+}

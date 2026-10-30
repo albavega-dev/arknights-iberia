@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_4236_tmslot",
+  "region": "cn",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_tmslot",
+      "name": "突发性创造思维",
+      "region": "cn",
+      "type": "FUN-X",
+      "icon": "fun-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "战斗中非助战时隙累计使用8次“科技与传统仪式”",
+        "3星通关插曲喧闹法则CB-6；必须编入非助战时隙并上场，且使用时隙歼灭至少1名欺凌者"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 50,
+            "atk": 25
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "新产品测评",
+              "description": "攻击力+11%，浮游单元攻击时有15%概率使目标<$ba.sluggish>停顿</>1.5秒"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "新产品测评",
+              "description": "攻击力+14%<@ba.talpu>（+3%）</>，浮游单元攻击时有15%概率使目标<$ba.sluggish>停顿</>1.5秒"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 35
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "新产品测评",
+              "description": "攻击力+13%，浮游单元攻击时有15%概率使目标<$ba.sluggish>停顿</>1.5秒"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "新产品测评",
+              "description": "攻击力+16%<@ba.talpu>（+3%）</>，浮游单元攻击时有15%概率使目标<$ba.sluggish>停顿</>1.5秒"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "operatorId": "char_4218_aigis",
+  "region": "cn",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_aigis_1",
+      "name": "启动狂宴模式",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            0.4,
+            0.2,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 10,
+          "values": [
+            0.5,
+            0.2,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 10,
+          "values": [
+            0.6,
+            0.3,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            0.7,
+            0.3,
+            10
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 10,
+          "values": [
+            0.8,
+            0.4,
+            10
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 10,
+          "values": [
+            0.9,
+            0.4,
+            10
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 12,
+          "values": [
+            1,
+            0.5,
+            10
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 13,
+          "values": [
+            1.2,
+            0.6,
+            10
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 14,
+          "values": [
+            1.3,
+            0.6,
+            10
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 15,
+          "values": [
+            1.4,
+            0.7,
+            10
+          ]
+        }
+      ],
+      "description": "攻击力<@ba.vup>+{atk:0%}</>，防御力<@ba.vup>+{def:0%}</>，随机攻击范围内的目标\\n<@ba.rem>技能结束后自身<$ba.stun>晕眩</>{stun}秒</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "stun"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_aigis_2",
+      "name": "全弹发射",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            6,
+            0.7,
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 10,
+          "values": [
+            6,
+            0.8,
+            1.7
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 10,
+          "values": [
+            6,
+            0.9,
+            1.9
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 10,
+          "values": [
+            6,
+            1,
+            2.1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 10,
+          "values": [
+            6,
+            1.1,
+            2.3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 10,
+          "values": [
+            6,
+            1.2,
+            2.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 12,
+          "values": [
+            6,
+            1.3,
+            2.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 13,
+          "values": [
+            6,
+            1.4,
+            2.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 14,
+          "values": [
+            6,
+            1.5,
+            2.9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 15,
+          "values": [
+            6,
+            1.6,
+            3
+          ]
+        }
+      ],
+      "description": "锁定范围内一个目标，对其发射6枚导弹，每枚导弹造成相当于攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害，之后自身飞踢向目标，对目标及目标周围敌人造成相当于攻击力<@ba.vup>{kick_atk_scale:0%}</>的物理伤害",
+      "blackboardKeys": [
+        "times",
+        "atk_scale",
+        "kick_atk_scale"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd_P2[999]",
+          "name": "机械工学",
+          "room": "POWER",
+          "icon": "bskill_pow_spd_p3r",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻发电站时，无人机充能速度<@cc.vup>+15%</>，如果<@cc.kw>结城理</>进驻在制造站，则无人机充能速度额外<@cc.vup>+5%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd&bd[999]",
+          "name": "跨领域交流",
+          "room": "MEETING",
+          "icon": "bskill_meet_p3r_bd",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻会客室时，线索搜集速度提升<@cc.vup>10%</>，当与<@cc.kw>虎狼丸</>进驻会客室一起工作时，更容易获得线索板上尚未拥有的线索"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "反暗影特殊压制兵装",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "造成的物理伤害+5%，受到的物理伤害-5%"
+        },
+        {
+          "name": "反暗影特殊压制兵装",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "造成的物理伤害+7%<@ba.talpu>（+2%）</>，受到的物理伤害-7%<@ba.talpu>（+2%）</>"
+        },
+        {
+          "name": "反暗影特殊压制兵装",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "造成的物理伤害+10%，受到的物理伤害-10%"
+        },
+        {
+          "name": "反暗影特殊压制兵装",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "造成的物理伤害+12%<@ba.talpu>（+2%）</>，受到的物理伤害-12%<@ba.talpu>（+2%）</>"
+        }
+      ]
+    }
+  ]
+}

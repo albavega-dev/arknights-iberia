@@ -1,0 +1,800 @@
+{
+  "operatorId": "char_1041_angel2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_angel2_1",
+      "name": "Sweeping the Skies",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 1.5
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 1.6
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 1.7
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 3,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 1.8
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 3,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 1.9
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 3,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 2
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 5,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 2.1
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 6,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 2.2
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 7,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 2.3
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 8,
+          "blackboard": [
+            {
+              "key": "attack@atk_scale",
+              "value": 2.5
+            },
+            {
+              "key": "attack@trigger_time",
+              "value": 8
+            },
+            {
+              "key": "range_id",
+              "value": 0,
+              "valueStr": "3-3"
+            }
+          ]
+        }
+      ],
+      "description": "Each attack deals <@ba.vup>{attack@atk_scale:0%}</> of ATK as Physical damage, and prioritizes attacking aerial units; if manually deactivated, fires all remaining ammo at random enemies within Attack Range\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)</>"
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_angel2_2",
+      "name": "Shootoholic",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            2,
+            35,
+            5,
+            1,
+            5,
+            1.5,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            2.1,
+            35,
+            5,
+            1,
+            5,
+            1.5,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            2.2,
+            35,
+            5,
+            1,
+            5,
+            1.5,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 22,
+          "values": [
+            2.3,
+            35,
+            5,
+            1,
+            5,
+            1.8,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 22,
+          "values": [
+            2.4,
+            35,
+            5,
+            1,
+            5,
+            1.8,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 22,
+          "values": [
+            2.5,
+            35,
+            5,
+            1,
+            5,
+            1.8,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 23,
+          "values": [
+            2.7,
+            35,
+            5,
+            1,
+            5,
+            2,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 23,
+          "values": [
+            2.8,
+            35,
+            5,
+            1,
+            5,
+            2.2,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 23,
+          "values": [
+            2.9,
+            35,
+            5,
+            1,
+            5,
+            2.3,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 25,
+          "values": [
+            3,
+            35,
+            5,
+            1,
+            5,
+            2.5,
+            30,
+            70,
+            -0.7,
+            999
+          ]
+        }
+      ],
+      "description": "<$ba.steal>Steals</> <@ba.vup>{steal}</> ASPD from <@ba.vup>1</> allied Operator within Attack Range (lasts until skill ends or Exusiai the New Covenant leaves the field), and both this unit and the targeted Operator gain a <$ba.barrier>Barrier</> equal to <@ba.vup>{shield_max_hp_ratio:0%}</> Max HP which decays; Attack Interval reduces, each attack deals <@ba.vup>{attack@atk_scale:0%}</> of ATK as Physical damage\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill); if ASPD is successfully <$ba.steal>Stolen</>, grants an additional 5 ammo</>",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "attack@trigger_time",
+        "addtional_ammo_each",
+        "max_target",
+        "recover_each_cnt",
+        "shield_max_hp_ratio",
+        "shield_max_duration",
+        "steal",
+        "base_attack_time",
+        "steal_max"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_angel2_3",
+      "name": "Guaranteed Success!",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            2.5,
+            50,
+            99,
+            1,
+            6,
+            0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            2.5,
+            50,
+            99,
+            1.05,
+            6,
+            0.12
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            2.5,
+            50,
+            99,
+            1.1,
+            6,
+            0.13
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 22,
+          "values": [
+            2.5,
+            50,
+            99,
+            1.15,
+            6,
+            0.15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 22,
+          "values": [
+            2.5,
+            50,
+            99,
+            1.2,
+            6,
+            0.16
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 22,
+          "values": [
+            2.5,
+            50,
+            99,
+            1.25,
+            6,
+            0.18
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 25,
+          "values": [
+            2.5,
+            50,
+            99,
+            1.35,
+            6,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 27,
+          "values": [
+            2.5,
+            50,
+            99,
+            1.5,
+            6,
+            0.22
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 28,
+          "values": [
+            2.5,
+            50,
+            99,
+            1.55,
+            6,
+            0.25
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 30,
+          "values": [
+            2.5,
+            50,
+            99,
+            1.6,
+            6,
+            0.3
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, and attacks hit <@ba.vup>5</> times for <@ba.vup>{attack@atk_scale:0%}</> of ATK per hit; if Delivery Coordinates are on the field, deals a single instance of Physical splash damage equal to <@ba.vup>{attack@cannon_atk_scale:0%}</> of ATK at its location and deploys the ground Operator with the longest Redeployment Time there, granting that Operator <@ba.vup>{attack@sp}</> SP\n<@ba.rem>Gains Delivery Coordinates after deployment; skill activation grants {attack@trigger_time} ammo, each attack consumes 5 ammo, and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "attack@cannon_atk_scale",
+        "attack@trigger_time",
+        "max_deploy_character",
+        "attack@atk_scale",
+        "attack@sp",
+        "atk"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single_power[100]",
+          "name": "Natural Optimist",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single1",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.55</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)"
+        },
+        {
+          "buffId": "dorm_rec_single_power[001]",
+          "name": "Funny Holy City Stories",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single_laterano",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.55</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place); if the target is a <$cc.g.laterano><@cc.kw>Laterano</></> Operator, further increases Morale restored by <@cc.vup>+0.45</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_par[001]",
+          "name": "Same-City Express Order",
+          "room": "TRADING",
+          "icon": "bskill_tra_laterano1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, for every <$cc.g.laterano><@cc.kw>Laterano</></> Operator in the same Trading Post, order acquisition efficiency <@cc.vup>+15%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Firepower FM",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, recovers 6% HP whenever an allied Operator consumes ammo; in addition, there is a 20% chance to bombard the enemies within that Operator's Attack Range, dealing 105% of Exusiai the New Covenant's ATK as Physical splash damage"
+        },
+        {
+          "name": "Firepower FM",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, recovers 6% HP whenever an allied Operator consumes ammo; in addition, there is a 20% chance to bombard the enemies within that Operator's Attack Range, dealing 120% <@ba.talpu>(+15%)</> of Exusiai the New Covenant's ATK as Physical splash damage"
+        },
+        {
+          "name": "Firepower FM",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, recovers 6% HP whenever an allied Operator consumes ammo; in addition, there is a 25% chance to bombard the enemies within that Operator's Attack Range, dealing 150% of Exusiai the New Covenant's ATK as Physical splash damage"
+        },
+        {
+          "name": "Firepower FM",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, recovers 6% HP whenever an allied Operator consumes ammo; in addition, there is a 25% chance to bombard the enemies within that Operator's Attack Range, dealing 165% <@ba.talpu>(+15%)</> of Exusiai the New Covenant's ATK as Physical splash damage"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Covenant of Bullets",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, Operators with ammo-type skills gain ATK +9%; effect is doubled for [Laterano] Operators"
+        },
+        {
+          "name": "Covenant of Bullets",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When deployed, Operators with ammo-type skills gain ATK +13% <@ba.talpu>(+4%)</>; effect is doubled for [Laterano] Operators"
+        }
+      ]
+    }
+  ]
+}

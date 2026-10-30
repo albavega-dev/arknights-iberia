@@ -1,0 +1,402 @@
+{
+  "operatorId": "char_188_helage",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1568,
+            "atk": 340,
+            "def": 160,
+            "magicResistance": 0,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 2179,
+            "atk": 486,
+            "def": 220,
+            "magicResistance": 0,
+            "cost": 22,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 2179,
+            "atk": 486,
+            "def": 220,
+            "magicResistance": 0,
+            "cost": 24,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 2868,
+            "atk": 632,
+            "def": 283,
+            "magicResistance": 0,
+            "cost": 24,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 2868,
+            "atk": 632,
+            "def": 283,
+            "magicResistance": 0,
+            "cost": 26,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 3825,
+            "atk": 762,
+            "def": 334,
+            "magicResistance": 0,
+            "cost": 26,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.2,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 400,
+        "atk": 70,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -4,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 26,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_helage",
+      "operatorId": "char_188_helage",
+      "region": "en",
+      "name": "Zouhou, a Sheath for Contempt",
+      "moduleType": "SBL-X",
+      "typeIcon": "sbl-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 55
+          },
+          "specialEffects": [
+            "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 75
+          },
+          "specialEffects": [
+            "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+            "Gains up to +120 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 60% Max HP)"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 350,
+            "atk": 90
+          },
+          "specialEffects": [
+            "Gain 25% <$ba.protect>Sanctuary</> when HP is below 50%",
+            "Gains up to +130 ASPD <$ba.berserk>Tenacity</> (reaches maximum bonus when losing 50% Max HP)"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_helage",
+      "operatorId": "char_188_helage",
+      "region": "en",
+      "name": "'Горячий снег'",
+      "moduleType": "SBL-Y",
+      "typeIcon": "sbl-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 55,
+            "def": 50
+          },
+          "specialEffects": [
+            "When defeated, does not retreat and instead recovers <@ba.kw>{hp_ratio:0%}</> HP (can only activate once every deployment)"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 75,
+            "def": 55
+          },
+          "specialEffects": [
+            "When defeated, does not retreat and instead recovers <@ba.kw>{hp_ratio:0%}</> HP (can only activate once every deployment)",
+            "Regenerates 70 HP per second when not blocking an enemy, or when HP is below 30%",
+            "Regenerates 80 <@ba.talpu>(+10)</> HP per second when not blocking an enemy, or when HP is below 30%"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 90,
+            "def": 60
+          },
+          "specialEffects": [
+            "When defeated, does not retreat and instead recovers <@ba.kw>{hp_ratio:0%}</> HP (can only activate once every deployment)",
+            "Regenerates 80 HP per second when not blocking an enemy, or when HP is below 30%",
+            "Regenerates 90 <@ba.talpu>(+10)</> HP per second when not blocking an enemy, or when HP is below 30%"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 1)",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 30
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy (Upgraded after reaching Elite 2)",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ]
+    },
+    {
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Can't be healed by other units. Recovers <@ba.kw>{value}</> self HP every time this operator attacks an enemy",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 70
+        }
+      ]
+    }
+  ]
+}

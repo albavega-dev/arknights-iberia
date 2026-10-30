@@ -1,0 +1,149 @@
+{
+  "operatorId": "char_109_fmout",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "3-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_fmout",
+      "name": "Travel Kit for the Fortune-Teller",
+      "region": "en",
+      "type": "SPC-X",
+      "icon": "spc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Gitano, and have Gitano defeat at least 8 enemies",
+        "Clear Main Theme 1-10 with a 3-star rating; You must deploy your own Gitano, and have Gitano defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 35
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 50
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Divination",
+              "description": "Obtains one of the following buffs permanently when deployed: ATK +17%, ASPD +17, or Max HP +25%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Divination",
+              "description": "Obtains one of the following buffs permanently when deployed: ATK +19% <@ba.talpu>(+2%)</>, ASPD +19 <@ba.talpu>(+2)</>, or Max HP +27% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 57
+          },
+          "rangeId": "3-1",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Divination",
+              "description": "Obtains one of the following buffs permanently when deployed: ATK +18%, ASPD +18, or Max HP +28%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Divination",
+              "description": "Obtains one of the following buffs permanently when deployed: ATK +20% <@ba.talpu>(+2%)</>, ASPD +20 <@ba.talpu>(+2)</>, or Max HP +30% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

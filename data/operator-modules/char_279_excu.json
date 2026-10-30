@@ -1,0 +1,110 @@
+{
+  "operatorId": "char_279_excu",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "1-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_excu",
+      "name": "Executor's Satchel",
+      "region": "en",
+      "type": "RPR-X",
+      "icon": "rpr-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with your own Executor",
+        "Clear Invitation to Wine IW-8 with a 3-star rating; You must deploy your own Executor and have him defeat at least 30 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 38,
+            "attack_speed": 3
+          },
+          "rangeId": "1-3",
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 46,
+            "attack_speed": 4
+          },
+          "rangeId": "1-3",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Final Modification",
+              "description": "Attacks ignore 190 DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Final Modification",
+              "description": "Attacks ignore 205 <@ba.talpu>(+15)</> DEF"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 52,
+            "attack_speed": 5
+          },
+          "rangeId": "1-3",
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Final Modification",
+              "description": "Attacks ignore 210 DEF"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Final Modification",
+              "description": "Attacks ignore 225 <@ba.talpu>(+15)</> DEF"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

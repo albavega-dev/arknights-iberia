@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_272_strong",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_strong",
+      "name": "Steel Tool Set",
+      "region": "en",
+      "type": "MER-X",
+      "icon": "mer-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Jaye at least 2 times, and have Jaye defeat at least 3 enemies",
+        "Clear Main Theme S3-2 with a 3-star rating; You must deploy your own Jaye, and have Jaye defeat at least 8 Originium Slugs β"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 35,
+            "def": 35
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 43,
+            "def": 43
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Anatomy Master",
+              "description": "Increases ATK to 150% when attacking [Infected Creatures]"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Anatomy Master",
+              "description": "Increases ATK to 155% <@ba.talpu>(+5%)</> when attacking [Infected Creatures]"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 50,
+            "def": 50
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Anatomy Master",
+              "description": "Increases ATK to 155% when attacking [Infected Creatures]"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Anatomy Master",
+              "description": "Increases ATK to 160% <@ba.talpu>(+5%)</> when attacking [Infected Creatures]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

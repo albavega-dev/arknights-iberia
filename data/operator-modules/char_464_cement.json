@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_464_cement",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_cement",
+      "name": "Engineering Recorder",
+      "region": "en",
+      "type": "HES-X",
+      "icon": "hes-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Cement, and unleash Structural Support at least 1 time in each battle",
+        "Clear Invitation to Wine IW-EX-6 with a 3-star rating; You must deploy your own Cement, and cannot include any other Defender Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 25,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP recovery is slowed except when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 42,
+            "def": 75
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP recovery is slowed except when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Blueprint Corrections",
+              "description": "Gains 14% Physical damage reduction; effect doubles after being deployed for 35 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Blueprint Corrections",
+              "description": "Gains 17% <@ba.talpu>(+3%)</> Physical damage reduction; effect doubles after being deployed for 35 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 57,
+            "def": 100
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "SP recovery is slowed except when blocking enemies",
+              "blackboard": [
+                {
+                  "key": "sp_recover_ratio",
+                  "value": -0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Blueprint Corrections",
+              "description": "Gains 16% Physical damage reduction; effect doubles after being deployed for 35 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Blueprint Corrections",
+              "description": "Gains 19% <@ba.talpu>(+3%)</> Physical damage reduction; effect doubles after being deployed for 35 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

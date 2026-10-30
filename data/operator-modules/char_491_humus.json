@@ -1,0 +1,88 @@
+{
+  "operatorId": "char_491_humus",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_humus",
+      "name": "Badlands Exotic Toolkit",
+      "region": "en",
+      "type": "REA-X",
+      "icon": "rea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Humus, and unleash Efficient Processing at least 1 time in each battle",
+        "Clear Main Theme 7-8 with a 3-star rating; You must deploy your own Humus, and only Melee Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 10,
+            "def": 14
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 15,
+            "def": 22
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Re-recycle",
+              "description": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</> that caps at 100% of Max HP; +5% DEF while this <$ba.barrier>Barrier</> is active"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Re-recycle",
+              "description": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</> that caps at 104% <@ba.talpu>(+4%)</> of Max HP; +5% DEF while this <$ba.barrier>Barrier</> is active"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 20,
+            "def": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Re-recycle",
+              "description": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</> that caps at 100% of Max HP; +8% DEF while this <$ba.barrier>Barrier</> is active"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Re-recycle",
+              "description": "Any HP gain exceeding this unit's Max HP is converted into a <$ba.barrier>Barrier</> that caps at 104% <@ba.talpu>(+4%)</> of Max HP; +8% DEF while this <$ba.barrier>Barrier</> is active"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

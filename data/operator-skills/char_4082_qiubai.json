@@ -1,0 +1,774 @@
+{
+  "operatorId": "char_4082_qiubai",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_qiubai_1",
+      "name": "Halting Feather",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.8,
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.9,
+            1.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2,
+            1.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.1,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.2,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.3,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.4,
+            2.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.6,
+            2.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.8,
+            2.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            3,
+            3
+          ]
+        }
+      ],
+      "description": "Next attack <$ba.root>binds the target for </><@ba.vup>{duration}</>s. When <$ba.root>Bind</> expires, deals <@ba.vup>{aoe_scale:0%}</> of ATK as Arts damage to target and all nearby enemies.",
+      "blackboardKeys": [
+        "aoe_scale",
+        "duration"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_qiubai_2",
+      "name": "Holding Shadow",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 0,
+          "rangeId": "4-1",
+          "values": [
+            1.5,
+            1.5,
+            0.6,
+            4.88
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 1,
+          "rangeId": "4-1",
+          "values": [
+            1.65,
+            1.65,
+            0.65,
+            4.88
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 14,
+          "initSp": 2,
+          "rangeId": "4-1",
+          "values": [
+            1.8,
+            1.8,
+            0.7,
+            4.88
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 2,
+          "rangeId": "4-1",
+          "values": [
+            1.95,
+            1.95,
+            0.75,
+            4.88
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 3,
+          "rangeId": "4-1",
+          "values": [
+            2.1,
+            2.1,
+            0.8,
+            4.88
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 13,
+          "initSp": 4,
+          "rangeId": "4-1",
+          "values": [
+            2.25,
+            2.25,
+            0.85,
+            4.88
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 4,
+          "rangeId": "4-1",
+          "values": [
+            2.4,
+            2.4,
+            0.9,
+            4.88
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 4,
+          "rangeId": "4-1",
+          "values": [
+            2.6,
+            2.6,
+            1,
+            4.88
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 11,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            2.8,
+            2.8,
+            1.2,
+            4.88
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 10,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            3,
+            3,
+            1.4,
+            4.88
+          ]
+        }
+      ],
+      "description": "Deals <@ba.vup>{sword_begin_atk_scale:0%}</> of ATK as Arts damage to ground enemies ahead, attack range <@ba.vup>changes</>, ATK <@ba.vup>+{atk:0%}</>, ground enemies within attack range are <$ba.sluggish>slowed</>; when skill expires, deals <@ba.vup>{sword_end_atk_scale:0%}</> ATK as Physical damage to ground enemies in range.",
+      "blackboardKeys": [
+        "sword_begin_atk_scale",
+        "sword_end_atk_scale",
+        "atk",
+        "sword_end_duration"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_qiubai_3",
+      "name": "Questioning Snow",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 64,
+          "initSp": 32,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.2
+            },
+            {
+              "key": "attack_speed",
+              "value": 8
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 63,
+          "initSp": 32,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.23
+            },
+            {
+              "key": "attack_speed",
+              "value": 9
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 62,
+          "initSp": 34,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.27
+            },
+            {
+              "key": "attack_speed",
+              "value": 10
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 61,
+          "initSp": 34,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.3
+            },
+            {
+              "key": "attack_speed",
+              "value": 10
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 36,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.33
+            },
+            {
+              "key": "attack_speed",
+              "value": 11
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 59,
+          "initSp": 36,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.37
+            },
+            {
+              "key": "attack_speed",
+              "value": 12
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 38,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.4
+            },
+            {
+              "key": "attack_speed",
+              "value": 13
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 40,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, Talent 1 damage increased to <@ba.vup>{talent_scale}</>x, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.45
+            },
+            {
+              "key": "attack_speed",
+              "value": 13
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 6
+            },
+            {
+              "key": "talent_scale",
+              "value": 1.5
+            }
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 43,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, Talent 1 damage increased to <@ba.vup>{talent_scale}</>x, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.5
+            },
+            {
+              "key": "attack_speed",
+              "value": 13
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 7
+            },
+            {
+              "key": "talent_scale",
+              "value": 1.75
+            }
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 45,
+          "rangeId": "3-1",
+          "description": "Attack range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>, damage type changed to Arts, attacks 2 extra targets, Talent 1 damage increased to <@ba.vup>{talent_scale}</>x, ranged attacks no longer have reduced damage, each attack grants <@ba.vup>+{attack_speed}</> ASPD (stacking up to <@ba.vup>{max_stack_cnt}</> times).",
+          "blackboard": [
+            {
+              "key": "atk",
+              "value": 0.55
+            },
+            {
+              "key": "attack_speed",
+              "value": 13
+            },
+            {
+              "key": "max_stack_cnt",
+              "value": 8
+            },
+            {
+              "key": "talent_scale",
+              "value": 2
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ranges": {
+    "3-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    },
+    "4-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 4
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession3[160]",
+          "name": "Guard Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_guard1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession3[161]",
+          "name": "Combat Techniques: Lord",
+          "room": "TRAINING",
+          "icon": "bskill_train_lord",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Guard</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Lord</>, training speed will be further increased by <@cc.vup>+45%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Find an Opening",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deal an additional 25% of ATK as Arts damage when attacking enemies affected by <$ba.sluggish>Slow</> or <$ba.root>Bind</>"
+        },
+        {
+          "name": "Find an Opening",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deal an additional 28%<@ba.talpu> (+3%)</> of ATK as Arts damage when attacking enemies affected by <$ba.sluggish>Slow</> or <$ba.root>Bind</>"
+        },
+        {
+          "name": "Find an Opening",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deal an additional 40% of ATK as Arts damage when attacking enemies affected by <$ba.sluggish>Slow</> or <$ba.root>Bind</>"
+        },
+        {
+          "name": "Find an Opening",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deal an additional 43%<@ba.talpu> (+3%)</> of ATK as Arts damage when attacking enemies affected by <$ba.sluggish>Slow</> or <$ba.root>Bind</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Falling Petals",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks have a 20% chance to <$ba.root>Bind</> the target for 1.5s"
+        },
+        {
+          "name": "Falling Petals",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Attacks have a 23%<@ba.talpu> (+3%)</> chance to <$ba.root>Bind</> the target for 1.5s"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "operatorId": "char_4123_ela",
+  "region": "en",
+  "tokens": {
+    "token_10033_ela_grzmot": "Grzmot Mine"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ela",
+      "name": "Social Expectation Backpack",
+      "region": "en",
+      "type": "TRP-D",
+      "icon": "trp-d",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Ela deploy a total of 30 Grzmot Mines (excluding Support Units)",
+        "Clear Darknights Memoir DM-EX-1 with a 3-star rating; You must deploy your own Ela, and have her defeat at least 2 Sarkaz Lancers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 36,
+            "def": 12
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can also be deployed on Melee tiles; Traps can also be deployed on Ranged tiles"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 50,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can also be deployed on Melee tiles; Traps can also be deployed on Ranged tiles"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "'Bullseye'",
+              "description": "Attacks have a 40% chance to deal 160% of ATK as Physical damage; The chance is increased to 100% when attacking a target that's affected by a GRZMOT Mine"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "'Bullseye'",
+              "description": "Attacks have a 40% chance to deal 170% <@ba.talpu>(+10%)</> of ATK as Physical damage; The chance is increased to 100% when attacking a target that's affected by a GRZMOT Mine"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 60,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Can also be deployed on Melee tiles; Traps can also be deployed on Ranged tiles"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "'Bullseye'",
+              "description": "Attacks have a 50% chance to deal 170% of ATK as Physical damage; The chance is increased to 100% when attacking a target that's affected by a GRZMOT Mine"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "'Bullseye'",
+              "description": "Attacks have a 50% chance to deal 180% <@ba.talpu>(+10%)</> of ATK as Physical damage; The chance is increased to 100% when attacking a target that's affected by a GRZMOT Mine"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

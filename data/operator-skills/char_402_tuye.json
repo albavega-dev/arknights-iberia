@@ -1,0 +1,397 @@
+{
+  "operatorId": "char_402_tuye",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_tuye_1",
+      "name": "Aqua Loop",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            1.25,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            1.3,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            1.35,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 14,
+          "initSp": 0,
+          "values": [
+            1.4,
+            3
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 14,
+          "initSp": 0,
+          "values": [
+            1.45,
+            3
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 14,
+          "initSp": 0,
+          "values": [
+            1.5,
+            3
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 0,
+          "values": [
+            1.6,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 0,
+          "values": [
+            1.7,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 0,
+          "values": [
+            1.8,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "values": [
+            2,
+            5
+          ]
+        }
+      ],
+      "description": "Immediately heals a target and grants them a <$ba.barrier>Barrier</> that lasts for <@ba.vup>{duration}</> seconds (Can absorb damage equal to <@ba.vup>{atk_scale:0%}</> of Tuye's ATK)",
+      "blackboardKeys": [
+        "atk_scale",
+        "duration"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_tuye_2",
+      "name": "Cardiac Stimulant",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 0,
+          "values": [
+            0.1,
+            0.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 0,
+          "values": [
+            0.15,
+            0.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 0,
+          "values": [
+            0.2,
+            0.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "values": [
+            0.25,
+            0.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "values": [
+            0.3,
+            0.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "values": [
+            0.35,
+            0.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "values": [
+            0.4,
+            0.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "values": [
+            0.45,
+            0.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "values": [
+            0.5,
+            0.2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "values": [
+            0.6,
+            0.2,
+            3,
+            1
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, however only heal allies with less than 50% HP. When allies within range fall below <@ba.vup>{max_hp_ratio:0%}</> HP, immediately heal them for <@ba.vup>{heal_scale:0%}</> of Tuye's ATK. The skill ends when this effect is triggered 3 times. <@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk",
+        "max_hp_ratio",
+        "heal_scale",
+        "skill_interval"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&gold[000]",
+          "name": "Logistics Planning α",
+          "room": "TRADING",
+          "icon": "bskill_tra_flow_gs1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+5%</>; Furthermore, increase order acquisition efficiency by an additional <@cc.vup>+15%</> for every <@cc.kw>4</> <$cc.t.flow_gold><@cc.kw>Pure Gold Production Line</></>"
+        },
+        {
+          "buffId": "trade_ord_spd&gold[010]",
+          "name": "Logistics Planning β",
+          "room": "TRADING",
+          "icon": "bskill_tra_flow_gs2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+5%</>; Furthermore, increase order acquisition efficiency by an additional <@cc.vup>+15%</> for every <@cc.kw>2</> <$cc.t.flow_gold><@cc.kw>Pure Gold Production Line</></>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Water Storage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After 4 seconds without healing, increase the amount of the next heal to 130% ATK"
+        },
+        {
+          "name": "Water Storage",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After 4 seconds without healing, increase the amount of the next heal to 135%<@ba.talpu>(+5%)</> ATK"
+        },
+        {
+          "name": "Water Storage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After 4 seconds without healing, increase the amount of the next heal to 150% ATK"
+        },
+        {
+          "name": "Water Storage",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "After 4 seconds without healing, increase the amount of the next heal to 155%<@ba.talpu>(+5%)</> ATK"
+        }
+      ]
+    }
+  ]
+}

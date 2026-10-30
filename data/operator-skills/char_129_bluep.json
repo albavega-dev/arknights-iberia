@@ -1,0 +1,373 @@
+{
+  "operatorId": "char_129_bluep",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_bluep_1",
+      "name": "Twinshot - Auto",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.25
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.35
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.45
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.55
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.7
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.85
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            2
+          ]
+        }
+      ],
+      "description": "The next attack hits 1 additional target for <@ba.vup>{atk_scale:0%}</> of ATK Physical damage",
+      "blackboardKeys": [
+        "atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_bluep_2",
+      "name": "Venom Spray",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 21,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 22,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 23,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.2,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 24,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.2,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 15,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.2,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack hits <@ba.vup>2</> additional targets.",
+          "values": [
+            0.3,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 21,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack strikes its primary target an additional <@ba.vup>1 </>time，and also hits up to <@ba.vup>2</> additional targets.",
+          "values": [
+            0.3,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 22,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack strikes its primary target an additional <@ba.vup>1 </>time，and also hits up to <@ba.vup>2</> additional targets.",
+          "values": [
+            0.4,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "description": "ATK <@ba.vup>+{atk:0%}</>, each attack strikes its primary target an additional <@ba.vup>1 </>time，and also hits up to <@ba.vup>2</> additional targets.",
+          "values": [
+            0.5,
+            2
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk",
+        "attack@times"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_formula_probability[111]",
+          "name": "Toxicology α",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_evolve2",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>elite material</>, the production rate of byproduct increases by <@cc.vup>75%</>"
+        },
+        {
+          "buffId": "workshop_formula_probability[121]",
+          "name": "Toxicology β",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_evolve3",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>elite material</>, the production rate of byproduct increases by <@cc.vup>80%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Neurotoxin",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Poisons the targets when attacking, dealing 30 Arts damage to them per second, lasting 3 seconds"
+        },
+        {
+          "name": "Neurotoxin",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Poisons the targets when attacking, dealing 40 <@ba.talpu>(+10)</> Arts damage to them per second, lasting 3 seconds"
+        },
+        {
+          "name": "Neurotoxin",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Poisons the targets when attacking, dealing 75 Arts damage to them per second, lasting 3 seconds"
+        },
+        {
+          "name": "Neurotoxin",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Poisons the targets when attacking, dealing 85 <@ba.talpu>(+10)</> Arts damage to them per second, lasting 3 seconds"
+        }
+      ]
+    }
+  ]
+}

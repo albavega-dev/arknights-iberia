@@ -1,0 +1,208 @@
+{
+  "operatorId": "char_112_siege",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_siege",
+      "name": "'Candy Box'",
+      "region": "en",
+      "type": "SOL-X",
+      "icon": "sol-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 60 enemies with Siege (excluding Support Units)",
+        "Clear Main Theme 1-7 with a 3-star rating; You must deploy your own Siege, and only Vanguard Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 60,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 68,
+            "def": 46
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "King of Beasts",
+              "description": "Increases all Vanguard Operators' ATK and DEF by 8%, and additionally increases this unit's ATK and DEF by 6%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "King of Beasts",
+              "description": "Increases all Vanguard Operators' ATK and DEF by 10% <@ba.talpu>(+2%)</>, and additionally increases this unit's ATK and DEF by 6%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 75,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "King of Beasts",
+              "description": "Increases all Vanguard Operators' ATK and DEF by 8%, and additionally increases this unit's ATK and DEF by 8%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "King of Beasts",
+              "description": "Increases all Vanguard Operators' ATK and DEF by 10% <@ba.talpu>(+2%)</>, and additionally increases this unit's ATK and DEF by 8%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_siege",
+      "name": "'Thy First Vow'",
+      "region": "en",
+      "type": "SOL-Y",
+      "icon": "sol-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Siege use Aerial Hammer a total of 40 times (excluding Support Units)",
+        "Clear Main Theme 11-2 with a 3-star rating in Standard Environment; You must deploy your own Siege, Siege must be the first deployed, and Siege cannot retreat or be defeated for the entire stage"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first Deployment Cost -4"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 74
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first Deployment Cost -4"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Crushing",
+              "description": "Gains 2 SP and additionally grants 1 SP to another random Vanguard Operator on the battlefield whenever an enemy is defeated in the adjacent 4 tiles"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 82
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The first Deployment Cost -4"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Crushing",
+              "description": "Gains 3 SP and additionally grants 1 SP to another random Vanguard Operator on the battlefield whenever an enemy is defeated in the adjacent 4 tiles"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

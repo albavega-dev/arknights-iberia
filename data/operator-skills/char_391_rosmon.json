@@ -1,0 +1,630 @@
+{
+  "operatorId": "char_391_rosmon",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_rosmon_1",
+      "name": "Expanded Cognition",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.8,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.85,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            0.95,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.05,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.1,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.2,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.4,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.6,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            1.8,
+            0.5
+          ]
+        }
+      ],
+      "description": "The next attack deals an additional hit equal to <@ba.vup>{extra_atk_scale:0%}</> ATK as Arts damage",
+      "blackboardKeys": [
+        "extra_atk_scale",
+        "append_atk_scale"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_rosmon_2",
+      "name": "Nociceptor Inhibition",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.1,
+            2,
+            0.2,
+            0.7
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.1,
+            2,
+            0.2,
+            0.7
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.1,
+            2,
+            0.2,
+            0.7
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.2,
+            2,
+            0.2,
+            0.9
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 34,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.2,
+            2,
+            0.2,
+            0.9
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.2,
+            2,
+            0.2,
+            0.9
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 36,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.3,
+            2,
+            0.2,
+            1.1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 37,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.37,
+            2,
+            0.2,
+            1.2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 38,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.45,
+            2,
+            0.2,
+            1.3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            0.5,
+            0.55,
+            2,
+            0.2,
+            1.5
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, splash area <@ba.vup>expands</>, and each attack causes <@ba.vup>2</> additional shockwaves; Enemies hit by this unit's attacks and shockwaves have a <@ba.vup>{attack@prob:0%}</> chance to be <$ba.stun>Stunned</> for <@ba.vup>{attack@stun}</> seconds",
+      "blackboardKeys": [
+        "base_attack_time",
+        "atk",
+        "add_times",
+        "attack@prob",
+        "attack@stun"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_rosmon_3",
+      "name": "'As You Wish'",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.1,
+            2,
+            1,
+            0.5,
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 79,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.15,
+            2,
+            1,
+            0.5,
+            1.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.2,
+            2,
+            1,
+            0.5,
+            1.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 77,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.25,
+            2,
+            1,
+            0.5,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 76,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.3,
+            2,
+            1,
+            0.5,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 75,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.35,
+            2,
+            1,
+            0.5,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 74,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.4,
+            2,
+            1,
+            0.5,
+            2.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.5,
+            2,
+            1,
+            0.5,
+            2.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 29,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 66,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.6,
+            2,
+            1,
+            0.5,
+            2.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 35,
+          "values": [
+            -0.5,
+            0.75,
+            2,
+            1,
+            0.5,
+            3
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vup>decreases</>, ATK <@ba.vup>+{atk:0%}</>, and attacks up to <@ba.vup>{attack@max_target}</> <@ba.rem>blocked</> enemies at a time; Immediately deploys two pieces of Tactical Equipment on ground tiles within Attack Range (After deployment, surrounding enemies are <$ba.stun>Stunned</> for <@ba.vup>{stun}</> seconds, and the blocked enemies' DEF <@ba.vup>-160</>)",
+      "blackboardKeys": [
+        "base_attack_time",
+        "atk",
+        "attack@max_target",
+        "def",
+        "attack@append_atk_scale",
+        "stun"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_bd_n1[000]",
+          "name": "Extrasensory",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd_n1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, for every <@cc.kw>1</> operator in the Dormitory, <$cc.bd_a1><@cc.rem>Perception Information</> </><@cc.vup>+1</>. Additionally, every <@cc.vup>1</> points of <$cc.bd_a1><@cc.rem>Perception Information</></> is converted into <@cc.vup>1</> points of <$cc.bd_A><@cc.rem>Chain of Thought</></>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_bd[000]",
+          "name": "Psychokinesis",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to Factory, for every <@cc.vup>2</> points of <$cc.bd_A><@cc.rem>Chain of Thought</></>, productivity <@cc.vup>+1%</>"
+        },
+        {
+          "buffId": "manu_prod_spd_bd[010]",
+          "name": "Manifestation of Consciousness",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_bd2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to Factory, for every <@cc.vup>1</> points of <$cc.bd_A><@cc.rem>Chain of Thought</></>, productivity <@cc.vup>+1%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Armaments of Annihilation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 90 DEF"
+        },
+        {
+          "name": "Armaments of Annihilation",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 105 <@ba.talpu>(+15)</> DEF"
+        },
+        {
+          "name": "Armaments of Annihilation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks ignore 160 DEF"
+        },
+        {
+          "name": "Armaments of Annihilation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks ignore 175 <@ba.talpu>(+15)</> DEF"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Stable Esthesia",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, grants +8% ATK to this unit and a random deployed Caster Operator"
+        }
+      ]
+    }
+  ]
+}

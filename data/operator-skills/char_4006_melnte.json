@@ -1,0 +1,420 @@
+{
+  "operatorId": "char_4006_melnte",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_melnte_1",
+      "name": "Saturated Pulse",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "values": [
+            1.2,
+            0.8
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "values": [
+            1.25,
+            0.8
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "values": [
+            1.3,
+            0.8
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "values": [
+            1.4,
+            0.8
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "values": [
+            1.45,
+            0.8
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "values": [
+            1.5,
+            0.8
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 20,
+          "values": [
+            1.6,
+            0.8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 23,
+          "values": [
+            1.7,
+            0.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 24,
+          "values": [
+            1.75,
+            0.8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 25,
+          "values": [
+            1.8,
+            0.8
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vdown>Increases</>, ATK<@ba.vup>+{atk:0%}</>",
+      "blackboardKeys": [
+        "atk",
+        "base_attack_time"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_melnte_2",
+      "name": "Critical Burst",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 1 charge</>",
+          "values": [
+            3.4,
+            1.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 1,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 1 charge</>",
+          "values": [
+            3.6,
+            1.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 2,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 1 charge</>",
+          "values": [
+            3.8,
+            1.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 3,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 1 charge</>",
+          "values": [
+            4,
+            1.65
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 4,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 1 charge</>",
+          "values": [
+            4.15,
+            1.65
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 1 charge</>",
+          "values": [
+            4.3,
+            1.65
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 6,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 2 charges</>",
+          "values": [
+            4.5,
+            1.8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 6,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 2 charges</>",
+          "values": [
+            4.65,
+            1.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 6,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 2 charges</>",
+          "values": [
+            4.8,
+            1.8
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 6,
+          "rangeId": "4-1",
+          "description": "Fires a piercing shot, dealing <@ba.vup>{atk_scale:0%}</> of this unit's ATK as Physical damage to frontal enemies on its path; damage decreases as distance increases, to a minimum of <@ba.vup>{scale:0%}</>\n<@ba.rem>Can hold 2 charges</>",
+          "values": [
+            5,
+            1.8
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk_scale",
+        "scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "4-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 4
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession2[040]",
+          "name": "Sniper Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_sniper1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession2[630]",
+          "name": "Final Test",
+          "room": "TRAINING",
+          "icon": "bskill_train3_sniper1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>; if training this skill to Specialization Level <@cc.vup>3</>, training speed will be further increased by <@cc.vup>+45%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Calibrating Parameters",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Damage when skill is active increases by 10% from second skill activation onward"
+        },
+        {
+          "name": "Calibrating Parameters",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Damage when skill is active increases by 11% <@ba.talpu>(+1%)</> from second skill activation onward"
+        },
+        {
+          "name": "Calibrating Parameters",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Damage when skill is active increases by 15% from second skill activation onward"
+        },
+        {
+          "name": "Calibrating Parameters",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Damage when skill is active increases by 16% <@ba.talpu>(+1%)</> from second skill activation onward"
+        }
+      ]
+    }
+  ]
+}

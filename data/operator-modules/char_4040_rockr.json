@@ -1,0 +1,88 @@
+{
+  "operatorId": "char_4040_rockr",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_rockr",
+      "name": "Unnamed Drone",
+      "region": "en",
+      "type": "FUN-X",
+      "icon": "fun-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Rockrock use Willing Burden a total of 10 times (excluding Support Units)",
+        "Clear The Great Chief Returns RI-EX-4 with a 3-star rating; You must deploy your own Rockrock, and have her defeat at least 2 Tiacauh Champions"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 50,
+            "atk": 13,
+            "def": 11
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 15,
+            "def": 14
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Firm Foundation",
+              "description": "+4% ATK for every 10 seconds this unit remains on the battlefield, stacking up to 4 times"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Firm Foundation",
+              "description": "+5% <@ba.talpu>(+1%)</> ATK for every 10 seconds this unit remains on the battlefield, stacking up to 4 times"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 18,
+            "def": 16
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Firm Foundation",
+              "description": "+4% ATK for every 10 seconds this unit remains on the battlefield, stacking up to 4 times, +5 ASPD when at max"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Firm Foundation",
+              "description": "+5% <@ba.talpu>(+1%)</> ATK for every 10 seconds this unit remains on the battlefield, stacking up to 4 times, +5 ASPD when at max"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

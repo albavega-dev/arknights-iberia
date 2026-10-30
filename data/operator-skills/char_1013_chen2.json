@@ -1,0 +1,682 @@
+{
+  "operatorId": "char_1013_chen2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_chen2_1",
+      "name": "High-Pressure Splash",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            0.4,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            0.45,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            0.5,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            0.55,
+            4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            0.6,
+            4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            0.65,
+            4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.7,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.8,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            0.9,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1,
+            4
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, attacks apply this unit's Trait effect to all enemies within range\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "atk",
+        "attack@trigger_time"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_chen2_2",
+      "name": "'Night of Violet'",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            0.35,
+            -0.1,
+            -50,
+            5,
+            8,
+            20
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 0,
+          "values": [
+            0.4,
+            -0.1,
+            -50,
+            5,
+            8,
+            20
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "values": [
+            0.45,
+            -0.1,
+            -50,
+            5,
+            8,
+            20
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 5,
+          "values": [
+            0.5,
+            -0.2,
+            -100,
+            5,
+            8,
+            20
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 5,
+          "values": [
+            0.55,
+            -0.2,
+            -100,
+            5,
+            8,
+            20
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "values": [
+            0.6,
+            -0.2,
+            -100,
+            5,
+            8,
+            20
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 10,
+          "values": [
+            0.65,
+            -0.3,
+            -150,
+            5,
+            8,
+            20
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 11,
+          "values": [
+            0.7,
+            -0.3,
+            -150,
+            5,
+            8,
+            20
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 11,
+          "values": [
+            0.75,
+            -0.35,
+            -170,
+            5,
+            8,
+            20
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 12,
+          "values": [
+            0.8,
+            -0.35,
+            -170,
+            5,
+            8,
+            20
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, attacks create a layer of sticky liquid within Attack Range that lasts for {attack@projectile_life_time} seconds. Ground enemies passing over the sticky liquid have Movement Speed <@ba.vup>{attack@move_speed:0%}</> and DEF <@ba.vup>{attack@def}</> (Does not stack). <$ba.charged>Charged</> effect: Changes to {attack@another_trigger_time} ammo\n<@ba.rem>Skill activation grants {attack@trigger_time} ammo and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "atk",
+        "attack@move_speed",
+        "attack@def",
+        "attack@projectile_life_time",
+        "attack@trigger_time",
+        "attack@another_trigger_time"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_chen2_3",
+      "name": "'Holiday Storm'",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 15,
+          "rangeId": "2-6",
+          "values": [
+            0.4,
+            -0.2,
+            -100,
+            5,
+            32
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 15,
+          "rangeId": "2-6",
+          "values": [
+            0.45,
+            -0.2,
+            -100,
+            5,
+            32
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 15,
+          "rangeId": "2-6",
+          "values": [
+            0.5,
+            -0.2,
+            -100,
+            5,
+            32
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 20,
+          "rangeId": "2-6",
+          "values": [
+            0.55,
+            -0.3,
+            -150,
+            5,
+            32
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 20,
+          "rangeId": "2-6",
+          "values": [
+            0.6,
+            -0.3,
+            -150,
+            5,
+            32
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 20,
+          "rangeId": "2-6",
+          "values": [
+            0.65,
+            -0.3,
+            -150,
+            5,
+            32
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 25,
+          "rangeId": "2-6",
+          "values": [
+            0.7,
+            -0.4,
+            -200,
+            5,
+            32
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 27,
+          "rangeId": "2-6",
+          "values": [
+            0.8,
+            -0.45,
+            -220,
+            5,
+            32
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 29,
+          "rangeId": "2-6",
+          "values": [
+            0.9,
+            -0.45,
+            -220,
+            5,
+            32
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "AMMO",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 30,
+          "rangeId": "2-6",
+          "values": [
+            1,
+            -0.45,
+            -220,
+            5,
+            32
+          ]
+        }
+      ],
+      "description": "Attack Range <@ba.vup>expands</>, ATK <@ba.vup>+{atk:0%}</>. Attacks deal damage twice, apply this unit's Trait effect to all enemies within range and create a layer of sticky liquid within Attack Range that lasts for {attack@projectile_life_time} seconds. Ground enemies passing over the sticky liquid have Movement Speed <@ba.vup>{attack@move_speed:0%}</> and DEF <@ba.vup>{attack@def}</> (Does not stack). \n<@ba.rem>Skill activation grants {attack@trigger_time} ammo (each attack consumes 2 ammo) and the skill ends when all ammo is used (Can manually deactivate skill)</>",
+      "blackboardKeys": [
+        "atk",
+        "attack@move_speed",
+        "attack@def",
+        "attack@projectile_life_time",
+        "attack@trigger_time"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-6": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession2[040]",
+          "name": "Sniper Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_sniper1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession2[440]",
+          "name": "Leading By Example",
+          "room": "TRAINING",
+          "icon": "bskill_train1_sniper2",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Sniper</> Operators' Specialization training speed <@cc.vup>+30%</>; if training this skill to Specialization Level <@cc.vup>1</>, training speed will be further increased by <@cc.vup>+65%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "train_cost&profession[140]",
+          "name": "Workaholic",
+          "room": "TRAINING",
+          "icon": "bskill_train_chen",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, Morale consumed per hour is increased by <@cc.vdown>+1</> when training a <@cc.kw>Sniper</> Operator's skill to Specialization Level <@cc.vup>1</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Frugality",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, Ch'en's ammo-based skills have 15% chance to not consume the corresponding ammo for each shot (only the highest effect of this type will be applied)"
+        },
+        {
+          "name": "Frugality",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, Ch'en's ammo-based skills have 17% <@ba.talpu>(+2%)</> chance to not consume the corresponding ammo for each shot (only the highest effect of this type will be applied)"
+        },
+        {
+          "name": "Frugality",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When deployed, Ch'en's ammo-based skills have 20% chance to not consume the corresponding ammo for each shot; Other Sniper Operators' ammo-based skills have 10% chance instead (only the highest effect of this type will be applied)"
+        },
+        {
+          "name": "Frugality",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When deployed, Ch'en's ammo-based skills have 22% <@ba.talpu>(+2%)</> chance to not consume the corresponding ammo for each shot; Other Sniper Operators' ammo-based skills have 10% chance instead (only the highest effect of this type will be applied)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Vestiges of Vacation",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "ASPD +8, when there is water terrain on the battlefield, the effect becomes ASPD +12"
+        }
+      ]
+    }
+  ]
+}

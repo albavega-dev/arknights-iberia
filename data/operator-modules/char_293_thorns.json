@@ -1,0 +1,246 @@
+{
+  "operatorId": "char_293_thorns",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_thorns",
+      "name": "The Salt and the Sand",
+      "region": "en",
+      "type": "LOR-X",
+      "icon": "lor-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Thorns",
+        "Clear Under Tides SV-6 with a 3-star rating; You must deploy your own Thorns, and have him defeat at least 20 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 39,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks deal an additional <@ba.vup>{atk_scale_m:0%}</> ATK as Arts damage.",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.8
+                },
+                {
+                  "key": "atk_scale_m",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 215,
+            "atk": 48,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks deal an additional <@ba.vup>{atk_scale_m:0%}</> ATK as Arts damage.",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.8
+                },
+                {
+                  "key": "atk_scale_m",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Nerve Corrosion",
+              "description": "Attacks poison the target, dealing 125 Arts damage per second for 3 seconds and stacking up to 3 times (damage is doubled against ranged enemies)."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Nerve Corrosion",
+              "description": "Attacks poison the target, dealing 140 <@ba.talpu>(+15)</> Arts damage per second for 3 seconds and stacking up to 3 times (damage is doubled against ranged enemies)."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 55,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attacks deal an additional <@ba.vup>{atk_scale_m:0%}</> ATK as Arts damage.",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.8
+                },
+                {
+                  "key": "atk_scale_m",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Nerve Corrosion",
+              "description": "Attacks poison the target, dealing 135 Arts damage per second for 3 seconds and stacking up to 4 times (damage is doubled against ranged enemies)."
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Nerve Corrosion",
+              "description": "Attacks poison the target, dealing 150 <@ba.talpu>(+15)</> Arts damage per second for 3 seconds and stacking up to 4 times (damage is doubled against ranged enemies)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_thorns",
+      "name": "Sand Erosion",
+      "region": "en",
+      "type": "LOR-D",
+      "icon": "lor-d",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Thorns use Destreza a total of 8 times",
+        "Clear Main Theme 7-2 with a 3-star rating; You must deploy your own Thorns, and cannot include any other Guard Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 60,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing damage, deals an additional <@ba.kw>10%</> as <$ba.dt.neural2>Nervous Impairment</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_ratio",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 69,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing damage, deals an additional <@ba.kw>10%</> as <$ba.dt.neural2>Nervous Impairment</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_ratio",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Nerve Corrosion",
+              "description": "Attacks poison the target, dealing 200 Arts damage per second for 3 seconds (damage is doubled against Ranged enemies); if enemy is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals Elemental damage instead of poison damage with 2x damage amount"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Nerve Corrosion",
+              "description": "Attacks poison the target, dealing 215 <@ba.talpu>(+15)</> Arts damage per second for 3 seconds (damage is doubled against Ranged enemies); if enemy is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals Elemental damage instead of poison damage with 2x damage amount"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 75,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When dealing damage, deals an additional <@ba.kw>10%</> as <$ba.dt.neural2>Nervous Impairment</>",
+              "blackboard": [
+                {
+                  "key": "ep_damage_ratio",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Nerve Corrosion",
+              "description": "Attacks poison the target, dealing 300 Arts damage per second for 3 seconds (damage is doubled against Ranged enemies); if enemy is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals Elemental damage instead of poison damage with 2.5x damage amount"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Nerve Corrosion",
+              "description": "Attacks poison the target, dealing 315 <@ba.talpu>(+15)</> Arts damage per second for 3 seconds (damage is doubled against ranged enemies); if enemy is under the burst effect of <$ba.dt.neural2>Nervous Impairment</>, deals Elemental damage instead of poison damage with 2.5x damage amount"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

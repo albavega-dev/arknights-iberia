@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_254_vodfox",
+  "region": "en",
+  "tokens": {
+    "token_10006_vodfox_doll": "Cursed Doll"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_vodfox",
+      "name": "Fabric Apples",
+      "region": "en",
+      "type": "UMD-X",
+      "icon": "umd-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Shamare use Cursed Doll a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 6-5 with a 3-star rating; You must deploy your own Shamare, and cannot include any other Supporter Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 10,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Applies 10% <$ba.weaken>Enfeeble</> to targets for 2 seconds",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": -0.1
+                },
+                {
+                  "key": "duration",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 20,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Applies 10% <$ba.weaken>Enfeeble</> to targets for 2 seconds",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": -0.1
+                },
+                {
+                  "key": "duration",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Bad Tidings' Wake",
+              "description": "Becomes less likely to be targeted by enemies after being deployed for 15 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 30,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Applies 10% <$ba.weaken>Enfeeble</> to targets for 2 seconds",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": -0.1
+                },
+                {
+                  "key": "duration",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": null,
+              "potential": 1,
+              "token": false,
+              "name": "Bad Tidings' Wake",
+              "description": "Becomes less likely to be targeted by enemies after being deployed for 10 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

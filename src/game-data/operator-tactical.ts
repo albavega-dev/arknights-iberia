@@ -63,23 +63,6 @@ const manifestModuleRanges = new Map<string, readonly TacticalModuleRange[]>(
   }, new Map()),
 );
 
-const splashCasterModuleGrids = [
-  { row: 1, col: 0 }, { row: 1, col: 1 }, { row: 1, col: 2 },
-  { row: 0, col: 0 }, { row: 0, col: 1 }, { row: 0, col: 2 }, { row: 0, col: 3 },
-  { row: -1, col: 0 }, { row: -1, col: 1 }, { row: -1, col: 2 },
-] as const;
-const multiTargetMedicModuleGrids = [
-  { row: 1, col: -1 }, { row: 1, col: 0 }, { row: 1, col: 1 }, { row: 1, col: 2 },
-  { row: 0, col: -1 }, { row: 0, col: 0 }, { row: 0, col: 1 }, { row: 0, col: 2 }, { row: 0, col: 3 },
-  { row: -1, col: -1 }, { row: -1, col: 0 }, { row: -1, col: 1 }, { row: -1, col: 2 },
-] as const;
-const shaperCasterModuleGrids = [
-  { row: 2, col: 0 }, { row: 2, col: 1 },
-  { row: 1, col: 0 }, { row: 1, col: 1 }, { row: 1, col: 2 },
-  { row: 0, col: 0 }, { row: 0, col: 1 }, { row: 0, col: 2 }, { row: 0, col: 3 },
-  { row: -1, col: 0 }, { row: -1, col: 1 }, { row: -1, col: 2 },
-  { row: -2, col: 0 }, { row: -2, col: 1 },
-] as const;
 const sentryProtectorModuleGrids = [
   { row: 0, col: 0 }, { row: 0, col: 1 }, { row: 0, col: 2 }, { row: 0, col: 3 },
 ] as const;
@@ -93,31 +76,6 @@ export function getTacticalRangeDefinition(rangeKey: string | null): TacticalRan
 }
 
 const confirmedModuleRanges: Readonly<Record<string, readonly TacticalModuleRange[]>> = {
-  char_2015_dusk: [{
-    moduleId: "uniequip_002_dusk",
-    moduleName: "SPC-X",
-    level: 1,
-    rangeKey: "module:spc-x",
-    grids: splashCasterModuleGrids,
-    iconUrl: "/assets/operator-modules/spc-x.png",
-    evidenceUrl: "https://arknights.wiki.gg/wiki/Dusk",
-  }],
-  char_128_plosis: [{
-    moduleId: "uniequip_002_plosis",
-    moduleName: "RIN-X",
-    level: 1,
-    rangeKey: "module:rin-x",
-    grids: multiTargetMedicModuleGrids,
-    iconUrl: "/assets/operator-modules/rin-x.png",
-    evidenceUrl: "https://arknights.wiki.gg/wiki/Ptilopsis",
-  }],
-  char_109_fmout: [{ moduleId: "uniequip_002_fmout", moduleName: "SPC-X", level: 1, rangeKey: "module:spc-x", grids: splashCasterModuleGrids, iconUrl: "/assets/operator-modules/spc-x.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Gitano" }],
-  char_1011_lava2: [{ moduleId: "uniequip_002_lava2", moduleName: "SPC-X", level: 1, rangeKey: "module:spc-x", grids: splashCasterModuleGrids, iconUrl: "/assets/operator-modules/spc-x.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Lava_the_Purgatory" }],
-  char_373_lionhd: [{ moduleId: "uniequip_002_lionhd", moduleName: "SPC-X", level: 1, rangeKey: "module:spc-x", grids: splashCasterModuleGrids, iconUrl: "/assets/operator-modules/spc-x.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Leonhardt" }],
-  char_213_mostma: [{ moduleId: "uniequip_003_mostma", moduleName: "SPC-X", level: 1, rangeKey: "module:spc-x", grids: splashCasterModuleGrids, iconUrl: "/assets/operator-modules/spc-x.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Mostima" }],
-  char_179_cgbird: [{ moduleId: "uniequip_002_cgbird", moduleName: "RIN-X", level: 1, rangeKey: "module:rin-x", grids: multiTargetMedicModuleGrids, iconUrl: "/assets/operator-modules/rin-x.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Nightingale" }],
-  char_275_breeze: [{ moduleId: "uniequip_002_breeze", moduleName: "RIN-X", level: 1, rangeKey: "module:rin-x", grids: multiTargetMedicModuleGrids, iconUrl: "/assets/operator-modules/rin-x.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Breeze" }],
-  char_4164_tecno: [{ moduleId: "uniequip_002_tecno", moduleName: "SOC-Y", level: 1, rangeKey: "module:soc-y", grids: shaperCasterModuleGrids, iconUrl: "/assets/operator-modules/soc-y.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Tecno" }],
   char_1034_jesca2: [{ moduleId: "uniequip_003_jesca2", moduleName: "SPT-Y", level: 1, rangeKey: "module:spt-y", grids: sentryProtectorModuleGrids, iconUrl: "/assets/operator-modules/spt-y.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Jessica_the_Liberated" }],
   char_4194_rmixer: [{ moduleId: "uniequip_003_rmixer", moduleName: "SPT-Y", level: 1, rangeKey: "module:spt-y", grids: sentryProtectorModuleGrids, iconUrl: "/assets/operator-modules/spt-y.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Sankta_Miksaparato" }],
 };

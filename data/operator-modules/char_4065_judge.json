@@ -1,0 +1,243 @@
+{
+  "operatorId": "char_4065_judge",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_judge",
+      "name": "The Thorny Road That Continues",
+      "region": "en",
+      "type": "UNY-X",
+      "icon": "uny-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 40 enemies with Penance (excluding Support Units)",
+        "Clear Code of Brawl CB-4 with a 3-star rating; You must deploy your own Penance, and can only include 4 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 35,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 43,
+            "def": 26
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Guardian of the Law",
+              "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 60% Max HP; When defeating an enemy, gains a <$ba.barrier>Barrier</> equal to 11% Max HP (Cannot exceed 300% Max HP)"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Guardian of the Law",
+              "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 65% <@ba.talpu>(+5%)</> Max HP; When defeating an enemy, gains a <$ba.barrier>Barrier</> equal to 11% Max HP (Cannot exceed 300% Max HP)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 50,
+            "def": 33
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Takes <@ba.kw>15%</> less damage from enemies blocked by this unit",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Guardian of the Law",
+              "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 70% Max HP; When defeating an enemy, gains a <$ba.barrier>Barrier</> equal to 12% Max HP (Cannot exceed 300% Max HP)"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Guardian of the Law",
+              "description": "After deployment, immediately gains a <$ba.barrier>Barrier</> equal to 75% <@ba.talpu>(+5%)</> Max HP; When defeating an enemy, gains a <$ba.barrier>Barrier</> equal to 12% Max HP (Cannot exceed 300% Max HP)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_judge",
+      "name": "'Innocent'",
+      "region": "en",
+      "type": "UNY-Y",
+      "icon": "uny-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Penance use Trial of Thorns a total of 5 times (excluding Support Units)",
+        "Clear Il Siracusano IS-7 with a 3-star rating; You must deploy your own Penance, and cannot include any Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 60,
+            "def": 48
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allies in the surrounding 8 tiles, ATK and DEF <@ba.kw>+8%</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 75,
+            "def": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allies in the surrounding 8 tiles, ATK and DEF <@ba.kw>+8%</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Wreathed in Thorns",
+              "description": "Each time this unit is attacked while under the effect of her own <$ba.barrier>Barrier</>, deals 55% ATK as Arts damage to the attacker"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Wreathed in Thorns",
+              "description": "Each time this unit is attacked while under the effect of her own <$ba.barrier>Barrier</>, deals 58% <@ba.talpu>(+3%)</> ATK as Arts damage to the attacker"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 85,
+            "def": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are no allies in the surrounding 8 tiles, ATK and DEF <@ba.kw>+8%</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Wreathed in Thorns",
+              "description": "Each time this unit is attacked while under the effect of her own <$ba.barrier>Barrier</>, deals 58% ATK as Arts damage to the attacker"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Wreathed in Thorns",
+              "description": "Each time this unit is attacked while under the effect of her own <$ba.barrier>Barrier</>, deals 61% <@ba.talpu>(+3%)</> ATK as Arts damage to the attacker"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

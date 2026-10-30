@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_449_glider",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_glider",
+      "name": "After Landing",
+      "region": "en",
+      "type": "WDM-X",
+      "icon": "wdm-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Honeyberry use Rouse a total of 8 times (excluding Support Units)",
+        "Clear Guide Ahead GA-2 with a 3-star rating; You must deploy your own Honeyberry, and cannot include any other Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "attack_speed": 4
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 145,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Collective Consciousness",
+              "description": "Ranged Operators within Attack Range gain Max HP +13%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Collective Consciousness",
+              "description": "Ranged Operators within Attack Range gain Max HP +15% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 160,
+            "attack_speed": 6
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Collective Consciousness",
+              "description": "Ranged Operators within Attack Range gain Max HP +15%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Collective Consciousness",
+              "description": "Ranged Operators within Attack Range gain Max HP +17% <@ba.talpu>(+2%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

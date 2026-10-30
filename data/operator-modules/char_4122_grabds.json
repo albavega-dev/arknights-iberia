@@ -1,0 +1,100 @@
+{
+  "operatorId": "char_4122_grabds",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_grabds",
+      "name": "On the Field",
+      "region": "en",
+      "type": "DEC-X",
+      "icon": "dec-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 60,000 damage with Grain Buds (excluding Support Units)",
+        "Clear Main Theme 9-11 with a 3-star rating under Standard Environment; You must deploy your own Grain Buds, and use Hometown Lullaby at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 33
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 38
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Please Behave",
+              "description": "ASPD +12; When the target is a [Wild Beast], increases the duration of <$ba.sluggish>Slow</> from Trait"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Please Behave",
+              "description": "ASPD +14 <@ba.talpu>(+2)</>; When the target is a [Wild Beast], increases the duration of <$ba.sluggish>Slow</> from Trait"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 41
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Please Behave",
+              "description": "ASPD +14; When the target is a [Wild Beast], further increases the duration of <$ba.sluggish>Slow</> from Trait"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Please Behave",
+              "description": "ASPD +16 <@ba.talpu>(+2)</>; When the target is a [Wild Beast], further increases the duration of <$ba.sluggish>Slow</> from Trait"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

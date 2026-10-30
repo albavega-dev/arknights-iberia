@@ -1,0 +1,104 @@
+{
+  "operatorId": "char_260_durnar",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_durnar",
+      "name": "A Guardian's Path",
+      "region": "en",
+      "type": "AST-X",
+      "icon": "ast-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have your own Dur-nar use Shielded Counterattack a total of 5 times",
+        "Clear Main Theme 3-1 with a 3-star rating; You must deploy your own Dur-nar, and use Shielded Counterattack at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 27
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 220,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sword and Shield",
+              "description": "ATK +10%, DEF +10%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "On skill activation, normal attacks deal Arts damage. When attacking and being attacked, deals extra 10% of ATK as Arts damage to target",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sword and Shield",
+              "description": "ATK +12%, DEF +12%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

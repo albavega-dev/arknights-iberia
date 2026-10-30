@@ -1,0 +1,105 @@
+{
+  "operatorId": "char_4091_ulika",
+  "region": "en",
+  "skills": [],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&wt[000]",
+          "name": "Naive Negotiator",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&wt1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+10%</>, but all <@cc.kw>Pure Gold</> orders in that Trading Post will only trade <@cc.kw>2</> <@cc.kw>Pure Gold</> (not considered as defaulted trade)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd_Owned[000]",
+          "name": "Conspicuous Investigator",
+          "room": "MEETING",
+          "icon": "bskill_meet_spdOwned1",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to the Reception Room, increases the likelihood of obtaining clues that are already on the Clue Board."
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Short-Circuiting Genius I",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Less likely to be attacked; After being deployed for a certain duration, <$ba.stun>Stuns</> other units within range for 5 seconds"
+        },
+        {
+          "name": "Short-Circuiting Genius II",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 2,
+          "description": "Less likely to be attacked; After being deployed for a certain duration, <$ba.stun>Stuns</> other units within range for 5.5 seconds"
+        },
+        {
+          "name": "Short-Circuiting Genius III",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Less likely to be attacked; After being deployed for a certain duration, <$ba.stun>Stuns</> other units within range for 6 seconds"
+        },
+        {
+          "name": "Short-Circuiting Genius IV",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 4,
+          "description": "Less likely to be attacked; After being deployed for a certain duration, <$ba.stun>Stuns</> other units within range for 6.5 seconds"
+        },
+        {
+          "name": "Short-Circuiting Genius V",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Less likely to be attacked; After being deployed for a certain duration, <$ba.stun>Stuns</> other units within range for 7 seconds"
+        },
+        {
+          "name": "Short-Circuiting Genius VI",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Less likely to be attacked; After being deployed for a certain duration, <$ba.stun>Stuns</> other units within range for 7.5 seconds"
+        }
+      ]
+    }
+  ]
+}

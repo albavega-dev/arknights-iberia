@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4036_forcer",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_forcer",
+      "name": "Heaven, Here, Now",
+      "region": "en",
+      "type": "PUS-X",
+      "icon": "pus-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Enforcer, and unleash Staggering Shot at least 2 times in each battle",
+        "Clear Guide Ahead GA-EX-1 with a 3-star rating; You must deploy your own Enforcer, and cause at least 3 Pathfinder Sagittarius Prefects to fall in a pit"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Simultaneously attacks <@ba.kw>all blocked enemies</>\nCan be deployed on ranged tiles, and refunds half the DP cost of this deployment",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 215,
+            "atk": 54
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Simultaneously attacks <@ba.kw>all blocked enemies</>\nCan be deployed on ranged tiles, and refunds half the DP cost of this deployment",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Precise Aim",
+              "description": "Ignores 250 DEF when attacking enemies with weight greater than or equal to 3"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Precise Aim",
+              "description": "Ignores 270 <@ba.talpu>(+20)</> DEF when attacking enemies with weight greater than or equal to 3"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Simultaneously attacks <@ba.kw>all blocked enemies</>\nCan be deployed on ranged tiles, and refunds half the DP cost of this deployment",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Precise Aim",
+              "description": "Ignores 280 DEF when attacking enemies with weight greater than or equal to 3"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Precise Aim",
+              "description": "Ignores 300 <@ba.talpu>(+20)</> DEF when attacking enemies with weight greater than or equal to 3"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

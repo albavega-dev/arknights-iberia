@@ -1,0 +1,405 @@
+{
+  "operatorId": "char_1033_swire2",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1146,
+            "atk": 386,
+            "def": 235,
+            "magicResistance": 0,
+            "cost": 7,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 25,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1509,
+            "atk": 530,
+            "def": 302,
+            "magicResistance": 0,
+            "cost": 7,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 25,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1509,
+            "atk": 530,
+            "def": 302,
+            "magicResistance": 0,
+            "cost": 9,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 25,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1864,
+            "atk": 672,
+            "def": 388,
+            "magicResistance": 0,
+            "cost": 9,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 25,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1864,
+            "atk": 672,
+            "def": 388,
+            "magicResistance": 0,
+            "cost": 9,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 25,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 2360,
+            "atk": 810,
+            "def": 457,
+            "magicResistance": 0,
+            "cost": 9,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 25,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 300,
+        "atk": 55,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": []
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 30,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_swire2",
+      "operatorId": "char_1033_swire2",
+      "region": "en",
+      "name": "'Be Resplendent and Outstanding'",
+      "moduleType": "MER-X",
+      "typeIcon": "mer-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 25,
+            "def": 35
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 35,
+            "def": 43
+          },
+          "specialEffects": [
+            "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +5% ATK (stacks up to 8 times)",
+            "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +5% ATK (stacks up to 9 <@ba.talpu>(+1)</> times)"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 40,
+            "def": 50
+          },
+          "specialEffects": [
+            "Gains 2 Coins upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +5% ATK (stacks up to 8 times)",
+            "Gains 2 Coins upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +5% ATK (stacks up to 9 <@ba.talpu>(+1)</> times)"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_swire2",
+      "operatorId": "char_1033_swire2",
+      "region": "en",
+      "name": "Director Swire's Lungmen Food Guide",
+      "moduleType": "MER-Y",
+      "typeIcon": "mer-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 57,
+            "def": 44
+          },
+          "specialEffects": [
+            "ATK +4% whenever Trait cost is paid, stacking up to 5 times"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 71,
+            "def": 53
+          },
+          "specialEffects": [
+            "ATK +4% whenever Trait cost is paid, stacking up to 5 times",
+            "Upon receiving lethal damage, as long as enough DP is available, consumes 5 DP to restore this unit's HP to 70%; the cost of this Talent increases by 5 every time it is activated",
+            "Upon receiving lethal damage, as long as enough DP is available, consumes 5 DP to restore this unit's HP to 80% <@ba.talpu>(+10%)</>; the cost of this Talent increases by 5 every time it is activated"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 81,
+            "def": 60
+          },
+          "specialEffects": [
+            "ATK +4% whenever Trait cost is paid, stacking up to 5 times",
+            "Upon receiving lethal damage, as long as enough DP is available, consumes 3 DP to restore this unit's HP to 70%; the cost of this Talent increases by 3 every time it is activated",
+            "Upon receiving lethal damage, as long as enough DP is available, consumes 3 DP to restore this unit's HP to 80% <@ba.talpu>(+10%)</>; the cost of this Talent increases by 3 every time it is activated"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_004_swire2",
+      "operatorId": "char_1033_swire2",
+      "region": "en",
+      "name": "Swire the Elegant Wit's Specialized Badge",
+      "moduleType": "ISW-A",
+      "typeIcon": "isw-a",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 45
+          },
+          "specialEffects": [
+            "In <@ba.kw>Integrated Strategies</>, DP consumed when deployed or on the battlefield -30%, and for every 1 DP consumed by this unit, the shortest remaining Redeployment Timer in the Deployment Waiting Zone -2s"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 65
+          },
+          "specialEffects": [
+            "In <@ba.kw>Integrated Strategies</>, DP consumed when deployed or on the battlefield -30%, and for every 1 DP consumed by this unit, the shortest remaining Redeployment Timer in the Deployment Waiting Zone -2s",
+            "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 8 times); in <@ba.kw>Integrated Strategies</>, Coin limit +5, and gains 1 additional Coin and 2 ATK stacks whenever Trait consumes DP",
+            "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 9 <@ba.talpu>(+1)</> times); in <@ba.kw>Integrated Strategies</>, Coin limit +5, and gains 1 additional Coin and 2 ATK stacks whenever Trait consumes DP"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 320,
+            "atk": 80
+          },
+          "specialEffects": [
+            "In <@ba.kw>Integrated Strategies</>, DP consumed when deployed or on the battlefield -30%, and for every 1 DP consumed by this unit, the shortest remaining Redeployment Timer in the Deployment Waiting Zone -2s",
+            "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 8 times); in <@ba.kw>Integrated Strategies</>, Coin limit +5, every Originium Ingot owned increases ATK stack limit by 1 (max to 60 stacks), and gains 1 additional Coin and 3 ATK stacks whenever Trait consumes DP",
+            "Gains 1 Coin upon skill activation (can be spent through skills). While a skill is active, gains 1 Coin each time DP is consumed by this unit's Trait, and +4% ATK (stacks up to 9 <@ba.talpu>(+1)</> times); in <@ba.kw>Integrated Strategies</>, Coin limit +5, every Originium Ingot owned increases ATK stack limit by 1 (max to 60 stacks), and gains 1 additional Coin and 3 ATK stacks whenever Trait consumes DP"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Has <@ba.kw>reduced</> Redeployment Time, but <@ba.kw>DP Cost</> is not refunded upon retreating; While deployed, <@ba.kw>3 DP</> are consumed every 3 seconds (automatically retreats without sufficient DP)",
+      "blackboard": [
+        {
+          "key": "interval",
+          "value": 3
+        },
+        {
+          "key": "cost",
+          "value": -3
+        }
+      ]
+    }
+  ]
+}

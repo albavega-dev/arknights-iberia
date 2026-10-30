@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_137_brownb",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_brownb",
+      "name": "Strong Jaw",
+      "region": "en",
+      "type": "FGT-Y",
+      "icon": "fgt-y",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Beehunter use Soaring Fists a total of 8 times (excluding Support Units)",
+        "Clear Main Theme 7-4 with a 3-star rating; You must deploy your own Beehunter, and have Beehunter defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Boxer's Concentration",
+              "description": "Each consecutive attack on the same target increases ATK by 6%, stacking up to 5 times. Stacks will be lost upon switching targets"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Boxer's Concentration",
+              "description": "Each consecutive attack on the same target increases ATK by 7% <@ba.talpu>(+1%)</>, stacking up to 5 times. Stacks will be lost upon switching targets"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 1 enemy; Gains <@ba.vup>+{attack_speed}</> ASPD when above 50% HP",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 10
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Boxer's Concentration",
+              "description": "Each consecutive attack on the same target increases ATK by 7%, stacking up to 5 times. Stacks will be lost upon switching targets"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Boxer's Concentration",
+              "description": "Each consecutive attack on the same target increases ATK by 8% <@ba.talpu>(+1%)</>, stacking up to 5 times. Stacks will be lost upon switching targets"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

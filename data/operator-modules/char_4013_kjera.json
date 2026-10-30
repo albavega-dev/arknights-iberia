@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_4013_kjera",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_kjera",
+      "name": "In the Woolen of Snow",
+      "region": "en",
+      "type": "FUN-Y",
+      "icon": "fun-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with Kjera (excluding Support Units)",
+        "Clear Break the Ice BI-7 with a 3-star rating; You must deploy your own Kjera, and use Unrestrained Heart at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 65,
+            "atk": 18
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 23
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Deference",
+              "description": "ATK +15%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +21%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Deference",
+              "description": "ATK +18% <@ba.talpu>(+3%)</>, when there are two or more ground tiles within Attack Range, the effect becomes ATK +24% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 102,
+            "atk": 28
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Deference",
+              "description": "ATK +18%, when there are two or more ground tiles within Attack Range, the effect becomes ATK +24%"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Deference",
+              "description": "ATK +21% <@ba.talpu>(+3%)</>, when there two or more ground tiles within Attack Range, the effect becomes ATK +27% <@ba.talpu>(+3%)</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

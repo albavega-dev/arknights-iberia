@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_431_ashlok",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ashlok",
+      "name": "Outdoor Essential Kit",
+      "region": "en",
+      "type": "FOR-X",
+      "icon": "for-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with Ashlock (excluding Support Units)",
+        "Clear Main Theme 7-9 with a 3-star rating; You must deploy your own Ashlock, and have Ashlock defeat at least 2 Guerrilla Heralds"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 235,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 290,
+            "atk": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Bombardment Studies",
+              "description": "ATK +10%. If the two tiles to the front and back are ground tiles, ATK +16% instead"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Bombardment Studies",
+              "description": "ATK +12% <@ba.talpu>(+2%)</>. If the two tiles to the front and back are ground tiles, ATK +18% <@ba.talpu>(+2%)</> instead"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 325,
+            "atk": 70
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.vup>{atk_scale:0%}</> when attacking blocked enemies",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Bombardment Studies",
+              "description": "ATK +10%. If the two tiles to the front and back are ground tiles, ATK +20% instead"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Bombardment Studies",
+              "description": "ATK +12% <@ba.talpu>(+2%)</>. If the two tiles to the front and back are ground tiles, ATK +22% <@ba.talpu>(+2%)</> instead"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "operatorId": "char_4182_oblvns",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_oblvns",
+      "name": "A Silent Pact",
+      "region": "en",
+      "type": "LOR-Y",
+      "icon": "lor-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 50 enemies with your own Sakiko Togawa",
+        "Clear Il Siracusano IS-7 with a 3-star rating; You must deploy your own Sakiko Togawa, and use Crescent Moon Echoes at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 38,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+12</> when there are 2 or more enemies in attack range.",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 12
+                },
+                {
+                  "key": "atk_scale",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 54,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+12</> when there are 2 or more enemies in attack range.",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 12
+                },
+                {
+                  "key": "atk_scale",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Notes of Ode",
+              "description": "Sakiko Togawa can <$ba.permanentatk>continuously attack</>, creating notes that pursue enemies; notes disappear shortly after floating out of her Attack Range; for every note on the field, <$ba.mujica>Ave Mujica</> members ignore 4% DEF and 2% RES of the enemies (stacks up to 12 times); when skill is active, ranged attacks no longer deal reduced damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 63,
+            "attack_speed": 7
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.vup>+12</> when there are 2 or more enemies in attack range.",
+              "blackboard": [
+                {
+                  "key": "attack_speed",
+                  "value": 12
+                },
+                {
+                  "key": "atk_scale",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Notes of Ode",
+              "description": "Sakiko Togawa can <$ba.permanentatk>continuously attack</>, creating notes that pursue enemies; notes disappear shortly after floating out of her Attack Range; for every note on the field, <$ba.mujica>Ave Mujica</> members ignore 5% DEF and 2.5% RES of the enemies (stacks up to 12 times); when skill is active, ranged attacks no longer deal reduced damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

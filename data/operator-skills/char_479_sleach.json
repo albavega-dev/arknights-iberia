@@ -1,0 +1,736 @@
+{
+  "operatorId": "char_479_sleach",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_assist_cost[3]",
+      "name": "Support γ",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 10,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 10,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 11,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 11,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 11,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 12,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 13,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 14,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 15,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        }
+      ],
+      "description": "Stops attacking and recovers <@ba.vup>{value}</> DP over the skill duration",
+      "blackboardKeys": [
+        "value",
+        "interval",
+        "cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_sleach_2",
+      "name": "Inheritance of Faith",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 5,
+          "rangeId": "x-1",
+          "values": [
+            0.1,
+            0.1,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 5,
+          "rangeId": "x-1",
+          "values": [
+            0.14,
+            0.14,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 5,
+          "rangeId": "x-1",
+          "values": [
+            0.18,
+            0.18,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            0.22,
+            0.22,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            0.26,
+            0.26,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            0.3,
+            0.3,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 12,
+          "rangeId": "x-1",
+          "values": [
+            0.35,
+            0.35,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 13,
+          "rangeId": "x-1",
+          "values": [
+            0.4,
+            0.4,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 14,
+          "rangeId": "x-1",
+          "values": [
+            0.45,
+            0.45,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 15,
+          "rangeId": "x-1",
+          "values": [
+            0.5,
+            0.5,
+            20,
+            0.75,
+            1
+          ]
+        }
+      ],
+      "description": "Stops attacking and generates a total of <@ba.vup>{value}</> DP over the skill duration. Throws the banner to the location of the allied unit with the lowest HP percentage within range, granting them DEF <@ba.vup>+{def:0%}</> and restoring their HP equal to <@ba.vup>{atk_to_hp_recovery_ratio:0%}</> of Saileach's ATK every second. When the skill ends, retrieve the banner",
+      "blackboardKeys": [
+        "def",
+        "atk_to_hp_recovery_ratio",
+        "value",
+        "sleach_s_2[cost].interval",
+        "sleach_s_2[cost].cost"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_sleach_3",
+      "name": "Glorious Banner",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "rangeId": "2-1",
+          "values": [
+            1.7,
+            2.5,
+            1.15,
+            10,
+            0.15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 0,
+          "rangeId": "2-1",
+          "values": [
+            1.8,
+            2.5,
+            1.15,
+            10,
+            0.15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "rangeId": "2-1",
+          "values": [
+            1.9,
+            2.5,
+            1.15,
+            10,
+            0.15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 5,
+          "rangeId": "2-1",
+          "values": [
+            2,
+            3,
+            1.2,
+            10,
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 5,
+          "rangeId": "2-1",
+          "values": [
+            2.1,
+            3,
+            1.2,
+            10,
+            0.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "rangeId": "2-1",
+          "values": [
+            2.2,
+            3,
+            1.2,
+            10,
+            0.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 6,
+          "rangeId": "2-1",
+          "values": [
+            2.4,
+            3,
+            1.25,
+            10,
+            0.25
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 7,
+          "rangeId": "2-1",
+          "values": [
+            2.6,
+            3.5,
+            1.25,
+            10,
+            0.25
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 7,
+          "rangeId": "2-1",
+          "values": [
+            2.8,
+            3.5,
+            1.27,
+            10,
+            0.27
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 10,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 7,
+          "rangeId": "2-1",
+          "values": [
+            3,
+            3.5,
+            1.3,
+            10,
+            0.3
+          ]
+        }
+      ],
+      "description": "Stops attacking and immediately gains <@ba.vup>{cost}</> DP. Throws the banner to the location of ground enemies, dealing <@ba.vup>{atk_scale:0%}</> Physical damage and Stunning them for <@ba.vup>{stun}</> seconds. Enemies within the surrounding 8 tiles of the banner are inflicted with <$ba.sluggish>Slow</> and <@ba.vup>{debuff.damage_scale:0%}</> <$ba.fragile>Fragile</> effect. When the skill ends, retrieve the banner",
+      "blackboardKeys": [
+        "atk_scale",
+        "stun",
+        "damage_scale",
+        "cost",
+        "debuff.damage_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    },
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_single[031]",
+          "name": "Victorian Literature",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_single3",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, restores <@cc.vup>+0.7</> Morale per hour to another Operator assigned to that Dormitory whose Morale is not full (Only the strongest effect of this type takes place)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_hire_spd[000]",
+          "name": "Infectivity",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_h_spd",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, if the HR contacting speed of the HR Office is lower than <@cc.vup>30%</> (including the base 5%), increase the HR contacting speed by <@cc.vup>+20%</> (unique effect across the entire base, unaffected by other effects)"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Unwavering Banner",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deploys with a banner; Within the surrounding 8 tiles of the banner, allied units have ASPD +5 and enemies have ASPD -5"
+        },
+        {
+          "name": "Unwavering Banner",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deploys with a banner; Within the surrounding 8 tiles of the banner, allied units have ASPD +7 <@ba.talpu>(+2)</> and enemies have ASPD -7 <@ba.talpu>(+2)</>"
+        },
+        {
+          "name": "Unwavering Banner",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Deploys with a banner; Within the surrounding 8 tiles of the banner, allied units have ASPD +10 and enemies have ASPD -10"
+        },
+        {
+          "name": "Unwavering Banner",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Deploys with a banner; Within the surrounding 8 tiles of the banner, allied units have ASPD +12 <@ba.talpu>(+2)</> and enemies have ASPD -12 <@ba.talpu>(+2)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Spiritual Influence",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "After deployment, the next Operator has -2 DP Cost"
+        }
+      ]
+    }
+  ]
+}

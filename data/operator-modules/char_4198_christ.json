@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4198_christ",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_christ",
+      "name": "The 'Black' Vending Machine",
+      "region": "en",
+      "type": "PRI-X",
+      "icon": "pri-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Miss.Christine use Bacchanalia a total of 10 times",
+        "Clear Darknights Memoir DM-7 with a 3-star rating; You must deploy your own Miss.Christine, and use Bacchanalia at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 60,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage dealt to enemies under an Elemental Burst effect increased to 110%",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage dealt to enemies under an Elemental Burst effect increased to 110%",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Captivating Delicacy",
+              "description": "When attacking Paralyzed enemies, ATK increases to 110%; enemies within Attack Range take 130% of ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Captivating Delicacy",
+              "description": "When attacking Paralyzed enemies, ATK increases to 110%; enemies within Attack Range take 140% <$ba.palsy>(+10%)</> of ATK as Elemental Damage when they trigger <@ba.talpu>Paralysis</>"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Damage dealt to enemies under an Elemental Burst effect increased to 110%",
+              "blackboard": [
+                {
+                  "key": "damage_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Captivating Delicacy",
+              "description": "When attacking Paralyzed enemies, ATK increases to 120%; enemies within Attack Range take 140% of ATK as Elemental Damage when they trigger <$ba.palsy>Paralysis</>"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Captivating Delicacy",
+              "description": "When attacking Paralyzed enemies, ATK increases to 120%; enemies within Attack Range take 150% <$ba.palsy>(+10%)</> of ATK as Elemental Damage when they trigger <@ba.talpu>Paralysis</>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

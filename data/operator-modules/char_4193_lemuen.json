@@ -1,0 +1,104 @@
+{
+  "operatorId": "char_4193_lemuen",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_lemuen",
+      "name": "'Magazine and Stained Glass'",
+      "region": "en",
+      "type": "DEA-Y",
+      "icon": "dea-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 30 enemies with your own Lemuen",
+        "Clear Main Theme 13-13 with a 3-star rating under Standard Environment; You must deploy your own Lemuen, and have her defeat at least 2 Sarkaz Boneguard Flayers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 100
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Modus Extraditio Fugitivi",
+              "description": "After being deployed for 20 seconds, ATK +15% and Lemuen's ammo-type skills have +2 Ammo capacity"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 120
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "If the attacked enemy remains alive, gain <@ba.kw>{sp}</> additional SP",
+              "blackboard": [
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Modus Extraditio Fugitivi",
+              "description": "After being deployed for 15 seconds, ATK +18%, Lemuen's ammo-type skills have +2 Ammo capacity, and other Laterano Operators' ammo-type skills have +1 Ammo capacity"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

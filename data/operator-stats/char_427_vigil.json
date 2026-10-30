@@ -1,0 +1,375 @@
+{
+  "operatorId": "char_427_vigil",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 785,
+            "atk": 195,
+            "def": 54,
+            "magicResistance": 0,
+            "cost": 15,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1122,
+            "atk": 287,
+            "def": 91,
+            "magicResistance": 0,
+            "cost": 15,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1122,
+            "atk": 287,
+            "def": 91,
+            "magicResistance": 0,
+            "cost": 17,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1439,
+            "atk": 378,
+            "def": 130,
+            "magicResistance": 0,
+            "cost": 17,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1439,
+            "atk": 378,
+            "def": 130,
+            "magicResistance": 0,
+            "cost": 17,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 1755,
+            "atk": 462,
+            "def": 154,
+            "magicResistance": 0,
+            "cost": 17,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 80,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -10,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_vigil",
+      "operatorId": "char_427_vigil",
+      "region": "en",
+      "name": "La Punciuta",
+      "moduleType": "TAC-X",
+      "typeIcon": "tac-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 20,
+            "def": 15
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 25,
+            "def": 20
+          },
+          "specialEffects": [
+            "Can summon a Wolfpack initially consisting of 3 'Wolf Shadows' at the Tactical Point to assist in combat; The number of 'Wolf Shadows' increases by +1 every 25 seconds (up to a maximum of 3; each 'Wolf Shadow' increases the Wolfpack's Block by 1 and causes its attacks to deal an additional instance of damage; each 'Wolf Shadow' lost gives the Wolfpack 30% Physical Dodge for 7 seconds)",
+            "Gains +1 'Wolf Shadow' every 25s (up to a maximum of 3). For each 'Wolf Shadow' present, the Wolfpack gains +1 Block, and each attack inflicts an additional instance of damage; when more than 1 'Wolf Shadow' is present, each time upon taking lethal damage, loses 1 'Wolf Shadow' but fully restores HP, and the Wolfpack gains 30% Physical Dodge for 7 seconds."
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 30,
+            "def": 25
+          },
+          "specialEffects": [
+            "Can summon a Wolfpack initially consisting of 3 'Wolf Shadows' at the Tactical Point to assist in combat; The number of 'Wolf Shadows' increases by +1 every 25 seconds (up to a maximum of 3; each 'Wolf Shadow' increases the Wolfpack's Block by 1 and causes its attacks to deal an additional instance of damage; each 'Wolf Shadow' lost gives the Wolfpack 50% Physical Dodge for 10 seconds)",
+            "Gains +1 'Wolf Shadow' every 25s (up to a maximum of 3). For each 'Wolf Shadow' present, the Wolfpack gains +1 Block, and each attack inflicts an additional instance of damage; when more than 1 'Wolf Shadow' is present, each time upon taking lethal damage, loses 1 'Wolf Shadow' but fully restores HP, and the Wolfpack gains 50% Physical Dodge for 10 seconds."
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_vigil",
+      "operatorId": "char_427_vigil",
+      "region": "en",
+      "name": "Time Has Gone",
+      "moduleType": "TAC-Y",
+      "typeIcon": "tac-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 30
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 40
+          },
+          "specialEffects": [
+            "Vigil and the Wolfpack's attacks ignore 175 DEF and Steal 15 DEF (Caps at 100) when attacking enemies blocked by the Wolfpack",
+            "Vigil and the Wolfpack's attacks ignore 200 <@ba.talpu>(+25)</> DEF and Steal 15 DEF (Caps at 100) when attacking enemies blocked by the Wolfpack",
+            "Ignores 175 DEF and Steals 15 DEF (Caps at 100) when attacking a blocked target",
+            "Ignores 200 <@ba.talpu>(+25)</> DEF and Steals 15 DEF (Caps at 100) when attacking a blocked target"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 50
+          },
+          "specialEffects": [
+            "Vigil and the Wolfpack's attacks ignore 225 DEF and Steal 20 DEF (Caps at 100) when attacking enemies blocked by the Wolfpack",
+            "Vigil and the Wolfpack's attacks ignore 250 <@ba.talpu>(+25)</> DEF and Steal 20 DEF (Caps at 100) when attacking enemies blocked by the Wolfpack",
+            "Ignores 225 DEF and Steals 20 DEF (Caps at 100) when attacking a blocked target",
+            "Ignores 250 <@ba.talpu>(+25)</> DEF and Steals 20 DEF (Caps at 100) when attacking a blocked target"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "This unit can designate one <@ba.kw>Tactical Point</> within attack range to call Reinforcements; ATK is increased to 150% when attacking enemies blocked by Reinforcements",
+      "blackboard": [
+        {
+          "key": "atk_scale",
+          "value": 1.5
+        }
+      ]
+    }
+  ]
+}

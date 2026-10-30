@@ -1,0 +1,742 @@
+{
+  "operatorId": "char_4228_closur",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_closur_1",
+      "name": "Recursive Tactics",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 0,
+          "values": [
+            3,
+            1,
+            5,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 16,
+          "initSp": 0,
+          "values": [
+            3,
+            1,
+            5,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 0,
+          "values": [
+            3,
+            1,
+            5,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 14,
+          "initSp": 0,
+          "values": [
+            3,
+            1,
+            6,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 13,
+          "initSp": 0,
+          "values": [
+            3,
+            1,
+            6,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 12,
+          "initSp": 0,
+          "values": [
+            3,
+            1,
+            6,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 11,
+          "initSp": 0,
+          "values": [
+            3,
+            1,
+            7,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 10,
+          "initSp": 1,
+          "values": [
+            3,
+            1,
+            7,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 1,
+          "values": [
+            3,
+            1,
+            7,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 1,
+          "values": [
+            3,
+            1,
+            7,
+            1
+          ]
+        }
+      ],
+      "description": "Grants Reinforcements <@ba.vup>{shield_cnt}</> Shield (does not stack); gradually generates <@ba.vup>{cost}</> DP over skill duration; each time this skill is used, DP gained <@ba.vup>+{cost_per_add}</> (up to <@ba.vup>{cost_add_max}</> DP)",
+      "blackboardKeys": [
+        "cost",
+        "cost_per_add",
+        "cost_add_max",
+        "shield_cnt"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_closur_2",
+      "name": "Model Expansion",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 25,
+          "values": [
+            5,
+            0.4,
+            1,
+            0.15,
+            0.25,
+            2,
+            15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 26,
+          "values": [
+            5,
+            0.4,
+            1,
+            0.2,
+            0.3,
+            2,
+            15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 27,
+          "values": [
+            5,
+            0.4,
+            1,
+            0.25,
+            0.35,
+            2,
+            15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 28,
+          "values": [
+            6,
+            0.4,
+            1,
+            0.3,
+            0.4,
+            2,
+            15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 29,
+          "values": [
+            6,
+            0.4,
+            1,
+            0.35,
+            0.45,
+            2,
+            15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 30,
+          "values": [
+            6,
+            0.4,
+            1,
+            0.4,
+            0.5,
+            2,
+            15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 31,
+          "values": [
+            7,
+            0.4,
+            1,
+            0.45,
+            0.55,
+            2,
+            15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 32,
+          "values": [
+            8,
+            0.4,
+            1,
+            0.5,
+            0.6,
+            2,
+            15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 33,
+          "values": [
+            9,
+            0.4,
+            1,
+            0.55,
+            0.7,
+            2,
+            15,
+            1,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 34,
+          "values": [
+            10,
+            0.4,
+            1,
+            0.6,
+            0.8,
+            2,
+            15,
+            1,
+            2
+          ]
+        }
+      ],
+      "description": "Immediately generates <@ba.vup>{cost}</> DP, gradually generates <@ba.vup>{cost_period}</> DP over skill duration, Reinforcements DEF <@ba.vup>+{def:0%}</>, Block <@ba.vup>+{block_cnt}</>, Closure's ATK <@ba.vup>+{atk:0%}</>, attacks <@ba.vup>{attack@max_target}</> targets simultaneously, and can attack enemies blocked by her own Reinforcements; Operators deployed within Tactical Point effect range refund <@ba.vup>{cost_return:0%}</> of their DP cost",
+      "blackboardKeys": [
+        "cost",
+        "cost_return",
+        "block_cnt",
+        "def",
+        "atk",
+        "attack@max_target",
+        "cost_period",
+        "closur_s_2[add_cost_period].cost",
+        "closur_s_2[add_cost_period].interval"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_closur_3",
+      "name": "Q.E.D.",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 12,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            1.1,
+            -0.5,
+            0.03,
+            3,
+            10,
+            0.3,
+            18,
+            1,
+            1.66
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 13,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            1.2,
+            -0.5,
+            0.03,
+            3,
+            10,
+            0.3,
+            18,
+            1,
+            1.66
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 14,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            1.3,
+            -0.5,
+            0.03,
+            3,
+            10,
+            0.3,
+            18,
+            1,
+            1.66
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 15,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            1.5,
+            -0.5,
+            0.04,
+            3,
+            10,
+            0.4,
+            18,
+            1,
+            1.66
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 16,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            1.6,
+            -0.5,
+            0.04,
+            3,
+            10,
+            0.4,
+            18,
+            1,
+            1.66
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 17,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            1.7,
+            -0.5,
+            0.04,
+            3,
+            10,
+            0.4,
+            18,
+            1,
+            1.66
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 18,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            1.9,
+            -0.5,
+            0.05,
+            3,
+            10,
+            0.5,
+            18,
+            1,
+            1.66
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 19,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            2.1,
+            -0.5,
+            0.05,
+            3,
+            10,
+            0.5,
+            18,
+            1,
+            1.66
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 21,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            2.3,
+            -0.5,
+            0.05,
+            3,
+            10,
+            0.5,
+            18,
+            1,
+            1.66
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 23,
+          "values": [
+            0,
+            0,
+            9,
+            6,
+            2.5,
+            -0.5,
+            0.06,
+            3,
+            10,
+            0.6,
+            18,
+            1,
+            1.66
+          ]
+        }
+      ],
+      "description": "Gradually generates <@ba.vup>{cost_period}</> DP over skill duration, and Attack Interval decreases; locks onto and attacks enemies within Closure or her Reinforcements' normal Attack Ranges, dealing <@ba.vup>{attack@atk_scale:0%}</> of Closure's ATK as Physical damage and inflicting a <@ba.vup>{attack@slow_down:0%}</> <$ba.slowdown>Sluggish</> effect for <@ba.vup>{attack@slow_down_time}</>s (stacks up to <@ba.vup>{attack@slow_down_max:0%}</>); target count +1 after every <@ba.vup>{attack_trigger_cnt}</> attacks (can trigger up to <@ba.vup>{max_trigger_cnt}</> times)",
+      "blackboardKeys": [
+        "cost",
+        "cost_attack_add",
+        "attack_trigger_cnt",
+        "max_trigger_cnt",
+        "attack@atk_scale",
+        "base_attack_time",
+        "attack@slow_down",
+        "attack@slow_down_time",
+        "attack@max_stack_cnt",
+        "attack@slow_down_max",
+        "cost_period",
+        "closur_s_3[add_cost_period].cost",
+        "closur_s_3[add_cost_period].interval"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_mp_cost[014]",
+          "name": "Chief Engineer",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_cost",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, increases Morale of all Operators in the Control Center by <@cc.vup>+0.05</> per hour."
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_closure[000]",
+          "name": "Special Order",
+          "room": "TRADING",
+          "icon": "bskill_tra_closure",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+10%</>, <$cc.tra.closure><@cc.kw>Closure's Special Order</></> will be obtained at a fixed rate (not considered as Defaulted trades)."
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Precision Deployment",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Can summon a Command Center to assist in combat from a Tactical Point; the Command Center will automatically respawn 15s after being defeated; Tactical Point effect range changes based on skill, and friendly units within effect range are considered Closure's Reinforcements"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Scheduler, Max Settings!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When Closure is in the squad, <$ba.costlowerbound>DP lower limit</> reduced by 3, and [Rhodes Island] Operator ATK +4%"
+        },
+        {
+          "name": "Scheduler, Max Settings!",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When Closure is in the squad, <$ba.costlowerbound>DP lower limit</> reduced by 4 <@ba.talpu>(+1)</>, and [Rhodes Island] Operator ATK +4%"
+        }
+      ]
+    }
+  ]
+}

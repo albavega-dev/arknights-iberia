@@ -1,0 +1,86 @@
+{
+  "operatorId": "char_4226_veen",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_veen",
+      "name": "Keep Close At Hand",
+      "region": "en",
+      "type": "MSC-Y",
+      "icon": "msc-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 20 enemies with your own Viy",
+        "Clear Main Theme 7-10 with a 3-star rating; You must deploy your own Viy, and can only include 7 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 85
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD +30 when there are stored attacks"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 112
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD +30 when there are stored attacks"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Arts of War",
+              "description": "Attacking with stored charges makes the target suffer 100 Arts damage per second for 5s (stacks up to 4 times; Transposed Energy inflicts 3 stacks); Viy does not attack targets under this effect"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 120
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD +30 when there are stored attacks"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Arts of War",
+              "description": "Attacking with stored charges makes the target suffer 120 Arts damage per second for 5s (stacks up to 4 times; Transposed Energy inflicts 3 stacks); Viy does not attack targets under this effect"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

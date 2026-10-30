@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_306_leizi",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_leizi",
+      "name": "'All the Thunderlight'",
+      "region": "en",
+      "type": "CHA-X",
+      "icon": "cha-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Defeat a total of 50 enemies with Leizi's skill Thunderclap (Leizi cannot be a Support Unit)",
+        "Clear Main Theme S3-6 with a 3-star rating; You must deploy your own Leizi, and have Leizi defeat at least 1 Butcher"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 55
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 95,
+            "atk": 65
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Unobstructed Flow",
+              "description": "Increases ATK to 123% and recover 1 SP when attacking unblocked enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Unobstructed Flow",
+              "description": "Increases ATK to 126% <@ba.talpu>(+3%)</> and recover 1 SP when attacking unblocked enemies"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 105,
+            "atk": 75
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Unobstructed Flow",
+              "description": "Increases ATK to 126% and recover 1 SP when attacking unblocked enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Unobstructed Flow",
+              "description": "Increases ATK to 129% <@ba.talpu>(+3%)</> and recover 1 SP when attacking unblocked enemies"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

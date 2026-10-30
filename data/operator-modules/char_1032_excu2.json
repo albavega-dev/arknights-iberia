@@ -1,0 +1,184 @@
+{
+  "operatorId": "char_1032_excu2",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_excu2",
+      "name": "Unanswered",
+      "region": "en",
+      "type": "REA-X",
+      "icon": "rea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with Executor the Ex Foedere (excluding Support Units)",
+        "Clear Main Theme 7-14 with a 3-star rating; You must deploy your own Executor the Ex Foedere, and have Executor the Ex Foedere defeat at least 2 Guerrilla Shieldguards"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 40,
+            "def": 24,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 50,
+            "def": 32,
+            "attack_speed": 6
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "The Chosen One",
+              "description": "When attacking, there is a 30% chance to perform an additional attack that ignores 150 DEF; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "The Chosen One",
+              "description": "When attacking, there is a 33% <@ba.talpu>(+3%)</> chance to perform an additional attack that ignores 150 DEF; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 60,
+            "def": 40,
+            "attack_speed": 7
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "The Chosen One",
+              "description": "When attacking, there is a 35% chance to perform an additional attack that ignores 300 DEF; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "The Chosen One",
+              "description": "When attacking, there is a 38% <@ba.talpu>(+3%)</> chance to perform an additional attack that ignores 300 DEF; this chance increases by 5% for each ammo consumed while a skill is active, resetting when the skill ends"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_excu2",
+      "name": "Acknowledged",
+      "region": "en",
+      "type": "REA-Y",
+      "icon": "rea-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 40 enemies with your own Executor the Ex Foedere",
+        "Clear Guide Ahead GA-3 with a 3-star rating; You must deploy your own Executor the Ex Foedere, and only Supporter Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 280,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{value}</> when there are 2 or more enemies within Attack Range",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 12
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 320,
+            "atk": 65
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{value}</> when there are 2 or more enemies within Attack Range",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 12
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Empathy by Shotgun",
+              "description": "For every Laterano Operator deployed, increases the ammo capacity of this unit's ammo-type skills by +1 (stacks up to 4 times); when this unit's ammo-type skill is active, ATK +8%; when ammo count is above 50%, gains 20% Physical and Arts Dodge"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 350,
+            "atk": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ASPD <@ba.kw>+{value}</> when there are 2 or more enemies within Attack Range",
+              "blackboard": [
+                {
+                  "key": "value",
+                  "value": 12
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Empathy by Shotgun",
+              "description": "For every Laterano Operator deployed, increases the ammo capacity of this unit's ammo-type skills by +1 (stacks up to 4 times); when this unit's ammo-type skill is active, ATK +12%; when ammo count is above 50%, gains 30% Physical and Arts Dodge"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

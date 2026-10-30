@@ -1,0 +1,166 @@
+{
+  "operatorId": "char_484_robrta",
+  "region": "en",
+  "tokens": {
+    "token_10018_robrta_mach": "Full Auto Modeler"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_robrta",
+      "name": "Semi-Auto Stylist Toolkit",
+      "region": "en",
+      "type": "CRA-X",
+      "icon": "cra-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "During battle, have Roberta deploy a total of 25 Support Devices (excluding Support Units)",
+        "Clear Main Theme 3-8 with a 3-star rating; You must deploy your own Roberta, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "def": 28
+          },
+          "tokenAttributes": {
+            "token_10018_robrta_mach": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 200,
+            "def": 38
+          },
+          "tokenAttributes": {
+            "token_10018_robrta_mach": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Modeler Debugging",
+              "description": "Carries 3 Modelers (max 3 deployed at once). Modelers grant DEF +36% and 2 <$ba.shield>Shields</> to a unit on a melee tile (lasts 25 seconds, DEF increase does not stack)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Modeler Debugging",
+              "description": "Carries 3 Modelers (max 3 deployed at once). Modelers grant DEF +39% <@ba.talpu>(+3%)</> and 2 <$ba.shield>Shields</> to a unit on a melee tile (lasts 25 seconds, DEF increase does not stack)"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Modeler Debugging",
+              "description": "Grants +36% DEF and 2 <$ba.shield>Shields</> to a unit on a melee tile (lasts 25 seconds, DEF increase does not stack)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": true,
+              "name": "Modeler Debugging",
+              "description": "Grants +39% DEF <@ba.talpu>(+3%)</> and 2 <$ba.shield>Shields</> to a unit on a melee tile (lasts 25 seconds, DEF increase does not stack)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 250,
+            "def": 46
+          },
+          "tokenAttributes": {
+            "token_10018_robrta_mach": {
+              "cost": -2,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Modeler Debugging",
+              "description": "Carries 3 Modelers (max 3 deployed at once). Modelers grant DEF +40% and 2 <$ba.shield>Shields</> to a unit on a melee tile (lasts 25 seconds, DEF increase does not stack)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Modeler Debugging",
+              "description": "Carries 3 Modelers (max 3 deployed at once). Modelers grant DEF +43% <@ba.talpu>(+3%)</> and 2 <$ba.shield>Shields</> to a unit on a melee tile (lasts 25 seconds, DEF increase does not stack)"
+            },
+            {
+              "index": 0,
+              "potential": 1,
+              "token": true,
+              "name": "Modeler Debugging",
+              "description": "Grants +40% DEF and 2 <$ba.shield>Shields</> to a unit on a melee tile (lasts 25 seconds, DEF increase does not stack)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": true,
+              "name": "Modeler Debugging",
+              "description": "Grants +43% DEF <@ba.talpu>(+3%)</> and 2 <$ba.shield>Shields</> to a unit on a melee tile (lasts 25 seconds, DEF increase does not stack)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

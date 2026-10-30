@@ -1,0 +1,211 @@
+{
+  "operatorId": "char_4026_vulpis",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_vulpis",
+      "name": "Patience, Mission, Vacation",
+      "region": "en",
+      "type": "SOL-X",
+      "icon": "sol-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with your own Vulpisfoglia",
+        "Clear Main Theme S2-3 with a 3-star rating; You must deploy your own Vulpisfoglia, and have her defeat at least 24 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 175,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Fox Hunt",
+              "description": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 35% ATK as Arts damage whenever she deals damage to this enemy during the next 10s"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Blocks 2 enemies; Gains +8% ATK and DEF while blocking enemies",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.08
+                },
+                {
+                  "key": "def",
+                  "value": 0.08
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Fox Hunt",
+              "description": "After dealing damage to an enemy for the first time, Vulpisfoglia deals an additional 40% ATK as Arts damage whenever she deals damage to this enemy during the next 10s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_vulpis",
+      "name": "剑舞",
+      "region": "cn",
+      "type": "SOL-Y",
+      "icon": "sol-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "战斗中累计部署非助战忍冬5次",
+        "3星通关叙拉古人IS-6；必须携带且部署非助战忍冬，且至少使用2次“隐狐之艺”"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 80,
+            "atk": 35,
+            "def": 10
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "首次部署时部署费用-4"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 105,
+            "atk": 47,
+            "def": 15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "首次部署时部署费用-4"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "蓄势",
+              "description": "在场时，部署费用的自然回复速度+13%，若4秒内自身未受到伤害，则每秒恢复4%的最大生命值，首次部署后获得<$ba.camou>迷彩</>直至开启技能"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "蓄势",
+              "description": "在场时，部署费用的自然回复速度+13%，若4秒内自身未受到伤害，则每秒恢复5%<@ba.talpu>（+1%）</>的最大生命值，首次部署后获得<$ba.camou>迷彩</>直至开启技能"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 55,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "首次部署时部署费用-4"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "蓄势",
+              "description": "在场时，部署费用的自然回复速度+15%，若4秒内自身未受到伤害，则每秒恢复4%的最大生命值，首次部署后获得<$ba.camou>迷彩</>直至开启技能"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "蓄势",
+              "description": "在场时，部署费用的自然回复速度+15%，若4秒内自身未受到伤害，则每秒恢复5%<@ba.talpu>（+1%）</>的最大生命值，首次部署后获得<$ba.camou>迷彩</>直至开启技能"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

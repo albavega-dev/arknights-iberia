@@ -1,0 +1,673 @@
+{
+  "operatorId": "char_4027_heyak",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_heyak_1",
+      "name": "In Search of Reason",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            1.6,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            1.7,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 9,
+          "initSp": 0,
+          "values": [
+            1.8,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2,
+            2.5,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2.1,
+            2.5,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2.2,
+            2.5,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 8,
+          "initSp": 0,
+          "values": [
+            2.4,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            2.6,
+            3.5,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            2.8,
+            3.5,
+            3
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            3,
+            4,
+            3
+          ]
+        }
+      ],
+      "description": "The next attack hits 1 additional target and deals <@ba.vup>{atk_scale:0%}</> ATK as Arts damage; if only <@ba.vup>1</> enemy is attacked, applies <$ba.levitate>Levitate</> to the target for <@ba.vup>{levitate}</> seconds\n<@ba.rem>Can store {cnt} charges</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "levitate",
+        "cnt"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_heyak_2",
+      "name": "Meandering Stars",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 20,
+          "values": [
+            0.2,
+            0.08,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 20,
+          "values": [
+            0.22,
+            0.08,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 20,
+          "values": [
+            0.24,
+            0.08,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 21,
+          "values": [
+            0.27,
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 21,
+          "values": [
+            0.29,
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 21,
+          "values": [
+            0.31,
+            0.1,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 22,
+          "values": [
+            0.35,
+            0.12,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 23,
+          "values": [
+            0.38,
+            0.13,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 24,
+          "values": [
+            0.41,
+            0.14,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 16,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 25,
+          "values": [
+            0.45,
+            0.15,
+            1
+          ]
+        }
+      ],
+      "description": "Attacks change to <@ba.vup>9</> hits, each dealing <@ba.vup>{attack@atk_scale:0%}</> ATK as damage to random enemies within Attack Range; each hit has a <@ba.vup>{attack@prob:0%}</> chance to <$ba.levitate>Levitate</> the target for <@ba.vup>{attack@levitate}</> second",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "attack@prob",
+        "attack@levitate"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_heyak_3",
+      "name": "Well-Read Ravings",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 40,
+          "rangeId": "3-10",
+          "values": [
+            2.13,
+            3.2,
+            1.6,
+            1.4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 69,
+          "initSp": 40,
+          "rangeId": "3-10",
+          "values": [
+            2.2,
+            3.3,
+            1.6,
+            1.4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 68,
+          "initSp": 40,
+          "rangeId": "3-10",
+          "values": [
+            2.27,
+            3.4,
+            1.6,
+            1.4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 67,
+          "initSp": 41,
+          "rangeId": "3-10",
+          "values": [
+            2.33,
+            3.5,
+            1.8,
+            1.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 66,
+          "initSp": 41,
+          "rangeId": "3-10",
+          "values": [
+            2.4,
+            3.6,
+            1.8,
+            1.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 41,
+          "rangeId": "3-10",
+          "values": [
+            2.47,
+            3.7,
+            1.8,
+            1.4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 64,
+          "initSp": 42,
+          "rangeId": "3-10",
+          "values": [
+            2.53,
+            3.8,
+            2,
+            1.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 63,
+          "initSp": 43,
+          "rangeId": "3-10",
+          "values": [
+            2.67,
+            4,
+            2,
+            1.4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 62,
+          "initSp": 44,
+          "rangeId": "3-10",
+          "values": [
+            2.73,
+            4.1,
+            2,
+            1.4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 45,
+          "rangeId": "3-10",
+          "values": [
+            2.8,
+            4.2,
+            2.2,
+            1.4
+          ]
+        }
+      ],
+      "description": "Attack range <@ba.vup>expands</>, Attack Interval <@ba.vdown>increases</>, attacks change to whirlwinds travelling forward, dealing damage proportional to the distance traveled (damage increase caps at 3 tiles); whirlwinds hit the closest target and <$ba.levitate>Levitate</> it for <@ba.vup>{attack@levitate}</> seconds, dealing a maximum of <@ba.vup>{attack@max_atk_scale:0%}</> ATK as Arts damage",
+      "blackboardKeys": [
+        "attack@min_atk_scale",
+        "attack@max_atk_scale",
+        "attack@levitate",
+        "base_attack_time"
+      ]
+    }
+  ],
+  "ranges": {
+    "3-10": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 1,
+          "col": 3
+        },
+        {
+          "row": 1,
+          "col": 4
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 4
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 4
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "meet_spd&cost_condChar[001]",
+          "name": "'Professional Ethics' α",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&cost_condChar2",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, if no other Operators are working in the Reception Room, increases Clue search speed by <@cc.vup>15%</>, and Morale consumed per hour <@cc.vdown>+1</>"
+        },
+        {
+          "buffId": "meet_spd&cost_condChar[011]",
+          "name": "'Professional Ethics' β",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&cost_condChar3",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, if no other Operators are working in the Reception Room, increases Clue search speed by <@cc.vup>35%</>, and Morale consumed per hour <@cc.vdown>+1</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "meet_spd&condChar_mustget[000]",
+          "name": "Bibliography Consultant",
+          "room": "MEETING",
+          "icon": "bskill_meet_spd&condChar_mustget",
+          "color": "#dd653f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Reception Room, if only this Operator is working in the Reception Room, for every <@cc.kw>16</> consecutive Morale spent, a <@cc.kw>Rhine Lab</> clue is <@cc.kw>guaranteed</> next"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Inherited End",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking aerial targets, increases ATK to 110%, and silences targets for 1 second"
+        },
+        {
+          "name": "Inherited End",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking aerial targets, increases ATK to 113% <@ba.talpu>(+3%)</>, and silences targets for 1 second"
+        },
+        {
+          "name": "Inherited End",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking aerial targets, increases ATK to 120%, and silences targets for 3 seconds"
+        },
+        {
+          "name": "Inherited End",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When attacking aerial targets, increases ATK to 123% <@ba.talpu>(+3%)</>, and silences targets for 3 seconds"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Bygone Wings",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Applies <$ba.weightless>Weightless</> to enemies with 80% or more HP within Attack Range"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "operatorId": "char_1027_greyy2",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_greyy2",
+      "name": "Experimental ECU Prototype",
+      "region": "en",
+      "type": "BOM-X",
+      "icon": "bom-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Greyy the Lightningbearer use Beacon of Dawn a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 1-3 with a 3-star rating; You must deploy your own Greyy the Lightningbearer, and only Vanguard Operators are allowed for the remaining members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 20,
+            "def": 10
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 30,
+            "def": 12
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Light-Stealing Chain",
+              "description": "Attacks have a 40% chance to <$ba.sluggish>Slow</> the target for 2 seconds, and <$ba.sluggish>Slowed</> enemies take +10% damage"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 40,
+            "def": 15
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Light-Stealing Chain",
+              "description": "Attacks have a 40% chance to <$ba.sluggish>Slow</> the target for 2 seconds, and <$ba.sluggish>Slowed</> enemies take +15% damage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

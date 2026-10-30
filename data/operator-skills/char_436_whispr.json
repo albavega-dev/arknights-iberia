@@ -1,0 +1,413 @@
+{
+  "operatorId": "char_436_whispr",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_whispr_1",
+      "name": "Oriented Diagnosis",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            1.05,
+            1,
+            -0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.05,
+            2,
+            -0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.1,
+            2,
+            -0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "values": [
+            1.1,
+            3,
+            -0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.15,
+            3,
+            -0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.15,
+            4,
+            -0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "values": [
+            1.2,
+            4,
+            -0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            1.2,
+            5,
+            -0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            1.25,
+            5,
+            -0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 2,
+          "initSp": 0,
+          "values": [
+            1.3,
+            5,
+            -0.5
+          ]
+        }
+      ],
+      "description": "The next heal is increased to <@ba.vup>{heal_scale:0%}</> of ATK, and an additional target will be healed (prioritizes units under abnormal status) and granted <$ba.buffres>status resistance</> for <@ba.vup>{status_resistance[limit]}</> seconds",
+      "blackboardKeys": [
+        "heal_scale",
+        "status_resistance[limit]",
+        "one_minus_status_resistance"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_whispr_2",
+      "name": "Pain Suppression",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 65,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            1,
+            -0.5,
+            1.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 64,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            1,
+            -0.5,
+            1.2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 63,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            1,
+            -0.5,
+            1.3
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 62,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            2,
+            -0.5,
+            1.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 61,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            2,
+            -0.5,
+            1.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            2,
+            -0.5,
+            1.6
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 59,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            3,
+            -0.5,
+            1.7
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            3,
+            -0.5,
+            1.8
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            3,
+            -0.5,
+            1.9
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 0,
+          "values": [
+            -0.2,
+            4,
+            -0.5,
+            2
+          ]
+        }
+      ],
+      "description": "Attack Interval <@ba.vup>reduced</>. The healing effect of this unit's Talent increases to <@ba.vup>{talent_scale:0%}</>, and each target healed by this unit is granted <$ba.buffres>status resistance</> for <@ba.vup>{attack@status_resistance[limit]}</> second(s)\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "base_attack_time",
+        "attack@status_resistance[limit]",
+        "attack@one_minus_status_resistance",
+        "talent_scale"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd_bd_n1_n1[100]",
+          "name": "Itinerant",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd_bd_n1_n1",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>. Additionally, for every Recruit slot (Default slots do not count), <$cc.bd_a1_a1><@cc.rem>Memory Fragments</></> <@cc.vup>+10</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "hire_spd_bd_n1[000]",
+          "name": "Memory Seeker",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd_memento",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, every <@cc.vup>1</> <$cc.bd_a1_a1><@cc.rem>Memory Fragment</></> is converted into <@cc.vup>1</> <$cc.bd_a1><@cc.rem>Perception Information</></>. When Morale is fully consumed, remove all <$cc.bd_a1_a1><@cc.rem>Memory Fragments</></> and accumulated <$cc.bd_a1><@cc.rem>Perception Information</></>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Tower of Life",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 3% of Whisperain's ATK (Unaffected by this unit's Trait)"
+        },
+        {
+          "name": "Tower of Life",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 4% <@ba.talpu>(+1%)</> of Whisperain's ATK (Unaffected by this unit's Trait)"
+        },
+        {
+          "name": "Tower of Life",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 6% of Whisperain's ATK (Unaffected by this unit's Trait)"
+        },
+        {
+          "name": "Tower of Life",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 7% <@ba.talpu>(+1%)</> of Whisperain's ATK (Unaffected by this unit's Trait)"
+        }
+      ]
+    }
+  ]
+}

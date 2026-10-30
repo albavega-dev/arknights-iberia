@@ -1,0 +1,356 @@
+{
+  "operatorId": "char_4010_etlchi",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1115,
+            "atk": 295,
+            "def": 220,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1528,
+            "atk": 435,
+            "def": 302,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1528,
+            "atk": 435,
+            "def": 302,
+            "magicResistance": 0,
+            "cost": 21,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 2038,
+            "atk": 581,
+            "def": 388,
+            "magicResistance": 0,
+            "cost": 21,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 2038,
+            "atk": 581,
+            "def": 388,
+            "magicResistance": 0,
+            "cost": 23,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 2580,
+            "atk": 700,
+            "def": 452,
+            "magicResistance": 0,
+            "cost": 23,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.3,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 50,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": []
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 30,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_etlchi",
+      "operatorId": "char_4010_etlchi",
+      "region": "en",
+      "name": "A Ferry that Withers",
+      "moduleType": "REA-X",
+      "typeIcon": "rea-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 50,
+            "def": 20
+          },
+          "specialEffects": []
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 60,
+            "def": 38
+          },
+          "specialEffects": [
+            "When HP drops below 25% for the first time, immediately recovers 70% of Max HP and reduces Physical damage taken by 15% from that point onwards",
+            "When HP drops below 25% for the first time, immediately recovers 75% <@ba.talpu>(+5%)</> of Max HP and reduces Physical damage taken by 20% <@ba.talpu>(+5%)</> from that point onwards"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 70,
+            "def": 50
+          },
+          "specialEffects": [
+            "When HP drops below 25% for the first time, immediately recovers 85% of Max HP and reduces Physical damage taken by 20% from that point onwards",
+            "When HP drops below 25% for the first time, immediately recovers 90% <@ba.talpu>(+5%)</> of Max HP and reduces Physical damage taken by 25% <@ba.talpu>(+5%)</> from that point onwards"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_etlchi",
+      "operatorId": "char_4010_etlchi",
+      "region": "en",
+      "name": "A Collection of Rosy Tales",
+      "moduleType": "REA-Y",
+      "typeIcon": "rea-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 220,
+            "atk": 62,
+            "attack_speed": 5
+          },
+          "specialEffects": [
+            "When there are 2 or more enemies within Attack Range, ASPD <@ba.kw>+{attack_speed}</>"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 270,
+            "atk": 70,
+            "attack_speed": 6
+          },
+          "specialEffects": [
+            "When there are 2 or more enemies within Attack Range, ASPD <@ba.kw>+{attack_speed}</>",
+            "Attacks <$ba.steal>Steal</> 100 Max HP from the target (Caps at 1800) and deal 350 Arts damage per second to the target for 5s; while this damage over time effect is active, Entelechia recovers 2.5% Max HP per second",
+            "Attacks <$ba.steal>Steal</> 100 Max HP from the target (Caps at 1800) and deal 400 <@ba.talpu>(+50)</> Arts damage per second to the target for 5s; while this damage over time effect is active, Entelechia recovers 2.5% Max HP per second"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 75,
+            "attack_speed": 7
+          },
+          "specialEffects": [
+            "When there are 2 or more enemies within Attack Range, ASPD <@ba.kw>+{attack_speed}</>",
+            "Attacks <$ba.steal>Steal</> 120 Max HP from the target (Caps at 2160) and deal 450 Arts damage per second to the target for 6s; while this damage over time effect is active, Entelechia recovers 3.5% Max HP per second",
+            "Attacks <$ba.steal>Steal</> 120 Max HP from the target (Caps at 2160) and deal 500 <@ba.talpu>(+50)</> Arts damage per second to the target for 6s; while this damage over time effect is active, Entelechia recovers 3.5% Max HP per second"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Cannot be healed by allies; Attacks deal <@ba.kw>AoE damage</>; Recovers <@ba.kw>{value}</> HP for every enemy hit during attacks, up to Block count",
+      "blackboard": [
+        {
+          "key": "value",
+          "value": 50
+        }
+      ]
+    }
+  ]
+}

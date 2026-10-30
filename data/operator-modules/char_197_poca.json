@@ -1,0 +1,220 @@
+{
+  "operatorId": "char_197_poca",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_poca",
+      "name": "Siege Equipment Training Device",
+      "region": "en",
+      "type": "SIE-X",
+      "icon": "sie-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 80,000 damage with Rosa (excluding Support Units)",
+        "Clear Main Theme 7-9 with a 3-star rating; You must deploy your own Rosa, and cannot include any other Sniper Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 60,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 78,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Bone Piercer",
+              "description": "When attacking a heavy enemy, ignores 60% of its DEF and deals an additional 40% ATK as Physical damage (enemies with 3 weight or higher count for this effect)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 90,
+            "def": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When attacking a heavy enemy (weight 3 or greater), ATK increased to <@ba.kw>115%</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Bone Piercer",
+              "description": "When attacking a heavy enemy, ignores 60% of its DEF and deals an additional 60% ATK as Physical damage (enemies with 3 weight or higher count for this effect)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_poca",
+      "name": "'Сердце'",
+      "region": "en",
+      "type": "SIE-Y",
+      "icon": "sie-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Rosa use Avalanche Breaker a total of 5 times",
+        "Clear Main Theme 7-14 with a 3-star rating; You must deploy your own Rosa, and use Avalanche Breaker at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 70,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "max_dist",
+                  "value": 4.5
+                },
+                {
+                  "key": "min_dist",
+                  "value": 1
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.12
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 90,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "max_dist",
+                  "value": 4.5
+                },
+                {
+                  "key": "min_dist",
+                  "value": 1
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.12
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Ideal Student",
+              "description": "When this unit is in the squad, all [Ursus Student Self-government Group] Operators gain +10% ATK; for every [Ursus Student Self-government Group] Operator with an active skill, [Ursus Student Self-government Group] Operators gain an additional +11% ATK (max +33%)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Ideal Student",
+              "description": "When this unit is in the squad, all [Ursus Student Self-government Group] Operators gain +12% <@ba.talpu>(+2%)</> ATK; for every [Ursus Student Self-government Group] Operator with an active skill, [Ursus Student Self-government Group] Operators gain an additional +11% ATK (max +33%)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 100,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "The further away the enemy, the higher the damage dealt (up to an increase of <@ba.kw>{damage_scale:0%}</>)",
+              "blackboard": [
+                {
+                  "key": "max_dist",
+                  "value": 4.5
+                },
+                {
+                  "key": "min_dist",
+                  "value": 1
+                },
+                {
+                  "key": "damage_scale",
+                  "value": 0.12
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Ideal Student",
+              "description": "When this unit is in the squad, all [Ursus Student Self-government Group] Operators gain +12% ATK; for every [Ursus Student Self-government Group] Operator with an active skill, [Ursus Student Self-government Group] Operators gain an additional +15% ATK (max +45%)"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Ideal Student",
+              "description": "When this unit is in the squad, all [Ursus Student Self-government Group] Operators gain +14% <@ba.talpu>(+2%)</> ATK; for every [Ursus Student Self-government Group] Operator with an active skill, [Ursus Student Self-government Group] Operators gain an additional +15% ATK (max +45%)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

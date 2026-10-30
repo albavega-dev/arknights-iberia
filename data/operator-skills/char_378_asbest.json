@@ -1,0 +1,463 @@
+{
+  "operatorId": "char_378_asbest",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_asbest_1",
+      "name": "Resilient Mode",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            0.9,
+            0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 0,
+          "values": [
+            0.9,
+            0.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "values": [
+            0.9,
+            0.1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 0,
+          "values": [
+            0.85,
+            0.15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 0,
+          "values": [
+            0.85,
+            0.15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            0.85,
+            0.15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "values": [
+            0.8,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 0,
+          "values": [
+            0.77,
+            0.23
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 0,
+          "values": [
+            0.74,
+            0.26
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            0.7,
+            0.3
+          ]
+        }
+      ],
+      "description": "Dodges the next instance of <@ba.vup>Arts</> damage, and reduces <@ba.vup>Arts</> damage taken by <@ba.vup>-{fake:0%}</> during the skill duration",
+      "blackboardKeys": [
+        "damage_scale",
+        "fake"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_asbest_2",
+      "name": "Thermal Power Mode",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 40,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 10,
+          "rangeId": "2-5",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.3,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 41,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 59,
+          "initSp": 12,
+          "rangeId": "2-5",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.35,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 42,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 14,
+          "rangeId": "2-5",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.4,
+            0.25,
+            0.4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 43,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 16,
+          "rangeId": "2-5",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.45,
+            0.35,
+            0.4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 44,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 18,
+          "rangeId": "2-5",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.5,
+            0.35,
+            0.4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 45,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 20,
+          "rangeId": "2-5",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.55,
+            0.35,
+            0.4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 46,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 54,
+          "initSp": 22,
+          "rangeId": "2-5",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.6,
+            0.45,
+            0.4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 47,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 53,
+          "initSp": 24,
+          "rangeId": "3-13",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands significantly</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.7,
+            0.5,
+            0.4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 48,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 52,
+          "initSp": 26,
+          "rangeId": "3-13",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands significantly</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.8,
+            0.55,
+            0.4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 30,
+          "rangeId": "3-13",
+          "description": "Attack Interval <@ba.vdown>increases</>, ATK <@ba.vup>+{atk:0%}</>, DEF <@ba.vup>+{def:0%}</>, Attack Range <@ba.vup>expands significantly</>, and normal attacks now deal AoE damage",
+          "values": [
+            0.9,
+            0.6,
+            0.4
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "base_attack_time"
+      ]
+    }
+  ],
+  "ranges": {
+    "2-5": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    },
+    "3-13": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&limit&cost[011]",
+          "name": "Maverick",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&limit&cost3",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, productivity <@cc.vup>+25%</>, capacity limit <@cc.vdown>-12</>, and Morale consumed per hour <@cc.vdown>+0.25</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_limit&cost[020]",
+          "name": "Explorer",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_limit&cost3",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+16</> and Morale consumed per hour <@cc.vup>-0.25</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Moist Skin",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +5, restores 1 SP when hit by an enemy's normal Arts attack"
+        },
+        {
+          "name": "Moist Skin",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "RES +10, restores 3 SP when hit by an enemy's normal Arts attack"
+        }
+      ]
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import { compareCodeUnits } from "./string-order";
 import { createHash } from "node:crypto";
 
 import {
@@ -116,7 +117,7 @@ function buildEnvelope(plan: BiographyImportPlan, expected: BiographyPreflightIn
   const payload = {
     contractVersion: biographyImportContractVersion,
     plan: { records: [...plan.records].sort((a, b) => a.operatorId.localeCompare(b.operatorId, "en") || a.region.localeCompare(b.region, "en")).map(cloneBiography) },
-    expected: { en: [...expected.en].sort(), cn: [...expected.cn].sort() },
+    expected: { en: [...expected.en].sort(compareCodeUnits), cn: [...expected.cn].sort(compareCodeUnits) },
     revisions: { en: revisions.en, cn: revisions.cn },
     expectedCounts,
   } satisfies Omit<BiographyImportEnvelope, "sha256">;
@@ -134,7 +135,7 @@ export function verifyBiographyImportEnvelope(envelope: BiographyImportEnvelope)
   if (envelope.revisions?.en !== undefined && envelope.revisions?.cn !== undefined) {
     const result = preflightBiographies({ records: envelope.plan.records, expected: envelope.expected, revisions: envelope.revisions, coverage: "complete" });
     if (!result.report.ok || !("envelope" in result)) return false;
-    const expected = { en: [...envelope.expected.en].sort(), cn: [...envelope.expected.cn].sort() };
+    const expected = { en: [...envelope.expected.en].sort(compareCodeUnits), cn: [...envelope.expected.cn].sort(compareCodeUnits) };
     if (!sameStringArray(result.envelope.expected.en, expected.en) || !sameStringArray(result.envelope.expected.cn, expected.cn)) return false;
     if (JSON.stringify(result.envelope.expectedCounts) !== JSON.stringify(envelope.expectedCounts)) return false;
     const payload = { ...envelope, sha256: undefined };
@@ -263,7 +264,7 @@ export function preflightBiographies(input: BiographyPreflightInput): BiographyP
     received,
     selected: selectedCounts,
     missing,
-    unexpected: [...unexpected].sort(),
+    unexpected: [...unexpected].sort(compareCodeUnits),
     duplicates,
     errors,
     warnings,

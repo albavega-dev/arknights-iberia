@@ -1,0 +1,714 @@
+{
+  "operatorId": "char_4235_thumpy",
+  "region": "cn",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_thumpy_1",
+      "name": "“还不走？”",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 15,
+          "values": [
+            0.2,
+            0.2,
+            0
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 15,
+          "values": [
+            0.22,
+            0.22,
+            0
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 15,
+          "values": [
+            0.25,
+            0.25,
+            0
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 15,
+          "values": [
+            0.28,
+            0.28,
+            0
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 15,
+          "values": [
+            0.31,
+            0.31,
+            0
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 15,
+          "values": [
+            0.34,
+            0.34,
+            0
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 15,
+          "values": [
+            0.37,
+            0.37,
+            0
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 15,
+          "values": [
+            0.4,
+            0.4,
+            0
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 15,
+          "values": [
+            0.45,
+            0.45,
+            0
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 15,
+          "values": [
+            0.5,
+            0.5,
+            0
+          ]
+        }
+      ],
+      "description": "攻击力<@ba.vup>+{atk:0%}</>，防御力<@ba.vup>+{def:0%}</>，同时攻击并以<@ba.vup>小力度</>推动所有阻挡的敌人",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "attack@force"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_thumpy_2",
+      "name": "“慢慢走~”",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 14,
+          "values": [
+            0.4,
+            0.4,
+            0.3,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 14,
+          "values": [
+            0.42,
+            0.42,
+            0.32,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 14,
+          "values": [
+            0.45,
+            0.45,
+            0.34,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 14,
+          "values": [
+            0.48,
+            0.48,
+            0.37,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 14,
+          "values": [
+            0.51,
+            0.51,
+            0.39,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 14,
+          "values": [
+            0.54,
+            0.54,
+            0.41,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 14,
+          "values": [
+            0.57,
+            0.57,
+            0.43,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 14,
+          "values": [
+            0.6,
+            0.6,
+            0.45,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 14,
+          "values": [
+            0.65,
+            0.65,
+            0.47,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 20,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 14,
+          "values": [
+            0.7,
+            0.7,
+            0.5,
+            5,
+            0.5,
+            0.7,
+            0,
+            0.15
+          ]
+        }
+      ],
+      "description": "攻击力和防御力<@ba.vup>+{def:0%}</>；向前方可通行地面喷洒占据<@ba.vup>4</>格的强力胶，每<@ba.vup>{interval}</>秒造成相当于珊比攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害和<@ba.vup>{sluggish}</>秒<$ba.sluggish>停顿</>，其他干员对强力胶内的敌人造成物理伤害时附带相当于珊比攻击力<@ba.vup>{ep_damage_ratio[damage]:0%}</>的<$ba.dt.erosion2>侵蚀损伤</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "atk_scale",
+        "max_cnt",
+        "sluggish",
+        "interval",
+        "ep_damage_ratio[trigger]",
+        "ep_damage_ratio[damage]"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_thumpy_3",
+      "name": "“不准走！”",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 39,
+          "values": [
+            0.5,
+            0.6,
+            0.2,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 39,
+          "values": [
+            0.55,
+            0.65,
+            0.22,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 39,
+          "values": [
+            0.6,
+            0.7,
+            0.24,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 58,
+          "initSp": 39,
+          "values": [
+            0.65,
+            0.75,
+            0.27,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 40,
+          "values": [
+            0.7,
+            0.85,
+            0.29,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 40,
+          "values": [
+            0.75,
+            0.95,
+            0.31,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 57,
+          "initSp": 40,
+          "values": [
+            0.8,
+            1.05,
+            0.33,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 41,
+          "values": [
+            0.85,
+            1.15,
+            0.35,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 56,
+          "initSp": 41,
+          "values": [
+            0.9,
+            1.25,
+            0.37,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 60,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 55,
+          "initSp": 42,
+          "values": [
+            1,
+            1.35,
+            0.4,
+            2,
+            1,
+            0.8,
+            0,
+            5,
+            4,
+            -30
+          ]
+        }
+      ],
+      "description": "阻挡数<@ba.vup>+2</>且同时攻击所有阻挡的敌人，攻击力<@ba.vup>+{atk:0%}</>，防御力<@ba.vup>+{def:0%}</>；向前展开<@ba.vup>4</>格的便携传送带，使重量小于等于<@ba.vup>4</>且未被阻挡的敌人以每秒<@ba.vup>0.8</>格的速度移向珊比；传送带上的敌人每秒受到相当于珊比攻击力<@ba.vup>{atk_scale:0%}</>的物理伤害，且<$ba.dt.erosion2>侵蚀损伤</>爆发时防御力额外<@ba.vup>{thumpy[ep_break_water].def}</>",
+      "blackboardKeys": [
+        "atk",
+        "def",
+        "atk_scale",
+        "block_cnt",
+        "interval",
+        "conveyor_speed",
+        "ep_damage_ratio[trigger]",
+        "max_cnt",
+        "mass_level",
+        "thumpy[ep_break_water].def"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "dorm_rec_oneself[002]",
+          "name": "哪里都是兔子洞",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_one2",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "进驻宿舍时，自身心情每小时恢复<@cc.vup>+0.7</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "hire_spd[013]",
+          "name": "前任金牌接线员",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd5",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "进驻人力办公室时，人脉资源的联络速度<@cc.vup>+45%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "探险理论",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "珊比受到的<$ba.dt.element>元素损伤</>降低5%；珊比造成物理伤害时，附带攻击力8%的<$ba.dt.erosion2>侵蚀损伤</>，并使目标的<$ba.dt.erosion2>侵蚀损伤</>冷却减少1秒"
+        },
+        {
+          "name": "探险理论",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "珊比受到的<$ba.dt.element>元素损伤</>降低10%<@ba.talpu>（+5%）</>；珊比造成物理伤害时，附带攻击力10%<@ba.talpu>（+2%）</>的<$ba.dt.erosion2>侵蚀损伤</>，并使目标的<$ba.dt.erosion2>侵蚀损伤</>冷却减少1.2<@ba.talpu>（+0.2）</>秒"
+        },
+        {
+          "name": "探险理论",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "珊比受到的<$ba.dt.element>元素损伤</>降低15%；珊比造成物理伤害时，附带攻击力10%的<$ba.dt.erosion2>侵蚀损伤</>，并使目标的<$ba.dt.erosion2>侵蚀损伤</>冷却减少1秒"
+        },
+        {
+          "name": "探险理论",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "珊比受到的<$ba.dt.element>元素损伤</>降低20%<@ba.talpu>（+5%）</>；珊比造成物理伤害时，附带攻击力12%<@ba.talpu>（+2%）</>的<$ba.dt.erosion2>侵蚀损伤</>，并使目标的<$ba.dt.erosion2>侵蚀损伤</>冷却减少1.2<@ba.talpu>（+0.2）</>秒"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "坚硬脚板",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "受到过来自珊比伤害的敌人<$ba.dt.erosion2>侵蚀损伤</>爆发时，珊比获得8点防御力（最多叠加30层）和250点<$ba.barrier>屏障</>（不超过最大生命值的300%）"
+        },
+        {
+          "name": "坚硬脚板",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "受到过来自珊比伤害的敌人<$ba.dt.erosion2>侵蚀损伤</>爆发时，珊比获得11<@ba.talpu>（+3）</>点防御力（最多叠加30层）和330<@ba.talpu>（+80）</>点<$ba.barrier>屏障</>（不超过最大生命值的300%）"
+        }
+      ]
+    }
+  ]
+}

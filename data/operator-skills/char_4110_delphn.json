@@ -1,0 +1,463 @@
+{
+  "operatorId": "char_4110_delphn",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_delphn_1",
+      "name": "'Concentration'",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.3,
+            0.2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.31,
+            0.2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 23,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.32,
+            0.2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.35,
+            0.2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.36,
+            0.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.37,
+            0.2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 19,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.4,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 18,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.43,
+            0.2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 17,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.46,
+            0.2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 5,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 15,
+          "initSp": 5,
+          "rangeId": "4-1",
+          "values": [
+            0.5,
+            0.2
+          ]
+        }
+      ],
+      "description": "Attack range <@ba.vup>changes</>, attack interval is <@ba.vup>significantly reduced </>, and each attack deals <@ba.vup>{attack@atk_scale:0%}</> ATK as Arts damage",
+      "blackboardKeys": [
+        "attack@atk_scale",
+        "base_attack_time"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_delphn_2",
+      "name": "'Preemptive Strike'",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "values": [
+            0.3,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 11,
+          "values": [
+            0.35,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 12,
+          "values": [
+            0.4,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 13,
+          "values": [
+            0.45,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 14,
+          "values": [
+            0.5,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 15,
+          "values": [
+            0.55,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 16,
+          "values": [
+            0.6,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 17,
+          "values": [
+            0.75,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 18,
+          "values": [
+            0.9,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 20,
+          "values": [
+            1,
+            0.24,
+            0.24,
+            0.06,
+            0.06
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, but no longer targets enemies below <@ba.vup>50%</> HP. Attacks cause targets to take <@ba.vup>{damage_addition:0%}</> of Delphine's ATK per second as Arts damage (stacks up to 4 times, lasts until the skill ends)",
+      "blackboardKeys": [
+        "atk",
+        "max_cnt",
+        "attack@max_cnt",
+        "damage_addition",
+        "attack@damage_addition"
+      ]
+    }
+  ],
+  "ranges": {
+    "4-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": 0,
+          "col": 4
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "hire_spd&clue2[260]",
+          "name": "Old Acquaintances, New Friends",
+          "room": "HIRE",
+          "icon": "bskill_hire_spd&glasgow",
+          "color": "#565656",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the HR Office, HR contacting speed <@cc.vup>+20%</>, and for every <@cc.vup>1</> contact made, increases the likelihood of obtaining <$cc.g.glasgow><@cc.kw>Glasgow Gang</></> clues (working time and recruit slots improve the likelihood)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_tra_limit&spd[010]",
+          "name": "Master Strategist",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_g_limit&spd",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, for <@cc.vup>each</> <$cc.g.glasgow><@cc.kw>Glasgow Gang</></> Operator assigned to the same Trading Post, order acquisition efficiency <@cc.vup>+10%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Baptize the Blade",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases damage dealt to enemies above 80% HP by 10%"
+        },
+        {
+          "name": "Baptize the Blade",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases damage dealt to enemies above 80% HP by 12% <@ba.talpu>(+2%)</>"
+        },
+        {
+          "name": "Baptize the Blade",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases damage dealt to enemies above 80% HP by 18%"
+        },
+        {
+          "name": "Baptize the Blade",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases damage dealt to enemies above 80% HP by 20% <@ba.talpu>(+2%)</>"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Cut Without Mercy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "In [The Whirlpool that is Passion], ATK is increased to 120% against [Sarkaz] enemies, and stores an additional attack charge that only fires against [Sarkaz] enemies"
+        }
+      ]
+    }
+  ]
+}

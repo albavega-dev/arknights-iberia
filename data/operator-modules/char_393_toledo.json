@@ -1,0 +1,102 @@
+{
+  "operatorId": "char_393_toledo",
+  "region": "cn",
+  "tokens": {
+    "token_10067_toledo_tldptm": "征服者传说"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_toledo",
+      "name": "贵族义务",
+      "region": "cn",
+      "type": "UMD-Y",
+      "icon": "umd-y",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "战斗中非助战德·托莱多累计使用5次“危言耸听”",
+        "3星通关主题曲6-5；必须编入非助战德·托莱多并上场，其他成员仅可编入7名干员"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 135,
+            "def": 13
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "攻击范围内存在精英或领袖敌人时技力自然恢复速度+0.25/秒"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 160,
+            "def": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "攻击范围内存在精英或领袖敌人时技力自然恢复速度+0.25/秒"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "“贵族血统”",
+              "description": "攻击范围内被阻挡的敌人获得18%的<$ba.fragile>脆弱</>效果"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "“贵族血统”",
+              "description": "攻击范围内被阻挡的敌人获得20%<@ba.talpu>（+2%）</>的<$ba.fragile>脆弱</>效果"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 180,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "攻击范围内存在精英或领袖敌人时技力自然恢复速度+0.25/秒"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "“贵族血统”",
+              "description": "攻击范围内被阻挡的敌人获得19%的<$ba.fragile>脆弱</>效果"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "“贵族血统”",
+              "description": "攻击范围内被阻挡的敌人获得21%<@ba.talpu>（+2%）</>的<$ba.fragile>脆弱</>效果"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

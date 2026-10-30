@@ -1,0 +1,433 @@
+{
+  "operatorId": "char_4178_alanna",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_alanna_1",
+      "name": "Pneumatic Power-Up",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            10,
+            12
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            11,
+            14
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            12,
+            16
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            13,
+            18
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            15,
+            20
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            16,
+            22
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            17,
+            24
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            19,
+            26
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            21,
+            28
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "PASSIVE",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": 8,
+          "spCost": 0,
+          "initSp": 0,
+          "values": [
+            23,
+            30
+          ]
+        }
+      ],
+      "description": "Operators with a Support Device attached have ASPD <@ba.vup>+{attack_speed}</>, and Support Devices last for <@ba.vup>+{extend_time}</>s",
+      "blackboardKeys": [
+        "attack_speed",
+        "extend_time"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_alanna_2",
+      "name": "'Million-Pound Jack'",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 11,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 9,
+          "values": [
+            0.2,
+            20,
+            1.4,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 11,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 9,
+          "values": [
+            0.22,
+            22,
+            1.5,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 11,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 9,
+          "values": [
+            0.25,
+            25,
+            1.6,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 11,
+          "values": [
+            0.28,
+            28,
+            1.8,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 11,
+          "values": [
+            0.32,
+            32,
+            2,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 13,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 13,
+          "values": [
+            0.35,
+            35,
+            2.1,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 13,
+          "values": [
+            0.38,
+            38,
+            2.2,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "values": [
+            0.42,
+            42,
+            2.3,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "values": [
+            0.45,
+            45,
+            2.5,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 15,
+          "values": [
+            0.5,
+            50,
+            2.7,
+            1
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, ASPD <@ba.vup>+{attack_speed}</>, and increases Talent effect to <@ba.vup>{multi}</>x; when the skill ends, obtain <@ba.vup>{cnt}</> Support Device",
+      "blackboardKeys": [
+        "atk",
+        "attack_speed",
+        "multi",
+        "cnt"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "manu_token_prod_spd[000]",
+          "name": "Master of Machines α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_token_spd1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Precious Metal</> productivity <@cc.vup>+5%</> for <@cc.vup>every</> <$cc.tag.op><@cc.kw>Operation Platform</></> assigned to a Power Plant"
+        },
+        {
+          "buffId": "manu_token_prod_spd[010]",
+          "name": "Master of Machines β",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_token_spd2",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Precious Metal</> productivity <@cc.vup>+10%</> for <@cc.vup>every</> <$cc.tag.op><@cc.kw>Operation Platform</></> assigned to a Power Plant"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd_double[000]",
+          "name": "'Here to Help!'",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd_double",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, <@cc.kw>Precious Metal</> productivity <@cc.vup>+15%</> when <@cc.kw>Warmy</> is assigned to the same Factory"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Carries 2 Support Devices (max 2 deployed at once) that allow an Operator to ignore 40 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Carries 2 Support Devices (max 2 deployed at once) that allow an Operator to ignore 50 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 60 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 70 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 80 DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        },
+        {
+          "name": "Makeshift Modification",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Carries 3 Support Devices (max 2 deployed at once) that allow an Operator to ignore 90 <@ba.talpu>(+10)</> DEF when attacking enemies (lasts 30s); effects from Devices do not stack"
+        }
+      ]
+    }
+  ]
+}

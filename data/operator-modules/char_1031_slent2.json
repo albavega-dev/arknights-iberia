@@ -1,0 +1,208 @@
+{
+  "operatorId": "char_1031_slent2",
+  "region": "en",
+  "tokens": {
+    "token_10029_slent2_protrb": "Night Banisher"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_slent2",
+      "name": "Hard to Keep Awake",
+      "region": "en",
+      "type": "BLS-X",
+      "icon": "bls-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Silence the Paradigmatic use Dreadnought Protocol a total of 8 times (excluding Support Units)",
+        "Clear Main Theme 6-3 with a 3-star rating; You must deploy your own Silence the Paradigmatic, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Deals <@ba.kw>Arts damage</>; When skill is active, attacks instead restore the HP of allies (heal amount is equal to <@ba.kw>{heal_scale:0%}</> of ATK)",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 130,
+            "atk": 60
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Plumes of Plenty",
+              "description": "Increases the Max HP of allies within Attack Range by +6%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 6% of this unit's ATK every second; effect doubles for [Rhine Lab] Operators"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Plumes of Plenty",
+              "description": "Increases the Max HP of allies within Attack Range by +6%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 7% <@ba.talpu>(+1%)</> of this unit's ATK every second; effect doubles for [Rhine Lab] Operators"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 70
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Plumes of Plenty",
+              "description": "Increases the Max HP of allies within Attack Range by +10%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 7% of this unit's ATK every second; effect doubles for [Rhine Lab] Operators"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Plumes of Plenty",
+              "description": "Increases the Max HP of allies within Attack Range by +10%; Allies with less than 50% HP within this unit's Attack Range heal HP equal to 8% <@ba.talpu>(+1%)</> of this unit's ATK every second; effect doubles for [Rhine Lab] Operators"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_slent2",
+      "name": "Controllable Momentum",
+      "region": "en",
+      "type": "BLS-Y",
+      "icon": "bls-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Silence the Paradigmatic, and use Dreadnought Protocol at least 1 time in each battle",
+        "Clear Where Vernal Winds Will Never Blow WB-5 with a 3-star rating; You must deploy your own Silence the Paradigmatic, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Deals Arts damage to <@ba.kw>2</> targets; when skill is active, attacks instead restore the HP of <@ba.kw>2</> allies (heal amount is equal to 75% of ATK)",
+              "blackboard": [
+                {
+                  "key": "attack@max_target",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Deals Arts damage to <@ba.kw>2</> targets; when skill is active, attacks instead restore the HP of <@ba.kw>2</> allies (heal amount is equal to 75% of ATK)",
+              "blackboard": [
+                {
+                  "key": "attack@max_target",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Plumes of Plenty",
+              "description": "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 5% of this unit's ATK every second; the first time an Operator within range drops below 50% HP, grants that Operator a Barrier equal to 35% of this unit's Max HP; effect doubles for [Rhine Lab] Operators"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Plumes of Plenty",
+              "description": "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 6% <@ba.talpu>(+1%)</> of this unit's ATK every second; the first time an Operator within range drops below 50% HP, grants that Operator a Barrier equal to 35% of this unit's Max HP; effect doubles for [Rhine Lab] Operators"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 62
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Deals Arts damage to <@ba.kw>2</> targets; when skill is active, attacks instead restore the HP of <@ba.kw>2</> allies (heal amount is equal to 75% of ATK)",
+              "blackboard": [
+                {
+                  "key": "attack@max_target",
+                  "value": 2
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Plumes of Plenty",
+              "description": "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 5% of this unit's ATK every second; the first time an Operator within range drops below 50% HP, grants that Operator a Barrier equal to 50% of this unit's Max HP; effect doubles for [Rhine Lab] Operators"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Plumes of Plenty",
+              "description": "Allies with less than 50% HP within this unit's Attack Range heal HP equal to 6% <@ba.talpu>(+1%)</> of this unit's ATK every second; the first time an Operator within range drops below 50% HP, grants that Operator a Barrier equal to 50% of this unit's Max HP; effect doubles for [Rhine Lab] Operators"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

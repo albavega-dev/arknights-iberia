@@ -1,0 +1,105 @@
+{
+  "operatorId": "char_4188_confes",
+  "region": "en",
+  "skills": [],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[006]",
+          "name": "Now Charging",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "power_rec_spd_ext&faction[000]",
+          "name": "Now Under Maintenance",
+          "room": "POWER",
+          "icon": "bskill_power_rec_spd_ext&faction",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to a Power Plant, if another <$cc.g.laterano><@cc.kw>Laterano</></> Operator is assigned to a Power Plant, drone charging speed <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Pay-Per-Confession I",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "The first time blocking an enemy, gains 2 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 5s"
+        },
+        {
+          "name": "Pay-Per-Confession II",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 2,
+          "description": "The first time blocking an enemy, gains 2 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 6s"
+        },
+        {
+          "name": "Pay-Per-Confession III",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "The first time blocking an enemy, gains 3 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 6s"
+        },
+        {
+          "name": "Pay-Per-Confession IV",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 4,
+          "description": "The first time blocking an enemy, gains 3 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 7s"
+        },
+        {
+          "name": "Pay-Per-Confession V",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "The first time blocking an enemy, gains 4 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 7s"
+        },
+        {
+          "name": "Pay-Per-Confession VI",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "The first time blocking an enemy, gains 4 DP and puts the blocked enemy to <$ba.sleep>Sleep</> for 8s"
+        }
+      ]
+    }
+  ]
+}

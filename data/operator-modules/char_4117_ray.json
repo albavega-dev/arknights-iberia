@@ -1,0 +1,166 @@
+{
+  "operatorId": "char_4117_ray",
+  "region": "en",
+  "tokens": {
+    "token_10034_ray_sndbst": "Sandbeast"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ray",
+      "name": "Dancing Moonlight",
+      "region": "en",
+      "type": "HUN-X",
+      "icon": "hun-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 10 elite or leader enemies with Ray (excluding Support Units)",
+        "Clear Main Theme S9-1 with a 3-star rating under Standard Environment; You must deploy your own Ray, and use 'See the Light' at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 150,
+            "atk": 50,
+            "def": 15
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 180,
+            "atk": 65,
+            "def": 20
+          },
+          "tokenAttributes": {
+            "token_10034_ray_sndbst": {
+              "respawn_time": -5
+            }
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Patrol Partner",
+              "description": "Can deploy a sandbeast within Attack Range to scout an area for 25s, extending Attack Range into that area. Prioritizes attacking targets within this area, and deals 18% more Physical damage to them; Sandbeast has -5 seconds Redeployment Time"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 70,
+            "def": 25
+          },
+          "tokenAttributes": {
+            "token_10034_ray_sndbst": {
+              "respawn_time": -10
+            }
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Patrol Partner",
+              "description": "Can deploy a sandbeast within Attack Range to scout an area for 25s, extending Attack Range into that area. Prioritizes attacking targets within this area, and deals 20% more Physical damage to them; Sandbeast has -10 seconds Redeployment Time"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_ray",
+      "name": "To Certify What?",
+      "region": "en",
+      "type": "HUN-Y",
+      "icon": "hun-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Ray",
+        "Clear Ending a Grand Overture GO-4 with a 3-star rating; You must deploy your own Ray, and cannot include any other Sniper Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 60,
+            "attack_speed": 5
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 65,
+            "attack_speed": 6
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Extreme Focus",
+              "description": "When attacking the same target, each attack increases ATK by 8%, stacking up to 4 times"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Extreme Focus",
+              "description": "When attacking the same target, each attack increases ATK by 9% <@ba.talpu>(+1%)</>, stacking up to 4 times"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 75,
+            "attack_speed": 7
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Extreme Focus",
+              "description": "When attacking the same target, each attack increases ATK by 9%, stacking up to 4 times"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Extreme Focus",
+              "description": "When attacking the same target, each attack increases ATK by 10% <@ba.talpu>(+1%)</>, stacking up to 4 times"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

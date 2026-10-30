@@ -1,0 +1,163 @@
+{
+  "operatorId": "char_358_lisa",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_lisa",
+      "name": "Pocket Omamori",
+      "region": "en",
+      "type": "DEC-X",
+      "icon": "dec-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Suzuran use Foxfire Haze a total of 6 times (excluding Support Units)",
+        "Clear Twilight of Wolumonde TW-7 with a 3-star rating; you must deploy your own Suzuran, and cannot include any Supporter Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "attack_speed": 4
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 140,
+            "attack_speed": 5
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Skill Aura - Supporter",
+              "description": "When deployed, increases the SP recovery rate of all Supporter Operators by +0.4/second (only the highest effect of this type takes place) and ATK by +6%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 180,
+            "attack_speed": 6
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "SP recovery +0.2/s when there are enemies within range"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Skill Aura - Supporter",
+              "description": "When deployed, increases the SP recovery rate of all Supporter Operators by +0.4/second (only the highest effect of this type takes place) and ATK by +9%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_lisa",
+      "name": "Children of Terra",
+      "region": "en",
+      "type": "DEC-Y",
+      "icon": "dec-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Suzuran, and unleash Foxfire Haze at least 1 time in each battle",
+        "Clear Darknights Memoir DM-EX-1 with a 3-star rating; You must deploy your own Suzuran, and can only include 6 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 90,
+            "atk": 38
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 110,
+            "atk": 43
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Binding Circle",
+              "description": "Enemies in range that are <$ba.sluggish>Slowed</> also gain 21% <$ba.fragile>Fragile</> and 5% <$ba.weaken>Enfeeble</> for an equal duration"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Binding Circle",
+              "description": "Enemies in range that are <$ba.sluggish>Slowed</> also gain 24% <@ba.talpu>(+3%)</> <$ba.fragile>Fragile</> and 5% <$ba.weaken>Enfeeble</> for an equal duration"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 46
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Binding Circle",
+              "description": "Enemies in range that are <$ba.sluggish>Slowed</> also gain 22% <$ba.fragile>Fragile</> and 8% <$ba.weaken>Enfeeble</> for an equal duration"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Binding Circle",
+              "description": "Enemies in range that are <$ba.sluggish>Slowed</> also gain 25% <@ba.talpu>(+3%)</> <$ba.fragile>Fragile</> and 8% <$ba.weaken>Enfeeble</> for an equal duration"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

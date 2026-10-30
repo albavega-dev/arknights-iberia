@@ -1,0 +1,480 @@
+{
+  "operatorId": "char_4119_wanqin",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skcom_assist_cost[3]",
+      "name": "Support γ",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 10,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 10,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 11,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 11,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 11,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 12,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 13,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 14,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 8,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 15,
+          "values": [
+            18,
+            0.44,
+            1
+          ]
+        }
+      ],
+      "description": "Stops attacking and recovers <@ba.vup>{value}</> DP over the skill duration",
+      "blackboardKeys": [
+        "value",
+        "interval",
+        "cost"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_wanqin_2",
+      "name": "Along the Easterlies",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 6,
+          "rangeId": "x-4",
+          "values": [
+            10,
+            0.1,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 6,
+          "rangeId": "x-4",
+          "values": [
+            12,
+            0.1,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 6,
+          "rangeId": "x-4",
+          "values": [
+            12,
+            0.12,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 8,
+          "rangeId": "x-4",
+          "values": [
+            15,
+            0.12,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 8,
+          "rangeId": "x-4",
+          "values": [
+            15,
+            0.15,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 8,
+          "rangeId": "x-4",
+          "values": [
+            20,
+            0.15,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 10,
+          "rangeId": "x-4",
+          "values": [
+            20,
+            0.2,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 12,
+          "rangeId": "x-4",
+          "values": [
+            23,
+            0.2,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 14,
+          "rangeId": "x-4",
+          "values": [
+            23,
+            0.25,
+            20,
+            0.75,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 15,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 16,
+          "rangeId": "x-4",
+          "values": [
+            25,
+            0.25,
+            20,
+            0.75,
+            1
+          ]
+        }
+      ],
+      "description": "Stops attacking, gradually recovers <@ba.vup>{value}</> DP in total\nWhile skill is active, restores the HP of surrounding allied Operators by <@ba.vup>{attack@heal_scale:0%}</> of Wanqing's ATK every second, and increases their ASPD by <@ba.vup>+{attack@attack_speed}</> if they are deployed facing the same direction as Wanqing",
+      "blackboardKeys": [
+        "attack@attack_speed",
+        "attack@heal_scale",
+        "value",
+        "wanqin_s_2[cost].interval",
+        "wanqin_s_2[cost].cost"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "workshop_proc_probability[032]",
+          "name": "Tianshi Bureau Artisanship",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_p4",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, the production rate of byproduct increases by <@cc.vup>65%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "workshop_formula_cost3[400]",
+          "name": "Tireless Study",
+          "room": "WORKSHOP",
+          "icon": "bskill_ws_all_cost1",
+          "color": "#e3eb00",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Workshop to process <@cc.kw>any material</>, all formulas that cost <@cc.kw>4</> Morale now <@cc.vup>-1</> Morale cost"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Observe Nature's Way",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases the Max HP of Operators in the surrounding 8 tiles by +3%, increased to +5% if they are deployed facing the same direction as Wanqing",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Observe Nature's Way",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases the Max HP of Operators in the surrounding 8 tiles by +4% <@ba.talpu>(+1%)</>, increased to +6% <@ba.talpu>(+1%)</> if they are deployed facing the same direction as Wanqing",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Observe Nature's Way",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases the Max HP of Operators in the surrounding 8 tiles by +5%, increased to +9% if they are deployed facing the same direction as Wanqing",
+          "rangeId": "x-4"
+        },
+        {
+          "name": "Observe Nature's Way",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases the Max HP of Operators in the surrounding 8 tiles by +6% <@ba.talpu>(+1%)</>, increased to +10% <@ba.talpu>(+1%)</> if they are deployed facing the same direction as Wanqing",
+          "rangeId": "x-4"
+        }
+      ]
+    }
+  ]
+}

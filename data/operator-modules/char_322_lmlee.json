@@ -1,0 +1,163 @@
+{
+  "operatorId": "char_322_lmlee",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_lmlee",
+      "name": "'Wandering'",
+      "region": "en",
+      "type": "MER-X",
+      "icon": "mer-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 80 enemies with Lee (excluding Support Units)",
+        "Clear Main Theme 3-1 with a 3-star rating; You must deploy your own Lee, and the remaining units can only consist of Sniper, Vanguard, and Medic operators"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 55
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 67
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Preparedness Averts Peril",
+              "description": "When DP is consumed by this unit's Trait, if there is sufficient DP, consumes 5 DP instead to block the next <$ba.stun>Stun</>/<$ba.frozen>Freeze</> effect inflicted on this unit, and stuns the attacker for 4 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 74
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Preparedness Averts Peril",
+              "description": "When DP is consumed by this unit's Trait, if there is sufficient DP, consumes 4 DP instead to block the next <$ba.stun>Stun</>/<$ba.frozen>Freeze</> effect inflicted on this unit, and stuns the attacker for 4 seconds"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_lmlee",
+      "name": "'Distinguisher'",
+      "region": "en",
+      "type": "MER-Y",
+      "icon": "mer-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Lee, and unleash Honored Guest at least 1 time in each battle",
+        "Clear Invitation to Wine IW-EX-1 with a 3-star rating; You must deploy your own Lee, and have him defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 57,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ATK +4% whenever Trait cost is paid, stacking up to 5 times"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 69,
+            "def": 43
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ATK +4% whenever Trait cost is paid, stacking up to 5 times"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Kindness Begets Prosperity",
+              "description": "When Lee is blocking an enemy, the enemy has ASPD -17 and Lee has ASPD +17; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Kindness Begets Prosperity",
+              "description": "When Lee is blocking an enemy, the enemy has ASPD -18 <@ba.talpu>(+1)</> and Lee has ASPD +18 <@ba.talpu>(+1)</>; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 76,
+            "def": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "ATK +4% whenever Trait cost is paid, stacking up to 5 times"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Kindness Begets Prosperity",
+              "description": "When Lee is blocking an enemy, the enemy has ASPD -20 and Lee has ASPD +20; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Kindness Begets Prosperity",
+              "description": "When Lee is blocking an enemy, the enemy has ASPD -21 <@ba.talpu>(+1)</> and Lee has ASPD +21 <@ba.talpu>(+1)</>; If there is only one enemy within the surrounding 8 tiles, this effect is doubled"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,563 @@
+{
+  "operatorId": "char_4184_dolris",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_dolris_1",
+      "name": "Cogito Ergo",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 20,
+          "rangeId": "x-2",
+          "values": [
+            0.2,
+            0.2,
+            50
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 20,
+          "rangeId": "x-2",
+          "values": [
+            0.23,
+            0.23,
+            55
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 21,
+          "rangeId": "x-2",
+          "values": [
+            0.27,
+            0.27,
+            60
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 21,
+          "rangeId": "x-2",
+          "values": [
+            0.3,
+            0.3,
+            65
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 22,
+          "rangeId": "x-2",
+          "values": [
+            0.33,
+            0.33,
+            70
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 41,
+          "initSp": 22,
+          "rangeId": "x-2",
+          "values": [
+            0.37,
+            0.37,
+            75
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 23,
+          "rangeId": "x-2",
+          "values": [
+            0.4,
+            0.4,
+            80
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 23,
+          "rangeId": "x-2",
+          "values": [
+            0.45,
+            0.45,
+            85
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 24,
+          "rangeId": "x-2",
+          "values": [
+            0.5,
+            0.5,
+            90
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 25,
+          "rangeId": "x-2",
+          "values": [
+            0.55,
+            0.55,
+            100
+          ]
+        }
+      ],
+      "description": "Attack Range expands, all allied units within Attack Range gain <$ba.inspire>Inspiration</> equal to <@ba.vup>{attack@atk:0%}</> of Uika Misumi's ATK and DEF; when targets of this skill receive damage, Uika Misumi will restore <@ba.vup>{attack@heal_value_s1}</> HP to them",
+      "blackboardKeys": [
+        "attack@atk",
+        "attack@def",
+        "attack@heal_value_s1"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_dolris_2",
+      "name": "Paeniteo Ergo",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 8,
+          "values": [
+            0.7,
+            0.3,
+            0.6,
+            0.1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 39,
+          "initSp": 10,
+          "values": [
+            0.7,
+            0.3,
+            0.6,
+            0.1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 38,
+          "initSp": 11,
+          "values": [
+            0.7,
+            0.3,
+            0.6,
+            0.1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 37,
+          "initSp": 12,
+          "values": [
+            0.8,
+            0.3,
+            0.7,
+            0.15
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 36,
+          "initSp": 13,
+          "values": [
+            0.8,
+            0.3,
+            0.7,
+            0.15
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 14,
+          "values": [
+            0.8,
+            0.3,
+            0.7,
+            0.15
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 15,
+          "values": [
+            0.9,
+            0.3,
+            0.8,
+            0.2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 17,
+          "values": [
+            0.9,
+            0.3,
+            0.85,
+            0.2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 31,
+          "initSp": 18,
+          "values": [
+            0.9,
+            0.3,
+            0.9,
+            0.25
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 12,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "values": [
+            1,
+            0.3,
+            1,
+            0.25
+          ]
+        }
+      ],
+      "description": "When skill is active, Trait no longer restores HP; every {interval}s, deals <@ba.vup>{attack@atk_scale:0%}</> of ATK as Arts damage to a random enemy within Attack Range alongside healing an ally within Attack Range by <@ba.vup>{attack@heal_scale:0%}</> of ATK; all other allied units within Attack Range gain Inspiration equal to <@ba.vup>{attack@atk:0%}</> of Uika Misumi's ATK",
+      "blackboardKeys": [
+        "attack@atk",
+        "interval",
+        "attack@atk_scale",
+        "attack@heal_scale"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-2": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": -1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -2
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": -1
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "control_dorm_bd[000]",
+          "name": "Idol's Aura",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_dorm_uika1",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, for <@cc.vup>every</> Operator in the Dormitories, <$cc.bd_mujica><@cc.rem>Passion</></> <@cc.vup>+1</> "
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "control_dorm_rec2[000]",
+          "name": "Resonant Bond",
+          "room": "CONTROL",
+          "icon": "bskill_ctrl_dorm_uika2",
+          "color": "#005752",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to the Control Center, all Operators in Dormitories recover <@cc.vup>+0.05</> Morale per hour (Only the strongest effect of this type takes place); when assigned to the Control Center with <@cc.kw>Sakiko Togawa</>, Morale consumed per hour by <@cc.kw>Sakiko Togawa</> <@cc.vup>+0.1</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 15% of ATK every 5s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 20% <@ba.talpu>(+5%)</> of ATK every 5s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 20% of ATK every 4s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 25% <@ba.talpu>(+5%)</> of ATK every 4s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 30% of ATK every 4s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        },
+        {
+          "name": "Mask of Lies",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "When skill is inactive, restores HP to the ally with the lowest HP within Attack Range for 35% <@ba.talpu>(+5%)</> of ATK every 4s; when skill is active, prioritizes Sakiko Togawa as the restoration target"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Do Not Fear Sorrow",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +2 whenever healing an <$ba.mujica>Ave Mujica</> member"
+        },
+        {
+          "name": "Do Not Fear Sorrow",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +3 whenever restoring an <$ba.mujica>Ave Mujica</> member's HP; when <$ba.mujica>Ave Mujica</> members within Attack Range attack, they deal an extra 15% of Uika Misumi's ATK as Arts damage"
+        },
+        {
+          "name": "Do Not Fear Sorrow",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "<$ba.fever>Fever</> +5 whenever restoring an <$ba.mujica>Ave Mujica</> member's HP; when <$ba.mujica>Ave Mujica</> members within Attack Range attack, they deal an extra 30% of Uika Misumi's ATK as Arts damage"
+        }
+      ]
+    }
+  ]
+}

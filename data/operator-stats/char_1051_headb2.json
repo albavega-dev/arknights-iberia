@@ -1,0 +1,319 @@
+{
+  "operatorId": "char_1051_headb2",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1293,
+            "atk": 594,
+            "def": 196,
+            "magicResistance": 0,
+            "cost": 18,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.8,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1748,
+            "atk": 826,
+            "def": 269,
+            "magicResistance": 0,
+            "cost": 18,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.8,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1748,
+            "atk": 826,
+            "def": 269,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.8,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 2301,
+            "atk": 1060,
+            "def": 346,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.8,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 2301,
+            "atk": 1060,
+            "def": 346,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.8,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 2950,
+            "atk": 1262,
+            "def": 408,
+            "magicResistance": 0,
+            "cost": 20,
+            "blockCnt": 2,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 1.8,
+            "respawnTime": 70,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 50,
+        "def": 65,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": []
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 40,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": []
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_headb2",
+      "operatorId": "char_1051_headb2",
+      "region": "en",
+      "name": "Unissued Medal",
+      "moduleType": "HAM-X",
+      "typeIcon": "ham-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 63,
+            "def": 21
+          },
+          "specialEffects": [
+            "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 320,
+            "atk": 75,
+            "def": 26
+          },
+          "specialEffects": [
+            "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+            "Physical damage caused by Trait splash effect increases by 32%; any high ground tile touched by the splash deals 24% ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles",
+            "Physical damage caused by Trait splash effect increases by 32%; any high ground tile touched by the splash deals 27%<@ba.talpu>(+3%)</> ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 380,
+            "atk": 83,
+            "def": 30
+          },
+          "specialEffects": [
+            "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+            "Physical damage caused by Trait splash effect increases by 40%; any high ground tile touched by the splash deals 24% ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles",
+            "Physical damage caused by Trait splash effect increases by 40%; any high ground tile touched by the splash deals 27%<@ba.talpu>(+3%)</> ATK as Physical damage and inflicts a 0.5s <$ba.sluggish>Slow</> to all ground enemies in the four adjacent tiles"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Attacks deal <@ba.kw>{attack@atk_scale_2:0%}</> ATK as <@ba.kw>AOE</> Physical damage to enemies around the target.",
+      "blackboard": [
+        {
+          "key": "attack@ability_range_radius",
+          "value": 1
+        },
+        {
+          "key": "attack@atk_scale_2",
+          "value": 0.5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "operatorId": "char_297_hamoni",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_hamoni",
+      "name": "The Spy's Dossiers",
+      "region": "en",
+      "type": "MSC-X",
+      "icon": "msc-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Harmonie, and unleash A Disastrous Drowning at least 1 time in each battle",
+        "Clear Main Theme 6-5 with a 3-star rating; You must deploy your own Harmonie, and have Harmonie defeat at least 2 Possessed Heavy Defenders"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 50,
+            "magic_resistance": 3
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 68,
+            "magic_resistance": 4
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "A Surprise Visitor",
+              "description": "Deal 20% more damage when attacking blocked enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "A Surprise Visitor",
+              "description": "Deal 23% <@ba.talpu>(+3%)</> more damage when attacking blocked enemies"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 82,
+            "magic_resistance": 4
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "A Surprise Visitor",
+              "description": "Deal 22% more damage when attacking blocked enemies"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "A Surprise Visitor",
+              "description": "Deal 25% <@ba.talpu>(+3%)</> more damage when attacking blocked enemies"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

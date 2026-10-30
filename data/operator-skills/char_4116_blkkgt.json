@@ -1,0 +1,819 @@
+{
+  "operatorId": "char_4116_blkkgt",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_blkkgt_1",
+      "name": "Pure Force",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.6,
+            5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.65,
+            5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 7,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.7,
+            5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.75,
+            5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.8,
+            5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 6,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.85,
+            5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 5,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            1.9,
+            6
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2,
+            6
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 4,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.1,
+            6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 3,
+          "initSp": 0,
+          "rangeId": "x-4",
+          "values": [
+            2.2,
+            6
+          ]
+        }
+      ],
+      "description": "The next attack deals <@ba.vup>{atk_scale_s1:0%}</> of ATK as Physical damage twice to up to <@ba.vup>{max_target}</> nearby ground enemies",
+      "blackboardKeys": [
+        "atk_scale_s1",
+        "max_target"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_blkkgt_2",
+      "name": "Silent Derision",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 18,
+          "initSp": 0,
+          "rangeId": "1-4",
+          "values": [
+            2.2,
+            5,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 18,
+          "initSp": 0,
+          "rangeId": "1-4",
+          "values": [
+            2.3,
+            5,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 18,
+          "initSp": 0,
+          "rangeId": "1-4",
+          "values": [
+            2.35,
+            5,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 2,
+          "rangeId": "1-4",
+          "values": [
+            2.5,
+            5,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 2,
+          "rangeId": "1-4",
+          "values": [
+            2.6,
+            5,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 15,
+          "initSp": 2,
+          "rangeId": "1-4",
+          "values": [
+            2.7,
+            5,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 5,
+          "rangeId": "1-4",
+          "values": [
+            2.8,
+            5,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 7,
+          "rangeId": "1-4",
+          "values": [
+            2.9,
+            6,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 8,
+          "rangeId": "1-4",
+          "values": [
+            3,
+            6,
+            2,
+            3,
+            1
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WHEN_ATTACK",
+          "spCost": 12,
+          "initSp": 10,
+          "rangeId": "1-4",
+          "values": [
+            3.1,
+            6,
+            2,
+            3,
+            1
+          ]
+        }
+      ],
+      "description": "Slash <@ba.vup>{blkkgt_s_2[not_blocked].trig_cnt}</> times at up to <@ba.vup>{max_target}</> ground enemies ahead, or slash <@ba.vup>{blkkgt_s_2[blocked].trig_cnt}</> times when attacking blocked enemies. Talent trigger rate increased to <@ba.vup>{prob:0%}</>, and each slash deals <@ba.vup>{dot_scale:0%}</> of ATK as Physical damage\n<@ba.rem>Can store 2 charges</>",
+      "blackboardKeys": [
+        "dot_scale",
+        "max_target",
+        "blkkgt_s_2[not_blocked].trig_cnt",
+        "blkkgt_s_2[blocked].trig_cnt",
+        "prob"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_blkkgt_3",
+      "name": "Return To Silence",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            5,
+            1.5,
+            0.3,
+            1,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            5,
+            1.6,
+            0.3,
+            1,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            5,
+            1.7,
+            0.3,
+            1,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            5,
+            1.8,
+            0.3,
+            1,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            5,
+            1.9,
+            0.3,
+            1,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 10,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            5,
+            1.95,
+            0.3,
+            1,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 15,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            6,
+            2,
+            0.3,
+            1,
+            1,
+            3,
+            2
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 18,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            6,
+            2.1,
+            0.3,
+            1,
+            1,
+            3.1,
+            2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 18,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            6,
+            2.2,
+            0.3,
+            1,
+            1,
+            3.2,
+            2
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 0,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 20,
+          "rangeId": "x-1",
+          "values": [
+            1,
+            6,
+            2.35,
+            0.3,
+            1,
+            1,
+            3.3,
+            2
+          ]
+        }
+      ],
+      "description": "Slash <@ba.vup>10</> times, each dealing <@ba.vup>{d_atk_scale:0%}</> ATK as Physical damage to up to <@ba.vup>{max_target}</> enemies. Talent trigger chance increases to <@ba.vup>{prob:0%}</>, and continuously drags enemies towards self, with <@ba.vup>moderate</> force. Then deal <@ba.vup>{e_atk_scale_end:0%}</> of ATK as Physical damage once, and drag enemies towards self with <@ba.vup>great</> force",
+      "blackboardKeys": [
+        "prob",
+        "max_target",
+        "d_atk_scale",
+        "d_hit_interval",
+        "p_force",
+        "p_hit_interval",
+        "e_atk_scale_end",
+        "e_force"
+      ]
+    }
+  ],
+  "ranges": {
+    "1-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    },
+    "x-1": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -2,
+          "col": 0
+        }
+      ]
+    },
+    "x-4": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit[100]",
+          "name": "Intimidate",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit_down1",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+20%</> and order limit <@cc.vdown>-2</> (minimum 1)"
+        },
+        {
+          "buffId": "trade_ord_spd&limit[101]",
+          "name": "Imposing Presence",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit_down2",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+25%</> and order limit <@cc.vdown>-6</> (minimum 1)"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd_variable3[000]",
+          "name": "Champion's Bearing",
+          "room": "TRADING",
+          "icon": "bskill_tra_limit2spd",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, for every <@cc.vup>5</> order limit increase provided by Operators in the Trading Post, provides <@cc.vup>25%</> order acquisition efficiency, up to a maximum of <@cc.vup>100%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Born Warrior",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing damage, there is a 10% chance to increase ATK to 130% and <$ba.tremble>Frighten</> the target for 5s"
+        },
+        {
+          "name": "Born Warrior",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When dealing damage, there is a 10% chance to increase ATK to 135% <@ba.talpu>(+5%)</> and <$ba.tremble>Frighten</> the target for 5s"
+        },
+        {
+          "name": "Born Warrior",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When dealing damage, there is a 10% chance to increase ATK to 160% and <$ba.tremble>Frighten</> the target for 5s."
+        },
+        {
+          "name": "Born Warrior",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When dealing damage, there is a 10% chance to increase ATK to 165% <@ba.talpu>(+5%)</> and <$ba.tremble>Frighten</> the target for 5s"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Living Legend",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Ignore 25% DEF when attacking <$ba.tremble>Frightened</> targets"
+        },
+        {
+          "name": "Living Legend",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Ignore 30% <@ba.talpu>(+5%)</> DEF when attacking <$ba.tremble>Frightened</> targets"
+        }
+      ]
+    }
+  ]
+}

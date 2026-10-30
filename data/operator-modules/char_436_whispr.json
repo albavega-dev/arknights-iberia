@@ -1,0 +1,142 @@
+{
+  "operatorId": "char_436_whispr",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_whispr",
+      "name": "A Quaint First-Aid Kit",
+      "region": "en",
+      "type": "WAH-X",
+      "icon": "wah-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Whisperain, and unleash Pain Suppression at least 1 time in each battle",
+        "Clear Main Theme 2-5 with a 3-star rating; you must deploy your own Whisperain, and cannot include any Medic Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <$ba.buffres>status resistance</>, and become less likely to be attacked",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 0.8
+                },
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                },
+                {
+                  "key": "one_minus_status_resistance",
+                  "value": -0.5
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 120,
+            "atk": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <$ba.buffres>status resistance</>, and become less likely to be attacked",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 0.8
+                },
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                },
+                {
+                  "key": "one_minus_status_resistance",
+                  "value": -0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Tower of Life",
+              "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 8% of Whisperain's ATK (Unaffected by this unit's Trait)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Tower of Life",
+              "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 9% <@ba.talpu>(+1%)</> of Whisperain's ATK (Unaffected by this unit's Trait)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Gain <$ba.buffres>status resistance</>, and become less likely to be attacked",
+              "blackboard": [
+                {
+                  "key": "heal_scale",
+                  "value": 0.8
+                },
+                {
+                  "key": "taunt_level",
+                  "value": -1
+                },
+                {
+                  "key": "one_minus_status_resistance",
+                  "value": -0.5
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Tower of Life",
+              "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 9% of Whisperain's ATK (Unaffected by this unit's Trait)"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Tower of Life",
+              "description": "Allied units with <$ba.buffres>status resistance</> within this unit's Attack Range will restore HP per second equal to 10% <@ba.talpu>(+1%)</> of Whisperain's ATK (Unaffected by this unit's Trait)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

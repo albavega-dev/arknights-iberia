@@ -2,6 +2,31 @@
   --operator-accent: #b49a68;
   --operator-accent-light: #d0bc91;
   --operator-accent-dark: #79643f;
+  /* Light of the icon selectors */
+  --choice-light: brightness(1.15)
+    drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 90%, transparent))
+    drop-shadow(0 0 7px color-mix(in srgb, var(--color-brass) 60%, transparent));
+  --choice-light-soft: brightness(1.08)
+    drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 55%, transparent))
+    drop-shadow(0 0 5px color-mix(in srgb, var(--color-brass) 35%, transparent));
+  --choice-light-faint: brightness(1.03)
+    drop-shadow(0 0 2px color-mix(in srgb, var(--operator-accent-light) 28%, transparent))
+    drop-shadow(0 0 4px color-mix(in srgb, var(--color-brass) 16%, transparent));
+  --choice-text-light:
+    0 0 2px color-mix(in srgb, var(--operator-accent-light) 90%, transparent),
+    0 0 7px color-mix(in srgb, var(--color-brass) 60%, transparent);
+  /* Floating cards */
+  --floating-card-background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--surface-panel) 70%, transparent),
+    color-mix(in srgb, var(--surface-panel) 35%, transparent)
+  );
+  --floating-card-shadow: 0 6px 18px rgba(3, 13, 20, 0.32);
+  --floating-band-background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--operator-accent-dark) 34%, transparent),
+    color-mix(in srgb, var(--operator-accent-dark) 8%, transparent)
+  );
   --rarity-6: #ff7a24;
   --rarity-5: #f5c542;
   --rarity-4: #b68ae5;
@@ -1097,46 +1122,584 @@
   font-size: 1.2rem;
 }
 .operator-profile-tabs {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
   margin-top: 2rem;
-  border-top: 1px solid var(--border-subtle);
 }
+
 .operator-tab-list {
   display: flex;
-  gap: 0.25rem;
   overflow-x: auto;
-  border-bottom: 1px solid var(--border-subtle);
+  align-items: flex-end;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.operator-tab-list::-webkit-scrollbar {
+  display: none;
 }
 .operator-tab {
+  position: relative;
+  isolation: isolate;
   flex: 0 0 auto;
-  min-height: 46px;
-  padding: 0.65rem 0.8rem;
-  border: 0;
-  border-bottom: 2px solid transparent;
+  min-height: 44px;
+  padding: 0.65rem 0.85rem;
+  border-top: 1px solid color-mix(in srgb, var(--border-subtle) 62%, transparent);
+  border-right: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--border-subtle) 48%, transparent);
+  border-left: 0;
   background: transparent;
   color: var(--color-muted);
   font: inherit;
+  white-space: nowrap;
   cursor: pointer;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
 }
-.operator-tab:hover,
+.operator-tab-extension {
+  flex: 1 0 0;
+  align-self: stretch;
+  min-width: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--border-subtle) 48%, transparent);
+}
+.operator-tab::before,
+.operator-pointer-light::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle 3rem at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    color-mix(in srgb, var(--color-brass) 18%, transparent),
+    transparent 72%
+  );
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+.operator-tab-label {
+  position: relative;
+  z-index: 2;
+}
+/* Icon selectors without a box: the same light, fading out before the edges */
+.operator-pointer-light {
+  position: relative;
+  isolation: isolate;
+}
+.operator-pointer-light > * {
+  position: relative;
+  z-index: 2;
+}
+.operator-pointer-light::before {
+  mask-image: radial-gradient(closest-side, #000 55%, transparent);
+}
+@media (prefers-reduced-motion: reduce) {
+  /* The light stays centred instead of following the pointer. */
+  .operator-pointer-light::before {
+    --pointer-x: 50%;
+    --pointer-y: 50%;
+  }
+}
+.operator-tab-indicator {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.35rem;
+  left: 0.85rem;
+  z-index: 2;
+  height: 1px;
+  background: var(--color-brass);
+  content: "";
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:
+    opacity 180ms ease,
+    transform 450ms ease;
+}
 .operator-tab:focus-visible,
 .operator-tab[aria-selected="true"] {
-  border-bottom-color: color-mix(in srgb, var(--operator-accent) 72%, transparent);
   color: var(--color-ivory);
   outline: none;
 }
+.operator-tab:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--operator-accent-light) 72%, transparent);
+  outline-offset: 2px;
+}
+.operator-tab + .operator-tab {
+  border-left: 1px solid color-mix(in srgb, var(--border-subtle) 42%, transparent);
+}
+@media (hover: hover) and (pointer: fine) {
+  .operator-tab:not([aria-selected="true"]):hover {
+    color: var(--color-ivory);
+  }
+  .operator-tab:hover::before,
+  .operator-pointer-light:hover::before {
+    opacity: 1;
+  }
+}
+.operator-tab[aria-selected="true"] {
+  z-index: 1;
+  border-bottom-color: transparent;
+}
+.operator-tab:last-of-type {
+  border-right: 1px solid color-mix(in srgb, var(--border-subtle) 42%, transparent);
+}
+.operator-tab[aria-selected="true"] .operator-tab-indicator {
+  opacity: 1;
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .operator-tab {
+    transition: none;
+  }
+  .operator-tab::before,
+  .operator-pointer-light::before {
+    transition: none;
+  }
+  .operator-tab-indicator {
+    transition: none;
+    transform: scaleX(1);
+  }
+}
 .operator-tab-panel {
   min-height: 15rem;
-  padding: 0.5rem 0 1rem;
+  padding: 0.85rem 1rem 1rem;
 }
 .operator-panel-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.65fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 2rem;
+}
+.operator-stats-calculator {
+  display: grid;
+  grid-template-columns: max-content 1rem max-content;
+  width: fit-content;
+  max-width: 100%;
+  align-items: start;
+  gap: 0;
+  margin: 0;
+}
+.operator-stats-calculator:has(.operator-stats-talents) {
+  grid-template-columns: max-content 1rem max-content var(--space-6) minmax(0, 1fr);
+  width: 100%;
+}
+.operator-stats-attributes {
+  display: contents;
+}
+/* Talents: right of the selectors, below them on narrower screens; heading and cards on the shared rows */
+.operator-stats-talents {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-column: 5;
+  grid-row: 1 / span 2;
+  min-width: 0;
+  max-width: 47.5rem;
+  contain: inline-size;
+}
+/* Section headings, styled as the other tab headings */
+.operator-stats-attributes > .operator-stats-heading {
+  grid-column: 1 / 4;
+  grid-row: 1;
+  width: auto;
+  justify-self: stretch;
+}
+.operator-stats-card {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 0.9rem;
+  background: var(--floating-card-background);
+  box-shadow: var(--floating-card-shadow);
+}
+.operator-stats-controls {
+  grid-column: 3;
+  grid-row: 2;
+  width: max-content;
+  min-width: 12rem;
+  padding: 0.9rem;
+  background: var(--floating-card-background);
+  box-shadow: var(--floating-card-shadow);
+}
+.operator-stats-card h3 {
+  margin: 0;
+}
+.operator-stats-card dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem 1.1rem;
+  margin: 0;
+}
+.operator-stats-card dl > div {
+  position: relative;
+  display: block;
+  min-width: 0;
+  min-height: 38px;
+  padding-left: 46px;
+}
+.operator-stats-card dt {
+  min-width: 0;
+  margin: 0;
+  color: var(--color-ivory);
+  font-size: 0.88rem;
+  line-height: 1.2;
+}
+.operator-stats-card dd {
+  margin: 0.12rem 0 0;
+  color: var(--color-brass);
+  font-size: 0.98rem;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+.operator-stat-icon {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  object-fit: contain;
+}
+.operator-stats-card dt::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 38px;
+  height: 38px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  filter: var(--choice-light-faint);
+  transform: translateY(-50%);
+}
+.operator-stats-card dl > div:nth-child(1) dt::before {
+  background-image: url("/assets/operator-stats/hp.png");
+}
+.operator-stats-card dl > div:nth-child(2) dt::before {
+  background-image: url("/assets/operator-stats/atk.png");
+}
+.operator-stats-card dl > div:nth-child(3) dt::before {
+  background-image: url("/assets/operator-stats/def.png");
+}
+.operator-stats-card dl > div:nth-child(4) dt::before {
+  background-image: url("/assets/operator-stats/res.png");
+}
+.operator-stats-card dl > div:nth-child(5) dt::before {
+  background-image: url("/assets/operator-stats/cost.png");
+}
+.operator-stats-card dl > div:nth-child(6) dt::before {
+  background-image: url("/assets/operator-stats/block.png");
+}
+.operator-stats-card dl > div:nth-child(7) dt::before {
+  background-image: url("/assets/operator-stats/aspd.png");
+}
+.operator-stats-card dl > div:nth-child(8) dt::before {
+  background-image: url("/assets/operator-stats/rdp.png");
+}
+.operator-stats-card dd {
+  color: var(--color-brass);
+  font-variant-numeric: tabular-nums;
+}
+.operator-stats-controls {
+  display: grid;
+  align-content: start;
+  gap: 0.35rem;
+}
+.operator-stats-controls > fieldset:first-of-type {
+  margin-bottom: 0.45rem;
+}
+.operator-stats-controls > fieldset:nth-of-type(2) {
+  margin-bottom: 0.45rem;
+}
+.operator-stats-controls label {
+  color: var(--color-cyan);
+  font-size: 0.78rem;
+}
+.operator-stats-controls output {
+  float: right;
+  color: var(--color-muted);
+}
+.operator-stats-controls select,
+.operator-stats-controls input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 0.45rem;
+}
+.operator-stats-controls input[type="range"] {
+  --range-progress: 0%;
+  appearance: none;
+  height: 1rem;
+  margin-top: -0.25rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.operator-stats-controls input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--color-brass) 0 var(--range-progress),
+    rgba(27, 51, 65, 0.9) var(--range-progress) 100%
+  );
+}
+.operator-stats-controls input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  margin-top: -6px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(208, 188, 145, 0.74) 0%,
+    rgba(82, 78, 67, 0.86) 45%,
+    rgba(20, 45, 52, 0.96) 100%
+  );
+  box-shadow: 0 2px 7px rgba(3, 13, 20, 0.17);
+  transform: rotate(45deg);
+}
+.operator-stats-controls input[type="range"]::-moz-range-track {
+  height: 4px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1px;
+  background: rgba(27, 51, 65, 0.9);
+}
+.operator-stats-controls input[type="range"]::-moz-range-progress {
+  height: 4px;
+  border-radius: 1px;
+  background: var(--color-brass);
+}
+.operator-stats-controls input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(208, 188, 145, 0.74) 0%,
+    rgba(82, 78, 67, 0.86) 45%,
+    rgba(20, 45, 52, 0.96) 100%
+  );
+  box-shadow: 0 2px 7px rgba(3, 13, 20, 0.17);
+  transform: rotate(45deg);
+}
+.operator-stats-controls input[type="range"]:focus-visible {
+  outline: 2px solid var(--color-cyan);
+  outline-offset: 2px;
+}
+.operator-stats-approximate {
+  display: none;
+  margin: 0.9rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+.operator-stats-approximate p {
+  margin: 0.45rem 0 0;
+}
+.operator-stats-controls fieldset {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.operator-stats-controls legend {
+  color: var(--color-cyan);
+  font-size: 0.78rem;
+  padding: 0;
+}
+.operator-stats-choice-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+/* Icon choices, lit like the skill selectors */
+.operator-stats-choice-list:has(.operator-stats-light-choice) {
+  gap: 0;
+}
+.operator-stats-controls > fieldset:first-of-type .operator-stats-choice-list {
+  justify-content: center;
+}
+.operator-stats-light-choice {
+  display: inline-grid;
+  place-items: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.operator-stats-light-choice img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: filter 180ms ease;
+}
+.operator-stats-light-choice.is-active img {
+  filter: var(--choice-light);
+}
+.operator-stats-potential-choices .operator-stats-light-choice img {
+  width: auto;
+  height: 28px;
+}
+/* Potential: a dimmer light */
+.operator-stats-potential-choices .operator-stats-light-choice.is-active img {
+  filter: var(--choice-light-soft);
+}
+.operator-stats-light-choice:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .operator-stats-light-choice img {
+    transition: none;
+  }
+}
+.operator-stats-module-button.operator-filter-button.is-text {
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  padding: 0.3rem 0;
+}
+.operator-stats-module-button span {
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1;
+}
+.operator-stats-controls > fieldset:has(.operator-stats-module-button) + fieldset .operator-stats-choice-list {
+  gap: 6px;
+}
+.operator-stats-controls > fieldset:has(.operator-stats-module-button) + fieldset .operator-filter-button.is-text {
+  box-sizing: border-box;
+  flex: 0 0 32px;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  padding: 0;
+}
+.operator-stats-choice {
+  display: inline-flex;
+  min-width: 2.7rem;
+  min-height: 2.7rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.45rem;
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--color-ivory);
+  cursor: pointer;
+}
+.operator-stats-choice:hover,
+.operator-stats-choice:focus-visible {
+  border-color: var(--color-cyan);
+}
+.operator-stats-choice[aria-pressed="true"] {
+  border-color: var(--color-brass);
+  box-shadow: inset 0 0 0 1px var(--color-brass);
+  color: var(--color-brass);
+}
+.operator-stats-choice img {
+  width: 1.8rem;
+  height: 1.8rem;
+  object-fit: contain;
+}
+.operator-stats-number-choice {
+  min-width: 2.2rem;
+}
+.operator-stats-module-choice {
+  min-width: 0;
+}
+.operator-stats-source {
+  color: var(--color-muted);
+  font-size: 0.72rem;
+  margin: 0 0 0.75rem;
+}
+.operator-stats-phase {
+  margin-top: 1rem;
+}
+.operator-stats-phase h3 {
+  color: var(--color-brass);
+  font-size: 0.82rem;
+  margin: 0 0 0.55rem;
+}
+.operator-stats-keyframes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.75rem;
+}
+.operator-stats-keyframe {
+  border: 1px solid color-mix(in srgb, var(--color-brass) 28%, transparent);
+  padding: 0.7rem;
+}
+.operator-stats-keyframe strong {
+  color: var(--color-cyan);
+  font-size: 0.8rem;
+}
+.operator-stats-keyframe dl {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem 0.75rem;
+  margin: 0.55rem 0 0;
+}
+.operator-stats-keyframe dt,
+.operator-stats-keyframe dd {
+  margin: 0;
+  font-size: 0.78rem;
+}
+.operator-stats-keyframe dd {
+  color: var(--color-brass);
+  font-variant-numeric: tabular-nums;
+}
+.operator-stats-bonuses {
+  margin-top: 1.25rem;
+}
+.operator-stats-bonuses h3 {
+  color: var(--color-cyan);
+  font-size: 0.9rem;
+  margin: 0 0 0.55rem;
+}
+.operator-stats-bonuses dl {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+}
+.operator-stats-bonuses dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.operator-stats-bonuses dt,
+.operator-stats-bonuses dd,
+.operator-stats-potential {
+  font-size: 0.78rem;
+  margin: 0;
+}
+.operator-stats-bonuses dd {
+  color: var(--color-brass);
+}
+.operator-stats-potential {
+  margin-top: 0.45rem;
+}
+.operator-stats-potential ul {
+  margin: 0.25rem 0 0;
+  padding-left: 1.1rem;
+}
+.operator-stats-potential .is-special {
+  color: var(--color-muted);
 }
 .operator-stat-placeholder,
 .operator-config-placeholder,
 .operator-panel-empty,
-.operator-module-placeholder,
 .operator-record-placeholder {
   display: grid;
   min-height: 8rem;
@@ -1150,7 +1713,6 @@
   margin: 0;
   font-size: 0.88rem;
 }
-.operator-module-placeholder,
 .operator-record-placeholder {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   min-height: 8rem;
@@ -1225,6 +1787,20 @@
     grid-template-columns: repeat(auto-fill, minmax(145px, 170px));
   }
 }
+@media (max-width: 1100px) {
+  .operator-stats-calculator:has(.operator-stats-talents) {
+    grid-template-columns: max-content 1rem max-content;
+    width: fit-content;
+    max-width: 100%;
+  }
+  .operator-stats-talents {
+    display: block;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    max-width: none;
+    margin-top: var(--space-4);
+  }
+}
 @media (max-width: 900px) {
   .operators-primary-controls {
     gap: 0.55rem 0.65rem;
@@ -1270,9 +1846,21 @@
     min-height: 320px;
   }
   .operator-panel-layout,
-  .operator-module-placeholder,
+  .operator-stats-calculator,
+  .operator-stats-calculator:has(.operator-stats-talents),
   .operator-record-placeholder {
     grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .operator-stats-attributes > .operator-stats-heading,
+  .operator-stats-card,
+  .operator-stats-controls,
+  .operator-stats-talents {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .operator-stats-controls {
+    margin-top: var(--space-4);
   }
   .operator-record-placeholder span:first-child {
     border-right: 0;
@@ -1302,6 +1890,9 @@
   }
 }
 @media (max-width: 440px) {
+  .operators-page::before {
+    transform: none !important;
+  }
   .operators-page {
     padding-inline: 1rem;
   }
@@ -1742,7 +2333,7 @@
   }
 }
 
-/* Refinamiento de controles: criterio y dirección forman una sola unidad. */
+/* Sort controls: criterion and direction form a single unit. */
 .operators-sort-field {
   order: 2;
   flex: 0 1 auto;
@@ -1892,8 +2483,7 @@
   color: var(--color-ivory);
 }
 
-/* El selector de facciones mantiene una anchura estable aunque cambie la opción. */
-/* El selector de facciones mantiene una anchura estable aunque cambie la opción. */
+/* The faction selector keeps a stable width when the option changes. */
 .operators-faction-field {
   flex: 0 0 240px;
   width: 240px;
@@ -2396,6 +2986,12 @@
   line-height: 1.45;
   overflow-wrap: break-word;
 }
+.operator-tactical-range-heading > .operator-tactical-label {
+  grid-area: 1 / 1;
+}
+.operator-tactical-range-heading > .is-sizer {
+  visibility: hidden;
+}
 .operator-tactical-range-heading {
   display: grid;
   justify-items: start;
@@ -2463,7 +3059,7 @@
   align-items: flex-start;
 }
 .operator-tactical-phase-selector .operator-control-button:has(> img) {
-  gap: 0.5rem;
+  gap: 0.3rem;
 }
 .operator-range-grid {
   display: grid;
@@ -2473,7 +3069,7 @@
   aspect-ratio: auto;
 }
 .operator-range-cell {
-  width: 40px;
+  width: var(--range-cell-size, 40px);
   aspect-ratio: 1;
   min-width: 0;
   border: 1px solid rgba(146, 179, 187, 0.24);
@@ -2536,10 +3132,10 @@
 }
 @media (max-width: 900px) {
   .operator-range-grid {
-    width: 100%;
+    width: var(--range-grid-width, 100%);
   }
   .operator-range-cell {
-    width: auto;
+    width: var(--range-cell-size, auto);
   }
 }
 .operator-tactical-phase-selector > button[title*="nivel"],
@@ -2715,8 +3311,7 @@
   );
   box-shadow: 0 2px 7px rgba(3, 13, 20, 0.17);
 }
-.operator-control-button-naval.is-active:hover,
-.operator-art-choice.is-active:hover {
+.operator-control-button-naval.is-active:hover {
   background: linear-gradient(
     135deg,
     rgba(224, 201, 154, 0.82) 0%,
@@ -2802,4 +3397,710 @@
   .operator-filter-button.rarity-1.is-active:hover {
     color: var(--operator-filter-rarity);
   }
+}
+
+/* Skills tab */
+.operator-skills-tab {
+  width: 100%;
+  max-width: 47.5rem;
+  min-width: 0;
+  margin-inline: auto;
+}
+.operator-skills {
+  /* SP recovery and activation */
+  --skill-recovery-time: #8ec31f;
+  --skill-recovery-attack: #fc793e;
+  --skill-recovery-defense: #f4af09;
+  --skill-activation: #808080;
+  --skill-tone-increase: var(--color-cyan);
+  --skill-tone-decrease: var(--color-danger);
+  --skill-tone-keyword: var(--color-brass);
+  --skill-tone-status: var(--color-muted);
+  --skill-tone-potential: var(--color-cyan);
+  --skill-level-button: 2rem;
+  min-width: 0;
+}
+/* Cards, one per row */
+.operator-skill-cards {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-3);
+  min-width: 0;
+}
+/* Floating card: skills, talents and modules */
+.operator-skill-card {
+  container-type: inline-size;
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: 0 var(--space-3) var(--space-3);
+  background: var(--floating-card-background);
+  box-shadow: var(--floating-card-shadow);
+}
+/* Header band */
+.operator-skill-card > header {
+  margin-inline: calc(var(--space-3) * -1);
+  padding: var(--space-2) var(--space-3);
+  background: var(--floating-band-background);
+}
+.operator-skill-card:has(> header:only-child) {
+  padding-bottom: 0;
+}
+.operator-skill-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+.operator-skill-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(7, 15, 24, 0.6);
+  object-fit: contain;
+}
+.operator-skill-icon.is-fallback {
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+.operator-skill-title {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+.operator-skill-title h3 {
+  margin: 0;
+  color: var(--color-brass);
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
+}
+.operator-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin: 0;
+}
+.operator-skill-tag {
+  padding: 0 var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--skill-activation);
+  color: var(--color-abyss);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+.operator-skill-tag.is-recovery-time {
+  background: var(--skill-recovery-time);
+}
+.operator-skill-tag.is-recovery-attack {
+  background: var(--skill-recovery-attack);
+}
+.operator-skill-tag.is-recovery-defense {
+  background: var(--skill-recovery-defense);
+}
+/* Slot label (S1–S3) */
+.operator-skill-slot {
+  align-self: start;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-ivory);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.operator-skill-levels {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.operator-skill-levels-label {
+  color: var(--color-cyan);
+  font-size: 0.78rem;
+}
+.operator-skill-level-groups {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-width: 0;
+}
+.operator-skill-level-group.operator-stats-choice-list {
+  flex-wrap: nowrap;
+  gap: 2px;
+}
+.operator-skill-level-group .operator-filter-button {
+  width: var(--skill-level-button);
+  min-width: 0;
+  padding-inline: 0;
+}
+/* Masteries */
+.operator-skill-mastery {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.operator-skill-mastery img {
+  width: 32px;
+  height: auto;
+  transition: filter 180ms ease;
+}
+.operator-skill-mastery.is-active img {
+  filter: var(--choice-light);
+}
+.operator-skill-mastery:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .operator-skill-mastery img {
+    transition: none;
+  }
+}
+/* Values and range */
+.operator-skill-data {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-3) var(--space-6);
+  padding: 0.9rem;
+  background: rgba(7, 15, 24, 0.45);
+}
+.operator-skill-values {
+  display: grid;
+  align-content: start;
+  gap: var(--space-2);
+  margin: 0;
+}
+.operator-skill-values > div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+.operator-skill-values dt {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-cyan);
+  font-size: 0.88rem;
+  line-height: 1.2;
+}
+.operator-skill-values dd {
+  margin: 0;
+  color: var(--color-brass);
+  font-size: 0.98rem;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+.operator-skill-description {
+  margin: 0;
+  color: var(--color-ivory);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+.operator-skill-value {
+  font-variant-numeric: tabular-nums;
+}
+.operator-skill-tone.is-increase {
+  color: var(--skill-tone-increase);
+}
+.operator-skill-tone.is-decrease {
+  color: var(--skill-tone-decrease);
+}
+.operator-skill-tone.is-keyword {
+  color: var(--skill-tone-keyword);
+}
+.operator-skill-tone.is-status {
+  color: var(--skill-tone-status);
+}
+.operator-skill-tone.is-potential {
+  color: var(--skill-tone-potential);
+}
+/* Glossary term */
+.operator-skill-tone.is-term {
+  --term-light: color-mix(in srgb, var(--operator-accent-light) 20%, transparent);
+  --term-light-height: 0.6em;
+  --term-line: color-mix(in srgb, var(--operator-accent-light) 38%, transparent);
+  background:
+    linear-gradient(var(--term-line), var(--term-line)) left bottom / 100% 1px no-repeat,
+    linear-gradient(0deg, var(--term-light), transparent) left bottom / 100% var(--term-light-height) no-repeat;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+/* Term inside an explanation: opens nothing. */
+.operator-glossary-text .operator-skill-tone.is-term {
+  --term-light: color-mix(in srgb, var(--operator-accent-light) 9%, transparent);
+  --term-light-height: 0.4em;
+  --term-line: transparent;
+  text-decoration: underline 1px color-mix(in srgb, var(--operator-accent-light) 38%, transparent);
+  text-underline-offset: 0.22em;
+}
+/* Term as a button */
+button.operator-skill-tone.is-term {
+  display: inline;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  line-height: inherit;
+  cursor: pointer;
+  transition:
+    background-size 200ms ease,
+    text-shadow 200ms ease;
+}
+button.operator-skill-tone.is-term:hover,
+button.operator-skill-tone.is-term:focus-visible,
+button.operator-skill-tone.is-term[aria-expanded="true"] {
+  --term-light: color-mix(in srgb, var(--operator-accent-light) 30%, transparent);
+  --term-light-height: 0.9em;
+  --term-line: color-mix(in srgb, var(--operator-accent-light) 70%, transparent);
+  text-shadow: 0 0 0.5em color-mix(in srgb, var(--operator-accent-light) 30%, transparent);
+}
+button.operator-skill-tone.is-term:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+/* Term explanation */
+.operator-glossary-panel {
+  position: fixed;
+  z-index: 30;
+  width: min(20rem, calc(100vw - 2rem));
+  padding: var(--space-3);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--operator-accent-light) 14%, transparent), transparent 4.5rem),
+    linear-gradient(135deg, rgba(200, 174, 121, 0.08), transparent 42%),
+    linear-gradient(180deg, #222a2d 0%, #1f2b30 100%);
+  box-shadow:
+    0 2px 6px rgba(3, 13, 20, 0.16),
+    0 12px 32px rgba(3, 13, 20, 0.42);
+  color: var(--color-ivory);
+}
+.operator-glossary-panel:focus {
+  outline: none;
+}
+.operator-glossary-panel:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.operator-glossary-name {
+  display: block;
+  margin-bottom: var(--space-1);
+  color: var(--operator-accent-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+.operator-glossary-text {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  overflow-wrap: break-word;
+}
+@media (prefers-reduced-motion: reduce) {
+  button.operator-skill-tone.is-term {
+    transition: none;
+  }
+}
+.operator-skill-unknown {
+  color: var(--color-muted);
+  font-family: var(--font-geist-mono), monospace;
+}
+.operator-skill-range {
+  --range-cell-size: 1.5rem;
+  --range-grid-width: max-content;
+  justify-self: center;
+  min-width: 0;
+}
+/* Base skills */
+.operator-base-skills {
+  margin-top: var(--space-4);
+}
+.operator-base-skill-card .operator-skill-icon {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  background: none;
+}
+.operator-base-skill-room img {
+  width: 1rem;
+  height: 1rem;
+}
+/* Stage selector */
+.operator-base-skill-stage-selector {
+  display: flex;
+  align-self: start;
+}
+.operator-base-skill-unlock {
+  display: inline-flex;
+  align-items: center;
+  align-self: start;
+  min-height: 2.75rem;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-ivory);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+button.operator-base-skill-unlock {
+  min-width: 2.75rem;
+  justify-content: center;
+  cursor: pointer;
+}
+.operator-base-skill-unlock-icon {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+.operator-base-skill-unlock-icon img {
+  width: 32px;
+  height: 32px;
+  transition: filter 180ms ease;
+}
+/* Active or fixed stage */
+.operator-base-skill-unlock.is-active img,
+span.operator-base-skill-unlock img {
+  filter: var(--choice-light);
+}
+/* Unlock level, lit like its icon */
+.operator-base-skill-unlock-level {
+  transition: text-shadow 180ms ease;
+}
+.operator-base-skill-unlock.is-active .operator-base-skill-unlock-level,
+span.operator-base-skill-unlock .operator-base-skill-unlock-level {
+  text-shadow: var(--choice-text-light);
+}
+@media (prefers-reduced-motion: reduce) {
+  .operator-base-skill-unlock-icon img,
+  .operator-base-skill-unlock-level {
+    transition: none;
+  }
+}
+button.operator-base-skill-unlock:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+/* Room tag */
+.operator-base-skill-room {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  background: var(--base-room-color, var(--skill-activation));
+}
+.operator-base-skill-room.is-light-text {
+  color: #fff;
+}
+/* The room icon is white: darken it on light colors. */
+.operator-base-skill-room.is-dark-text img {
+  filter: brightness(0);
+}
+/* Talents */
+.operator-talent-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+/* Locked talent: dimmed, with its requirement */
+.operator-talent-card.is-locked h3 {
+  color: var(--color-muted);
+}
+.operator-talent-requirement {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+.operator-talent-requirement img {
+  opacity: 0.55;
+}
+.operator-talent-body.has-range {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3) var(--space-6);
+}
+.operator-skill-levels-toggle {
+  display: grid;
+  justify-items: start;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.operator-skill-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+}
+.operator-skill-table-scroll:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--operator-accent-light) 72%, transparent);
+  outline-offset: 2px;
+}
+.operator-skill-table {
+  min-width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.operator-skill-table th,
+.operator-skill-table td {
+  padding: var(--space-1) var(--space-3);
+  border-bottom: 1px solid color-mix(in srgb, var(--border-subtle) 60%, transparent);
+  text-align: left;
+}
+.operator-skill-table thead th {
+  color: var(--color-cyan);
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+.operator-skill-table tbody th {
+  color: var(--color-ivory);
+}
+.operator-skill-table td {
+  color: var(--color-brass);
+}
+.operator-skill-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+/* Narrow cards: selector in two rows and range below. */
+@container (max-width: 26rem) {
+  .operator-skill-data {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .operator-skill-levels {
+    flex-wrap: wrap;
+  }
+  .operator-skill-level-groups {
+    display: grid;
+    flex: 1 1 100%;
+  }
+  .operator-skill-level-group.operator-stats-choice-list {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--space-1);
+  }
+  .operator-skill-level-group .operator-filter-button {
+    width: 100%;
+    min-height: 2.5rem;
+  }
+  .operator-skill-level-groups {
+    gap: var(--space-3);
+  }
+  .operator-skill-level-group .operator-skill-mastery {
+    width: 100%;
+  }
+  .operator-talent-body.has-range {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Modules tab */
+.operator-skills-tab.operator-modules-tab {
+  max-width: 64rem;
+}
+.operator-modules-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 var(--space-4);
+}
+.operators-cn-toggle.operator-modules-cn-toggle {
+  order: initial;
+}
+.operator-stats-controls .operator-modules-cn-toggle {
+  margin-top: var(--space-1);
+}
+/* Module card */
+.operator-module-card {
+  gap: var(--space-4);
+}
+.operator-module-band {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+.operator-module-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+.operator-module-code {
+  margin: 0;
+  color: var(--color-cyan);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+.operator-module-tag {
+  background: var(--color-brass);
+}
+.operator-module-potentials {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* Illustration and levels */
+.operator-module-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: var(--space-4);
+}
+.operator-module-body.has-art {
+  grid-template-columns: minmax(0, min(30%, 15rem)) minmax(0, 1fr);
+}
+.operator-module-art {
+  justify-self: center;
+  width: 100%;
+  max-width: 15rem;
+  height: auto;
+}
+.operator-module-levels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+/* Level icon at the top right */
+.operator-module-level {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: start;
+  gap: var(--space-2);
+  min-width: 0;
+  padding: var(--space-2) var(--space-3) var(--space-3);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--operator-accent-dark) 16%, transparent),
+    transparent 75%
+  );
+}
+.operator-module-level > * {
+  grid-column: 1 / -1;
+}
+.operator-module-level > .operator-module-level-heading {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  line-height: 0;
+}
+.operator-module-level > .operator-module-level-heading + * {
+  grid-column: 1;
+  grid-row: 1;
+}
+.operator-module-level-heading img {
+  width: auto;
+  height: 1.75rem;
+}
+/* One attribute per line */
+.operator-module-attributes {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-ivory);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.operator-module-attributes .operator-skill-value {
+  color: var(--color-brass);
+}
+.operator-module-attributes-label {
+  color: var(--color-muted);
+}
+/* Numbers that differ from the previous level */
+.operator-module-card .operator-skill-value.is-changed {
+  color: var(--color-cyan);
+  font-weight: 600;
+}
+.operator-module-talent {
+  display: grid;
+  gap: var(--space-1);
+  min-width: 0;
+}
+.operator-module-talent h5 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-2);
+  margin: 0;
+  color: var(--color-brass);
+  font-size: 0.88rem;
+}
+.operator-module-note {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+/* Full-width sections */
+.operator-module-section {
+  display: grid;
+  gap: var(--space-2);
+  min-width: 0;
+}
+.operator-module-section h4 {
+  margin: 0;
+  color: var(--color-ivory);
+  font-size: 0.88rem;
+}
+.operator-module-section-label {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.operator-module-section-label + h4 {
+  margin-top: calc(var(--space-2) * -1);
+}
+.operator-module-trait {
+  display: grid;
+  gap: var(--space-1);
+}
+.operator-module-trait-levels {
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+.operator-module-trait-base,
+.operator-module-trait-override,
+.operator-module-trait-addition {
+  display: block;
+}
+/* Part the module adds to the trait */
+.operator-module-trait-addition {
+  margin-top: var(--space-1);
+  color: var(--color-module);
+}
+.operator-module-ranges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+/* Narrow cards: illustration on top and levels one below another */
+@container (max-width: 36rem) {
+  .operator-module-body.has-art,
+  .operator-module-levels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .operator-module-band {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+  .operator-module-potentials {
+    grid-column: 1 / -1;
+  }
+}
+/* Stats talent changed by the selected module */
+.operator-talent-card.is-module h3 {
+  color: var(--color-module);
 }

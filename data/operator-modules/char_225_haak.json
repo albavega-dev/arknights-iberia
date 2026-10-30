@@ -1,0 +1,181 @@
+{
+  "operatorId": "char_225_haak",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_haak",
+      "name": "Mixed-Fruit Medical Caddy",
+      "region": "en",
+      "type": "GEE-X",
+      "icon": "gee-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Aak use Durian-Flavored Stimpack a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 2-8 with a 3-star rating; You must deploy your own Aak, and cannot include any Sniper Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 135,
+            "atk": 37
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.25/second while above 80% HP"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 190,
+            "atk": 47
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.25/second while above 80% HP"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Drug Cocktail Administration",
+              "description": "Each attack will randomly trigger one of the following effects: Restores own HP by 18%, that attack deals 160% damage, <$ba.sluggish>Slows</> the enemy for 1.5 seconds, or <$ba.stun>Stuns</> the enemy for 1.1 seconds; additionally has a 20% chance to activate all the above effects at once."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 57
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases SP recovery rate by +0.25/second while above 80% HP"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Drug Cocktail Administration",
+              "description": "Each attack will randomly trigger one of the following effects: Restores own HP by 20%, that attack deals 165% damage, <$ba.sluggish>Slows</> the enemy for 1.6 seconds, or <$ba.stun>Stuns</> the enemy for 1.2 seconds; additionally has a 30% chance to activate all the above effects at once."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_haak",
+      "name": "Remnant of the Malpractice",
+      "region": "en",
+      "type": "GEE-Y",
+      "icon": "gee-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, deploy your own Aak a total of 5 times",
+        "Clear Main Theme 4-8 with a 3-star rating; You must deploy your own Aak, and have him defeat at least 6 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 43,
+            "attack_speed": 3,
+            "respawn_time": -15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 60,
+            "attack_speed": 4,
+            "respawn_time": -15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Pharmaceutical Diffusion",
+              "description": "Increases healing amount on this unit by 20%; when deployed, immediately restores the HP of an allied Operator within Attack Range (prioritizing those directly in front of Aak) for 100% of Aak's ATK"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Pharmaceutical Diffusion",
+              "description": "Increases healing amount on this unit by 25% <@ba.talpu>(+5%)</>; when deployed, immediately restores the HP of an allied Operator within Attack Range (prioritizing those directly in front of Aak) for 100% of Aak's ATK"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 75,
+            "attack_speed": 5,
+            "respawn_time": -15
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Pharmaceutical Diffusion",
+              "description": "Increases healing amount on this unit by 25%; when deployed, immediately restores the HP of an allied Operator within Attack Range (prioritizing those directly in front of Aak) for 150% of Aak's ATK"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Pharmaceutical Diffusion",
+              "description": "Increases healing amount on this unit by 30% <@ba.talpu>(+5%)</>; when deployed, immediately restores the HP of an allied Operator within Attack Range (prioritizing those directly in front of Aak) for 150% of Aak's ATK"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

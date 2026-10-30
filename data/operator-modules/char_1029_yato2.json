@@ -1,0 +1,217 @@
+{
+  "operatorId": "char_1029_yato2",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_yato2",
+      "name": "Training Dummy",
+      "region": "en",
+      "type": "EXE-X",
+      "icon": "exe-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Complete a total of 5 battles; In each battle, you must deploy your own Kirin R Yato at least 3 times",
+        "Clear Main Theme 3-7 with a 3-star rating; You must deploy your own Kirin R Yato, and have Kirin R Yato defeat at least 2 Mortar Gunners"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 96,
+            "atk": 36,
+            "def": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+              "blackboard": [
+                {
+                  "key": "withdraw_cost_recover_ratio",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 112,
+            "atk": 43,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+              "blackboard": [
+                {
+                  "key": "withdraw_cost_recover_ratio",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Archdemon Mode",
+              "description": "While skill is active and for 10 seconds after skill ends, ATK +14%, further increased by 3% while skill is active"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Archdemon Mode",
+              "description": "While skill is active and for 10 seconds after skill ends, ATK +17% <@ba.talpu>(+3%)</>, further increased by 3% while skill is active"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 123,
+            "atk": 48,
+            "def": 28
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+              "blackboard": [
+                {
+                  "key": "withdraw_cost_recover_ratio",
+                  "value": 0.8
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Archdemon Mode",
+              "description": "While skill is active and for 10 seconds after skill ends, ATK +15%, further increased by 5% while skill is active"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Archdemon Mode",
+              "description": "While skill is active and for 10 seconds after skill ends, ATK +18% <@ba.talpu>(+3%)</>, further increased by 5% while skill is active"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_yato2",
+      "name": "罗德岛制式双刀",
+      "region": "cn",
+      "type": "EXE-Y",
+      "icon": "exe-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "由非助战麒麟R夜刀累计造成20歼灭数",
+        "3星通关插曲照我以火FC-5；必须编入非助战麒麟R夜刀并上场，且使用麒麟R夜刀歼灭至少2名深池引火者"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 135,
+            "atk": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "周围四格没有友方干员时攻击力<@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 170,
+            "atk": 39
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "周围四格没有友方干员时攻击力<@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "双雷剑麒麟",
+              "description": "攻击额外造成攻击力23%的法术伤害，根据造成的法术伤害次数获得不断提高的<$ba.magicarcane>术法充盈</>（最高在造成7次法术伤害后获得35%的<$ba.magicarcane>术法充盈</>），首次撤退再部署时间为0"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 50
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "周围四格没有友方干员时攻击力<@ba.kw>+{atk:0%}</>",
+              "blackboard": [
+                {
+                  "key": "atk",
+                  "value": 0.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "双雷剑麒麟",
+              "description": "攻击额外造成攻击力25%的法术伤害，根据造成的法术伤害次数获得不断提高的<$ba.magicarcane>术法充盈</>（最高在造成10次法术伤害后获得50%的<$ba.magicarcane>术法充盈</>），首次撤退再部署时间为0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

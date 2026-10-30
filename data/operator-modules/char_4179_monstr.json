@@ -1,0 +1,132 @@
+{
+  "operatorId": "char_4179_monstr",
+  "region": "en",
+  "tokens": {
+    "token_10050_monstr_prosts": "Reconstruction"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_monstr",
+      "name": "Ten Thousand Years of Memories",
+      "region": "en",
+      "type": "XAH-X",
+      "icon": "xah-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Mon3tr use Stratagem: Meltdown a total of 6 times",
+        "Clear Main Theme 7-15 with a 3-star rating; You must deploy your own Mon3tr, and have Mon3tr defeat at least 2 Guerrilla Shieldguards"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 40,
+            "def": 30
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 15% per bounce.",
+              "blackboard": [
+                {
+                  "key": "attack@chain.max_target",
+                  "value": 3
+                },
+                {
+                  "key": "attack@chain.atk_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 55,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 15% per bounce.",
+              "blackboard": [
+                {
+                  "key": "attack@chain.max_target",
+                  "value": 3
+                },
+                {
+                  "key": "attack@chain.atk_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Self-Repair",
+              "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +20% ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Self-Repair",
+              "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +25% <@ba.talpu>(+5%)</> ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 65,
+            "def": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 15% per bounce.",
+              "blackboard": [
+                {
+                  "key": "attack@chain.max_target",
+                  "value": 3
+                },
+                {
+                  "key": "attack@chain.atk_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Self-Repair",
+              "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +25% ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken, and the next bounce will not weaken either"
+            },
+            {
+              "index": 0,
+              "potential": 3,
+              "token": false,
+              "name": "Self-Repair",
+              "description": "Can deploy a Reconstruction on the ground within Attack Range that can only be healed by Mon3tr; the Reconstruction grants surrounding allies +30% <@ba.talpu>(+5%)</> ATK; when the Reconstruction receives healing from itself or Mon3tr, it performs an additional healing bounce that does not weaken, and the next bounce will not weaken either"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

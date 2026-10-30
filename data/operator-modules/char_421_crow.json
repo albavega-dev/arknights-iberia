@@ -1,0 +1,74 @@
+{
+  "operatorId": "char_421_crow",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_crow",
+      "name": "Aqua Blue Dawn",
+      "region": "en",
+      "type": "REA-X",
+      "icon": "rea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own La Pluma, and have La Pluma deal at least 12,000 damage",
+        "Clear Main Theme 11-6 with a 3-star rating under Standard Environment; You must deploy your own La Pluma, and have La Pluma defeat at least 15 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 160,
+            "atk": 18,
+            "def": 18
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 24,
+            "def": 24
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Into the Groove",
+              "description": "ASPD +3 after defeating an enemy (stacks up to 12 times); while at max stacks, ATK +5%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 240,
+            "atk": 30,
+            "def": 30
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Into the Groove",
+              "description": "ASPD +3 after defeating an enemy (stacks up to 12 times); while at max stacks, ATK +8%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

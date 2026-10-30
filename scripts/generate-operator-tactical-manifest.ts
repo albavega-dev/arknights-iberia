@@ -1,3 +1,4 @@
+import { compareCodeUnits } from "../src/game-data/string-order";
 import { readFile, writeFile } from "node:fs/promises";
 import { Pool } from "pg";
 import { readDatabaseConfig } from "../src/server/db/config";
@@ -80,7 +81,7 @@ const report = {
   foundCnOnly: entries.filter((entry) => entry.source?.region === "cn").length,
   missing: entries.filter((entry) => !entry.source).map((entry) => entry.id),
   positionMissing: entries.filter((entry) => entry.source && entry.position === null).map((entry) => entry.id),
-  positionValues: [...positionValues].sort(),
+  positionValues: [...positionValues].sort(compareCodeUnits),
   phasesWithoutRangeId: entries.flatMap((entry) => entry.phases.filter((phase) => phase.rangeId === null).map((phase) => ({ id: entry.id, phase: phase.phase }))),
   unresolvedRanges: entries.flatMap((entry) => entry.phases.filter((phase) => phase.rangeId !== null && phase.rangeKey === null).map((phase) => ({ id: entry.id, phase: phase.phase, rangeId: phase.rangeId }))),
   rangeDefinitions: rangeDefinitions.size,

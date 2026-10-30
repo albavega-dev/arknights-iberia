@@ -1,0 +1,118 @@
+{
+  "operatorId": "char_4119_wanqin",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_wanqin",
+      "name": "With My Wind",
+      "region": "en",
+      "type": "BEA-X",
+      "icon": "bea-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have Wanqing use Support γ a total of 10 times (excluding Support Units)",
+        "Clear Main Theme 9-13 with a 3-star rating under Standard Environment; You must deploy your own Wanqing, and use Along the Easterlies at least 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 105,
+            "def": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Cannot block enemies during the skill duration, but grants <@ba.kw>+1</> Block to an Operator in front of this unit",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 120,
+            "def": 55
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Cannot block enemies during the skill duration, but grants <@ba.kw>+1</> Block to an Operator in front of this unit",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Observe Nature's Way",
+              "description": "Increases the Max HP of Operators in the surrounding 8 tiles by +7%, increased to +11% if they are deployed facing the same direction as Wanqing"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Observe Nature's Way",
+              "description": "Increases the Max HP of Operators in the surrounding 8 tiles by +8% <@ba.talpu>(+1%)</>, increased to +12% <@ba.talpu>(+1%)</> if they are deployed facing the same direction as Wanqing"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 135,
+            "def": 60
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Cannot block enemies during the skill duration, but grants <@ba.kw>+1</> Block to an Operator in front of this unit",
+              "blackboard": [
+                {
+                  "key": "block_cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Observe Nature's Way",
+              "description": "Increases the Max HP of Operators in the surrounding 8 tiles by +9%, increased to +13% if they are deployed facing the same direction as Wanqing"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Observe Nature's Way",
+              "description": "Increases the Max HP of Operators in the surrounding 8 tiles by +10% <@ba.talpu>(+1%)</>, increased to +14% <@ba.talpu>(+1%)</> if they are deployed facing the same direction as Wanqing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

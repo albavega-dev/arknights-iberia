@@ -1,0 +1,775 @@
+{
+  "operatorId": "char_472_pasngr",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_pasngr_1",
+      "name": "Touch of Static",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.5,
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.6,
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 7,
+          "initSp": 0,
+          "values": [
+            1.7,
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.8,
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            1.9,
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2,
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.1,
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.2,
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 6,
+          "initSp": 0,
+          "values": [
+            2.3,
+            1.5,
+            4
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 5,
+          "initSp": 0,
+          "values": [
+            2.5,
+            1.5,
+            4
+          ]
+        }
+      ],
+      "description": "Increases the ATK of the next attack to <@ba.vup>{pasngr_s_1.atk_scale:0%}</>; The attack will jump between at most <@ba.vup>{pasngr_s_1.max_target}</> enemies and the duration of the <$ba.sluggish>Slow</> is increased to <@ba.vup>{pasngr_s_1.sluggish}</> seconds",
+      "blackboardKeys": [
+        "pasngr_s_1.atk_scale",
+        "pasngr_s_1.sluggish",
+        "pasngr_s_1.max_target"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_pasngr_2",
+      "name": "Focus Command",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 25,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 50,
+          "initSp": 10,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases slightly</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.2,
+            1,
+            0.1,
+            5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 26,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 49,
+          "initSp": 11,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases slightly</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.2,
+            1,
+            0.1,
+            5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 27,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 48,
+          "initSp": 12,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases slightly</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.2,
+            1,
+            0.1,
+            5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 28,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 47,
+          "initSp": 13,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases a little</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.3,
+            1,
+            0.15,
+            5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 29,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 46,
+          "initSp": 14,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases a little</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.3,
+            1,
+            0.15,
+            5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 30,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 45,
+          "initSp": 15,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases a little</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.3,
+            1,
+            0.15,
+            5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 31,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 44,
+          "initSp": 16,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.4,
+            1,
+            0.2,
+            5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 32,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 43,
+          "initSp": 17,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.4,
+            1,
+            0.25,
+            5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 33,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 42,
+          "initSp": 18,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.4,
+            1,
+            0.3,
+            5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 35,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 40,
+          "initSp": 20,
+          "description": "Attack Range <@ba.vup>+{ability_range_forward_extend}</> tile, ATK <@ba.vup>+{atk:0%}</>, Attack Interval <@ba.vup>decreases moderately</>. Increase the maximum number of jumps to <@ba.vup>{attack@max_target}</>",
+          "values": [
+            -0.5,
+            1,
+            0.3,
+            5
+          ]
+        }
+      ],
+      "blackboardKeys": [
+        "base_attack_time",
+        "ability_range_forward_extend",
+        "atk",
+        "attack@max_target"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_pasngr_3",
+      "name": "Glorious Shards",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1.05,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1.1,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1.15,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1.2,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 35,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1.25,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 34,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1.3,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 33,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1.35,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 32,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1.4,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "rangeId": "x-3",
+          "values": [
+            1.5,
+            4,
+            2,
+            4,
+            0.5,
+            4,
+            0.5
+          ]
+        }
+      ],
+      "description": "Immediately generates a lightning storm centered on the target with the highest HP within a wide range, lasting for <@ba.vup>{duration}</> seconds; Deals an additional attack equal to <@ba.vup>{atk_scale:0%}</> ATK to a random enemy within the lightning storm every <@ba.vup>{interval}</> seconds; <@ba.rem>Can store {ct} charges</>",
+      "blackboardKeys": [
+        "atk_scale",
+        "duration",
+        "ct",
+        "projectile_delay_time",
+        "interval",
+        "chain.max_target",
+        "sluggish"
+      ]
+    }
+  ],
+  "ranges": {
+    "x-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 3,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": -1
+        },
+        {
+          "row": 2,
+          "col": 0
+        },
+        {
+          "row": 2,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": -2
+        },
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -3
+        },
+        {
+          "row": 0,
+          "col": -2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": -2
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        },
+        {
+          "row": -2,
+          "col": -1
+        },
+        {
+          "row": -2,
+          "col": 0
+        },
+        {
+          "row": -2,
+          "col": 1
+        },
+        {
+          "row": -3,
+          "col": 0
+        }
+      ]
+    }
+  },
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "power_rec_spd[003]",
+          "name": "Electromagnetic Charge α",
+          "room": "POWER",
+          "icon": "bskill_pow_spd1",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+10%</>"
+        },
+        {
+          "buffId": "power_rec_spd[016]",
+          "name": "Energy Gathering",
+          "room": "POWER",
+          "icon": "bskill_pow_spd2",
+          "color": "#8fc31f",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Power Plant, increases the drone recovery rate by <@cc.vup>+15%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&power[000]",
+          "name": "Automation α",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&power1",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Factory, the productivity contributed by all other Operators in that Factory <@cc.vdown>becomes 0</> (excluding productivity granted based on facility count), but each <@cc.kw>Power Plant</> increases that Factory's productivity by <@cc.vup>+5%</>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Mechanism Analysis",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking enemies with 80% or more HP, Passenger will deal 10% increased damage to them for 3 seconds"
+        },
+        {
+          "name": "Mechanism Analysis",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "When attacking enemies with 80% or more HP, Passenger will deal 15% <@ba.talpu>(+5%)</> increased damage to them for 3 seconds"
+        },
+        {
+          "name": "Mechanism Analysis",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When attacking enemies with 80% or more HP, Passenger will deal 20% increased damage to them for 3 seconds"
+        },
+        {
+          "name": "Mechanism Analysis",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "When attacking enemies with 80% or more HP, Passenger will deal 25% <@ba.talpu>(+5%)</> increased damage to them for 3 seconds"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Lone Soldier",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "When there are no enemies in the surrounding 4 tiles, ATK +8%"
+        },
+        {
+          "name": "Lone Soldier",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "When there are no enemies in the surrounding 4 tiles, ATK +10% <@ba.talpu>(+2%)</>"
+        }
+      ]
+    }
+  ]
+}

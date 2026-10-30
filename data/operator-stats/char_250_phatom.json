@@ -1,0 +1,435 @@
+{
+  "operatorId": "char_250_phatom",
+  "region": "en",
+  "phases": [
+    {
+      "phase": 0,
+      "maxLevel": 50,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 769,
+            "atk": 215,
+            "def": 144,
+            "magicResistance": 0,
+            "cost": 8,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 0.93,
+            "respawnTime": 18,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 50,
+          "attributes": {
+            "maxHp": 1026,
+            "atk": 317,
+            "def": 207,
+            "magicResistance": 0,
+            "cost": 8,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 0.93,
+            "respawnTime": 18,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "maxLevel": 80,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1026,
+            "atk": 317,
+            "def": 207,
+            "magicResistance": 0,
+            "cost": 10,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 0.93,
+            "respawnTime": 18,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 80,
+          "attributes": {
+            "maxHp": 1283,
+            "atk": 435,
+            "def": 270,
+            "magicResistance": 0,
+            "cost": 10,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 0.93,
+            "respawnTime": 18,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "maxLevel": 90,
+      "keyframes": [
+        {
+          "level": 1,
+          "attributes": {
+            "maxHp": 1283,
+            "atk": 435,
+            "def": 270,
+            "magicResistance": 0,
+            "cost": 10,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 0.93,
+            "respawnTime": 18,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        },
+        {
+          "level": 90,
+          "attributes": {
+            "maxHp": 1645,
+            "atk": 558,
+            "def": 322,
+            "magicResistance": 0,
+            "cost": 10,
+            "blockCnt": 1,
+            "moveSpeed": 1,
+            "attackSpeed": 100,
+            "baseAttackTime": 0.93,
+            "respawnTime": 18,
+            "hpRecoveryPerSec": 0,
+            "spRecoveryPerSec": 1,
+            "maxDeployCount": 1
+          }
+        }
+      ]
+    }
+  ],
+  "favorKeyframes": [
+    {
+      "level": 0,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 0,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    },
+    {
+      "level": 50,
+      "attributes": {
+        "maxHp": 0,
+        "atk": 90,
+        "def": 0,
+        "magicResistance": 0,
+        "cost": 0,
+        "blockCnt": 0,
+        "moveSpeed": 0,
+        "attackSpeed": 0,
+        "baseAttackTime": 0,
+        "respawnTime": 0,
+        "hpRecoveryPerSec": 0,
+        "spRecoveryPerSec": 0,
+        "maxDeployCount": 0
+      }
+    }
+  ],
+  "potentialRanks": [
+    {
+      "rank": 0,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 1,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "ATK",
+                "formulaItem": "ADDITION",
+                "value": 22,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "RESPAWN_TIME",
+                "formulaItem": "ADDITION",
+                "value": -2,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "MAX_HP",
+                "formulaItem": "ADDITION",
+                "value": 130,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "effects": [
+        {
+          "attributes": {
+            "abnormalFlags": null,
+            "abnormalImmunes": null,
+            "abnormalAntis": null,
+            "abnormalCombos": null,
+            "abnormalComboImmunes": null,
+            "attributeModifiers": [
+              {
+                "attributeType": "COST",
+                "formulaItem": "ADDITION",
+                "value": -1,
+                "loadFromBlackboard": false,
+                "fetchBaseValueFromSourceEntity": false
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "uniEquipId": "uniequip_002_phatom",
+      "operatorId": "char_250_phatom",
+      "region": "en",
+      "name": "Miss Christine's Felt",
+      "moduleType": "EXE-X",
+      "typeIcon": "exe-x",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 50
+          },
+          "specialEffects": [
+            "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "max_hp": 125,
+            "atk": 62
+          },
+          "specialEffects": [
+            "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+            "Redeployment time of clone is reduced by 14 seconds",
+            "Redeployment Time -14 sec"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "max_hp": 140,
+            "atk": 73
+          },
+          "specialEffects": [
+            "Refunds <@ba.kw>a large portion</> of the current DP Cost when retreated",
+            "Redeployment time of clone is reduced by 16 seconds",
+            "Redeployment Time -16 sec"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_003_phatom",
+      "operatorId": "char_250_phatom",
+      "region": "en",
+      "name": "'Think of Me'",
+      "moduleType": "EXE-Y",
+      "typeIcon": "exe-y",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 40,
+            "def": 24
+          },
+          "specialEffects": [
+            "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 60,
+            "def": 28
+          },
+          "specialEffects": [
+            "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+            "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time; while both Phantom and the clone are present, both have +10% ATK"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 75,
+            "def": 30
+          },
+          "specialEffects": [
+            "When there are no allied units in the four adjacent tiles, ATK <@ba.kw>+{atk:0%}</>",
+            "Can summon an even stronger clone with the same abilities as Phantom, but has its own redeployment time; while both Phantom and the clone are present, both have +10% ATK"
+          ]
+        }
+      ]
+    },
+    {
+      "uniEquipId": "uniequip_004_phatom",
+      "operatorId": "char_250_phatom",
+      "region": "en",
+      "name": "Phantom's Specialized Badge",
+      "moduleType": "ISW-A",
+      "typeIcon": "isw-a",
+      "moduleSourceRegion": "en",
+      "levels": [
+        {
+          "level": 1,
+          "attributes": {
+            "atk": 37,
+            "attack_speed": 5
+          },
+          "specialEffects": [
+            "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of his summons) by <@ba.kw>1</> second when attacking; this effect also applies to his summons",
+            "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of its associated Operator) by <@ba.kw>1</> second when attacking"
+          ]
+        },
+        {
+          "level": 2,
+          "attributes": {
+            "atk": 55,
+            "attack_speed": 6
+          },
+          "specialEffects": [
+            "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of his summons) by <@ba.kw>1</> second when attacking; this effect also applies to his summons",
+            "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of its associated Operator) by <@ba.kw>1</> second when attacking",
+            "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time; in <@ba.kw>Integrated Strategies</>, deploying the clone will refresh Phantom's skill (can stack skill effect up to 8 times)",
+            "In <@ba.kw>Integrated Strategies</>, deployment will refresh Phantom's skill"
+          ]
+        },
+        {
+          "level": 3,
+          "attributes": {
+            "atk": 71,
+            "attack_speed": 7
+          },
+          "specialEffects": [
+            "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of his summons) by <@ba.kw>1</> second when attacking; this effect also applies to his summons",
+            "In <@ba.kw>Integrated Strategies</>, reduces the Redeployment Time (including that of its associated Operator) by <@ba.kw>1</> second when attacking",
+            "Can summon a stronger clone with the same abilities as Phantom, but has its own redeployment time; in <@ba.kw>Integrated Strategies</>, the clone does not take up a deployment slot, and deploying the clone will refresh Phantom's skill (can stack skill effect up to 8 times)",
+            "In <@ba.kw>Integrated Strategies</>, does not take up a deployment slot, and deployment will refresh Phantom's skill"
+          ]
+        }
+      ]
+    }
+  ],
+  "trait": [
+    {
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "potential": 1,
+      "description": "Significantly <@ba.kw>reduced</> Redeployment Time"
+    }
+  ]
+}

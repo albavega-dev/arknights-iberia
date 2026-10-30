@@ -1,17 +1,22 @@
 # Hoja de ruta
 
+La versión 0.2.0 completa las fichas de operador con estadísticas, habilidades, rasgo, talentos y módulos. Las siguientes mejoras se incorporarán de forma gradual.
+
 La hoja de ruta describe objetivos públicos y no promete fechas ni disponibilidad.
 
 ## Disponible
 
 - Catálogo de operadores con búsqueda, filtros y ordenación.
-- Fichas individuales básicas con slugs estables.
+- Fichas individuales con slugs estables.
 - Biografías disponibles en las fuentes regionales integradas.
 - Navegación responsive, atribuciones y aviso de proyecto no oficial.
+- Estadísticas por operador (0.2.0): niveles, promociones, confianza y potencial, con el rasgo y los talentos.
+- Habilidades de combate y de base (0.2.0): niveles, maestrías, alcances y explicaciones del glosario.
+- Módulos (0.2.0): tres niveles, ilustraciones y su efecto en estadísticas y talentos.
 
 ## Próximas mejoras
 
-- Completar información verificada de las fichas.
+- Completar las fichas individuales con voces, skins y otros detalles.
 - Mejorar cobertura de fechas y relaciones de operadores.
 - Revisar estabilidad y condiciones de recursos externos.
 - Publicar más documentación reproducible para colaboradores.

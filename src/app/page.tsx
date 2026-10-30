@@ -7,7 +7,7 @@ const roadmap = [
   {
     title: "Operadores y personalización",
     items: [
-      "Completar las fichas individuales con habilidades, talentos, módulos, voces y otros detalles.",
+      "Completar las fichas individuales con voces, skins y otros detalles.",
       "Recomendaciones de maestrías para habilidades.",
       "Calendario de cumpleaños de operadores.",
       "Galería de skins.",
@@ -34,7 +34,7 @@ const roadmap = [
     ],
   },
   {
-    title: "Traducciones al español",
+    title: "Traducciones al español (no es prioritario)",
     items: [
       "Traducciones no oficiales de perfiles de operadores, habilidades y módulos.",
       "Posible traducción de historias y eventos en el futuro.",
@@ -60,11 +60,11 @@ export default function Home() {
           <div className="landing-section-content">
             <p>
               Arknights Iberia es un proyecto personal que nació de mis ganas de ampliar mi portfolio como
-              desarrolladora web, pero haciendo algo diferente a los típicos proyectos de estética corporativa.
+              desarrolladora web, haciendo algo diferente a los típicos proyectos de estética corporativa.
             </p>
             <p>
               Como jugadora de Arknights llevo años acumulando información en notas (anotaciones propias, enlaces a webs
-              con herramientas útiles, archivos excel, etc) y echando en falta el poder tenerlo todo en el mismo lugar.
+              con herramientas útiles, archivos excel, etc) y siempre he echado en falta el poder tenerlo todo en el mismo lugar.
               Así surgió la idea de crear mi propia página: un espacio donde organizar esos recursos y desarrollar las
               funcionalidades que siempre quise tener.
             </p>
@@ -75,7 +75,7 @@ export default function Home() {
             </p>
             <p>
               Al final he decidido dejar este proyecto en abierto y en constante evolución para que cualquiera pueda
-              hacer uso de lo que vaya publicando aquí.
+              hacer uso de lo que vaya publicando aquí. <strong>AVISO:</strong> esto NO es un proyecto de traducción. Es, ante todo, un proyecto de desarrollo web y la traducción al español de los contenidos del juego es algo opcional que contemplaré hacer poco a poco a largo plazo.
             </p>
           </div>
         </section>
@@ -87,9 +87,7 @@ export default function Home() {
               <strong>Arknights Iberia está en fase beta y todavía tiene mucho camino por delante.</strong>
             </p>
             <p>
-              He decidido publicar esta primera versión aunque el proyecto esté literalmente en pañales, principalmente
-              para tener una muestra visible y funcional de mi trabajo como desarrolladora web. Mi intención es seguir
-              ampliando la página, incorporando nuevos recursos y desarrollando las herramientas que tengo en mente. Eso
+              Mi intención es seguir ampliando la página y desarrollando las herramientas que tengo en mente. Eso
               sí, este es un proyecto personal que compagino con mi trabajo y otras responsabilidades, así que iré
               avanzando siempre que tenga tiempo y ganas de dedicarle (de momento, muchas ganas y no tanto tiempo).
             </p>
@@ -117,16 +115,11 @@ export default function Home() {
             <h2 id="contact-title">Contacto</h2>
             <nav className="landing-contact" aria-label="Contacto de la comunidad">
               <a href="https://discord.gg/stCK4AS8SM" target="_blank" rel="noopener noreferrer">
-                <img
-                  className="landing-contact-logo"
-                  src="https://cdn.simpleicons.org/discord"
-                  alt=""
-                  aria-hidden="true"
-                />
+                <img className="landing-contact-logo" src="/assets/contact/discord.svg" alt="" aria-hidden="true" />
                 <span>Discord de la comunidad</span>
               </a>
               <a href="https://x.com/ArknightsIberia" target="_blank" rel="noopener noreferrer">
-                <img className="landing-contact-logo" src="https://cdn.simpleicons.org/x" alt="" aria-hidden="true" />
+                <img className="landing-contact-logo" src="/assets/contact/x.svg" alt="" aria-hidden="true" />
                 <span>X / Twitter de la comunidad</span>
               </a>
             </nav>
@@ -136,6 +129,19 @@ export default function Home() {
         <section className="landing-section" aria-labelledby="news-title">
           <div className="landing-section-content">
             <h2 id="news-title">Novedades</h2>
+            <article className="landing-news-entry">
+              <h3>30 de octubre de 2026 - 0.2.0</h3>
+              <ul>
+                <li><strong>Pestaña de estadísticas rellena:</strong> muestra las estadísticas de cada operador según su nivel, promoción, confianza y potencial. También incluye el rasgo y los talentos.</li>
+                <li><strong>Pestaña de habilidades rellena:</strong> incluye variaciones con niveles y maestrías y el rango.</li>
+                <li><strong>Pestaña de módulos rellena</strong> con sus tres niveles e ilustraciones.</li>
+              </ul>
+              <h4 className="landing-news-category">Errores corregidos:</h4>
+              <ul>
+                <li>Corregido desplazamiento irregular de los elementos de la columna de alcance del operador cuando el nombre de la skill variaba mucho en longitud.</li>
+                <li>Corregido aviso de ilustración no disponible, que ahora muestra correctamente qué ilustración (E0/E1 o E2) no ha podido cargarse.</li>
+              </ul>
+            </article>
             <article className="landing-news-entry">
               <h3>23 de octubre de 2026 - 0.1.1</h3>
               <ul>

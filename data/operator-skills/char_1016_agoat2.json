@@ -1,0 +1,544 @@
+{
+  "operatorId": "char_1016_agoat2",
+  "region": "en",
+  "skills": [
+    {
+      "slot": 1,
+      "skillId": "skchr_agoat2_1",
+      "name": "Soundless Sustenance",
+      "unlock": {
+        "elite": 0,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 0,
+          "values": [
+            0.1,
+            0.02
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 0,
+          "values": [
+            0.1,
+            0.03
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 76,
+          "initSp": 0,
+          "values": [
+            0.1,
+            0.04
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 74,
+          "initSp": 0,
+          "values": [
+            0.2,
+            0.04
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 72,
+          "initSp": 0,
+          "values": [
+            0.2,
+            0.05
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 0,
+          "values": [
+            0.2,
+            0.06
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 68,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.06
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 64,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.07
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 62,
+          "initSp": 0,
+          "values": [
+            0.3,
+            0.08
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "AUTO",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 0,
+          "values": [
+            0.4,
+            0.08
+          ]
+        }
+      ],
+      "description": "ATK <@ba.vup>+{atk:0%}</>, each heal can affect one additional target, and all friendly units within range will recover <$ba.dt.element>Elemental Injury</> equal to <@ba.vup>{agoat2_s_1[aura].ep_heal_ratio:0%}</> of Eyjafjalla the Hvít Aska's ATK\n<@ba.rem>Unlimited duration</>",
+      "blackboardKeys": [
+        "atk",
+        "agoat2_s_1[aura].ep_heal_ratio"
+      ]
+    },
+    {
+      "slot": 2,
+      "skillId": "skchr_agoat2_2",
+      "name": "Cloudmist Shelter",
+      "unlock": {
+        "elite": 1,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 30,
+          "initSp": 0,
+          "values": [
+            3.5,
+            10
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 29,
+          "initSp": 0,
+          "values": [
+            4,
+            10
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 28,
+          "initSp": 0,
+          "values": [
+            4.5,
+            10
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 27,
+          "initSp": 0,
+          "values": [
+            5,
+            12
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 26,
+          "initSp": 0,
+          "values": [
+            5.5,
+            12
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 25,
+          "initSp": 0,
+          "values": [
+            6,
+            12
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 24,
+          "initSp": 0,
+          "values": [
+            6.5,
+            14
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 22,
+          "initSp": 0,
+          "values": [
+            7.5,
+            16
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 21,
+          "initSp": 0,
+          "values": [
+            8,
+            18
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": -1,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 20,
+          "initSp": 0,
+          "values": [
+            9,
+            20
+          ]
+        }
+      ],
+      "description": "Immediately heals all friendly units within range and creates a<$ba.epbarrier> Protective Barrier</> for them that lasts <@ba.vup>{duration}</> seconds; Protective Barrier absorbs <$ba.dt.element>Elemental Injury</> for all friendly units equal to <@ba.vup>{agoat2_s_2[shield].atk_scale:0%}</> of ATK",
+      "blackboardKeys": [
+        "agoat2_s_2[shield].atk_scale",
+        "duration"
+      ]
+    },
+    {
+      "slot": 3,
+      "skillId": "skchr_agoat2_3",
+      "name": "Volcanic Echoes",
+      "unlock": {
+        "elite": 2,
+        "level": 1
+      },
+      "levels": [
+        {
+          "level": "1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 80,
+          "initSp": 20,
+          "values": [
+            0.25,
+            2
+          ]
+        },
+        {
+          "level": "2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 79,
+          "initSp": 20,
+          "values": [
+            0.25,
+            2.3
+          ]
+        },
+        {
+          "level": "3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 78,
+          "initSp": 20,
+          "values": [
+            0.25,
+            2.6
+          ]
+        },
+        {
+          "level": "4",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 75,
+          "initSp": 30,
+          "values": [
+            0.35,
+            2.9
+          ]
+        },
+        {
+          "level": "5",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 74,
+          "initSp": 30,
+          "values": [
+            0.35,
+            3.2
+          ]
+        },
+        {
+          "level": "6",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 73,
+          "initSp": 30,
+          "values": [
+            0.35,
+            3.5
+          ]
+        },
+        {
+          "level": "7",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 70,
+          "initSp": 40,
+          "values": [
+            0.45,
+            3.8
+          ]
+        },
+        {
+          "level": "M1",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 66,
+          "initSp": 40,
+          "values": [
+            0.5,
+            4.2
+          ]
+        },
+        {
+          "level": "M2",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 63,
+          "initSp": 40,
+          "values": [
+            0.55,
+            4.6
+          ]
+        },
+        {
+          "level": "M3",
+          "skillType": "MANUAL",
+          "durationType": "NONE",
+          "duration": 50,
+          "spType": "INCREASE_WITH_TIME",
+          "spCost": 60,
+          "initSp": 40,
+          "values": [
+            0.6,
+            5
+          ]
+        }
+      ],
+      "description": "Attack Range becomes global, and each heal is converted to a <@ba.vup>5</>- heal sequence that prioritizes different targets, each with <@ba.vup>{attack@heal_scale:0%}</> healing effectiveness and <$ba.dt.element>Elemental Injury</> recovery; the effect of the Second Talent is increased to <@ba.vup>{talent_scale}</> times",
+      "blackboardKeys": [
+        "attack@heal_scale",
+        "talent_scale"
+      ]
+    }
+  ],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "train_spd&profession3[180]",
+          "name": "Medic Expert α",
+          "room": "TRAINING",
+          "icon": "bskill_train_medic1",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Medic</> Operators' Specialization training speed <@cc.vup>+30%</>"
+        },
+        {
+          "buffId": "train_spd&profession3[181]",
+          "name": "Combat Techniques: Wandering Medic",
+          "room": "TRAINING",
+          "icon": "bskill_train_wandermedic",
+          "color": "#7d0022",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to be the Trainer in the Training Room, <@cc.kw>Medic</> Operators' Specialization training speed <@cc.vup>+30%</>; if the trainee's Job Branch is <@cc.kw>Wandering Medic</>, training speed will be further increased by <@cc.vup>+45%</>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "dorm_rec_all&profession[000]",
+          "name": "Volcanic Hot Springs Bath",
+          "room": "DORMITORY",
+          "icon": "bskill_dorm_rec_all&profession",
+          "color": "#21cdcb",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Dormitory, Morale recovery per hour of all Operators in that Dormitory <@cc.vup>+0.06</> for each <@cc.kw>Wandering Medic</> Operator in the Base (excluding Assistants and Activity Room users, caps at <@cc.kw>4</> Operators, strongest effect of the same type applies)"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Replenishing Mist",
+          "unlock": {
+            "elite": 1,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Normal heals additionally restore HP and <$ba.dt.element>Elemental Injury</> per second equal to 8% of the original amount, lasting for 4 seconds (stacks up to 3 times)"
+        },
+        {
+          "name": "Replenishing Mist",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Normal heals additionally restore HP and <$ba.dt.element>Elemental Injury</> per second equal to 10% of the original amount, lasting for 6 seconds (stacks up to 3 times)"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "stages": [
+        {
+          "name": "Volcanic Ash Remedy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Increases the Max HP of friendly units within range by +6%, and reduces the <$ba.dt.element>Elemental Injury</> they take by 12%"
+        },
+        {
+          "name": "Volcanic Ash Remedy",
+          "unlock": {
+            "elite": 2,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Increases the Max HP of friendly units within range by +8% <@ba.talpu>(+2%)</>, and reduces the <$ba.dt.element>Elemental Injury</> they take by 12%"
+        }
+      ]
+    }
+  ]
+}

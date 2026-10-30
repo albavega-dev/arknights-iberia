@@ -1,0 +1,240 @@
+{
+  "operatorId": "char_4138_narant",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_narant",
+      "name": "'Those Buried in Sand'",
+      "region": "en",
+      "type": "LPS-X",
+      "icon": "lps-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Deal a total of 100,000 damage with your own Narantuya",
+        "Clear Where Vernal Winds Will Never Blow WB-6 with a 3-star rating; You must deploy your own Narantuya, and can only include 5 other Operators as members"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 25,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking enemies within the 8 surrounding tiles",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 35,
+            "def": 35
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking enemies within the 8 surrounding tiles",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "'I See, I Take'",
+              "description": "When deployed, each attack <$ba.steal>Steals</> 25 ATK (Caps at 275) and 20 DEF (Caps at 220) from the target. Steal triggers 2 times when attacking enemies within 8 tiles around"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "'I See, I Take'",
+              "description": "When deployed, each attack <$ba.steal>Steals</> 27 <@ba.talpu>(+2)</> ATK (Caps at 297 <@ba.talpu>(+22)</>) and 21 <@ba.talpu>(+1)</> DEF (Caps at 231 <@ba.talpu>(+11)</>) from the target. Steal triggers 2 times when attacking enemies within 8 tiles around"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 45,
+            "def": 45
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases ATK to <@ba.kw>{atk_scale:0%}</> when attacking enemies within the 8 surrounding tiles",
+              "blackboard": [
+                {
+                  "key": "atk_scale",
+                  "value": 1.1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "'I See, I Take'",
+              "description": "When deployed, each attack <$ba.steal>Steals</> 25 ATK (Caps at 300) and 20 DEF (Caps at 240) from the target. Steal triggers 2 times when attacking enemies within 8 tiles around"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "'I See, I Take'",
+              "description": "When deployed, each attack <$ba.steal>Steals</> 27 <@ba.talpu>(+2)</> ATK (Caps at 324 <@ba.talpu>(+24)</>) and 21 <@ba.talpu>(+1)</> DEF (Caps at 252 <@ba.talpu>(+12)</>) from the target. Steal triggers 2 times when attacking enemies within 8 tiles around"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_narant",
+      "name": "“致我们的老大”",
+      "region": "cn",
+      "type": "LPS-Y",
+      "icon": "lps-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "战斗中非助战娜仁图亚累计使用5次“恶魇”",
+        "3星通关主题曲11-6标准实战环境；必须编入非助战娜仁图亚并上场，其他成员仅可编入5名干员"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 210,
+            "atk": 20
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "每回收5次<@ba.kw>回旋投射物</>时获得1点技力",
+              "blackboard": [
+                {
+                  "key": "come_back_cnt",
+                  "value": 5
+                },
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 260,
+            "atk": 32
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "每回收5次<@ba.kw>回旋投射物</>时获得1点技力",
+              "blackboard": [
+                {
+                  "key": "come_back_cnt",
+                  "value": 5
+                },
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "婀娜虚影",
+              "description": "获得35%的物理与法术闪避，周围8格内敌人的物理与法术命中率-25%；6秒内未受到伤害时，攻击力+10%"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "婀娜虚影",
+              "description": "获得38%<@ba.talpu>（+3%）</>的物理与法术闪避，周围8格内敌人的物理与法术命中率-25%；6秒内未受到伤害时，攻击力+10%"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 40
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "每回收5次<@ba.kw>回旋投射物</>时获得1点技力",
+              "blackboard": [
+                {
+                  "key": "come_back_cnt",
+                  "value": 5
+                },
+                {
+                  "key": "sp",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "婀娜虚影",
+              "description": "获得35%的物理与法术闪避，周围8格内敌人的物理与法术命中率-30%；6秒内未受到伤害时，攻击力+15%"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "婀娜虚影",
+              "description": "获得38%<@ba.talpu>（+3%）</>的物理与法术闪避，周围8格内敌人的物理与法术命中率-30%；6秒内未受到伤害时，攻击力+15%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

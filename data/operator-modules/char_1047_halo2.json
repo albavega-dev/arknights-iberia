@@ -1,0 +1,71 @@
+{
+  "operatorId": "char_1047_halo2",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_halo2",
+      "name": "The Seeker's Collection",
+      "region": "en",
+      "type": "DEC-Y",
+      "icon": "dec-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Astgenne the Lightchaser use Flux Chain a total of 3 times",
+        "Clear Break the Ice BI-6 with a 3-star rating; You must deploy your own Astgenne the Lightchaser, and use Flux Chain at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 85,
+            "atk": 35
+          },
+          "traits": [],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 105,
+            "atk": 45
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Data Modeling",
+              "description": "+1 ASPD when inflicting <$ba.sluggish>Slow</> on enemies, stacking up to 23 times"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 115,
+            "atk": 50
+          },
+          "traits": [],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Data Modeling",
+              "description": "+1 ASPD when inflicting <$ba.sluggish>Slow</> on enemies, stacking up to 25 times; +12% ATK at full stacks"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

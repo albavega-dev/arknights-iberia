@@ -1,0 +1,278 @@
+{
+  "operatorId": "char_4072_ironmn",
+  "region": "en",
+  "tokens": {
+    "token_10027_ironmn_pile1": "Stainless™ Multifunctional Platform",
+    "token_10027_ironmn_pile2": "Stainless™ Multifunctional Platform",
+    "token_10027_ironmn_pile3": "Prototype of Feist's Metal Crab"
+  },
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_ironmn",
+      "name": "FMC-Crawler",
+      "region": "en",
+      "type": "CRA-X",
+      "icon": "cra-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have Stainless deploy a total of 25 Support Devices (excluding Support Units)",
+        "Clear Main Theme 11-6 with a 3-star rating under Standard Environment; You must deploy your own Stainless, and have Stainless or Stainless's Support Devices defeat at least 15 Sarkaz Witherers"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 25,
+            "def": 25,
+            "attack_speed": 5
+          },
+          "tokenAttributes": {
+            "token_10027_ironmn_pile1": {
+              "cost": -1,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10027_ironmn_pile2": {
+              "cost": -1,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10027_ironmn_pile3": {
+              "cost": -4,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 35,
+            "def": 35,
+            "attack_speed": 5
+          },
+          "tokenAttributes": {
+            "token_10027_ironmn_pile1": {
+              "cost": -1,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10027_ironmn_pile2": {
+              "cost": -1,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10027_ironmn_pile3": {
+              "cost": -4,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Cost Cutting",
+              "description": "Increases SP recovery rate by +0.1/second if Stainless has one of his own Devices in the 8 surrounding tiles; when any of these Devices are destroyed, there is an 80% chance to recycle them, granting Stainless 1 additional Device"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Cost Cutting",
+              "description": "Increases SP recovery rate by +0.1/second if Stainless has one of his own Devices in the 8 surrounding tiles; when any of these Devices are destroyed, there is a 90% <@ba.talpu>(+10%)</> chance to recycle them, granting Stainless 1 additional Device"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 45,
+            "def": 45,
+            "attack_speed": 5
+          },
+          "tokenAttributes": {
+            "token_10027_ironmn_pile1": {
+              "cost": -1,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10027_ironmn_pile2": {
+              "cost": -1,
+              "max_deck_stack_cnt": 1
+            },
+            "token_10027_ironmn_pile3": {
+              "cost": -4,
+              "max_deck_stack_cnt": 1
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "Increases the max number of Support Devices that can be held by <@ba.kw>+{cnt}</> and <@ba.kw>reduces</> their Deployment Cost",
+              "blackboard": [
+                {
+                  "key": "cnt",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Cost Cutting",
+              "description": "Increases SP recovery rate by +0.2/second if Stainless has one of his own Devices in the 8 surrounding tiles; when any of these Devices are destroyed, there is a 90% chance to recycle them, granting Stainless 1 additional Device"
+            },
+            {
+              "index": 1,
+              "potential": 5,
+              "token": false,
+              "name": "Cost Cutting",
+              "description": "Increases SP recovery rate by +0.2/second if Stainless has one of his own Devices in the 8 surrounding tiles; when any of these Devices are destroyed, there is a 100% <@ba.talpu>(+10%)</> chance to recycle them, granting Stainless 1 additional Device"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_ironmn",
+      "name": "Highbury Imprint",
+      "region": "en",
+      "type": "CRA-Y",
+      "icon": "cra-y",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "During battle, have your own Stainless use Prototype of Feist's Metal Crab a total of 8 times",
+        "Clear Main Theme 9-6 with a 3-star rating under Standard Environment; You must deploy your own Stainless, and have him defeat at least 10 enemies"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 260,
+            "def": 45
+          },
+          "tokenAttributes": {
+            "token_10027_ironmn_pile1": {
+              "respawn_time": -5
+            },
+            "token_10027_ironmn_pile2": {
+              "respawn_time": -5
+            },
+            "token_10027_ironmn_pile3": {
+              "respawn_time": -10
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<Support Device>'s Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 340,
+            "def": 54
+          },
+          "tokenAttributes": {
+            "token_10027_ironmn_pile1": {
+              "respawn_time": -5
+            },
+            "token_10027_ironmn_pile2": {
+              "respawn_time": -5
+            },
+            "token_10027_ironmn_pile3": {
+              "respawn_time": -10
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<Support Device>'s Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Battlefield Engineer",
+              "description": "Can carry 3 <Support Devices> (deploy up to 2), with different effects depending on Skill; Operators benefiting from his Devices gain ASPD +4 (unaffected by skill)"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 400,
+            "def": 60
+          },
+          "tokenAttributes": {
+            "token_10027_ironmn_pile1": {
+              "respawn_time": -5
+            },
+            "token_10027_ironmn_pile2": {
+              "respawn_time": -5
+            },
+            "token_10027_ironmn_pile3": {
+              "respawn_time": -10
+            }
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "<Support Device>'s Redeployment Time <@ba.kw>reduced</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Battlefield Engineer",
+              "description": "Can carry 3 <Support Devices> (deploy up to 2), with different effects depending on Skill; Operators benefiting from his Devices gain ASPD +6 (unaffected by skill)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

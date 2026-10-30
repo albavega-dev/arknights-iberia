@@ -1,0 +1,130 @@
+{
+  "operatorId": "char_4139_papyrs",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_papyrs",
+      "name": "Little Seeds",
+      "region": "en",
+      "type": "XAH-X",
+      "icon": "xah-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Papyrus use Pre-Exhibit Examination a total of 5 times",
+        "Clear Adventure That Cannot Wait for the Sun AS-5 with a 3-star rating; You must deploy your own Papyrus, and allow no Operators to be defeated"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "atk": 38,
+            "def": 23
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 15% per bounce.",
+              "blackboard": [
+                {
+                  "key": "attack@chain.max_target",
+                  "value": 3
+                },
+                {
+                  "key": "attack@chain.atk_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "atk": 50,
+            "def": 28
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 15% per bounce.",
+              "blackboard": [
+                {
+                  "key": "attack@chain.max_target",
+                  "value": 3
+                },
+                {
+                  "key": "attack@chain.atk_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Erudite of Ancient Scrolls",
+              "description": "Healing grants the target Operator a <$ba.barrier>Barrier</> equal to 23% of Papyrus's ATK, lasting 8 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Erudite of Ancient Scrolls",
+              "description": "Healing grants the target Operator a <$ba.barrier>Barrier</> equal to 25% <@ba.talpu>(+2%)</> of Papyrus's ATK, lasting 8 seconds"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "atk": 60,
+            "def": 33
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Restores HP of allies, bouncing between <@ba.kw>3</> allies. Healing reduced by 15% per bounce.",
+              "blackboard": [
+                {
+                  "key": "attack@chain.max_target",
+                  "value": 3
+                },
+                {
+                  "key": "attack@chain.atk_scale",
+                  "value": 0.85
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Erudite of Ancient Scrolls",
+              "description": "Healing grants the target Operator a <$ba.barrier>Barrier</> equal to 27% of Papyrus's ATK, lasting 10 seconds"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Erudite of Ancient Scrolls",
+              "description": "Healing grants the target Operator a <$ba.barrier>Barrier</> equal to 29% <@ba.talpu>(+2%)</> of Papyrus's ATK, lasting 10 seconds"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

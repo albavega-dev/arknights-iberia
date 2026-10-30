@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
 vi.mock("next/image", () => ({
@@ -15,6 +15,7 @@ vi.mock("next/image", () => ({
 import { OperatorDetailData } from "../../src/app/operators/[slug]/operator-detail-data";
 import { OperatorTacticalInfo } from "../../src/app/operators/[slug]/operator-tactical-info";
 import type { OperatorRecord } from "../../src/game-data/operators";
+import { getRelevantPotentialRanks, officialPotentialToAppliedRanks, type OperatorStatsProfile } from "../../src/game-data/operator-stats";
 
 const operator: OperatorRecord = {
   id: "char_component_test",
@@ -47,7 +48,78 @@ const tacticalPhasesFixture = {
   ],
 } as const;
 
+const statsFixture: OperatorStatsProfile = {
+  operatorId: operator.id,
+  region: "en",
+  source: { repository: "test", revision: "test", path: "character_table.json", sha256: "test" },
+  phases: [
+    { phase: 0, maxLevel: 30, keyframes: [{ level: 1, attributes: { maxHp: 100, atk: 20, def: 10, magicResistance: 0, baseAttackTime: 1.2 } }, { level: 30, attributes: { maxHp: 200, atk: 40, def: 20, magicResistance: 5, baseAttackTime: 1.2 } }] },
+    { phase: 1, maxLevel: 50, keyframes: [{ level: 1, attributes: { maxHp: 210, atk: 42, def: 21, magicResistance: 5 } }, { level: 50, attributes: { maxHp: 400, atk: 80, def: 40, magicResistance: 10 } }] },
+  ],
+  favorKeyframes: [{ level: 100, attributes: { atk: 5 } }],
+  potentialRanks: [
+    { rank: 0, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 2 }] } }] },
+    { rank: 1, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 3 }] } }] },
+    { rank: 2, effects: [] },
+  ],
+  trait: [],
+  modules: [{ uniEquipId: "uniequip_test", operatorId: operator.id, region: "en", name: "Test Module", moduleType: "SPC-X", typeIcon: "spc-x", moduleSourceRegion: "en", levels: [{ level: 1, attributes: { atk: 3 }, specialEffects: [] }] }],
+};
+
 describe("OperatorDetailData image policy", () => {
+  it("calculates stats through elite, level, trust, potential and module controls", () => {
+    render(
+      <OperatorDetailData
+        operator={operator}
+        stats={statsFixture}
+        biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }}
+        tactical={null}
+        artistCredit={null}
+      />,
+    );
+
+    expect(screen.queryByRole("button", { name: "Potencial 1" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Potencial 2" })).toHaveAttribute("aria-pressed", "false");
+    fireEvent.click(screen.getByRole("button", { name: "Potencial 2" }));
+    expect(screen.getByRole("button", { name: "Potencial 2" })).toHaveAttribute("aria-pressed", "true");
+    fireEvent.click(screen.getByRole("button", { name: "Potencial 2" }));
+    expect(screen.getByRole("button", { name: "Potencial 2" })).toHaveAttribute("aria-pressed", "false");
+    expect(screen.getByRole("heading", { name: /Élite 1 nivel 50/ })).toBeInTheDocument();
+    const level = document.getElementById("stats-level") as HTMLInputElement;
+    fireEvent.change(level, { target: { value: "25" } });
+    expect(screen.getByText("303")).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole("button", { name: "Élite 0" }));
+    expect(screen.getByRole("heading", { name: /Élite 0 nivel 1/ })).toBeInTheDocument();
+    expect(level).toHaveValue("1");
+    fireEvent.change(level, { target: { value: "25" } });
+    fireEvent.click(screen.getByRole("button", { name: "Élite 0" }));
+    expect(screen.getByRole("heading", { name: /Élite 0 nivel 25/ })).toBeInTheDocument();
+    const statsCard = screen.getByRole("region", { name: "Estadísticas calculadas" });
+    expect(statsCard).toHaveTextContent("Intervalo");
+    expect(statsCard).not.toHaveTextContent("Velocidad de ataque");
+    const withoutModule = statsCard.textContent;
+    const moduleButton = screen.getByRole("button", { name: /SPC-X: Test Module/ });
+    expect(moduleButton).toHaveAttribute("title", "Test Module");
+    fireEvent.click(moduleButton);
+    expect(statsCard.textContent).not.toBe(withoutModule);
+
+    fireEvent.click(screen.getByRole("button", { name: "Élite 1" }));
+    expect(screen.getByRole("heading", { name: /Élite 1 nivel 1/ })).toBeInTheDocument();
+    expect(level).toHaveValue("1");
+    const trust = document.getElementById("stats-trust") as HTMLInputElement;
+    fireEvent.change(trust, { target: { value: "0" } });
+    expect(trust).toHaveValue("0");
+  });
+
+  it("shows only potential one and ranks with visible numeric bonuses", () => {
+    const profile = { potentialRanks: [{ rank: 0, effects: [] }, { rank: 1, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "ADDITION", value: 5 }] } }] }, { rank: 2, effects: [{ attributes: { attributeModifiers: [{ attributeType: "ATK", formulaItem: "CUSTOM", value: 1 }] } }] }] } as Pick<OperatorStatsProfile, "potentialRanks">;
+    expect(getRelevantPotentialRanks(profile)).toEqual([3]);
+    expect(officialPotentialToAppliedRanks(1)).toBe(0);
+    expect(officialPotentialToAppliedRanks(2)).toBe(1);
+    expect(officialPotentialToAppliedRanks(6)).toBe(5);
+  });
+
   it("marks class and subclass icons unoptimized", () => {
     render(
       <OperatorDetailData
@@ -219,5 +291,107 @@ describe("OperatorDetailData image policy", () => {
     expect(stateButtons[0]).toHaveAttribute("aria-pressed", "false");
     expect(stateButtons[1]).toHaveAttribute("aria-pressed", "true");
     expect(screen.getByText(/Estado y-6/)).toBeInTheDocument();
+  });
+});
+
+describe("OperatorDetailData skills tab", () => {
+  type SkillsView = NonNullable<Parameters<typeof OperatorDetailData>[0]["skills"]>;
+  const detail = (skills: SkillsView | null) => <OperatorDetailData operator={operator} skills={skills} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />;
+  const tabNames = () => screen.getAllByRole("tab").map((tab) => tab.textContent);
+  const source = { repository: "test", revision: "test", path: "skill_table.json", sha256: "test" };
+  const level = { index: 0, label: "1" as const, group: "level" as const, name: "Test Skill", icon: null, spCost: 30, initialSp: 10, duration: 20, durationKind: "seconds" as const, rangeId: null, description: [{ type: "text" as const, text: "Efecto" }] };
+  const combat: SkillsView["skills"] = [{ slot: 1, skillId: "skchr_test_1", activation: "manual", spRecovery: "time", unlock: { elite: 0, level: 1 }, icon: null, levels: [level], defaultLevelIndex: 0, terms: {} }];
+  const base: SkillsView["baseSkills"] = [{ slot: 1, stages: [{ buffId: "buff_test", name: "Test Base", room: "CONTROL", icon: null, roomIcon: null, color: "#005752", textColor: "#ffffff", unlock: { elite: 0, level: 1 }, description: [{ type: "text", text: "Efecto de base" }] }], terms: {} }];
+  const talents: SkillsView["talents"] = [{ index: 0, stages: [{ name: "Test Talent", unlock: { elite: 0, level: 1 }, potential: 1, rangeId: null, description: [{ type: "text", text: "Efecto del talento" }] }], terms: {} }];
+  const view = (skills: SkillsView["skills"], baseSkills: SkillsView["baseSkills"], talentList: SkillsView["talents"] = []): SkillsView => ({ status: skills.length ? "available" : "empty", operatorId: operator.id, region: "en", source, ranges: {}, skills, baseSkills, talents: talentList });
+
+  it("hides the Skills tab without a view or without combat and base skills", () => {
+    const { rerender } = render(detail(null));
+    expect(tabNames()).toEqual(["Estadísticas", "Expediente", "Voces"]);
+    rerender(detail(view([], [])));
+    expect(screen.queryByRole("tab", { name: "Habilidades" })).not.toBeInTheDocument();
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Estadísticas" }), { key: "ArrowRight" });
+    expect(screen.getByRole("tab", { name: "Expediente" })).toHaveAttribute("aria-selected", "true");
+    expect(document.activeElement).toBe(screen.getByRole("tab", { name: "Expediente" }));
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Expediente" }), { key: "ArrowLeft" });
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Estadísticas" }), { key: "End" });
+    expect(screen.getByRole("tab", { name: "Voces" })).toHaveAttribute("aria-selected", "true");
+    fireEvent.keyDown(screen.getByRole("tab", { name: "Voces" }), { key: "Home" });
+    expect(screen.getByRole("tab", { name: "Estadísticas" })).toHaveAttribute("aria-selected", "true");
+  });
+
+  it("opens Stats when the selected Skills tab does not exist for the operator", () => {
+    const { rerender } = render(detail(view(combat, base)));
+    fireEvent.click(screen.getByRole("tab", { name: "Habilidades" }));
+    expect(screen.getByRole("tabpanel")).toHaveAttribute("aria-labelledby", screen.getByRole("tab", { name: "Habilidades" }).id);
+    rerender(detail(null));
+    expect(screen.getByRole("tab", { name: "Estadísticas" })).toHaveAttribute("aria-selected", "true");
+    expect(screen.getByRole("tabpanel")).toHaveAttribute("aria-labelledby", screen.getByRole("tab", { name: "Estadísticas" }).id);
+    rerender(detail(view(combat, base)));
+    expect(screen.getByRole("tab", { name: "Habilidades" })).toHaveAttribute("aria-selected", "true");
+  });
+
+  it("shows only the base section for an operator without combat skills", () => {
+    render(detail(view([], base)));
+    fireEvent.click(screen.getByRole("tab", { name: "Habilidades" }));
+    const tab = screen.getByRole("tabpanel").querySelector(".operator-skills-tab")!;
+    expect(tab).toHaveAttribute("data-skills-status", "empty");
+    expect(screen.queryByRole("heading", { name: "Habilidades de combate" })).not.toBeInTheDocument();
+    expect(screen.queryByText("Este operador no tiene habilidades.")).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Habilidades de base" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Test Base" })).toBeInTheDocument();
+  });
+
+  it("shows the combat and base sections when the operator has both", () => {
+    render(detail(view(combat, base)));
+    fireEvent.click(screen.getByRole("tab", { name: "Habilidades" }));
+    expect(screen.getByRole("tabpanel").querySelector(".operator-skills-tab")).toHaveAttribute("data-skills-status", "available");
+    expect(screen.getAllByRole("heading", { level: 2 }).map((heading) => heading.textContent)).toEqual(["Habilidades de combate", "Habilidades de base"]);
+    expect(screen.getByRole("heading", { name: "Test Skill" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "Test Base" })).toBeInTheDocument();
+  });
+
+  it("shows the talents in Stats, driven by its promotion, level and potential selectors", () => {
+    const stage = (name: string, elite: 0 | 1 | 2, level: number, potential: number) => ({ name, unlock: { elite, level }, potential, rangeId: null, description: [{ type: "text" as const, text: `Efecto de ${name}` }] });
+    const list: SkillsView["talents"] = [
+      { index: 0, stages: [stage("Inicial", 0, 1, 1), stage("Promovido", 1, 1, 1), stage("Potenciado", 1, 1, 5)], terms: {} },
+      { index: 1, stages: [stage("Tardío", 1, 30, 1)], terms: {} },
+    ];
+    render(<OperatorDetailData operator={operator} stats={statsFixture} skills={view(combat, base, list)} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />);
+    expect(tabNames()).toEqual(["Estadísticas", "Habilidades", "Expediente", "Voces"]);
+    const section = screen.getByRole("region", { name: "Rasgo y talentos" });
+    expect(within(section).getByRole("heading", { level: 2, name: "Rasgo y talentos" })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 2, name: /Élite 1 nivel 50/ })).toHaveClass("operator-stats-heading");
+    const names = () => within(section).getAllByRole("article").map((item) => item.querySelector("h3")!.textContent);
+    expect(names()).toEqual(["Promovido", "Tardío"]);
+    expect(screen.getAllByRole("button", { name: /^Potencial/ }).map((button) => button.getAttribute("aria-label"))).toEqual(["Potencial 2", "Potencial 3", "Potencial 5"]);
+    fireEvent.click(screen.getByRole("button", { name: "Potencial 5" }));
+    expect(names()).toEqual(["Potenciado", "Tardío"]);
+    fireEvent.click(screen.getByRole("button", { name: "Potencial 5" }));
+    expect(names()[0]).toBe("Promovido");
+    fireEvent.change(document.getElementById("stats-level") as HTMLInputElement, { target: { value: "29" } });
+    expect(within(section).getByRole("article", { name: "Tardío" })).toHaveClass("is-locked");
+    fireEvent.click(screen.getByRole("button", { name: "Élite 0" }));
+    expect(names()).toEqual(["Inicial", "Tardío"]);
+    expect(screen.getByRole("button", { name: "Élite 0" })).toHaveClass("operator-stats-light-choice", "is-active");
+    expect(screen.getByRole("button", { name: /SPC-X: Test Module/ })).toHaveClass("operator-filter-button", "operator-stats-module-button", "is-text");
+  });
+
+  it("moves the hover light of tabs and icon selectors to the pointer", () => {
+    render(<OperatorDetailData operator={operator} stats={statsFixture} biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }} tactical={null} artistCredit={null} />);
+    for (const element of [screen.getByRole("tab", { name: "Estadísticas" }), screen.getByRole("button", { name: "Élite 0" }), screen.getByRole("button", { name: "Potencial 2" })]) {
+      element.getBoundingClientRect = () => ({ left: 10, top: 20, right: 54, bottom: 64, width: 44, height: 44, x: 10, y: 20, toJSON: () => ({}) });
+      fireEvent.mouseMove(element, { clientX: 30, clientY: 25 });
+      expect(element.style.getPropertyValue("--pointer-x")).toBe("20px");
+      expect(element.style.getPropertyValue("--pointer-y")).toBe("5px");
+    }
+    expect(screen.getByRole("button", { name: "Élite 0" })).toHaveClass("operator-pointer-light");
+  });
+
+  it("shows the talents at the highest promotion and P1 without stats, and no section without talents", () => {
+    const { rerender } = render(detail(view(combat, base, talents)));
+    expect(within(screen.getByRole("region", { name: "Rasgo y talentos" })).getByRole("article", { name: "Test Talent" })).toHaveTextContent("Efecto del talento");
+    rerender(detail(view(combat, base)));
+    expect(screen.queryByRole("region", { name: "Rasgo y talentos" })).not.toBeInTheDocument();
   });
 });

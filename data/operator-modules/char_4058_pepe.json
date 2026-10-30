@@ -1,0 +1,291 @@
+{
+  "operatorId": "char_4058_pepe",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_pepe",
+      "name": "Rain or Shine",
+      "region": "en",
+      "type": "HAM-X",
+      "icon": "ham-x",
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [
+        "Defeat a total of 40 enemies with your own Pepe",
+        "Clear Main Theme 3-8 with a 3-star rating; You must deploy your own Pepe, and have her defeat Skullshatterer"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 200,
+            "atk": 87
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+              "blackboard": [
+                {
+                  "key": "attack@atk_scale_2",
+                  "value": 0.5
+                },
+                {
+                  "key": "attack@ability_range_radius",
+                  "value": 1
+                },
+                {
+                  "key": "atk_scale_e",
+                  "value": 1.15
+                },
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 102
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+              "blackboard": [
+                {
+                  "key": "attack@atk_scale_2",
+                  "value": 0.5
+                },
+                {
+                  "key": "attack@ability_range_radius",
+                  "value": 1
+                },
+                {
+                  "key": "atk_scale_e",
+                  "value": 1.15
+                },
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Legacy of the Past",
+              "description": "Every enemy defeated while her skill is active grants Pepe 2 SP when the skill ends; restores up to 14 SP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Legacy of the Past",
+              "description": "Every enemy defeated while her skill is active grants Pepe 2 SP when the skill ends; restores up to 17 <@ba.talpu>(+3)</> SP"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 300,
+            "atk": 113
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "When there are 3 or more enemies within the splash area, ATK of the current instance of attack increases to <@ba.kw>{atk_scale_e:0%}</>",
+              "blackboard": [
+                {
+                  "key": "attack@atk_scale_2",
+                  "value": 0.5
+                },
+                {
+                  "key": "attack@ability_range_radius",
+                  "value": 1
+                },
+                {
+                  "key": "atk_scale_e",
+                  "value": 1.15
+                },
+                {
+                  "key": "cnt",
+                  "value": 3
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Legacy of the Past",
+              "description": "Every enemy defeated while her skill is active grants Pepe 2 SP when the skill ends; restores up to 17 SP"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Legacy of the Past",
+              "description": "Every enemy defeated while her skill is active grants Pepe 2 SP when the skill ends; restores up to 20 <@ba.talpu>(+3)</> SP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uniequip_003_pepe",
+      "name": "Pepe's Specialized Badge",
+      "region": "en",
+      "type": "RA-A",
+      "icon": "ra-a",
+      "limitedModality": true,
+      "unlock": {
+        "elite": 2,
+        "level": 60
+      },
+      "missions": [],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 250,
+            "atk": 50,
+            "def": 80
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Reclamation Algorithm</>, Redeployment Time reduces significantly if carrying resources"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 312,
+            "atk": 67,
+            "def": 115
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Reclamation Algorithm</>, Redeployment Time reduces significantly if carrying resources"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Perfuse With Lotus",
+              "description": "When deployed, all Guard Operators gain +16% ATK; in <@ba.kw>Reclamation Algorithm</>, gain visibility of Treasure Chest positions when deployed, and every attack creates an aftershock equal to 50% ATK at the position of every Guard Operator"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Perfuse With Lotus",
+              "description": "When deployed, all Guard Operators gain +20% <@ba.talpu>(+4%)</> ATK; in <@ba.kw>Reclamation Algorithm</>, gain visibility of Treasure Chest positions when deployed, and every attack creates an aftershock equal to 50% ATK at the position of every Guard Operator"
+            }
+          ],
+          "modes": [
+            {
+              "gameTag": "sandbox",
+              "traits": [],
+              "talents": [
+                {
+                  "index": 1,
+                  "potential": 1,
+                  "token": false,
+                  "name": "Perfuse With Lotus",
+                  "description": "When deployed, all Guard Operators gain +16% ATK; in <@ba.kw>Reclamation Algorithm</>, gain visibility of Treasure Chest positions when deployed, and every attack creates an aftershock equal to 50% ATK at the position of every Guard Operator"
+                },
+                {
+                  "index": 1,
+                  "potential": 3,
+                  "token": false,
+                  "name": "Perfuse With Lotus",
+                  "description": "When deployed, all Guard Operators gain +20% <@ba.talpu>(+4%)</> ATK; in <@ba.kw>Reclamation Algorithm</>, gain visibility of Treasure Chest positions when deployed, and every attack creates an aftershock equal to 50% ATK at the position of every Guard Operator"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 350,
+            "atk": 85,
+            "def": 135
+          },
+          "traits": [
+            {
+              "token": false,
+              "addition": "In <@ba.kw>Reclamation Algorithm</>, Redeployment Time reduces significantly if carrying resources"
+            }
+          ],
+          "talents": [
+            {
+              "index": 1,
+              "potential": 1,
+              "token": false,
+              "name": "Perfuse With Lotus",
+              "description": "When deployed, all Guard Operators gain +16% ATK; in <@ba.kw>Reclamation Algorithm</>, gain visibility of Treasure Chest positions when deployed, and every attack creates an aftershock equal to 50% ATK at the position of every Guard Operator; if the main target is a Resource, all connected Resource nodes will also generate an aftershock equal to 50% ATK (triggers up to 10 times)"
+            },
+            {
+              "index": 1,
+              "potential": 3,
+              "token": false,
+              "name": "Perfuse With Lotus",
+              "description": "When deployed, all Guard Operators gain +20% <@ba.talpu>(+4%)</> ATK; in <@ba.kw>Reclamation Algorithm</>, gain visibility of Treasure Chest positions when deployed, and every attack creates an aftershock equal to 50% ATK at the position of every Guard Operator; if the main target is a Resource, all connected Resource nodes will also generate an aftershock equal to 50% ATK (triggers up to 10 times)"
+            }
+          ],
+          "modes": [
+            {
+              "gameTag": "sandbox",
+              "traits": [],
+              "talents": [
+                {
+                  "index": 1,
+                  "potential": 1,
+                  "token": false,
+                  "name": "Perfuse With Lotus",
+                  "description": "When deployed, all Guard Operators gain +16% ATK; in <@ba.kw>Reclamation Algorithm</>, gain visibility of Treasure Chest positions when deployed, and every attack creates an aftershock equal to 50% ATK at the position of every Guard Operator; if the main target is a Resource, all connected Resource nodes will also generate an aftershock equal to 50% ATK (triggers up to 10 times)"
+                },
+                {
+                  "index": 1,
+                  "potential": 3,
+                  "token": false,
+                  "name": "Perfuse With Lotus",
+                  "description": "When deployed, all Guard Operators gain +20% <@ba.talpu>(+4%)</> ATK; in <@ba.kw>Reclamation Algorithm</>, gain visibility of Treasure Chest positions when deployed, and every attack creates an aftershock equal to 50% ATK at the position of every Guard Operator; if the main target is a Resource, all connected Resource nodes will also generate an aftershock equal to 50% ATK (triggers up to 10 times)"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

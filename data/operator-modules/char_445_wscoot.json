@@ -1,0 +1,124 @@
+{
+  "operatorId": "char_445_wscoot",
+  "region": "en",
+  "tokens": {},
+  "ranges": {},
+  "modules": [
+    {
+      "id": "uniequip_002_wscoot",
+      "name": "Yi",
+      "region": "en",
+      "type": "LIB-X",
+      "icon": "lib-x",
+      "unlock": {
+        "elite": 2,
+        "level": 40
+      },
+      "missions": [
+        "Complete a total of 5 battles; You must deploy your own Windscoot, and use Unerring Proficiency at least 1 time in each battle",
+        "Clear Stultifera Navis SN-2 with a 3-star rating; You must deploy your own Windscoot and use Unerring Proficiency 2 times"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 145,
+            "atk": 15,
+            "def": 18
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment",
+              "blackboard": [
+                {
+                  "key": "init_atk",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 185,
+            "atk": 18,
+            "def": 22
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment",
+              "blackboard": [
+                {
+                  "key": "init_atk",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sheathed Blade, Studied Foe",
+              "description": "When Trait ATK increase reaches its maximum, each attack is followed by an additional attack of 45% ATK"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sheathed Blade, Studied Foe",
+              "description": "When Trait ATK increase reaches its maximum, each attack is followed by an additional attack of 48% <@ba.talpu>(+3%)</> ATK"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 230,
+            "atk": 22,
+            "def": 25
+          },
+          "traits": [
+            {
+              "token": false,
+              "override": "Normally does not attack and has 0 Block; when skill is inactive, ATK gradually increases up to <@ba.kw>+200%</> over <@ba.kw>40</> seconds; ATK is reset when the skill ends",
+              "addition": "Directly gains <@ba.kw>+100%</> charge after deployment",
+              "blackboard": [
+                {
+                  "key": "init_atk",
+                  "value": 1
+                }
+              ]
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Sheathed Blade, Studied Foe",
+              "description": "When Trait ATK increase reaches its maximum, each attack is followed by an additional attack of 52% ATK"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Sheathed Blade, Studied Foe",
+              "description": "When Trait ATK increase reaches its maximum, each attack is followed by an additional attack of 55% <@ba.talpu>(+3%)</> ATK"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

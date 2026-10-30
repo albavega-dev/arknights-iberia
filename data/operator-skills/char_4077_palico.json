@@ -1,0 +1,105 @@
+{
+  "operatorId": "char_4077_palico",
+  "region": "en",
+  "skills": [],
+  "ranges": {},
+  "baseSkills": [
+    {
+      "slot": 1,
+      "stages": [
+        {
+          "buffId": "trade_ord_spd&limit&bd[000]",
+          "name": "Lovable Felynes",
+          "room": "TRADING",
+          "icon": "bskill_tra_spd&limit_felyne",
+          "color": "#0075a9",
+          "textColor": "#ffffff",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "description": "When this Operator is assigned to a Trading Post, order acquisition efficiency <@cc.vup>+5%</>, order limit <@cc.vup>+2</>, plus an additional order acquisition efficiency <@cc.vup>+3%</> for every <$cc.bd_felyne><@cc.rem>Felvine</></>"
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "stages": [
+        {
+          "buffId": "manu_prod_spd&limit&bd[000]",
+          "name": "Trusty Buddies",
+          "room": "MANUFACTURE",
+          "icon": "bskill_man_spd&limit_felyne",
+          "color": "#ffd800",
+          "textColor": "#333333",
+          "unlock": {
+            "elite": 0,
+            "level": 30
+          },
+          "description": "When this Operator is assigned to a Factory, capacity limit <@cc.vup>+8</>, Productivity <@cc.vup>+5%</>, plus an additional Productivity <@cc.vup>+1%</> for every <$cc.bd_felyne><@cc.rem>Felvine</></>"
+        }
+      ]
+    }
+  ],
+  "talents": [
+    {
+      "index": 0,
+      "stages": [
+        {
+          "name": "Felyne Lottery Bomb I",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 1,
+          "description": "Attacks detonate after a delay, with one of the following random effects: Deals 200% Physical Damage / Puts the target to <$ba.sleep>Sleep</> for 1 second / <$ba.stun>Stuns</> the target for 0.1 seconds / Nothing happens at all! Talent deactivates after triggering Damage effect 3 times"
+        },
+        {
+          "name": "Felyne Lottery Bomb II",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 2,
+          "description": "Attacks detonate after a delay, with one of the following random effects: Deal 250% Physical Damage / Puts the target to <$ba.sleep>Sleep</> for 1 second / <$ba.stun>Stuns</> the target for 0.1 seconds / Nothing happens at all! Talent deactivates after triggering Damage effect 3 times"
+        },
+        {
+          "name": "Felyne Lottery Bomb III",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 3,
+          "description": "Attacks detonate after a delay, with one of the following random effects: Deal 300% Physical Damage / Puts the target to <$ba.sleep>Sleep</> for 1 second / <$ba.stun>Stuns</> the target for 0.1 seconds / Nothing happens at all! Talent deactivates after triggering Damage effect 3 times"
+        },
+        {
+          "name": "Felyne Lottery Bomb IV",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 4,
+          "description": "Attacks detonate after a delay, with one of the following random effects: Deal 350% Physical Damage / Puts the target to <$ba.sleep>Sleep</> for 1 second / <$ba.stun>Stuns</> the target for 0.2 seconds / Nothing happens at all! Talent deactivates after triggering Damage effect 3 times"
+        },
+        {
+          "name": "Felyne Lottery Bomb V",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 5,
+          "description": "Attacks detonate after a delay, with one of the following random effects: Deal 400% Physical Damage / Puts the target to <$ba.sleep>Sleep</> for 1 second / <$ba.stun>Stuns</> the target for 0.2 seconds / Nothing happens at all! Talent deactivates after triggering Damage effect 3 times"
+        },
+        {
+          "name": "Felyne Lottery Bomb VI",
+          "unlock": {
+            "elite": 0,
+            "level": 1
+          },
+          "potential": 6,
+          "description": "Attacks detonate after a delay, with one of the following random effects: Deal 450% Physical Damage / Puts the target to <$ba.sleep>Sleep</> for 1 second / <$ba.stun>Stuns</> the target for 0.2 seconds / Nothing happens at all! Talent deactivates after triggering Damage effect 3 times"
+        }
+      ]
+    }
+  ]
+}

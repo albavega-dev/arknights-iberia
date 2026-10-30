@@ -1,0 +1,161 @@
+{
+  "operatorId": "char_4163_rosesa",
+  "region": "en",
+  "tokens": {},
+  "ranges": {
+    "y-3": {
+      "direction": 1,
+      "grids": [
+        {
+          "row": 1,
+          "col": -1
+        },
+        {
+          "row": 1,
+          "col": 0
+        },
+        {
+          "row": 1,
+          "col": 1
+        },
+        {
+          "row": 1,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": -1
+        },
+        {
+          "row": 0,
+          "col": 0
+        },
+        {
+          "row": 0,
+          "col": 1
+        },
+        {
+          "row": 0,
+          "col": 2
+        },
+        {
+          "row": 0,
+          "col": 3
+        },
+        {
+          "row": -1,
+          "col": -1
+        },
+        {
+          "row": -1,
+          "col": 0
+        },
+        {
+          "row": -1,
+          "col": 1
+        },
+        {
+          "row": -1,
+          "col": 2
+        }
+      ]
+    }
+  },
+  "modules": [
+    {
+      "id": "uniequip_002_rosesa",
+      "name": "Colorful Life in the Salt Flat",
+      "region": "en",
+      "type": "RIN-X",
+      "icon": "rin-x",
+      "unlock": {
+        "elite": 2,
+        "level": 50
+      },
+      "missions": [
+        "During battle, have your own Rose Salt use Super-Fine Slow-Release Meds! a total of 8 times",
+        "Clear Main Theme 4-6 with a 3-star rating; You must deploy your own Rose Salt, and use Super-Fine Slow-Release Meds! at least 1 time"
+      ],
+      "levels": [
+        {
+          "level": 1,
+          "trust": 0,
+          "attributes": {
+            "max_hp": 70,
+            "atk": 25
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": []
+        },
+        {
+          "level": 2,
+          "trust": 50,
+          "attributes": {
+            "max_hp": 88,
+            "atk": 38
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Herbalist Número Uno",
+              "description": "ATK -5%, but allied Operators within range receive 18% more healing"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Herbalist Número Uno",
+              "description": "ATK -5%, but allied Operators within range receive 20% <@ba.talpu>(+2%)</> more healing"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "trust": 100,
+          "attributes": {
+            "max_hp": 100,
+            "atk": 47
+          },
+          "rangeId": "y-3",
+          "traits": [
+            {
+              "token": false,
+              "addition": "Attack Range <@ba.kw>expands</>"
+            }
+          ],
+          "talents": [
+            {
+              "index": 0,
+              "potential": 1,
+              "token": false,
+              "name": "Herbalist Número Uno",
+              "description": "ATK -5%, but allied Operators within range receive 20% more healing"
+            },
+            {
+              "index": 0,
+              "potential": 5,
+              "token": false,
+              "name": "Herbalist Número Uno",
+              "description": "ATK -5%, but allied Operators within range receive 22% <@ba.talpu>(+2%)</> more healing"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
