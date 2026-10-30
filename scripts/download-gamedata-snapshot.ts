@@ -14,8 +14,9 @@ import { redact } from "../src/game-data/gamedata-diff";
 import {
   gameDataBuildingTableHashes, gameDataFavorTableHashes, gameDataHandbookTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion,
 } from "../src/game-data/gamedata-revisions";
-import { isFullCommit, parseTableList, snapshotDirectoryName, snapshotFile, snapshotManifest, snapshotMismatches, snapshotUrl, tablesFromReport, type SnapshotFile } from "../src/game-data/gamedata-snapshot";
+import { isFullCommit, parseTableList, snapshotDirectoryName, snapshotFile, snapshotManifest, snapshotMismatches, tablesFromReport, type SnapshotFile } from "../src/game-data/gamedata-snapshot";
 import { directoryBlobs, fetchBytes, token } from "./github-api";
+import { gameDataDirectory, rawGameDataUrl } from "../src/game-data/github-requests";
 
 const flag = (name: string) => process.argv.find((item) => item.startsWith(`--${name}=`))?.slice(name.length + 3);
 const exists = (path: string) => stat(path).then(() => true, () => false);
@@ -46,7 +47,7 @@ async function main() {
   const directory = join(outRoot, snapshotDirectoryName(region, revision));
   if (await exists(directory) && !process.argv.includes("--force")) throw new Error("The snapshot directory exists; pass --force to replace it");
 
-  const blobs = await directoryBlobs(gameDataRepository, revision, `${region}/gamedata/excel`);
+  const blobs = await directoryBlobs(gameDataRepository, revision, gameDataDirectory(region));
   const partial = `${directory}.${process.pid}.partial`;
   await rm(partial, { recursive: true, force: true });
   await mkdir(partial, { recursive: true });
@@ -55,7 +56,7 @@ async function main() {
     for (const table of tables) {
       const blob = blobs[table];
       if (!blob) throw new Error(`${region}/${table} is not in ${revision.slice(0, 7)}`);
-      const data = await fetchBytes(snapshotUrl(revision, region, table), blob);
+      const data = await fetchBytes(rawGameDataUrl(revision, region, table), blob);
       files.push(snapshotFile(region, revision, table, data, blob));
       await writeFile(join(partial, `${table}.json`), data);
     }

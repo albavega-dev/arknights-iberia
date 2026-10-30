@@ -21,6 +21,7 @@ import {
   gameDataTableHashes, type GameDataRegion,
 } from "../src/game-data/gamedata-revisions";
 import { directoryBlobs, fetchBytes, github, token } from "./github-api";
+import { compareUrl, contentsUrl, gameDataDirectory, latestCommitUrl, rawGameDataUrl, treeUrl } from "../src/game-data/github-requests";
 import { operatorArchetypeLabels } from "../src/game-data/operator-archetypes";
 import { skillDataGaps } from "../src/game-data/skill-data-gaps";
 
@@ -38,8 +39,8 @@ const hasFlag = (name: string) => process.argv.find((item) => item.startsWith(`-
 type Commit = { sha: string };
 type Compare = { status: string; files?: CompareFile[] };
 
-async function latestCommit(repository: string, path?: string): Promise<string> {
-  const commits = await github<Commit[]>(`repos/${repository}/commits?per_page=1${path ? `&path=${encodeURIComponent(path)}` : ""}`);
+async function latestCommit(repository: string, directory?: string): Promise<string> {
+  const commits = await github<Commit[]>(latestCommitUrl(repository, directory));
   if (!commits[0]?.sha) throw new Error(`No commits found for ${repository}`);
   return commits[0].sha;
 }
@@ -48,7 +49,7 @@ async function compareFiles(repository: string, base: string, head: string): Pro
   if (base === head) return [];
   const files: CompareFile[] = [];
   for (let page = 1; page <= compareFileLimit / 100; page += 1) {
-    const result = await github<Compare>(`repos/${repository}/compare/${base}...${head}?per_page=100&page=${page}`);
+    const result = await github<Compare>(compareUrl(repository, base, head, page));
     const batch = result.files ?? [];
     files.push(...batch);
     if (batch.length < 100) break;
@@ -64,7 +65,7 @@ async function revisionsLevel() {
   const latest: Record<string, string> = {};
   const latestBlobs: Partial<Record<GameDataRegion, Record<string, string>>> = {};
   for (const region of regions) {
-    const directory = `${region}/gamedata/excel`;
+    const directory = gameDataDirectory(region);
     latest[region] = await latestCommit(gameDataRepository, directory);
     // Exact comparison: the blob hash of every table at the pinned and at the latest commit, from Git trees.
     try {
@@ -81,21 +82,20 @@ async function revisionsLevel() {
   const imageFiles = await compareFiles(imageRepository, imageRevision, imageHead);
   const images = { ...revisionStatus(imageRevision, imageHead), byDirectory: assetChangesByDirectory(imageFiles, imageDirectories), changedPaths: changedAssetPaths(imageFiles, imageDirectories), listMayBeIncomplete: mayBeTruncated(imageFiles) };
   const portraitManifest = await readJson<{ source: { directoryTreeSha: string } }>("data/operator-portrait-manifest.json");
-  const root = await github<{ name: string; sha: string }[]>(`repos/${portraitRepository}/contents?ref=main`);
+  const root = await github<{ name: string; sha: string }[]>(contentsUrl(portraitRepository, "main"));
   const treeSha = root.find((entry) => entry.name === portraitDirectory)?.sha;
   if (!treeSha) throw new Error(`${portraitRepository} has no ${portraitDirectory} directory`);
   const portraits = revisionStatus(portraitManifest.source.directoryTreeSha, treeSha);
   return { latest, latestBlobs, gamedata, images, portraits, imageHead };
 }
 
-async function download(url: string, target: string, blob?: string): Promise<Buffer> {
+async function download(url: URL, target: string, blob?: string): Promise<Buffer> {
   const data = await fetchBytes(url, blob);
   await mkdir(join(target, ".."), { recursive: true });
   await writeFile(target, data);
   return data;
 }
 
-const rawUrl = (commit: string, region: GameDataRegion, table: string) => `https://raw.githubusercontent.com/${gameDataRepository}/${commit}/${region}/gamedata/excel/${table}.json`;
 const sha256 = (data: Buffer) => createHash("sha256").update(data).digest("hex").toUpperCase();
 
 async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>) {
@@ -110,7 +110,7 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
   const blobOf = async (region: GameDataRegion, table: string) => {
     if (!blobs.has(region) && revisions.latestBlobs[region]) blobs.set(region, new Map(Object.entries(revisions.latestBlobs[region]!).map(([name, sha]) => [`${name}.json`, sha])));
     if (!blobs.has(region)) {
-      const listing = await github<{ name: string; sha: string }[]>(`repos/${gameDataRepository}/contents/${region}/gamedata/excel?ref=${revisions.latest[region]}`);
+      const listing = await github<{ name: string; sha: string }[]>(contentsUrl(gameDataRepository, revisions.latest[region]!, gameDataDirectory(region)));
       blobs.set(region, new Map(listing.map((entry) => [entry.name, entry.sha])));
     }
     return blobs.get(region)!.get(`${table}.json`);
@@ -129,11 +129,11 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
     if (key.endsWith("/after")) {
       const blob = await blobOf(region, table);
       if (!blob) throw new Error(`${region}/${table} is not in the latest revision`);
-      data = await download(rawUrl(revisions.latest[region], region, table), join(target, `${region}-${revisions.latest[region].slice(0, 7)}`, `${table}.json`), blob);
+      data = await download(rawGameDataUrl(revisions.latest[region]!, region, table), join(target, `${region}-${revisions.latest[region].slice(0, 7)}`, `${table}.json`), blob);
     } else {
       const local = snapshots[region] ? join(snapshots[region]!, `${table}.json`) : undefined;
       const exists = local ? await stat(local).then(() => true, () => false) : false;
-      data = exists ? await readFile(local!) : await download(rawUrl(gameDataRevisions[region], region, table), join(target, `${region}-${gameDataRevisions[region].slice(0, 7)}`, `${table}.json`));
+      data = exists ? await readFile(local!) : await download(rawGameDataUrl(gameDataRevisions[region], region, table), join(target, `${region}-${gameDataRevisions[region].slice(0, 7)}`, `${table}.json`));
       if (sha256(data) !== pinnedHashes(region)[table]) throw new Error(`The ${region} baseline of ${table} does not match the pinned SHA-256`);
     }
     const value = JSON.parse(data.toString("utf8")) as unknown;
@@ -184,7 +184,7 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
 
   // Image coverage is checked against the latest image tree, so operators that were missing before show up when they arrive.
   let assets: unknown;
-  const tree = await github<{ tree: { path: string; type: string }[]; truncated: boolean }>(`repos/${imageRepository}/git/trees/${revisions.imageHead}?recursive=1`);
+  const tree = await github<{ tree: { path: string; type: string }[]; truncated: boolean }>(treeUrl(imageRepository, revisions.imageHead, true));
   if (tree.truncated) assets = { unavailable: "the image tree was truncated" };
   else {
     const paths = new Set(tree.tree.filter((entry) => entry.type === "blob").map((entry) => entry.path));
