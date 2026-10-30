@@ -1,7 +1,5 @@
 import { imageRepository, portraitRepository } from "./asset-revisions";
-import {
-  gameDataBuildingTableHashes, gameDataFavorTableHashes, gameDataHandbookTableHashes, gameDataRepository, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion,
-} from "./gamedata-revisions";
+import { gameDataRepository, pinnedGameDataTableHashes, type GameDataRegion } from "./gamedata-revisions";
 import { compareCodeUnits } from "./string-order";
 
 // Every GitHub URL the scripts request is built here from validated values: repositories, tables and directories come from
@@ -11,9 +9,7 @@ export const githubApiHost = "api.github.com";
 export const githubRawHost = "raw.githubusercontent.com";
 
 const repositories: ReadonlySet<string> = new Set([gameDataRepository, imageRepository, portraitRepository]);
-export const gameDataTables: readonly string[] = Object.keys({
-  ...gameDataTableHashes.en, ...gameDataSkillTableHashes.en, ...gameDataBuildingTableHashes.en, ...gameDataFavorTableHashes.en, ...gameDataHandbookTableHashes.en,
-}).sort(compareCodeUnits);
+export const gameDataTables: readonly string[] = Object.keys({ ...pinnedGameDataTableHashes("en"), ...pinnedGameDataTableHashes("cn") }).sort(compareCodeUnits);
 
 const objectIdPattern = /^[0-9a-f]{40}$/;
 const segmentPattern = /^[A-Za-z0-9_.-]+$/;

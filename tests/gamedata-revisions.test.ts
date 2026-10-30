@@ -3,7 +3,9 @@ import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
 import { portraitRevision } from "../src/game-data/asset-revisions";
-import { gameDataBuildingTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
+import {
+  gameDataBuildingTableHashes, gameDataReleaseTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, pinnedGameDataTableHashes,
+} from "../src/game-data/gamedata-revisions";
 
 describe("GameData pinned revisions", () => {
   it("pins full 40-character commits for both regions", () => {
@@ -15,6 +17,20 @@ describe("GameData pinned revisions", () => {
     assert.equal(hashes.length, 14);
     for (const hash of hashes) assert.match(hash, /^[0-9A-F]{64}$/);
     assert.equal(new Set(hashes).size, 13, "only range_table is identical in both regions");
+  });
+
+  it("pins the CN release-date tables only for CN", () => {
+    assert.deepEqual(Object.keys(gameDataReleaseTableHashes.en), []);
+    assert.deepEqual(Object.keys(gameDataReleaseTableHashes.cn), ["gacha_table", "roguelike_topic_table"]);
+    for (const hash of Object.values(gameDataReleaseTableHashes.cn)) assert.match(hash!, /^[0-9A-F]{64}$/);
+  });
+
+  it("joins every pinned table of a region", () => {
+    assert.equal(Object.keys(pinnedGameDataTableHashes("en")).length, 9);
+    assert.equal(Object.keys(pinnedGameDataTableHashes("cn")).length, 11);
+    assert.equal(pinnedGameDataTableHashes("cn").gacha_table, gameDataReleaseTableHashes.cn.gacha_table);
+    assert.equal(pinnedGameDataTableHashes("en").character_table, gameDataTableHashes.en.character_table);
+    assert.equal(pinnedGameDataTableHashes("en").gacha_table, undefined);
   });
 
   it("pins a different building table per region", () => {
