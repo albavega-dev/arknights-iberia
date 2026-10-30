@@ -8,7 +8,7 @@ import type { OperatorArtistCreditGroup } from "../../../game-data/operator-arti
 import { formatNumber, formatPercent } from "../../../game-data/number-format";
 import { getOperatorArchetypeName } from "../../../game-data/operator-archetypes";
 import { getOperatorClassIconUrl, getOperatorIllustrationAssets, getOperatorSubclassIconUrl } from "../../../game-data/operator-assets";
-import type { BiographyReadResult } from "../../../server/db/operator-biography-reader";
+import type { BiographyReadResult } from "../../../game-data/operator-biography";
 import { OperatorTacticalInfo } from "./operator-tactical-info";
 import { OperatorSkillsPanel, OperatorTalentsPanel, type StatsTrait, type TalentModuleEffect, type TalentSelection } from "./operator-skills-panel";
 import { CnModulesToggle, OperatorModulesPanel } from "./operator-modules-panel";

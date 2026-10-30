@@ -52,6 +52,14 @@ export type MissingBiographyRevision = {
 
 export const fixedBiographyRevisions: BiographyRevisionConfig = gameDataRevisions;
 
+export type BiographyReadResult =
+  | { readonly status: "found"; readonly biography: OperatorBiography }
+  | { readonly status: "not-found"; readonly operatorId: string; readonly region: BiographyRegion; readonly revision: string };
+
+export function biographyReadResult(biography: OperatorBiography | null, operatorId: string, region: BiographyRegion): BiographyReadResult {
+  return biography ? { status: "found", biography } : { status: "not-found", operatorId, region, revision: fixedBiographyRevisions[region] };
+}
+
 type HandbookRecord = { storyTextAudio?: unknown };
 
 const labels = {

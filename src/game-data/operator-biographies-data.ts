@@ -2,7 +2,7 @@ import "server-only";
 
 import indexData from "../../data/operator-biographies/index.json";
 import type { GameDataRegion } from "./gamedata-revisions";
-import { fixedBiographyRevisions, validateBiography, type OperatorBiography } from "./operator-biography";
+import { biographyReadResult, fixedBiographyRevisions, validateBiography, type BiographyReadResult, type OperatorBiography } from "./operator-biography";
 import { biographiesDatasetContractVersion, isOperatorId, validateDatasetIndex, type DatasetIndex } from "./operator-dataset";
 
 const index = indexData as unknown as DatasetIndex;
@@ -18,6 +18,10 @@ export async function loadOperatorBiography(operatorId: string, region: GameData
   const result = validateBiography(imported.default);
   if (!result.ok || result.value.operatorId !== operatorId || result.value.region !== region || result.value.source.revision !== fixedBiographyRevisions[region]) return null;
   return result.value;
+}
+
+export async function readOperatorBiography(operatorId: string, region: GameDataRegion): Promise<BiographyReadResult> {
+  return biographyReadResult(await loadOperatorBiography(operatorId, region), operatorId, region);
 }
 
 export function biographiesIndexErrors(): string[] { return validateDatasetIndex(index, biographiesDatasetContractVersion); }

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { catalogOperator, isReleaseDateProvenance, regionalMetadataSource, validateOperatorCatalog, type OperatorCatalog } from "../src/game-data/operator-catalog";
+import { catalogOperator, catalogOperatorRecord, isReleaseDateProvenance, regionalMetadataSource, validateOperatorCatalog, type OperatorCatalog } from "../src/game-data/operator-catalog";
 import type { OperatorRecord } from "../src/game-data/operators";
 
 const source = (region: string) => ({ repository: "owner/repo", revision: `${region}-revision`, path: `${region}/character_table.json`, sha256: "ab".repeat(32) });
@@ -48,4 +48,11 @@ test("rejects invalid, unsorted, duplicated or inconsistent operators", () => {
   ];
   for (const [operators, pattern] of cases) assert.match(validateOperatorCatalog(catalog(operators)).join("; "), pattern);
   assert.match(validateOperatorCatalog(catalog([null as never])).join("; "), /operators\[0\]: must be an object/);
+});
+
+test("turns a catalog operator back into the record shown by the pages, without provenance", () => {
+  const original = record("char_a", { cnName: null, mainFactionId: "rhodes" });
+  const { cnReleaseDateStatus, cnReleaseDateSource, ...shown } = original;
+  assert.deepEqual([cnReleaseDateStatus, cnReleaseDateSource], ["verified", "https://example.test/release"]);
+  assert.deepEqual(catalogOperatorRecord(catalogOperator(original, sources)), shown);
 });

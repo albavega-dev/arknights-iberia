@@ -1,6 +1,6 @@
 import { getOperatorPublicSlugs } from "../../../game-data/operator-slugs";
 import type { OperatorRecord } from "../../../game-data/operators";
-import type { BiographyReadResult } from "../../../server/db/operator-biography-reader";
+import type { BiographyReadResult } from "../../../game-data/operator-biography";
 
 export type OperatorDetailBiographyResult =
   | { readonly status: "operator-not-found" }

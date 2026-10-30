@@ -94,6 +94,28 @@ export function catalogOperator(record: OperatorRecord, sources: Readonly<Record
   };
 }
 
+/** Operator record shown by the pages: the catalog record without its provenance. */
+export function catalogOperatorRecord(operator: CatalogOperator): OperatorRecord {
+  return {
+    id: operator.id,
+    name: operator.name,
+    cnName: operator.cnName,
+    globalName: operator.globalName,
+    class: operator.class,
+    subClassId: operator.subClassId,
+    rarity: operator.rarity,
+    slug: operator.slug,
+    cnOnly: operator.cnOnly,
+    availabilityStatus: operator.availabilityStatus,
+    cnReleaseDate: operator.cnReleaseDate,
+    globalReleaseDate: operator.globalReleaseDate,
+    mainPowerNationId: operator.mainPowerNationId,
+    mainPowerGroupId: operator.mainPowerGroupId,
+    mainPowerTeamId: operator.mainPowerTeamId,
+    mainFactionId: operator.mainFactionId,
+  };
+}
+
 function sourceErrors(source: unknown, region: GameDataRegion): string[] {
   const value = source as Partial<DatasetSource> | undefined;
   if (!value || typeof value !== "object") return [`Missing ${region} source`];

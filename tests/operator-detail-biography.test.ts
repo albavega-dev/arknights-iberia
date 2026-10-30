@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { loadOperatorDetailBiography } from "../src/app/operators/[slug]/operator-detail-biography";
 import type { OperatorRecord } from "../src/game-data/operators";
-import type { BiographyReadResult } from "../src/server/db/operator-biography-reader";
+import type { BiographyReadResult } from "../src/game-data/operator-biography";
 
 const operator = (id: string, slug: string, cnOnly = false): OperatorRecord => ({ id, name: id, cnName: null, globalName: null, class: "Guard", subClassId: null, rarity: 6, slug, cnOnly, availabilityStatus: cnOnly ? "cn-snapshot-candidate" : "global-snapshot", cnReleaseDate: null, globalReleaseDate: null, mainPowerNationId: null, mainPowerGroupId: null, mainPowerTeamId: null, mainFactionId: null });
 const found = (id: string, region: "en" | "cn"): BiographyReadResult => ({ status: "found", biography: { operatorId: id, region, storyTitle: "Synthetic", source: { repository: "synthetic", revision: "a".repeat(40), path: "synthetic", sha256: "a".repeat(64) }, fields: [{ key: "field", label: "Field", value: id, state: "value" }], originalText: "Paragraph one\n\nParagraph two", unrecognizedLines: [] } });

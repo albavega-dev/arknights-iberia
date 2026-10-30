@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { extractBiography, auditBiographies, fixedBiographyRevisions, selectCurrentBiographies, validateBiography } from "../src/game-data/operator-biography";
+import { extractBiography, auditBiographies, biographyReadResult, fixedBiographyRevisions, selectCurrentBiographies, validateBiography } from "../src/game-data/operator-biography";
 
 const source = { repository: "test", revision: "fixed", path: "handbook.json", sha256: "fixed" } as const;
 function handbook(storyTitle: string, storyText: string, id = "id") { return { handbookDict: { [id]: { storyTextAudio: [{ storyTitle, stories: [{ storyText }] }] } } }; }
@@ -64,4 +64,10 @@ test("reports a missing configured revision and rejects exact duplicates", () =>
   const record = extractBiography("char_a", "en", handbook("Basic Info", "[Gender] Female", "char_a"), { ...source, revision: "other", sha256: "a".repeat(64) })!;
   assert.deepEqual(selectCurrentBiographies([record], { en: "configured", cn: "cn-fixed" }).missing, [{ operatorId: "char_a", region: "en", revision: "configured" }]);
   assert.throws(() => selectCurrentBiographies([record, record], { en: "other", cn: "cn-fixed" }), /Duplicate biography revisions/);
+});
+
+test("wraps a loaded biography and reports a missing one with the pinned revision", () => {
+  const record = extractBiography("char_a", "en", handbook("Basic Info", "[Gender] Female", "char_a"), source)!;
+  assert.deepEqual(biographyReadResult(record, "char_a", "en"), { status: "found", biography: record });
+  assert.deepEqual(biographyReadResult(null, "char_b", "en"), { status: "not-found", operatorId: "char_b", region: "en", revision: fixedBiographyRevisions.en });
 });
