@@ -120,7 +120,7 @@ export default function Home() {
               </a>
               <a href="https://x.com/ArknightsIberia" target="_blank" rel="noopener noreferrer">
                 <img className="landing-contact-logo" src="/assets/contact/x.svg" alt="" aria-hidden="true" />
-                <span>X / Twitter de la comunidad</span>
+                <span>Twitter de la comunidad</span>
               </a>
             </nav>
           </div>
