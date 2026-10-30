@@ -115,6 +115,10 @@ export function run(options) {
   return extractSubPowerCandidates({ characterTable: readJson(options.snapshot), catalog: readJson(options.catalog), affiliationManifest: readJson(options.affiliations), source });
 }
 
+/**
+ * @param {string} snapshotPath
+ * @param {string | null} [revision] Commit the snapshot comes from; only the pinned EN revision is recorded as verified.
+ */
 export function getSourceMetadata(snapshotPath, revision = null) {
   const isPinned = revision === gameDataRevisions.en;
   return { repository: isPinned ? gameDataRepository : null, region: isPinned ? "en" : null, revision: isPinned ? revision : null, path: isPinned ? "en/gamedata/excel/character_table.json" : snapshotPath, revisionVerified: isPinned };
