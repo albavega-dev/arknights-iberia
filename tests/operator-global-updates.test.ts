@@ -24,10 +24,11 @@ test("the new operators are those of the latest verified update that has opened"
   assert.deepEqual(ids(getNewOperatorIds(records, manifest(first, second), new Date("2027-01-01T00:00:00Z"))), ["char_c"], "the order of the file does not matter");
 });
 
-test("unverified updates never select operators", () => {
-  const draft = update("draft", "2026-12-01T10:00:00-08:00", ["char_d"], "unverified");
-  assert.deepEqual(ids(getNewOperatorIds(records, manifest(first, draft), new Date("2027-01-01T00:00:00Z"))), ["char_a", "char_b"]);
-  assert.deepEqual(ids(getNewOperatorIds(records, manifest(draft), new Date("2027-01-01T00:00:00Z"))), []);
+test("community-listed updates select operators like verified ones", () => {
+  const listed = update("listed", "2026-12-01T10:00:00-08:00", ["char_d"], "community-listed");
+  assert.deepEqual(ids(getNewOperatorIds(records, manifest(first, listed), new Date("2027-01-01T00:00:00Z"))), ["char_d"], "the latest opened update wins, whatever its status");
+  assert.deepEqual(ids(getNewOperatorIds(records, manifest(first, listed), new Date("2026-11-30T00:00:00Z"))), ["char_a", "char_b"]);
+  assert.deepEqual(ids(getNewOperatorIds(records, manifest(listed), new Date("2027-01-01T00:00:00Z"))), ["char_d"]);
 });
 
 test("strict mode rejects every inconsistency, whatever the date", () => {
@@ -36,7 +37,7 @@ test("strict mode rejects every inconsistency, whatever the date", () => {
   rejects({ schemaVersion: 2 } as GlobalUpdatesManifest, /no updates/);
   rejects(manifest(first, first), /Duplicate Global update ID: first/);
   for (const opensAt of ["2026-10-14", "2026-10-14T10:00:00", "2026-02-30T10:00:00-07:00", "2026-10-14T25:00:00-07:00", "later"]) rejects(manifest({ ...first, opensAt }), /Invalid Global update opening time: first/);
-  rejects(manifest({ ...first, status: "draft" as never }), /Invalid Global update status/);
+  for (const status of ["draft", "unverified"]) rejects(manifest({ ...first, status: status as never }), /Invalid Global update status/);
   rejects(manifest({ ...first, sourceUrl: "not a url" }), /Invalid Global update source/);
   rejects(manifest({ ...first, sourceUrl: "http://example.test" }), /Invalid Global update source/);
   rejects(manifest({ ...first, operatorIds: "char_a" as never }), /Invalid operator list/);
@@ -45,12 +46,12 @@ test("strict mode rejects every inconsistency, whatever the date", () => {
   rejects(manifest({ ...first, operatorIds: ["char_zz"] }), /Unknown operator ID in Global update: char_zz/);
   assert.throws(() => assertGlobalUpdates([operator("char_a"), operator("char_b", true)], manifest(first)), /CN-only operator in Global update: char_b/);
   assert.throws(() => getNewOperatorIds(records, manifest({ ...first, operatorIds: ["char_zz"] }), new Date("2000-01-01T00:00:00Z")), GlobalUpdatesManifestError, "an update that has not opened is checked too");
-  assert.doesNotThrow(() => assertGlobalUpdates(records, manifest(first, second, update("draft", "2030-01-01T00:00:00Z", [], "unverified"))));
+  assert.doesNotThrow(() => assertGlobalUpdates(records, manifest(first, second, update("future", "2030-01-01T00:00:00Z", [], "community-listed"))));
 });
 
 test("the web gives no labels and a warning for an invalid file", () => {
   const now = new Date("2027-01-01T00:00:00Z");
-  for (const bad of [{ ...manifest(first), schemaVersion: 1 }, manifest(first, { ...second, operatorIds: ["char_zz"] }), manifest(first, { ...second, opensAt: "tomorrow" }), { schemaVersion: 2 } as GlobalUpdatesManifest]) {
+  for (const bad of [{ ...manifest(first), schemaVersion: 1 }, manifest(first, { ...second, opensAt: "tomorrow" }), { schemaVersion: 2 } as GlobalUpdatesManifest]) {
     const { lines, warn } = messages();
     assert.deepEqual(ids(getNewOperatorIdsLenient(records, bad, now, warn)), []);
     assert.ok(lines.length > 0 && lines.every((line) => line.startsWith("Global updates: ")));
@@ -64,6 +65,14 @@ test("the web gives no labels and a warning for an invalid file", () => {
   assert.deepEqual(odd.lines, ["Global updates: unreadable manifest"]);
   assert.deepEqual(ids(getNewOperatorIdsLenient(records, manifest(first), new Date("2026-01-01T00:00:00Z"), odd.warn)), [], "a valid file with nothing opened yet gives no labels");
   assert.equal(odd.lines.length, 1);
+});
+
+test("the web ignores an unknown or malformed operator ID on its own, keeps the others and warns", () => {
+  const { lines, warn } = messages();
+  const list = manifest(update("u", "2026-10-14T10:00:00-07:00", ["char_a", "char_zz", "nope", "char_b"]));
+  assert.deepEqual(ids(getNewOperatorIdsLenient(records, list, new Date("2026-10-15T00:00:00Z"), warn)), ["char_a", "char_b"]);
+  assert.deepEqual(lines, ["Global updates: Unknown operator ID in Global update: char_zz", "Global updates: Invalid operator ID in Global update: u"]);
+  assert.throws(() => getNewOperatorIds(records, list, new Date("2026-10-15T00:00:00Z")), /Unknown operator ID.*Invalid operator ID/);
 });
 
 test("the web ignores a CN-only operator, keeps the others and warns", () => {
