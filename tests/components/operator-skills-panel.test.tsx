@@ -131,6 +131,7 @@ describe("OperatorSkillsPanel", () => {
     expect(toggle).toHaveTextContent("Ocultar niveles");
     const region = screen.getByRole("region", { name: "Valores por nivel de S1" });
     expect(toggle).toHaveAttribute("aria-controls", region.id);
+    expect(region).toHaveAttribute("tabindex", "0");
     const rows = within(region).getAllByRole("row");
     expect(rows).toHaveLength(11);
     expect(within(rows[0]).getAllByRole("columnheader").map((cell) => cell.textContent)).toEqual(["Nivel", "SP inicial", "Coste de SP", "Duración"]);

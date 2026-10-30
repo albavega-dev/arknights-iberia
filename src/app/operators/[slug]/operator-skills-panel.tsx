@@ -203,7 +203,7 @@ function unlockLabel(unlock: SkillUnlock): string {
 /** WCAG relative luminance of a #rrggbb color; null for anything else. */
 function luminance(color: string): number | null {
   if (!/^#[0-9a-f]{6}$/i.test(color)) return null;
-  const [r, g, b] = [1, 3, 5].map((start) => parseInt(color.slice(start, start + 2), 16) / 255).map((channel) => channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4);
+  const [r, g, b] = [1, 3, 5].map((start) => Number.parseInt(color.slice(start, start + 2), 16) / 255).map((channel) => channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4);
   return 0.2126 * r + 0.7152 * g + 0.0722 * b;
 }
 // --color-abyss, the dark text of the tags.

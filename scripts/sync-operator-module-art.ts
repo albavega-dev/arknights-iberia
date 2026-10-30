@@ -85,7 +85,9 @@ async function readTree(fetch: SyncDependencies["fetch"]): Promise<Map<string, s
   return new Map(listing.tree.filter((entry) => entry.type === "blob").map((entry) => [entry.path, entry.sha]));
 }
 
-export async function main(argv: readonly string[] = process.argv, dependencies: SyncDependencies = { fetch: (url) => fetch(url), sharp: loadSharp }): Promise<void> {
+const defaultDependencies: SyncDependencies = { fetch: (url) => fetch(url), sharp: loadSharp };
+
+export async function main(argv: readonly string[] = process.argv, dependencies: SyncDependencies = defaultDependencies): Promise<void> {
   const modulesDir = arg("--modules-dir", argv);
   const outManifest = arg("--out-manifest", argv);
   const outArt = arg("--out-art", argv);

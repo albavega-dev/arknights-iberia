@@ -1,3 +1,4 @@
+import { compareCodeUnits } from "../src/game-data/string-order";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { gameDataFavorTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
@@ -55,7 +56,7 @@ export function buildModulesDataset(input: Readonly<Record<GameDataRegion, Reado
 }
 
 export async function checkModuleIcons(dataset: ModulesDataset, directory: string): Promise<void> {
-  const icons = [...new Set(dataset.profiles.flatMap((profile) => profile.modules.map((module) => module.icon)))].sort();
+  const icons = [...new Set(dataset.profiles.flatMap((profile) => profile.modules.map((module) => module.icon)))].sort(compareCodeUnits);
   const missing: string[] = [];
   for (const icon of icons) if (!await exists(join(directory, `${icon}.png`))) missing.push(icon);
   if (missing.length) throw new Error(`Module type icons missing from ${directory}: ${missing.join(", ")}`);

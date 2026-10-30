@@ -7,6 +7,7 @@
  * The script reads the project's reviewed operator manifests, resolves the
  * charpor directory through its Git tree SHA, and writes only verified paths.
  */
+import { compareCodeUnits } from "../src/game-data/string-order";
 import { readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
@@ -34,7 +35,7 @@ const [regional, release] = await Promise.all([
   readJson<RegionalManifest>("data/operator-regional-manifest.json"),
   readJson<ReleaseManifest>("data/operator-cn-release-manifest.json"),
 ]);
-const ids = [...new Set([...release.operators, ...regional.operators].map(({ id }) => id))].sort();
+const ids = [...new Set([...release.operators, ...regional.operators].map(({ id }) => id))].sort(compareCodeUnits);
 const contents = await githubJson<Array<{ name: string; sha: string }>>(`https://api.github.com/repos/${repository}/contents?ref=${branch}`);
 const directory = contents.find((entry) => entry.name === sourcePath);
 if (!directory) throw new Error(`Source directory not found: ${sourcePath}`);

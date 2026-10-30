@@ -1,3 +1,4 @@
+import { compareCodeUnits } from "../src/game-data/string-order";
 import { readFile } from "node:fs/promises";
 import { getConfirmedModuleRanges } from "../src/game-data/operator-tactical";
 
@@ -24,7 +25,7 @@ const gridList = (value: unknown): Grid[] | null => {
   return result.every((v) => Number.isInteger(v.row) && Number.isInteger(v.col)) ? result as Grid[] : null;
 };
 const key = (grid: Grid) => `${grid.row},${grid.col}`;
-const normalized = (grids: ReadonlyArray<Grid>) => [...new Set(grids.map(key))].sort();
+const normalized = (grids: ReadonlyArray<Grid>) => [...new Set(grids.map(key))].sort(compareCodeUnits);
 const collectRangeIds = (value: unknown, result = new Set<string>()): Set<string> => {
   if (Array.isArray(value)) value.forEach((item) => collectRangeIds(item, result));
   else if (value && typeof value === "object") {

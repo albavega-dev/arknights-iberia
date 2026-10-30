@@ -1,3 +1,4 @@
+import { compareCodeUnits } from "../src/game-data/string-order";
 import { normalizeCharacterTable } from "../src/game-data/operator-import";
 
 type CurrentRow = { id: string; name: string; slug: string; cn_only: boolean; availability_status: string; cn_name: string | null; global_name: string | null };
@@ -9,7 +10,7 @@ export function buildNameProposals(enSource: unknown, cnSource: unknown, regiona
   const cn = new Map(normalizeCharacterTable(cnSource).operators.map((operator) => [operator.id, operator.name]));
   const regionalIds = new Set(regionalManifest.operators.map((operator) => operator.id));
   if (global.size !== 415 || cn.size !== 432 || regionalIds.size !== 17 || [...global.keys()].some((id) => !cn.has(id)) || [...regionalIds].some((id) => global.has(id))) throw new Error("Invalid regional name proposals");
-  return [...cn.keys()].sort().map((id) => ({ id, cnName: cn.get(id) ?? null, globalName: global.get(id) ?? null }));
+  return [...cn.keys()].sort(compareCodeUnits).map((id) => ({ id, cnName: cn.get(id) ?? null, globalName: global.get(id) ?? null }));
 }
 
 export function validateNameBackfill(current: readonly CurrentRow[], proposals: readonly Proposal[], regionalManifest?: RegionalManifest): void {

@@ -1,5 +1,10 @@
 import { readFile } from "node:fs/promises";
 
+function compareCodeUnits(a, b) {
+  if (a < b) return -1;
+  return a > b ? 1 : 0;
+}
+
 const args = new Map();
 for (let index = 2; index < process.argv.length; index += 2) args.set(process.argv[index], process.argv[index + 1]);
 const root = (name, fallback) => args.get(name) ?? fallback;
@@ -86,7 +91,7 @@ const dollkeepers = [
 ];
 const json = async (path) => JSON.parse(await readFile(path, "utf8"));
 const coordinateKey = (cell) => `${cell.row},${cell.col}`;
-const coordinates = (value) => (Array.isArray(value?.grids) ? value.grids.map(coordinateKey).sort() : null);
+const coordinates = (value) => (Array.isArray(value?.grids) ? value.grids.map(coordinateKey).sort(compareCodeUnits) : null);
 const equal = (left, right) => JSON.stringify(left) === JSON.stringify(right);
 const failures = [];
 const check = (condition, message) => { if (!condition) failures.push(message); };
