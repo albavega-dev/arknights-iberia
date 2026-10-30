@@ -17,8 +17,8 @@ type Region = "en" | "cn";
 export function source(repository: string, revision: string, path: string, hash: string): BundleSource { return { repository, revision, path, sha256: hash.toLowerCase() }; }
 async function hash(path: string): Promise<string> { return createHash("sha256").update(await readFile(path)).digest("hex").toUpperCase(); }
 async function json(path: string): Promise<unknown> { return JSON.parse(await readFile(path, "utf8")); }
-type ReleaseEntry = { id: string; cnReleaseDate: string; source: string };
-export type ReleaseManifest = { releaseDateStatus?: unknown; coverage?: { datedCnDates?: number; undatedCnDates?: number }; operators?: ReleaseEntry[] };
+type ReleaseEntry = { id: string; cnReleaseDate: string; status: unknown; source: string };
+export type ReleaseManifest = { coverage?: { datedCnDates?: number; undatedCnDates?: number }; operators?: ReleaseEntry[] };
 type RegionalEntry = RegionalNameEntry & { cnReleaseDate: string | null; globalReleaseDate?: string | null; cnReleaseDateProvenance?: unknown };
 export type RegionalManifest = { sources?: { releaseTable?: string }; operators?: RegionalEntry[] };
 export type CatalogTables = Readonly<{ enCharacter: unknown; cnCharacter: unknown; enHandbook: unknown; cnHandbook: unknown }>;
@@ -56,10 +56,12 @@ export function buildCatalogRecords(tables: CatalogTables, releaseManifest: Rele
   }), regionalEntries).sort((a, b) => a.id.localeCompare(b.id, "en"));
   const releaseEntries = releaseManifest.operators ?? [];
   if (releaseManifest.coverage?.datedCnDates !== releaseEntries.length || releaseManifest.coverage?.undatedCnDates !== 0) throw new Error("CN release manifest coverage is not fully reviewed");
-  const releaseStatus = releaseManifest.releaseDateStatus;
-  if (releaseStatus !== "verified" && releaseStatus !== "community-listed") throw new Error("CN release manifest has an invalid releaseDateStatus");
   const releaseById = new Map<string, ReleaseEntry>();
-  for (const entry of releaseEntries) { if (releaseById.has(entry.id)) throw new Error(`Duplicate CN release manifest ID: ${entry.id}`); releaseById.set(entry.id, entry); }
+  for (const entry of releaseEntries) {
+    if (releaseById.has(entry.id)) throw new Error(`Duplicate CN release manifest ID: ${entry.id}`);
+    if (!isReleaseDateProvenance({ status: entry.status, source: entry.source })) throw new Error(`Invalid CN release date provenance for ${entry.id}`);
+    releaseById.set(entry.id, entry);
+  }
   const regionalById = new Map<string, RegionalEntry>();
   for (const entry of regionalEntries) { if (regionalById.has(entry.id)) throw new Error(`Duplicate regional manifest ID: ${entry.id}`); regionalById.set(entry.id, entry); }
   const operatorIds = new Set(operators.map((item) => item.id));
@@ -73,7 +75,7 @@ export function buildCatalogRecords(tables: CatalogTables, releaseManifest: Rele
     const dated = regional.cnReleaseDate !== null;
     return { ...operator, cnReleaseDate: regional.cnReleaseDate, globalReleaseDate: regional.globalReleaseDate ?? null, cnReleaseDateStatus: dated ? provenance?.status ?? "community-listed" : null, cnReleaseDateSource: dated ? provenance?.source ?? regionalSource : null };
   };
-  const datedOperators = operators.map((operator): OperatorRecord => { const verified = releaseById.get(operator.id); const regional = regionalById.get(operator.id); if (verified) return { ...operator, cnReleaseDate: verified.cnReleaseDate, cnReleaseDateStatus: releaseStatus, cnReleaseDateSource: verified.source }; if (regional) return regionalDate(operator, regional); throw new Error(`Missing CN release metadata for ${operator.id}`); });
+  const datedOperators = operators.map((operator): OperatorRecord => { const verified = releaseById.get(operator.id); const regional = regionalById.get(operator.id); if (verified) return { ...operator, cnReleaseDate: verified.cnReleaseDate, cnReleaseDateStatus: verified.status as ReleaseDateProvenance["status"], cnReleaseDateSource: verified.source }; if (regional) return regionalDate(operator, regional); throw new Error(`Missing CN release metadata for ${operator.id}`); });
   const biographySources = { en: source(gameDataRepository, refs.handbook.en.revision, "en/gamedata/excel/handbook_info_table.json", hashes.handbook.en), cn: source(gameDataRepository, refs.handbook.cn.revision, "cn/gamedata/excel/handbook_info_table.json", hashes.handbook.cn) };
   const biographies = ([...en.map((item) => [item.id, "en", tables.enHandbook] as const), ...cn.filter((item) => !enIds.has(item.id)).map((item) => [item.id, "cn", tables.cnHandbook] as const)]).flatMap(([id, region, book]) => { const record = extractBiography(id, region as Region, book, biographySources[region as Region]); return record ? [record] : []; }).sort((a, b) => a.operatorId.localeCompare(b.operatorId, "en") || a.region.localeCompare(b.region, "en"));
   const sources = { en: source(gameDataRepository, refs.character.en.revision, "en/gamedata/excel/character_table.json", hashes.character.en), cn: source(gameDataRepository, refs.character.cn.revision, "cn/gamedata/excel/character_table.json", hashes.character.cn) };

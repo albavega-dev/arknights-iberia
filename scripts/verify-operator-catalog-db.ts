@@ -23,7 +23,7 @@ import {
   type GlobalManifestEntry,
   type MigrationState,
 } from "../src/game-data/operator-catalog-verification";
-import type { ReleaseDateProvenance } from "../src/game-data/operator-catalog";
+import { isReleaseDateProvenance, type ReleaseDateProvenance } from "../src/game-data/operator-catalog";
 import { readDatabaseConfig } from "../src/server/db/config";
 import { operatorBiographies, operators } from "../src/server/db/schema";
 import { readCatalogDataset } from "./generate-operator-catalog";
@@ -37,20 +37,9 @@ const writePrivileges = ["INSERT", "UPDATE", "DELETE", "TRUNCATE"] as const;
 type Options = { bundle?: string; details: boolean; files: boolean; fingerprint?: string };
 
 // Known differences between the catalog files and a database loaded with the earlier importer, which stored provenance
-// with other conventions, and the CN-only dates corrected one day later from the official announcements (Mechanist from
-// PRTS). The database keeps the earlier community-listed date, or none for Clementia. Anything else must match.
+// with other conventions and the CN release dates before their review. Anything else must match.
 const filesExpectedDifferences: readonly ExpectedDifference[] = [
-  {
-    column: "cn_release_date",
-    operators: {
-      char_1015_aglna2: "2026-07-31", char_1048_orchd2: "2026-05-31", char_1049_catap2: "2026-05-31", char_393_toledo: "2026-10-08",
-      char_4215_buddy: "2026-05-31", char_4217_makoto: "2026-09-03", char_4218_aigis: "2026-09-03", char_4219_yukari: "2026-09-03",
-      char_4220_kormr: "2026-09-03", char_4229_aphris: "2026-07-09", char_4230_mcnist: "2026-07-16", char_4231_clemnt: null,
-      char_4232_hbound: "2026-10-08", char_4234_pedro: "2026-07-09", char_4235_thumpy: "2026-07-31", char_4236_tmslot: "2026-07-31",
-      char_4237_jcinta: "2026-07-31",
-    },
-    reason: "CN-only dates corrected to the official announcements (Mechanist to PRTS); the database keeps the earlier community-listed date or none",
-  },
+  { column: "cn_release_date", operators: "all", reason: "CN release dates were reviewed against the game data, official announcements and PRTS after the database was loaded" },
   { column: "source_repository", operators: "all", reason: "The earlier importer stored the repository as a full URL" },
   { column: "source_data_version", operators: "all", reason: "The earlier importer stored the game data version instead of the snapshot revision" },
   { column: "cn_source_revision", operators: "global", reason: "The earlier importer also stored the CN revision on Global operators" },
@@ -129,16 +118,14 @@ async function run(options: Options): Promise<number> {
     console.error(JSON.stringify({ status: "error", code: "bundle-invalid" }));
     return 2;
   }
-  const releaseManifest = await json<{ releaseDateStatus: unknown; operators: GlobalManifestEntry[] }>("data/operator-cn-release-manifest.json");
-  const globalReleaseStatus = releaseManifest.releaseDateStatus;
-  if (globalReleaseStatus !== "verified" && globalReleaseStatus !== "community-listed") {
+  const releaseManifest = await json<{ operators: GlobalManifestEntry[] }>("data/operator-cn-release-manifest.json");
+  if (!releaseManifest.operators.every((entry) => isReleaseDateProvenance({ status: entry.status, source: entry.source }))) {
     console.error(JSON.stringify({ status: "error", code: "release-manifest-invalid" }));
     return 2;
   }
   const regionalManifest = await json<{ sources: { releaseTable: string }; operators: { id: string; nameEnglish?: string | null; cnReleaseDate: string | null; globalReleaseDate?: string | null; cnReleaseDateProvenance?: ReleaseDateProvenance }[] }>("data/operator-regional-manifest.json");
   const manifests: CatalogManifests = {
     global: releaseManifest.operators,
-    globalReleaseStatus,
     regional: regionalManifest.operators.map((entry) => ({ ...entry, nameEnglish: entry.nameEnglish ?? null, globalReleaseDate: entry.globalReleaseDate ?? null })),
     regionalReleaseSource: regionalManifest.sources.releaseTable,
   };

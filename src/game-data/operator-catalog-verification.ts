@@ -11,12 +11,11 @@ import { compareCodeUnits } from "./string-order";
 
 type Region = "en" | "cn";
 
-export type GlobalManifestEntry = Readonly<{ id: string; name: string; cnReleaseDate: string | null; source: string }>;
+export type GlobalManifestEntry = Readonly<{ id: string; name: string; cnReleaseDate: string | null; status: ReleaseDateStatus; source: string }>;
 export type RegionalManifestEntry = Readonly<{ id: string; nameEnglish: string | null; cnReleaseDate: string | null; globalReleaseDate: string | null; cnReleaseDateProvenance?: ReleaseDateProvenance }>;
 
 export type CatalogManifests = Readonly<{
   global: readonly GlobalManifestEntry[];
-  globalReleaseStatus: ReleaseDateStatus;
   regional: readonly RegionalManifestEntry[];
   regionalReleaseSource: string;
 }>;
@@ -127,7 +126,7 @@ export function buildExpectedCatalog(manifests: CatalogManifests): { operators: 
     else operators.set(operator.id, operator);
   };
   for (const entry of manifests.global) {
-    add({ id: entry.id, region: "en", cnOnly: false, name: entry.name, cnReleaseDate: entry.cnReleaseDate, globalReleaseDate: null, metadataSource: releaseMetadataSource(manifests.globalReleaseStatus, entry.source) });
+    add({ id: entry.id, region: "en", cnOnly: false, name: entry.name, cnReleaseDate: entry.cnReleaseDate, globalReleaseDate: null, metadataSource: releaseMetadataSource(entry.status, entry.source) });
   }
   for (const entry of manifests.regional) {
     add({
