@@ -181,3 +181,23 @@ test("modules generator refuses to overwrite, rejects hash mismatches and enforc
 test("modules dataset rejects tables without a term dictionary", () => {
   assert.throws(() => buildModulesDataset({ ...fixtures, cn: { ...fixtures.cn, gamedata_const: {} } }, catalog, hashes), /The cn game data constants have no term dictionary/);
 });
+
+test("modules generator verifies against a reference set and refuses undeclared differences", async () => {
+  const work = await workspace(); const [log] = quiet();
+  try {
+    await main(work.argv, work.options);
+    const other = join(work.directory, "verified");
+    await main([...work.argv.slice(0, -1), other, "--verify-against", work.output], work.options);
+    assert.ok(log.mock.calls.some((call) => /Verification: 3 identical, 0 different, 0 missing/.test(String(call.arguments[0]))));
+
+    const path = join(work.directory, "en-uniequip_table.json");
+    const text = (await readFile(path, "utf8")).replace("Module uniequip_002_a", "Module changed");
+    assert.notEqual(text, await readFile(path, "utf8"));
+    await writeFile(path, text, "utf8");
+    const changed = { ...work.options, expectedHashes: { ...work.options.expectedHashes!, en: { ...work.options.expectedHashes!.en, uniequip_table: sha(text) } } };
+    const rejected = join(work.directory, "rejected");
+    await assert.rejects(main([...work.argv.slice(0, -1), rejected, "--verify-against", work.output], changed), /Verification failed; output not written/);
+    assert.ok(log.mock.calls.some((call) => /char_a: .*modules/.test(String(call.arguments[0]))), "reports what changes per operator");
+    await assert.rejects(stat(rejected));
+  } finally { mock.restoreAll(); await work.cleanup(); }
+});

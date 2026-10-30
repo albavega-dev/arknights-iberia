@@ -6,7 +6,7 @@ import { modulesDatasetContractVersion, modulesDatasetLimits, sharedFileName, va
 import { buildOperatorModules, buildOperatorTrait, moduleDescriptions, traitDescriptions, type OperatorModulesProfile, type SourceModuleTables } from "../src/game-data/operator-modules";
 import { unnamedModeTags } from "../src/game-data/operator-module-modes";
 import { buildGlossary, type GlossaryEntry, type GlossaryTable } from "../src/game-data/operator-skills";
-import { arg, exists, operatorDatasetFile, readCatalog, readJson, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
+import { arg, compareDatasets, exists, operatorDatasetFile, readCatalog, readJson, reportVerification, sha256, tableFlag, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
 
 export const modulesDatasetName = "operator-modules";
 const regions: readonly GameDataRegion[] = ["en", "cn"];
@@ -96,6 +96,15 @@ export async function readModulesDataset(directory: string): Promise<{ index: Da
   return { index, profiles, glossaries };
 }
 
+export function comparableModules(dataset: ModulesDataset): ComparableDataset {
+  return { sources: dataset.sources, tables: dataset.tables, profiles: dataset.profiles, shared: Object.fromEntries(dataset.glossaries.map((glossary) => [glossaryFileName(glossary.region), glossary])) };
+}
+
+export async function verifyModulesAgainst(directory: string, dataset: ModulesDataset): Promise<void> {
+  const reference = await readModulesDataset(directory);
+  reportVerification(compareDatasets({ sources: reference.index.sources, tables: reference.index.tables, profiles: reference.profiles, shared: reference.glossaries }, comparableModules(dataset)));
+}
+
 export async function main(argv: readonly string[] = process.argv, options: ModulesGeneratorOptions = {}): Promise<void> {
   const paths = Object.fromEntries(regions.map((region) => [region, Object.fromEntries(tables.map((table) => [table, arg(tableFlag(region, table), argv)]))])) as Record<GameDataRegion, Record<ModulesTable, string>>;
   const output = arg("--out-dir", argv);
@@ -109,6 +118,7 @@ export async function main(argv: readonly string[] = process.argv, options: Modu
   const unnamed = unnamedModeTags(dataset.profiles.flatMap((profile) => profile.modules.flatMap((item) => item.levels.flatMap((level) => level.modes ?? []))));
   if (unnamed.length) throw new Error(`Mode tags without a name in data/operator-module-modes.json: ${unnamed.join(", ")}`);
   await checkModuleIcons(dataset, options.iconDirectory ?? "public/assets/operator-modules");
+  if (argv.includes("--verify-against")) await verifyModulesAgainst(arg("--verify-against", argv), dataset);
   const result = await writeModulesDataset(output, dataset, { force, limits: options.limits });
   for (const warning of result.warnings) console.warn(`Warning: ${warning}`);
   const largest = Math.max(...Object.values(result.index.operators).map((entry) => entry.bytes));

@@ -1,6 +1,7 @@
 import { createHash } from "node:crypto";
 import { mkdir, readFile, rename, rm, stat, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { isDeepStrictEqual } from "node:util";
 import type { GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { buildDatasetIndex, checkDatasetLimits, datasetFileName, serializeDatasetJson, sharedFileName, type DatasetExtras, type DatasetLimits, type DatasetFile, type DatasetIndex, type DatasetSource } from "../src/game-data/operator-dataset";
 
@@ -53,4 +54,41 @@ export async function writeDatasetDirectory(directory: string, dataset: string, 
   if (hadPrevious) await rm(previous, { recursive: true, force: true });
   const entries = [...Object.values(index.operators), ...Object.values(index.shared ?? {})];
   return { index, totalBytes: Buffer.byteLength(indexText) + entries.reduce((sum, entry) => sum + entry.bytes, 0), warnings };
+}
+
+export type DatasetVerification = { identical: number; differences: { operatorId: string; keys: string[] }[]; missing: string[]; ignored: number; sources: string[]; shared: string[] };
+export type ComparableDataset = Readonly<{ sources: unknown; tables?: unknown; profiles: readonly { operatorId: string; region: string }[]; shared: Readonly<Record<string, unknown>> }>;
+
+const plain = (value: unknown): unknown => JSON.parse(JSON.stringify(value ?? null));
+
+/** Compares a generated dataset with a versioned one: per operator, the top-level keys that change, plus sources, tables and shared files. */
+export function compareDatasets(reference: ComparableDataset, generated: ComparableDataset): DatasetVerification {
+  const result: DatasetVerification = { identical: 0, differences: [], missing: [], ignored: 0, sources: [], shared: [] };
+  const used = new Set<unknown>();
+  for (const profile of generated.profiles) {
+    const candidate = reference.profiles.find((item) => item.operatorId === profile.operatorId && item.region === profile.region);
+    if (!candidate) { result.missing.push(`${profile.operatorId}/${profile.region}`); continue; }
+    used.add(candidate);
+    const expected = plain(candidate) as Record<string, unknown>;
+    const actual = plain(profile) as Record<string, unknown>;
+    const keys = [...new Set([...Object.keys(expected), ...Object.keys(actual)])].filter((key) => !isDeepStrictEqual(expected[key], actual[key]));
+    if (keys.length) result.differences.push({ operatorId: profile.operatorId, keys }); else result.identical += 1;
+  }
+  result.ignored = reference.profiles.filter((item) => !used.has(item)).length;
+  if (!isDeepStrictEqual(plain(reference.sources), plain(generated.sources))) result.sources.push("sources");
+  if (!isDeepStrictEqual(plain(reference.tables), plain(generated.tables))) result.sources.push("tables");
+  for (const name of new Set([...Object.keys(reference.shared), ...Object.keys(generated.shared)])) if (!isDeepStrictEqual(plain(reference.shared[name]), plain(generated.shared[name]))) result.shared.push(name);
+  return result;
+}
+
+/** Prints the outcome of a verification and fails on any difference, so nothing is written for an undeclared change. */
+export function reportVerification(verification: DatasetVerification, log: (line: string) => void = console.log): void {
+  const failed = verification.differences.length + verification.missing.length + verification.sources.length + verification.shared.length > 0;
+  log(`Verification: ${verification.identical} identical, ${verification.differences.length} different, ${verification.missing.length} missing, ${verification.ignored} reference profiles outside the catalog`);
+  for (const difference of verification.differences.slice(0, 50)) log(`  ${difference.operatorId}: ${difference.keys.join(", ")}`);
+  if (verification.differences.length > 50) log(`  and ${verification.differences.length - 50} more operators`);
+  if (verification.missing.length) log(`  missing from the reference: ${verification.missing.slice(0, 50).join(", ")}`);
+  if (verification.sources.length) log(`  differences in: ${verification.sources.join(", ")}`);
+  if (verification.shared.length) log(`  shared files that change: ${verification.shared.join(", ")}`);
+  if (failed) throw new Error("Verification failed; output not written");
 }

@@ -147,3 +147,24 @@ test("skills generator rejects corrupted datasets when reading them back", async
     await assert.rejects(readSkillsDataset(work.output), /hash mismatch: glossary-en.json/);
   } finally { mock.restoreAll(); await work.cleanup(); }
 });
+
+test("skills generator verifies against a reference set and refuses undeclared differences", async () => {
+  const work = await workspace(); const [log] = quiet();
+  try {
+    await main(work.argv, work.options);
+    const other = join(work.directory, "verified");
+    const verify = [...work.argv.slice(0, -1), other, "--verify-against", work.output];
+    await main(verify, work.options);
+    assert.ok(log.mock.calls.some((call) => /Verification: 3 identical, 0 different, 0 missing/.test(String(call.arguments[0]))));
+    assert.equal((await stat(join(other, "index.json"))).isFile(), true);
+
+    const path = join(work.directory, "en-skill_table.json");
+    const text = (await readFile(path, "utf8")).replace('"One"', '"Uno"');
+    await writeFile(path, text, "utf8");
+    const changed = { ...work.options, expectedHashes: { ...work.options.expectedHashes!, en: { ...work.options.expectedHashes!.en, skill_table: sha(text) } } };
+    const rejected = join(work.directory, "rejected");
+    await assert.rejects(main([...work.argv.slice(0, -1), rejected, "--verify-against", work.output], changed), /Verification failed; output not written/);
+    assert.ok(log.mock.calls.some((call) => /char_b: skills/.test(String(call.arguments[0]))), "reports what changes per operator");
+    await assert.rejects(stat(rejected));
+  } finally { mock.restoreAll(); await work.cleanup(); }
+});
