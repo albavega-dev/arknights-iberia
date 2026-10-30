@@ -135,7 +135,7 @@ test("the script proposes from the detection report and writes only what is reso
   const { directory, table, report } = await fixture();
   try {
     const empty: NewOperatorProposal = { sources: { prts: "", terraWiki: "" }, regional: [], factions: [], affiliations: [], artistCredits: [], unresolved: [], notes: [] };
-    await writeProposal(empty, directory);
+    assert.deepEqual(await writeProposal(empty, directory), { added: [], creditsFilled: [], affiliationsAdded: [], kept: [] });
     for (const name of ["regional", "faction", "affiliation", "artist-credits"]) {
       assert.equal(await readFile(join(directory, "data", `operator-${name}-manifest.json`), "utf8"), await readFile(`data/operator-${name}-manifest.json`, "utf8"), `${name} unchanged by an empty write`);
     }
@@ -154,7 +154,21 @@ test("the script proposes from the detection report and writes only what is reso
     assert.ok(affiliations.endsWith(`,\n    { "operatorId": "char_new", "affiliationId": "faction:iberia", "relation": "sub-power", "sourceField": "character_table.json → subPower[].nationId", "sourceValue": "iberia", "source": { "repository": "ArknightsAssets/ArknightsGamedata", "region": "cn", "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842", "path": "cn/gamedata/excel/character_table.json" }, "status": "verified" }\n  ]\n}\n`));
     const credits = JSON.parse(await readFile(join(directory, "data/operator-artist-credits-manifest.json"), "utf8")) as { entries: { operatorId: string }[] };
     assert.deepEqual(credits.entries.slice(-1).map((entry) => entry.operatorId), ["char_new"]);
-    await assert.rejects(writeProposal(proposal, directory), /Already in the manifests: char_new/);
+    const files = async () => Promise.all(["regional", "faction", "affiliation", "artist-credits"].map((name) => readFile(join(directory, "data", `operator-${name}-manifest.json`), "utf8")));
+    const before = await files();
+    assert.deepEqual(await writeProposal(proposal, directory), { added: [], creditsFilled: [], affiliationsAdded: [], kept: ["char_new"] });
+    assert.deepEqual(await files(), before, "writing again changes nothing");
+    const creditsPath = join(directory, "data/operator-artist-credits-manifest.json");
+    const copied = JSON.parse(await readFile(creditsPath, "utf8")) as { entries: { operatorId: string; status: string }[] };
+    copied.entries.find((entry) => entry.operatorId === "char_4236_tmslot")!.status = "pending";
+    await writeFile(creditsPath, `${JSON.stringify(copied, null, 2)}\n`);
+    const pending = artistEntry("char_4236_tmslot", "partial");
+    const filled = await writeProposal({ ...empty, regional: [{ ...proposal.regional[0]!, id: "char_4236_tmslot", nameEnglish: "Other" }], artistCredits: [pending, artistEntry("char_002_amiya", "partial")], affiliations: [{ ...proposal.affiliations[0]!, operatorId: "char_4236_tmslot" }] }, directory);
+    assert.deepEqual(filled, { added: [], creditsFilled: ["char_4236_tmslot"], affiliationsAdded: ["char_4236_tmslot faction:iberia"], kept: ["char_4236_tmslot"] }, "pending credits are filled, others and regional entries kept");
+    const after = JSON.parse(await readFile(join(directory, "data/operator-artist-credits-manifest.json"), "utf8")) as { entries: { operatorId: string; status: string; general: unknown[] }[] };
+    assert.equal(after.entries.find((entry) => entry.operatorId === "char_4236_tmslot")!.status, "partial");
+    assert.notDeepEqual(after.entries.find((entry) => entry.operatorId === "char_002_amiya")!.general, pending.general);
+    assert.match(await readFile(join(directory, "data/operator-regional-manifest.json"), "utf8"), /"char_4236_tmslot", "nameEnglish": "Timeslot"/);
     await writeFile(join(directory, "data/operator-affiliation-manifest.json"), "{}");
     await assert.rejects(writeProposal({ ...empty, regional: [{ ...proposal.regional[0]!, id: "char_other" }] }, directory), /Unexpected manifest layout/);
   } finally {

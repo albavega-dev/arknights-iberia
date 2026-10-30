@@ -161,37 +161,65 @@ export function oneLine(value: unknown): string {
 
 const closing = "\n  ]\n}\n";
 
-/** Adds the resolved entries to the manifests of data/, keeping each file's layout. Existing ids are an error. */
-export async function writeProposal(proposal: NewOperatorProposal, root = "."): Promise<void> {
-  const ids = new Set([...proposal.regional.map((entry) => entry.id), ...proposal.factions.map((entry) => entry.id), ...proposal.artistCredits.map((entry) => entry.operatorId)]);
+export type WriteSummary = { added: string[]; creditsFilled: string[]; affiliationsAdded: string[]; kept: string[] };
+
+/**
+ * Writes the resolved entries to the manifests of data/, keeping each file's layout. A new operator gets all its
+ * entries; one already in the manifests keeps its regional and faction entries and only gains what is missing: artist
+ * credits that are still pending and affiliations it does not have.
+ */
+export async function writeProposal(proposal: NewOperatorProposal, root = "."): Promise<WriteSummary> {
   const regionalPath = `${root}/data/operator-regional-manifest.json`;
   const regionalText = await readFile(regionalPath, "utf8");
   const regional = JSON.parse(regionalText) as { operators: RegionalEntry[] };
   const factionPath = `${root}/data/operator-faction-manifest.json`;
   const factions = await readJson<{ operators: { id: string }[] }>(factionPath);
   const creditsPath = `${root}/data/operator-artist-credits-manifest.json`;
-  const credits = await readJson<{ entries: { operatorId: string }[] }>(creditsPath);
+  const credits = await readJson<{ entries: { operatorId: string; status?: string }[] }>(creditsPath);
   const affiliationPath = `${root}/data/operator-affiliation-manifest.json`;
   const affiliationText = await readFile(affiliationPath, "utf8");
-  const existing = [...regional.operators.map((entry) => entry.id), ...factions.operators.map((entry) => entry.id), ...credits.entries.map((entry) => entry.operatorId)];
-  const repeated = existing.filter((id) => ids.has(id));
-  if (repeated.length) throw new Error(`Already in the manifests: ${[...new Set(repeated)].join(", ")}`);
+  const affiliations = JSON.parse(affiliationText) as { associations: Affiliation[] };
   if (!regionalText.endsWith(closing) || !affiliationText.endsWith(closing)) throw new Error("Unexpected manifest layout");
 
-  const operators = [...regional.operators, ...proposal.regional].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
+  const known = new Set(regional.operators.map((entry) => entry.id));
+  const newRegional = proposal.regional.filter((entry) => !known.has(entry.id));
+  const knownFactions = new Set(factions.operators.map((entry) => entry.id));
+  const newFactions = proposal.factions.filter((entry) => !knownFactions.has(entry.id));
+  const creditIndex = new Map(credits.entries.map((entry, index) => [entry.operatorId, index]));
+  const entries = [...credits.entries];
+  const creditsFilled: string[] = [];
+  for (const entry of proposal.artistCredits) {
+    const index = creditIndex.get(entry.operatorId);
+    if (index === undefined) entries.push(entry);
+    else if (entries[index]!.status === "pending") {
+      entries[index] = entry;
+      creditsFilled.push(entry.operatorId);
+    }
+  }
+  const pairs = new Set(affiliations.associations.map((entry) => `${entry.operatorId}|${entry.affiliationId}`));
+  const newAffiliations = proposal.affiliations.filter((entry) => !pairs.has(`${entry.operatorId}|${entry.affiliationId}`));
+
+  const operators = [...regional.operators, ...newRegional].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const head = regionalText.slice(0, regionalText.indexOf('"operators": [') + '"operators": ['.length);
   await writeFile(regionalPath, `${head}\n${operators.map((entry) => `    ${oneLine(entry)}`).join(",\n")}${closing}`, "utf8");
-  await writeFile(factionPath, `${JSON.stringify({ ...factions, operators: [...factions.operators, ...proposal.factions] }, null, 2)}\n`, "utf8");
-  await writeFile(creditsPath, `${JSON.stringify({ ...credits, entries: [...credits.entries, ...proposal.artistCredits] }, null, 2)}\n`, "utf8");
-  const added = proposal.affiliations.map((entry) => `,\n    ${oneLine(entry)}`).join("");
+  await writeFile(factionPath, `${JSON.stringify({ ...factions, operators: [...factions.operators, ...newFactions] }, null, 2)}\n`, "utf8");
+  await writeFile(creditsPath, `${JSON.stringify({ ...credits, entries }, null, 2)}\n`, "utf8");
+  const added = newAffiliations.map((entry) => `,\n    ${oneLine(entry)}`).join("");
   await writeFile(affiliationPath, `${affiliationText.slice(0, -closing.length)}${added}${closing}`, "utf8");
+  const ids = [...new Set([...proposal.regional.map((entry) => entry.id), ...proposal.factions.map((entry) => entry.id)])];
+  return {
+    added: newRegional.map((entry) => entry.id),
+    creditsFilled,
+    affiliationsAdded: newAffiliations.map((entry) => `${entry.operatorId} ${entry.affiliationId}`),
+    kept: ids.filter((id) => known.has(id)),
+  };
 }
 
 /** Prints the proposal (and writes it with --write) and returns the exit code: 0 all resolved, 2 something needs a person. */
 export async function main(argv: readonly string[] = process.argv, fetchers: Fetchers = defaultFetchers, log: (line: string) => void = console.log, root = "."): Promise<number> {
   const proposal = await propose(argv, fetchers, root);
-  if (argv.includes("--write")) await writeProposal(proposal, root);
-  log(JSON.stringify(proposal, null, 2));
+  const written = argv.includes("--write") ? await writeProposal(proposal, root) : undefined;
+  log(JSON.stringify(written ? { ...proposal, written } : proposal, null, 2));
   return proposal.unresolved.length ? 2 : 0;
 }
 

@@ -10496,25 +10496,41 @@
       "operatorName": "德·托莱多",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E5%BE%B7%C2%B7%E6%89%98%E8%8E%B1%E5%A4%9A",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E5%BE%B7%C2%B7%E6%89%98%E8%8E%B1%E5%A4%9A&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:47:05.244Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/De_Toledo",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=De+Toledo&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773713,
+        "revisionTimestamp": "2026-10-27T15:05:00Z",
+        "consultedAt": "2026-10-30T20:25:59.549Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "NOCO",
+          "evidence": "|illustrator = NOCO"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "NOCO",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/De_Toledo",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=De+Toledo&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773713,
+            "revisionTimestamp": "2026-10-27T15:05:00Z",
+            "consultedAt": "2026-10-30T20:25:59.549Z"
+          },
+          "evidence": "|illustrator = NOCO"
+        }
+      ]
     },
     {
       "operatorId": "char_394_hadiya",
@@ -16497,25 +16513,41 @@
       "operatorName": "罗德岛隐秘队",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E7%BD%97%E5%BE%B7%E5%B2%9B%E9%9A%90%E7%A7%98%E9%98%9F",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E7%BD%97%E5%BE%B7%E5%B2%9B%E9%9A%90%E7%A7%98%E9%98%9F&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:15.948Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Rhodes_Island_Recon",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Rhodes+Island+Recon&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773701,
+        "revisionTimestamp": "2026-10-27T15:04:25Z",
+        "consultedAt": "2026-10-30T20:25:59.929Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "Studio Montagne",
+          "evidence": "|illustrator = Studio Montagne"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "Studio Montagne",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Rhodes_Island_Recon",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Rhodes+Island+Recon&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773701,
+            "revisionTimestamp": "2026-10-27T15:04:25Z",
+            "consultedAt": "2026-10-30T20:25:59.929Z"
+          },
+          "evidence": "|illustrator = Studio Montagne"
+        }
+      ]
     },
     {
       "operatorId": "char_4217_makoto",
@@ -16547,50 +16579,82 @@
       "operatorName": "埃癸斯",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E5%9F%83%E7%99%B8%E6%96%AF",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E5%9F%83%E7%99%B8%E6%96%AF&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:15.950Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Aegis",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Aegis&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773727,
+        "revisionTimestamp": "2026-10-27T20:01:03Z",
+        "consultedAt": "2026-10-30T20:26:00.741Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "Studio Montagne",
+          "evidence": "|illustrator = Studio Montagne"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "Studio Montagne",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Aegis",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Aegis&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773727,
+            "revisionTimestamp": "2026-10-27T20:01:03Z",
+            "consultedAt": "2026-10-30T20:26:00.741Z"
+          },
+          "evidence": "|illustrator = Studio Montagne"
+        }
+      ]
     },
     {
       "operatorId": "char_4219_yukari",
       "operatorName": "岳羽由加莉",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E5%B2%B3%E7%BE%BD%E7%94%B1%E5%8A%A0%E8%8E%89",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E5%B2%B3%E7%BE%BD%E7%94%B1%E5%8A%A0%E8%8E%89&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:15.950Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Yukari_Takeba",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Yukari+Takeba&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 769365,
+        "revisionTimestamp": "2026-10-16T06:04:14Z",
+        "consultedAt": "2026-10-30T20:26:01.135Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "Studio Montagne",
+          "evidence": "|illustrator = Studio Montagne"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "Studio Montagne",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Yukari_Takeba",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Yukari+Takeba&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 769365,
+            "revisionTimestamp": "2026-10-16T06:04:14Z",
+            "consultedAt": "2026-10-30T20:26:01.135Z"
+          },
+          "evidence": "|illustrator = Studio Montagne"
+        }
+      ]
     },
     {
       "operatorId": "char_422_aurora",
@@ -17009,25 +17073,41 @@
       "operatorName": "谬因",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E8%B0%AC%E5%9B%A0",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E8%B0%AC%E5%9B%A0&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:25.509Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Aphrissa",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Aphrissa&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773705,
+        "revisionTimestamp": "2026-10-27T15:04:36Z",
+        "consultedAt": "2026-10-30T20:26:01.958Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "下野宏铭",
+          "evidence": "|illustrator = 下野宏铭"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "下野宏铭",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Aphrissa",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Aphrissa&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773705,
+            "revisionTimestamp": "2026-10-27T15:04:36Z",
+            "consultedAt": "2026-10-30T20:26:01.958Z"
+          },
+          "evidence": "|illustrator = 下野宏铭"
+        }
+      ]
     },
     {
       "operatorId": "char_423_blemsh",
@@ -17075,175 +17155,307 @@
       "operatorName": "机械师",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E6%9C%BA%E6%A2%B0%E5%B8%88",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E6%9C%BA%E6%A2%B0%E5%B8%88&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:26.452Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Mechanist",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Mechanist&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773700,
+        "revisionTimestamp": "2026-10-27T15:04:23Z",
+        "consultedAt": "2026-10-30T20:26:02.349Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "Studio Montagne",
+          "role": "Operator art",
+          "evidence": "|illustrator = [[Studio Montagne]] (Operator art)"
+        },
+        {
+          "name": "Cenm0",
+          "role": "original design",
+          "evidence": "|illustrator = Cenm0 (original design)"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "Studio Montagne",
+          "role": "operator-illustration",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Mechanist",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Mechanist&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773700,
+            "revisionTimestamp": "2026-10-27T15:04:23Z",
+            "consultedAt": "2026-10-30T20:26:02.349Z"
+          },
+          "evidence": "|illustrator = [[Studio Montagne]] (Operator art)"
+        },
+        {
+          "artist": "Cenm0",
+          "role": "original-design",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Mechanist",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Mechanist&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773700,
+            "revisionTimestamp": "2026-10-27T15:04:23Z",
+            "consultedAt": "2026-10-30T20:26:02.349Z"
+          },
+          "evidence": "|illustrator = Cenm0 (original design)"
+        }
+      ]
     },
     {
       "operatorId": "char_4231_clemnt",
       "operatorName": "克莱门莎",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E5%85%8B%E8%8E%B1%E9%97%A8%E8%8E%8E",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E5%85%8B%E8%8E%B1%E9%97%A8%E8%8E%8E&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:26.453Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Clementia",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Clementia&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 774023,
+        "revisionTimestamp": "2026-10-29T10:54:56Z",
+        "consultedAt": "2026-10-30T20:26:02.749Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "一千",
+          "evidence": "|illustrator = 一千"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "一千",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Clementia",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Clementia&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 774023,
+            "revisionTimestamp": "2026-10-29T10:54:56Z",
+            "consultedAt": "2026-10-30T20:26:02.749Z"
+          },
+          "evidence": "|illustrator = 一千"
+        }
+      ]
     },
     {
       "operatorId": "char_4232_hbound",
       "operatorName": "旅骨",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E6%97%85%E9%AA%A8",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E6%97%85%E9%AA%A8&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:26.454Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Homebound",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Homebound&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773712,
+        "revisionTimestamp": "2026-10-27T15:04:57Z",
+        "consultedAt": "2026-10-30T20:26:03.142Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "3MO",
+          "evidence": "|illustrator = 3MO"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "3MO",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Homebound",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Homebound&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773712,
+            "revisionTimestamp": "2026-10-27T15:04:57Z",
+            "consultedAt": "2026-10-30T20:26:03.142Z"
+          },
+          "evidence": "|illustrator = 3MO"
+        }
+      ]
     },
     {
       "operatorId": "char_4234_pedro",
       "operatorName": "佩德洛",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E4%BD%A9%E5%BE%B7%E6%B4%9B",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E4%BD%A9%E5%BE%B7%E6%B4%9B&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:26.454Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Pedro",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Pedro&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773704,
+        "revisionTimestamp": "2026-10-27T15:04:33Z",
+        "consultedAt": "2026-10-30T20:26:03.545Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "致恶剂",
+          "evidence": "|illustrator = 致恶剂"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "致恶剂",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Pedro",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Pedro&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773704,
+            "revisionTimestamp": "2026-10-27T15:04:33Z",
+            "consultedAt": "2026-10-30T20:26:03.545Z"
+          },
+          "evidence": "|illustrator = 致恶剂"
+        }
+      ]
     },
     {
       "operatorId": "char_4235_thumpy",
       "operatorName": "珊比",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E7%8F%8A%E6%AF%94",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E7%8F%8A%E6%AF%94&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:26.454Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Thumpy",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Thumpy&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773707,
+        "revisionTimestamp": "2026-10-27T15:04:42Z",
+        "consultedAt": "2026-10-30T20:26:03.941Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "Yukuso",
+          "evidence": "|illustrator = Yukuso"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "Yukuso",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Thumpy",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Thumpy&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773707,
+            "revisionTimestamp": "2026-10-27T15:04:42Z",
+            "consultedAt": "2026-10-30T20:26:03.941Z"
+          },
+          "evidence": "|illustrator = Yukuso"
+        }
+      ]
     },
     {
       "operatorId": "char_4236_tmslot",
       "operatorName": "时隙",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E6%97%B6%E9%9A%99",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E6%97%B6%E9%9A%99&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:26.455Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Timeslot",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Timeslot&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773709,
+        "revisionTimestamp": "2026-10-27T15:04:47Z",
+        "consultedAt": "2026-10-30T20:26:04.323Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "八号地球",
+          "evidence": "|illustrator = 八号地球"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "八号地球",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Timeslot",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Timeslot&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773709,
+            "revisionTimestamp": "2026-10-27T15:04:47Z",
+            "consultedAt": "2026-10-30T20:26:04.323Z"
+          },
+          "evidence": "|illustrator = 八号地球"
+        }
+      ]
     },
     {
       "operatorId": "char_4237_jcinta",
       "operatorName": "嘉辛塔",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E5%98%89%E8%BE%9B%E5%A1%94",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E5%98%89%E8%BE%9B%E5%A1%94&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:26.455Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Jacinta",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Jacinta&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773708,
+        "revisionTimestamp": "2026-10-27T15:04:45Z",
+        "consultedAt": "2026-10-30T20:26:04.714Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "斑雀",
+          "evidence": "|illustrator = 斑雀"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "斑雀",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Jacinta",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Jacinta&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773708,
+            "revisionTimestamp": "2026-10-27T15:04:45Z",
+            "consultedAt": "2026-10-30T20:26:04.714Z"
+          },
+          "evidence": "|illustrator = 斑雀"
+        }
+      ]
     },
     {
       "operatorId": "char_426_billro",
