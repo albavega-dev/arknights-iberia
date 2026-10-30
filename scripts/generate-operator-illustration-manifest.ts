@@ -1,9 +1,10 @@
+import { imageRepository, imageRevision } from "../src/game-data/asset-revisions";
 import { compareCodeUnits } from "../src/game-data/string-order";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const repository = "PuppiizSunniiz/Arknight-Images";
-const defaultCommit = "1a41341cc634461a5abe3456722801a39b9a9d32";
+const repository = imageRepository;
+const defaultCommit = imageRevision;
 const outputPath = path.resolve("data/operator-illustration-manifest.json");
 const idManifestPath = path.resolve("data/operator-regional-manifest.json");
 const releaseManifestPath = path.resolve("data/operator-cn-release-manifest.json");

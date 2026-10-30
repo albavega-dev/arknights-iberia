@@ -6,9 +6,10 @@ import test from "node:test";
 import { assetPath } from "../src/game-data/asset-paths";
 import { baseSkillIconLocalName, getBaseSkillIconPath, getMasteryIconPath, getRoomIconPath, getSkillIconPath, resolveSkillIconSource, roomIconLocalName, roomIconSources, skillIconLocalName, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
 import type { OperatorSkillsProfile } from "../src/game-data/operator-skills";
+import { imageRevision } from "../src/game-data/asset-revisions";
 import { buildSkillIconsManifest, pngInfo, resolveCatalogBaseIcons, resolveCatalogIcons, type BaseIconFiles } from "../scripts/sync-operator-skill-icons";
 
-const revision = "1a41341cc634461a5abe3456722801a39b9a9d32";
+const revision = imageRevision;
 const png = (width: number, height: number) => {
   const data = Buffer.alloc(32);
   Buffer.from("89504e470d0a1a0a", "hex").copy(data);

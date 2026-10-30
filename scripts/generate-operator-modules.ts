@@ -9,7 +9,6 @@ import { buildGlossary, type GlossaryEntry, type GlossaryTable } from "../src/ga
 import { arg, exists, operatorDatasetFile, readCatalog, readJson, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
 
 export const modulesDatasetName = "operator-modules";
-const catalogSize = 432;
 const regions: readonly GameDataRegion[] = ["en", "cn"];
 const tables = ["character_table", "uniequip_table", "battle_equip_table", "range_table", "gamedata_const", "favor_table"] as const;
 type ModulesTable = (typeof tables)[number];
@@ -105,7 +104,7 @@ export async function main(argv: readonly string[] = process.argv, options: Modu
   const expectedHashes = options.expectedHashes ?? defaultHashes();
   for (const region of regions) for (const table of tables) if (sha256(await readFile(paths[region][table])) !== expectedHashes[region][table]) throw new Error(`Snapshot SHA-256 mismatch: ${tableFlag(region, table)}`);
   const input = Object.fromEntries(await Promise.all(regions.map(async (region) => [region, Object.fromEntries(await Promise.all(tables.map(async (table) => [table, await readJson(paths[region][table])])))]))) as Record<GameDataRegion, Record<ModulesTable, unknown>>;
-  const catalog = await readCatalog(options.releaseManifest ?? "data/operator-cn-release-manifest.json", options.regionalManifest ?? "data/operator-regional-manifest.json", options.catalogSize ?? catalogSize);
+  const catalog = await readCatalog(options.releaseManifest ?? "data/operator-cn-release-manifest.json", options.regionalManifest ?? "data/operator-regional-manifest.json", options.catalogSize);
   const dataset = buildModulesDataset(input, catalog, expectedHashes);
   const unnamed = unnamedModeTags(dataset.profiles.flatMap((profile) => profile.modules.flatMap((item) => item.levels.flatMap((level) => level.modes ?? []))));
   if (unnamed.length) throw new Error(`Mode tags without a name in data/operator-module-modes.json: ${unnamed.join(", ")}`);

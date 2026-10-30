@@ -8,7 +8,6 @@ import { arg, exists, operatorDatasetFile, readCatalog, readJson as json, sha256
 import { attachModuleStats, extractOperatorStatsProfiles, type OperatorStatsProfile } from "../src/game-data/operator-stats";
 
 export const statsDatasetName = "operator-stats";
-const catalogSize = 432;
 const regions: readonly GameDataRegion[] = ["en", "cn"];
 const tables: readonly GameDataTable[] = ["character_table", "uniequip_table", "battle_equip_table"];
 
@@ -106,7 +105,7 @@ export async function main(argv: readonly string[] = process.argv, options: Stat
   const expectedHashes = options.expectedHashes ?? gameDataTableHashes;
   for (const region of regions) for (const table of tables) if (sha256(await readFile(paths[region][table])) !== expectedHashes[region][table]) throw new Error(`Snapshot SHA-256 mismatch: ${tableFlag(region, table)}`);
   const input = Object.fromEntries(await Promise.all(regions.map(async (region) => [region, Object.fromEntries(await Promise.all(tables.map(async (table) => [table, await json(paths[region][table])])))]))) as Record<GameDataRegion, Record<GameDataTable, unknown>>;
-  const catalog = await readCatalog(options.releaseManifest ?? "data/operator-cn-release-manifest.json", options.regionalManifest ?? "data/operator-regional-manifest.json", options.catalogSize ?? catalogSize);
+  const catalog = await readCatalog(options.releaseManifest ?? "data/operator-cn-release-manifest.json", options.regionalManifest ?? "data/operator-regional-manifest.json", options.catalogSize);
   const sources = Object.fromEntries(regions.map((region) => [region, { repository: gameDataRepository, revision: gameDataRevisions[region], path: `${region}/gamedata/excel/character_table.json`, sha256: expectedHashes[region].character_table }])) as Record<GameDataRegion, StatsSource>;
   const dataset = buildStatsDataset(input, catalog, sources);
   if (argv.includes("--verify-against")) {

@@ -1,15 +1,15 @@
 import { createHash } from "node:crypto";
 import { readFile, rename, stat, writeFile } from "node:fs/promises";
 import { normalizeCharacterTable } from "../src/game-data/operator-import";
-import { fixedBiographyRevisions, extractBiography } from "../src/game-data/operator-biography";
+import { extractBiography } from "../src/game-data/operator-biography";
 import { bundleSha256, validateOperatorBundle, type BundleSource, type OperatorBundle } from "../src/game-data/operator-bundle";
 import { getOperatorAdditionalFactionIds, getOperatorMainFactionId } from "../src/game-data/operator-factions";
 import { applyRegionalDisplayNames, type RegionalNameEntry } from "../src/game-data/operator-regional-names";
-import { gameDataRevisions, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
+import { gameDataHandbookTableHashes, gameDataRepository, gameDataRevisions, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
 
 const refs = {
   character: { en: { revision: gameDataRevisions.en, sha256: gameDataTableHashes.en.character_table }, cn: { revision: gameDataRevisions.cn, sha256: gameDataTableHashes.cn.character_table } },
-  handbook: { en: { revision: fixedBiographyRevisions.en, sha256: "07077CD529965C57DA1F602028F1CEEC81B43814AF0D8F131DCBED92B04E0498" }, cn: { revision: fixedBiographyRevisions.cn, sha256: "B6E6FA4CAFE118B8C0342E7643A6103775F72C173A43467AEEA22DFBEE01D108" } },
+  handbook: { en: { revision: gameDataRevisions.en, sha256: gameDataHandbookTableHashes.en.handbook_info_table }, cn: { revision: gameDataRevisions.cn, sha256: gameDataHandbookTableHashes.cn.handbook_info_table } },
 } as const;
 type Region = "en" | "cn";
 export function source(repository: string, revision: string, path: string, hash: string): BundleSource { return { repository, revision, path, sha256: hash.toLowerCase() }; }
@@ -58,9 +58,9 @@ export async function main(argv: readonly string[] = process.argv): Promise<void
   const regionalSource = regionalManifest.sources?.releaseTable;
   if (!regionalSource) throw new Error("Regional manifest is missing its release-table source");
   const datedOperators = operators.map((operator) => { const verified = releaseById.get(operator.id); const regional = regionalById.get(operator.id); if (verified) return { ...operator, cnReleaseDate: verified.cnReleaseDate, cnReleaseDateStatus: "verified" as const, cnReleaseDateSource: verified.source }; if (regional) return { ...operator, cnReleaseDate: regional.cnReleaseDate, globalReleaseDate: regional.globalReleaseDate ?? null, cnReleaseDateStatus: regional.cnReleaseDate === null ? null : "community-listed" as const, cnReleaseDateSource: regional.cnReleaseDate === null ? null : regionalSource }; throw new Error(`Missing CN release metadata for ${operator.id}`); });
-  const biographySources = { en: source("ArknightsAssets/ArknightsGamedata", refs.handbook.en.revision, "en/gamedata/excel/handbook_info_table.json", refs.handbook.en.sha256), cn: source("ArknightsAssets/ArknightsGamedata", refs.handbook.cn.revision, "cn/gamedata/excel/handbook_info_table.json", refs.handbook.cn.sha256) };
+  const biographySources = { en: source(gameDataRepository, refs.handbook.en.revision, "en/gamedata/excel/handbook_info_table.json", refs.handbook.en.sha256), cn: source(gameDataRepository, refs.handbook.cn.revision, "cn/gamedata/excel/handbook_info_table.json", refs.handbook.cn.sha256) };
   const biographies = ([...en.map((item) => [item.id, "en", enBook] as const), ...cn.filter((item) => !enIds.has(item.id)).map((item) => [item.id, "cn", cnBook] as const)]).flatMap(([id, region, book]) => { const record = extractBiography(id, region as Region, book, biographySources[region as Region]); return record ? [record] : []; }).sort((a, b) => a.operatorId.localeCompare(b.operatorId, "en") || a.region.localeCompare(b.region, "en"));
-  const body = { contractVersion: "1" as const, sources: { en: source("ArknightsAssets/ArknightsGamedata", refs.character.en.revision, "en/gamedata/excel/character_table.json", refs.character.en.sha256), cn: source("ArknightsAssets/ArknightsGamedata", refs.character.cn.revision, "cn/gamedata/excel/character_table.json", refs.character.cn.sha256) }, biographySources, operators: datedOperators, biographies, coverage: { operators: datedOperators.length, biographies: { en: biographies.filter((item) => item.region === "en").length, cn: biographies.filter((item) => item.region === "cn").length, total: biographies.length } } };
+  const body = { contractVersion: "1" as const, sources: { en: source(gameDataRepository, refs.character.en.revision, "en/gamedata/excel/character_table.json", refs.character.en.sha256), cn: source(gameDataRepository, refs.character.cn.revision, "cn/gamedata/excel/character_table.json", refs.character.cn.sha256) }, biographySources, operators: datedOperators, biographies, coverage: { operators: datedOperators.length, biographies: { en: biographies.filter((item) => item.region === "en").length, cn: biographies.filter((item) => item.region === "cn").length, total: biographies.length } } };
   const bundle: OperatorBundle = { ...body, integrity: { algorithm: "sha256", sha256: bundleSha256(body) } }; const validation = validateOperatorBundle(bundle); if (!validation.ok) throw new Error(validation.issues.map((item) => `${item.path}: ${item.message}`).join("; "));
   const temp = `${output}.${process.pid}.partial`; await writeFile(temp, `${JSON.stringify(bundle, null, 2)}\n`, "utf8"); await rename(temp, output); console.log(`Generated ${operators.length} operators and ${biographies.length} biographies`); console.log(`SHA-256 ${bundle.integrity.sha256}`);
   } finally {

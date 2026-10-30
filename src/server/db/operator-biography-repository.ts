@@ -115,7 +115,8 @@ export async function persistBiographyEnvelope(
   const isolatedEnvelope = isolateEnvelope(envelope);
   if (!verifyBiographyImportEnvelope(isolatedEnvelope)) throw invalidEnvelopeError();
   const verifiedEnvelope = deepFreeze(isolatedEnvelope);
-  if (verifiedEnvelope.expectedCounts.en !== 415 || verifiedEnvelope.expectedCounts.cn !== 17 || verifiedEnvelope.expectedCounts.total !== 432) {
+  const { expected, expectedCounts } = verifiedEnvelope;
+  if (expectedCounts.en !== expected.en.length || expectedCounts.cn !== expected.cn.length || expectedCounts.total !== expected.en.length + expected.cn.length) {
     throw invalidEnvelopeError();
   }
 

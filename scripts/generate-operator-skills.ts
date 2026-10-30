@@ -6,7 +6,6 @@ import { baseSkillDescriptions, buildGlossary, buildOperatorBaseSkills, buildOpe
 import { arg, exists, operatorDatasetFile, readCatalog, readJson, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
 
 export const skillsDatasetName = "operator-skills";
-const catalogSize = 432;
 const regions: readonly GameDataRegion[] = ["en", "cn"];
 const tables = ["character_table", "skill_table", "range_table", "gamedata_const", "building_data"] as const;
 type SkillsTable = (typeof tables)[number];
@@ -105,7 +104,7 @@ export async function main(argv: readonly string[] = process.argv, options: Skil
   const expectedHashes = options.expectedHashes ?? defaultHashes();
   for (const region of regions) for (const table of tables) if (sha256(await readFile(paths[region][table])) !== expectedHashes[region][table]) throw new Error(`Snapshot SHA-256 mismatch: ${tableFlag(region, table)}`);
   const input = Object.fromEntries(await Promise.all(regions.map(async (region) => [region, Object.fromEntries(await Promise.all(tables.map(async (table) => [table, await readJson(paths[region][table])])))]))) as Record<GameDataRegion, Record<SkillsTable, unknown>>;
-  const catalog = await readCatalog(options.releaseManifest ?? "data/operator-cn-release-manifest.json", options.regionalManifest ?? "data/operator-regional-manifest.json", options.catalogSize ?? catalogSize);
+  const catalog = await readCatalog(options.releaseManifest ?? "data/operator-cn-release-manifest.json", options.regionalManifest ?? "data/operator-regional-manifest.json", options.catalogSize);
   const dataset = buildSkillsDataset(input, catalog, expectedHashes);
   const result = await writeSkillsDataset(output, dataset, { force, limits: options.limits });
   for (const warning of result.warnings) console.warn(`Warning: ${warning}`);

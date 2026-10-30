@@ -1,5 +1,6 @@
 import { copyFile, mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { imageRepository, imageRevision } from "../src/game-data/asset-revisions";
 import { gameDataSkillTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { baseSkillIconLocalName, baseSkillIconsSourceDirectory, masteryIconFiles, masteryIconsSourceDirectory, roomIconLocalName, roomIconSources, roomIconsSourceDirectory, skillIconLocalName, skillIconsContractVersion, resolveSkillIconSource, type SkillIconEntry, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
 import { serializeDatasetJson } from "../src/game-data/operator-dataset";
@@ -7,7 +8,7 @@ import { arg, exists, readJson, sha256, tableFlag } from "./operator-dataset-io"
 import { readSkillsDataset } from "./generate-operator-skills";
 
 const regions: readonly GameDataRegion[] = ["en", "cn"];
-export const skillIconsRepository = "PuppiizSunniiz/Arknight-Images";
+export const skillIconsRepository = imageRepository;
 export const skillIconsDirectory = "skills";
 const revisionPattern = /^[0-9a-f]{40}$/;
 
@@ -81,7 +82,7 @@ export function buildSkillIconsManifest(revision: string, resolved: ReturnType<t
 }
 
 export async function main(argv: readonly string[] = process.argv): Promise<void> {
-  const revision = arg("--revision", argv);
+  const revision = argv.includes("--revision") ? arg("--revision", argv) : imageRevision;
   const sourceDir = arg("--source-dir", argv);
   const skillsDir = arg("--skills-dir", argv);
   const outManifest = arg("--out-manifest", argv);

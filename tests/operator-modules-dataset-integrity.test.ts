@@ -4,6 +4,7 @@ import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
 import { checkDatasetLimits, modulesDatasetContractVersion, modulesDatasetLimits, validateDatasetIndex, type DatasetIndex } from "../src/game-data/operator-dataset";
+import { imageRevision } from "../src/game-data/asset-revisions";
 import { gameDataFavorTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
 import { moduleDescriptions, type OperatorModulesProfile } from "../src/game-data/operator-modules";
 import type { ModuleArtManifest } from "../src/game-data/operator-module-art";
@@ -123,7 +124,7 @@ test("modules are E2 modules with three ordered levels, readable texts, known ra
 
 test("every module has its illustration, and the art and level icons match the manifest", async () => {
   const manifest = JSON.parse(await readFile(path.resolve("data/operator-module-art-manifest.json"), "utf8")) as ModuleArtManifest;
-  assert.equal(manifest.source.revision, "1a41341cc634461a5abe3456722801a39b9a9d32");
+  assert.equal(manifest.source.revision, imageRevision);
   const { index } = await readIndex(directory);
   const ids = (await readProfiles(index)).flatMap((profile) => profile.modules.map((module) => module.id)).sort();
   assert.deepEqual(Object.keys(manifest.art).sort(), ids.map((id) => `${id}.webp`), "one illustration per module, no extra files");

@@ -1,11 +1,12 @@
 import { compareCodeUnits } from "../src/game-data/string-order";
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
+import { gameDataHandbookTableHashes, gameDataRepository, gameDataRevisions } from "../src/game-data/gamedata-revisions";
 import { extractBiography, auditBiographies, type BiographyRegion, type HandbookSource } from "../src/game-data/operator-biography";
 
 const expected = {
-  en: { revision: "3aaa25b649fed5dedad9527602826dc487ea07d8", sha256: "07077CD529965C57DA1F602028F1CEEC81B43814AF0D8F131DCBED92B04E0498" },
-  cn: { revision: "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842", sha256: "B6E6FA4CAFE118B8C0342E7643A6103775F72C173A43467AEEA22DFBEE01D108" },
+  en: { revision: gameDataRevisions.en, sha256: gameDataHandbookTableHashes.en.handbook_info_table },
+  cn: { revision: gameDataRevisions.cn, sha256: gameDataHandbookTableHashes.cn.handbook_info_table },
 } as const;
 
 async function readJson(path: string) { return JSON.parse(await readFile(path, "utf8")) as unknown; }
@@ -22,11 +23,13 @@ async function main() {
   const cnIds = new Set((manifest.operators ?? []).map((operator) => operator.id));
   const enTable = await readJson(enCharacterPath) as Record<string, unknown>;
   const enIds = Object.keys(enTable).filter((id) => id.startsWith("char_") && (enTable[id] as Record<string, unknown>)?.isNotObtainable === false && typeof (enTable[id] as Record<string, unknown>)?.name === "string" && ["WARRIOR", "PIONEER", "TANK", "SNIPER", "CASTER", "MEDIC", "SUPPORT", "SPECIAL"].includes(String((enTable[id] as Record<string, unknown>)?.profession)) && Array.isArray((enTable[id] as Record<string, unknown>)?.phases) && /^TIER_[1-6]$/.test(String((enTable[id] as Record<string, unknown>)?.rarity)));
-  if (enIds.length !== 415 || cnIds.size !== 17) throw new Error(`Expected 415 EN and 17 CN-only IDs, got ${enIds.length} and ${cnIds.size}`);
+  const releaseManifest = await readJson("data/operator-cn-release-manifest.json") as { operators?: { id: string }[] };
+  const globalIds = new Set((releaseManifest.operators ?? []).map((operator) => operator.id));
+  if (enIds.length !== globalIds.size || enIds.some((id) => !globalIds.has(id))) throw new Error(`EN playable IDs do not match the release manifest: ${enIds.length} against ${globalIds.size}`);
   const overlap = enIds.filter((id) => cnIds.has(id)); if (overlap.length) throw new Error(`Regional overlap: ${overlap.join(", ")}`);
   const sources: Record<BiographyRegion, HandbookSource> = {
-    en: { repository: "ArknightsAssets/ArknightsGamedata", revision: expected.en.revision, path: "en/gamedata/excel/handbook_info_table.json", sha256: expected.en.sha256 },
-    cn: { repository: "ArknightsAssets/ArknightsGamedata", revision: expected.cn.revision, path: "cn/gamedata/excel/handbook_info_table.json", sha256: expected.cn.sha256 },
+    en: { repository: gameDataRepository, revision: expected.en.revision, path: "en/gamedata/excel/handbook_info_table.json", sha256: expected.en.sha256 },
+    cn: { repository: gameDataRepository, revision: expected.cn.revision, path: "cn/gamedata/excel/handbook_info_table.json", sha256: expected.cn.sha256 },
   };
   const enHandbook = await readJson(enPath); const cnHandbook = await readJson(cnPath); const records = [];
   for (const id of enIds) { const record = extractBiography(id, "en", enHandbook, sources.en); if (!record) throw new Error(`Missing EN Basic Info: ${id}`); records.push(record); }

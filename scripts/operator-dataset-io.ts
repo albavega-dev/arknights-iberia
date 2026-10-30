@@ -11,14 +11,15 @@ export const exists = (path: string) => stat(path).then(() => true, () => false)
 export function tableFlag(region: GameDataRegion, table: string): string { return `--${region}-${table.replace(/_table$/, "").replaceAll("_", "-")}`; }
 export function arg(name: string, argv: readonly string[]): string { const index = argv.indexOf(name); const value = argv[index + 1]; if (index < 0 || !value || value.startsWith("--")) throw new Error(`Missing ${name}`); return value; }
 
-export async function readCatalog(releasePath: string, regionalPath: string, expectedSize: number): Promise<Map<string, GameDataRegion>> {
+export async function readCatalog(releasePath: string, regionalPath: string, expectedSize?: number): Promise<Map<string, GameDataRegion>> {
   const ids = (manifest: unknown, label: string) => { const operators = (manifest as { operators?: { id?: unknown }[] }).operators; if (!Array.isArray(operators)) throw new Error(`${label} has no operators`); return operators.map((item) => { if (typeof item.id !== "string") throw new Error(`${label} has an operator without id`); return item.id; }); };
   const catalog = new Map<string, GameDataRegion>();
   for (const [id, region] of [...ids(await readJson(releasePath), "Release manifest").map((id) => [id, "en"] as const), ...ids(await readJson(regionalPath), "Regional manifest").map((id) => [id, "cn"] as const)]) {
     if (catalog.has(id)) throw new Error(`Duplicate catalog operator: ${id}`);
     catalog.set(id, region);
   }
-  if (catalog.size !== expectedSize) throw new Error(`Catalog has ${catalog.size} operators; expected ${expectedSize}`);
+  if (catalog.size === 0) throw new Error("The catalog manifests list no operators");
+  if (expectedSize !== undefined && catalog.size !== expectedSize) throw new Error(`Catalog has ${catalog.size} operators; expected ${expectedSize}`);
   return catalog;
 }
 
