@@ -1,0 +1,14 @@
+[extend]
+useDefault = true
+
+# Dataset indexes store file hashes as uppercase hex; a hash can contain "EAAA",
+# the Square token prefix. Only whole uppercase SHA-256 values are allowed here.
+[[rules]]
+id = "square-access-token"
+
+[[rules.allowlists]]
+description = "SHA-256 file hashes in the operator dataset indexes"
+condition = "AND"
+paths = ['''(^|[\\/])data[\\/]operator-[a-z-]+[\\/]index\.json$''']
+regexTarget = "line"
+regexes = ['''^\s*"sha256": "[0-9A-F]{64}",?\s*$''']
