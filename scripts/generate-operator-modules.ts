@@ -6,11 +6,12 @@ import { modulesDatasetContractVersion, modulesDatasetLimits, sharedFileName, va
 import { buildOperatorModules, buildOperatorTrait, moduleDescriptions, traitDescriptions, type OperatorModulesProfile, type SourceModuleTables } from "../src/game-data/operator-modules";
 import { unnamedModeTags } from "../src/game-data/operator-module-modes";
 import { buildGlossary, type GlossaryEntry, type GlossaryTable } from "../src/game-data/operator-skills";
+import { datasetRegistry } from "../src/game-data/dataset-registry";
 import { arg, compareDatasets, exists, operatorDatasetFile, readCatalog, readJson, reportVerification, sha256, tableFlag, verificationMode, verifyUpdate, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
 
 export const modulesDatasetName = "operator-modules";
 const regions: readonly GameDataRegion[] = ["en", "cn"];
-const tables = ["character_table", "uniequip_table", "battle_equip_table", "range_table", "gamedata_const", "favor_table"] as const;
+const tables = datasetRegistry["operator-modules"].tables;
 type ModulesTable = (typeof tables)[number];
 type HashTable = Readonly<Record<GameDataRegion, Readonly<Record<ModulesTable, string>>>>;
 

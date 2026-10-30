@@ -21,11 +21,12 @@ import { directoryBlobs, fetchBytes, github, token } from "./github-api";
 import { compareUrl, contentsUrl, gameDataDirectory, latestCommitUrl, rawGameDataUrl, treeUrl } from "../src/game-data/github-requests";
 import { operatorArchetypeLabels } from "../src/game-data/operator-archetypes";
 import { skillDataGaps } from "../src/game-data/skill-data-gaps";
+import { assetRegistry, registryChangeChecks, registryCoverage, registryImageDirectories, registryTables, type ChangeCheck, type CoverageNeed } from "../src/game-data/dataset-registry";
 
 const regions: readonly GameDataRegion[] = ["en", "cn"];
-const imageDirectories = ["characters", "skills", "equip", "ui"] as const;
-const neededTables = ["character_table", "skill_table", "range_table", "gamedata_const", "building_data", "favor_table", "uniequip_table", "battle_equip_table", "handbook_info_table"] as const;
-type Table = (typeof neededTables)[number];
+// Tables, comparisons, image directories and coverage checks come from the dataset registry.
+const imageDirectories = registryImageDirectories(imageRepository);
+const neededTables: readonly string[] = registryTables();
 
 const hasFlag = (name: string) => process.argv.find((item) => item.startsWith(`--${name}=`))?.slice(name.length + 3);
 
@@ -66,7 +67,7 @@ async function revisionsLevel() {
       const after = await directoryBlobs(gameDataRepository, latest[region], directory);
       const tables = changedBlobs(before, after);
       latestBlobs[region] = after;
-      gamedata[region] = { ...revisionStatus(gameDataRevisions[region], latest[region]), tables, neededTables: tables.filter((table) => (neededTables as readonly string[]).includes(table)), listMayBeIncomplete: false };
+      gamedata[region] = { ...revisionStatus(gameDataRevisions[region], latest[region]), tables, neededTables: tables.filter((table) => neededTables.includes(table)), listMayBeIncomplete: false };
     } catch {
       gamedata[region] = { ...revisionStatus(gameDataRevisions[region], latest[region]), tables: [], neededTables: [...neededTables], listMayBeIncomplete: true };
     }
@@ -115,7 +116,8 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
     return status.listMayBeIncomplete || status.neededTables.includes(table);
   };
   const cache = new Map<string, unknown>();
-  const load = async (region: GameDataRegion, table: Table, side: "before" | "after"): Promise<unknown> => {
+  const load = async (region: GameDataRegion, table: string, side: "before" | "after"): Promise<unknown> => {
+    if (!neededTables.includes(table)) throw new Error(`${table} is not a table of the dataset registry`);
     const key = `${region}/${table}/${side === "after" && changed(region, table) ? "after" : "before"}`;
     if (cache.has(key)) return cache.get(key);
     let data: Buffer;
@@ -127,7 +129,7 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
       const local = snapshots[region] ? join(snapshots[region]!, `${table}.json`) : undefined;
       const exists = local ? await stat(local).then(() => true, () => false) : false;
       data = exists ? await readFile(local!) : await download(rawGameDataUrl(gameDataRevisions[region], region, table), join(target, `${region}-${gameDataRevisions[region].slice(0, 7)}`, `${table}.json`));
-      if (sha256(data) !== pinnedGameDataTableHashes(region)[table]) throw new Error(`The ${region} baseline of ${table} does not match the pinned SHA-256`);
+      if (sha256(data) !== (pinnedGameDataTableHashes(region) as Record<string, string>)[table]) throw new Error(`The ${region} baseline of ${table} does not match the pinned SHA-256`);
     }
     const value = JSON.parse(data.toString("utf8")) as unknown;
     cache.set(key, value);
@@ -142,32 +144,28 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
   // Existing EN operators are read from the EN tables; CN-only operators and new CN operators from the CN tables.
   const scope: Record<GameDataRegion, string[]> = { en: [...catalog.en], cn: [...catalog.cnOnly, ...roster.newInCn] };
 
+  type CheckContext = { region: GameDataRegion; ids: string[]; before: (table: string) => Promise<unknown>; after: (table: string) => Promise<unknown> };
+  const checks: Record<ChangeCheck, (context: CheckContext) => Promise<unknown>> = {
+    operators: async ({ ids, before, after }) => diffOperators(await before("character_table"), await after("character_table"), ids),
+    skills: async ({ ids, before, after }) => diffSkills(await before("skill_table"), await after("skill_table"), skillIdsOf(await after("character_table"), ids)),
+    modules: async ({ ids, before, after }) => diffModules({ uniequip: await before("uniequip_table"), battleEquip: await before("battle_equip_table") }, { uniequip: await after("uniequip_table"), battleEquip: await after("battle_equip_table") }, ids),
+    // An unchanged handbook needs no comparison and is not downloaded.
+    biographies: async ({ region, ids, before, after }) => (changed(region, "handbook_info_table") ? diffKeyed(handbookEntries(await before("handbook_info_table")), handbookEntries(await after("handbook_info_table")), ids) : diffKeyed({}, {}, ids)),
+    base: async ({ ids, before, after }) => diffBaseSkills(await before("building_data"), await after("building_data"), ids),
+    ranges: async ({ ids, before, after }) => diffKeyed(await before("range_table") as Record<string, unknown>, await after("range_table") as Record<string, unknown>, usedRangeIds(await after("character_table"), ids)),
+    newGlossaryTerms: async ({ before, after }) => newGlossaryTerms(await before("gamedata_const"), await after("gamedata_const")),
+  };
+
   const perRegion = async (region: GameDataRegion) => {
-    const ids = scope[region];
-    const [charBefore, charAfter] = [await load(region, "character_table", "before"), await load(region, "character_table", "after")];
-    const skillIds = skillIdsOf(charAfter, ids);
-    const [skillBefore, skillAfter] = [await load(region, "skill_table", "before"), await load(region, "skill_table", "after")];
-    const [uniBefore, uniAfter] = [await load(region, "uniequip_table", "before"), await load(region, "uniequip_table", "after")];
-    const [battleBefore, battleAfter] = [await load(region, "battle_equip_table", "before"), await load(region, "battle_equip_table", "after")];
-    const [rangeBefore, rangeAfter] = [await load(region, "range_table", "before"), await load(region, "range_table", "after")];
-    const [constBefore, constAfter] = [await load(region, "gamedata_const", "before"), await load(region, "gamedata_const", "after")];
-    const [buildBefore, buildAfter] = [await load(region, "building_data", "before"), await load(region, "building_data", "after")];
-    // An unchanged table needs no comparison, and the handbook has no pinned snapshot to read: do not download it.
-    const [bioBefore, bioAfter] = changed(region, "handbook_info_table") ? [await load(region, "handbook_info_table", "before"), await load(region, "handbook_info_table", "after")] : [{}, {}];
-    return {
-      charAfter, uniAfter, battleAfter, skillAfter,
-      operators: diffOperators(charBefore, charAfter, ids),
-      skills: diffSkills(skillBefore, skillAfter, skillIds),
-      modules: diffModules({ uniequip: uniBefore, battleEquip: battleBefore }, { uniequip: uniAfter, battleEquip: battleAfter }, ids),
-      biographies: diffKeyed(handbookEntries(bioBefore), handbookEntries(bioAfter), ids),
-      base: diffBaseSkills(buildBefore, buildAfter, ids),
-      ranges: diffKeyed(rangeBefore as Record<string, unknown>, rangeAfter as Record<string, unknown>, usedRangeIds(charAfter, ids)),
-      newGlossaryTerms: newGlossaryTerms(constBefore, constAfter),
-    };
+    const context: CheckContext = { region, ids: scope[region], before: (table) => load(region, table, "before"), after: (table) => load(region, table, "after") };
+    const existing: Record<string, unknown> = {};
+    for (const check of registryChangeChecks()) existing[check] = await checks[check](context);
+    // Labels, coverage and skill data gaps read these tables whatever the registered comparisons.
+    return { existing, charAfter: await context.after("character_table"), uniAfter: await context.after("uniequip_table"), battleAfter: await context.after("battle_equip_table"), skillAfter: await context.after("skill_table") };
   };
   const results = { en: await perRegion("en"), cn: await perRegion("cn") };
 
-  const moduleIcons = new Set((await readdir("public/assets/operator-modules")).filter((name) => name.endsWith(".png")).map((name) => name.slice(0, -4)));
+  const moduleIcons = new Set((await readdir(assetRegistry["module-type-icons"].localDirectories[0])).filter((name) => name.endsWith(".png")).map((name) => name.slice(0, -4)));
   const modeNames = await readJson<{ gameTags: Record<string, unknown>; mapTags: Record<string, unknown> }>("data/operator-module-modes.json");
   const labelsFor = (region: GameDataRegion) => missingLabels({ characterTable: results[region].charAfter, uniequipTable: results[region].uniAfter, battleEquip: results[region].battleAfter, ids: scope[region], archetypeLabels: operatorArchetypeLabels, modeNames, moduleIcons });
   const labels = { en: labelsFor("en"), cn: labelsFor("cn") };
@@ -181,15 +179,14 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
   if (tree.truncated) assets = { unavailable: "the image tree was truncated" };
   else {
     const paths = new Set(tree.tree.filter((entry) => entry.type === "blob").map((entry) => entry.path));
-    const all = regions.flatMap((region) => scope[region]);
-    assets = assetCoverage(paths, {
-      illustrations: all,
-      skillIcons: regions.flatMap((region) => skillIconNames(results[region].skillAfter, skillIdsOf(results[region].charAfter, scope[region]))),
-      moduleArt: regions.flatMap((region) => catalogModuleIds(results[region].uniAfter, scope[region], { withInitial: false })),
-    });
+    const needs: Record<CoverageNeed, string[]> = {
+      catalogOperators: regions.flatMap((region) => scope[region]),
+      catalogSkillIcons: regions.flatMap((region) => skillIconNames(results[region].skillAfter, skillIdsOf(results[region].charAfter, scope[region]))),
+      catalogModules: regions.flatMap((region) => catalogModuleIds(results[region].uniAfter, scope[region], { withInitial: false })),
+    };
+    assets = assetCoverage(paths, registryCoverage().map((coverage) => ({ reportKey: coverage.reportKey, ids: needs[coverage.need], path: coverage.path })));
   }
-  const strip = (value: (typeof results)["en"]) => ({ operators: value.operators, skills: value.skills, modules: value.modules, biographies: value.biographies, base: value.base, ranges: value.ranges, newGlossaryTerms: value.newGlossaryTerms });
-  return { roster, existing: { en: strip(results.en), cn: strip(results.cn) }, labels, skillDataGapsResolved: resolved, assets, downloadedTables: [...cache.keys()].filter((key) => key.endsWith("/after")).length };
+  return { roster, existing: { en: results.en.existing, cn: results.cn.existing }, labels, skillDataGapsResolved: resolved, assets, downloadedTables: [...cache.keys()].filter((key) => key.endsWith("/after")).length };
 }
 
 async function main() {

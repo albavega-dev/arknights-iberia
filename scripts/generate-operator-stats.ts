@@ -4,12 +4,13 @@ import { isDeepStrictEqual } from "node:util";
 import { gameDataRepository, gameDataRevisions, gameDataTableHashes, type GameDataRegion, type GameDataTable } from "../src/game-data/gamedata-revisions";
 import { datasetContractVersion, statsDatasetContractVersion, validateDatasetIndex, type DatasetFile, type DatasetIndex } from "../src/game-data/operator-dataset";
 import { buildOperatorTrait } from "../src/game-data/operator-modules";
+import { datasetRegistry } from "../src/game-data/dataset-registry";
 import { applyRevisionChanges, arg, changedFields, exists, operatorDatasetFile, readCatalog, readJson as json, reportVerification, revisionChanges, sha256, tableFlag, verificationMode, verifyUpdate, writeDatasetDirectory, type DatasetVerification } from "./operator-dataset-io";
 import { attachModuleStats, extractOperatorStatsProfiles, type OperatorStatsProfile } from "../src/game-data/operator-stats";
 
 export const statsDatasetName = "operator-stats";
 const regions: readonly GameDataRegion[] = ["en", "cn"];
-const tables: readonly GameDataTable[] = ["character_table", "uniequip_table", "battle_equip_table"];
+const tables: readonly GameDataTable[] = datasetRegistry["operator-stats"].tables;
 
 type StatsSource = OperatorStatsProfile["source"];
 export type StatsDatasetProfile = Omit<OperatorStatsProfile, "source">;

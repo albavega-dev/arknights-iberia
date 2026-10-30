@@ -176,8 +176,13 @@ describe("labels and known defects", () => {
 describe("graphic resources", () => {
   it("lists what the image tree does not have", () => {
     const paths = new Set(["characters/char_1_1.png", "skills/skill_icon_s1.png", "equip/icon/m1.png"]);
-    const needs = { illustrations: ["char_2", "char_1"], skillIcons: ["s2", "s1"], moduleArt: ["m2", "m1"] };
-    assert.deepEqual(assetCoverage(paths, needs), { missingIllustrations: ["char_2"], missingSkillIcons: ["s2"], missingModuleArt: ["m2"] });
+    const checks = [
+      { reportKey: "missingIllustrations", ids: ["char_2", "char_1"], path: (id: string) => `characters/${id}_1.png` },
+      { reportKey: "missingSkillIcons", ids: ["s2", "s1"], path: (id: string) => `skills/skill_icon_${id}.png` },
+      { reportKey: "missingModuleArt", ids: ["m2", "m1"], path: (id: string) => `equip/icon/${id}.png` },
+    ];
+    assert.deepEqual(assetCoverage(paths, checks), { missingIllustrations: ["char_2"], missingSkillIcons: ["s2"], missingModuleArt: ["m2"] });
+    assert.deepEqual(assetCoverage(paths, []), {});
   });
 });
 

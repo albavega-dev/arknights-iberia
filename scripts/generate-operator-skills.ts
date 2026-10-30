@@ -3,11 +3,12 @@ import { join } from "node:path";
 import { gameDataBuildingTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { sharedFileName, skillsDatasetContractVersion, skillsDatasetLimits, validateDatasetIndex, type DatasetFile, type DatasetIndex, type DatasetSharedFile, type DatasetSource } from "../src/game-data/operator-dataset";
 import { baseSkillDescriptions, buildGlossary, buildOperatorBaseSkills, buildOperatorSkills, buildOperatorTalents, skillDescriptions, talentDescriptions, type GlossaryEntry, type GlossaryTable, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
+import { datasetRegistry } from "../src/game-data/dataset-registry";
 import { arg, compareDatasets, exists, operatorDatasetFile, readCatalog, readJson, reportVerification, sha256, tableFlag, verificationMode, verifyUpdate, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
 
 export const skillsDatasetName = "operator-skills";
 const regions: readonly GameDataRegion[] = ["en", "cn"];
-const tables = ["character_table", "skill_table", "range_table", "gamedata_const", "building_data"] as const;
+const tables = datasetRegistry["operator-skills"].tables;
 type SkillsTable = (typeof tables)[number];
 type HashTable = Readonly<Record<GameDataRegion, Readonly<Record<SkillsTable, string>>>>;
 
