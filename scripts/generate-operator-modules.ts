@@ -6,7 +6,7 @@ import { modulesDatasetContractVersion, modulesDatasetLimits, sharedFileName, va
 import { buildOperatorModules, buildOperatorTrait, moduleDescriptions, traitDescriptions, type OperatorModulesProfile, type SourceModuleTables } from "../src/game-data/operator-modules";
 import { unnamedModeTags } from "../src/game-data/operator-module-modes";
 import { buildGlossary, type GlossaryEntry, type GlossaryTable } from "../src/game-data/operator-skills";
-import { arg, compareDatasets, exists, operatorDatasetFile, readCatalog, readJson, reportVerification, sha256, tableFlag, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
+import { arg, compareDatasets, exists, operatorDatasetFile, readCatalog, readJson, reportVerification, sha256, tableFlag, verificationMode, verifyUpdate, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
 
 export const modulesDatasetName = "operator-modules";
 const regions: readonly GameDataRegion[] = ["en", "cn"];
@@ -100,15 +100,18 @@ export function comparableModules(dataset: ModulesDataset): ComparableDataset {
   return { sources: dataset.sources, tables: dataset.tables, profiles: dataset.profiles, shared: Object.fromEntries(dataset.glossaries.map((glossary) => [glossaryFileName(glossary.region), glossary])) };
 }
 
-export async function verifyModulesAgainst(directory: string, dataset: ModulesDataset): Promise<void> {
+export async function verifyModulesAgainst(directory: string, dataset: ModulesDataset, argv: readonly string[] = []): Promise<void> {
   const reference = await readModulesDataset(directory);
-  reportVerification(compareDatasets({ sources: reference.index.sources, tables: reference.index.tables, profiles: reference.profiles, shared: reference.glossaries }, comparableModules(dataset)));
+  const update = verificationMode(argv) === "update";
+  const verification = compareDatasets({ sources: reference.index.sources, tables: reference.index.tables, profiles: reference.profiles, shared: reference.glossaries }, comparableModules(dataset), { revisionChange: update });
+  if (update) await verifyUpdate([{ label: modulesDatasetName, verification, sources: dataset.tables }], argv); else reportVerification(verification);
 }
 
 export async function main(argv: readonly string[] = process.argv, options: ModulesGeneratorOptions = {}): Promise<void> {
   const paths = Object.fromEntries(regions.map((region) => [region, Object.fromEntries(tables.map((table) => [table, arg(tableFlag(region, table), argv)]))])) as Record<GameDataRegion, Record<ModulesTable, string>>;
   const output = arg("--out-dir", argv);
   const force = argv.includes("--force");
+  const mode = verificationMode(argv);
   if (await exists(output) && !force) throw new Error("Output exists; pass --force to overwrite");
   const expectedHashes = options.expectedHashes ?? defaultHashes();
   for (const region of regions) for (const table of tables) if (sha256(await readFile(paths[region][table])) !== expectedHashes[region][table]) throw new Error(`Snapshot SHA-256 mismatch: ${tableFlag(region, table)}`);
@@ -118,7 +121,7 @@ export async function main(argv: readonly string[] = process.argv, options: Modu
   const unnamed = unnamedModeTags(dataset.profiles.flatMap((profile) => profile.modules.flatMap((item) => item.levels.flatMap((level) => level.modes ?? []))));
   if (unnamed.length) throw new Error(`Mode tags without a name in data/operator-module-modes.json: ${unnamed.join(", ")}`);
   await checkModuleIcons(dataset, options.iconDirectory ?? "public/assets/operator-modules");
-  if (argv.includes("--verify-against")) await verifyModulesAgainst(arg("--verify-against", argv), dataset);
+  if (mode) await verifyModulesAgainst(arg("--verify-against", argv), dataset, argv);
   const result = await writeModulesDataset(output, dataset, { force, limits: options.limits });
   for (const warning of result.warnings) console.warn(`Warning: ${warning}`);
   const largest = Math.max(...Object.values(result.index.operators).map((entry) => entry.bytes));

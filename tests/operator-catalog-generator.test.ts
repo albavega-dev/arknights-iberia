@@ -142,6 +142,31 @@ test("--verify-against accepts an identical reference and fails without writing 
   }
 });
 
+test("--verify-against --update lists the catalog and biography changes and writes only once approved", async () => {
+  const { directory, output, argv, options } = await workspace();
+  const lines: string[] = [];
+  mock.method(console, "log", (line: string) => lines.push(line));
+  try {
+    await main(argv, options);
+    const cnCharacter = JSON.stringify({ ...tables.cnCharacter, char_cn: character("伽马二") });
+    await writeFile(join(directory, "cnCharacter.json"), cnCharacter, "utf8");
+    const changed = { ...options, hashes: { ...hashes, character: { ...hashes.character, cn: sha(cnCharacter) } } };
+    const target = join(directory, "updated");
+    const report = join(directory, "report.json");
+    const update = [...argv.map((value) => value === output ? target : value), "--verify-against", output, "--update"];
+    await assert.rejects(main([...update, "--report", report], changed), /Changes pending approval; output not written/);
+    assert.ok(lines.includes("operator-catalog (update): 3 identical, 1 different, 0 added, 0 removed"));
+    assert.ok(lines.includes("  char_cn: cnName"));
+    assert.ok(lines.includes("operator-biographies (update): 4 identical, 0 different, 0 added, 0 removed"));
+    await assert.rejects(stat(target));
+    await main([...update, "--approve", report], changed);
+    assert.equal((await readCatalogDataset(target)).catalog.operators.find((operator) => operator.id === "char_cn")!.cnName, "伽马二");
+  } finally {
+    mock.restoreAll();
+    await rm(directory, { recursive: true, force: true });
+  }
+});
+
 test("a catalog above its limit or a biography above its limit is not written", async () => {
   const { directory, output, argv, options } = await workspace();
   quiet();

@@ -131,13 +131,13 @@ test("stats generator verifies against contract 1 and 2 manifests without the tr
     const generated: StatsDataset = await readStatsDataset(output);
     const withoutTrait = generated.profiles.map(({ trait, ...profile }) => { void trait; return profile; });
     const legacy = { contractVersion: "1", profiles: [...withoutTrait.map((profile) => ({ ...profile, source: generated.sources[profile.region as GameDataRegion], modules: profile.modules.map((module) => ({ ...module, moduleSourceRegion: "preferred" })) })), { operatorId: "char_a", region: "cn", profiles: [] }] };
-    assert.deepEqual(compareStatsManifests(legacy, generated), { identical: 3, differences: [], missing: [], ignored: 1 });
+    assert.deepEqual(compareStatsManifests(legacy, generated), { identical: 3, differences: [], missing: [], ignored: 1, removed: ["char_a/cn"], sources: [], shared: [] });
     assert.equal(compareStatsManifests(generated, generated).identical, 3);
     assert.equal(compareStatsManifests({ contractVersion: "2", sources: generated.sources, profiles: withoutTrait }, generated).identical, 3, "contract 2 has no trait: the rest of each profile must match");
     const otherTrait = { ...generated, profiles: generated.profiles.map((profile) => ({ ...profile, trait: [] })) };
     assert.deepEqual(compareStatsManifests(otherTrait, generated).differences.map((item) => item.keys), [["trait"], ["trait"], ["trait"]]);
     const changed = JSON.parse(JSON.stringify(legacy)); changed.profiles[0].phases[0].maxLevel = 90; changed.profiles[1].source = { ...changed.profiles[1].source, revision: "other" };
-    assert.deepEqual(compareStatsManifests(changed, generated).differences, [{ operatorId: "char_a", keys: ["phases"] }, { operatorId: "char_b", keys: ["source"] }]);
+    assert.deepEqual(compareStatsManifests(changed, generated).differences, [{ operatorId: "char_a", keys: ["phases"], fields: ["phases[0].maxLevel"] }, { operatorId: "char_b", keys: ["source"], fields: ["source"] }]);
     assert.deepEqual(compareStatsManifests({ contractVersion: "1", profiles: [] }, generated).missing, ["char_a/en", "char_b/en", "char_cn/cn"]);
     assert.throws(() => compareStatsManifests({ contractVersion: "4", profiles: [] }, generated), /unknown contract/);
     const reference = join(directory, "reference.json");
@@ -148,6 +148,28 @@ test("stats generator verifies against contract 1 and 2 manifests without the tr
     await writeFile(reference, JSON.stringify(changed), "utf8");
     await assert.rejects(main([...argv, "--force", "--verify-against", reference], options), /Verification failed; output not written/);
     assert.deepEqual(await snapshot(output), before);
+  } finally { mocks.forEach((item) => item.mock.restore()); await cleanup(); }
+});
+
+test("stats generator in update mode reports the source change once and the changed fields for approval", async () => {
+  const { directory, output, argv, options, cleanup } = await workspace(); const mocks = quiet();
+  try {
+    await main(argv, options);
+    const generated = await readStatsDataset(output);
+    const older = JSON.parse(JSON.stringify(generated)); older.sources.en = { ...older.sources.en, revision: "old" }; older.profiles[0].phases[0].maxLevel = 99;
+    const verification = compareStatsManifests(older, generated, { revisionChange: true });
+    assert.deepEqual([verification.sources, verification.differences], [["sources"], [{ operatorId: "char_a", keys: ["phases"], fields: ["phases[0].maxLevel"] }]]);
+    const unsourced = compareStatsManifests({ contractVersion: "3", profiles: generated.profiles }, generated, { revisionChange: true });
+    assert.deepEqual([unsourced.sources, unsourced.identical], [["sources"], 3], "a reference without sources still counts as a revision change");
+    const reference = join(directory, "older.json");
+    await writeFile(reference, JSON.stringify(older), "utf8");
+    const report = join(directory, "report.json");
+    const update = [...argv, "--force", "--verify-against", reference, "--update"];
+    const before = await snapshot(output);
+    await assert.rejects(main([...update, "--report", report], options), /Changes pending approval; output not written/);
+    assert.deepEqual(await snapshot(output), before);
+    await main([...update, "--approve", report], options);
+    assert.ok(mocks[0].mock.calls.some((call) => String(call.arguments[0]) === "Changes match the approved report"));
   } finally { mocks.forEach((item) => item.mock.restore()); await cleanup(); }
 });
 

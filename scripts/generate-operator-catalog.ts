@@ -5,7 +5,7 @@ import { validateBiography, type OperatorBiography } from "../src/game-data/oper
 import { catalogContractVersion, catalogDatasetName, catalogLimits, catalogOperator, validateOperatorCatalog, type OperatorCatalog } from "../src/game-data/operator-catalog";
 import { biographiesDatasetContractVersion, biographiesDatasetLimits, datasetWarningRatio, serializeDatasetJson, validateDatasetIndex, type DatasetIndex, type DatasetLimits, type DatasetSource } from "../src/game-data/operator-dataset";
 import { arg, buildCatalogRecords, readCatalogTables, type CatalogRecords, type CatalogTableHashes, type RegionalManifest, type ReleaseManifest } from "./generate-operator-bundle";
-import { compareDatasets, exists, operatorDatasetFile, readJson, replaceDirectory, reportVerification, sha256, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
+import { compareDatasets, exists, operatorDatasetFile, readJson, replaceDirectory, reportVerification, sha256, verificationMode, verifyUpdate, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
 
 // Generates the operator catalog (data/operator-catalog/index.json) and the biographies (data/operator-biographies/)
 // from the pinned character and handbook tables and the release manifests.
@@ -64,14 +64,24 @@ function comparableBiographies(biographies: BiographiesDataset): ComparableDatas
   return { sources: biographies.sources, profiles: biographies.records, shared: {} };
 }
 
-/** Compares the generated catalog and biographies with the versioned ones and fails, without writing, on any difference. */
-export async function verifyCatalogAgainst(root: string, dataset: CatalogDataset, log: (line: string) => void = console.log): Promise<void> {
+/**
+ * Compares the generated catalog and biographies with the versioned ones. Strict mode fails, without writing, on any
+ * difference; update mode lists the changes for approval (see verifyUpdate).
+ */
+export async function verifyCatalogAgainst(root: string, dataset: CatalogDataset, log: (line: string) => void = console.log, argv: readonly string[] = []): Promise<void> {
   const reference = await readCatalogDataset(root);
+  const update = verificationMode(argv) === "update";
+  const catalog = compareDatasets(comparableCatalog(reference.catalog), comparableCatalog(dataset.catalog), { revisionChange: update });
+  const biographies = compareDatasets(comparableBiographies(reference.biographies), comparableBiographies(dataset.biographies), { revisionChange: update });
+  if (update) {
+    await verifyUpdate([
+      { label: catalogDatasetName, verification: catalog, sources: dataset.catalog.sources },
+      { label: biographiesDatasetName, verification: biographies, sources: dataset.biographies.sources },
+    ], argv, log);
+    return;
+  }
   const failed: string[] = [];
-  for (const [label, verification] of [
-    ["Catalog", compareDatasets(comparableCatalog(reference.catalog), comparableCatalog(dataset.catalog))],
-    ["Biographies", compareDatasets(comparableBiographies(reference.biographies), comparableBiographies(dataset.biographies))],
-  ] as const) {
+  for (const [label, verification] of [["Catalog", catalog], ["Biographies", biographies]] as const) {
     log(`${label}:`);
     try { reportVerification(verification, log); } catch { failed.push(label); }
   }
@@ -94,12 +104,13 @@ export async function writeCatalogDataset(root: string, dataset: CatalogDataset,
 export async function main(argv: readonly string[] = process.argv, options: CatalogGeneratorOptions = {}): Promise<void> {
   const root = arg("--out-dir", argv);
   const force = argv.includes("--force");
+  const mode = verificationMode(argv);
   if (!force && (await exists(catalogDirectory(root)) || await exists(biographiesDirectory(root)))) throw new Error("Output exists; pass --force to overwrite");
   const tables = await readCatalogTables(argv, options.hashes);
   const release = await readJson(options.releaseManifest ?? "data/operator-cn-release-manifest.json") as ReleaseManifest;
   const regional = await readJson(options.regionalManifest ?? "data/operator-regional-manifest.json") as RegionalManifest;
   const dataset = buildCatalogDataset(buildCatalogRecords(tables, release, regional, options.hashes), options.catalogLimits);
-  if (argv.includes("--verify-against")) await verifyCatalogAgainst(arg("--verify-against", argv), dataset);
+  if (mode) await verifyCatalogAgainst(arg("--verify-against", argv), dataset, console.log, argv);
   const result = await writeCatalogDataset(root, dataset, { force, biographiesLimits: options.biographiesLimits });
   for (const warning of result.warnings) console.warn(`Warning: ${warning}`);
   console.log(`Generated a catalog of ${dataset.catalog.operators.length} operators (${result.catalogBytes} bytes) and ${dataset.biographies.records.length} biographies (${result.biographiesBytes} bytes in total, largest ${result.largestBiography}) under ${root}`);
