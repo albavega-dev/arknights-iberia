@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 
 import {
-  assetChangesByDirectory, assetCoverage, buildingEntries, catalogModuleIds, changedAssetPaths, changedBlobs, compareRoster, diffKeyed, diffModules, diffOperators,
+  assetChangesByDirectory, assetCoverage, baseSkillFingerprints, buildingEntries, diffBaseSkills, catalogModuleIds, changedAssetPaths, changedBlobs, compareRoster, diffKeyed, diffModules, diffOperators,
   diffSkills, exitCodeFor, fingerprint, handbookEntries, isPlayable, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds, redact,
   resolvedSkillGaps, revisionStatus, skillIconNames, skillIdsOf, stableJson, usedRangeIds,
 } from "../src/game-data/gamedata-diff";
@@ -107,6 +107,24 @@ describe("keyed collections", () => {
     assert.deepEqual(handbookEntries({ handbookDict: { a: 1 } }), { a: 1 });
     assert.deepEqual(buildingEntries({ chars: { b: 2 } }), { b: 2 });
     assert.deepEqual(handbookEntries([]), {});
+  });
+  it("compares the base skills by assignment and by the name and description of every stage", () => {
+    const stage = (buffId: string) => ({ buffId, cond: { phase: "PHASE_0", level: 1 } });
+    const building = (description: string, name = "Alpha") => ({
+      chars: { a: { buffChar: [{ buffData: [stage("t[000]")] }, { buffData: {} }] }, b: { buffChar: [{ buffData: [stage("t[010]")] }] }, c: { buffChar: "x" }, d: {} },
+      buffs: { "t[000]": { buffName: name, description }, "t[010]": { buffName: "Beta", description: "Same" } },
+    });
+    const ids = ["a", "b", "c", "d", "e"];
+    assert.deepEqual(diffBaseSkills(building("副产物"), building("副产物"), ids), { added: [], modified: [], removed: [] });
+    assert.deepEqual(diffBaseSkills(building("副产物"), building("副产品"), ids), { added: [], modified: ["a"], removed: [] }, "a change of wording is a modification");
+    assert.deepEqual(diffBaseSkills(building("x"), building("x", "Gamma"), ids).modified, ["a"], "so is a change of name");
+    const moved = building("x"); moved.chars.b = { buffChar: [{ buffData: [stage("t[000]")] }] };
+    assert.deepEqual(diffBaseSkills(building("x"), moved, ids).modified, ["b"], "and a change of assignment");
+    const unknown = building("x"); unknown.chars.b = { buffChar: [{ buffData: [stage("t[999]")] }] };
+    assert.deepEqual(diffBaseSkills(building("x"), unknown, ids).modified, ["b"], "a stage whose buff is missing still has a fingerprint");
+    const { d, ...withoutD } = building("x").chars; void d;
+    assert.deepEqual(diffBaseSkills(building("x"), { ...building("x"), chars: withoutD }, ids), { added: [], modified: [], removed: ["d"] });
+    assert.deepEqual(Object.keys(baseSkillFingerprints(building("x"), ["a", "z"])), ["a"], "only catalog operators present in the table");
   });
   it("lists new glossary terms", () => {
     assert.deepEqual(newGlossaryTerms({ termDescriptionDict: { a: 1 } }, { termDescriptionDict: { b: 1, a: 1 } }), ["b"]);

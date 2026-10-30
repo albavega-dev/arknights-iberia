@@ -13,7 +13,7 @@ import { isAbsolute, join, relative, resolve } from "node:path";
 import { portraitDirectory, portraitRepository, imageRepository, imageRevision } from "../src/game-data/asset-revisions";
 import {
   assetChangesByDirectory, assetCoverage, changedAssetPaths, skillIconNames, catalogModuleIds, changedBlobs, compareFileLimit, diffKeyed, diffModules, diffOperators, diffSkills,
-  buildingEntries, exitCodeFor, handbookEntries, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds,
+  diffBaseSkills, exitCodeFor, handbookEntries, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds,
   redact, resolvedSkillGaps, revisionStatus, skillIdsOf, usedRangeIds, compareRoster, type CompareFile,
 } from "../src/game-data/gamedata-diff";
 import { gameDataRepository, gameDataRevisions, pinnedGameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
@@ -160,7 +160,7 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
       skills: diffSkills(skillBefore, skillAfter, skillIds),
       modules: diffModules({ uniequip: uniBefore, battleEquip: battleBefore }, { uniequip: uniAfter, battleEquip: battleAfter }, ids),
       biographies: diffKeyed(handbookEntries(bioBefore), handbookEntries(bioAfter), ids),
-      base: diffKeyed(buildingEntries(buildBefore), buildingEntries(buildAfter), ids),
+      base: diffBaseSkills(buildBefore, buildAfter, ids),
       ranges: diffKeyed(rangeBefore as Record<string, unknown>, rangeAfter as Record<string, unknown>, usedRangeIds(charAfter, ids)),
       newGlossaryTerms: newGlossaryTerms(constBefore, constAfter),
     };

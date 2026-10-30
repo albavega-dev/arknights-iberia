@@ -202,6 +202,29 @@ export function diffModules(before: { uniequip: unknown; battleEquip: unknown },
 export const handbookEntries = (table: unknown): Dict => asDict(asDict(table).handbookDict);
 export const buildingEntries = (table: unknown): Dict => asDict(asDict(table).chars);
 
+/**
+ * Per-operator fingerprint of the base skills: the assignment in `chars` plus the name and description of the buff of
+ * every stage, so a change of wording in `buffs` counts as a modification too.
+ */
+export function baseSkillFingerprints(buildingData: unknown, ids: readonly string[]): Record<string, string> {
+  const chars = buildingEntries(buildingData);
+  const buffs = asDict(asDict(buildingData).buffs);
+  const result: Record<string, string> = {};
+  for (const id of ids) {
+    if (!(id in chars)) continue;
+    const slots = asDict(chars[id]).buffChar;
+    const stages = (Array.isArray(slots) ? slots : [])
+      .flatMap((slot) => { const data = asDict(slot).buffData; return Array.isArray(data) ? data : []; })
+      .map((stage) => { const buffId = String(asDict(stage).buffId); const buff = asDict(buffs[buffId]); return { buffId, name: buff.buffName ?? null, description: buff.description ?? null }; });
+    result[id] = fingerprint({ assignment: chars[id], stages });
+  }
+  return result;
+}
+
+export function diffBaseSkills(before: unknown, after: unknown, ids: readonly string[]): KeyedChange {
+  return diffKeyed(baseSkillFingerprints(before, ids), baseSkillFingerprints(after, ids));
+}
+
 /** Range ids that the phases of the given operators refer to. */
 export function usedRangeIds(characterTable: unknown, ids: readonly string[]): string[] {
   const table = asDict(characterTable);
