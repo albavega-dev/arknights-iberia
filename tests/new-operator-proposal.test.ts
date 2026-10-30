@@ -3,12 +3,12 @@ import { copyFile, mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promi
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test, { mock } from "node:test";
-import { mainPowerKey, proposeAffiliations, proposeFactions, proposeRegionalEntries, terraCnStartToDate, type Affiliation, type FactionEntry, type NewOperator, type PrtsOperator, type TerraOperator } from "../src/game-data/new-operator-proposal.js";
+import { cnOnlyName, isLatinName, mainPowerKey, proposeAffiliations, proposeFactions, proposeRegionalEntries, terraCnStartToDate, type Affiliation, type FactionEntry, type NewOperator, type PrtsOperator, type TerraOperator } from "../src/game-data/new-operator-proposal.js";
 import { fetchArtists, fetchPrts, fetchTerra, main, oneLine, propose, writeProposal, type NewOperatorProposal } from "../scripts/propose-new-operators.js";
 
 const power = (nationId: string | null, groupId: string | null = null, teamId: string | null = null) => ({ nationId, groupId, teamId });
-const operator = (id: string, overrides: Partial<NewOperator> = {}): NewOperator => ({ id, cnName: `${id}-cn`, mainPower: power("rhodes"), subPower: [], ...overrides });
-const prtsRow = (charId: string, en: string, cnOnlineTime: string): PrtsOperator => ({ charId, page: `${charId}-页`, en, cnOnlineTime });
+const operator = (id: string, overrides: Partial<NewOperator> = {}): NewOperator => ({ id, cnName: `${id}-cn`, appellation: `${id} Name`, mainPower: power("rhodes"), subPower: [], ...overrides });
+const prtsRow = (charId: string, cnOnlineTime: string): PrtsOperator => ({ charId, page: `${charId}-页`, cnOnlineTime });
 const terraRow = (id: string, name: string, startTime?: string, event = "Event"): TerraOperator => ({ id, name, page: `${name} Page`, ...(startTime ? { event, startTime } : {}) });
 
 test("a Terra Wiki CN start gives the CN date: the wiki keeps a UTC-6 clock", () => {
@@ -18,9 +18,19 @@ test("a Terra Wiki CN start gives the CN date: the wiki keeps a UTC-6 clock", ()
   for (const bad of ["2026-10-14", "2026-02-30 10:00:00", ""]) assert.throws(() => terraCnStartToDate(bad), /Unreadable Terra Wiki start time/);
 });
 
-test("names come from Terra Wiki and dates from PRTS, both community-listed", () => {
-  const result = proposeRegionalEntries([operator("char_a"), operator("char_b")], [prtsRow("char_a", "alpha", "2026-08-01 16:00:00"), prtsRow("char_b", "Beta", "2026-08-15 10:00:00")], [terraRow("char_a", "Alpha", "2026-07-31 20:00:00"), terraRow("char_b", "Beta", "2026-08-01 20:00:00", "Other")]);
-  assert.deepEqual(result.entries[0], { id: "char_a", nameEnglish: "Alpha", nameStatus: "community-listed", cnReleaseDate: "2026-08-01", globalReleaseDate: null, cnReleaseDateProvenance: { status: "community-listed", source: "https://prts.wiki/w/char_a-%E9%A1%B5" } });
+test("a CN-only name is the CN appellation in the Latin alphabet, never a wiki name", () => {
+  for (const name of ["Aegis", "de Toledo", "Kal'tsit·Esperanta", "Yūtenji Nyamu", "Mr.Nothing", "Thermal-EX", "GALLUS²", '"Justice Knight"', "Pozëmka"]) assert.equal(isLatinName(name), true, name);
+  for (const name of ["Зима", "Позёмка", "时隙", "Aegis 2号", "", "   "]) assert.equal(isLatinName(name), false, name);
+  assert.equal(cnOnlyName({ appellation: " Aegis " }), "Aegis");
+  assert.equal(cnOnlyName({ appellation: "Гум" }), undefined);
+  const result = proposeRegionalEntries([operator("char_a", { appellation: "Aegis" })], [prtsRow("char_a", "2026-09-04 16:00:00")], [terraRow("char_a", "Aigis")]);
+  assert.equal(result.entries[0]!.nameEnglish, "Aegis", "the wiki name is ignored");
+  assert.equal(result.entries[0]!.nameStatus, "cn-appellation");
+});
+
+test("names come from the CN appellation and dates from PRTS", () => {
+  const result = proposeRegionalEntries([operator("char_a", { appellation: "Alpha" }), operator("char_b")], [prtsRow("char_a", "2026-08-01 16:00:00"), prtsRow("char_b", "2026-08-15 10:00:00")], [terraRow("char_a", "Wiki Alpha", "2026-07-31 20:00:00"), terraRow("char_b", "Beta", "2026-08-01 20:00:00", "Other")]);
+  assert.deepEqual(result.entries[0], { id: "char_a", nameEnglish: "Alpha", nameStatus: "cn-appellation", cnReleaseDate: "2026-08-01", globalReleaseDate: null, cnReleaseDateProvenance: { status: "community-listed", source: "https://prts.wiki/w/char_a-%E9%A1%B5" } });
   assert.equal(result.entries[1]!.cnReleaseDate, "2026-08-15", "PRTS is kept when the wiki event differs");
   assert.deepEqual(result.unresolved, []);
   assert.deepEqual(result.notes, ["char_b: PRTS 2026-08-15, Terra Wiki event 2026-08-02; PRTS kept (its date is the release, the wiki's is the event)"]);
@@ -36,15 +46,15 @@ test("without PRTS the date comes from the earliest Terra Wiki event, with a not
   assert.deepEqual(missing.notes, ["char_a: PRTS has no date; CN date from the Terra Wiki event Early"]);
 });
 
-test("only a missing name or date, or two different names, are left to a person", () => {
+test("only an appellation outside the Latin alphabet or a missing date are left to a person", () => {
   const result = proposeRegionalEntries(
-    [operator("char_a"), operator("char_b"), operator("char_c"), operator("char_d")],
-    [prtsRow("char_a", "Aegis", "2026-09-04 16:00:00"), prtsRow("char_b", "", "2026-09-04 16:00:00"), prtsRow("char_c", "Gamma", ""), prtsRow("char_d", "Delta", "2026-09-04 16:00:00")],
-    [terraRow("char_a", "Aigis"), terraRow("char_c", "Gamma")],
+    [operator("char_a", { appellation: "Зима" }), operator("char_b"), operator("char_c")],
+    [prtsRow("char_a", "2026-09-04 16:00:00"), prtsRow("char_b", ""), prtsRow("char_c", "2026-09-04 16:00:00")],
+    [],
   );
-  assert.deepEqual(result.entries.map((entry) => [entry.id, entry.nameEnglish]), [["char_d", "Delta"]], "PRTS gives the name when the wiki lacks the operator");
-  assert.deepEqual(result.unresolved.map((item) => [item.id, item.field]), [["char_a", "nameEnglish"], ["char_b", "nameEnglish"], ["char_c", "cnReleaseDate"]]);
-  assert.deepEqual(result.unresolved[0]!.evidence, { terraWiki: "Aigis", prts: "Aegis", recommendation: "Aigis" });
+  assert.deepEqual(result.entries.map((entry) => [entry.id, entry.nameEnglish]), [["char_c", "char_c Name"]]);
+  assert.deepEqual(result.unresolved.map((item) => [item.id, item.field]), [["char_a", "nameEnglish"], ["char_b", "cnReleaseDate"]]);
+  assert.deepEqual(result.unresolved[0]!.evidence, { appellation: "Зима" });
 });
 
 const faction = (id: string, mainPower: ReturnType<typeof power>, mainFactionId: string | null, extra: Partial<FactionEntry> = {}): FactionEntry => ({ id, name: id, factionId: mainPowerKey(mainPower), ...mainPower, status: "unresolved", source: "ArknightsGamedata character_table.json mainPower", regional: false, mainFactionId, factionName: mainFactionId ? `${mainFactionId} name` : null, factionStatus: "terra-wiki-supported", factionSource: "https://arknights.wiki.gg/api.php", ...extra });
@@ -103,13 +113,21 @@ test("affiliations follow the correspondence the known operators have", () => {
   ]);
 });
 
+test("the catalog follows the naming rule: EN game data for Global operators, a Latin-alphabet name for CN-only ones", async () => {
+  const catalog = JSON.parse(await readFile("data/operator-catalog/index.json", "utf8")) as { operators: { id: string; name: string; globalName: string | null; cnOnly: boolean }[] };
+  for (const entry of catalog.operators) {
+    if (entry.cnOnly) assert.ok(isLatinName(entry.name) && entry.globalName === null, `${entry.id} has a Latin-alphabet name and no Global name`);
+    else assert.equal(entry.name, entry.globalName, `${entry.id} uses its EN name`);
+  }
+});
+
 // --- Script --------------------------------------------------------------------------------------------------------
 
 const cnTable = {
   char_400_weedy: { name: "温蒂", mainPower: power("rhodes"), subPower: [power("iberia")] },
   char_401_elysm: { name: "极境", mainPower: power("rhodes"), subPower: [power("iberia")] },
-  char_new: { name: "新", mainPower: power("rhodes"), subPower: [power("iberia")] },
-  char_odd: { name: "怪", mainPower: power("nowhere"), subPower: null },
+  char_new: { name: "新", appellation: "Newcomer", mainPower: power("rhodes"), subPower: [power("iberia")] },
+  char_odd: { name: "怪", appellation: "Odd", mainPower: power("nowhere"), subPower: null },
 };
 const artistEntry = (id: string, status: "partial" | "pending", role?: string) => ({ operatorId: id, operatorName: id, source: {}, status, general: status === "pending" ? [] : [{ name: "Someone", ...(role ? { role } : {}), evidence: `|illustrator = Someone${role ? ` (${role})` : ""}` }], variants: { base: [], elite2: [] }, outfits: [], error: null });
 
@@ -125,8 +143,8 @@ async function fixture(): Promise<{ directory: string; table: string; report: st
 }
 
 const fetchers = (overrides: Partial<Parameters<typeof propose>[1]> = {}) => ({
-  prts: async () => [prtsRow("char_new", "Newcomer", "2026-11-01 16:00:00")],
-  terra: async () => [terraRow("char_new", "Newcomer", "2026-10-31 20:00:00"), terraRow("char_odd", "Odd")],
+  prts: async () => [prtsRow("char_new", "2026-11-01 16:00:00")],
+  terra: async () => [terraRow("char_new", "Wiki Newcomer", "2026-10-31 20:00:00"), terraRow("char_odd", "Odd")],
   artists: async (item: NewOperator) => artistEntry(item.id, item.id === "char_odd" ? "pending" : "partial"),
   ...overrides,
 });
@@ -184,7 +202,7 @@ test("PRTS down, unknown roles and empty input are handled without guessing", as
     assert.equal(down.regional[0]!.cnReleaseDate, "2026-11-01", "the wiki event date");
     assert.deepEqual(down.unresolved.map((item) => item.reason), ["credits with a role the normalization does not know"]);
     const noPage = await propose(["--cn-character=" + table, "--ids=char_new"], fetchers({ terra: async () => [] }), directory);
-    assert.deepEqual(noPage.unresolved.map((item) => item.field), ["artistCredits"], "PRTS gives the name and the date");
+    assert.deepEqual(noPage.unresolved.map((item) => item.field), ["artistCredits"], "the name comes from the game data and the date from PRTS");
     assert.equal(noPage.regional[0]!.nameEnglish, "Newcomer");
     const lines: string[] = [];
     const quiet = join(directory, "quiet.json");
@@ -207,8 +225,8 @@ test("requests go to PRTS and Terra Wiki only and fail on errors", async () => {
   const seen: string[] = [];
   const reply = (bodies: unknown[], status = 200) => async (input: URL | RequestInfo) => { seen.push(String(input)); return new Response(JSON.stringify(bodies.shift()), { status }); };
   try {
-    mock.method(globalThis, "fetch", reply([{ cargoquery: [{ title: { charId: "char_a", page: "甲", en: "A", cnOnlineTime: "2026-01-01 10:00:00" } }, { title: { charId: "char_b", page: "乙" } }] }]));
-    assert.deepEqual(await fetchPrts(["char_a", "char_b"]), [{ charId: "char_a", page: "甲", en: "A", cnOnlineTime: "2026-01-01 10:00:00" },{ charId: "char_b", page: "乙", en: "", cnOnlineTime: "" }]);
+    mock.method(globalThis, "fetch", reply([{ cargoquery: [{ title: { charId: "char_a", page: "甲", cnOnlineTime: "2026-01-01 10:00:00" } }, { title: { charId: "char_b", page: "乙" } }] }]));
+    assert.deepEqual(await fetchPrts(["char_a", "char_b"]), [{ charId: "char_a", page: "甲", cnOnlineTime: "2026-01-01 10:00:00" }, { charId: "char_b", page: "乙", cnOnlineTime: "" }]);
     assert.match(seen[0]!, /^https:\/\/prts\.wiki\/api\.php\?action=cargoquery/);
     const where = (index: number) => new URL(seen[index]!).searchParams.get("where");
     assert.equal(where(0), "chara.charId IN ('char_a', 'char_b')");

@@ -1,7 +1,7 @@
 /**
- * Proposal for the operators new in CN: regional manifest entry (English name and CN date), main faction, sub-power
- * affiliations and artist credits. Names and dates come from Terra Wiki and PRTS (`community-listed`), factions from the
- * character_table identifiers, and credits from the Terra Wiki page.
+ * Proposal for the operators new in CN: regional manifest entry (name and CN date), main faction, sub-power affiliations
+ * and artist credits. The name is the CN appellation, the date comes from PRTS (Terra Wiki as fallback,
+ * `community-listed`), factions from the character_table identifiers, and credits from the Terra Wiki page.
  *
  *   pnpm data:new-operators --cn-character=<CN character_table.json> (--from-report=<detection report> | --ids=char_a,char_b) [--write]
  *
@@ -18,7 +18,7 @@ const flag = (name: string, argv: readonly string[]) => argv.find((item) => item
 const sqlList = (values: readonly string[]) => values.map((value) => `'${value.replaceAll("'", "''")}'`).join(", ");
 const userAgent = "arknights-iberia-update-check";
 
-type CharacterRow = { name?: unknown; mainPower?: NewOperator["mainPower"]; subPower?: NewOperator["subPower"] | null };
+type CharacterRow = { name?: unknown; appellation?: unknown; mainPower?: NewOperator["mainPower"]; subPower?: NewOperator["subPower"] | null };
 type Fetchers = {
   prts: (ids: readonly string[]) => Promise<PrtsOperator[]>;
   terra: (ids: readonly string[]) => Promise<TerraOperator[]>;
@@ -51,8 +51,8 @@ const text = (row: Record<string, unknown>, key: string) => {
 };
 
 export async function fetchPrts(ids: readonly string[]): Promise<PrtsOperator[]> {
-  const rows = await cargo(prtsOrigin, { tables: "chara,char_obtain", join_on: "chara._pageName=char_obtain._pageName", fields: "chara.charId=charId,chara._pageName=page,chara.en=en,char_obtain.cnOnlineTime=cnOnlineTime", where: `chara.charId IN (${sqlList(ids)})` });
-  return rows.map((row) => ({ charId: text(row, "charId"), page: text(row, "page"), en: typeof row.en === "string" ? row.en : "", cnOnlineTime: typeof row.cnOnlineTime === "string" ? row.cnOnlineTime : "" }));
+  const rows = await cargo(prtsOrigin, { tables: "chara,char_obtain", join_on: "chara._pageName=char_obtain._pageName", fields: "chara.charId=charId,chara._pageName=page,char_obtain.cnOnlineTime=cnOnlineTime", where: `chara.charId IN (${sqlList(ids)})` });
+  return rows.map((row) => ({ charId: text(row, "charId"), page: text(row, "page"), cnOnlineTime: typeof row.cnOnlineTime === "string" ? row.cnOnlineTime : "" }));
 }
 
 export async function fetchTerra(ids: readonly string[]): Promise<TerraOperator[]> {
@@ -103,7 +103,7 @@ async function newOperators(argv: readonly string[]): Promise<NewOperator[]> {
   return ids.map((id) => {
     const row = table[id];
     if (typeof row?.name !== "string" || !row.mainPower) throw new Error(`${id} is not an operator of the CN character table`);
-    return { id, cnName: row.name, mainPower: row.mainPower, subPower: row.subPower ?? [] };
+    return { id, cnName: row.name, appellation: typeof row.appellation === "string" ? row.appellation : "", mainPower: row.mainPower, subPower: row.subPower ?? [] };
   });
 }
 

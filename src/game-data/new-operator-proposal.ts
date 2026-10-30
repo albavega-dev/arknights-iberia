@@ -1,4 +1,4 @@
-// Pure proposal logic for the operators new in CN: regional manifest entry (English name and CN date), main faction and
+// Pure proposal logic for the operators new in CN: regional manifest entry (name and CN date), main faction and
 // sub-power affiliations. The script that fetches PRTS and Terra Wiki and writes the manifests is
 // scripts/propose-new-operators.ts.
 
@@ -6,24 +6,35 @@ export const prtsOrigin = "https://prts.wiki";
 export const terraWikiOrigin = "https://arknights.wiki.gg";
 
 type Power = { nationId: string | null; groupId: string | null; teamId: string | null };
-/** What the CN character table says about a new operator. */
-export type NewOperator = { id: string; cnName: string; mainPower: Power; subPower: readonly Power[] };
+/** What the CN character table says about a new operator; `appellation` is its name in the Latin alphabet there. */
+export type NewOperator = { id: string; cnName: string; appellation: string; mainPower: Power; subPower: readonly Power[] };
 /** A PRTS row: `chara` joined with `char_obtain` by page; `cnOnlineTime` is CN server time ("2026-08-01 16:00:00"). */
-export type PrtsOperator = { charId: string; page: string; en: string; cnOnlineTime: string };
+export type PrtsOperator = { charId: string; page: string; cnOnlineTime: string };
 /** A Terra Wiki row: `OperatorFiles` by id, with the CN start of the event that gives the operator when there is one. */
 export type TerraOperator = { id: string; name: string; page: string; event?: string; startTime?: string };
 
 export type RegionalEntry = {
   id: string;
   nameEnglish: string;
-  nameStatus: "community-listed";
+  nameStatus: "cn-appellation";
   cnReleaseDate: string;
   globalReleaseDate: null;
   cnReleaseDateProvenance: { status: "community-listed"; source: string };
 };
 export type Unresolved = { id: string; field: string; reason: string; evidence?: Record<string, unknown> };
 
-const sameName = (a: string, b: string) => a.normalize("NFC").trim().toLowerCase() === b.normalize("NFC").trim().toLowerCase();
+/** True when every letter of the name is Latin (accents included); digits, spaces and punctuation are allowed. */
+export const isLatinName = (name: string) => name.trim().length > 0 && !/[^\P{L}\p{Script=Latin}]/u.test(name);
+
+/**
+ * Name of an operator while it is CN-only: `appellation` of the CN character table, the Latin-alphabet name of the
+ * game data. Wikis are not a source of names. Some CN appellations are in Cyrillic (Ursus operators), and then a
+ * person decides; the Global name, once the operator arrives, is the `name` of the EN character table.
+ */
+export function cnOnlyName(operator: Pick<NewOperator, "appellation">): string | undefined {
+  return isLatinName(operator.appellation) ? operator.appellation.trim() : undefined;
+}
+
 export const prtsPageUrl = (page: string) => `${prtsOrigin}/w/${encodeURIComponent(page)}`;
 export const terraPageUrl = (page: string) => `${terraWikiOrigin}/wiki/${encodeURIComponent(page.replaceAll(" ", "_"))}`;
 
@@ -51,9 +62,9 @@ function terraById(rows: readonly TerraOperator[]): Map<string, TerraOperator> {
 }
 
 /**
- * Regional manifest entries: English name from Terra Wiki (PRTS as fallback) and CN date from PRTS `cnOnlineTime`,
- * both `community-listed`. When PRTS did not answer (`prts` undefined) or lacks the operator, the date comes from the
- * Terra Wiki event, with a note. Only a missing name or date, or two names that really differ, are left to a person.
+ * Regional manifest entries: name from the CN appellation and CN date from PRTS `cnOnlineTime` (`community-listed`).
+ * When PRTS did not answer (`prts` undefined) or lacks the operator, the date comes from the Terra Wiki event, with a
+ * note. Only an appellation outside the Latin alphabet or a missing date are left to a person.
  */
 export function proposeRegionalEntries(operators: readonly NewOperator[], prts: readonly PrtsOperator[] | undefined, terra: readonly TerraOperator[]): { entries: RegionalEntry[]; unresolved: Unresolved[]; notes: string[] } {
   const prtsById = new Map((prts ?? []).map((row) => [row.charId, row]));
@@ -67,13 +78,9 @@ export function proposeRegionalEntries(operators: readonly NewOperator[], prts: 
     const terraDate = fromTerra?.startTime ? terraCnStartToDate(fromTerra.startTime) : undefined;
     const prtsDate = fromPrts?.cnOnlineTime ? fromPrts.cnOnlineTime.slice(0, 10) : undefined;
     let ok = true;
-    if (fromTerra && fromPrts?.en && !sameName(fromTerra.name, fromPrts.en)) {
-      unresolved.push({ id: operator.id, field: "nameEnglish", reason: "Terra Wiki and PRTS give different English names", evidence: { terraWiki: fromTerra.name, prts: fromPrts.en, recommendation: fromTerra.name } });
-      ok = false;
-    }
-    const name = fromTerra?.name ?? (fromPrts?.en || undefined);
+    const name = cnOnlyName(operator);
     if (!name) {
-      unresolved.push({ id: operator.id, field: "nameEnglish", reason: "neither Terra Wiki nor PRTS lists an English name" });
+      unresolved.push({ id: operator.id, field: "nameEnglish", reason: "the CN appellation is not in the Latin alphabet", evidence: { appellation: operator.appellation } });
       ok = false;
     }
     let date: { value: string; source: string } | undefined;
@@ -87,7 +94,7 @@ export function proposeRegionalEntries(operators: readonly NewOperator[], prts: 
       unresolved.push({ id: operator.id, field: "cnReleaseDate", reason: "neither PRTS nor Terra Wiki gives a CN date" });
       ok = false;
     }
-    if (ok && name && date) entries.push({ id: operator.id, nameEnglish: name, nameStatus: "community-listed", cnReleaseDate: date.value, globalReleaseDate: null, cnReleaseDateProvenance: { status: "community-listed", source: date.source } });
+    if (ok && name && date) entries.push({ id: operator.id, nameEnglish: name, nameStatus: "cn-appellation", cnReleaseDate: date.value, globalReleaseDate: null, cnReleaseDateProvenance: { status: "community-listed", source: date.source } });
   }
   return { entries, unresolved, notes };
 }
