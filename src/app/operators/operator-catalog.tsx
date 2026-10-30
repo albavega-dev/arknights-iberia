@@ -10,6 +10,7 @@ import { ArrowDown, ArrowUp, ChevronDown, RotateCcw } from "lucide-react";
 import {
   filterOperators,
   getOperatorDisplayName,
+  operatorCardBadge,
   sortOperators,
   type OperatorClass,
   type OperatorRecord,
@@ -27,7 +28,6 @@ import {
   getOperatorFactionName,
   getOperatorMainFactionId,
 } from "../../game-data/operator-factions";
-import { getNewOperatorIds } from "../../game-data/operator-global-updates";
 import { getOperatorArchetypeName } from "../../game-data/operator-archetypes";
 import { getOperatorPublicSlug } from "../../game-data/operator-slugs";
 import { OperatorControlButton } from "./operator-control-button";
@@ -136,11 +136,12 @@ const OperatorCard = memo(function OperatorCard({
   const [portraitFailed, setPortraitFailed] = useState(false);
   const portrait = getOperatorPortraitAsset(operator.id);
   const displayName = getOperatorDisplayName(operator);
+  const badge = operatorCardBadge(operator, isNew);
   return (
     <Link
       className={`operator-card rarity-${operator.rarity}${operator.cnOnly ? " is-cn-only" : ""}`}
       href={`/operators/${operator.slug}`}
-      aria-label={`${displayName}, ${classLabel}, ${operator.rarity} estrellas${operator.cnOnly ? ", exclusivo CN, pr\u00F3ximamente en Global" : ""}${isNew ? ", operador nuevo" : ""}. Ver ficha`}
+      aria-label={`${displayName}, ${classLabel}, ${operator.rarity} estrellas${operator.cnOnly ? ", exclusivo CN, pr\u00F3ximamente en Global" : ""}${badge === "new" ? ", operador nuevo" : ""}. Ver ficha`}
     >
       <span className="operator-card-art" aria-hidden="true">
         {!portraitFailed && portrait ? (
@@ -158,11 +159,11 @@ const OperatorCard = memo(function OperatorCard({
           <Image src={getOperatorClassIconUrl(operator.class)} alt="" fill sizes="29px" unoptimized />
         </span>
       </span>
-      {operator.cnOnly ? (
+      {badge === "upcoming" ? (
         <span className="operator-card-upcoming" aria-hidden="true">
           <span className="operator-card-upcoming-text">{"PR\u00D3XIMAMENTE"}</span>
         </span>
-      ) : isNew ? (
+      ) : badge === "new" ? (
         <span className="operator-card-new" aria-label="operador nuevo">
           NUEVO
         </span>
@@ -483,7 +484,7 @@ function OperatorOptionPopover({
   );
 }
 
-export function OperatorCatalog({ records }: { records: readonly OperatorRecord[] }) {
+export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: readonly OperatorRecord[]; newOperatorIds: readonly string[] }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const searchParamsText = searchParams.toString();
@@ -562,7 +563,7 @@ export function OperatorCatalog({ records }: { records: readonly OperatorRecord[
       isDefaultCnReleaseOrder,
     ],
   );
-  const newOperatorIds = useMemo(() => getNewOperatorIds(catalogRecords), [catalogRecords]);
+  const newOperatorIds = useMemo(() => new Set(newIds), [newIds]);
   const factions = useMemo(
     () =>
       [

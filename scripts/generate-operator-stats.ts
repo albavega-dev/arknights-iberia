@@ -4,12 +4,13 @@ import { isDeepStrictEqual } from "node:util";
 import { gameDataRepository, gameDataRevisions, gameDataTableHashes, type GameDataRegion, type GameDataTable } from "../src/game-data/gamedata-revisions";
 import { datasetContractVersion, statsDatasetContractVersion, validateDatasetIndex, type DatasetFile, type DatasetIndex } from "../src/game-data/operator-dataset";
 import { buildOperatorTrait } from "../src/game-data/operator-modules";
-import { arg, exists, operatorDatasetFile, readCatalog, readJson as json, sha256, tableFlag, writeDatasetDirectory } from "./operator-dataset-io";
+import { datasetRegistry } from "../src/game-data/dataset-registry";
+import { applyRevisionChanges, arg, changedFields, exists, operatorDatasetFile, readCatalog, readJson as json, reportVerification, revisionChanges, sha256, tableFlag, verificationMode, verifyUpdate, writeDatasetDirectory, type DatasetVerification } from "./operator-dataset-io";
 import { attachModuleStats, extractOperatorStatsProfiles, type OperatorStatsProfile } from "../src/game-data/operator-stats";
 
 export const statsDatasetName = "operator-stats";
 const regions: readonly GameDataRegion[] = ["en", "cn"];
-const tables: readonly GameDataTable[] = ["character_table", "uniequip_table", "battle_equip_table"];
+const tables: readonly GameDataTable[] = datasetRegistry["operator-stats"].tables;
 
 type StatsSource = OperatorStatsProfile["source"];
 export type StatsDatasetProfile = Omit<OperatorStatsProfile, "source">;
@@ -21,7 +22,7 @@ export type StatsGeneratorOptions = Readonly<{
   catalogSize?: number;
   limits?: Readonly<{ fileBytes: number; totalBytes: number }>;
 }>;
-export type StatsVerification = { identical: number; differences: { operatorId: string; keys: string[] }[]; missing: string[]; ignored: number };
+export type StatsVerification = DatasetVerification;
 
 export { arg, readCatalog, tableFlag };
 
@@ -71,10 +72,14 @@ function comparableReference(profile: Record<string, unknown>, region: GameDataR
   return { ...rest, modules };
 }
 
-export function compareStatsManifests(reference: unknown, generated: StatsDataset): StatsVerification {
+/**
+ * Compares the generated stats with a reference manifest or directory. With `revisionChange` (update mode of
+ * --verify-against), a change of source is reported once as the expected revision change instead of in every profile.
+ */
+export function compareStatsManifests(reference: unknown, generated: StatsDataset, options: Readonly<{ revisionChange?: boolean }> = {}): StatsVerification {
   const root = reference as { contractVersion?: string; sources?: Record<string, unknown>; profiles?: Record<string, unknown>[] };
   if (!Array.isArray(root.profiles) || !["1", "2", "3"].includes(root.contractVersion ?? "")) throw new Error("Reference manifest has an unknown contract");
-  const result: StatsVerification = { identical: 0, differences: [], missing: [], ignored: 0 };
+  const result: StatsVerification = { identical: 0, differences: [], missing: [], ignored: 0, removed: [], sources: [], shared: [] };
   const used = new Set<Record<string, unknown>>();
   for (const profile of generated.profiles) {
     const region = profile.region as GameDataRegion;
@@ -82,14 +87,19 @@ export function compareStatsManifests(reference: unknown, generated: StatsDatase
     if (!candidate) { result.missing.push(`${profile.operatorId}/${region}`); continue; }
     used.add(candidate);
     const referenceSource = root.contractVersion === "1" ? candidate.source : root.sources?.[region];
-    const expected = JSON.parse(JSON.stringify(comparableReference(candidate, region))) as Record<string, unknown>;
+    const sourceChanged = !isDeepStrictEqual(referenceSource, generated.sources[region]);
+    const changes = options.revisionChange ? revisionChanges(JSON.parse(JSON.stringify(referenceSource ?? null)), JSON.parse(JSON.stringify(generated.sources[region]))) : new Map<string, string | null>();
+    const expected = applyRevisionChanges(JSON.parse(JSON.stringify(comparableReference(candidate, region))), changes) as Record<string, unknown>;
     const { trait, ...withoutTrait } = profile;
     const actual = JSON.parse(JSON.stringify(root.contractVersion === "3" ? { ...withoutTrait, trait } : withoutTrait)) as Record<string, unknown>;
     const keys = [...new Set([...Object.keys(expected), ...Object.keys(actual)])].filter((key) => !isDeepStrictEqual(expected[key], actual[key]));
-    if (!isDeepStrictEqual(referenceSource, generated.sources[region])) keys.push("source");
-    if (keys.length) result.differences.push({ operatorId: profile.operatorId, keys }); else result.identical += 1;
+    const fields = changedFields(expected, actual);
+    if (sourceChanged && options.revisionChange) result.sources = ["sources"];
+    else if (sourceChanged) { keys.push("source"); fields.push("source"); }
+    if (keys.length) result.differences.push({ operatorId: profile.operatorId, keys, fields }); else result.identical += 1;
   }
-  result.ignored = root.profiles.filter((item) => !used.has(item)).length;
+  result.removed = root.profiles.filter((item) => !used.has(item)).map((item) => `${String(item.operatorId)}/${String(item.region)}`);
+  result.ignored = result.removed.length;
   return result;
 }
 
@@ -101,6 +111,7 @@ export async function main(argv: readonly string[] = process.argv, options: Stat
   const paths = Object.fromEntries(regions.map((region) => [region, Object.fromEntries(tables.map((table) => [table, arg(tableFlag(region, table), argv)]))])) as Record<GameDataRegion, Record<GameDataTable, string>>;
   const output = arg("--out-dir", argv);
   const force = argv.includes("--force");
+  const mode = verificationMode(argv);
   if (await exists(output) && !force) throw new Error("Output exists; pass --force to overwrite");
   const expectedHashes = options.expectedHashes ?? gameDataTableHashes;
   for (const region of regions) for (const table of tables) if (sha256(await readFile(paths[region][table])) !== expectedHashes[region][table]) throw new Error(`Snapshot SHA-256 mismatch: ${tableFlag(region, table)}`);
@@ -108,13 +119,11 @@ export async function main(argv: readonly string[] = process.argv, options: Stat
   const catalog = await readCatalog(options.releaseManifest ?? "data/operator-cn-release-manifest.json", options.regionalManifest ?? "data/operator-regional-manifest.json", options.catalogSize);
   const sources = Object.fromEntries(regions.map((region) => [region, { repository: gameDataRepository, revision: gameDataRevisions[region], path: `${region}/gamedata/excel/character_table.json`, sha256: expectedHashes[region].character_table }])) as Record<GameDataRegion, StatsSource>;
   const dataset = buildStatsDataset(input, catalog, sources);
-  if (argv.includes("--verify-against")) {
+  if (mode) {
     const referencePath = arg("--verify-against", argv);
     const reference = (await stat(referencePath)).isDirectory() ? await readStatsDataset(referencePath) : await json(referencePath);
-    const verification = compareStatsManifests(reference, dataset);
-    console.log(`Verification: ${verification.identical} identical, ${verification.differences.length} different, ${verification.missing.length} missing, ${verification.ignored} reference profiles outside the catalog`);
-    for (const difference of verification.differences.slice(0, 20)) console.log(`  ${difference.operatorId}: ${difference.keys.join(", ")}`);
-    if (verification.differences.length || verification.missing.length) throw new Error("Verification failed; output not written");
+    const verification = compareStatsManifests(reference, dataset, { revisionChange: mode === "update" });
+    if (mode === "update") await verifyUpdate([{ label: statsDatasetName, verification, sources: dataset.sources }], argv); else reportVerification(verification);
   }
   const result = await writeStatsDataset(output, dataset, { force, limits: options.limits });
   for (const warning of result.warnings) console.warn(`Warning: ${warning}`);

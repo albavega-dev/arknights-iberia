@@ -61,28 +61,62 @@ export async function writeDatasetDirectory(directory: string, dataset: string, 
   return { index, totalBytes: Buffer.byteLength(indexText) + entries.reduce((sum, entry) => sum + entry.bytes, 0), warnings };
 }
 
-export type DatasetVerification = { identical: number; differences: { operatorId: string; keys: string[] }[]; missing: string[]; ignored: number; sources: string[]; shared: string[] };
+export type DatasetDifference = { operatorId: string; keys: string[]; fields: string[] };
+export type DatasetVerification = { identical: number; differences: DatasetDifference[]; missing: string[]; ignored: number; removed: string[]; sources: string[]; shared: string[] };
 export type ComparableDataset = Readonly<{ sources: unknown; tables?: unknown; profiles: readonly { operatorId: string; region: string }[]; shared: Readonly<Record<string, unknown>> }>;
 
 const plain = (value: unknown): unknown => JSON.parse(JSON.stringify(value ?? null));
+const isRecord = (value: unknown): value is Record<string, unknown> => typeof value === "object" && value !== null && !Array.isArray(value);
 
-/** Compares a generated dataset with a versioned one: per operator, the top-level keys that change, plus sources, tables and shared files. */
-export function compareDatasets(reference: ComparableDataset, generated: ComparableDataset): DatasetVerification {
-  const result: DatasetVerification = { identical: 0, differences: [], missing: [], ignored: 0, sources: [], shared: [] };
+/** Paths of the leaves that differ between two JSON values, such as `skills[2].levels[0].blackboard[1].value`. */
+export function changedFields(expected: unknown, actual: unknown, path = ""): string[] {
+  if (isDeepStrictEqual(expected, actual)) return [];
+  if (isRecord(expected) && isRecord(actual)) return [...new Set([...Object.keys(expected), ...Object.keys(actual)])].flatMap((key) => changedFields(expected[key], actual[key], path ? `${path}.${key}` : key));
+  // Arrays of different length are reported as a whole, since their positions no longer line up.
+  if (Array.isArray(expected) && Array.isArray(actual) && expected.length === actual.length) return expected.flatMap((item, index) => changedFields(item, actual[index], `${path}[${index}]`));
+  return [path || "(root)"];
+}
+
+/**
+ * Pairs every `revision` and `sha256` of the reference sources and tables with the generated value at the same place.
+ * A value that would map to two different ones is left out (null), so it still shows up as a difference.
+ */
+export function revisionChanges(reference: unknown, generated: unknown, changes = new Map<string, string | null>(), key = ""): Map<string, string | null> {
+  if (isRecord(reference) && isRecord(generated)) for (const name of Object.keys(reference)) revisionChanges(reference[name], generated[name], changes, name);
+  else if ((key === "revision" || key === "sha256") && typeof reference === "string" && typeof generated === "string" && reference !== generated) changes.set(reference, changes.has(reference) && changes.get(reference) !== generated ? null : generated);
+  return changes;
+}
+
+export function applyRevisionChanges(value: unknown, changes: ReadonlyMap<string, string | null>): unknown {
+  if (typeof value === "string") return changes.get(value) ?? value;
+  if (Array.isArray(value)) return value.map((item) => applyRevisionChanges(item, changes));
+  if (isRecord(value)) return Object.fromEntries(Object.entries(value).map(([name, item]) => [name, applyRevisionChanges(item, changes)]));
+  return value;
+}
+
+/**
+ * Compares a generated dataset with a versioned one: per operator, the top-level keys and the fields that change, plus
+ * sources, tables and shared files. With `revisionChange`, the revisions and hashes that change in sources and tables are
+ * expected inside every profile and shared file too, so only the content that changes is reported.
+ */
+export function compareDatasets(reference: ComparableDataset, generated: ComparableDataset, options: Readonly<{ revisionChange?: boolean }> = {}): DatasetVerification {
+  const result: DatasetVerification = { identical: 0, differences: [], missing: [], ignored: 0, removed: [], sources: [], shared: [] };
+  const changes = options.revisionChange ? revisionChanges(plain({ sources: reference.sources, tables: reference.tables }), plain({ sources: generated.sources, tables: generated.tables })) : new Map<string, string | null>();
   const used = new Set<unknown>();
   for (const profile of generated.profiles) {
     const candidate = reference.profiles.find((item) => item.operatorId === profile.operatorId && item.region === profile.region);
     if (!candidate) { result.missing.push(`${profile.operatorId}/${profile.region}`); continue; }
     used.add(candidate);
-    const expected = plain(candidate) as Record<string, unknown>;
+    const expected = applyRevisionChanges(plain(candidate), changes) as Record<string, unknown>;
     const actual = plain(profile) as Record<string, unknown>;
     const keys = [...new Set([...Object.keys(expected), ...Object.keys(actual)])].filter((key) => !isDeepStrictEqual(expected[key], actual[key]));
-    if (keys.length) result.differences.push({ operatorId: profile.operatorId, keys }); else result.identical += 1;
+    if (keys.length) result.differences.push({ operatorId: profile.operatorId, keys, fields: changedFields(expected, actual) }); else result.identical += 1;
   }
-  result.ignored = reference.profiles.filter((item) => !used.has(item)).length;
+  result.removed = reference.profiles.filter((item) => !used.has(item)).map((item) => `${item.operatorId}/${item.region}`);
+  result.ignored = result.removed.length;
   if (!isDeepStrictEqual(plain(reference.sources), plain(generated.sources))) result.sources.push("sources");
   if (!isDeepStrictEqual(plain(reference.tables), plain(generated.tables))) result.sources.push("tables");
-  for (const name of new Set([...Object.keys(reference.shared), ...Object.keys(generated.shared)])) if (!isDeepStrictEqual(plain(reference.shared[name]), plain(generated.shared[name]))) result.shared.push(name);
+  for (const name of new Set([...Object.keys(reference.shared), ...Object.keys(generated.shared)])) if (!isDeepStrictEqual(applyRevisionChanges(plain(reference.shared[name]), changes), plain(generated.shared[name]))) result.shared.push(name);
   return result;
 }
 
@@ -96,4 +130,60 @@ export function reportVerification(verification: DatasetVerification, log: (line
   if (verification.sources.length) log(`  differences in: ${verification.sources.join(", ")}`);
   if (verification.shared.length) log(`  shared files that change: ${verification.shared.join(", ")}`);
   if (failed) throw new Error("Verification failed; output not written");
+}
+
+export type VerificationMode = "strict" | "update";
+
+/** Reads how --verify-against runs: strict by default, or in update mode with --update (optionally with --report and --approve). */
+export function verificationMode(argv: readonly string[]): VerificationMode | undefined {
+  const verify = argv.includes("--verify-against");
+  const update = argv.includes("--update");
+  const extras = argv.includes("--report") || argv.includes("--approve");
+  if ((update || extras) && !verify) throw new Error("--update, --report and --approve need --verify-against");
+  if (extras && !update) throw new Error("--report and --approve need --update");
+  if (!verify) return undefined;
+  return update ? "update" : "strict";
+}
+
+export type UpdateSection = Readonly<{ label: string; verification: DatasetVerification; sources: unknown }>;
+export type UpdateChanges = { sources: unknown; revision: string[]; operators: { operatorId: string; fields: string[] }[]; added: string[]; removed: string[]; shared: string[] };
+export type UpdateReport = { update: Record<string, UpdateChanges> };
+
+const fieldsShown = 10;
+
+export function updateReport(sections: readonly UpdateSection[]): UpdateReport {
+  return { update: Object.fromEntries(sections.map(({ label, verification, sources }) => [label, {
+    sources: plain(sources),
+    revision: verification.sources,
+    operators: verification.differences.map(({ operatorId, fields }) => ({ operatorId, fields })),
+    added: verification.missing,
+    removed: verification.removed,
+    shared: verification.shared,
+  }])) };
+}
+
+const pending = (changes: UpdateChanges) => changes.operators.length + changes.added.length + changes.removed.length + changes.shared.length > 0;
+
+/**
+ * Update mode of --verify-against, for a real GameData update. The change of revision in sources and tables is expected;
+ * every other change (fields per operator, operators added or removed, shared files) is listed for approval. Nothing is
+ * written until a run gets, with --approve, the report of an earlier run (saved with --report) with exactly the same changes.
+ */
+export async function verifyUpdate(sections: readonly UpdateSection[], argv: readonly string[], log: (line: string) => void = console.log): Promise<void> {
+  const report = updateReport(sections);
+  for (const { label, verification } of sections) {
+    const changes = report.update[label]!;
+    log(`${label} (update): ${verification.identical} identical, ${changes.operators.length} different, ${changes.added.length} added, ${changes.removed.length} removed`);
+    log(changes.revision.length ? `  expected revision change in: ${changes.revision.join(", ")}` : "  no revision change");
+    for (const { operatorId, fields } of changes.operators) log(`  ${operatorId}: ${fields.slice(0, fieldsShown).join(", ")}${fields.length > fieldsShown ? ` and ${fields.length - fieldsShown} more fields` : ""}`);
+    if (changes.added.length) log(`  added (missing from the reference): ${changes.added.join(", ")}`);
+    if (changes.removed.length) log(`  removed (only in the reference): ${changes.removed.join(", ")}`);
+    if (changes.shared.length) log(`  shared files that change: ${changes.shared.join(", ")}`);
+  }
+  const approved = argv.includes("--approve") ? await readJson(arg("--approve", argv)) : undefined;
+  if (argv.includes("--report")) await writeFile(arg("--report", argv), `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  if (!Object.values(report.update).some(pending)) return;
+  if (approved === undefined) throw new Error("Changes pending approval; output not written (save them with --report and rerun with --approve <report>)");
+  if (!isDeepStrictEqual(approved, plain(report))) throw new Error("The changes differ from the approved report; output not written");
+  log("Changes match the approved report");
 }

@@ -3,11 +3,12 @@ import { join } from "node:path";
 import { gameDataBuildingTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { sharedFileName, skillsDatasetContractVersion, skillsDatasetLimits, validateDatasetIndex, type DatasetFile, type DatasetIndex, type DatasetSharedFile, type DatasetSource } from "../src/game-data/operator-dataset";
 import { baseSkillDescriptions, buildGlossary, buildOperatorBaseSkills, buildOperatorSkills, buildOperatorTalents, skillDescriptions, talentDescriptions, type GlossaryEntry, type GlossaryTable, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
-import { arg, compareDatasets, exists, operatorDatasetFile, readCatalog, readJson, reportVerification, sha256, tableFlag, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
+import { datasetRegistry } from "../src/game-data/dataset-registry";
+import { arg, compareDatasets, exists, operatorDatasetFile, readCatalog, readJson, reportVerification, sha256, tableFlag, verificationMode, verifyUpdate, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
 
 export const skillsDatasetName = "operator-skills";
 const regions: readonly GameDataRegion[] = ["en", "cn"];
-const tables = ["character_table", "skill_table", "range_table", "gamedata_const", "building_data"] as const;
+const tables = datasetRegistry["operator-skills"].tables;
 type SkillsTable = (typeof tables)[number];
 type HashTable = Readonly<Record<GameDataRegion, Readonly<Record<SkillsTable, string>>>>;
 
@@ -100,22 +101,25 @@ export function comparableSkills(dataset: SkillsDataset): ComparableDataset {
   return { sources: dataset.sources, tables: dataset.tables, profiles: dataset.profiles, shared: Object.fromEntries(dataset.glossaries.map((glossary) => [glossaryFileName(glossary.region), glossary])) };
 }
 
-export async function verifySkillsAgainst(directory: string, dataset: SkillsDataset): Promise<void> {
+export async function verifySkillsAgainst(directory: string, dataset: SkillsDataset, argv: readonly string[] = []): Promise<void> {
   const reference = await readSkillsDataset(directory);
-  reportVerification(compareDatasets({ sources: reference.index.sources, tables: reference.index.tables, profiles: reference.profiles, shared: reference.glossaries }, comparableSkills(dataset)));
+  const update = verificationMode(argv) === "update";
+  const verification = compareDatasets({ sources: reference.index.sources, tables: reference.index.tables, profiles: reference.profiles, shared: reference.glossaries }, comparableSkills(dataset), { revisionChange: update });
+  if (update) await verifyUpdate([{ label: skillsDatasetName, verification, sources: dataset.tables }], argv); else reportVerification(verification);
 }
 
 export async function main(argv: readonly string[] = process.argv, options: SkillsGeneratorOptions = {}): Promise<void> {
   const paths = Object.fromEntries(regions.map((region) => [region, Object.fromEntries(tables.map((table) => [table, arg(tableFlag(region, table), argv)]))])) as Record<GameDataRegion, Record<SkillsTable, string>>;
   const output = arg("--out-dir", argv);
   const force = argv.includes("--force");
+  const mode = verificationMode(argv);
   if (await exists(output) && !force) throw new Error("Output exists; pass --force to overwrite");
   const expectedHashes = options.expectedHashes ?? defaultHashes();
   for (const region of regions) for (const table of tables) if (sha256(await readFile(paths[region][table])) !== expectedHashes[region][table]) throw new Error(`Snapshot SHA-256 mismatch: ${tableFlag(region, table)}`);
   const input = Object.fromEntries(await Promise.all(regions.map(async (region) => [region, Object.fromEntries(await Promise.all(tables.map(async (table) => [table, await readJson(paths[region][table])])))]))) as Record<GameDataRegion, Record<SkillsTable, unknown>>;
   const catalog = await readCatalog(options.releaseManifest ?? "data/operator-cn-release-manifest.json", options.regionalManifest ?? "data/operator-regional-manifest.json", options.catalogSize);
   const dataset = buildSkillsDataset(input, catalog, expectedHashes);
-  if (argv.includes("--verify-against")) await verifySkillsAgainst(arg("--verify-against", argv), dataset);
+  if (mode) await verifySkillsAgainst(arg("--verify-against", argv), dataset, argv);
   const result = await writeSkillsDataset(output, dataset, { force, limits: options.limits });
   for (const warning of result.warnings) console.warn(`Warning: ${warning}`);
   const largest = Math.max(...Object.values(result.index.operators).map((entry) => entry.bytes));

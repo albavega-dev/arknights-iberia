@@ -169,3 +169,25 @@ test("skills generator verifies against a reference set and refuses undeclared d
     await assert.rejects(stat(rejected));
   } finally { mock.restoreAll(); await work.cleanup(); }
 });
+
+test("skills generator in update mode expects the revision change and writes only the approved changes", async () => {
+  const work = await workspace(); const [log] = quiet();
+  try {
+    await main(work.argv, work.options);
+    const path = join(work.directory, "en-skill_table.json");
+    const text = (await readFile(path, "utf8")).replace('"One"', '"Uno"');
+    await writeFile(path, text, "utf8");
+    const changed = { ...work.options, expectedHashes: { ...work.options.expectedHashes!, en: { ...work.options.expectedHashes!.en, skill_table: sha(text) } } };
+    const updated = join(work.directory, "updated");
+    const report = join(work.directory, "report.json");
+    const update = [...work.argv.slice(0, -1), updated, "--verify-against", work.output, "--update"];
+    await assert.rejects(main([...update, "--report", report], changed), /Changes pending approval; output not written/);
+    await assert.rejects(stat(updated));
+    const lines = log.mock.calls.map((call) => String(call.arguments[0]));
+    assert.ok(lines.includes("operator-skills (update): 2 identical, 1 different, 0 added, 0 removed"));
+    assert.ok(lines.includes("  expected revision change in: sources, tables"), "the new skill table hash is the expected revision change");
+    assert.ok(lines.includes("  char_b: skills[0].description"));
+    await main([...update, "--approve", report], changed);
+    assert.match(JSON.stringify((await readSkillsDataset(updated)).profiles.find((profile) => profile.operatorId === "char_b")!.skills[0]), /"Uno"/);
+  } finally { mock.restoreAll(); await work.cleanup(); }
+});

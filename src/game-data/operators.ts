@@ -107,3 +107,9 @@ export function filterOperators(records: readonly OperatorRecord[], filters: Ope
         operator.additionalFactionIds?.includes(filters.mainFactionId) === true),
   );
 }
+
+/** Badge of an operator card: a CN-only operator is always "upcoming" and never "new". */
+export function operatorCardBadge(operator: Pick<OperatorRecord, "cnOnly">, isNew: boolean): "upcoming" | "new" | null {
+  if (operator.cnOnly) return "upcoming";
+  return isNew ? "new" : null;
+}

@@ -24,3 +24,11 @@ test("uses the Spanish operator prefix without translating the public name", () 
   assert.equal(getOperatorPageTitle({ name: "Ripresa", globalName: null }), "Operador - Ripresa");
   assert.equal(getOperatorPageTitle({ name: "Nombre local", globalName: "Kal'tsit" }), "Operador - Kal'tsit");
 });
+
+test("normalizing keeps its results for edge cases and takes linear time on hostile input", () => {
+  assert.equal(normalizeOperatorSlugPart("--A  b--"), "a-b");
+  assert.equal(normalizeOperatorSlugPart("!!!"), "operator");
+  const started = performance.now();
+  for (const hostile of ["a" + "-".repeat(200_000) + "!b", "-".repeat(200_000) + "!", "!".repeat(200_000) + "a"]) normalizeOperatorSlugPart(hostile);
+  assert.ok(performance.now() - started < 1000, "hostile inputs finish well under a second");
+});

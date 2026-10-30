@@ -3,7 +3,7 @@ import { getOperatorDisplayName, type OperatorRecord } from "./operators";
 const reservedSlugs = new Set(["new", "api", "index", "search"]);
 
 export function normalizeOperatorSlugPart(name: string): string {
-  return name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("en").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "") || "operator";
+  return name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("en").split(/[^a-z0-9]+/).filter(Boolean).join("-") || "operator";
 }
 
 export function getOperatorPublicSlugs(records: readonly OperatorRecord[]): ReadonlyMap<string, string> {

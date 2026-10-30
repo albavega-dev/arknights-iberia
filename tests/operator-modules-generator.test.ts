@@ -200,5 +200,13 @@ test("modules generator verifies against a reference set and refuses undeclared 
     await assert.rejects(main([...work.argv.slice(0, -1), rejected, "--verify-against", work.output], changed), /Verification failed; output not written/);
     assert.ok(log.mock.calls.some((call) => /char_a: .*modules/.test(String(call.arguments[0]))), "reports what changes per operator");
     await assert.rejects(stat(rejected));
+
+    const report = join(work.directory, "report.json");
+    const update = [...work.argv.slice(0, -1), rejected, "--verify-against", work.output, "--update"];
+    await assert.rejects(main([...update, "--report", report], changed), /Changes pending approval; output not written/);
+    assert.ok(log.mock.calls.some((call) => /^ {2}char_a: modules\[\d+\]\.name/.test(String(call.arguments[0]))), "lists the changed fields");
+    await assert.rejects(stat(rejected));
+    await main([...update, "--approve", report], changed);
+    assert.ok((await stat(join(rejected, "index.json"))).isFile());
   } finally { mock.restoreAll(); await work.cleanup(); }
 });
