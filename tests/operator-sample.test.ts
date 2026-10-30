@@ -9,6 +9,7 @@ import { mergeCnReleaseDate } from "../src/game-data/release-date";
 import { buildNameDryRun } from "../scripts/dry-run-operator-names";
 import { applyRegionalDisplayNames } from "../src/game-data/operator-regional-names";
 import { buildNameProposals, validateKnownLegacyCnNames, validateNameBackfill } from "../scripts/backfill-operator-names";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const record = (overrides: Record<string, unknown> = {}) => ({
   name: "Irene",
@@ -136,7 +137,7 @@ test("Terra Wiki faction manifest has stable unique assignments", async () => {
   assert.equal(manifest.operators.filter((operator) => operator.mainFactionId !== null).length, 430);
   assert.equal(new Set(manifest.operators.map((operator) => operator.id)).size, 432);
   assert.equal(new Set(manifest.factions.map((faction) => faction.id)).size, 45);
-  assert.deepEqual(manifest.policy.pendingManualReview.sort(), ["char_4000_jnight", "char_4218_aigis"]);
+  assert.deepEqual(manifest.policy.pendingManualReview.sort(compareCodeUnits), ["char_4000_jnight", "char_4218_aigis"]);
 });
 
 test("filters by subclass and resolves its verified icon path", () => {

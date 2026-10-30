@@ -7,6 +7,7 @@ import { gameDataRepository, gameDataRevisions } from "../src/game-data/gamedata
 import { validateBiography } from "../src/game-data/operator-biography";
 import { catalogLimits, validateOperatorCatalog, type OperatorCatalog } from "../src/game-data/operator-catalog";
 import { biographiesDatasetContractVersion, checkDatasetLimits, datasetWarningRatio, validateDatasetIndex, type DatasetIndex } from "../src/game-data/operator-dataset";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const catalogPath = path.resolve("data/operator-catalog/index.json");
 const biographiesDirectory = path.resolve("data/operator-biographies");
@@ -78,8 +79,8 @@ test("biographies index is valid and lists every catalog operator in its region"
 
 test("biographies directory has exactly the indexed files and the index", async () => {
   const { index } = await readIndex();
-  const expected = [...Object.values(index.operators).map((entry) => entry.file), "index.json"].sort();
-  assert.deepEqual((await readdir(biographiesDirectory)).sort(), expected);
+  const expected = [...Object.values(index.operators).map((entry) => entry.file), "index.json"].sort(compareCodeUnits);
+  assert.deepEqual((await readdir(biographiesDirectory)).sort(compareCodeUnits), expected);
 });
 
 test("biography files match the index and are valid records of the pinned handbook", async () => {

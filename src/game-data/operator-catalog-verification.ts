@@ -7,6 +7,7 @@ import { catalogOperator, legacyRegionalMetadataSource, type CatalogOperator, ty
 import { operatorImportSlug } from "./operator-import";
 import { getOperatorPublicSlugs } from "./operator-slugs";
 import type { OperatorRecord } from "./operators";
+import { compareCodeUnits } from "./string-order";
 
 type Region = "en" | "cn";
 
@@ -110,7 +111,7 @@ type ExpectedOperator = Readonly<{
 }>;
 
 function result(code: string, checked: number, failedIds: readonly string[], detail?: CheckResult["detail"]): CheckResult {
-  return { code, status: failedIds.length === 0 ? "ok" : "fail", checked, failed: failedIds.length, ...(detail ? { detail } : {}), ...(failedIds.length ? { failedIds: [...failedIds].sort() } : {}) };
+  return { code, status: failedIds.length === 0 ? "ok" : "fail", checked, failed: failedIds.length, ...(detail ? { detail } : {}), ...(failedIds.length ? { failedIds: [...failedIds].sort(compareCodeUnits) } : {}) };
 }
 
 function releaseMetadataSource(status: string, source: string): string {
@@ -284,7 +285,7 @@ function checkPrivileges(privileges: Readonly<Record<string, boolean>>): CheckRe
 
 function checkSchema(schema: SchemaColumns): CheckResult {
   const tables = Object.keys(schema.expected);
-  const failed = tables.filter((table) => !isDeepStrictEqual([...(schema.actual[table] ?? [])].sort(), [...schema.expected[table]].sort()));
+  const failed = tables.filter((table) => !isDeepStrictEqual([...(schema.actual[table] ?? [])].sort(compareCodeUnits), [...schema.expected[table]].sort(compareCodeUnits)));
   return result("schema-columns", tables.length, failed, { tables: tables.length });
 }
 
@@ -411,7 +412,7 @@ function columnCounts(differences: readonly RowDifference[]): Record<string, num
 export function compareBundle(bundle: Pick<OperatorBundle, "sources" | "operators" | "biographies">, operators: readonly DbOperatorRow[], biographies: readonly DbBiographyRow[]): CheckResult {
   const differences = rowDifferences(bundle.operators.map((record) => bundleOperatorRow(record, bundle)), bundle.biographies.map(bundleBiographyRow), operators, biographies);
   const failed = new Set(differences.map((difference) => difference.id));
-  return { code: "bundle", status: failed.size === 0 ? "ok" : "fail", checked: bundle.operators.length + bundle.biographies.length, failed: failed.size, detail: { operators: bundle.operators.length, biographies: bundle.biographies.length, ...columnCounts(differences) }, ...(failed.size ? { failedIds: [...failed].sort() } : {}) };
+  return { code: "bundle", status: failed.size === 0 ? "ok" : "fail", checked: bundle.operators.length + bundle.biographies.length, failed: failed.size, detail: { operators: bundle.operators.length, biographies: bundle.biographies.length, ...columnCounts(differences) }, ...(failed.size ? { failedIds: [...failed].sort(compareCodeUnits) } : {}) };
 }
 
 /**
@@ -450,7 +451,7 @@ export function compareFiles(files: Readonly<{ operators: readonly CatalogOperat
     checked: files.operators.length + files.biographies.length,
     failed: undeclared.length,
     detail: { operators: files.operators.length, biographies: files.biographies.length, ...columnCounts(differences) },
-    declared: expected.map((item, position) => ({ column: item.column, operators: typeof item.operators === "string" ? item.operators : Object.keys(item.operators).sort().join(", "), differences: declared[position]!, reason: item.reason })),
+    declared: expected.map((item, position) => ({ column: item.column, operators: typeof item.operators === "string" ? item.operators : Object.keys(item.operators).sort(compareCodeUnits).join(", "), differences: declared[position]!, reason: item.reason })),
     undeclared: undeclared.slice(0, undeclaredLimit),
   };
 }

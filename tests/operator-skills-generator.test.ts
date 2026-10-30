@@ -8,6 +8,7 @@ import type { GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { skillsDatasetContractVersion, skillsDatasetLimits } from "../src/game-data/operator-dataset";
 import { buildSkillsDataset, glossaryFileName, main, readSkillsDataset, skillsDatasetFiles, type SkillsGeneratorOptions } from "../scripts/generate-operator-skills";
 import { arg, tableFlag } from "../scripts/operator-dataset-io";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const tables = ["character_table", "skill_table", "range_table", "gamedata_const", "building_data"] as const;
 const level = (description: string) => ({ name: "Skill", rangeId: "r-1", description, skillType: "MANUAL", durationType: "NONE", duration: 5, spData: { spType: 8, spCost: 20, initSp: 5 }, blackboard: [{ key: "atk_scale", value: 2, valueStr: null }] });
@@ -53,7 +54,7 @@ async function workspace() {
   return { directory, output, argv: [...argv, "--out-dir", output], options, cleanup: () => rm(directory, { recursive: true, force: true }) };
 }
 const quiet = () => [mock.method(console, "log", () => undefined), mock.method(console, "warn", () => undefined)];
-const snapshot = async (directory: string) => Object.fromEntries(await Promise.all((await readdir(directory)).sort().map(async (name) => [name, await readFile(join(directory, name), "utf8")])));
+const snapshot = async (directory: string) => Object.fromEntries(await Promise.all((await readdir(directory)).sort(compareCodeUnits).map(async (name) => [name, await readFile(join(directory, name), "utf8")])));
 
 test("skills dataset keeps catalog operators only and builds a glossary per region", () => {
   const dataset = buildSkillsDataset(fixtures, catalog, hashes);
@@ -83,7 +84,7 @@ test("skills generator writes the files, the index and the glossaries, and reads
   const work = await workspace(); const [log] = quiet();
   try {
     await main(work.argv, work.options);
-    assert.deepEqual((await readdir(work.output)).sort(), ["char_a.json", "char_b.json", "char_cn.json", "glossary-cn.json", "glossary-en.json", "index.json"]);
+    assert.deepEqual((await readdir(work.output)).sort(compareCodeUnits), ["char_a.json", "char_b.json", "char_cn.json", "glossary-cn.json", "glossary-en.json", "index.json"]);
     assert.match(String(log.mock.calls[0].arguments[0]), /Generated 3 skills files and 2 glossaries/);
     const read = await readSkillsDataset(work.output);
     assert.equal(read.profiles.length, 3);

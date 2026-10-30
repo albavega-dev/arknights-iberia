@@ -4,13 +4,14 @@ import path from "node:path";
 import test from "node:test";
 import { getConfirmedModuleRanges, getOperatorTacticalEntry } from "../src/game-data/operator-tactical";
 import type { OperatorModulesProfile } from "../src/game-data/operator-modules";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 type Grid = { row: number; col: number };
 type ModuleRangeEntry = { operatorId: string; uniEquipId: string; moduleType: string; mechanism: string; baseRangeId: string; modifiedRangeId: string; rangeKey: string; grids: Grid[]; iconUrl: string };
 
 const manifest = JSON.parse(await readFile(path.resolve("data/operator-tactical-manifest.json"), "utf8")) as { moduleRanges: ModuleRangeEntry[] };
 const profile = async (operatorId: string) => JSON.parse(await readFile(path.resolve("data/operator-modules", `${operatorId}.json`), "utf8")) as OperatorModulesProfile;
-const sorted = (grids: readonly Grid[]) => grids.map((grid) => `${grid.row},${grid.col}`).sort();
+const sorted = (grids: readonly Grid[]) => grids.map((grid) => `${grid.row},${grid.col}`).sort(compareCodeUnits);
 const moved = ["char_2015_dusk", "char_109_fmout", "char_1011_lava2", "char_373_lionhd", "char_213_mostma", "char_128_plosis", "char_179_cgbird", "char_275_breeze", "char_4164_tecno"];
 
 test("every module range of the tactical manifest matches the range, type and icon of its module in the modules dataset", async () => {

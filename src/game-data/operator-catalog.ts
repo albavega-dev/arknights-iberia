@@ -2,6 +2,7 @@ import type { GameDataRegion } from "./gamedata-revisions";
 import { validOperator, type BundleIssue } from "./operator-bundle";
 import type { DatasetSource } from "./operator-dataset";
 import type { OperatorRecord } from "./operators";
+import { compareCodeUnits } from "./string-order";
 
 // Operator catalog: one file with every operator, ordered by id, and the provenance of each record.
 export const catalogContractVersion = "1";
@@ -49,7 +50,7 @@ export type OperatorCatalog = Readonly<{
   operators: readonly CatalogOperator[];
 }>;
 
-const catalogKeys = ["id", "name", "cnName", "globalName", "class", "subClassId", "rarity", "slug", "cnOnly", "availabilityStatus", "cnReleaseDate", "cnReleaseDateStatus", "cnReleaseDateSource", "globalReleaseDate", "mainPowerNationId", "mainPowerGroupId", "mainPowerTeamId", "mainFactionId", "sourceLocale", "sourceRepository", "sourceRevision", "sourceDataVersion", "cnSourceRevision", "regionalMetadataSource"].sort();
+const catalogKeys = ["id", "name", "cnName", "globalName", "class", "subClassId", "rarity", "slug", "cnOnly", "availabilityStatus", "cnReleaseDate", "cnReleaseDateStatus", "cnReleaseDateSource", "globalReleaseDate", "mainPowerNationId", "mainPowerGroupId", "mainPowerTeamId", "mainFactionId", "sourceLocale", "sourceRepository", "sourceRevision", "sourceDataVersion", "cnSourceRevision", "regionalMetadataSource"].sort(compareCodeUnits);
 const sha256Pattern = /^[0-9a-f]{64}$/iu;
 
 export function isReleaseDateProvenance(value: unknown): value is ReleaseDateProvenance {
@@ -139,7 +140,7 @@ export function validateOperatorCatalog(value: unknown): string[] {
     if (!validOperator(entry as unknown, `operators[${position}]`, issues)) { errors.push(...issues.map((item) => `${item.path}: ${item.message}`)); return; }
     errors.push(...issues.map((item) => `${item.path}: ${item.message}`));
     const id = String(entry.id);
-    if (JSON.stringify(Object.keys(entry).sort()) !== JSON.stringify(catalogKeys)) errors.push(`Unexpected fields for ${id}`);
+    if (JSON.stringify(Object.keys(entry).sort(compareCodeUnits)) !== JSON.stringify(catalogKeys)) errors.push(`Unexpected fields for ${id}`);
     if (position > 0 && catalog.operators![position - 1]!.id.localeCompare(id, "en") >= 0) errors.push(`Operators are not sorted by id at ${id}`);
     if (slugs.has(entry.slug)) errors.push(`Duplicate slug for ${id}`);
     slugs.add(entry.slug);

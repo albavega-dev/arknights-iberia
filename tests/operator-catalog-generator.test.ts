@@ -7,6 +7,7 @@ import test, { mock } from "node:test";
 import { buildCatalogRecords, type CatalogTableHashes, type RegionalManifest, type ReleaseManifest } from "../scripts/generate-operator-bundle";
 import { biographiesDirectory, buildCatalogDataset, catalogDirectory, main, readCatalogDataset } from "../scripts/generate-operator-catalog";
 import { validateOperatorCatalog, type OperatorCatalog } from "../src/game-data/operator-catalog";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const character = (name: string) => ({ name, profession: "WARRIOR", rarity: "TIER_6", isNotObtainable: false, phases: [{}], subProfessionId: "swordmaster" });
 const tables = {
@@ -92,7 +93,7 @@ test("writes the catalog and one biography file per operator, and reads them bac
   try {
     await main(argv, options);
     assert.deepEqual(await readdir(catalogDirectory(output)), ["index.json"]);
-    assert.deepEqual((await readdir(biographiesDirectory(output))).sort(), ["char_a.json", "char_b.json", "char_cn.json", "char_cn2.json", "index.json"]);
+    assert.deepEqual((await readdir(biographiesDirectory(output))).sort(compareCodeUnits), ["char_a.json", "char_b.json", "char_cn.json", "char_cn2.json", "index.json"]);
     const read = await readCatalogDataset(output);
     assert.equal(read.catalog.operators.length, 4);
     assert.equal(read.biographies.records.length, 4);

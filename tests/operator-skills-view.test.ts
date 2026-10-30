@@ -6,6 +6,7 @@ import type { DatasetIndex } from "../src/game-data/operator-dataset";
 import { getBaseSkillIconPath, getMasteryIconPath, getRoomIconPath, getSkillIconPath, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
 import { buildOperatorSkillsView, loadOperatorSkillsView, skillDurationKind, type OperatorSkillsView, type SkillsDatasetReaders, type StoredSkillsGlossary, type StoredSkillsProfile } from "../src/game-data/operator-skills-view";
 import type { SkillDescriptionNode } from "../src/game-data/skill-description";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 // The real dataset, read the way operator-skills-data.ts does but without the server-only import.
 const readJson = async <T>(file: string): Promise<T> => JSON.parse(await readFile(new URL(`../data/${file}`, import.meta.url), "utf8")) as T;
@@ -62,7 +63,7 @@ test("Amiya (EN) has H1-H3 with ten levels each, parsed descriptions, icons, ran
   for (const skill of view.skills) for (const term of Object.values(skill.terms)) assert.ok(term.name && term.description.length > 0);
   // Ranges: only the ones the skills use, exactly as in range_table.
   const used = new Set(view.skills.flatMap((skill) => skill.levels.flatMap((level) => level.rangeId ? [level.rangeId] : [])));
-  assert.deepEqual(Object.keys(view.ranges).sort(), [...used].sort());
+  assert.deepEqual(Object.keys(view.ranges).sort(compareCodeUnits), [...used].sort(compareCodeUnits));
   assert.ok(used.has("3-4"));
   assert.ok(view.ranges["3-4"].grids.length > 0);
   assert.equal(typeof view.ranges["3-4"].direction, "number");

@@ -9,6 +9,7 @@ import { modulesDatasetContractVersion, modulesDatasetLimits } from "../src/game
 import { buildOperatorModules, buildOperatorTrait, isOriginalModule, operatorModuleSources, type SourceModuleTables } from "../src/game-data/operator-modules";
 import { buildModulesDataset, checkModuleIcons, glossaryFileName, main, modulesDatasetFiles, readModulesDataset, type ModulesGeneratorOptions } from "../scripts/generate-operator-modules";
 import { tableFlag } from "../scripts/operator-dataset-io";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const tables = ["character_table", "uniequip_table", "battle_equip_table", "range_table", "gamedata_const", "favor_table"] as const;
 const favorTable = { maxFavor: 25570, favorFrames: [[0, 0], [8, 1], [2732, 50], [10070, 100]].map(([favorPoint, percent]) => ({ level: favorPoint, data: { favorPoint, percent, battlePhase: 0 } })) };
@@ -79,7 +80,7 @@ async function workspace() {
   return { directory, icons, output, argv: [...argv, "--out-dir", output], options, cleanup: () => rm(directory, { recursive: true, force: true }) };
 }
 const quiet = () => [mock.method(console, "log", () => undefined), mock.method(console, "warn", () => undefined)];
-const snapshot = async (directory: string) => Object.fromEntries(await Promise.all((await readdir(directory)).sort().map(async (name) => [name, await readFile(join(directory, name), "utf8")])));
+const snapshot = async (directory: string) => Object.fromEntries(await Promise.all((await readdir(directory)).sort(compareCodeUnits).map(async (name) => [name, await readFile(join(directory, name), "utf8")])));
 
 test("a Global operator keeps its modules and adds the CN-only ones; ORIGINAL modules are left out", () => {
   assert.deepEqual(operatorModuleSources("char_a", "en", sourceTables).map((source) => [source.id, source.region]), [["uniequip_001_a", "en"], ["uniequip_002_a", "en"], ["uniequip_003_a", "cn"]]);
@@ -144,7 +145,7 @@ test("modules generator writes, reads back, checks icons and is deterministic", 
   const work = await workspace(); const [log] = quiet();
   try {
     await main(work.argv, work.options);
-    assert.deepEqual((await readdir(work.output)).sort(), ["char_a.json", "char_b.json", "char_cn.json", "glossary-cn.json", "glossary-en.json", "index.json"]);
+    assert.deepEqual((await readdir(work.output)).sort(compareCodeUnits), ["char_a.json", "char_b.json", "char_cn.json", "glossary-cn.json", "glossary-en.json", "index.json"]);
     assert.match(String(log.mock.calls[0].arguments[0]), /Generated 3 modules files with 3 modules and 2 glossaries/);
     const read = await readModulesDataset(work.output);
     assert.deepEqual(read.index.limits, modulesDatasetLimits, "the modules index declares its own limits");

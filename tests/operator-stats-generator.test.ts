@@ -7,6 +7,7 @@ import test, { mock } from "node:test";
 import { gameDataRepository, gameDataRevisions, type GameDataRegion, type GameDataTable } from "../src/game-data/gamedata-revisions";
 import type { DatasetIndex } from "../src/game-data/operator-dataset";
 import { arg, compareStatsManifests, main, readCatalog, readStatsDataset, tableFlag, type StatsDataset, type StatsGeneratorOptions } from "../scripts/generate-operator-stats";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const buff = { attributes: { attributeModifiers: [{ attributeType: "COST", formulaItem: "ADDITION", value: -1 }] } };
 const traitStages = { candidates: [{ unlockCondition: { phase: "PHASE_0", level: 1 }, requiredPotentialRank: 0, blackboard: [{ key: "value", value: 1 }], overrideDescripton: null }, { unlockCondition: { phase: "PHASE_2", level: 1 }, requiredPotentialRank: 0, blackboard: [{ key: "value", value: 2 }], overrideDescripton: null }] };
@@ -41,7 +42,7 @@ async function workspace(release: unknown = { operators: [{ id: "char_a" }, { id
   return { directory, output, argv: [...argv, "--out-dir", output], options, cleanup: () => rm(directory, { recursive: true, force: true }) };
 }
 const quiet = () => [mock.method(console, "log", () => undefined), mock.method(console, "warn", () => undefined)];
-const snapshot = async (directory: string) => Object.fromEntries(await Promise.all((await readdir(directory)).sort().map(async (name) => [name, await readFile(join(directory, name), "utf8")])));
+const snapshot = async (directory: string) => Object.fromEntries(await Promise.all((await readdir(directory)).sort(compareCodeUnits).map(async (name) => [name, await readFile(join(directory, name), "utf8")])));
 
 test("stats generator parses table flags and rejects missing arguments", async () => {
   assert.equal(tableFlag("en", "battle_equip_table"), "--en-battle-equip");

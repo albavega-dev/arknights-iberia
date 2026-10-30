@@ -8,6 +8,7 @@ import { gameDataRevisions } from "../src/game-data/gamedata-revisions";
 import { traitDescriptions, type TraitStage } from "../src/game-data/operator-modules";
 import { termIdsOf } from "../src/game-data/operator-skills";
 import { parseSkillDescription, type SkillDescriptionNode } from "../src/game-data/skill-description";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const directory = path.resolve("data/operator-stats");
 const expectedOperators = 432;
@@ -27,8 +28,8 @@ test("stats dataset index is valid and lists every operator with its region", as
 
 test("stats dataset directory has exactly the indexed files and the index", async () => {
   const { index } = await readIndex();
-  const expected = [...Object.values(index.operators).map((entry) => entry.file), "index.json"].sort();
-  const actual = (await readdir(directory)).sort();
+  const expected = [...Object.values(index.operators).map((entry) => entry.file), "index.json"].sort(compareCodeUnits);
+  const actual = (await readdir(directory)).sort(compareCodeUnits);
   assert.deepEqual(actual, expected);
 });
 
