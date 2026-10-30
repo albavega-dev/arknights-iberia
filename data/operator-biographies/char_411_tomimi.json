@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_411_tomimi",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Tomimi",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Sargon",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Feb 2",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Archosauria",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "142cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Tomimi\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Sargon\n[Date of Birth] Feb 2\n[Race] Archosauria\n[Height] 142cm\n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Tomimi, an Archosauria from the Acahualla region of Sargon, is a friend and supporter to Gavial. She tried all sorts of radical ways to prevent Gavial from returning to Rhodes Island, but upon her failure, instead accompanied Gavial back to Rhodes Island.\nShe assumes the responsibilities of a Caster but often forgets that she is a Caster. Nevertheless, given her excellent performance on the battlefield, there are no plans to have her switch operator roles."
+  }
+}

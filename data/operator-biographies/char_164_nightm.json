@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_164_nightm",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Nightmare",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "6 Months",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jun. 1",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Feline",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "156cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Visible internal blotches, infection confirmed.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Nightmare \n[Gender] Female \n[Combat Experience] 6 Months \n[Place of Birth] Victoria \n[Date of Birth] Jun. 1 \n[Race] Feline \n[Height] 156cm \n[Infection Status] \nVisible internal blotches, infection confirmed.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Gloria Rebel Pasbelletti is a Victorian operating under the code name Nightmare. Before her induction into Rhodes Island, she was a college student with two specialties: advanced medical Arts and intervention counseling. Skilled in both medical and combat Arts, she currently works in Rhodes Island's triage section. \nNote: She is a good candidate for Special Management. The paperwork has been signed by Lena and is effective immediately."
+  }
+}

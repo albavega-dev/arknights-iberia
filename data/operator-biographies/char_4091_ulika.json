@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4091_ulika",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "U-Official",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Years of Service",
+      "label": "Years of Service",
+      "value": "Less than a year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jan 4",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Zalak",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "159cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] U-Official\n[Gender] Female\n[Years of Service] Less than a year\n[Place of Birth] Undisclosed\n[Date of Birth] Jan 4\n[Race] Zalak\n[Height] 159cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "U-Official, commonly known as Streamer U, used to be an online streamer in a certain nomadic city. After being recommended by Operator Click, she signed a cooperation agreement with Rhodes Island. In addition to providing broadcasting services for our operators, she is responsible for hosting events and other work. She also serves as a consultant and provides support when Rhodes Island interfaces with media organizations.\nOther than Click, who once lent her a helping hand, Streamer U has also had encounters with a few other Rhodes Island operators, though not always under pleasant circumstances and while going by a different name. Ultimately, we suspended any further background checks at her insistence.\n\nEureka?\n––Tequila, upon passing by coincidentally\n\nYou've got the wrong person, you big fat liar!\n––Streamer U, babbling incoherently"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_128_plosis",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Ptilopsis",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "October 6",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Liberi",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "164cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Traces of Originium Crystals have been detected in her body, confirming she is infected.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Ptilopsis\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Columbia\n[Date of Birth] October 6\n[Race] Liberi\n[Height] 164cm\n[Infection Status]\nTraces of Originium Crystals have been detected in her body, confirming she is infected.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "...\nI have chosen an accurate answer for you from 20,593 search results.\nOperator Ptilopsis. Formerly a data maintenance specialist at the Rhine Lab company. Has made considerable accomplishments in the area of Originium Healing Arts. Experienced in medical data processing, routine medical program applications, multi-project medical operations, and other related fields.\nNow a member of the medical staff at Rhodes Island. She is also a member Dr. Silence's clinical team and assists with treatment programs at Rhodes Island.\n..."
+  }
+}

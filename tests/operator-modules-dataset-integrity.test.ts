@@ -4,11 +4,13 @@ import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
 import { checkDatasetLimits, modulesDatasetContractVersion, modulesDatasetLimits, validateDatasetIndex, type DatasetIndex } from "../src/game-data/operator-dataset";
+import { imageRevision } from "../src/game-data/asset-revisions";
 import { gameDataFavorTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
 import { moduleDescriptions, type OperatorModulesProfile } from "../src/game-data/operator-modules";
 import type { ModuleArtManifest } from "../src/game-data/operator-module-art";
 import { termIdsOf, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { parseSkillDescription, type SkillBlackboardEntry, type SkillDescriptionNode } from "../src/game-data/skill-description";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const directory = path.resolve("data/operator-modules");
 const skillsDirectory = path.resolve("data/operator-skills");
@@ -46,8 +48,8 @@ test("modules dataset index is valid, pinned and lists the same operators and re
 
 test("modules dataset directory has exactly the indexed files, whose bytes, hash, id and region match", async () => {
   const { index } = await readIndex(directory);
-  const expected = [...Object.values(index.operators).map((entry) => entry.file), ...Object.values(index.shared ?? {}).map((entry) => entry.file), "index.json"].sort();
-  assert.deepEqual((await readdir(directory)).sort(), expected);
+  const expected = [...Object.values(index.operators).map((entry) => entry.file), ...Object.values(index.shared ?? {}).map((entry) => entry.file), "index.json"].sort(compareCodeUnits);
+  assert.deepEqual((await readdir(directory)).sort(compareCodeUnits), expected);
   assert.deepEqual(Object.keys(index.shared ?? {}), ["glossary-cn", "glossary-en"]);
   for (const [operatorId, entry] of Object.entries(index.operators)) {
     const content = await readFile(path.join(directory, entry.file));
@@ -83,7 +85,7 @@ test("only Pepe, Raidian and Mcnist show effects limited to a game mode, tagged 
   const { index } = await readIndex(directory);
   const found: string[] = [];
   for (const profile of await readProfiles(index)) for (const item of profile.modules) for (const level of item.levels) for (const mode of level.modes ?? []) found.push(`${item.id} ${level.level} ${mode.gameTag ?? "-"} ${mode.mapTag ?? "-"}`);
-  assert.deepEqual(found.sort(), [
+  assert.deepEqual(found.sort(compareCodeUnits), [
     "uniequip_002_mcnist 1 - rogue_6", "uniequip_002_mcnist 2 - rogue_6", "uniequip_002_mcnist 3 - rogue_6",
     "uniequip_003_pepe 2 sandbox -", "uniequip_003_pepe 3 sandbox -",
     "uniequip_003_radian 1 - rogue_yan", "uniequip_003_radian 2 - rogue_yan", "uniequip_003_radian 2 roguelike rogue_yan", "uniequip_003_radian 3 - rogue_yan", "uniequip_003_radian 3 roguelike rogue_yan",
@@ -123,12 +125,12 @@ test("modules are E2 modules with three ordered levels, readable texts, known ra
 
 test("every module has its illustration, and the art and level icons match the manifest", async () => {
   const manifest = JSON.parse(await readFile(path.resolve("data/operator-module-art-manifest.json"), "utf8")) as ModuleArtManifest;
-  assert.equal(manifest.source.revision, "1a41341cc634461a5abe3456722801a39b9a9d32");
+  assert.equal(manifest.source.revision, imageRevision);
   const { index } = await readIndex(directory);
-  const ids = (await readProfiles(index)).flatMap((profile) => profile.modules.map((module) => module.id)).sort();
-  assert.deepEqual(Object.keys(manifest.art).sort(), ids.map((id) => `${id}.webp`), "one illustration per module, no extra files");
+  const ids = (await readProfiles(index)).flatMap((profile) => profile.modules.map((module) => module.id)).sort(compareCodeUnits);
+  assert.deepEqual(Object.keys(manifest.art).sort(compareCodeUnits), ids.map((id) => `${id}.webp`), "one illustration per module, no extra files");
   const artDirectory = path.resolve("public/assets/operator-modules-art");
-  assert.deepEqual((await readdir(artDirectory)).sort(), Object.keys(manifest.art).sort());
+  assert.deepEqual((await readdir(artDirectory)).sort(compareCodeUnits), Object.keys(manifest.art).sort(compareCodeUnits));
   for (const [file, entry] of Object.entries(manifest.art)) {
     const content = await readFile(path.join(artDirectory, file));
     assert.equal(content.subarray(8, 12).toString("ascii"), "WEBP", file);

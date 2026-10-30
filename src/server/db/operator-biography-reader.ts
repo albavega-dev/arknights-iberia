@@ -1,4 +1,6 @@
-import { fixedBiographyRevisions, type BiographyRegion, type HandbookSource, type OperatorBiography } from "../../game-data/operator-biography";
+import { fixedBiographyRevisions, type BiographyReadResult, type BiographyRegion, type HandbookSource, type OperatorBiography } from "../../game-data/operator-biography";
+
+export type { BiographyReadResult };
 
 export type BiographyReadQueryResult = {
   readonly rows: readonly Record<string, unknown>[];
@@ -7,10 +9,6 @@ export type BiographyReadQueryResult = {
 export type BiographyReadClient = {
   readonly query: (text: string, values: readonly unknown[]) => Promise<BiographyReadQueryResult>;
 };
-
-export type BiographyReadResult =
-  | { readonly status: "found"; readonly biography: OperatorBiography }
-  | { readonly status: "not-found"; readonly operatorId: string; readonly region: BiographyRegion; readonly revision: string };
 
 export function mapDrizzleBiographyRow(row: Record<string, unknown>): Record<string, unknown> {
   return {

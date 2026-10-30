@@ -6,9 +6,11 @@ import test from "node:test";
 import { assetPath } from "../src/game-data/asset-paths";
 import { baseSkillIconLocalName, getBaseSkillIconPath, getMasteryIconPath, getRoomIconPath, getSkillIconPath, resolveSkillIconSource, roomIconLocalName, roomIconSources, skillIconLocalName, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
 import type { OperatorSkillsProfile } from "../src/game-data/operator-skills";
+import { imageRevision } from "../src/game-data/asset-revisions";
 import { buildSkillIconsManifest, pngInfo, resolveCatalogBaseIcons, resolveCatalogIcons, type BaseIconFiles } from "../scripts/sync-operator-skill-icons";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
-const revision = "1a41341cc634461a5abe3456722801a39b9a9d32";
+const revision = imageRevision;
 const png = (width: number, height: number) => {
   const data = Buffer.alloc(32);
   Buffer.from("89504e470d0a1a0a", "hex").copy(data);
@@ -96,8 +98,8 @@ test("the sync lists missing skills per region and builds a manifest with proven
 test("the committed manifest matches the files and covers every skill of the dataset", async () => {
   const manifest = JSON.parse(await readFile("data/operator-skill-icons-manifest.json", "utf8")) as SkillIconsManifest;
   assert.equal(manifest.source.revision, revision);
-  const files = (await readdir("public/assets/operator-skills")).sort();
-  assert.deepEqual(files, Object.keys(manifest.icons).sort());
+  const files = (await readdir("public/assets/operator-skills")).sort(compareCodeUnits);
+  assert.deepEqual(files, Object.keys(manifest.icons).sort(compareCodeUnits));
   for (const [file, entry] of Object.entries(manifest.icons)) {
     const data = await readFile(path.join("public/assets/operator-skills", file));
     assert.equal(createHash("sha256").update(data).digest("hex").toUpperCase(), entry.sha256, file);
@@ -105,7 +107,7 @@ test("the committed manifest matches the files and covers every skill of the dat
     assert.deepEqual([data.readUInt32BE(16), data.readUInt32BE(20)], [entry.width, entry.height], file);
     assert.ok(entry.url.startsWith(`https://raw.githubusercontent.com/${manifest.source.repository}/${revision}/skills/`), file);
   }
-  assert.deepEqual((await readdir("public/assets/operator-skill-mastery")).sort(), Object.keys(manifest.mastery).sort());
+  assert.deepEqual((await readdir("public/assets/operator-skill-mastery")).sort(compareCodeUnits), Object.keys(manifest.mastery).sort(compareCodeUnits));
   for (const [file, entry] of Object.entries(manifest.mastery)) {
     const data = await readFile(path.join("public/assets/operator-skill-mastery", file));
     assert.equal(createHash("sha256").update(data).digest("hex").toUpperCase(), entry.sha256, file);
@@ -113,7 +115,7 @@ test("the committed manifest matches the files and covers every skill of the dat
     assert.equal(entry.url, `https://raw.githubusercontent.com/${manifest.source.repository}/${revision}/ui/rank/${file}`);
   }
   const listed = new Set(Object.values(manifest.skills).flatMap((map) => Object.values(map)));
-  assert.deepEqual([...listed].sort(), files);
+  assert.deepEqual([...listed].sort(compareCodeUnits), files);
   const profiles = await Promise.all((await readdir("data/operator-skills")).filter((name) => name.startsWith("char_")).map(async (name) => JSON.parse(await readFile(path.join("data/operator-skills", name), "utf8")) as OperatorSkillsProfile));
   for (const profile of profiles) for (const skill of profile.skills) {
     const region = profile.region as "en" | "cn";
@@ -121,7 +123,7 @@ test("the committed manifest matches the files and covers every skill of the dat
   }
   const sections = [["operator-base-skills", manifest.baseSkills, "ui/infrastructure/skill/"], ["operator-base-rooms", manifest.rooms, "ui/infrastructure/"]] as const;
   for (const [directory, entries, prefix] of sections) {
-    assert.deepEqual((await readdir(path.join("public/assets", directory))).sort(), Object.keys(entries).sort(), directory);
+    assert.deepEqual((await readdir(path.join("public/assets", directory))).sort(compareCodeUnits), Object.keys(entries).sort(compareCodeUnits), directory);
     for (const [file, entry] of Object.entries(entries)) {
       const data = await readFile(path.join("public/assets", directory, file));
       assert.equal(createHash("sha256").update(data).digest("hex").toUpperCase(), entry.sha256, file);

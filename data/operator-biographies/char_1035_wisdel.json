@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_1035_wisdel",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Wiš'adel",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "12 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazdel",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Claims to have forgotten",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Sarkaz",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "165cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Wiš'adel\n[Gender] Female\n[Combat Experience] 12 Years\n[Place of Birth] Kazdel\n[Date of Birth] Claims to have forgotten\n[Race] Sarkaz\n[Height] 165cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Sarkaz mercenary leader W, now formally renamed Wiš'adel. During the war in Londinium, she worked closely with Rhodes Island's Londinium Special Ops Squad and interfered with the Military Commission's operations on multiple occasions.\n\n[Classified Log]\nWe have urgently updated the terms of our strategic partnership with Wiš'adel. You may want to consider going over each section again. No doubt you already understand that our cooperation with her will only grow closer in the future, and this most certainly concerns more than just her."
+  }
+}

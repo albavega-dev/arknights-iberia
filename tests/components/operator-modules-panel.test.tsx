@@ -262,15 +262,24 @@ describe("Modules in the operator detail", () => {
     expect(within(cards.at(-1)!).getByText("Añadido por el módulo INS-X")).toBeInTheDocument();
   });
 
+  it("Stats: no CN switch for an operator without CN modules", () => {
+    render(detail("char_003_kalts", modulesOf("char_003_kalts")));
+    expect(screen.queryByRole("button", { name: "Incluir módulos CN" })).not.toBeInTheDocument();
+    expect(screen.getByRole("region", { name: "Configuración de estadísticas" })).toBeInTheDocument();
+  });
+
   it("Shu: one CN switch shared by the Modules tab and Stats", () => {
     render(detail("char_2025_shu", modulesOf("char_2025_shu")));
-    const statsToggle = () => within(screen.getByRole("region", { name: "Configuración de estadísticas" })).getByRole("button", { name: "Incluir módulos CN" });
+    const statsToggle = () => screen.getByRole("button", { name: "Incluir módulos CN" });
     expect(screen.queryByRole("button", { name: /GUA-Y/ })).not.toBeInTheDocument();
     fireEvent.click(screen.getByRole("tab", { name: "Módulos" }));
     fireEvent.click(screen.getByRole("button", { name: "Incluir módulos CN" }));
     expect(cards()).toHaveLength(2);
     fireEvent.click(screen.getByRole("tab", { name: "Estadísticas" }));
     expect(statsToggle()).toHaveAttribute("aria-pressed", "true");
+    const selectors = screen.getByRole("region", { name: "Configuración de estadísticas" });
+    expect(selectors).not.toContainElement(statsToggle());
+    expect(statsToggle().nextElementSibling).toBe(selectors);
     fireEvent.click(screen.getByRole("button", { name: /GUA-Y/ }));
     fireEvent.click(screen.getByRole("button", { name: "Etapa de módulo 3" }));
     expect(screen.getByRole("region", { name: "Estadísticas calculadas" })).toBeInTheDocument();

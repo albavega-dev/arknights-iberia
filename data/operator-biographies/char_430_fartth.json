@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_430_fartth",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Fartooth",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "4 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazimierz",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Oct 10",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Liberi",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "155cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Fartooth\n[Gender] Female\n[Combat Experience] 4 Years\n[Place of Birth] Kazimierz\n[Date of Birth] Oct 10\n[Race] Liberi\n[Height] 155cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "'Fartooth' Knight Justyna, garnered initial fame at the Major, presently affiliated with the Infected knight-founded Pinus Sylvestris Knightclub. An Infected knight with some degree of fame in Kazimierz. Following a string of crises in the recent Major, Pinus Sylvestris and Rhodes Island emerged with a cooperative relationship, in which Fartooth Knight came to Rhodes Island as a collaborator, to receive Oripathy treatment, and provide Rhodes Island with combat support."
+  }
+}

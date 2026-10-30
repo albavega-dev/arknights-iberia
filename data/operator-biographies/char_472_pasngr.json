@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_472_pasngr",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Passenger",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "16 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Sep 1",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Liberi",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "187cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Passenger\n[Gender] Male\n[Combat Experience] 16 Years\n[Place of Birth] Columbia\n[Date of Birth] Sep 1\n[Race] Liberi\n[Height] 187cm\n[Infection Status]\nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Operator Passenger was born in Columbia. He graduated at age thirteen with exceptional marks, at which point he was recruited by Professor Thorne to work as a research assistant in his study of applied Originium engineering and began a course of study at the Blaine Formative Technologies Research Institute. A project took him to Sargon nearly twenty years ago, at which point he disappeared. Eventually, he came into contact with Rhodes Island, operating around the black market in the Ibut region. He arrived as an Infected seeking treatment, and has since been brought into active service as an operator for the Engineering Department."
+  }
+}

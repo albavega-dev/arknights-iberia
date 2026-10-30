@@ -8,6 +8,7 @@ import { buildOperatorModulesView, highlightChangedNumbers, loadOperatorModulesV
 import type { TraitStage } from "../src/game-data/operator-modules";
 import type { StoredSkillsGlossary } from "../src/game-data/operator-skills-view";
 import type { SkillDescriptionNode } from "../src/game-data/skill-description";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 // The real dataset, read the way operator-modules-data.ts does but without the server-only import.
 const readJson = async <T>(file: string): Promise<T> => JSON.parse(await readFile(new URL(`../data/${file}`, import.meta.url), "utf8")) as T;
@@ -63,7 +64,7 @@ test("Passenger (EN): talent changes by potential and a Limited Modality module"
 test("Shu (EN) adds her CN-only module with its CN texts and CN glossary, and offers the CN switch", async () => {
   glossaryReads.length = 0;
   const view = await load("char_2025_shu");
-  assert.deepEqual(glossaryReads.sort(), ["cn", "en"]);
+  assert.deepEqual(glossaryReads.sort(compareCodeUnits), ["cn", "en"]);
   assert.equal(view.hasCnModules, true);
   assert.deepEqual(view.modules.map((module) => [module.type, module.region, module.name]), [["GUA-X", "en", "On Architecture of Time"], ["GUA-Y", "cn", "好时节"]]);
   assert.equal(view.modules[1].levels[1].talents[0].name, "天有四时");

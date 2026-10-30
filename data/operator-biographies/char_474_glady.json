@@ -1,0 +1,73 @@
+{
+  "operatorId": "char_474_glady",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Gladiia",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "17 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Ægir",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Nov 6",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "181cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "■■kg",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.\nWith her confirmation, all files pertaining to Gladiia have been moved to the high clearance database.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Gladiia\n[Gender] Female\n[Combat Experience] 17 Years\n[Place of Birth] Ægir\n[Date of Birth] Nov 6\n[Race] Undisclosed\n[Height] 181cm\n[Weight] ■■kg\n[Infection Status]\nMedical tests have confirmed that no infection is present.\n\nWith her confirmation, all files pertaining to Gladiia have been moved to the high clearance database.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Gladiia, an Ægir, Ægir technology consul, leader of Honor Exercitus, and the chief designer of warfare of the Ægir military organization 'Abyssal Hunters.' The time and venue of her landing is unclear. Gladiia demonstrates exemplary abilities in a wild array of scenarios including confrontations against large creatures, hard objective demolitions, assault, annihilation, mobile warfare, and espionage. She is currently assisting Rhodes Island with its work as a collaborator. While she continues to fulfill Ægir state functions, she now also serves as a representative for Rhodes Island's Ægir affairs."
+  }
+}

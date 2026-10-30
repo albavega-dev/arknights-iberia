@@ -16,6 +16,12 @@ const eslintConfig = defineConfig([
     "coverage/**",
   ]),
   {
+    // sort() without a comparator compares items as strings; require an explicit one.
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: { parserOptions: { projectService: true, tsconfigRootDir: import.meta.dirname } },
+    rules: { "@typescript-eslint/require-array-sort-compare": ["error", { ignoreStringArrays: false }] },
+  },
+  {
     // The next/image mocks render a plain img on purpose.
     files: ["tests/components/**/*.test.tsx"],
     rules: { "@next/next/no-img-element": "off" },

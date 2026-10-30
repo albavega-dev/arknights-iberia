@@ -1,0 +1,79 @@
+{
+  "operatorId": "char_4227_gallus",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "unrecognized:ID",
+      "label": "ID",
+      "value": "GALLUS²",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Model",
+      "label": "Model",
+      "value": "Self-identified Chicken",
+      "state": "value"
+    },
+    {
+      "key": "genderAssignment",
+      "label": "Gender Assignment",
+      "value": "Self-identified Female",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Time in Service",
+      "label": "Time in Service",
+      "value": "15 years",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Manufacturer",
+      "label": "Manufacturer",
+      "value": "Another Chicken",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Place of Production",
+      "label": "Place of Production",
+      "value": "A shrubland somewhere in eastern Terra",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Date of Release",
+      "label": "Date of Release",
+      "value": "May 4 (estimated by Kal'tsit based on bone samples)",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "120cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "Classified",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Inspection Report",
+      "label": "Inspection Report",
+      "value": "Outer casing largely intact. Structure unstable. Durability below standard.\nDue to strong resistance from the operator, inspection of the chassis could not be completed. Data currently unavailable.\nDue to the operator's aggressive behavior, inspection of the Arts core could not be completed, but it can be determined to be operating normally.\nDuring file compilation, this operator was highly uncooperative, resulting in multiple missing or questionable entries in the file, as well as in the inspection report. A detailed report has been submitted, and reinspection is pending.\n'Submitted'? Cluck? I haven't even gone to Kal'tsit to complain yet. Who are you to do that?\n—GALLUS²",
+      "state": "value"
+    }
+  ],
+  "originalText": "[ID] GALLUS²\n[Model] Self-identified Chicken\n[Gender Assignment] Self-identified Female\n[Time in Service] 15 years\n[Manufacturer] Another Chicken\n[Place of Production] A shrubland somewhere in eastern Terra\n[Date of Release] May 4 (estimated by Kal'tsit based on bone samples)\n[Height] 120cm\n[Weight] Classified\n[Inspection Report]\nOuter casing largely intact. Structure unstable. Durability below standard.\nDue to strong resistance from the operator, inspection of the chassis could not be completed. Data currently unavailable.\nDue to the operator's aggressive behavior, inspection of the Arts core could not be completed, but it can be determined to be operating normally.\nDuring file compilation, this operator was highly uncooperative, resulting in multiple missing or questionable entries in the file, as well as in the inspection report. A detailed report has been submitted, and reinspection is pending.\n\n'Submitted'? Cluck? I haven't even gone to Kal'tsit to complain yet. Who are you to do that?\n—GALLUS²",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "An anomalous entity that refers to itself as 'GALLUS².' Its main body is a small house made of metal and glass, supported by clawlike metal feet, with a small number of biological feathers attached to the back of the house and the rear of its feet.\nDiscovered at the core of the Sarcophagus in Zelgrad, it has been confirmed as a special life-form produced by the Sarcophagus. It carries intact memories from over ten thousand years ago, most of them related to Kal'tsit.\nAfter evacuating from Zelgrad, it followed Kal'tsit back to Rhodes Island, where it now assists as a historical consultant, biological consultant, and field operator."
+  }
+}

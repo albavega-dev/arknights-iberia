@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4183_mortis",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "name",
+      "label": "Name",
+      "value": "Mutsumi Wakaba",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jan 14",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "153cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Name] Mutsumi Wakaba\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Unknown\n[Date of Birth] Jan 14\n[Race] Unknown\n[Height] 153cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Mutsumi Wakaba, guitarist of Ave Mujica. Quiet and of few words, she helps out with simple tasks aboard Rhodes Island, and has her own little patch in the Convalescent Garden for growing produce."
+  }
+}

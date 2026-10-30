@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_009_12fce",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "12F",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "5 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Mar. 3",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Savra",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "181cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] 12F\n[Gender] Male \n[Combat Experience] 5 years \n[Place of Birth] Unknown \n[Date of Birth] Mar. 3 \n[Race] Savra \n[Height] 181cm \n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "12F was the alias commonly used by this Operator in his mercenary work. By his own account, he vacillated between different factions and was involved in several famous battles over the past few years. \nThe few verifiable documents we have confirmed that 12F was indeed present for these conflicts, either as a regular mercenary or security for a local facility. \nHe joined Rhodes Island with Owl, having been admitted for his unique combat experience as well as his experience in general. Now a standard Arts Operator assigned to normal duty."
+  }
+}

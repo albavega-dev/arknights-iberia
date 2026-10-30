@@ -9,15 +9,15 @@ export function buildNameProposals(enSource: unknown, cnSource: unknown, regiona
   const global = new Map(normalizeCharacterTable(enSource).operators.map((operator) => [operator.id, operator.name]));
   const cn = new Map(normalizeCharacterTable(cnSource).operators.map((operator) => [operator.id, operator.name]));
   const regionalIds = new Set(regionalManifest.operators.map((operator) => operator.id));
-  if (global.size !== 415 || cn.size !== 432 || regionalIds.size !== 17 || [...global.keys()].some((id) => !cn.has(id)) || [...regionalIds].some((id) => global.has(id))) throw new Error("Invalid regional name proposals");
+  if (cn.size !== global.size + regionalIds.size || [...global.keys()].some((id) => !cn.has(id)) || [...regionalIds].some((id) => global.has(id))) throw new Error("Invalid regional name proposals");
   return [...cn.keys()].sort(compareCodeUnits).map((id) => ({ id, cnName: cn.get(id) ?? null, globalName: global.get(id) ?? null }));
 }
 
 export function validateNameBackfill(current: readonly CurrentRow[], proposals: readonly Proposal[], regionalManifest?: RegionalManifest): void {
   const proposalIds = new Set(proposals.map((proposal) => proposal.id));
   const knownLegacy = new Map((regionalManifest?.operators ?? []).map((operator) => [operator.id, operator.nameEnglish]));
-  if (current.length !== 432 || new Set(current.map((row) => row.id)).size !== 432) throw new Error("Expected 432 unique operators");
-  if (proposals.length !== 432 || proposalIds.size !== 432) throw new Error("Expected 432 unique name proposals");
+  if (proposals.length === 0 || proposalIds.size !== proposals.length) throw new Error("Expected unique name proposals");
+  if (current.length !== proposals.length || new Set(current.map((row) => row.id)).size !== proposals.length) throw new Error(`Expected ${proposals.length} unique operators`);
   for (const row of current) {
     const proposal = proposals.find((candidate) => candidate.id === row.id);
     if (!proposal) throw new Error(`Missing proposal for ${row.id}`);

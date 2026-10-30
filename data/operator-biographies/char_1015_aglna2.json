@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_1015_aglna2",
+  "region": "cn",
+  "storyTitle": "基础档案",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+    "path": "cn/gamedata/excel/handbook_info_table.json",
+    "sha256": "b6e6fa4cafe118b8c0342e7643a6103775f72c173a43467aeea22dfbee01d108"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "代号",
+      "value": "安洁莉娜",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "性别",
+      "value": "女",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "战斗经验",
+      "value": "五年",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "出身地",
+      "value": "叙拉古",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "生日",
+      "value": "5月14日",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "种族",
+      "value": "沃尔珀",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "身高",
+      "value": "162cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "矿石病感染情况",
+      "value": "体表有源石结晶分布，参照医学检测报告，确认为感染者。",
+      "state": "value"
+    }
+  ],
+  "originalText": "【代号】安洁莉娜\n【性别】女\n【战斗经验】五年\n【出身地】叙拉古\n【生日】5月14日\n【种族】沃尔珀\n【身高】162cm\n【矿石病感染情况】\n体表有源石结晶分布，参照医学检测报告，确认为感染者。",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "客观履历",
+    "text": "安洁莉娜，服务于罗德岛的资深信使，足迹遍布迄今为止已知的大多数国家。同时，她也作为资深术师干员，利用其独特的源石技艺为罗德岛提供帮助。"
+  }
+}

@@ -4,9 +4,10 @@ import { mkdtemp, readdir, readFile, rm, stat, writeFile } from "node:fs/promise
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test, { mock } from "node:test";
-import type { GameDataRegion, GameDataTable } from "../src/game-data/gamedata-revisions";
+import { gameDataRepository, gameDataRevisions, type GameDataRegion, type GameDataTable } from "../src/game-data/gamedata-revisions";
 import type { DatasetIndex } from "../src/game-data/operator-dataset";
 import { arg, compareStatsManifests, main, readCatalog, readStatsDataset, tableFlag, type StatsDataset, type StatsGeneratorOptions } from "../scripts/generate-operator-stats";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const buff = { attributes: { attributeModifiers: [{ attributeType: "COST", formulaItem: "ADDITION", value: -1 }] } };
 const traitStages = { candidates: [{ unlockCondition: { phase: "PHASE_0", level: 1 }, requiredPotentialRank: 0, blackboard: [{ key: "value", value: 1 }], overrideDescripton: null }, { unlockCondition: { phase: "PHASE_2", level: 1 }, requiredPotentialRank: 0, blackboard: [{ key: "value", value: 2 }], overrideDescripton: null }] };
@@ -41,7 +42,7 @@ async function workspace(release: unknown = { operators: [{ id: "char_a" }, { id
   return { directory, output, argv: [...argv, "--out-dir", output], options, cleanup: () => rm(directory, { recursive: true, force: true }) };
 }
 const quiet = () => [mock.method(console, "log", () => undefined), mock.method(console, "warn", () => undefined)];
-const snapshot = async (directory: string) => Object.fromEntries(await Promise.all((await readdir(directory)).sort().map(async (name) => [name, await readFile(join(directory, name), "utf8")])));
+const snapshot = async (directory: string) => Object.fromEntries(await Promise.all((await readdir(directory)).sort(compareCodeUnits).map(async (name) => [name, await readFile(join(directory, name), "utf8")])));
 
 test("stats generator parses table flags and rejects missing arguments", async () => {
   assert.equal(tableFlag("en", "battle_equip_table"), "--en-battle-equip");
@@ -72,7 +73,7 @@ test("stats generator writes one indented file per catalog operator and a determ
     const index = JSON.parse(first["index.json"]) as DatasetIndex;
     assert.equal(index.dataset, "operator-stats");
     assert.deepEqual(Object.entries(index.operators).map(([id, entry]) => [id, entry.region, entry.file]), [["char_a", "en", "char_a.json"], ["char_b", "en", "char_b.json"], ["char_cn", "cn", "char_cn.json"]]);
-    assert.deepEqual(index.sources.cn, { repository: "ArknightsAssets/ArknightsGamedata", revision: "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842", path: "cn/gamedata/excel/character_table.json", sha256: options.expectedHashes?.cn.character_table });
+    assert.deepEqual(index.sources.cn, { repository: gameDataRepository, revision: gameDataRevisions.cn, path: "cn/gamedata/excel/character_table.json", sha256: options.expectedHashes?.cn.character_table });
     assert.equal(index.operators.char_a.sha256, sha(first["char_a.json"]));
     assert.equal(index.operators.char_a.bytes, Buffer.byteLength(first["char_a.json"]));
     const profile = JSON.parse(first["char_a.json"]);

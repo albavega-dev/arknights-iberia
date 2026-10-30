@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_1050_chen3",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Ch'en",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "10 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Lungmen",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul 7",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Lung",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "168cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Ch'en\n[Gender] Female\n[Combat Experience] 10 Years\n[Place of Birth] Lungmen\n[Date of Birth] Jul 7\n[Race] Lung\n[Height] 168cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Ch'en, former Lungmen superintendent and former head of the L.G.D.'s Special Inspection Unit, graduated from the Victorian Royal Guard Academy with superb marks and outstanding achievements. During her time with the Department, she cracked down on crime, fought violent offenders, tracked down armed fugitives, and brought down international criminals.\nHaving resigned from the L.G.D., she is now officially a member of Rhodes Island. In accordance with her wishes, she is mainly assigned to provide field operators adequate support and on-location guidance.\nShe continues to fight on the frontlines as a Rhodes Island Operator."
+  }
+}

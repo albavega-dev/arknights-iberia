@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { extractSubPowerCandidates, getSourceMetadata } from "../scripts/extract-subpower-candidates.mjs";
+import { gameDataRevisions } from "../src/game-data/gamedata-revisions.ts";
+import fs from "node:fs";
+import os from "node:os";
+import path from "node:path";
+import { extractSubPowerCandidates, getSourceMetadata, run } from "../scripts/extract-subpower-candidates.mjs";
 
 const source = { repository: "test", region: "en", revision: "test", path: "character_table.json" };
 const catalog = { factions: [{ id: "faction:iberia" }, { id: "faction:rim-billiton" }, { id: "faction:kazimierz" }, { id: "faction:leithanien" }, { id: "faction:rhodes-island" }], operators: [{ id: "char_jess" }, { id: "char_deg" }, { id: "char_mantra" }, { id: "char_missing" }] };
@@ -94,6 +98,32 @@ test("clasifica nationId desconocido como no resoluble", () => {
   assert.equal(result.rows[1].originalValue, "");
   assert.equal(result.rows[1].destination, null);
   assert.equal(result.rows[1].status, "unresolved");
+});
+
+test("la revisión EN fijada se verifica solo si se indica expresamente", () => {
+  const pinned = getSourceMetadata("C:/tmp/character_table.json", gameDataRevisions.en);
+  assert.equal(pinned.revision, gameDataRevisions.en);
+  assert.equal(pinned.revisionVerified, true);
+  assert.equal(getSourceMetadata("C:/tmp/character_table.json", "0".repeat(40)).revisionVerified, false);
+});
+
+test("run verifica la revisión recibida como texto desde la línea de órdenes", () => {
+  const directory = fs.mkdtempSync(path.join(os.tmpdir(), "subpower-"));
+  try {
+    const write = (name, value) => { const file = path.join(directory, name); fs.writeFileSync(file, JSON.stringify(value)); return file; };
+    const options = {
+      snapshot: write("character_table.json", { char_jess: { name: "Jessica", subPower: [{ nationId: "rim" }] } }),
+      catalog: write("factions.json", { factions: [{ id: "faction:rim-billiton" }], operators: [{ id: "char_jess" }] }),
+      affiliations: write("affiliations.json", { associations: [] }),
+    };
+    const pinned = run({ ...options, revision: gameDataRevisions.en }).rows[0].source;
+    assert.deepEqual([pinned.revision, pinned.revisionVerified, pinned.path], [gameDataRevisions.en, true, "en/gamedata/excel/character_table.json"]);
+    const other = run({ ...options, revision: gameDataRevisions.en.toUpperCase() }).rows[0].source;
+    assert.deepEqual([other.revision, other.revisionVerified, other.path], [null, false, options.snapshot]);
+    assert.equal(run({ ...options, revision: null }).rows[0].source.revisionVerified, false);
+  } finally {
+    fs.rmSync(directory, { recursive: true, force: true });
+  }
 });
 
 test("la procedencia alternativa no hereda la revisión EN", () => {

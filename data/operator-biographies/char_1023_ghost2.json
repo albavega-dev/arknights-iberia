@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_1023_ghost2",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Specter",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Seven years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Ægir",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "July 27",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Ægir",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "165cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "No Originium crystals are visible on the surface of body, but confirmed Infected by medical examination.\nOperator Specter's infection symptoms are rather unique, and are undergoing clinical research.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Specter\n[Gender] Female\n[Combat Experience] Seven years\n[Place of Birth] Ægir\n[Date of Birth] July 27\n[Race] Ægir\n[Height] 165cm\n[Infection Status]\nNo Originium crystals are visible on the surface of body, but confirmed Infected by medical examination.\nOperator Specter's infection symptoms are rather unique, and are undergoing clinical research.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Specter, real name Laurentina, is a member of the 'Abyssal Hunters,' an Ægir military squad. She has demonstrated extreme proficiency in operations such as taking down large-scale organisms and destroying hard targets. \nAfter the 'Stultifera Navis' incident, her mental state and mood began to stabilize, and her memories returned."
+  }
+}

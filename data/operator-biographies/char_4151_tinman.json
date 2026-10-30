@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4151_tinman",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Tin Man",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "184cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that (REDACTED)",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Tin Man\n[Gender] Male\n[Combat Experience] Undisclosed\n[Place of Birth] Undisclosed\n[Date of Birth] Undisclosed\n[Race] Undisclosed\n[Height] 184cm\n[Infection Status]\nMedical tests have confirmed that (REDACTED)",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Columbian detective and Maylander Foundation agent. Previously made contact with Rhodes Island at Trimounts.\nWhile Rhodes Island has entered into formal cooperation with the Maylander Foundation, please note that Tin Man does not serve as their liaison, except in emergencies when the usual liaison is unavailable."
+  }
+}

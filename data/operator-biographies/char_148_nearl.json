@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_148_nearl",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Nearl",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "5 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazimierz",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Apr. 23",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Kuranta",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "171cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Infection confirmed by medical report.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Nearl \n[Gender] Female \n[Combat Experience] 5 years \n[Place of Birth] Kazimierz \n[Date of Birth] Apr. 23 \n[Race] Kuranta \n[Height] 171cm \n[Infection Status] \nInfection confirmed by medical report.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Nearl, once known as the Radiant Knight of Kazimierz, is a member of the Infected support group, 'Followers.' She has demonstrated remarkable combat techniques and military discipline, whether it's covering allies, mobile warfare, all-out assault or field battle. \nCurrently a Defender Operator for Rhodes Island and provides command and combat support in person."
+  }
+}

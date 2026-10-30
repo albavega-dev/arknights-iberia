@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4046_ebnhlz",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Ebenholz",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Leithanien",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jun 5",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Caprinae",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "173cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Ebenholz\n[Gender] Male\n[Combat Experience] None\n[Place of Birth] Leithanien\n[Date of Birth] Jun 5\n[Race] Caprinae\n[Height] 173cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Ebenholz, a Leithanien commoner who became infected with Oripathy during the Vyseheim incident. Introduced to Rhodes Island for treatment by Operator Hibiscus, he demonstrates an extraordinary talent for Originium Arts. Following examinations, he joined Rhodes Island as a field operator."
+  }
+}

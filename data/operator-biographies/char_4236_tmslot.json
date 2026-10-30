@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4236_tmslot",
+  "region": "cn",
+  "storyTitle": "基础档案",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+    "path": "cn/gamedata/excel/handbook_info_table.json",
+    "sha256": "b6e6fa4cafe118b8c0342e7643a6103775f72c173a43467aeea22dfbee01d108"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "代号",
+      "value": "时隙",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "性别",
+      "value": "女",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "战斗经验",
+      "value": "没有战斗经验",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "出身地",
+      "value": "雷姆必拓",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "生日",
+      "value": "6月17日",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "种族",
+      "value": "阿纳缇",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "身高",
+      "value": "157cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "矿石病感染情况",
+      "value": "参照医学检测报告，确认为非感染者。",
+      "state": "value"
+    }
+  ],
+  "originalText": "【代号】时隙\n【性别】女\n【战斗经验】没有战斗经验\n【出身地】雷姆必拓\n【生日】6月17日\n【种族】阿纳缇\n【身高】157cm\n【矿石病感染情况】\n参照医学检测报告，确认为非感染者。",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "客观履历",
+    "text": "通讯技术工程师，其研究成果已应用于雷姆必拓远程通讯系统。现加入罗德岛工程部，为罗德岛基地远程通讯提供技术支持。"
+  }
+}

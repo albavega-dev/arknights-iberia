@@ -1,3 +1,4 @@
+import { imageRepository, imageRevision } from "./asset-revisions";
 import type { SkillIconView } from "./operator-skills-view";
 
 // Module illustrations from Arknight-Images (equip/icon), converted to WebP, and the module level icons (equip/stage), copied as is.
@@ -12,7 +13,7 @@ export type ModuleArtManifest = {
   stages: Record<string, { source: string; url: string } & FileInfo>;
 };
 
-export const moduleArtSource: ModuleArtManifest["source"] = { repository: "PuppiizSunniiz/Arknight-Images", revision: "1a41341cc634461a5abe3456722801a39b9a9d32", directory: "equip" };
+export const moduleArtSource: ModuleArtManifest["source"] = { repository: imageRepository, revision: imageRevision, directory: "equip" };
 /** Fixed so that a new sync reproduces the committed files byte for byte; the tool version is part of it. */
 export const moduleArtConversion: ModuleArtManifest["conversion"] = { format: "webp", maxSize: 480, quality: 75, alphaQuality: 50, effort: 6, tool: "sharp 0.35.5" };
 /** Level icons: source file under `equip/stage/` by local file name. */

@@ -120,7 +120,7 @@ export default function Home() {
               </a>
               <a href="https://x.com/ArknightsIberia" target="_blank" rel="noopener noreferrer">
                 <img className="landing-contact-logo" src="/assets/contact/x.svg" alt="" aria-hidden="true" />
-                <span>X / Twitter de la comunidad</span>
+                <span>Twitter de la comunidad</span>
               </a>
             </nav>
           </div>
@@ -129,6 +129,12 @@ export default function Home() {
         <section className="landing-section" aria-labelledby="news-title">
           <div className="landing-section-content">
             <h2 id="news-title">Novedades</h2>
+            <article className="landing-news-entry">
+              <h3>30 de octubre de 2026 - 0.2.1</h3>
+              <ul>
+                <li>La web sirve ahora todo su contenido desde datos versionados, sin depender de una base de datos externa.</li>
+              </ul>
+            </article>
             <article className="landing-news-entry">
               <h3>30 de octubre de 2026 - 0.2.0</h3>
               <ul>

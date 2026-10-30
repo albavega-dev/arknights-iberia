@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4231_clemnt",
+  "region": "cn",
+  "storyTitle": "基础档案",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+    "path": "cn/gamedata/excel/handbook_info_table.json",
+    "sha256": "b6e6fa4cafe118b8c0342e7643a6103775f72c173a43467aeea22dfbee01d108"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "代号",
+      "value": "克莱门莎",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "性别",
+      "value": "女",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "战斗经验",
+      "value": "十七年",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "出身地",
+      "value": "阿戈尔",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "生日",
+      "value": "9月17日",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "种族",
+      "value": "阿戈尔",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "身高",
+      "value": "168cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "矿石病感染情况",
+      "value": "参照医学检测报告，确认为非感染者。",
+      "state": "value"
+    }
+  ],
+  "originalText": "【代号】克莱门莎\n【性别】女\n【战斗经验】十七年\n【出身地】阿戈尔\n【生日】9月17日\n【种族】阿戈尔\n【身高】168cm\n【矿石病感染情况】\n参照医学检测报告，确认为非感染者。",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "客观履历",
+    "text": "克莱门莎，阿戈尔荣誉军团长、荣誉执政官、荣誉总战争设计师，负责阿戈尔已经或计划在陆上开展的一切项目。现以合作姿态协助罗德岛在伊比利亚及阿戈尔开展工作，并希望通过罗德岛与更多陆上政治实体建立合作关系。"
+  }
+}

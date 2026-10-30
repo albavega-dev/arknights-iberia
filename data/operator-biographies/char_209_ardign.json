@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_209_ardign",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Cardigan",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Half a year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Leithanien",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "August 2",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Perro",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "156cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals have not been found on the surface of the body, confirming there is no infection.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Cardigan\n[Gender] Female\n[Combat Experience] Half a year\n[Place of Birth] Leithanien\n[Date of Birth] August 2\n[Race] Perro\n[Height] 156cm\n[Infection Status] \nOriginium crystals have not been found on the surface of the body, confirming there is no infection.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Cardigan is a member of Reserve Op Team A4 and a citizen of Leithanien. Before taking up her current position, she was a member of the Bobsled Patrol Team. After an exceptional performance on her tests, she received permission to join Rhodes Island."
+  }
+}

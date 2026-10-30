@@ -1,10 +1,9 @@
 import { connection } from "next/server";
 
-import { listOperators } from "../../server/db/operator-repository";
+import { listOperatorRecords } from "../../game-data/operator-catalog-data";
 import { OperatorCatalog } from "./operator-catalog";
 
 export async function OperatorsData() {
   await connection();
-  const records = await listOperators();
-  return <OperatorCatalog records={records} />;
+  return <OperatorCatalog records={listOperatorRecords()} />;
 }

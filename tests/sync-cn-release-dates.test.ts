@@ -77,7 +77,7 @@ test("offline main reports the fixed manifests without connecting", async () => 
   const report = JSON.parse(output[0] ?? "{}") as { mode?: string; databaseWrites?: number; unknownIds?: string[] };
   assert.equal(report.mode, "offline-dry-run");
   assert.equal(report.databaseWrites, 0);
-  assert.deepEqual(report.unknownIds, ["char_4231_clemnt"]);
+  assert.deepEqual(report.unknownIds, []);
 });
 
 test("proposal excludes unknown dates without inventing them", () => {

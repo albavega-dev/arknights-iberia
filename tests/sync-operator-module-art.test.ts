@@ -4,7 +4,9 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import test from "node:test";
 import { moduleArtConversion, moduleArtSource, type ModuleArtManifest } from "../src/game-data/operator-module-art";
-import { buildModuleArtManifest, gitBlobSha, loadSharp, main, moduleArtInventory, rawUrl, type SyncDependencies } from "../scripts/sync-operator-module-art";
+import { buildModuleArtManifest, loadSharp, main, moduleArtInventory, rawUrl, type SyncDependencies } from "../scripts/sync-operator-module-art";
+import { compareCodeUnits } from "../src/game-data/string-order";
+import { gitBlobSha } from "../src/game-data/git-blob";
 
 const sharp = loadSharp();
 /** A square RGBA PNG made with the same sharp, standing in for a source file. */
@@ -52,7 +54,7 @@ test("the sync downloads only the inventory, converts with the fixed parameters 
   await writeFile(out("art/uniequip_002_removed.webp"), "old");
   await assert.rejects(main(argv, dependencies), /Output exists/);
   await main([...argv, "--force"], dependencies);
-  assert.deepEqual(requests.filter((url) => url.startsWith("https://raw.")).sort(), Object.keys(files).map((file) => rawUrl(`equip/${file}`)).sort(), "nothing outside the inventory is downloaded");
+  assert.deepEqual(requests.filter((url) => url.startsWith("https://raw.")).sort(compareCodeUnits), Object.keys(files).map((file) => rawUrl(`equip/${file}`)).sort(compareCodeUnits), "nothing outside the inventory is downloaded");
   const manifest = JSON.parse(await readFile(out("manifest.json"), "utf8")) as ModuleArtManifest;
   assert.deepEqual(manifest.conversion, moduleArtConversion);
   assert.deepEqual(Object.keys(manifest.art), ["uniequip_002_a.webp", "uniequip_003_a.webp"]);
@@ -60,7 +62,7 @@ test("the sync downloads only the inventory, converts with the fixed parameters 
   assert.equal(manifest.art["uniequip_003_a.webp"].converted.width, 400, "smaller files are not enlarged");
   assert.equal(manifest.art["uniequip_002_a.webp"].url, rawUrl("equip/icon/uniequip_002_a.png"));
   assert.deepEqual(Object.keys(manifest.stages), ["stage-1.png", "stage-2.png", "stage-3.png"]);
-  assert.deepEqual((await readdir(out("art"))).sort(), ["uniequip_002_a.webp", "uniequip_003_a.webp"], "files of modules no longer in the dataset are removed");
+  assert.deepEqual((await readdir(out("art"))).sort(compareCodeUnits), ["uniequip_002_a.webp", "uniequip_003_a.webp"], "files of modules no longer in the dataset are removed");
   assert.deepEqual(await readFile(out("stages/stage-2.png")), files["stage/img_stg2.png"], "level icons are copied as is");
   // A second run uses the cache and writes the same bytes.
   const before = await Promise.all(["manifest.json", "art/uniequip_002_a.webp"].map((file) => readFile(out(file))));

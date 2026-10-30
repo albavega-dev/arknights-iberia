@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_151_myrtle",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Myrtle",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "No combat experience",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "December 13",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Durin",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "131cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Myrtle\n[Gender] Female\n[Combat Experience] No combat experience\n[Place of Birth] Unknown\n[Date of Birth] December 13\n[Race] Durin\n[Height] 131cm\n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Myrtle is a Durin. She has insisted that her previous job title be recorded as: Generalissimo.\nHer appearance and temperament are somewhat childish, but on the battlefield, she displays considerable enthusiasm and knack for command. She is able to boost operator morale while at the same time, providing them treatment. She is totally reliable."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_278_orchid",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Orchid",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jan. 15",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Liberi",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "164cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Orchid \n[Gender] Female \n[Combat Experience] None \n[Place of Birth] Columbia \n[Date of Birth] Jan. 15 \n[Race] Liberi \n[Height] 164cm \n[Infection Status] \nOriginium crystals distributed across surface of body, confirmed Infected.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Former editor of a Columbian fashion magazine, Orchid began treatment at Rhodes Island following Oripathy. She expressed her desire to become an Operator, passed the examination battery and was assigned to Reserve Op Team A6 as the squad leader. She manages the team and provides support with her Arts in combat."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_336_folivo",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Scene",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Sargon",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Dec 31",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Pilosa",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "154cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Scene\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Sargon\n[Date of Birth] Dec 31\n[Race] Pilosa\n[Height] 154cm\n[Infection Status] \nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Scene, photographer, specializes in using her photography auxiliary equipment, a robotic buggy named 'Lens,' to survey the battlefield. She provides visual information and works to provide field investigation and battlefield reconnaissance services to Rhodes Island. However, Scene's athletic abilities are extremely limited, so the support of logistics operators are absolutely crucial."
+  }
+}

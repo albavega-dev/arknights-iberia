@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
+import { portraitRevision } from "../src/game-data/asset-revisions";
 import { gameDataBuildingTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes } from "../src/game-data/gamedata-revisions";
 
 describe("GameData pinned revisions", () => {
@@ -24,5 +26,12 @@ describe("GameData pinned revisions", () => {
       assert.notEqual(gameDataSkillTableHashes[region].skill_table, gameDataTableHashes[region].character_table);
     }
     assert.notEqual(gameDataSkillTableHashes.en.skill_table, gameDataSkillTableHashes.cn.skill_table);
+  });
+});
+
+describe("portrait manifest", () => {
+  it("records the pinned portrait commit", async () => {
+    const manifest = JSON.parse(await readFile("data/operator-portrait-manifest.json", "utf8")) as { source: { commit: string } };
+    assert.equal(manifest.source.commit, portraitRevision);
   });
 });

@@ -1,8 +1,8 @@
-import { createHash } from "node:crypto";
 import { createRequire } from "node:module";
 import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { readFileSync } from "node:fs";
 import { dirname, join, sep } from "node:path";
+import { gitBlobSha } from "../src/game-data/git-blob";
 import { serializeDatasetJson } from "../src/game-data/operator-dataset";
 import { moduleArtConversion, moduleArtSource, moduleStageSources, type ModuleArtManifest } from "../src/game-data/operator-module-art";
 import { arg, exists, readJson, sha256 } from "./operator-dataset-io";
@@ -32,10 +32,6 @@ export function loadSharp(): Sharp {
   const { version } = JSON.parse(readFileSync(join(entry.slice(0, entry.lastIndexOf(marker) + marker.length), "package.json"), "utf8")) as { version: string };
   if (`sharp ${version}` !== moduleArtConversion.tool) throw new Error(`Found sharp ${version}; the conversion is fixed to ${moduleArtConversion.tool}`);
   return fromNext("sharp") as Sharp;
-}
-
-export function gitBlobSha(data: Buffer): string {
-  return createHash("sha1").update(Buffer.concat([Buffer.from(`blob ${data.length}\0`), data])).digest("hex");
 }
 
 /** Module ids of the dataset, sorted: the only illustrations the sync downloads. */

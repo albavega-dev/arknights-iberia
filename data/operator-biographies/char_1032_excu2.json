@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_1032_excu2",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Executor",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "7 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Laterano",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "July 7",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Sankta",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "181cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Executor\n[Gender] Male\n[Combat Experience] 7 Years\n[Place of Birth] Laterano\n[Date of Birth] July 7\n[Race] Sankta\n[Height] 181cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Executor, professional statutory executor of the Laterano Notarial Hall, is entitled to the privileges listed in Clauses 1 through 13 of the Laterano Constitution and has been personally granted the title of 'Saint' by the current Lateran Pope Yvangelista XI.\nLaterano has not placed any restrictions on Rhodes Island's contact with this Saint, and the rapport between us and the Notarial Hall continues to grow. He continues to provide services to Rhodes Island in accordance with his contract, while performing tasks pertaining to the rights of Lateran citizens."
+  }
+}

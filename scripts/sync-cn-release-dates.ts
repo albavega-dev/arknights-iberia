@@ -42,8 +42,8 @@ export function buildPlan(release: Manifest, regional: Manifest): CnSyncPlan {
   }
   const knownDates = buildProposal(release, regional);
   const unknownIds = [...ids].filter((id) => !knownDates.has(id));
-  if (unknownIds.length !== 1 || unknownIds[0] !== "char_4231_clemnt")
-    throw new Error("CN manifest must contain only Clementia without a known date");
+  if (unknownIds.some((id) => id !== "char_4231_clemnt"))
+    throw new Error("CN manifest may only leave Clementia without a known date");
   return { expectedIds: [...ids].sort((a, b) => a.localeCompare(b, "en")), knownDates, unknownIds };
 }
 

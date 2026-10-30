@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_457_blitz",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Blitz",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Apr 2",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "175 cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Blitz\n[Gender] Male\n[Combat Experience] Unknown\n[Place of Birth] Unknown\n[Date of Birth] Apr 2\n[Race] Unknown\n[Height] 175 cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Blitz is a member of Team Rainbow. Humorous and good-natured, he specializes in indoor and urban thoroughfare combat settings.\nHis primary weapons are a handgun and a modified G52-Tactical Light Shield. The latter can be operated when in close quarters to blind all targets within a few meters, conferring a tactical advantage to his entire team."
+  }
+}

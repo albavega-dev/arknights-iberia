@@ -1,3 +1,5 @@
+import { gameDataRevisions } from "./gamedata-revisions";
+
 export type BiographyRegion = "en" | "cn";
 
 export type BiographyField = {
@@ -48,10 +50,15 @@ export type MissingBiographyRevision = {
   readonly revision: string;
 };
 
-export const fixedBiographyRevisions: BiographyRevisionConfig = {
-  en: "3aaa25b649fed5dedad9527602826dc487ea07d8",
-  cn: "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
-};
+export const fixedBiographyRevisions: BiographyRevisionConfig = gameDataRevisions;
+
+export type BiographyReadResult =
+  | { readonly status: "found"; readonly biography: OperatorBiography }
+  | { readonly status: "not-found"; readonly operatorId: string; readonly region: BiographyRegion; readonly revision: string };
+
+export function biographyReadResult(biography: OperatorBiography | null, operatorId: string, region: BiographyRegion): BiographyReadResult {
+  return biography ? { status: "found", biography } : { status: "not-found", operatorId, region, revision: fixedBiographyRevisions[region] };
+}
 
 type HandbookRecord = { storyTextAudio?: unknown };
 

@@ -1,0 +1,1266 @@
+{
+  "substitutes": {
+    "char_1023_ghost2": [
+      {
+        "ownerType": "substitute",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "effect",
+        "condition": "Mientras el sustituto está activo",
+        "evidence": "El sustituto usa x-4; el rango aparece en el trait y en el talento del sustituto.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1023_ghost2.traits.candidates[0].rangeId"
+        }
+      }
+    ],
+    "char_369_bena": [
+      {
+        "ownerType": "substitute",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "effect",
+        "condition": "Mientras el sustituto está activo",
+        "evidence": "El talento describe el daño del sustituto y expone x-4.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_369_bena.talents.candidates[0].rangeId"
+        }
+      }
+    ],
+    "char_4016_kazema": [
+      {
+        "ownerType": "substitute",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "effect",
+        "condition": "Mientras el sustituto está activo",
+        "evidence": "El módulo mantiene x-4 y describe el cambio a Substitute.",
+        "source": {
+          "region": "en",
+          "file": "battle_equip_table.json",
+          "path": "uniequip_002_kazema.phases[].parts[].overrideTraitDataBundle.candidates[].rangeId"
+        }
+      }
+    ],
+    "char_4107_vrdant": [
+      {
+        "ownerType": "substitute",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "effect",
+        "condition": "Mientras el sustituto está activo",
+        "evidence": "El módulo mantiene x-4 y describe el cambio a Substitute.",
+        "source": {
+          "region": "en",
+          "file": "battle_equip_table.json",
+          "path": "uniequip_002_vrdant.phases[].parts[].overrideTraitDataBundle.candidates[].rangeId"
+        }
+      }
+    ],
+    "char_4124_iana": [
+      {
+        "ownerType": "substitute",
+        "rangeId": "x-1",
+        "rangeKey": "en:x-1",
+        "rangePurpose": "effect",
+        "condition": "Durante los 20 s de sustitución",
+        "evidence": "El módulo describe el cambio a Substitute durante 20 s y expone x-1.",
+        "source": {
+          "region": "en",
+          "file": "battle_equip_table.json",
+          "path": "uniequip_002_iana.phases[].parts[].overrideTraitDataBundle.candidates[].rangeId"
+        }
+      }
+    ],
+    "char_4183_mortis": [
+      {
+        "ownerType": "substitute",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "effect",
+        "condition": "Mientras el sustituto está activo",
+        "evidence": "El talento del sustituto expone 1-1; no hay geometría distinta del operador.",
+        "source": {
+          "region": "en",
+          "file": "battle_equip_table.json",
+          "path": "uniequip_002_mortis.phases[].parts[].addOrOverrideTalentDataBundle.candidates[].rangeId"
+        }
+      }
+    ]
+  },
+  "entities": {
+    "char_113_cqbw": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10008_cqbw_box",
+        "ownerName": "Front Toward Enemy",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Front Toward Enemy está desplegado",
+        "evidence": "overrideTokenKey relaciona W con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_113_cqbw.skills[].overrideTokenKey; token_10008_cqbw_box.phases[].rangeId"
+        }
+      }
+    ],
+    "char_391_rosmon": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10012_rosmon_shield",
+        "ownerName": "Rosmontis's Tactical Equipment",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Rosmontis's Tactical Equipment está desplegado",
+        "evidence": "displayTokenDict y overrideTokenKey relacionan Rosmontis con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_391_rosmon.displayTokenDict.token_10012_rosmon_shield; skills[].overrideTokenKey; token_10012_rosmon_shield.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1035_wisdel": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10035_wisdel_wward",
+        "ownerName": "Revenant's Shadow",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Revenant's Shadow está desplegada",
+        "evidence": "displayTokenDict y overrideTokenKey relacionan Wiš'adel con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1035_wisdel.displayTokenDict.token_10035_wisdel_wward; skills[].overrideTokenKey; token_10035_wisdel_wward.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4117_ray": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10034_ray_sndbst",
+        "ownerName": "Sandbeast",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Sandbeast está desplegado",
+        "evidence": "displayTokenDict y overrideTokenKey relacionan Ray con la entidad y la entidad define x-4.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4117_ray.displayTokenDict.token_10034_ray_sndbst; skills[].overrideTokenKey; token_10034_ray_sndbst.phases[].rangeId"
+        }
+      }
+    ],
+    "char_427_vigil": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10028_vigil_wolf",
+        "ownerName": "Wolfpack",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Wolfpack está desplegado",
+        "evidence": "displayTokenDict relaciona Vigil con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_427_vigil.displayTokenDict.token_10028_vigil_wolf; token_10028_vigil_wolf.phases[].rangeId"
+        }
+      }
+    ],
+    "char_249_mlyss": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10030_mlyss_wtrman",
+        "ownerName": "Flowing Shape",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Flowing Shape está desplegada",
+        "evidence": "displayTokenDict relaciona Muelsyse con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_249_mlyss.displayTokenDict.token_10030_mlyss_wtrman; token_10030_mlyss_wtrman.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4228_closur": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10066_closur_ourbase",
+        "ownerName": "Command Center",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Command Center está desplegado",
+        "evidence": "displayTokenDict relaciona Closure con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4228_closur.displayTokenDict.token_10066_closur_ourbase; token_10066_closur_ourbase.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1046_sbell2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10058_sbell2_icetgt",
+        "ownerName": "Protection Objective (Frozen)",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Protection Objective (Frozen) está desplegado",
+        "evidence": "displayTokenDict y overrideTokenKey relacionan Pramanix the Prerita con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1046_sbell2.displayTokenDict.token_10058_sbell2_icetgt; skills[].overrideTokenKey; token_10058_sbell2_icetgt.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4046_ebnhlz": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10024_ebnhlz_rcube",
+        "ownerName": "Remnants of Days Past",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Remnants of Days Past está desplegado",
+        "evidence": "overrideTokenKey relaciona Ebenholz con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4046_ebnhlz.skills[].overrideTokenKey; token_10024_ebnhlz_rcube.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1012_skadi2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10017_skadi2_dedant",
+        "ownerName": "Skadi's Seaborn",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Skadi's Seaborn está desplegado",
+        "evidence": "displayTokenDict relaciona Skadi the Corrupting Heart con la entidad y la entidad define x-4.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1012_skadi2.displayTokenDict.token_10017_skadi2_dedant; token_10017_skadi2_dedant.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1031_slent2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10029_slent2_protrb",
+        "ownerName": "Night Banisher",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Night Banisher está desplegado",
+        "evidence": "displayTokenDict y overrideTokenKey relacionan Silence the Paradigmatic con la entidad y la entidad define x-4.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1031_slent2.displayTokenDict.token_10029_slent2_protrb; skills[].overrideTokenKey; token_10029_slent2_protrb.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1033_swire2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10031_swire2_gdtrap",
+        "ownerName": "Champagne Bomb",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Champagne Bomb está desplegada",
+        "evidence": "overrideTokenKey relaciona Swire the Elegant Wit con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1033_swire2.skills[].overrideTokenKey; token_10031_swire2_gdtrap.phases[].rangeId"
+        }
+      }
+    ],
+    "char_400_weedy": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10009_weedy_cannon",
+        "ownerName": "Industrial Water Cannon",
+        "rangeId": "3-2",
+        "rangeKey": "en:3-2",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Industrial Water Cannon está desplegado",
+        "evidence": "displayTokenDict relaciona Weedy con la entidad y la entidad define 3-2.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_400_weedy.displayTokenDict.token_10009_weedy_cannon; token_10009_weedy_cannon.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1041_angel2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10056_angel2_target",
+        "ownerName": "Delivery Coordinates",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Delivery Coordinates está desplegado",
+        "evidence": "displayTokenDict y overrideTokenKey relacionan Exusiai the New Covenant con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1041_angel2.displayTokenDict.token_10056_angel2_target; skills[].overrideTokenKey; token_10056_angel2_target.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4048_doroth": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10025_doroth_recttp",
+        "ownerName": "Resonator",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Resonator está desplegado",
+        "evidence": "displayTokenDict relaciona Dorothy con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4048_doroth.displayTokenDict.token_10025_doroth_recttp; token_10025_doroth_recttp.phases[].rangeId"
+        }
+      }
+    ],
+    "char_452_bstalk": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10014_bstalk_crab",
+        "ownerName": "Metal Crab Guard Team",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Metal Crab Guard Team está desplegado",
+        "evidence": "displayTokenDict relaciona Beanstalk con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_452_bstalk.displayTokenDict.token_10014_bstalk_crab; token_10014_bstalk_crab.phases[].rangeId"
+        }
+      }
+    ],
+    "char_110_deepcl": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10001_deepcl_tentac",
+        "ownerName": "Tentacle",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Tentacle está desplegado",
+        "evidence": "displayTokenDict relaciona Deepcolor con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_110_deepcl.displayTokenDict.token_10001_deepcl_tentac; token_10001_deepcl_tentac.phases[].rangeId"
+        }
+      }
+    ],
+    "char_484_robrta": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10018_robrta_mach",
+        "ownerName": "Full Auto Modeler",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Full Auto Modeler está desplegado",
+        "evidence": "displayTokenDict relaciona Roberta con la entidad y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_484_robrta.displayTokenDict.token_10018_robrta_mach; token_10018_robrta_mach.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4147_mitm": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10037_mitm_trshrb",
+        "ownerName": "Cherry-3",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Cherry-3 está desplegado",
+        "evidence": "displayTokenDict relaciona Mitm con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4147_mitm.displayTokenDict.token_10037_mitm_trshrb; token_10037_mitm_trshrb.phases[].rangeId"
+        }
+      }
+    ],
+    "char_344_beewax": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10011_beewax_oblisk",
+        "ownerName": "Sand Obelisk",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Sand Obelisk está desplegado",
+        "evidence": "displayTokenDict relaciona Beeswax con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_344_beewax.displayTokenDict.token_10011_beewax_oblisk; token_10011_beewax_oblisk.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4164_tecno": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10042_tecno_puppet",
+        "ownerName": "Puppet Dancer",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Puppet Dancer está desplegado",
+        "evidence": "displayTokenDict relaciona Tecno con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4164_tecno.displayTokenDict.token_10042_tecno_puppet; token_10042_tecno_puppet.phases[].rangeId"
+        }
+      }
+    ],
+    "char_242_otter": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10004_otter_motter",
+        "ownerName": "Robotter",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Robotter está desplegado",
+        "evidence": "displayTokenDict relaciona Mayer con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_242_otter.displayTokenDict.token_10004_otter_motter; token_10004_otter_motter.phases[].rangeId"
+        }
+      }
+    ],
+    "char_336_folivo": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10010_folivo_car",
+        "ownerName": "Mobile Buggy Cam",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Mobile Buggy Cam está desplegada",
+        "evidence": "displayTokenDict relaciona Scene con la entidad y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_336_folivo.displayTokenDict.token_10010_folivo_car; token_10010_folivo_car.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4140_lasher": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10036_lasher_mcbird",
+        "ownerName": "Clockwork Fowlbeast",
+        "rangeId": "3-6",
+        "rangeKey": "en:3-6",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Clockwork Fowlbeast está desplegada",
+        "evidence": "displayTokenDict relaciona Sand Reckoner con la entidad y la entidad define 3-6.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4140_lasher.displayTokenDict.token_10036_lasher_mcbird; token_10036_lasher_mcbird.phases[].rangeId"
+        }
+      }
+    ],
+    "char_108_silent": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10000_silent_healrb",
+        "ownerName": "Medic Drone",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Medic Drone está desplegado",
+        "evidence": "displayTokenDict relaciona Silence con la entidad y la entidad define x-4.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_108_silent.displayTokenDict.token_10000_silent_healrb; token_10000_silent_healrb.phases[].rangeId"
+        }
+      }
+    ],
+    "char_433_windft": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10023_windft_wrench",
+        "ownerName": "Reliable Battery",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Reliable Battery está desplegada",
+        "evidence": "displayTokenDict relaciona Windflit con la entidad y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_433_windft.displayTokenDict.token_10023_windft_wrench; token_10023_windft_wrench.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4162_cathy": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10041_cathy_catsld",
+        "ownerName": "Crawler Protection Unit",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Crawler Protection Unit está desplegada",
+        "evidence": "displayTokenDict relaciona Catherine con la entidad y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4162_cathy.displayTokenDict.token_10041_cathy_catsld; token_10041_cathy_catsld.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4178_alanna": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10045_alanna_crane",
+        "ownerName": "Nutty",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Nutty está desplegada",
+        "evidence": "displayTokenDict relaciona Alanna con la entidad y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4178_alanna.displayTokenDict.token_10045_alanna_crane; token_10045_alanna_crane.phases[].rangeId"
+        }
+      }
+    ],
+    "char_451_robin": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10013_robin_mine",
+        "ownerName": "'Clip'",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras 'Clip' está desplegada",
+        "evidence": "displayTokenDict relaciona Robin con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_451_robin.displayTokenDict.token_10013_robin_mine; token_10013_robin_mine.phases[].rangeId"
+        }
+      }
+    ],
+    "char_458_rfrost": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10016_rfrost_mine",
+        "ownerName": "Welcome Mat",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Welcome Mat está desplegada",
+        "evidence": "displayTokenDict relaciona Frost con la entidad y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_458_rfrost.displayTokenDict.token_10016_rfrost_mine; token_10016_rfrost_mine.phases[].rangeId"
+        }
+      }
+    ],
+    "char_476_blkngt": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10021_blkngt_hypnos",
+        "ownerName": "Slumberfoot",
+        "rangeId": "x-5",
+        "rangeKey": "en:x-5",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Slumberfoot está desplegado",
+        "evidence": "displayTokenDict relaciona Blacknight con Slumberfoot y la entidad define x-5.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_476_blkngt.displayTokenDict.token_10021_blkngt_hypnos; token_10021_blkngt_hypnos.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4055_bgsnow": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10026_bgsnow_subbow",
+        "ownerName": "'Typewriter'",
+        "rangeId": "3-2",
+        "rangeKey": "en:3-2",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras 'Typewriter' está desplegada",
+        "evidence": "displayTokenDict relaciona Pozëmka con 'Typewriter' y la entidad define 3-2.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4055_bgsnow.displayTokenDict.token_10026_bgsnow_subbow; token_10026_bgsnow_subbow.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4072_ironmn": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10027_ironmn_pile1",
+        "ownerName": "Stainless™ Multifunctional Platform",
+        "skillId": "skchr_ironmn_1",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S1 y mientras la plataforma está desplegada",
+        "evidence": "S1 usa overrideTokenKey para la plataforma y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4072_ironmn.skills[0].overrideTokenKey; token_10027_ironmn_pile1.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10027_ironmn_pile2",
+        "ownerName": "Stainless™ Multifunctional Platform",
+        "skillId": "skchr_ironmn_2",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S2 y mientras la plataforma está desplegada",
+        "evidence": "S2 usa overrideTokenKey para la plataforma y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4072_ironmn.skills[1].overrideTokenKey; token_10027_ironmn_pile2.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10027_ironmn_pile3",
+        "ownerName": "Prototype of Feist's Metal Crab",
+        "skillId": "skchr_ironmn_3",
+        "rangeId": "3-13",
+        "rangeKey": "en:3-13",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S3 y mientras el prototipo está desplegado",
+        "evidence": "S3 usa overrideTokenKey para el prototipo y la entidad define 3-13.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4072_ironmn.skills[2].overrideTokenKey; token_10027_ironmn_pile3.phases[].rangeId"
+        }
+      }
+    ],
+    "char_003_kalts": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10002_kalts_mon3tr",
+        "ownerName": "Mon3tr",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Cuando Mon3tr está desplegado",
+        "evidence": "El talento permite usar y curar Mon3tr y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "token_10002_kalts_mon3tr.phases[].rangeId"
+        }
+      }
+    ],
+    "char_2015_dusk": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10015_dusk_drgn",
+        "ownerName": "Freeling",
+        "rangeId": "x-5",
+        "rangeKey": "en:x-5",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras Freeling está desplegado",
+        "evidence": "El talento y S3 de Dusk asocian la invocación a Freeling; la entidad define x-5.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "token_10015_dusk_drgn.phases[].rangeId"
+        }
+      }
+    ],
+    "char_250_phatom": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10007_phatom_twin",
+        "ownerName": "Phantom in the Mirror",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Mientras el clon está desplegado",
+        "evidence": "El talento confirma un clon con las mismas habilidades y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "token_10007_phatom_twin.phases[].rangeId"
+        }
+      }
+    ],
+    "char_2023_ling": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10020_ling_soul1",
+        "ownerName": "Tranquility",
+        "skillId": "skchr_ling_1",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S1 y mientras la entidad está desplegada",
+        "evidence": "S1 referencia la entidad mediante overrideTokenKey y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "token_10020_ling_soul1.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10020_ling_soul2",
+        "ownerName": "Peripateticism",
+        "skillId": "skchr_ling_2",
+        "rangeId": "3-1",
+        "rangeKey": "en:3-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S2 y mientras la entidad está desplegada",
+        "evidence": "S2 referencia la entidad mediante overrideTokenKey y la entidad define 3-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "token_10020_ling_soul2.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10020_ling_soul3",
+        "ownerName": "Thunderer",
+        "skillId": "skchr_ling_3",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S3 y mientras la entidad está desplegada",
+        "evidence": "S3 referencia la entidad mediante overrideTokenKey y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "token_10020_ling_soul3.phases[].rangeId"
+        }
+      }
+    ],
+    "char_248_mgllan": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10005_mgllan_drone1",
+        "ownerName": "Soaring Dragon F",
+        "skillId": "skchr_mgllan_1",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S1 y mientras el dron está desplegado",
+        "evidence": "S1 referencia el dron mediante overrideTokenKey y la entidad define x-4.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "token_10005_mgllan_drone1.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10005_mgllan_drone2",
+        "ownerName": "Soaring Dragon L",
+        "skillId": "skchr_mgllan_2",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S2 y mientras el dron está desplegado",
+        "evidence": "S2 referencia el dron mediante overrideTokenKey y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "token_10005_mgllan_drone2.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10005_mgllan_drone3",
+        "ownerName": "Soaring Dragon A",
+        "skillId": "skchr_mgllan_3",
+        "rangeId": "3-6",
+        "rangeKey": "en:3-6",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S3 y mientras el dron está desplegado",
+        "evidence": "S3 referencia el dron mediante overrideTokenKey y la entidad define 3-6.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "token_10005_mgllan_drone3.phases[].rangeId"
+        }
+      }
+    ],
+    "char_254_vodfox": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10006_vodfox_doll",
+        "ownerName": "Cursed Doll",
+        "skillId": "skchr_vodfox_2",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "effect",
+        "condition": "Mientras Cursed Doll esté desplegada",
+        "evidence": "overrideTokenKey relaciona S2 con Cursed Doll y la entidad define x-4.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_254_vodfox.skills[].overrideTokenKey; token_10006_vodfox_doll.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4171_wulfen": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10044_wulfen_mine",
+        "ownerName": "Ore 'Killer'",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Mientras Ore 'Killer' esté desplegada",
+        "evidence": "El talento declara tokenKey para Ore 'Killer' y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4171_wulfen.talents[].tokenKey; token_10044_wulfen_mine.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1045_svash2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10057_svash2_eagle1",
+        "ownerName": "Eye of the Blizzard",
+        "skillId": "skchr_svash2_1",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S1 y mientras Eye of the Blizzard esté desplegado",
+        "evidence": "S1 referencia Eye of the Blizzard mediante overrideTokenKey y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1045_svash2.skills[].overrideTokenKey; token_10057_svash2_eagle1.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10057_svash2_eagle2",
+        "ownerName": "Eye of the Blizzard",
+        "skillId": "skchr_svash2_2",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S2 y mientras Eye of the Blizzard esté desplegado",
+        "evidence": "S2 referencia Eye of the Blizzard mediante overrideTokenKey y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1045_svash2.skills[].overrideTokenKey; token_10057_svash2_eagle2.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10057_svash2_eagle3",
+        "ownerName": "Eye of the Blizzard",
+        "skillId": "skchr_svash2_3",
+        "rangeId": "3-1",
+        "rangeKey": "en:3-1",
+        "rangePurpose": "basic-attack",
+        "condition": "Durante S3 y mientras Eye of the Blizzard esté desplegado",
+        "evidence": "S3 referencia Eye of the Blizzard mediante overrideTokenKey y la entidad define 3-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1045_svash2.skills[].overrideTokenKey; token_10057_svash2_eagle3.phases[].rangeId"
+        }
+      }
+    ],
+    "char_450_necras": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10043_necras_skeltn",
+        "ownerName": "Servant of Lamentation",
+        "rangeId": "x-5",
+        "rangeKey": "en:x-5",
+        "rangePurpose": "effect",
+        "condition": "Mientras Servant of Lamentation esté desplegado",
+        "evidence": "displayTokenDict relaciona Necrass con Servant of Lamentation y la entidad define x-5.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_450_necras.displayTokenDict.token_10043_necras_skeltn; token_10043_necras_skeltn.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4195_radian": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10051_radian_tower1",
+        "ownerName": "Dive",
+        "skillId": "skchr_radian_1",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Durante S1 y mientras Dive esté desplegada",
+        "evidence": "S1 referencia Dive mediante overrideTokenKey y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4195_radian.skills[].overrideTokenKey; token_10051_radian_tower1.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10052_radian_tower2",
+        "ownerName": "Cycle",
+        "skillId": "skchr_radian_2",
+        "rangeId": "3-2",
+        "rangeKey": "en:3-2",
+        "rangePurpose": "effect",
+        "condition": "Durante S2 y mientras Cycle esté desplegada",
+        "evidence": "S2 referencia Cycle mediante overrideTokenKey y la entidad define 3-2.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4195_radian.skills[].overrideTokenKey; token_10052_radian_tower2.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10053_radian_tower3",
+        "ownerName": "Center",
+        "skillId": "skchr_radian_3",
+        "rangeId": "3-1",
+        "rangeKey": "en:3-1",
+        "rangePurpose": "effect",
+        "condition": "Durante S3 y mientras Center esté desplegada",
+        "evidence": "S3 referencia Center mediante overrideTokenKey y la entidad define 3-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4195_radian.skills[].overrideTokenKey; token_10053_radian_tower3.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4212_nasti": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10059_nasti_nstdef",
+        "ownerName": "'Quality Inspector'",
+        "skillId": "skchr_nasti_1",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "effect",
+        "condition": "Durante S1 y mientras 'Quality Inspector' esté desplegado",
+        "evidence": "S1 referencia la entidad mediante overrideTokenKey y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4212_nasti.skills[].overrideTokenKey; token_10059_nasti_nstdef.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10060_nasti_nstchr",
+        "ownerName": "'Overseer'",
+        "skillId": "skchr_nasti_2",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "effect",
+        "condition": "Durante S2 y mientras 'Overseer' esté desplegado",
+        "evidence": "S2 referencia la entidad mediante overrideTokenKey y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4212_nasti.skills[].overrideTokenKey; token_10060_nasti_nstchr.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10061_nasti_nstbld",
+        "ownerName": "'Emergency Load-Bearing Squad'",
+        "skillId": "skchr_nasti_3",
+        "rangeId": "1-1",
+        "rangeKey": "en:1-1",
+        "rangePurpose": "effect",
+        "condition": "Durante S3 y mientras 'Emergency Load-Bearing Squad' esté desplegado",
+        "evidence": "S3 referencia la entidad mediante overrideTokenKey y la entidad define 1-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4212_nasti.skills[].overrideTokenKey; token_10061_nasti_nstbld.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1042_phatm2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10054_phatm2_encdool",
+        "ownerName": "Blood's Whisper",
+        "skillId": "skchr_phatm2_2",
+        "rangeId": "x-1",
+        "rangeKey": "en:x-1",
+        "rangePurpose": "effect",
+        "condition": "Durante S2 y mientras Blood's Whisper esté desplegada",
+        "evidence": "S2 referencia Blood's Whisper mediante overrideTokenKey y la entidad define x-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1042_phatm2.skills[].overrideTokenKey; token_10054_phatm2_encdool.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10055_phatm2_mndclv",
+        "ownerName": "Cage of Chaos",
+        "skillId": "skchr_phatm2_3",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Durante S3 y mientras Cage of Chaos esté desplegada",
+        "evidence": "S3 referencia Cage of Chaos mediante overrideTokenKey y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1042_phatm2.skills[].overrideTokenKey; token_10055_phatm2_mndclv.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4123_ela": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10033_ela_grzmot",
+        "ownerName": "Grzmot Mine",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Mientras Grzmot Mine esté desplegada",
+        "evidence": "displayTokenDict relaciona Ela con Grzmot Mine y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4123_ela.displayTokenDict.token_10033_ela_grzmot; token_10033_ela_grzmot.phases[].rangeId"
+        }
+      }
+    ],
+    "char_2027_wang": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10064_wang_stone1",
+        "ownerName": "Stone",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Mientras Stone esté desplegada",
+        "evidence": "Las tres habilidades declaran tokenKey para Stone y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_2027_wang.skills[].tokenKey; token_10064_wang_stone1.phases[].rangeId"
+        }
+      }
+    ],
+    "char_179_cgbird": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10003_cgbird_bird",
+        "ownerName": "Mirage",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Mientras Mirage esté desplegada",
+        "evidence": "displayTokenDict relaciona Nightingale con Mirage y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_179_cgbird.displayTokenDict.token_10003_cgbird_bird; token_10003_cgbird_bird.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4179_monstr": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10050_monstr_prosts",
+        "ownerName": "Reconstruction",
+        "rangeId": "x-4",
+        "rangeKey": "en:x-4",
+        "rangePurpose": "effect",
+        "condition": "Mientras Reconstruction esté desplegada",
+        "evidence": "displayTokenDict relaciona Mon3tr con Reconstruction y la entidad define x-4.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4179_monstr.displayTokenDict.token_10050_monstr_prosts; token_10050_monstr_prosts.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1034_jesca2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10032_jesca2_jckshd",
+        "ownerName": "Mobile Riot Shield",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Mientras Mobile Riot Shield esté desplegado",
+        "evidence": "displayTokenDict relaciona Jessica the Liberated con Mobile Riot Shield y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1034_jesca2.displayTokenDict.token_10032_jesca2_jckshd; token_10032_jesca2_jckshd.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1019_siege2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10040_siege2_vlion",
+        "ownerName": "Golden Vows",
+        "skillId": "skchr_siege2_3",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Durante S3 y mientras Golden Vows esté desplegado",
+        "evidence": "S3 referencia Golden Vows mediante overrideTokenKey y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1019_siege2.skills[].overrideTokenKey; token_10040_siege2_vlion.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1014_nearl2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10019_nearl2_sword",
+        "ownerName": "'Blazing Sun'",
+        "skillId": "skchr_nearl2_3",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Durante S3 y mientras 'Blazing Sun' esté desplegado",
+        "evidence": "S3 referencia 'Blazing Sun' mediante overrideTokenKey y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1014_nearl2.skills[].overrideTokenKey; token_10019_nearl2_sword.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4145_ulpia": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10039_ulpia_block",
+        "ownerName": "Undeviating Course",
+        "skillId": "skchr_ulpia_3",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Mientras Undeviating Course esté desplegado",
+        "evidence": "overrideTokenKey relaciona Ulpianus con Undeviating Course y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4145_ulpia.skills[].overrideTokenKey; token_10039_ulpia_block.phases[].rangeId"
+        }
+      }
+    ],
+    "char_4037_demetr": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10065_demetr_dmtpos",
+        "ownerName": "Bond",
+        "skillId": "skchr_demetr_3",
+        "rangeId": "0-1",
+        "rangeKey": "en:0-1",
+        "rangePurpose": "effect",
+        "condition": "Mientras Bond esté desplegado",
+        "evidence": "overrideTokenKey relaciona Bellone con Bond y la entidad define 0-1.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_4037_demetr.skills[].overrideTokenKey; token_10065_demetr_dmtpos.phases[].rangeId"
+        }
+      }
+    ],
+    "char_1052_kalts2": [
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10068_kalts2_mtship",
+        "ownerName": "Tactical Anchor Point - Rango A",
+        "rangeId": "y-2",
+        "rangeKey": "en:y-2",
+        "rangePurpose": "effect",
+        "condition": "Estado y-2 de Tactical Anchor Point durante S3",
+        "evidence": "displayTokenDict relaciona la entidad con Kal'tsit Esperanta y las fases iniciales exponen y-2.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1052_kalts2.displayTokenDict.token_10068_kalts2_mtship; token_10068_kalts2_mtship.phases[].rangeId"
+        }
+      },
+      {
+        "ownerType": "entity",
+        "ownerId": "token_10068_kalts2_mtship",
+        "ownerName": "Tactical Anchor Point - Rango B",
+        "rangeId": "y-6",
+        "rangeKey": "en:y-6",
+        "rangePurpose": "effect",
+        "condition": "Estado y-6 de Tactical Anchor Point durante S3",
+        "evidence": "El talento de S3 expone y-6 para el efecto sobre aliados; la entidad conserva el mismo token técnico.",
+        "source": {
+          "region": "en",
+          "file": "character_table.json",
+          "path": "char_1052_kalts2.talents[].candidates[].rangeId; token_10068_kalts2_mtship.phases[].rangeId"
+        }
+      }
+    ]
+  }
+}

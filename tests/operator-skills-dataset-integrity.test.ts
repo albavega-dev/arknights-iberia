@@ -8,6 +8,7 @@ import { gameDataBuildingTableHashes, gameDataRevisions, gameDataSkillTableHashe
 import { expandSkillLevel, termIdsOf, type OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { findSkillDataGap } from "../src/game-data/skill-data-gaps";
 import { parseSkillDescription, type SkillDescriptionNode } from "../src/game-data/skill-description";
+import { compareCodeUnits } from "../src/game-data/string-order";
 
 const directory = path.resolve("data/operator-skills");
 const statsDirectory = path.resolve("data/operator-stats");
@@ -33,8 +34,8 @@ test("skills dataset index is valid and lists the same operators and regions as 
 
 test("skills dataset directory has exactly the indexed files, the glossaries and the index", async () => {
   const { index } = await readIndex(directory);
-  const expected = [...Object.values(index.operators).map((entry) => entry.file), ...Object.values(index.shared ?? {}).map((entry) => entry.file), "index.json"].sort();
-  assert.deepEqual((await readdir(directory)).sort(), expected);
+  const expected = [...Object.values(index.operators).map((entry) => entry.file), ...Object.values(index.shared ?? {}).map((entry) => entry.file), "index.json"].sort(compareCodeUnits);
+  assert.deepEqual((await readdir(directory)).sort(compareCodeUnits), expected);
   assert.deepEqual(Object.keys(index.shared ?? {}), ["glossary-cn", "glossary-en"]);
 });
 
@@ -92,7 +93,7 @@ test("skills dataset pins the source revisions and tables and stays within its o
     assert.equal(index.sources[region].revision, gameDataRevisions[region]);
     assert.match(index.sources[region].revision, /^[0-9a-f]{40}$/);
     const expectedHashes = { character_table: gameDataTableHashes[region].character_table, ...gameDataSkillTableHashes[region], ...gameDataBuildingTableHashes[region] };
-    assert.deepEqual(Object.keys(index.tables?.[region] ?? {}).sort(), Object.keys(expectedHashes).sort());
+    assert.deepEqual(Object.keys(index.tables?.[region] ?? {}).sort(compareCodeUnits), Object.keys(expectedHashes).sort(compareCodeUnits));
     for (const [table, source] of Object.entries(index.tables?.[region] ?? {})) {
       assert.equal(source.revision, gameDataRevisions[region]);
       assert.equal(source.sha256, expectedHashes[table as keyof typeof expectedHashes], `${region} ${table} hash`);

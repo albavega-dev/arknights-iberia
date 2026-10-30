@@ -52,3 +52,11 @@ export const gameDataFavorTableHashes: Readonly<Record<GameDataRegion, Readonly<
   en: { favor_table: "A4A015E0166EFF88497E5D2C94E6EF5DEF2AC16D5F5B970054356AAC598A26EF" },
   cn: { favor_table: "A4A015E0166EFF88497E5D2C94E6EF5DEF2AC16D5F5B970054356AAC598A26EF" },
 };
+
+// Handbook (biography) text of every operator.
+export type GameDataHandbookTable = "handbook_info_table";
+
+export const gameDataHandbookTableHashes: Readonly<Record<GameDataRegion, Readonly<Record<GameDataHandbookTable, string>>>> = {
+  en: { handbook_info_table: "07077CD529965C57DA1F602028F1CEEC81B43814AF0D8F131DCBED92B04E0498" },
+  cn: { handbook_info_table: "B6E6FA4CAFE118B8C0342E7643A6103775F72C173A43467AEEA22DFBEE01D108" },
+};

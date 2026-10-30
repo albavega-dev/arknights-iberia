@@ -1,10 +1,11 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { persistBiographyEnvelope, type BiographyRepositoryTransaction, type BiographyStorageAdapter, type StoredBiography } from "../src/server/db/operator-biography-repository";
+import { gameDataRevisions } from "../src/game-data/gamedata-revisions";
 import { preflightBiographies, type BiographyPreflightInput } from "../src/game-data/operator-biography-import";
 import type { BiographyRegion, OperatorBiography } from "../src/game-data/operator-biography";
 
-const revisions = { en: "3aaa25b649fed5dedad9527602826dc487ea07d8", cn: "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842" } as const;
+const revisions = gameDataRevisions;
 const expectedEn = Array.from({ length: 415 }, (_, index) => `char_en_${index}`);
 const expectedCn = Array.from({ length: 17 }, (_, index) => `char_cn_${index}`);
 

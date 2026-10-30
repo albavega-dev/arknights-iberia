@@ -1,0 +1,73 @@
+{
+  "operatorId": "char_285_medic2",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "unrecognized:Model",
+      "label": "Model",
+      "value": "Lancet-2",
+      "state": "value"
+    },
+    {
+      "key": "genderAssignment",
+      "label": "Gender Assignment",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Time in Service",
+      "label": "Time in Service",
+      "value": "2 years",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Manufacturer",
+      "label": "Manufacturer",
+      "value": "Raythean",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Place of Production",
+      "label": "Place of Production",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Date of Release",
+      "label": "Date of Release",
+      "value": "May 12",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "149cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "Classified",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Inspection Report",
+      "label": "Inspection Report",
+      "value": "Slight wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Medical system operational. Medical supplies replenished. ECU in good condition.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Model] Lancet-2 \n[Gender Assignment] Female \n[Time in Service] 2 years \n[Manufacturer] Raythean \n[Place of Production] Columbia \n[Date of Release] May 12 \n[Height] 149cm \n[Weight] Classified \n[Inspection Report] \nSlight wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Medical system operational. Medical supplies replenished. ECU in good condition.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Lancet-2 is a custom Raythean-S62 Model six-wheeled operations platform. Its rounded design has led Lancet-2 to be perceived as cute, making her something of a mascot. Although she has a rather pessimistic dispensation, she is still well-liked. \nAfter being modified by Closure, Lancet-2 is able to perform more medical duties around Rhodes island, and her equipment is geared towards disinfecting and cleaning Originium contamination."
+  }
+}
