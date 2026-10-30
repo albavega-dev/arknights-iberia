@@ -50,7 +50,7 @@ for (const id of ids) {
 
 const manifest = {
   manifestVersion: "2026-10-15.1",
-  source: { repository: `https://github.com/${repository}`, branch: "main", directory: sourcePath, directoryTreeSha: directory.sha },
+  source: { repository: `https://github.com/${repository}`, branch: "main", commit: portraitRevision, directory: sourcePath, directoryTreeSha: directory.sha },
   input: { operatorCount: ids.length, regionalManifest: "data/operator-regional-manifest.json", releaseManifest: "data/operator-cn-release-manifest.json" },
   selection: "Only the base _1.png charpor variant is selected; missing paths remain fallback-only.",
   coverage: { verifiedPortraits: Object.keys(portraits).length, missingPortraits: ids.length - Object.keys(portraits).length },
