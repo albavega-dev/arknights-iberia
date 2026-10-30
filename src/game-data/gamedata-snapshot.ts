@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { gitBlobSha } from "./gamedata-diff";
+import { gitBlobSha } from "./git-blob";
 import { gameDataRepository, type GameDataRegion } from "./gamedata-revisions";
 
 export type SnapshotFile = Readonly<{ table: string; sourcePath: string; url: string; bytes: number; sha256: string; blobSha: string }>;

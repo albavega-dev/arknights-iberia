@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { describe, it } from "node:test";
 
-import { gitBlobSha } from "../src/game-data/gamedata-diff";
+import { gitBlobSha } from "../src/game-data/git-blob";
 import { isFullCommit, parseTableList, snapshotDirectoryName, snapshotFile, snapshotManifest, snapshotMismatches, snapshotUrl, tablesFromReport } from "../src/game-data/gamedata-snapshot";
 
 const commit = "3aaa25b649fed5dedad9527602826dc487ea07d8";

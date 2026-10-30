@@ -1,4 +1,4 @@
-import { gitBlobSha } from "../src/game-data/gamedata-diff";
+import { gitBlobSha } from "../src/game-data/git-blob";
 
 export const token = process.env.GITHUB_TOKEN || undefined;
 

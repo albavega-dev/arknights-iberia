@@ -9,11 +9,6 @@ const playableProfessions = new Set(["WARRIOR", "PIONEER", "TANK", "SNIPER", "CA
 const sorted = (values: Iterable<string>) => [...values].sort((a, b) => (a < b ? -1 : a > b ? 1 : 0));
 const asDict = (value: unknown): Dict => (value && typeof value === "object" && !Array.isArray(value) ? (value as Dict) : {});
 
-/** Hash that Git stores for a file; the GitHub API reports it, so a download can be checked against it. */
-export function gitBlobSha(data: Buffer): string {
-  return createHash("sha1").update(Buffer.concat([Buffer.from(`blob ${data.length}\0`), data])).digest("hex");
-}
-
 /** Stable text of any JSON value (object keys sorted), used to compare structures. */
 export function stableJson(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(stableJson).join(",")}]`;

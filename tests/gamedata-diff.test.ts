@@ -3,9 +3,10 @@ import { describe, it } from "node:test";
 
 import {
   assetChangesByDirectory, assetCoverage, buildingEntries, catalogModuleIds, changedAssetPaths, changedBlobs, compareRoster, diffKeyed, diffModules, diffOperators,
-  diffSkills, exitCodeFor, fingerprint, gitBlobSha, handbookEntries, isPlayable, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds, redact,
+  diffSkills, exitCodeFor, fingerprint, handbookEntries, isPlayable, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds, redact,
   resolvedSkillGaps, revisionStatus, skillIconNames, skillIdsOf, stableJson, usedRangeIds,
 } from "../src/game-data/gamedata-diff";
+import { gitBlobSha } from "../src/game-data/git-blob";
 
 const operator = (extra: Record<string, unknown> = {}) => ({ name: "A", isNotObtainable: false, profession: "CASTER", rarity: "TIER_5", subProfessionId: "corecaster", phases: [{ rangeId: "1-1" }], skills: [{ skillId: "s1" }], talents: null, trait: null, ...extra });
 

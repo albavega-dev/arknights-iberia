@@ -4,8 +4,9 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import test from "node:test";
 import { moduleArtConversion, moduleArtSource, type ModuleArtManifest } from "../src/game-data/operator-module-art";
-import { buildModuleArtManifest, gitBlobSha, loadSharp, main, moduleArtInventory, rawUrl, type SyncDependencies } from "../scripts/sync-operator-module-art";
+import { buildModuleArtManifest, loadSharp, main, moduleArtInventory, rawUrl, type SyncDependencies } from "../scripts/sync-operator-module-art";
 import { compareCodeUnits } from "../src/game-data/string-order";
+import { gitBlobSha } from "../src/game-data/git-blob";
 
 const sharp = loadSharp();
 /** A square RGBA PNG made with the same sharp, standing in for a source file. */
