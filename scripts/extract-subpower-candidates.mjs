@@ -1,12 +1,12 @@
 import fs from "node:fs";
 import { pathToFileURL } from "node:url";
+import { gameDataRepository, gameDataRevisions } from "../src/game-data/gamedata-revisions.ts";
 
 function compareCodeUnits(a, b) {
   if (a < b) return -1;
   return a > b ? 1 : 0;
 }
 
-const DEFAULT_SNAPSHOT = "C:/Users/albav/Documents/arknights-iberia-research/operator-range-snapshots/en/3aaa25b649fed5dedad9527602826dc487ea07d8/character_table.json";
 const DEFAULT_FACTION_MANIFEST = "data/operator-faction-manifest.json";
 const DEFAULT_AFFILIATION_MANIFEST = "data/operator-affiliation-manifest.json";
 
@@ -97,10 +97,11 @@ export function extractSubPowerCandidates({ characterTable, catalog, affiliation
 }
 
 function parseArgs(argv) {
-  const args = { json: false, snapshot: DEFAULT_SNAPSHOT, catalog: DEFAULT_FACTION_MANIFEST, affiliations: DEFAULT_AFFILIATION_MANIFEST };
+  const args = { json: false, snapshot: null, revision: null, catalog: DEFAULT_FACTION_MANIFEST, affiliations: DEFAULT_AFFILIATION_MANIFEST };
   for (const arg of argv) {
     if (arg === "--json") args.json = true;
     else if (arg.startsWith("--snapshot=")) args.snapshot = arg.slice(11);
+    else if (arg.startsWith("--revision=")) args.revision = arg.slice(11);
     else if (arg.startsWith("--catalog=")) args.catalog = arg.slice(10);
     else if (arg.startsWith("--affiliations=")) args.affiliations = arg.slice(15);
     else throw new Error(`Argumento desconocido: ${arg}`);
@@ -109,13 +110,14 @@ function parseArgs(argv) {
 }
 
 export function run(options) {
-  const source = getSourceMetadata(options.snapshot);
+  if (!options.snapshot) throw new Error("Falta --snapshot=<character_table.json> (añade --revision=<commit> si es el snapshot fijado)");
+  const source = getSourceMetadata(options.snapshot, options.revision);
   return extractSubPowerCandidates({ characterTable: readJson(options.snapshot), catalog: readJson(options.catalog), affiliationManifest: readJson(options.affiliations), source });
 }
 
-export function getSourceMetadata(snapshotPath) {
-  const isDefault = snapshotPath === DEFAULT_SNAPSHOT;
-  return { repository: isDefault ? "ArknightsAssets/ArknightsGamedata" : null, region: isDefault ? "en" : null, revision: isDefault ? "3aaa25b649fed5dedad9527602826dc487ea07d8" : null, path: isDefault ? "en/gamedata/excel/character_table.json" : snapshotPath, revisionVerified: isDefault };
+export function getSourceMetadata(snapshotPath, revision = null) {
+  const isPinned = revision === gameDataRevisions.en;
+  return { repository: isPinned ? gameDataRepository : null, region: isPinned ? "en" : null, revision: isPinned ? revision : null, path: isPinned ? "en/gamedata/excel/character_table.json" : snapshotPath, revisionVerified: isPinned };
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { gameDataRevisions } from "../src/game-data/gamedata-revisions.ts";
 import { extractSubPowerCandidates, getSourceMetadata } from "../scripts/extract-subpower-candidates.mjs";
 
 const source = { repository: "test", region: "en", revision: "test", path: "character_table.json" };
@@ -94,6 +95,13 @@ test("clasifica nationId desconocido como no resoluble", () => {
   assert.equal(result.rows[1].originalValue, "");
   assert.equal(result.rows[1].destination, null);
   assert.equal(result.rows[1].status, "unresolved");
+});
+
+test("la revisión EN fijada se verifica solo si se indica expresamente", () => {
+  const pinned = getSourceMetadata("C:/tmp/character_table.json", gameDataRevisions.en);
+  assert.equal(pinned.revision, gameDataRevisions.en);
+  assert.equal(pinned.revisionVerified, true);
+  assert.equal(getSourceMetadata("C:/tmp/character_table.json", "0".repeat(40)).revisionVerified, false);
 });
 
 test("la procedencia alternativa no hereda la revisión EN", () => {

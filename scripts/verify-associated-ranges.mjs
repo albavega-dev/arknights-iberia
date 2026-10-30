@@ -8,8 +8,12 @@ function compareCodeUnits(a, b) {
 const args = new Map();
 for (let index = 2; index < process.argv.length; index += 2) args.set(process.argv[index], process.argv[index + 1]);
 const root = (name, fallback) => args.get(name) ?? fallback;
-const enRoot = root("--en-root", "C:/Users/albav/Documents/arknights-iberia-research/operator-range-snapshots/en/3aaa25b649fed5dedad9527602826dc487ea07d8");
-const cnRoot = root("--cn-root", "C:/Users/albav/Documents/arknights-iberia-research/operator-range-snapshots/cn/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842");
+const enRoot = root("--en-root");
+const cnRoot = root("--cn-root");
+if (!enRoot || !cnRoot) {
+  console.error("Usage: node scripts/verify-associated-ranges.mjs --en-root DIR --cn-root DIR [--source FILE] [--manifest FILE] [--catalog-base URL]\nEach root holds range_table.json and character_table.json of one region.");
+  process.exit(2);
+}
 const sourcePath = root("--source", "src/game-data/operator-tactical.ts");
 const manifestPath = root("--manifest", "data/operator-tactical-manifest.json");
 const catalogBase = root("--catalog-base", "http://localhost:3000").replace(/\/$/, "");
