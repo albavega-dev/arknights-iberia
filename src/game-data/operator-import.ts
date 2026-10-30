@@ -25,6 +25,10 @@ const professionMap: Record<string, OperatorClass> = {
   SPECIAL: "Specialist",
 };
 
+export function operatorImportSlug(sourceId: string): string {
+  return `operator-${sourceId.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+}
+
 export type NormalizedOperator = OperatorRecord & { sourceId: string };
 
 function mainPower(value: SourceCharacter): { nationId: string | null; groupId: string | null; teamId: string | null } {
@@ -46,7 +50,7 @@ export function normalizeOperator(sourceId: string, value: SourceCharacter): Nor
   if (!Array.isArray(value.phases) || value.phases.length === 0) return null;
   if (typeof value.rarity !== "string" || !/^TIER_[1-6]$/.test(value.rarity)) return null;
 
-  const slug = `operator-${sourceId.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+  const slug = operatorImportSlug(sourceId);
   const power = mainPower(value);
   return {
     sourceId,
