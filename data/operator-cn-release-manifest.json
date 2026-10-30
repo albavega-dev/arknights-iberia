@@ -1,17 +1,21 @@
 {
-  "manifestVersion": "2026-10-30.1",
-  "status": "reviewed-community-data",
+  "manifestVersion": "2026-10-30.2",
+  "status": "reviewed",
   "purpose": "CN release dates for the 415 Global operators; research manifest, consumed by the local import only after review.",
-  "releaseDateStatus": "community-listed",
   "limitations": [
-    "Dates come from the Terra Wiki release table, which listed CN dates one day earlier than the official announcements or PRTS in 24 of 26 reviewed cases; they stay community-listed until each one is checked against the pinned snapshots, PRTS or an official announcement.",
-    "A release date is the calendar date, in CN server time (UTC+8), of the first moment the operator is obtainable: banner, event, shop, recruitment or main story."
+    "A release date is the calendar date, in CN server time (UTC+8), of the first moment the operator is obtainable: banner, event, shop, recruitment or main story.",
+    "verified dates come from the pinned CN game data (gacha_table banner lists, which only exist until July 2019, limited banners, and Integrated Strategies topics in roguelike_topic_table) or from an official announcement; community-listed dates come from the operator page on PRTS.",
+    "Banner openings in gacha_table before the CN server launch (2019-04-30 10:00 UTC+8) count as the launch date."
   ],
   "source": {
     "repository": "https://github.com/ArknightsAssets/ArknightsGamedata",
-    "terraWikiReleaseTable": "https://arknights.wiki.gg/wiki/Operator/List/Release",
-    "prtsReleaseTable": "https://prts.wiki/w/%E5%B9%B2%E5%91%98%E5%AE%9E%E8%A3%85%E6%97%B6%E9%97%B4",
-    "sourceCheckedAt": "2026-10-16"
+    "gameDataRevision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+    "gameDataTables": [
+      "cn/gamedata/excel/gacha_table.json",
+      "cn/gamedata/excel/roguelike_topic_table.json"
+    ],
+    "prtsReleaseTable": "https://prts.wiki/w/%E5%B9%B2%E5%91%98%E4%B8%8A%E7%BA%BF%E6%97%B6%E9%97%B4%E4%B8%80%E8%A7%88",
+    "sourceCheckedAt": "2026-10-30"
   },
   "snapshot": {
     "locale": "en",
@@ -27,2492 +31,2907 @@
     {
       "id": "char_285_medic2",
       "name": "Lancet-2",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/Lancet-2"
     },
     {
       "id": "char_286_cast3",
       "name": "Castle-3",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/Castle-3"
     },
     {
       "id": "char_376_therex",
       "name": "THRM-EX",
-      "cnReleaseDate": "2020-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/THRM-EX"
     },
     {
       "id": "char_4000_jnight",
       "name": "'Justice Knight'",
-      "cnReleaseDate": "2021-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Justice_Knight"
+      "cnReleaseDate": "2021-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%AD%A3%E4%B9%89%E9%AA%91%E5%A3%AB%E5%8F%B7"
     },
     {
       "id": "char_4077_palico",
       "name": "Terra Research Commission",
-      "cnReleaseDate": "2023-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B3%B0%E6%8B%89%E5%A4%A7%E9%99%86%E8%B0%83%E6%9F%A5%E5%9B%A2"
     },
     {
       "id": "char_4091_ulika",
       "name": "U-Official",
       "cnReleaseDate": "2023-04-01",
-      "source": "https://arknights.wiki.gg/ru/wiki/U-Official"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/U-Official"
     },
     {
       "id": "char_4093_frston",
       "name": "Friston-3",
-      "cnReleaseDate": "2023-05-21",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-05-22",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/Friston-3"
     },
     {
       "id": "char_4136_phonor",
       "name": "PhonoR-0",
-      "cnReleaseDate": "2024-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/PhonoR-0"
     },
     {
       "id": "char_4188_confes",
       "name": "CONFESS-47",
-      "cnReleaseDate": "2025-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/CONFESS-47"
     },
     {
       "id": "char_4227_gallus",
       "name": "GALLUS²",
-      "cnReleaseDate": "2026-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List"
+      "cnReleaseDate": "2026-05-01",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/3046"
     },
     {
       "id": "char_502_nblade",
       "name": "Yato",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A4%9C%E5%88%80"
     },
     {
       "id": "char_500_noirc",
       "name": "Noir Corne",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%BB%91%E8%A7%92"
     },
     {
       "id": "char_503_rang",
       "name": "Rangers",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%B7%A1%E6%9E%97%E8%80%85"
     },
     {
       "id": "char_501_durin",
       "name": "Durin",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9D%9C%E6%9E%97"
     },
     {
       "id": "char_009_12fce",
       "name": "12F",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/12F"
     },
     {
       "id": "char_123_fang",
       "name": "Fang",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_240_wyvern",
       "name": "Vanilla",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_192_falco",
       "name": "Plume",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_208_melan",
       "name": "Melantha",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_281_popka",
       "name": "Popukar",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-07-09",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_2_0_1"
     },
     {
       "id": "char_209_ardign",
       "name": "Cardigan",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_122_beagle",
       "name": "Beagle",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_284_spot",
       "name": "Spot",
-      "cnReleaseDate": "2019-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-07-09",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_2_0_1"
     },
     {
       "id": "char_124_kroos",
       "name": "Kroos",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_211_adnach",
       "name": "Adnachiel",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AE%89%E5%BE%B7%E5%88%87%E5%B0%94"
     },
     {
       "id": "char_121_lava",
       "name": "Lava",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_120_hibisc",
       "name": "Hibiscus",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_212_ansel",
       "name": "Ansel",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_210_stward",
       "name": "Steward",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_278_orchid",
       "name": "Orchid",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_141_nights",
       "name": "Haze",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_109_fmout",
       "name": "Gitano",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_253_greyy",
       "name": "Greyy",
-      "cnReleaseDate": "2019-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-07-09",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_2_0_1"
     },
     {
       "id": "char_4051_akkord",
       "name": "Akkord",
-      "cnReleaseDate": "2025-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8D%8F%E5%BE%8B"
     },
     {
       "id": "char_328_cammou",
       "name": "Click",
-      "cnReleaseDate": "2020-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-07-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8D%A1%E8%BE%BE"
     },
     {
       "id": "char_469_indigo",
       "name": "Indigo",
-      "cnReleaseDate": "2021-05-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-06-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B7%B1%E9%9D%9B"
     },
     {
       "id": "char_4004_pudd",
       "name": "Pudding",
-      "cnReleaseDate": "2021-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%B8%83%E4%B8%81"
     },
     {
       "id": "char_235_jesica",
       "name": "Jessica",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_126_shotst",
       "name": "Meteor",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_190_clour",
       "name": "Vermeil",
-      "cnReleaseDate": "2019-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BA%A2%E4%BA%91"
     },
     {
       "id": "char_133_mm",
       "name": "May",
-      "cnReleaseDate": "2019-11-18",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-11-19",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%A2%85"
     },
     {
       "id": "char_118_yuki",
       "name": "Shirayuki",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_440_pinecn",
       "name": "Pinecone",
-      "cnReleaseDate": "2020-12-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-12-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9D%BE%E6%9E%9C"
     },
     {
       "id": "char_302_glaze",
       "name": "Ambriel",
-      "cnReleaseDate": "2019-12-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-12-24",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AE%89%E6%AF%94%E5%B0%94"
     },
     {
       "id": "char_366_acdrop",
       "name": "Aciddrop",
-      "cnReleaseDate": "2020-08-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-08-25",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%85%B8%E7%B3%96"
     },
     {
       "id": "char_4062_totter",
       "name": "Totter",
-      "cnReleaseDate": "2022-10-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-10-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%93%85%E8%B8%9D"
     },
     {
       "id": "char_4100_caper",
       "name": "Caper",
-      "cnReleaseDate": "2023-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%B7%83%E8%B7%83"
     },
     {
       "id": "char_198_blackd",
       "name": "Courier",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%AE%AF%E4%BD%BF"
     },
     {
       "id": "char_149_scave",
       "name": "Scavenger",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_290_vigna",
       "name": "Vigna",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_151_myrtle",
       "name": "Myrtle",
-      "cnReleaseDate": "2019-09-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-09-10",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%A1%83%E9%87%91%E5%A8%98"
     },
     {
       "id": "char_452_bstalk",
       "name": "Beanstalk",
-      "cnReleaseDate": "2021-01-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-01-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%B1%86%E8%8B%97"
     },
     {
       "id": "char_4208_wintim",
       "name": "Snegurochka",
-      "cnReleaseDate": "2025-10-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-10-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%86%AC%E6%97%B6"
     },
     {
       "id": "char_130_doberm",
       "name": "Dobermann",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_289_gyuki",
       "name": "Matoimaru",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_159_peacok",
       "name": "Conviction",
       "cnReleaseDate": "2020-04-01",
-      "source": "https://arknights.wiki.gg/wiki/Conviction/Overview"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%96%AD%E7%BD%AA%E8%80%85"
     },
     {
       "id": "char_193_frostl",
       "name": "Frostleaf",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_127_estell",
       "name": "Estelle",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%89%BE%E4%B8%9D%E9%BB%9B%E5%B0%94"
     },
     {
       "id": "char_185_frncat",
       "name": "Mousse",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_301_cutter",
       "name": "Cutter",
-      "cnReleaseDate": "2020-04-20",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-04-21",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%88%BB%E5%88%80"
     },
     {
       "id": "char_337_utage",
       "name": "Utage",
       "cnReleaseDate": "2020-03-17",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AE%B4"
     },
     {
       "id": "char_271_spikes",
       "name": "Arene",
-      "cnReleaseDate": "2020-09-23",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-09-24",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8A%B3%E6%B1%80"
     },
     {
       "id": "char_4067_lolxh",
       "name": "Luo Xiaohei",
-      "cnReleaseDate": "2022-09-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-09-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BD%97%E5%B0%8F%E9%BB%91"
     },
     {
       "id": "char_4063_quartz",
       "name": "Quartz",
-      "cnReleaseDate": "2022-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%9F%B3%E8%8B%B1"
     },
     {
       "id": "char_491_humus",
       "name": "Humus",
-      "cnReleaseDate": "2023-04-05",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-04-06",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%BC%91%E8%B0%9F%E6%96%AF"
     },
     {
       "id": "char_445_wscoot",
       "name": "Windscoot",
-      "cnReleaseDate": "2025-04-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-04-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%AA%8B%E9%A3%8E"
     },
     {
       "id": "char_237_gravel",
       "name": "Gravel",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_272_strong",
       "name": "Jaye",
-      "cnReleaseDate": "2020-08-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-08-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AD%91"
     },
     {
       "id": "char_236_rope",
       "name": "Rope",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_117_myrrh",
       "name": "Myrrh",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_187_ccheal",
       "name": "Gavial",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%98%89%E7%BB%B4%E5%B0%94"
     },
     {
       "id": "char_298_susuro",
       "name": "Sussurro",
-      "cnReleaseDate": "2019-08-26",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-08-27",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8B%8F%E8%8B%8F%E6%B4%9B"
     },
     {
       "id": "char_181_flower",
       "name": "Perfumer",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_385_finlpp",
       "name": "Purestream",
-      "cnReleaseDate": "2020-05-02",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-03-03",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B8%85%E6%B5%81"
     },
     {
       "id": "char_4041_chnut",
       "name": "Chestnut",
-      "cnReleaseDate": "2022-04-13",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-04-14",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%A4%90%E6%9E%9C"
     },
     {
       "id": "char_199_yak",
       "name": "Matterhorn",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_150_snakek",
       "name": "Cuora",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_381_bubble",
       "name": "Bubble",
-      "cnReleaseDate": "2020-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B3%A1%E6%B3%A1"
     },
     {
       "id": "char_4130_luton",
       "name": "Lutonada",
-      "cnReleaseDate": "2024-04-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-04-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9C%B2%E6%89%98"
     },
     {
       "id": "char_196_sunbr",
       "name": "Gummy",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_260_durnar",
       "name": "Dur-nar",
       "cnReleaseDate": "2019-10-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%9D%9A%E9%9B%B7"
     },
     {
       "id": "char_110_deepcl",
       "name": "Deepcolor",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_183_skgoat",
       "name": "Earthspirit",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_258_podego",
       "name": "Podenco",
-      "cnReleaseDate": "2020-06-17",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-06-18",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B3%A2%E7%99%BB%E5%8F%AF"
     },
     {
       "id": "char_484_robrta",
       "name": "Roberta",
-      "cnReleaseDate": "2021-09-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-09-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BD%97%E6%AF%94%E8%8F%88%E5%A1%94"
     },
     {
       "id": "char_355_ethan",
       "name": "Ethan",
       "cnReleaseDate": "2019-11-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%BC%8A%E6%A1%91"
     },
     {
       "id": "char_277_sqrrel",
       "name": "Shaw",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_4107_vrdant",
       "name": "Verdant",
-      "cnReleaseDate": "2023-10-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-10-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BB%B4%E8%8D%BB"
     },
     {
       "id": "char_4165_ctrail",
       "name": "Contrail",
-      "cnReleaseDate": "2024-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%BA%91%E8%BF%B9"
     },
     {
       "id": "char_128_plosis",
       "name": "Ptilopsis",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_275_breeze",
       "name": "Breeze",
       "cnReleaseDate": "2019-11-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%BE%AE%E9%A3%8E"
     },
     {
       "id": "char_4163_rosesa",
       "name": "Rose Salt",
-      "cnReleaseDate": "2024-12-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-12-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%91%B0%E7%9B%90"
     },
     {
       "id": "char_115_headbr",
       "name": "Zima",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_102_texas",
       "name": "Texas",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_349_chiave",
       "name": "Chiave",
-      "cnReleaseDate": "2020-09-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-07-28",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%B4%BE%E7%BB%B4"
     },
     {
       "id": "char_488_buildr",
       "name": "Poncirus",
-      "cnReleaseDate": "2023-07-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-08-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9D%92%E6%9E%B3"
     },
     {
       "id": "char_4023_rfalcn",
       "name": "Kestrel",
       "cnReleaseDate": "2024-02-03",
-      "source": "https://arknights.wiki.gg/wiki/Tales_Within_the_Sand"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BA%A2%E9%9A%BC"
     },
     {
       "id": "char_4199_makiri",
       "name": "Matsukiri",
-      "cnReleaseDate": "2025-08-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-08-02",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9D%BE%E6%A1%90"
     },
     {
       "id": "char_261_sddrag",
       "name": "Reed",
       "cnReleaseDate": "2019-12-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8B%87%E8%8D%89"
     },
     {
       "id": "char_496_wildmn",
       "name": "Wild Mane",
-      "cnReleaseDate": "2021-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%87%8E%E9%AC%83"
     },
     {
       "id": "char_1036_fang2",
       "name": "Fang the Fire-Sharpened",
-      "cnReleaseDate": "2024-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8E%86%E9%98%B5%E9%94%90%E6%9E%AA%E8%8A%AC"
     },
     {
       "id": "char_401_elysm",
       "name": "Elysium",
-      "cnReleaseDate": "2020-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9E%81%E5%A2%83"
     },
     {
       "id": "char_4119_wanqin",
       "name": "Wanqing",
-      "cnReleaseDate": "2024-01-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-02-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%B8%87%E9%A1%B7"
     },
     {
       "id": "char_476_blkngt",
       "name": "Blacknight",
-      "cnReleaseDate": "2022-01-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-01-25",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A4%9C%E5%8D%8A"
     },
     {
       "id": "char_4147_mitm",
       "name": "Mitm",
-      "cnReleaseDate": "2024-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-07-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B8%A1%E6%A1%A5"
     },
     {
       "id": "char_497_ctable",
       "name": "Cantabile",
-      "cnReleaseDate": "2022-08-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-08-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%99%93%E6%AD%8C"
     },
     {
       "id": "char_4017_puzzle",
       "name": "Puzzle",
-      "cnReleaseDate": "2022-12-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-12-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%B0%9C%E5%9B%BE"
     },
     {
       "id": "char_4144_chilc",
       "name": "Chilchuck",
-      "cnReleaseDate": "2024-09-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-09-02",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%BD%90%E5%B0%94%E6%9F%A5%E5%85%8B"
     },
     {
       "id": "char_4052_surfer",
       "name": "Surfer",
-      "cnReleaseDate": "2025-01-21",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-01-22",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AF%BB%E6%BE%9C"
     },
     {
       "id": "char_308_swire",
       "name": "Swire",
-      "cnReleaseDate": "2019-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-07-09",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_2_0_1"
     },
     {
       "id": "char_265_sophia",
       "name": "Whislash",
-      "cnReleaseDate": "2020-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9E%AD%E5%88%83"
     },
     {
       "id": "char_4106_bryota",
       "name": "Bryophyta",
-      "cnReleaseDate": "2023-07-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-08-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8B%8D%E8%8B%94"
     },
     {
       "id": "char_4125_rdoc",
       "name": "Doc",
-      "cnReleaseDate": "2024-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8C%BB%E7%94%9F"
     },
     {
       "id": "char_106_franka",
       "name": "Franka",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_131_flameb",
       "name": "Flamebringer",
-      "cnReleaseDate": "2019-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%82%8E%E5%AE%A2"
     },
     {
       "id": "char_154_morgan",
       "name": "Morgan",
-      "cnReleaseDate": "2023-04-05",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-04-06",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%91%A9%E6%A0%B9"
     },
     {
       "id": "char_4142_laios",
       "name": "Laios",
-      "cnReleaseDate": "2024-09-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-09-02",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8E%B1%E6%AC%A7%E6%96%AF"
     },
     {
       "id": "char_155_tiger",
       "name": "Indra",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%9B%A0%E9%99%80%E7%BD%97"
     },
     {
       "id": "char_415_flint",
       "name": "Flint",
-      "cnReleaseDate": "2020-08-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-08-25",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%87%A7%E7%9F%B3"
     },
     {
       "id": "char_157_dagda",
       "name": "Dagda",
-      "cnReleaseDate": "2022-10-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-10-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%BE%BE%E6%A0%BC%E8%BE%BE"
     },
     {
       "id": "char_140_whitew",
       "name": "Lappland",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_294_ayer",
       "name": "Ayerscarpe",
-      "cnReleaseDate": "2020-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-07-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%96%AD%E5%B4%96"
     },
     {
       "id": "char_194_leto",
       "name": "Leto",
-      "cnReleaseDate": "2023-12-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-12-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%83%88%E5%A4%8F"
     },
     {
       "id": "char_4083_chimes",
       "name": "Wind Chimes",
-      "cnReleaseDate": "2023-02-13",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-02-14",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%93%8E%E9%93%83"
     },
     {
       "id": "char_252_bibeak",
       "name": "Bibeak",
       "cnReleaseDate": "2020-03-17",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9F%8F%E5%96%99"
     },
     {
       "id": "char_459_tachak",
       "name": "Tachanka",
-      "cnReleaseDate": "2021-03-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-03-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%88%98%E8%BD%A6"
     },
     {
       "id": "char_143_ghost",
       "name": "Specter",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_356_broca",
       "name": "Broca",
       "cnReleaseDate": "2019-12-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%B8%83%E6%B4%9B%E5%8D%A1"
     },
     {
       "id": "char_4126_fuze",
       "name": "Fuze",
-      "cnReleaseDate": "2024-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AF%BC%E7%81%AB%E7%B4%A2"
     },
     {
       "id": "char_4166_varkis",
       "name": "Varkáris",
-      "cnReleaseDate": "2026-01-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-01-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%91%86%E6%B8%A1%E4%BA%BA"
     },
     {
       "id": "char_274_astesi",
       "name": "Astesia",
-      "cnReleaseDate": "2019-09-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-09-10",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%98%9F%E6%9E%81"
     },
     {
       "id": "char_333_sidero",
       "name": "Sideroca",
-      "cnReleaseDate": "2020-04-20",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-04-21",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%93%B8%E9%93%81"
     },
     {
       "id": "char_475_akafyu",
       "name": "Akafuyu",
-      "cnReleaseDate": "2021-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%B5%A4%E5%86%AC"
     },
     {
       "id": "char_1030_noirc2",
       "name": "Rathalos S Noir Corne",
-      "cnReleaseDate": "2023-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%81%AB%E9%BE%99S%E9%BB%91%E8%A7%92"
     },
     {
       "id": "char_421_crow",
       "name": "La Pluma",
-      "cnReleaseDate": "2021-08-02",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-08-03",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BE%BD%E6%AF%9B%E7%AC%94"
     },
     {
       "id": "char_4066_highmo",
       "name": "Highmore",
       "cnReleaseDate": "2022-09-27",
-      "source": "https://arknights.wiki.gg/wiki/Regional_Commission"
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/roguelike_topic_table.json#rogue_2"
     },
     {
       "id": "char_486_takila",
       "name": "Tequila",
-      "cnReleaseDate": "2021-08-02",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-08-03",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%BE%99%E8%88%8C%E5%85%B0"
     },
     {
       "id": "char_4131_odda",
       "name": "Odda",
-      "cnReleaseDate": "2024-04-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-04-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A5%A5%E8%BE%BE"
     },
     {
       "id": "char_4187_graceb",
       "name": "Gracebearer",
-      "cnReleaseDate": "2025-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%81%86%E9%9F%B3"
     },
     {
       "id": "char_4185_amoris",
       "name": "Nyamu Yūtenji",
-      "cnReleaseDate": "2025-09-03",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-09-04",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%A5%90%E5%A4%A9%E5%AF%BA%E8%8B%A5%E9%BA%A6"
     },
     {
       "id": "char_394_hadiya",
       "name": "Hadiya",
-      "cnReleaseDate": "2025-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%93%88%E8%92%82%E5%A8%85"
     },
     {
       "id": "char_129_bluep",
       "name": "Blue Poison",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_204_platnm",
       "name": "Platinum",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_367_swllow",
       "name": "GreyThroat",
-      "cnReleaseDate": "2019-12-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-12-24",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%81%B0%E5%96%89"
     },
     {
       "id": "char_365_aprl",
       "name": "April",
-      "cnReleaseDate": "2020-09-23",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-09-24",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%9B%9B%E6%9C%88"
     },
     {
       "id": "char_1021_kroos2",
       "name": "Kroos the Keen Glint",
-      "cnReleaseDate": "2022-01-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-01-25",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AF%92%E8%8A%92%E5%85%8B%E6%B4%9B%E4%B8%9D"
     },
     {
       "id": "char_498_inside",
       "name": "Insider",
-      "cnReleaseDate": "2023-06-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-06-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9A%90%E7%8E%B0"
     },
     {
       "id": "char_219_meteo",
       "name": "Meteorite",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_379_sesa",
       "name": "Sesa",
       "cnReleaseDate": "2020-03-17",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%85%91%E7%A0%82"
     },
     {
       "id": "char_4078_bdhkgt",
       "name": "Jieyun",
-      "cnReleaseDate": "2023-01-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-01-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%88%AA%E4%BA%91"
     },
     {
       "id": "char_279_excu",
       "name": "Executor",
-      "cnReleaseDate": "2019-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%80%81%E8%91%AC%E4%BA%BA"
     },
     {
       "id": "char_346_aosta",
       "name": "Aosta",
-      "cnReleaseDate": "2020-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A5%A5%E6%96%AF%E5%A1%94"
     },
     {
       "id": "char_4203_kichi",
       "name": "Kichisei",
-      "cnReleaseDate": "2025-08-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-08-02",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%90%89%E6%98%9F"
     },
     {
       "id": "char_4213_skybx",
       "name": "Skybox",
-      "cnReleaseDate": "2025-12-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-12-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A4%A9%E7%A9%BA%E7%9B%92"
     },
     {
       "id": "char_002_amiya",
       "name": "Amiya",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%98%BF%E7%B1%B3%E5%A8%85"
     },
     {
       "id": "char_405_absin",
       "name": "Absinthe",
-      "cnReleaseDate": "2020-06-17",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-06-18",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8B%A6%E8%89%BE"
     },
     {
       "id": "char_411_tomimi",
       "name": "Tomimi",
-      "cnReleaseDate": "2020-08-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-08-25",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%89%B9%E7%B1%B3%E7%B1%B3"
     },
     {
       "id": "char_466_qanik",
       "name": "Qanipalaat",
-      "cnReleaseDate": "2022-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9B%AA%E7%BB%92"
     },
     {
       "id": "char_166_skfire",
       "name": "Skyfire",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_306_leizi",
       "name": "Leizi",
-      "cnReleaseDate": "2020-02-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-02-25",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%83%8A%E8%9B%B0"
     },
     {
       "id": "char_135_halo",
       "name": "Astgenne",
-      "cnReleaseDate": "2022-07-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-07-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%98%9F%E6%BA%90"
     },
     {
       "id": "char_344_beewax",
       "name": "Beeswax",
-      "cnReleaseDate": "2020-09-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-07-28",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%9C%9C%E8%9C%A1"
     },
     {
       "id": "char_373_lionhd",
       "name": "Leonhardt",
-      "cnReleaseDate": "2020-06-17",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-06-18",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8E%B1%E6%81%A9%E5%93%88%E7%89%B9"
     },
     {
       "id": "char_341_sntlla",
       "name": "Santalla",
-      "cnReleaseDate": "2023-07-05",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-07-06",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AF%92%E6%AA%80"
     },
     {
       "id": "char_4031_liesel",
       "name": "Ripresa",
-      "cnReleaseDate": "2026-03-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-03-10",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A4%8D%E5%A5%8F"
     },
     {
       "id": "char_388_mint",
       "name": "Mint",
-      "cnReleaseDate": "2020-09-23",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-09-24",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%96%84%E7%BB%BF"
     },
     {
       "id": "char_338_iris",
       "name": "Iris",
-      "cnReleaseDate": "2021-01-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-01-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%88%B1%E4%B8%BD%E4%B8%9D"
     },
     {
       "id": "char_297_hamoni",
       "name": "Harmonie",
-      "cnReleaseDate": "2022-12-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-12-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%92%8C%E5%BC%A6"
     },
     {
       "id": "char_4110_delphn",
       "name": "Delphine",
-      "cnReleaseDate": "2023-10-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-10-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%88%B4%E8%8F%B2%E6%81%A9"
     },
     {
       "id": "char_1011_lava2",
       "name": "Lava the Purgatory",
-      "cnReleaseDate": "2021-02-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-02-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%82%8E%E7%8B%B1%E7%82%8E%E7%86%94"
     },
     {
       "id": "char_489_serum",
       "name": "Corroserum",
-      "cnReleaseDate": "2021-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%9A%80%E6%B8%85"
     },
     {
       "id": "char_446_aroma",
       "name": "Aroma",
-      "cnReleaseDate": "2024-04-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-04-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%98%BF%E7%BD%97%E7%8E%9B"
     },
     {
       "id": "char_4013_kjera",
       "name": "Kjera",
-      "cnReleaseDate": "2021-12-20",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-12-21",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%80%B6%E6%8B%89"
     },
     {
       "id": "char_4040_rockr",
       "name": "Rockrock",
-      "cnReleaseDate": "2022-04-13",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-04-14",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B4%9B%E6%B4%9B"
     },
     {
       "id": "char_4054_malist",
       "name": "Minimalist",
-      "cnReleaseDate": "2022-08-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-08-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%87%B3%E7%AE%80"
     },
     {
       "id": "char_499_kaitou",
       "name": "Diamante",
-      "cnReleaseDate": "2023-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%8A%98%E5%85%89"
     },
     {
       "id": "char_4081_warmy",
       "name": "Warmy",
-      "cnReleaseDate": "2024-01-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-01-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B8%A9%E7%B1%B3"
     },
     {
       "id": "char_4198_christ",
       "name": "Miss.Christine",
-      "cnReleaseDate": "2025-06-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-06-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/Miss.Christine"
     },
     {
       "id": "char_4164_tecno",
       "name": "Tecno",
-      "cnReleaseDate": "2024-12-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-12-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%89%B9%E5%85%8B%E8%AF%BA"
     },
     {
       "id": "char_242_otter",
       "name": "Mayer",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_336_folivo",
       "name": "Scene",
       "cnReleaseDate": "2020-07-28",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%A8%80%E9%9F%B3"
     },
     {
       "id": "char_4140_lasher",
       "name": "Sand Reckoner",
-      "cnReleaseDate": "2024-07-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-08-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%A1%A1%E6%B2%99"
     },
     {
       "id": "char_108_silent",
       "name": "Silence",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_171_bldsk",
       "name": "Warfarin",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_345_folnic",
       "name": "Folinic",
-      "cnReleaseDate": "2020-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-07-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%BA%9A%E5%8F%B6"
     },
     {
       "id": "char_4196_reckpr",
       "name": "Record Keeper",
-      "cnReleaseDate": "2025-07-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-07-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%BD%95%E6%AD%A6%E5%AE%98"
     },
     {
       "id": "char_348_ceylon",
       "name": "Ceylon",
-      "cnReleaseDate": "2019-08-26",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-08-27",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%94%A1%E5%85%B0"
     },
     {
       "id": "char_436_whispr",
       "name": "Whisperain",
-      "cnReleaseDate": "2020-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%B5%AE%E9%9B%A8"
     },
     {
       "id": "char_4173_nowell",
       "name": "Nowell",
-      "cnReleaseDate": "2025-02-13",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-02-14",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%AF%BA%E5%A8%81%E5%B0%94"
     },
     {
       "id": "char_402_tuye",
       "name": "Tuye",
       "cnReleaseDate": "2021-01-19",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%9B%BE%E8%80%B6"
     },
     {
       "id": "char_473_mberry",
       "name": "Mulberry",
-      "cnReleaseDate": "2021-09-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-09-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%A1%91%E8%91%9A"
     },
     {
       "id": "char_449_glider",
       "name": "Honeyberry",
-      "cnReleaseDate": "2021-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%9C%9C%E8%8E%93"
     },
     {
       "id": "char_4114_harold",
       "name": "Harold",
-      "cnReleaseDate": "2023-12-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-12-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%93%88%E6%B4%9B%E5%BE%B7"
     },
     {
       "id": "char_1024_hbisc2",
       "name": "Hibiscus the Purifier",
-      "cnReleaseDate": "2022-06-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-06-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%BF%AF%E5%B0%98%E8%8A%99%E8%93%89"
     },
     {
       "id": "char_494_vendla",
       "name": "Vendela",
-      "cnReleaseDate": "2023-10-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-10-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%88%BA%E7%8E%AB"
     },
     {
       "id": "char_4071_peper",
       "name": "Paprika",
-      "cnReleaseDate": "2022-10-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-10-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%98%8E%E6%A4%92"
     },
     {
       "id": "char_4139_papyrs",
       "name": "Papyrus",
-      "cnReleaseDate": "2024-07-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-08-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8E%8E%E8%8D%89"
     },
     {
       "id": "char_4224_turdus",
       "name": "Ukusik",
-      "cnReleaseDate": "2026-04-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-04-07",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/1461"
     },
     {
       "id": "char_4222_taraxa",
       "name": "Taraxacum",
-      "cnReleaseDate": "2026-02-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-02-10",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/4942"
     },
     {
       "id": "char_148_nearl",
       "name": "Nearl",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_226_hmau",
       "name": "Hung",
-      "cnReleaseDate": "2020-01-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-01-16",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%90%BD"
     },
     {
       "id": "char_4109_baslin",
       "name": "Bassline",
-      "cnReleaseDate": "2023-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B7%B1%E5%BE%8B"
     },
     {
       "id": "char_4143_sensi",
       "name": "Senshi",
-      "cnReleaseDate": "2024-09-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-09-02",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%A3%AE%E8%A5%BF"
     },
     {
       "id": "char_144_red",
       "name": "Projekt Red",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_243_waaifu",
       "name": "Waai Fu",
-      "cnReleaseDate": "2019-11-18",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-11-19",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%A7%90%E7%90%A5"
     },
     {
       "id": "char_214_kafka",
       "name": "Kafka",
-      "cnReleaseDate": "2020-12-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-12-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8D%A1%E5%A4%AB%E5%8D%A1"
     },
     {
       "id": "char_455_nothin",
       "name": "Mr. Nothing",
-      "cnReleaseDate": "2021-02-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-02-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%B9%8C%E6%9C%89"
     },
     {
       "id": "char_4155_talr",
       "name": "Figurino",
-      "cnReleaseDate": "2024-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%A3%81%E5%BA%A6"
     },
     {
       "id": "char_107_liskam",
       "name": "Liskarm",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_4137_udflow",
       "name": "Underflow",
-      "cnReleaseDate": "2024-06-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-06-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B7%B1%E5%B7%A1"
     },
     {
       "id": "char_201_moeshd",
       "name": "Croissant",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_325_bison",
       "name": "Bison",
-      "cnReleaseDate": "2019-11-18",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-11-19",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%8B%9C%E6%9D%BE"
     },
     {
       "id": "char_163_hpsts",
       "name": "Vulcan",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%81%AB%E7%A5%9E"
     },
     {
       "id": "char_4207_branch",
       "name": "Vetochki",
-      "cnReleaseDate": "2025-10-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-10-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%8A%98%E6%A1%A0"
     },
     {
       "id": "char_378_asbest",
       "name": "Asbestos",
       "cnReleaseDate": "2020-06-02",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%9F%B3%E6%A3%89"
     },
     {
       "id": "char_4025_aprot2",
       "name": "Shalem",
-      "cnReleaseDate": "2022-02-15",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-01-05",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/roguelike_topic_table.json#rogue_1"
     },
     {
       "id": "char_4047_pianst",
       "name": "Czerny",
-      "cnReleaseDate": "2022-06-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-06-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%BD%A6%E5%B0%94%E5%B0%BC"
     },
     {
       "id": "char_457_blitz",
       "name": "Blitz",
-      "cnReleaseDate": "2021-03-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-03-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%97%AA%E5%87%BB"
     },
     {
       "id": "char_304_zebra",
       "name": "Heavyrain",
-      "cnReleaseDate": "2021-04-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-04-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9A%B4%E9%9B%A8"
     },
     {
       "id": "char_431_ashlok",
       "name": "Ashlock",
-      "cnReleaseDate": "2021-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%81%B0%E6%AF%AB"
     },
     {
       "id": "char_493_firwhl",
       "name": "Firewhistle",
-      "cnReleaseDate": "2023-01-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-01-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%81%AB%E5%93%A8"
     },
     {
       "id": "char_422_aurora",
       "name": "Aurora",
-      "cnReleaseDate": "2021-12-20",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-12-21",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9E%81%E5%85%89"
     },
     {
       "id": "char_464_cement",
       "name": "Cement",
-      "cnReleaseDate": "2023-04-05",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-04-06",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B4%8B%E7%81%B0"
     },
     {
       "id": "char_4148_philae",
       "name": "Philae",
-      "cnReleaseDate": "2024-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8F%B2%E8%8E%B1"
     },
     {
       "id": "char_4225_tanya",
       "name": "Crackborne",
-      "cnReleaseDate": "2026-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-05-01",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/3046"
     },
     {
       "id": "char_145_prove",
       "name": "Provence",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_4006_melnte",
       "name": "Melanite",
-      "cnReleaseDate": "2023-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%8E%AB%E6%8B%89"
     },
     {
       "id": "char_158_milu",
       "name": "Firewatch",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_218_cuttle",
       "name": "Andreana",
-      "cnReleaseDate": "2020-08-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-08-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AE%89%E5%93%B2%E6%8B%89"
     },
     {
       "id": "char_4014_lunacu",
       "name": "Lunacub",
-      "cnReleaseDate": "2022-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%AD%90%E6%9C%88"
     },
     {
       "id": "char_363_toddi",
       "name": "Toddifons",
-      "cnReleaseDate": "2021-04-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-04-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%86%94%E6%B3%89"
     },
     {
       "id": "char_4043_erato",
       "name": "Erato",
       "cnReleaseDate": "2022-05-19",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%9F%83%E6%8B%89%E6%89%98"
     },
     {
       "id": "char_4221_ju",
       "name": "Ju",
-      "cnReleaseDate": "2026-02-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-02-10",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/4942"
     },
     {
       "id": "char_1027_greyy2",
       "name": "Greyy the Lightningbearer",
-      "cnReleaseDate": "2022-07-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-07-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%89%BF%E6%9B%A6%E6%A0%BC%E9%9B%B7%E4%BC%8A"
     },
     {
       "id": "char_4104_coldst",
       "name": "Coldshot",
-      "cnReleaseDate": "2023-09-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-09-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%86%B0%E9%85%BF"
     },
     {
       "id": "char_4211_snhunt",
       "name": "Snow Hunter",
-      "cnReleaseDate": "2025-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9B%AA%E7%8C%8E"
     },
     {
       "id": "char_4177_brigid",
       "name": "Brigid",
-      "cnReleaseDate": "2025-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B0%B4%E7%81%AF%E5%BF%83"
     },
     {
       "id": "char_4015_spuria",
       "name": "Spuria",
-      "cnReleaseDate": "2023-06-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-06-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%A9%BA%E6%9E%84"
     },
     {
       "id": "char_173_slchan",
       "name": "Cliffheart",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_383_snsant",
       "name": "Snowsant",
-      "cnReleaseDate": "2020-01-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-01-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9B%AA%E9%9B%89"
     },
     {
       "id": "char_4105_almond",
       "name": "Almond",
-      "cnReleaseDate": "2023-09-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-09-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9D%8F%E4%BB%81"
     },
     {
       "id": "char_174_slbell",
       "name": "Pramanix",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_254_vodfox",
       "name": "Shamare",
-      "cnReleaseDate": "2020-04-20",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-04-21",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%B7%AB%E6%81%8B"
     },
     {
       "id": "char_4079_haini",
       "name": "Lucilla",
-      "cnReleaseDate": "2024-06-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-06-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B5%B7%E9%9C%93"
     },
     {
       "id": "char_195_glassb",
       "name": "Istina",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_326_glacus",
       "name": "Glaucus",
-      "cnReleaseDate": "2019-08-26",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-08-27",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%A0%BC%E5%8A%B3%E5%85%8B%E6%96%AF"
     },
     {
       "id": "char_4032_provs",
       "name": "Proviso",
-      "cnReleaseDate": "2022-09-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-09-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%BD%86%E4%B9%A6"
     },
     {
       "id": "char_4122_grabds",
       "name": "Grain Buds",
-      "cnReleaseDate": "2024-01-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-02-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%B0%8F%E6%BB%A1"
     },
     {
       "id": "char_433_windft",
       "name": "Windflit",
-      "cnReleaseDate": "2022-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%8E%A0%E9%A3%8E"
     },
     {
       "id": "char_4162_cathy",
       "name": "Catherine",
-      "cnReleaseDate": "2024-10-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-10-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%87%AF%E7%91%9F%E7%90%B3"
     },
     {
       "id": "char_4178_alanna",
       "name": "Alanna",
-      "cnReleaseDate": "2025-04-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-04-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%98%BF%E5%85%B0%E5%A8%9C"
     },
     {
       "id": "char_101_sora",
       "name": "Sora",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_4045_heidi",
       "name": "Heidi",
-      "cnReleaseDate": "2022-04-13",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-04-14",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B5%B7%E8%92%82"
     },
     {
       "id": "char_4184_dolris",
       "name": "Uika Misumi",
-      "cnReleaseDate": "2025-09-03",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-09-04",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%B8%89%E8%A7%92%E5%88%9D%E5%8D%8E"
     },
     {
       "id": "char_343_tknogi",
       "name": "Tsukinogi",
       "cnReleaseDate": "2020-06-02",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9C%88%E7%A6%BE"
     },
     {
       "id": "char_4019_ncdeer",
       "name": "Nine-Colored Deer",
-      "cnReleaseDate": "2022-01-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-01-10",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%B9%9D%E8%89%B2%E9%B9%BF"
     },
     {
       "id": "char_492_quercu",
       "name": "Quercus",
-      "cnReleaseDate": "2022-02-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-02-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A4%8F%E6%A0%8E"
     },
     {
       "id": "char_4172_xingzh",
       "name": "Xingzhu",
-      "cnReleaseDate": "2025-01-21",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-01-22",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%A1%8C%E7%AE%B8"
     },
     {
       "id": "char_1022_flwr2",
       "name": "Perfumer the Distilled",
-      "cnReleaseDate": "2026-01-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-01-09",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/9603"
     },
     {
       "id": "char_4102_threye",
       "name": "Valarqvin",
       "cnReleaseDate": "2023-07-13",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/roguelike_topic_table.json#rogue_3"
     },
     {
       "id": "char_487_bobb",
       "name": "Bobbing",
-      "cnReleaseDate": "2024-10-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-10-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B3%A2%E5%8D%9C"
     },
     {
       "id": "char_4223_botany",
       "name": "Botani",
-      "cnReleaseDate": "2026-04-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-04-07",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/1461"
     },
     {
       "id": "char_215_mantic",
       "name": "Manticore",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_478_kirara",
       "name": "Kirara",
-      "cnReleaseDate": "2021-05-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-06-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BB%AE%E8%89%AF"
     },
     {
       "id": "char_4186_tmoris",
       "name": "Umiri Yahata",
-      "cnReleaseDate": "2025-09-03",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-09-04",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%85%AB%E5%B9%A1%E6%B5%B7%E9%93%83"
     },
     {
       "id": "char_241_panda",
       "name": "FEater",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_4036_forcer",
       "name": "Enforcer",
-      "cnReleaseDate": "2022-03-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-03-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%A7%81%E8%A1%8C%E8%80%85"
     },
     {
       "id": "char_451_robin",
       "name": "Robin",
-      "cnReleaseDate": "2020-12-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-12-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BD%97%E5%AE%BE"
     },
     {
       "id": "char_458_rfrost",
       "name": "Frost",
-      "cnReleaseDate": "2021-03-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-03-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9C%9C%E5%8D%8E"
     },
     {
       "id": "char_4171_wulfen",
       "name": "Wulfenite",
-      "cnReleaseDate": "2025-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%92%BC%E9%93%85"
     },
     {
       "id": "char_369_bena",
       "name": "Bena",
-      "cnReleaseDate": "2021-05-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-06-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%B4%9D%E5%A8%9C"
     },
     {
       "id": "char_4016_kazema",
       "name": "Kazemaru",
-      "cnReleaseDate": "2022-03-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-03-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%A3%8E%E4%B8%B8"
     },
     {
       "id": "char_4124_iana",
       "name": "Iana",
-      "cnReleaseDate": "2024-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8F%8C%E6%9C%88"
     },
     {
       "id": "char_4183_mortis",
       "name": "Mutsumi Wakaba",
-      "cnReleaseDate": "2025-09-03",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-09-04",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8B%A5%E5%8F%B6%E7%9D%A6"
     },
     {
       "id": "char_4151_tinman",
       "name": "Tin Man",
       "cnReleaseDate": "2024-07-16",
-      "source": "https://arknights.wiki.gg/wiki/Sarkaz%27s_Furnaceside_Fables"
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/roguelike_topic_table.json#rogue_4"
     },
     {
       "id": "char_4191_tippi",
       "name": "Tippi",
-      "cnReleaseDate": "2025-06-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-06-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%92%82%E6%AF%94"
     },
     {
       "id": "char_103_angel",
       "name": "Exusiai",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_332_archet",
       "name": "Archetto",
-      "cnReleaseDate": "2021-01-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-01-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%A9%BA%E5%BC%A6"
     },
     {
       "id": "char_456_ash",
       "name": "Ash",
-      "cnReleaseDate": "2021-03-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-03-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%81%B0%E7%83%AC"
     },
     {
       "id": "char_340_shwaz",
       "name": "Schwarz",
-      "cnReleaseDate": "2019-08-26",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-08-27",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%BB%91"
     },
     {
       "id": "char_4055_bgsnow",
       "name": "Pozëmka",
-      "cnReleaseDate": "2022-08-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-08-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%B8%BF%E9%9B%AA"
     },
     {
       "id": "char_430_fartth",
       "name": "Fartooth",
-      "cnReleaseDate": "2021-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%BF%9C%E7%89%99"
     },
     {
       "id": "char_4193_lemuen",
       "name": "Lemuen",
-      "cnReleaseDate": "2025-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%95%BE%E7%BC%AA%E5%AE%89"
     },
     {
       "id": "char_113_cqbw",
       "name": "W",
-      "cnReleaseDate": "2020-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-05-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_9_0_3"
     },
     {
       "id": "char_300_phenxi",
       "name": "Fiammetta",
-      "cnReleaseDate": "2022-03-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-03-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8F%B2%E4%BA%9A%E6%A2%85%E5%A1%94"
     },
     {
       "id": "char_197_poca",
       "name": "Rosa",
-      "cnReleaseDate": "2020-06-17",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-06-18",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%97%A9%E9%9C%B2"
     },
     {
       "id": "char_2012_typhon",
       "name": "Typhon",
-      "cnReleaseDate": "2023-07-05",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-07-06",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%8F%90%E4%B8%B0"
     },
     {
       "id": "char_391_rosmon",
       "name": "Rosmontis",
-      "cnReleaseDate": "2020-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-11-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_14_0_1"
     },
     {
       "id": "char_1035_wisdel",
       "name": "Wiš'adel",
-      "cnReleaseDate": "2024-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-05-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_50_0_1"
     },
     {
       "id": "char_1013_chen2",
       "name": "Ch'en the Holungday",
-      "cnReleaseDate": "2021-08-02",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-08-03",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_21_0_1"
     },
     {
       "id": "char_4117_ray",
       "name": "Ray",
-      "cnReleaseDate": "2024-01-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-01-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8E%B1%E4%BC%8A"
     },
     {
       "id": "char_4138_narant",
       "name": "Narantuya",
-      "cnReleaseDate": "2024-07-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-08-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A8%9C%E4%BB%81%E5%9B%BE%E4%BA%9A"
     },
     {
       "id": "char_112_siege",
       "name": "Siege",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_222_bpipe",
       "name": "Bagpipe",
       "cnReleaseDate": "2020-03-17",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%A3%8E%E7%AC%9B"
     },
     {
       "id": "char_362_saga",
       "name": "Saga",
-      "cnReleaseDate": "2021-02-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-02-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%B5%AF%E5%B3%A8"
     },
     {
       "id": "char_4026_vulpis",
       "name": "Vulpisfoglia",
-      "cnReleaseDate": "2024-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%BF%8D%E5%86%AC"
     },
     {
       "id": "char_479_sleach",
       "name": "Saileach",
-      "cnReleaseDate": "2021-09-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-09-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%90%B4%E6%9F%B3"
     },
     {
       "id": "char_420_flamtl",
       "name": "Flametail",
-      "cnReleaseDate": "2021-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%84%B0%E5%B0%BE"
     },
     {
       "id": "char_427_vigil",
       "name": "Vigil",
-      "cnReleaseDate": "2022-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%BC%BA%E5%A4%9C"
     },
     {
       "id": "char_249_mlyss",
       "name": "Muelsyse",
-      "cnReleaseDate": "2023-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-05-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_38_0_1"
     },
     {
       "id": "char_4228_closur",
       "name": "Closure",
-      "cnReleaseDate": "2026-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-05-01",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/3046"
     },
     {
       "id": "char_1045_svash2",
       "name": "SilverAsh the Reignfrost",
-      "cnReleaseDate": "2025-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-11-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_67_0_1"
     },
     {
       "id": "char_4087_ines",
       "name": "Ines",
-      "cnReleaseDate": "2023-04-05",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-04-06",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%BC%8A%E5%86%85%E4%B8%9D"
     },
     {
       "id": "char_134_ifrit",
       "name": "Ifrit",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_213_mostma",
       "name": "Mostima",
-      "cnReleaseDate": "2019-11-18",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-11-19",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%8E%AB%E6%96%AF%E6%8F%90%E9%A9%AC"
     },
     {
       "id": "char_180_amgoat",
       "name": "Eyjafjalla",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_2013_cerber",
       "name": "Ceobe",
-      "cnReleaseDate": "2020-02-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-02-25",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%88%BB%E4%BF%84%E6%9F%8F"
     },
     {
       "id": "char_4027_heyak",
       "name": "Ho'olheyak",
-      "cnReleaseDate": "2023-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9C%8D%E5%B0%94%E6%B5%B7%E9%9B%85"
     },
     {
       "id": "char_4133_logos",
       "name": "Logos",
-      "cnReleaseDate": "2024-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%80%BB%E5%90%84%E6%96%AF"
     },
     {
       "id": "char_2015_dusk",
       "name": "Dusk",
-      "cnReleaseDate": "2021-02-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-02-05",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_16_0_4"
     },
     {
       "id": "char_4141_marcil",
       "name": "Marcille",
-      "cnReleaseDate": "2024-09-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-09-02",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%8E%9B%E9%9C%B2%E8%A5%BF%E5%B0%94"
     },
     {
       "id": "char_472_pasngr",
       "name": "Passenger",
-      "cnReleaseDate": "2021-04-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-04-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%BC%82%E5%AE%A2"
     },
     {
       "id": "char_426_billro",
       "name": "Carnelian",
-      "cnReleaseDate": "2021-05-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-06-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8D%A1%E6%B6%85%E5%88%A9%E5%AE%89"
     },
     {
       "id": "char_4080_lin",
       "name": "Lin",
-      "cnReleaseDate": "2023-01-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-01-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9E%97"
     },
     {
       "id": "char_1046_sbell2",
       "name": "Pramanix the Prerita",
-      "cnReleaseDate": "2025-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%9C%A3%E8%81%86%E5%88%9D%E9%9B%AA"
     },
     {
       "id": "char_377_gdglow",
       "name": "Goldenglow",
-      "cnReleaseDate": "2022-02-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-02-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%BE%84%E9%97%AA"
     },
     {
       "id": "char_1038_whitw2",
       "name": "Lappland the Decadenza",
-      "cnReleaseDate": "2024-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-11-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_56_0_1"
     },
     {
       "id": "char_4046_ebnhlz",
       "name": "Ebenholz",
-      "cnReleaseDate": "2022-06-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-06-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%BB%91%E9%94%AE"
     },
     {
       "id": "char_4226_veen",
       "name": "Viy",
-      "cnReleaseDate": "2026-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-05-01",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/3046"
     },
     {
       "id": "char_4146_nymph",
       "name": "Nymph",
-      "cnReleaseDate": "2024-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-07-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A6%AE%E8%8A%99"
     },
     {
       "id": "char_1040_blaze2",
       "name": "Blaze the Igniting Spark",
-      "cnReleaseDate": "2025-01-21",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-01-22",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%83%9B%E7%85%8C"
     },
     {
       "id": "char_4204_mantra",
       "name": "Mantra",
-      "cnReleaseDate": "2025-10-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-10-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%9C%9F%E8%A8%80"
     },
     {
       "id": "char_450_necras",
       "name": "Necrass",
-      "cnReleaseDate": "2025-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%AD%BB%E8%8A%92"
     },
     {
       "id": "char_206_gnosis",
       "name": "Gnosis",
-      "cnReleaseDate": "2021-12-20",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-12-21",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%81%B5%E7%9F%A5"
     },
     {
       "id": "char_291_aglina",
       "name": "Angelina",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_358_lisa",
       "name": "Suzuran",
-      "cnReleaseDate": "2020-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-07-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%93%83%E5%85%B0"
     },
     {
       "id": "char_1047_halo2",
       "name": "Astgenne the Lightchaser",
-      "cnReleaseDate": "2025-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%BA%AF%E5%85%89%E6%98%9F%E6%BA%90"
     },
     {
       "id": "char_248_mgllan",
       "name": "Magallan",
-      "cnReleaseDate": "2019-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%BA%A6%E5%93%B2%E4%BC%A6"
     },
     {
       "id": "char_4195_radian",
       "name": "Raidian",
-      "cnReleaseDate": "2024-11-15",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-07-15",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/roguelike_topic_table.json#rogue_5"
     },
     {
       "id": "char_1012_skadi2",
       "name": "Skadi the Corrupting Heart",
-      "cnReleaseDate": "2021-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-05-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_18_0_3"
     },
     {
       "id": "char_4134_cetsyr",
       "name": "Civilight Eterna",
-      "cnReleaseDate": "2024-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%AD%94%E7%8E%8B"
     },
     {
       "id": "char_1031_slent2",
       "name": "Silence the Paradigmatic",
-      "cnReleaseDate": "2023-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98"
     },
     {
       "id": "char_4202_haruka",
       "name": "Haruka",
-      "cnReleaseDate": "2025-08-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-08-02",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%81%A5"
     },
     {
       "id": "char_2023_ling",
       "name": "Ling",
-      "cnReleaseDate": "2022-01-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-01-25",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_25_0_1"
     },
     {
       "id": "char_4072_ironmn",
       "name": "Stainless",
-      "cnReleaseDate": "2022-10-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-10-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%99%BD%E9%93%81"
     },
     {
       "id": "char_4212_nasti",
       "name": "Nasti",
-      "cnReleaseDate": "2025-12-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-12-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A8%9C%E6%96%AF%E6%8F%90"
     },
     {
       "id": "char_245_cello",
       "name": "Virtuosa",
-      "cnReleaseDate": "2023-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-11-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_44_0_1"
     },
     {
       "id": "char_1042_phatm2",
       "name": "Tragodia",
-      "cnReleaseDate": "2025-06-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-06-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%85%92%E7%A5%9E"
     },
     {
       "id": "char_250_phatom",
       "name": "Phantom",
-      "cnReleaseDate": "2020-04-20",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-04-21",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%82%80%E5%BD%B1"
     },
     {
       "id": "char_1028_texas2",
       "name": "Texas the Omertosa",
-      "cnReleaseDate": "2022-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-11-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_33_0_1"
     },
     {
       "id": "char_1029_yato2",
       "name": "Kirin R Yato",
-      "cnReleaseDate": "2023-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%BA%92%E9%BA%9FR%E5%A4%9C%E5%88%80"
     },
     {
       "id": "char_1502_crosly",
       "name": "Crownslayer",
-      "cnReleaseDate": "2024-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%BC%91%E5%90%9B%E8%80%85"
     },
     {
       "id": "char_322_lmlee",
       "name": "Lee",
-      "cnReleaseDate": "2022-01-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-01-25",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%80%81%E9%B2%A4"
     },
     {
       "id": "char_1033_swire2",
       "name": "Swire the Elegant Wit",
-      "cnReleaseDate": "2023-07-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-08-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%90%B3%E7%90%85%E8%AF%97%E6%80%80%E9%9B%85"
     },
     {
       "id": "char_400_weedy",
       "name": "Weedy",
-      "cnReleaseDate": "2020-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B8%A9%E8%92%82"
     },
     {
       "id": "char_225_haak",
       "name": "Aak",
-      "cnReleaseDate": "2020-01-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-01-16",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%98%BF"
     },
     {
       "id": "char_1041_angel2",
       "name": "Exusiai the New Covenant",
-      "cnReleaseDate": "2025-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-05-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_61_0_1"
     },
     {
       "id": "char_474_glady",
       "name": "Gladiia",
-      "cnReleaseDate": "2021-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%AD%8C%E8%95%BE%E8%92%82%E5%A8%85"
     },
     {
       "id": "char_437_mizuki",
       "name": "Mizuki",
-      "cnReleaseDate": "2021-08-02",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-08-03",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B0%B4%E6%9C%88"
     },
     {
       "id": "char_4132_ascln",
       "name": "Ascalon",
-      "cnReleaseDate": "2024-04-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-04-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%98%BF%E6%96%AF%E5%8D%A1%E7%BA%B6"
     },
     {
       "id": "char_1023_ghost2",
       "name": "Specter the Unchained",
-      "cnReleaseDate": "2022-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-05-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_27_0_3"
     },
     {
       "id": "char_4048_doroth",
       "name": "Dorothy",
-      "cnReleaseDate": "2022-07-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-07-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%A4%9A%E8%90%9D%E8%A5%BF"
     },
     {
       "id": "char_4123_ela",
       "name": "Ela",
-      "cnReleaseDate": "2024-03-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-03-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%89%BE%E6%8B%89"
     },
     {
       "id": "char_2027_wang",
       "name": "Wang",
-      "cnReleaseDate": "2026-02-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-02-10",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_70_0_1"
     },
     {
       "id": "char_1039_thorn2",
       "name": "Thorns the Lodestar",
-      "cnReleaseDate": "2024-12-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-12-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%BC%95%E6%98%9F%E6%A3%98%E5%88%BA"
     },
     {
       "id": "char_147_shining",
       "name": "Shining",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_179_cgbird",
       "name": "Nightingale",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_003_kalts",
       "name": "Kal'tsit",
-      "cnReleaseDate": "2021-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%87%AF%E5%B0%94%E5%B8%8C"
     },
     {
       "id": "char_4042_lumen",
       "name": "Lumen",
-      "cnReleaseDate": "2022-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B5%81%E6%98%8E"
     },
     {
       "id": "char_1016_agoat2",
       "name": "Eyjafjalla the Hvít Aska",
-      "cnReleaseDate": "2023-07-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-08-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_41_0_1"
     },
     {
       "id": "char_1020_reed2",
       "name": "Reed the Flame Shadow",
-      "cnReleaseDate": "2022-12-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-12-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%84%B0%E5%BD%B1%E8%8B%87%E8%8D%89"
     },
     {
       "id": "char_4056_titi",
       "name": "Titi",
-      "cnReleaseDate": "2026-01-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-01-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BC%87%E7%BC%87"
     },
     {
       "id": "char_4179_monstr",
       "name": "Mon3tr",
-      "cnReleaseDate": "2025-04-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-04-07",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/Mon3tr"
     },
     {
       "id": "char_1052_kalts2",
       "name": "Kal'tsit Esperanta",
-      "cnReleaseDate": "2026-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-05-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_73_0_1"
     },
     {
       "id": "char_136_hsguma",
       "name": "Hoshiguma",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_202_demkni",
       "name": "Saria",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_423_blemsh",
       "name": "Blemishine",
-      "cnReleaseDate": "2020-10-14",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-10-15",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%91%95%E5%85%89"
     },
     {
       "id": "char_2025_shu",
       "name": "Shu",
-      "cnReleaseDate": "2024-01-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-02-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_47_0_1"
     },
     {
       "id": "char_2014_nian",
       "name": "Nian",
-      "cnReleaseDate": "2020-01-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-01-16",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_6_0_4"
     },
     {
       "id": "char_311_mudrok",
       "name": "Mudrock",
-      "cnReleaseDate": "2020-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B3%A5%E5%B2%A9"
     },
     {
       "id": "char_4065_judge",
       "name": "Penance",
-      "cnReleaseDate": "2022-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%96%A5%E7%BD%AA"
     },
     {
       "id": "char_416_zumama",
       "name": "Eunectes",
-      "cnReleaseDate": "2020-08-24",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-08-25",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%A3%AE%E8%9A%BA"
     },
     {
       "id": "char_4039_horn",
       "name": "Horn",
-      "cnReleaseDate": "2022-04-13",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-04-14",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8F%B7%E8%A7%92"
     },
     {
       "id": "char_1034_jesca2",
       "name": "Jessica the Liberated",
-      "cnReleaseDate": "2023-09-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-09-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%B6%A4%E7%81%AB%E6%9D%B0%E8%A5%BF%E5%8D%A1"
     },
     {
       "id": "char_4194_rmixer",
       "name": "Sankta Miksaparato",
-      "cnReleaseDate": "2025-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%BF%A1%E4%BB%B0%E6%90%85%E6%8B%8C%E6%9C%BA"
     },
     {
       "id": "char_2026_yu",
       "name": "Yu",
-      "cnReleaseDate": "2025-01-21",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-01-22",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_58_0_1"
     },
     {
       "id": "char_1044_hsgma2",
       "name": "Hoshiguma the Breacher",
-      "cnReleaseDate": "2025-08-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-08-02",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_64_0_1"
     },
     {
       "id": "char_264_f12yin",
       "name": "Mountain",
-      "cnReleaseDate": "2020-12-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-12-17",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%B1%B1"
     },
     {
       "id": "char_2024_chyue",
       "name": "Chongyue",
-      "cnReleaseDate": "2023-01-16",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-01-17",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_35_0_1"
     },
     {
       "id": "char_4037_demetr",
       "name": "Bellone",
-      "cnReleaseDate": "2026-03-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-03-10",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%B4%9D%E6%B4%9B%E5%86%85"
     },
     {
       "id": "char_172_svrash",
       "name": "SilverAsh",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_1"
     },
     {
       "id": "char_293_thorns",
       "name": "Thorns",
-      "cnReleaseDate": "2020-08-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-08-11",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%A3%98%E5%88%BA"
     },
     {
       "id": "char_4082_qiubai",
       "name": "Qiubai",
-      "cnReleaseDate": "2023-02-13",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-02-14",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%BB%87%E7%99%BD"
     },
     {
       "id": "char_4182_oblvns",
       "name": "Sakiko Togawa",
-      "cnReleaseDate": "2025-09-03",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-09-04",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%B8%B0%E5%B7%9D%E7%A5%A5%E5%AD%90"
     },
     {
       "id": "char_4088_hodrer",
       "name": "Hoederer",
-      "cnReleaseDate": "2023-10-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-10-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%B5%AB%E5%BE%B7%E9%9B%B7"
     },
     {
       "id": "char_4145_ulpia",
       "name": "Ulpianus",
-      "cnReleaseDate": "2024-06-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-06-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E4%B9%8C%E5%B0%94%E6%AF%94%E5%AE%89"
     },
     {
       "id": "char_4058_pepe",
       "name": "Pepe",
-      "cnReleaseDate": "2024-07-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-08-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_53_0_1"
     },
     {
       "id": "char_1051_headb2",
       "name": "Zima the Raging Tide",
-      "cnReleaseDate": "2026-04-06",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-04-07",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/1461"
     },
     {
       "id": "char_010_chen",
       "name": "Ch'en",
-      "cnReleaseDate": "2019-07-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-07-09",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_2_0_1"
     },
     {
       "id": "char_4009_irene",
       "name": "Irene",
-      "cnReleaseDate": "2022-04-30",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-05-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%89%BE%E4%B8%BD%E5%A6%AE"
     },
     {
       "id": "char_4116_blkkgt",
       "name": "Degenbrecher",
-      "cnReleaseDate": "2023-12-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-12-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%94%8F"
     },
     {
       "id": "char_017_huang",
       "name": "Blaze",
-      "cnReleaseDate": "2019-12-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-12-24",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%85%8C"
     },
     {
       "id": "char_1026_gvial2",
       "name": "Gavial the Invincible",
-      "cnReleaseDate": "2022-08-10",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-08-11",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_30_0_1"
     },
     {
       "id": "char_350_surtr",
       "name": "Surtr",
-      "cnReleaseDate": "2020-09-23",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-09-24",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8F%B2%E5%B0%94%E7%89%B9%E5%B0%94"
     },
     {
       "id": "char_4098_vvana",
       "name": "Viviana",
-      "cnReleaseDate": "2023-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%96%87%E8%96%87%E5%AE%89%E5%A8%9C"
     },
     {
       "id": "char_1019_siege2",
       "name": "Vina Victoria",
-      "cnReleaseDate": "2024-10-08",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-10-09",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%BB%B4%E5%A8%9C%C2%B7%E7%BB%B4%E5%A4%9A%E5%88%A9%E4%BA%9A"
     },
     {
       "id": "char_1050_chen3",
       "name": "Ch'en the Dawnstreak",
-      "cnReleaseDate": "2026-02-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2026-02-10",
+      "status": "verified",
+      "source": "https://ak.hypergryph.com/news/4942"
     },
     {
       "id": "char_188_helage",
       "name": "Hellagur",
-      "cnReleaseDate": "2019-09-09",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-09-10",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E8%B5%AB%E6%8B%89%E6%A0%BC"
     },
     {
       "id": "char_4121_zuole",
       "name": "Zuo Le",
-      "cnReleaseDate": "2024-01-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2024-02-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%B7%A6%E4%B9%90"
     },
     {
       "id": "char_485_pallas",
       "name": "Pallas",
-      "cnReleaseDate": "2021-07-01",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-07-02",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%B8%95%E6%8B%89%E6%96%AF"
     },
     {
       "id": "char_1014_nearl2",
       "name": "Nearl the Radiant Knight",
-      "cnReleaseDate": "2021-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2021-11-01",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#LIMITED_23_0_1"
     },
     {
       "id": "char_4011_lessng",
       "name": "Lessing",
-      "cnReleaseDate": "2023-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%AD%A2%E9%A2%82"
     },
     {
       "id": "char_1032_excu2",
       "name": "Executor the Ex Foedere",
-      "cnReleaseDate": "2023-06-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2023-06-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%9C%A3%E7%BA%A6%E9%80%81%E8%91%AC%E4%BA%BA"
     },
     {
       "id": "char_4010_etlchi",
       "name": "Entelechia",
-      "cnReleaseDate": "2025-02-13",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-02-14",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E9%9A%90%E5%BE%B7%E6%9D%A5%E5%B8%8C"
     },
     {
       "id": "char_4064_mlynar",
       "name": "Młynar",
-      "cnReleaseDate": "2022-09-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2022-09-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E7%8E%9B%E6%81%A9%E7%BA%B3"
     },
     {
       "id": "char_1043_leizi2",
       "name": "Leizi the Thunderbringer",
-      "cnReleaseDate": "2025-07-07",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-07-08",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%8F%B8%E9%9C%86%E6%83%8A%E8%9B%B0"
     },
     {
       "id": "char_4214_cairn",
       "name": "Cairn",
-      "cnReleaseDate": "2025-12-04",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2025-12-05",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E5%93%8D%E7%9F%B3"
     },
     {
       "id": "char_230_savage",
       "name": "Savage",
-      "cnReleaseDate": "2019-04-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-04-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9A%B4%E8%A1%8C"
     },
     {
       "id": "char_282_catap",
       "name": "Catapult",
-      "cnReleaseDate": "2019-05-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-05-23",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_3"
     },
     {
       "id": "char_283_midn",
       "name": "Midnight",
-      "cnReleaseDate": "2019-05-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-05-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_4"
     },
     {
       "id": "char_137_brownb",
       "name": "Beehunter",
-      "cnReleaseDate": "2019-05-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-05-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_4"
     },
     {
       "id": "char_347_jaksel",
       "name": "Jackie",
-      "cnReleaseDate": "2020-10-31",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2020-11-01",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%9D%B0%E5%85%8B"
     },
     {
       "id": "char_164_nightm",
       "name": "Nightmare",
-      "cnReleaseDate": "2019-05-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-05-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_4"
     },
     {
       "id": "char_220_grani",
       "name": "Grani",
-      "cnReleaseDate": "2019-05-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-05-30",
+      "status": "community-listed",
+      "source": "https://prts.wiki/w/%E6%A0%BC%E6%8B%89%E5%B0%BC"
     },
     {
       "id": "char_263_skadi",
       "name": "Skadi",
-      "cnReleaseDate": "2019-05-29",
-      "source": "https://arknights.wiki.gg/wiki/Operator/List/Release"
+      "cnReleaseDate": "2019-05-30",
+      "status": "verified",
+      "source": "https://github.com/ArknightsAssets/ArknightsGamedata/blob/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842/cn/gamedata/excel/gacha_table.json#NORM_0_1_4"
     }
   ]
 }

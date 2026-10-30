@@ -16,10 +16,7 @@ import {
   buildingEntries, exitCodeFor, handbookEntries, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds,
   redact, resolvedSkillGaps, revisionStatus, skillIdsOf, usedRangeIds, compareRoster, type CompareFile,
 } from "../src/game-data/gamedata-diff";
-import {
-  gameDataBuildingTableHashes, gameDataFavorTableHashes, gameDataHandbookTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes,
-  gameDataTableHashes, type GameDataRegion,
-} from "../src/game-data/gamedata-revisions";
+import { gameDataRepository, gameDataRevisions, pinnedGameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { directoryBlobs, fetchBytes, github, token } from "./github-api";
 import { compareUrl, contentsUrl, gameDataDirectory, latestCommitUrl, rawGameDataUrl, treeUrl } from "../src/game-data/github-requests";
 import { operatorArchetypeLabels } from "../src/game-data/operator-archetypes";
@@ -29,10 +26,6 @@ const regions: readonly GameDataRegion[] = ["en", "cn"];
 const imageDirectories = ["characters", "skills", "equip", "ui"] as const;
 const neededTables = ["character_table", "skill_table", "range_table", "gamedata_const", "building_data", "favor_table", "uniequip_table", "battle_equip_table", "handbook_info_table"] as const;
 type Table = (typeof neededTables)[number];
-
-const pinnedHashes = (region: GameDataRegion): Record<string, string> => ({
-  ...gameDataTableHashes[region], ...gameDataSkillTableHashes[region], ...gameDataBuildingTableHashes[region], ...gameDataFavorTableHashes[region], ...gameDataHandbookTableHashes[region],
-});
 
 const hasFlag = (name: string) => process.argv.find((item) => item.startsWith(`--${name}=`))?.slice(name.length + 3);
 
@@ -134,7 +127,7 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
       const local = snapshots[region] ? join(snapshots[region]!, `${table}.json`) : undefined;
       const exists = local ? await stat(local).then(() => true, () => false) : false;
       data = exists ? await readFile(local!) : await download(rawGameDataUrl(gameDataRevisions[region], region, table), join(target, `${region}-${gameDataRevisions[region].slice(0, 7)}`, `${table}.json`));
-      if (sha256(data) !== pinnedHashes(region)[table]) throw new Error(`The ${region} baseline of ${table} does not match the pinned SHA-256`);
+      if (sha256(data) !== pinnedGameDataTableHashes(region)[table]) throw new Error(`The ${region} baseline of ${table} does not match the pinned SHA-256`);
     }
     const value = JSON.parse(data.toString("utf8")) as unknown;
     cache.set(key, value);

@@ -4,7 +4,7 @@ Este documento recoge las fuentes de datos, recursos gráficos y herramientas ut
 
 ## Datos del juego
 
-- [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata): snapshots EN/CN utilizados por el pipeline.
+- [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata): snapshots EN/CN utilizados por el pipeline. Las tablas CN `gacha_table` y `roguelike_topic_table` del commit `e4888c5` (fijadas en `src/game-data/gamedata-revisions.ts`) dan las fechas CN de lanzamiento que pueden calcularse desde los datos del juego (ver «Anuncios oficiales»).
 - [Arknights CDN](https://web.hycdn.cn/arknights/game/assets/char/portrait/): retratos por identificador `char_*`.
 
 ## Anuncios oficiales
@@ -17,14 +17,22 @@ Fecha de lanzamiento: la fecha, en la hora oficial del servidor de cada región 
 - [«夏日嘉年华» 2026](https://ak.hypergryph.com/news/8571): 2026-08-01, Angelina the Mellow Wish, Thumpy, Jacinta y Timeslot.
 - [«月行水上»](https://ak.hypergryph.com/news/9681): 2026-09-04, Makoto Yuki, Aigis, Yukari Takeba y Koromaru.
 
-Mechanist (2026-07-17) se registra con [PRTS](https://prts.wiki/w/%E6%9C%BA%E6%A2%B0%E5%B8%88) a falta de anuncio oficial localizado. Las fechas CN de los operadores Global (`data/operator-cn-release-manifest.json`) proceden de la tabla de lanzamientos de Terra Wiki y se marcan como datos comunitarios pendientes de revisión: esa tabla da la fecha CN un día antes que los anuncios oficiales y ya no se usa como fuente de fechas.
+Mechanist (2026-07-17) se registra con [PRTS](https://prts.wiki/w/%E6%9C%BA%E6%A2%B0%E5%B8%88) a falta de anuncio oficial localizado.
+
+Las fechas CN de los operadores Global (`data/operator-cn-release-manifest.json`) llevan estado y fuente por operador:
+
+- Datos del juego (`verified`, 108 operadores): primer banner de `gacha_table` cuya lista de operadores lo incluye (esas listas solo existen hasta julio de 2019; las aperturas anteriores al lanzamiento del servidor CN, el 30 de abril de 2019, cuentan como esa fecha), banners limitados (`limitedCharId`) y temas de Integrated Strategies de `roguelike_topic_table` para los operadores que se obtienen en ellos. La fuente enlaza la tabla en la revisión fijada, con el banner o el tema como ancla.
+- Anuncios oficiales de Hypergryph (`verified`, 11 operadores): [news/9603](https://ak.hypergryph.com/news/9603), [news/4942](https://ak.hypergryph.com/news/4942), [news/1461](https://ak.hypergryph.com/news/1461) y [news/3046](https://ak.hypergryph.com/news/3046).
+- [PRTS](https://prts.wiki/w/%E5%B9%B2%E5%91%98%E4%B8%8A%E7%BA%BF%E6%97%B6%E9%97%B4%E4%B8%80%E8%A7%88) (`community-listed`, 296 operadores): página de cada operador. Todas las fechas anteriores coinciden con PRTS.
+
+La tabla de lanzamientos de Terra Wiki ya no se usa como fuente de fechas: daba la fecha CN un día antes que los anuncios oficiales y PRTS.
 
 ## Wikis y documentación comunitaria
 
-- [Terra Wiki](https://arknights.wiki.gg/): contraste de nombres y relaciones; las fechas CN de los operadores Global proceden de su tabla de lanzamientos (pendientes de revisión, ver «Anuncios oficiales»).
+- [Terra Wiki](https://arknights.wiki.gg/): contraste de nombres y relaciones.
   - Nombres oficiales en inglés de los modos y temas a los que se limitan algunos efectos de módulo, que los datos del juego no incluyen: [Integrated Strategies](https://arknights.wiki.gg/wiki/Integrated_Strategies) (también el tema Sui's Garden of Grotesqueries) y [Reclamation Algorithm](https://arknights.wiki.gg/wiki/Reclamation_Algorithm). Consultado el 29 de octubre de 2026; registrados con su fuente en `data/operator-module-modes.json`.
   - Iconos de atributos (categoría `Template icons`) y de potencial P2–P6 (`Potential_2.png` a `Potential_6.png`), copiados localmente en `public/assets/operator-stats/` y `public/assets/operator-potential/`.
-- [PRTS Wiki](https://prts.wiki/): referencia comunitaria para información CN y contraste de fechas CN por operador.
+- [PRTS Wiki](https://prts.wiki/): referencia comunitaria para información CN y fuente de las fechas CN que no pueden calcularse desde los datos del juego ni tienen anuncio oficial localizado (ver «Anuncios oficiales»).
 
 ## Recursos gráficos
 

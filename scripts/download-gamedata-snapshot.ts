@@ -11,9 +11,7 @@
 import { mkdir, readFile, rename, rm, stat, writeFile } from "node:fs/promises";
 import { isAbsolute, join, relative, resolve } from "node:path";
 import { redact } from "../src/game-data/gamedata-diff";
-import {
-  gameDataBuildingTableHashes, gameDataFavorTableHashes, gameDataHandbookTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, type GameDataRegion,
-} from "../src/game-data/gamedata-revisions";
+import { gameDataRepository, gameDataRevisions, pinnedGameDataTableHashes } from "../src/game-data/gamedata-revisions";
 import { isFullCommit, parseTableList, snapshotDirectoryName, snapshotFile, snapshotManifest, snapshotMismatches, tablesFromReport, type SnapshotFile } from "../src/game-data/gamedata-snapshot";
 import { directoryBlobs, fetchBytes, token } from "./github-api";
 import { gameDataDirectory, rawGameDataUrl } from "../src/game-data/github-requests";
@@ -21,9 +19,6 @@ import { gameDataDirectory, rawGameDataUrl } from "../src/game-data/github-reque
 const flag = (name: string) => process.argv.find((item) => item.startsWith(`--${name}=`))?.slice(name.length + 3);
 const exists = (path: string) => stat(path).then(() => true, () => false);
 
-const pinned = (region: GameDataRegion): Record<string, string> => ({
-  ...gameDataTableHashes[region], ...gameDataSkillTableHashes[region], ...gameDataBuildingTableHashes[region], ...gameDataFavorTableHashes[region], ...gameDataHandbookTableHashes[region],
-});
 
 function outsideRepository(path: string): string {
   const target = resolve(path);
@@ -42,7 +37,7 @@ async function main() {
   if (!isFullCommit(revision)) throw new Error("--commit must be a full 40-character commit hash");
   if (fromReport && fromReport.revision !== revision) throw new Error("--commit differs from the revision in the report");
   const isPinned = revision === gameDataRevisions[region];
-  const tables = flag("tables") ? parseTableList(flag("tables")!) : fromReport?.tables ?? Object.keys(pinned(region));
+  const tables = flag("tables") ? parseTableList(flag("tables")!) : fromReport?.tables ?? Object.keys(pinnedGameDataTableHashes(region));
 
   const directory = join(outRoot, snapshotDirectoryName(region, revision));
   if (await exists(directory) && !process.argv.includes("--force")) throw new Error("The snapshot directory exists; pass --force to replace it");
@@ -60,7 +55,7 @@ async function main() {
       files.push(snapshotFile(region, revision, table, data, blob));
       await writeFile(join(partial, `${table}.json`), data);
     }
-    const bad = isPinned ? snapshotMismatches(files, pinned(region)) : [];
+    const bad = isPinned ? snapshotMismatches(files, pinnedGameDataTableHashes(region)) : [];
     if (bad.length) throw new Error(`The pinned ${region} SHA-256 does not match: ${bad.join(", ")}`);
     await writeFile(join(partial, "manifest.json"), `${JSON.stringify(snapshotManifest(region, revision, files), null, 2)}\n`, "utf8");
 

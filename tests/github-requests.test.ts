@@ -26,7 +26,7 @@ describe("validated values", () => {
   });
 
   it("accepts only the pinned tables", () => {
-    assert.deepEqual(gameDataTables, ["battle_equip_table", "building_data", "character_table", "favor_table", "gamedata_const", "handbook_info_table", "range_table", "skill_table", "uniequip_table"]);
+    assert.deepEqual(gameDataTables, ["battle_equip_table", "building_data", "character_table", "favor_table", "gacha_table", "gamedata_const", "handbook_info_table", "range_table", "roguelike_topic_table", "skill_table", "uniequip_table"]);
     for (const value of ["character_table.json", "other_table", "../character_table", "character_table/..", ...malicious]) assert.throws(() => gameDataTable(value), /Unknown GameData table/);
   });
 

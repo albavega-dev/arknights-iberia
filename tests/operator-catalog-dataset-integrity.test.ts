@@ -62,11 +62,15 @@ test("CN release dates with their own provenance keep it in the catalog", async 
   }
 });
 
-test("Global operators carry the CN release date status of the release manifest", async () => {
+test("Global operators carry the CN release date, status and source of their release manifest entry", async () => {
   const { catalog } = await readCatalog();
-  const release = JSON.parse(await readFile(path.resolve("data/operator-cn-release-manifest.json"), "utf8")) as { releaseDateStatus: string };
-  const statuses = new Set(catalog.operators.filter((entry) => !entry.cnOnly).map((entry) => entry.cnReleaseDateStatus));
-  assert.deepEqual([...statuses], [release.releaseDateStatus]);
+  const release = JSON.parse(await readFile(path.resolve("data/operator-cn-release-manifest.json"), "utf8")) as { operators: { id: string; cnReleaseDate: string; status: string; source: string }[] };
+  const global = catalog.operators.filter((entry) => !entry.cnOnly);
+  assert.equal(global.length, release.operators.length);
+  for (const entry of release.operators) {
+    const operator = global.find((item) => item.id === entry.id)!;
+    assert.deepEqual([operator.cnReleaseDate, operator.cnReleaseDateStatus, operator.cnReleaseDateSource], [entry.cnReleaseDate, entry.status, entry.source]);
+  }
 });
 
 test("biographies index is valid and lists every catalog operator in its region", async () => {

@@ -60,3 +60,22 @@ export const gameDataHandbookTableHashes: Readonly<Record<GameDataRegion, Readon
   en: { handbook_info_table: "07077CD529965C57DA1F602028F1CEEC81B43814AF0D8F131DCBED92B04E0498" },
   cn: { handbook_info_table: "B6E6FA4CAFE118B8C0342E7643A6103775F72C173A43467AEEA22DFBEE01D108" },
 };
+
+// CN release dates: banner openings and Integrated Strategies topics. Pinned for CN only.
+export type GameDataReleaseTable = "gacha_table" | "roguelike_topic_table";
+
+export const gameDataReleaseTableHashes: Readonly<Record<GameDataRegion, Readonly<Partial<Record<GameDataReleaseTable, string>>>>> = {
+  en: {},
+  cn: {
+    gacha_table: "40F7CFEE04EA9DDC48D717F64EA9EB0C608514A2D94FC3F0800A1B93F7EE98AF",
+    roguelike_topic_table: "9C9B9527A3B22A8776A3554117506623EBEBAE7DFF2E688B12F7C0864DD19850",
+  },
+};
+
+/** Every table pinned for a region, with its SHA-256. */
+export function pinnedGameDataTableHashes(region: GameDataRegion): Readonly<Record<string, string>> {
+  return {
+    ...gameDataTableHashes[region], ...gameDataSkillTableHashes[region], ...gameDataBuildingTableHashes[region], ...gameDataFavorTableHashes[region],
+    ...gameDataHandbookTableHashes[region], ...gameDataReleaseTableHashes[region],
+  } as Readonly<Record<string, string>>;
+}
