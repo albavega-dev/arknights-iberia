@@ -1305,6 +1305,25 @@
   width: auto;
   justify-self: stretch;
 }
+/* Selectors: the CN modules switch sits in the headings row, right-aligned over the box */
+.operator-stats-selectors {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  min-width: 0;
+}
+.operator-stats-selectors > .operator-modules-cn-toggle {
+  grid-row: 1;
+  align-self: center;
+  justify-self: end;
+  min-height: 0;
+  padding: 0;
+}
+.operator-stats-selectors > .operator-stats-controls {
+  grid-column: 1;
+  grid-row: 2;
+}
 .operator-stats-card {
   grid-column: 1;
   grid-row: 2;
@@ -1854,13 +1873,27 @@
   }
   .operator-stats-attributes > .operator-stats-heading,
   .operator-stats-card,
+  .operator-stats-selectors,
   .operator-stats-controls,
   .operator-stats-talents {
     grid-column: 1;
     grid-row: auto;
   }
+  .operator-stats-selectors {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    width: max-content;
+    margin-top: var(--space-4);
+  }
+  .operator-stats-selectors > .operator-modules-cn-toggle {
+    align-self: flex-end;
+  }
   .operator-stats-controls {
     margin-top: var(--space-4);
+  }
+  .operator-stats-selectors > .operator-stats-controls {
+    margin-top: 0;
   }
   .operator-record-placeholder span:first-child {
     border-right: 0;
@@ -3917,9 +3950,6 @@ button.operator-base-skill-unlock:focus-visible {
 }
 .operators-cn-toggle.operator-modules-cn-toggle {
   order: initial;
-}
-.operator-stats-controls .operator-modules-cn-toggle {
-  margin-top: var(--space-1);
 }
 /* Module card */
 .operator-module-card {
