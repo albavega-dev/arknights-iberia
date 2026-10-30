@@ -129,7 +129,7 @@ describe("OperatorSkillsPanel", () => {
     fireEvent.click(toggle);
     expect(toggle).toHaveAttribute("aria-expanded", "true");
     expect(toggle).toHaveTextContent("Ocultar niveles");
-    const region = screen.getByRole("region", { name: "Valores por nivel de S1" });
+    const region = screen.getByRole("region", { name: "Tabla de niveles de Habilidad 1" });
     expect(toggle).toHaveAttribute("aria-controls", region.id);
     expect(region).toHaveAttribute("tabindex", "0");
     const rows = within(region).getAllByRole("row");

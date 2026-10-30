@@ -150,8 +150,8 @@ function SkillLevelSelector({ skill, selected, onSelect }: { skill: OperatorSkil
   })}</div>)}</div></div>;
 }
 
-function SkillLevelsTable({ skill, id }: { skill: OperatorSkillView; id: string }) {
-  return <div className="operator-skill-table-scroll" id={id} role="region" aria-label={`Valores por nivel de S${skill.slot}`} tabIndex={0}><table className="operator-skill-table"><caption className="sr-only">Valores por nivel de S{skill.slot}</caption><thead><tr><th scope="col">Nivel</th><th scope="col">SP inicial</th><th scope="col">Coste de SP</th><th scope="col">Duración</th></tr></thead><tbody>{skill.levels.map((level) => <tr key={level.index}><th scope="row">{level.label}</th>{levelValues(skill, level).map((value) => <td key={value.label}>{value.text}</td>)}</tr>)}</tbody></table></div>;
+function SkillLevelsTable({ skill, id, name }: { skill: OperatorSkillView; id: string; name: string }) {
+  return <div className="operator-skill-table-scroll" id={id} role="region" aria-label={`Tabla de niveles de ${name}`} tabIndex={0}><table className="operator-skill-table"><caption className="sr-only">Valores por nivel de S{skill.slot}</caption><thead><tr><th scope="col">Nivel</th><th scope="col">SP inicial</th><th scope="col">Coste de SP</th><th scope="col">Duración</th></tr></thead><tbody>{skill.levels.map((level) => <tr key={level.index}><th scope="row">{level.label}</th>{levelValues(skill, level).map((value) => <td key={value.label}>{value.text}</td>)}</tr>)}</tbody></table></div>;
 }
 
 type OperatorRange = TacticalRangeDefinition | null;
@@ -176,7 +176,7 @@ function SkillCard({ view, skill, operatorRange, glossary }: { view: OperatorSki
     <SkillLevelSelector skill={skill} selected={selected} onSelect={setSelected} />
     <div className="operator-skill-data"><dl className="operator-skill-values">{values.map((value) => <div key={value.label}><dt><value.icon size={16} strokeWidth={2} aria-hidden="true" />{value.label}</dt><dd>{value.text}</dd></div>)}</dl><SkillRange view={view} level={level} operatorRange={operatorRange} /></div>
     <p className="operator-skill-description"><SkillDescription nodes={level.description} glossary={{ ...glossary, terms: skill.terms }} /></p>
-    <div className="operator-skill-levels-toggle"><OperatorControlButton appearance="naval" size="compact" type="button" aria-expanded={expanded} aria-controls={`${id}-table`} onClick={() => setExpanded((current) => !current)}>{expanded ? "Ocultar niveles" : "Mostrar niveles"}</OperatorControlButton>{expanded ? <SkillLevelsTable skill={skill} id={`${id}-table`} /> : null}</div>
+    <div className="operator-skill-levels-toggle"><OperatorControlButton appearance="naval" size="compact" type="button" aria-expanded={expanded} aria-controls={`${id}-table`} onClick={() => setExpanded((current) => !current)}>{expanded ? "Ocultar niveles" : "Mostrar niveles"}</OperatorControlButton>{expanded ? <SkillLevelsTable skill={skill} name={level.name} id={`${id}-table`} /> : null}</div>
   </article>;
 }
 
