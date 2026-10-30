@@ -21,7 +21,14 @@ export function terraStartToOpensAt(startTime: string): string {
   return `${new Date(utc + globalOffsetMinutes * 60_000).toISOString().slice(0, 19)}${globalOffset}`;
 }
 
-const slug = (value: string) => value.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+/** Lowercase ASCII words joined by hyphens. Splitting on the separators keeps the cost linear for any input. */
+export const eventSlug = (value: string) => value.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).join("-");
+/** The event with the earliest start; undefined for an empty list. */
+export function earliestEvent(events: readonly TerraGlobalEvent[]): TerraGlobalEvent | undefined {
+  let best: TerraGlobalEvent | undefined;
+  for (const event of events) if (!best || event.startTime < best.startTime) best = event;
+  return best;
+}
 const sameName = (a: string, b: string) => a.normalize("NFC").trim().toLowerCase() === b.normalize("NFC").trim().toLowerCase();
 
 /**
@@ -33,9 +40,8 @@ export function proposeGlobalUpdates(operators: readonly ProposalOperator[], eve
   const byEvent = new Map<string, { event: TerraGlobalEvent; operatorIds: string[] }>();
   const unresolved: UnresolvedOperator[] = [];
   for (const operator of operators) {
-    const own = events.filter((event) => sameName(event.name, operator.name));
-    if (!own.length) { unresolved.push({ ...operator, reason: "not in the Terra Wiki event tables for Global" }); continue; }
-    const earliest = own.reduce((best, event) => (event.startTime < best.startTime ? event : best));
+    const earliest = earliestEvent(events.filter((event) => sameName(event.name, operator.name)));
+    if (!earliest) { unresolved.push({ ...operator, reason: "not in the Terra Wiki event tables for Global" }); continue; }
     const group = byEvent.get(earliest.event) ?? { event: earliest, operatorIds: [] };
     group.operatorIds.push(operator.id);
     byEvent.set(earliest.event, group);
@@ -43,7 +49,7 @@ export function proposeGlobalUpdates(operators: readonly ProposalOperator[], eve
   const updates = [...byEvent.values()]
     .sort((a, b) => a.event.startTime.localeCompare(b.event.startTime) || a.event.event.localeCompare(b.event.event))
     .map(({ event, operatorIds }): GlobalUpdate => ({
-      id: `global-${slug(event.event)}`,
+      id: `global-${eventSlug(event.event)}`,
       name: event.event,
       opensAt: terraStartToOpensAt(event.startTime),
       operatorIds,

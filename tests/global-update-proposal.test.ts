@@ -3,7 +3,7 @@ import { mkdtemp, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test, { mock } from "node:test";
-import { parseTerraEvents, proposeGlobalUpdates, terraEventsQuery, terraStartToOpensAt, type TerraGlobalEvent } from "../src/game-data/global-update-proposal.js";
+import { earliestEvent, eventSlug, parseTerraEvents, proposeGlobalUpdates, terraEventsQuery, terraStartToOpensAt, type TerraGlobalEvent } from "../src/game-data/global-update-proposal.js";
 import { assertGlobalUpdates } from "../src/game-data/operator-global-updates.js";
 import type { OperatorRecord } from "../src/game-data/operators.js";
 import { fetchTerraEvents, main, proposeFor } from "../scripts/propose-global-update.js";
@@ -108,4 +108,21 @@ test("the command prints the proposal and exits with 2 when an operator needs a 
     assert.equal(await main(["node", "x", `--en-character=${table}`, "--ids=char_a,char_b"], async () => [event("Alpha", "Event", "2026-11-05 17:00:00")], (line) => out.push(line)), 2);
     assert.deepEqual(JSON.parse(out[1]!).unresolved.map((item: { id: string }) => item.id), ["char_b"]);
   } finally { await rm(directory, { recursive: true, force: true }); }
+});
+
+test("the earliest event of an empty list is undefined, and ties keep the first", () => {
+  assert.equal(earliestEvent([]), undefined);
+  const first = event("A", "First", "2026-11-05 17:00:00");
+  assert.equal(earliestEvent([first, event("A", "Second", "2026-11-05 17:00:00")]), first);
+  assert.equal(earliestEvent([event("A", "Late", "2026-12-01 17:00:00"), first]), first);
+});
+
+test("event slugs keep their results and take linear time on hostile input", () => {
+  assert.equal(eventSlug("Café: Ünïcode Event"), "cafe-unicode-event");
+  assert.equal(eventSlug("--Critical  Phase--Transition--"), "critical-phase-transition");
+  assert.equal(eventSlug("A/B & C"), "a-b-c");
+  for (const empty of ["", "---", "!!!", "  "]) assert.equal(eventSlug(empty), "");
+  const started = performance.now();
+  for (const hostile of ["a" + "-".repeat(200_000) + "!b", "-".repeat(200_000) + "!", "!".repeat(200_000) + "a", "a" + "́".repeat(200_000)]) eventSlug(hostile);
+  assert.ok(performance.now() - started < 1000, "hostile inputs finish well under a second");
 });
