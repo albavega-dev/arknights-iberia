@@ -134,11 +134,6 @@ export default function Home() {
               <ul>
                 <li>La web sirve ahora todo su contenido desde datos versionados, sin depender de una base de datos externa.</li>
               </ul>
-              <h4 className="landing-news-category">Errores corregidos:</h4>
-              <ul>
-                <li>Corregido desplazamiento irregular de los elementos de la columna de alcance del operador cuando el nombre de la skill variaba mucho en longitud.</li>
-                <li>Corregido aviso de ilustración no disponible, que ahora muestra correctamente qué ilustración (E0/E1 o E2) no ha podido cargarse.</li>
-              </ul>
             </article>
             <article className="landing-news-entry">
               <h3>30 de octubre de 2026 - 0.2.0</h3>
