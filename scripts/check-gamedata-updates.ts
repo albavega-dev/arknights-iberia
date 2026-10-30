@@ -13,13 +13,14 @@ import { isAbsolute, join, relative, resolve } from "node:path";
 import { portraitDirectory, portraitRepository, imageRepository, imageRevision } from "../src/game-data/asset-revisions";
 import {
   assetChangesByDirectory, assetCoverage, changedAssetPaths, skillIconNames, catalogModuleIds, changedBlobs, compareFileLimit, diffKeyed, diffModules, diffOperators, diffSkills,
-  buildingEntries, exitCodeFor, gitBlobSha, handbookEntries, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds,
+  buildingEntries, exitCodeFor, handbookEntries, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds,
   redact, resolvedSkillGaps, revisionStatus, skillIdsOf, usedRangeIds, compareRoster, type CompareFile,
 } from "../src/game-data/gamedata-diff";
 import {
   gameDataBuildingTableHashes, gameDataFavorTableHashes, gameDataHandbookTableHashes, gameDataRepository, gameDataRevisions, gameDataSkillTableHashes,
   gameDataTableHashes, type GameDataRegion,
 } from "../src/game-data/gamedata-revisions";
+import { directoryBlobs, fetchBytes, github, token } from "./github-api";
 import { operatorArchetypeLabels } from "../src/game-data/operator-archetypes";
 import { skillDataGaps } from "../src/game-data/skill-data-gaps";
 
@@ -32,16 +33,7 @@ const pinnedHashes = (region: GameDataRegion): Record<string, string> => ({
   ...gameDataTableHashes[region], ...gameDataSkillTableHashes[region], ...gameDataBuildingTableHashes[region], ...gameDataFavorTableHashes[region], ...gameDataHandbookTableHashes[region],
 });
 
-const token = process.env.GITHUB_TOKEN || undefined;
 const hasFlag = (name: string) => process.argv.find((item) => item.startsWith(`--${name}=`))?.slice(name.length + 3);
-
-async function github<T>(path: string): Promise<T> {
-  const headers: Record<string, string> = { Accept: "application/vnd.github+json", "User-Agent": "arknights-iberia-update-check" };
-  if (token) headers.Authorization = `Bearer ${token}`;
-  const response = await fetch(`https://api.github.com/${path}`, { headers });
-  if (!response.ok) throw new Error(`GitHub API ${response.status} for ${path.split("?")[0]}`);
-  return (await response.json()) as T;
-}
 
 type Commit = { sha: string };
 type Compare = { status: string; files?: CompareFile[] };
@@ -50,22 +42,6 @@ async function latestCommit(repository: string, path?: string): Promise<string> 
   const commits = await github<Commit[]>(`repos/${repository}/commits?per_page=1${path ? `&path=${encodeURIComponent(path)}` : ""}`);
   if (!commits[0]?.sha) throw new Error(`No commits found for ${repository}`);
   return commits[0].sha;
-}
-
-type TreeEntry = { path: string; type: string; sha: string };
-
-/** Blob hash of every table (name without extension) in a directory of the repository at a commit. */
-async function directoryBlobs(repository: string, commit: string, path: string): Promise<Record<string, string>> {
-  let sha = commit;
-  for (const part of [...path.split("/"), ""]) {
-    const tree = await github<{ tree: TreeEntry[]; truncated: boolean }>(`repos/${repository}/git/trees/${sha}`);
-    if (tree.truncated) throw new Error("Git tree truncated");
-    if (part === "") return Object.fromEntries(tree.tree.filter((entry) => entry.type === "blob" && entry.path.endsWith(".json")).map((entry) => [entry.path.slice(0, -".json".length), entry.sha]));
-    const next = tree.tree.find((entry) => entry.type === "tree" && entry.path === part);
-    if (!next) throw new Error(`${path} is not in ${commit.slice(0, 7)}`);
-    sha = next.sha;
-  }
-  throw new Error("unreachable");
 }
 
 async function compareFiles(repository: string, base: string, head: string): Promise<CompareFile[]> {
@@ -113,10 +89,7 @@ async function revisionsLevel() {
 }
 
 async function download(url: string, target: string, blob?: string): Promise<Buffer> {
-  const response = await fetch(url, { headers: { "User-Agent": "arknights-iberia-update-check" } });
-  if (!response.ok) throw new Error(`Download failed with HTTP ${response.status} for ${url.split("/").slice(-1)[0]}`);
-  const data = Buffer.from(await response.arrayBuffer());
-  if (blob && gitBlobSha(data) !== blob) throw new Error(`The download of ${url.split("/").slice(-1)[0]} does not match the git blob hash`);
+  const data = await fetchBytes(url, blob);
   await mkdir(join(target, ".."), { recursive: true });
   await writeFile(target, data);
   return data;
