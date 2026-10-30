@@ -3,6 +3,7 @@ import { isDeepStrictEqual } from "node:util";
 
 import type { OperatorBiography } from "./operator-biography";
 import type { OperatorBundle } from "./operator-bundle";
+import { catalogOperator, legacyRegionalMetadataSource, type CatalogOperator, type ReleaseDateProvenance } from "./operator-catalog";
 import { operatorImportSlug } from "./operator-import";
 import { getOperatorPublicSlugs } from "./operator-slugs";
 import type { OperatorRecord } from "./operators";
@@ -10,7 +11,7 @@ import type { OperatorRecord } from "./operators";
 type Region = "en" | "cn";
 
 export type GlobalManifestEntry = Readonly<{ id: string; name: string; cnReleaseDate: string | null; source: string }>;
-export type RegionalManifestEntry = Readonly<{ id: string; nameEnglish: string | null; cnReleaseDate: string | null; globalReleaseDate: string | null }>;
+export type RegionalManifestEntry = Readonly<{ id: string; nameEnglish: string | null; cnReleaseDate: string | null; globalReleaseDate: string | null; cnReleaseDateProvenance?: ReleaseDateProvenance }>;
 
 export type CatalogManifests = Readonly<{
   global: readonly GlobalManifestEntry[];
@@ -90,9 +91,10 @@ export type CheckResult = Readonly<{
   failed: number;
   detail?: Readonly<Record<string, number | string>>;
   failedIds?: readonly string[];
+  declared?: readonly Readonly<{ column: string; operators: string; differences: number; reason: string }>[];
+  undeclared?: readonly string[];
 }>;
 
-const legacyMetadataSource = "bundle-v1";
 const writePrivileges = ["INSERT", "UPDATE", "DELETE", "TRUNCATE"] as const;
 export const fingerprintColumns = ["id", "name", "cn_name", "global_name", "cn_release_date", "global_release_date", "regional_metadata_source"] as const;
 
@@ -133,7 +135,7 @@ export function buildExpectedCatalog(manifests: CatalogManifests): { operators: 
       name: entry.nameEnglish,
       cnReleaseDate: entry.cnReleaseDate,
       globalReleaseDate: entry.globalReleaseDate,
-      metadataSource: entry.cnReleaseDate === null ? legacyMetadataSource : releaseMetadataSource("community-listed", manifests.regionalReleaseSource),
+      metadataSource: entry.cnReleaseDate === null ? legacyRegionalMetadataSource : releaseMetadataSource(entry.cnReleaseDateProvenance?.status ?? "community-listed", entry.cnReleaseDateProvenance?.source ?? manifests.regionalReleaseSource),
     });
   }
   return { operators, duplicates };
@@ -217,7 +219,7 @@ function checkMetadataSource(expected: Map<string, ExpectedOperator>, rows: read
   for (const row of rows) {
     const item = expected.get(row.id);
     if (!item) continue;
-    if (row.regional_metadata_source === legacyMetadataSource) forms.legacy += 1;
+    if (row.regional_metadata_source === legacyRegionalMetadataSource) forms.legacy += 1;
     else if (row.regional_metadata_source === item.metadataSource) forms.detailed += 1;
     else failed.push(row.id);
   }
@@ -316,36 +318,37 @@ export function pickFingerprintColumns(row: DbOperatorRow): Record<(typeof finge
   return Object.fromEntries(fingerprintColumns.map((column) => [column, row[column]])) as Record<(typeof fingerprintColumns)[number], unknown>;
 }
 
+/** Database row of a catalog operator, without the import timestamp. */
+export function catalogOperatorRow(entry: CatalogOperator): DbOperatorRow {
+  return {
+    id: entry.id,
+    name: entry.name,
+    cn_name: entry.cnName,
+    global_name: entry.globalName,
+    class_name: entry.class,
+    sub_class_id: entry.subClassId,
+    rarity: entry.rarity,
+    slug: entry.slug,
+    source_locale: entry.sourceLocale,
+    source_repository: entry.sourceRepository,
+    source_revision: entry.sourceRevision,
+    source_data_version: entry.sourceDataVersion,
+    cn_only: entry.cnOnly,
+    availability_status: entry.availabilityStatus,
+    cn_release_date: entry.cnReleaseDate,
+    global_release_date: entry.globalReleaseDate,
+    main_power_nation_id: entry.mainPowerNationId,
+    main_power_group_id: entry.mainPowerGroupId,
+    main_power_team_id: entry.mainPowerTeamId,
+    main_faction_id: entry.mainFactionId,
+    cn_source_revision: entry.cnSourceRevision,
+    regional_metadata_source: entry.regionalMetadataSource,
+  };
+}
+
 /** Expected database row of a bundle operator, without the import timestamp. */
 export function bundleOperatorRow(record: OperatorRecord, bundle: Pick<OperatorBundle, "sources">): DbOperatorRow {
-  const source = record.cnOnly ? bundle.sources.cn : bundle.sources.en;
-  const regionalMetadataSource = record.cnReleaseDateSource
-    ? JSON.stringify({ kind: "cn-release", status: record.cnReleaseDateStatus ?? "unclassified", source: record.cnReleaseDateSource })
-    : legacyMetadataSource;
-  return {
-    id: record.id,
-    name: record.name,
-    cn_name: record.cnName ?? null,
-    global_name: record.globalName ?? null,
-    class_name: record.class,
-    sub_class_id: record.subClassId,
-    rarity: record.rarity,
-    slug: record.slug,
-    source_locale: record.cnOnly ? "cn" : "en",
-    source_repository: source.repository,
-    source_revision: source.revision,
-    source_data_version: source.revision,
-    cn_only: record.cnOnly,
-    availability_status: record.availabilityStatus,
-    cn_release_date: record.cnReleaseDate,
-    global_release_date: record.globalReleaseDate,
-    main_power_nation_id: record.mainPowerNationId,
-    main_power_group_id: record.mainPowerGroupId,
-    main_power_team_id: record.mainPowerTeamId,
-    main_faction_id: record.mainFactionId,
-    cn_source_revision: record.cnOnly ? source.revision : null,
-    regional_metadata_source: regionalMetadataSource,
-  };
+  return catalogOperatorRow(catalogOperator(record, bundle.sources));
 }
 
 function bundleBiographyRow(record: OperatorBiography): DbBiographyRow {
@@ -371,40 +374,84 @@ function differingColumns(expected: object, actual: object): string[] {
   return Object.keys(left).filter((key) => !isDeepStrictEqual(JSON.parse(JSON.stringify(left[key] ?? null)), JSON.parse(JSON.stringify(right[key] ?? null))));
 }
 
+/** A differing column of one row; `actual` is the stored value, used only to match declarations and never printed. */
+type RowDifference = Readonly<{ id: string; column: string; cnOnly: boolean | null; actual: unknown }>;
+
+function rowDifferences(expectedOperators: readonly DbOperatorRow[], expectedBiographies: readonly DbBiographyRow[], operators: readonly DbOperatorRow[], biographies: readonly DbBiographyRow[]): RowDifference[] {
+  const differences: RowDifference[] = [];
+  const rows = new Map(operators.map((row) => [row.id, row]));
+  for (const expected of expectedOperators) {
+    const row = rows.get(expected.id);
+    if (!row) differences.push({ id: expected.id, column: "missing-operator", cnOnly: expected.cn_only, actual: null });
+    else for (const column of differingColumns(expected, row)) differences.push({ id: expected.id, column, cnOnly: expected.cn_only, actual: (row as Record<string, unknown>)[column] ?? null });
+  }
+  const ids = new Set(expectedOperators.map((row) => row.id));
+  for (const row of operators) if (!ids.has(row.id)) differences.push({ id: row.id, column: "extra-operator", cnOnly: null, actual: null });
+
+  const key = (row: DbBiographyRow) => `${row.operator_id}\u0000${row.region}\u0000${row.source_revision}`;
+  const stored = new Map(biographies.map((row) => [key(row), row]));
+  for (const expected of expectedBiographies) {
+    const row = stored.get(key(expected));
+    if (!row) differences.push({ id: expected.operator_id, column: "missing-biography", cnOnly: null, actual: null });
+    else for (const column of differingColumns(expected, row)) differences.push({ id: expected.operator_id, column: `biography.${column}`, cnOnly: null, actual: null });
+  }
+  const expectedKeys = new Set(expectedBiographies.map(key));
+  for (const [rowKey, row] of stored) if (!expectedKeys.has(rowKey)) differences.push({ id: row.operator_id, column: "extra-biography", cnOnly: null, actual: null });
+  return differences;
+}
+
+function columnCounts(differences: readonly RowDifference[]): Record<string, number> {
+  const columns: Record<string, number> = {};
+  for (const difference of differences) columns[difference.column] = (columns[difference.column] ?? 0) + 1;
+  return Object.fromEntries(Object.entries(columns).sort(([a], [b]) => a.localeCompare(b, "en")));
+}
+
 /** Field-by-field comparison with the bundle that was imported: differing columns are counted, never printed. */
 export function compareBundle(bundle: Pick<OperatorBundle, "sources" | "operators" | "biographies">, operators: readonly DbOperatorRow[], biographies: readonly DbBiographyRow[]): CheckResult {
-  const rows = new Map(operators.map((row) => [row.id, row]));
-  const failed = new Set<string>();
-  const columns: Record<string, number> = {};
-  const count = (column: string, id: string) => {
-    columns[column] = (columns[column] ?? 0) + 1;
-    failed.add(id);
+  const differences = rowDifferences(bundle.operators.map((record) => bundleOperatorRow(record, bundle)), bundle.biographies.map(bundleBiographyRow), operators, biographies);
+  const failed = new Set(differences.map((difference) => difference.id));
+  return { code: "bundle", status: failed.size === 0 ? "ok" : "fail", checked: bundle.operators.length + bundle.biographies.length, failed: failed.size, detail: { operators: bundle.operators.length, biographies: bundle.biographies.length, ...columnCounts(differences) }, ...(failed.size ? { failedIds: [...failed].sort() } : {}) };
+}
+
+/**
+ * A difference between the files and the database that is known and accepted, with its reason. It covers one operator
+ * column for every operator, for the Global operators, or for listed operators whose stored value must be the one given.
+ */
+export type ExpectedDifference = Readonly<{ column: keyof DbOperatorRow; reason: string; operators: "all" | "global" | Readonly<Record<string, unknown>> }>;
+
+const undeclaredLimit = 50;
+
+function declares(expected: ExpectedDifference, difference: RowDifference): boolean {
+  if (expected.column !== difference.column) return false;
+  if (expected.operators === "all") return true;
+  if (expected.operators === "global") return difference.cnOnly === false;
+  return Object.hasOwn(expected.operators, difference.id) && isDeepStrictEqual(expected.operators[difference.id], difference.actual);
+}
+
+/**
+ * Column-by-column comparison of the catalog and biography files with the database, including complete biographies and
+ * missing or extra rows. Every difference must be declared; the report lists the count per column and each undeclared
+ * difference as "id column", never a value.
+ */
+export function compareFiles(files: Readonly<{ operators: readonly CatalogOperator[]; biographies: readonly OperatorBiography[] }>, operators: readonly DbOperatorRow[], biographies: readonly DbBiographyRow[], expected: readonly ExpectedDifference[]): CheckResult {
+  const differences = rowDifferences(files.operators.map(catalogOperatorRow), files.biographies.map(bundleBiographyRow), operators, biographies);
+  const declared = expected.map(() => 0);
+  const undeclared: string[] = [];
+  for (const difference of differences) {
+    const match = expected.findIndex((item) => declares(item, difference));
+    if (match >= 0) declared[match]! += 1;
+    else undeclared.push(`${difference.id} ${difference.column}`);
+  }
+  undeclared.sort((a, b) => a.localeCompare(b, "en"));
+  return {
+    code: "files",
+    status: undeclared.length === 0 ? "ok" : "fail",
+    checked: files.operators.length + files.biographies.length,
+    failed: undeclared.length,
+    detail: { operators: files.operators.length, biographies: files.biographies.length, ...columnCounts(differences) },
+    declared: expected.map((item, position) => ({ column: item.column, operators: typeof item.operators === "string" ? item.operators : Object.keys(item.operators).sort().join(", "), differences: declared[position]!, reason: item.reason })),
+    undeclared: undeclared.slice(0, undeclaredLimit),
   };
-  for (const record of bundle.operators) {
-    const row = rows.get(record.id);
-    if (!row) {
-      count("missing-operator", record.id);
-      continue;
-    }
-    for (const column of differingColumns(bundleOperatorRow(record, bundle), row)) count(column, record.id);
-  }
-  const bundleIds = new Set(bundle.operators.map((record) => record.id));
-  for (const row of operators) if (!bundleIds.has(row.id)) count("extra-operator", row.id);
-
-  const stored = new Map(biographies.map((row) => [`${row.operator_id}\u0000${row.region}\u0000${row.source_revision}`, row]));
-  for (const record of bundle.biographies) {
-    const row = stored.get(`${record.operatorId}\u0000${record.region}\u0000${record.source.revision}`);
-    if (!row) {
-      count("missing-biography", record.operatorId);
-      continue;
-    }
-    for (const column of differingColumns(bundleBiographyRow(record), row)) count(`biography.${column}`, record.operatorId);
-  }
-  const bundleBiographies = new Set(bundle.biographies.map((record) => `${record.operatorId}\u0000${record.region}\u0000${record.source.revision}`));
-  for (const [key, row] of stored) if (!bundleBiographies.has(key)) count("extra-biography", row.operator_id);
-
-  const detail = Object.fromEntries(Object.entries(columns).sort(([a], [b]) => a.localeCompare(b, "en")));
-  return { code: "bundle", status: failed.size === 0 ? "ok" : "fail", checked: bundle.operators.length + bundle.biographies.length, failed: failed.size, detail: { operators: bundle.operators.length, biographies: bundle.biographies.length, ...detail }, ...(failed.size ? { failedIds: [...failed].sort() } : {}) };
 }
 
 export type VerificationReport = Readonly<{

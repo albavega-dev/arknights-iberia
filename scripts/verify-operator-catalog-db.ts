@@ -8,6 +8,7 @@ import { validateOperatorBundle, type OperatorBundle } from "../src/game-data/op
 import {
   buildReport,
   compareBundle,
+  compareFiles,
   operatorFingerprint,
   pickFingerprintColumns,
   verifyCatalog,
@@ -17,11 +18,14 @@ import {
   type DatasetIndexes,
   type DbBiographyRow,
   type DbOperatorRow,
+  type ExpectedDifference,
   type GlobalManifestEntry,
   type MigrationState,
 } from "../src/game-data/operator-catalog-verification";
+import type { ReleaseDateProvenance } from "../src/game-data/operator-catalog";
 import { readDatabaseConfig } from "../src/server/db/config";
 import { operatorBiographies, operators } from "../src/server/db/schema";
+import { readCatalogDataset } from "./generate-operator-catalog";
 
 // Read-only check of an operator catalog database (Development or Neon) against the repository data.
 // Output holds only counts, codes and the fingerprint; no host, user or credential is ever printed.
@@ -29,14 +33,26 @@ const statementTimeoutMs = 15_000;
 const tables = { operators, operator_biographies: operatorBiographies } as const;
 const writePrivileges = ["INSERT", "UPDATE", "DELETE", "TRUNCATE"] as const;
 
-type Options = { bundle?: string; details: boolean; fingerprint?: string };
+type Options = { bundle?: string; details: boolean; files: boolean; fingerprint?: string };
+
+// Known differences between the catalog files and a database loaded with the earlier importer, which stored provenance
+// with other conventions, and the CN dates corrected from the official announcement. Anything else must match.
+const officialAnnouncement = "The official announcement (ak.hypergryph.com/news/5101) sets 2026-10-09";
+const filesExpectedDifferences: readonly ExpectedDifference[] = [
+  { column: "cn_release_date", operators: { char_393_toledo: "2026-10-08", char_4231_clemnt: null, char_4232_hbound: "2026-10-08" }, reason: `${officialAnnouncement}; the database keeps the earlier community-listed date or none` },
+  { column: "source_repository", operators: "all", reason: "The earlier importer stored the repository as a full URL" },
+  { column: "source_data_version", operators: "all", reason: "The earlier importer stored the game data version instead of the snapshot revision" },
+  { column: "cn_source_revision", operators: "global", reason: "The earlier importer also stored the CN revision on Global operators" },
+  { column: "regional_metadata_source", operators: "all", reason: "The earlier importer stored the metadata source as plain text" },
+];
 
 function parseArguments(argv: readonly string[]): Options | undefined {
-  const options: Options = { details: false };
+  const options: Options = { details: false, files: false };
   for (let index = 0; index < argv.length; index += 1) {
     const flag = argv[index];
     const value = argv[index + 1];
     if (flag === "--details") options.details = true;
+    else if (flag === "--files") options.files = true;
     else if ((flag === "--bundle" || flag === "--fingerprint") && value && !value.startsWith("--")) {
       options[flag === "--bundle" ? "bundle" : "fingerprint"] = value;
       index += 1;
@@ -103,13 +119,14 @@ async function run(options: Options): Promise<number> {
     return 2;
   }
   const releaseManifest = await json<{ operators: GlobalManifestEntry[] }>("data/operator-cn-release-manifest.json");
-  const regionalManifest = await json<{ sources: { releaseTable: string }; operators: { id: string; nameEnglish?: string | null; cnReleaseDate: string | null; globalReleaseDate?: string | null }[] }>("data/operator-regional-manifest.json");
+  const regionalManifest = await json<{ sources: { releaseTable: string }; operators: { id: string; nameEnglish?: string | null; cnReleaseDate: string | null; globalReleaseDate?: string | null; cnReleaseDateProvenance?: ReleaseDateProvenance }[] }>("data/operator-regional-manifest.json");
   const manifests = {
     global: releaseManifest.operators,
     regional: regionalManifest.operators.map((entry) => ({ ...entry, nameEnglish: entry.nameEnglish ?? null, globalReleaseDate: entry.globalReleaseDate ?? null })),
     regionalReleaseSource: regionalManifest.sources.releaseTable,
   };
   const [indexes, journal] = await Promise.all([readIndexes(), readJournal()]);
+  const files = options.files ? await readCatalogDataset("data") : undefined;
 
   const client = new Client({ ...readDatabaseConfig(process.env), connectionTimeoutMillis: 10_000 });
   client.on("error", () => undefined);
@@ -118,7 +135,7 @@ async function run(options: Options): Promise<number> {
     await client.query("BEGIN READ ONLY");
     await client.query(`SET LOCAL statement_timeout = ${statementTimeoutMs}`);
     const operatorRows = (await client.query(`SELECT ${operatorColumns} FROM operators ORDER BY id ASC`)).rows as DbOperatorRow[];
-    const biographyRows = (await client.query(`SELECT ${bundle ? biographyBundleColumns : biographyColumns} FROM operator_biographies ORDER BY operator_id, region, source_revision`)).rows as DbBiographyRow[];
+    const biographyRows = (await client.query(`SELECT ${bundle || files ? biographyBundleColumns : biographyColumns} FROM operator_biographies ORDER BY operator_id, region, source_revision`)).rows as DbBiographyRow[];
     const fingerprintRows = (await client.query(`SELECT ${fingerprintColumns.join(", ")} FROM operators ORDER BY id ASC`)).rows;
     const state: MigrationState = { journal, applied: await readApplied(client) };
     const privileges = await readPrivileges(client);
@@ -137,6 +154,7 @@ async function run(options: Options): Promise<number> {
       schema: { expected: expectedColumns, actual: actualColumns },
     });
     if (bundle) checks.push(compareBundle(bundle, operatorRows, biographyRows));
+    if (files) checks.push(compareFiles({ operators: files.catalog.operators, biographies: files.biographies.records }, operatorRows, biographyRows, filesExpectedDifferences));
     const report = buildReport(checks, operatorRows, biographyRows.length, {
       value: operatorFingerprint(fingerprintRows),
       dateTextValue: operatorFingerprint(operatorRows.map(pickFingerprintColumns)),

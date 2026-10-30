@@ -6,7 +6,9 @@ import {
   buildReport,
   bundleOperatorRow,
   checkMigrations,
+  catalogOperatorRow,
   compareBundle,
+  compareFiles,
   operatorFingerprint,
   pickFingerprintColumns,
   verifyCatalog,
@@ -14,8 +16,10 @@ import {
   type CatalogSources,
   type DbBiographyRow,
   type DbOperatorRow,
+  type ExpectedDifference,
   type VerificationInput,
 } from "../src/game-data/operator-catalog-verification";
+import { catalogOperator } from "../src/game-data/operator-catalog";
 import type { OperatorRecord } from "../src/game-data/operators";
 
 const manifests: CatalogManifests = {
@@ -235,6 +239,15 @@ describe("operator catalog verification", () => {
     assert.deepEqual([expected.size, duplicates], [4, []]);
     assert.equal(expected.get("char_901_d")?.metadataSource, "bundle-v1");
   });
+
+  it("uses the per-operator provenance of a regional date instead of the common source", () => {
+    const official = { status: "verified" as const, source: "https://example.test/news" };
+    const withProvenance: CatalogManifests = { ...manifests, regional: [{ ...manifests.regional[0]!, cnReleaseDateProvenance: official }, manifests.regional[1]!] };
+    assert.equal(buildExpectedCatalog(withProvenance).operators.get("char_900_c")?.metadataSource, JSON.stringify({ kind: "cn-release", ...official }));
+    const rows = operators().map((item) => item.id === "char_900_c" ? { ...item, regional_metadata_source: JSON.stringify({ kind: "cn-release", ...official }) } : item);
+    assert.equal(find(verifyCatalog(input({ manifests: withProvenance, operators: rows })), "regional-metadata").status, "ok");
+    assert.equal(find(verifyCatalog(input({ operators: rows })), "regional-metadata").status, "fail");
+  });
 });
 
 describe("fingerprint and report", () => {
@@ -306,5 +319,67 @@ describe("bundle comparison", () => {
       operators: 3, biographies: 3, "biography.fields": 1, "biography.story_title": 1, "extra-biography": 1, "extra-operator": 1, "missing-biography": 1, "missing-operator": 1, name: 1, rarity: 1,
     });
     assert.deepEqual(result.failedIds, ["char_a", "char_b", "char_extra"]);
+  });
+});
+
+describe("files comparison", () => {
+  const source = (revision: string) => ({ repository: "owner/repo", revision, path: "x.json", sha256: "aa".repeat(32) });
+  const sources = { en: source("en-revision"), cn: source("cn-revision") };
+  const record = (id: string, overrides: Partial<OperatorRecord> = {}): OperatorRecord => ({
+    id, name: id, cnName: "名", globalName: id, class: "Guard", subClassId: null, rarity: 6, slug: `operator-${id}`, cnOnly: false, availabilityStatus: "global-snapshot",
+    cnReleaseDate: "2026-10-09", cnReleaseDateStatus: "verified", cnReleaseDateSource: "https://example.test/news", globalReleaseDate: null, mainPowerNationId: null, mainPowerGroupId: null, mainPowerTeamId: null, mainFactionId: null, ...overrides,
+  });
+  const catalog = [catalogOperator(record("char_a"), sources), catalogOperator(record("char_b", { cnOnly: true, availabilityStatus: "cn-snapshot-candidate", globalName: null }), sources)];
+  const bio = (operatorId: string, region: "en" | "cn") => ({ operatorId, region, source: source(`${region}-revision`), storyTitle: "Title", originalText: "text", fields: [], unrecognizedLines: [], profile: null }) as never;
+  const files = { operators: catalog, biographies: [bio("char_a", "en"), bio("char_b", "cn")] };
+  const stored = (operatorId: string, region: "en" | "cn", overrides: Partial<DbBiographyRow> = {}): DbBiographyRow => ({
+    operator_id: operatorId, region, source_repository: "owner/repo", source_revision: `${region}-revision`, source_path: "x.json", source_sha256: "aa".repeat(32),
+    story_title: "Title", original_text: "text", fields: [], unrecognized_lines: [], profile_story_title: null, profile_text: null, ...overrides,
+  });
+  const rows = () => catalog.map(catalogOperatorRow);
+  const bios = () => [stored("char_a", "en"), stored("char_b", "cn")];
+  const expected: ExpectedDifference[] = [
+    { column: "cn_release_date", operators: { char_a: "2026-10-08" }, reason: "corrected date" },
+    { column: "source_repository", operators: "all", reason: "legacy URL" },
+    { column: "cn_source_revision", operators: "global", reason: "legacy CN revision" },
+  ];
+
+  it("maps a catalog entry to its database row", () => {
+    const row = catalogOperatorRow(catalog[1]!);
+    assert.deepEqual([row.source_locale, row.cn_source_revision, row.class_name, row.regional_metadata_source], ["cn", "cn-revision", "Guard", catalog[1]!.regionalMetadataSource]);
+  });
+
+  it("accepts a database identical to the files and reports the declarations with no differences", () => {
+    const result = compareFiles(files, rows(), bios(), expected);
+    assert.deepEqual([result.status, result.checked, result.failed, result.undeclared], ["ok", 4, 0, []]);
+    assert.deepEqual(result.declared?.map((item) => [item.column, item.operators, item.differences]), [["cn_release_date", "char_a", 0], ["source_repository", "all", 0], ["cn_source_revision", "global", 0]]);
+  });
+
+  it("accepts declared differences only within their scope and stored value", () => {
+    const changed = rows().map((row) => ({ ...row, source_repository: "https://github.com/owner/repo", cn_source_revision: "cn-revision", cn_release_date: "2026-10-08" }));
+    const result = compareFiles(files, changed, bios(), expected);
+    assert.equal(result.status, "fail");
+    assert.deepEqual(result.declared?.map((item) => item.differences), [1, 2, 1]);
+    assert.deepEqual(result.undeclared, ["char_b cn_release_date"]);
+    assert.deepEqual(result.detail, { operators: 2, biographies: 2, cn_release_date: 2, cn_source_revision: 1, source_repository: 2 });
+    const otherValue = compareFiles(files, rows().map((row) => row.id === "char_a" ? { ...row, cn_release_date: null } : row), bios(), expected);
+    assert.deepEqual(otherValue.undeclared, ["char_a cn_release_date"]);
+  });
+
+  it("never declares complete biographies, missing or extra rows", () => {
+    const result = compareFiles(files, [...rows().slice(1), { ...rows()[0]!, id: "char_x" }], [stored("char_a", "en", { original_text: "other", fields: [{}] }), stored("char_z", "en")], expected);
+    assert.deepEqual(result.undeclared, ["char_a biography.fields", "char_a biography.original_text", "char_a missing-operator", "char_b missing-biography", "char_x extra-operator", "char_z extra-biography"]);
+    assert.equal(result.failed, 6);
+  });
+
+  it("lists at most fifty undeclared differences while counting all of them", () => {
+    const many = Array.from({ length: 60 }, (_, index) => catalogOperatorRow(catalogOperator(record(`char_${String(index).padStart(3, "0")}`), sources)));
+    const result = compareFiles({ operators: [], biographies: [] }, many, [], []);
+    assert.deepEqual([result.failed, result.undeclared?.length], [60, 50]);
+  });
+
+  it("keeps declarations and undeclared differences in the report without details", () => {
+    const report = buildReport([compareFiles(files, rows(), bios(), expected)], rows(), 2, { value: "a".repeat(64), dateTextValue: "b".repeat(64), timeZone: "UTC" }, false);
+    assert.ok("declared" in report.checks[0]! && "undeclared" in report.checks[0]!);
   });
 });
