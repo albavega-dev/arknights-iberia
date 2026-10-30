@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_381_bubble",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Bubble",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Sargon",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Mar 19",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Cerato",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "135cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Bubble\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Sargon\n[Date of Birth] Mar 19\n[Race] Cerato\n[Height] 135cm\n[Infection Status] \nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "A young warrior girl from a tribe of Sargon Ceratos, she is inexperienced, with no knowledge of the norms and customs for interacting with others. Her father sent her to Rhodes Island, ostensibly for 'training,' but actually to treat her Oripathy. \nShe uses a massive shield as a weapon, relying on charging and bashing tactics. She needs Rhodes Island training to ensure she doesn't make any catastrophic mistakes in actual combat."
+  }
+}

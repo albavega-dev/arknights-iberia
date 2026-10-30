@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_1020_reed2",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Reed",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "8 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Oct 16",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Draco",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "172cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Reed\n[Gender] Female\n[Combat Experience] 8 Years\n[Place of Birth] Victoria\n[Date of Birth] Oct 16\n[Race] Draco\n[Height] 172cm\n[Infection Status]\nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Reed previously applied to withdraw while stationed at a Rhodes Island branch office in southern Victoria, and has only recently reestablished contact with us. Presently actively leading a small force within Victorian borders under Dublinn's name, with her primary objective being to aid those Tarans forcefully displaced."
+  }
+}

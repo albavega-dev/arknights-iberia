@@ -1,0 +1,73 @@
+{
+  "operatorId": "char_286_cast3",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "unrecognized:Model",
+      "label": "Model",
+      "value": "Castle-3",
+      "state": "value"
+    },
+    {
+      "key": "genderAssignment",
+      "label": "Gender Assignment",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Time in Service",
+      "label": "Time in Service",
+      "value": "3 years",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Manufacturer",
+      "label": "Manufacturer",
+      "value": "Raythean",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Place of Production",
+      "label": "Place of Production",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Date of Release",
+      "label": "Date of Release",
+      "value": "Dec. 10",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "167cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "Classified",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Inspection Report",
+      "label": "Inspection Report",
+      "value": "Massive wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Weapon system operational. Slight damage on battery casing but operational. ECU in good condition.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Model] Castle-3 \n[Gender Assignment] Male \n[Time in Service] 3 years \n[Manufacturer] Raythean \n[Place of Production] Columbia \n[Date of Release] Dec. 10 \n[Height] 167cm \n[Weight] Classified \n[Inspection Report] \nMassive wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Weapon system operational. Slight damage on battery casing but operational. ECU in good condition.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Castle-3 is a custom Raythean -Plus six-wheeled operations platform built by Closure. A likeable mascot for Rhodes Island, his mundane disposition means he is largely ignored. \nThe solid blocky appearance of Castle-3 gives off a trustworthy, dependable impression. \nThe marks on his casing may represent kills, but who made the marks if he has no hands?"
+  }
+}

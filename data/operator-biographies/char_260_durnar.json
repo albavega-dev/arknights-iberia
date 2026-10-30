@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_260_durnar",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Codename",
+      "value": "Dur-nar",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "8 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "August 11",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Vulpo",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "160cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Codename] Dur-nar\n[Gender] Female\n[Combat Experience] 8 years\n[Place of Birth] Columbia\n[Date of Birth] August 11\n[Race] Vulpo\n[Height] 160cm\n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Dur-nar was once a lieutenant in Columbia's standing army. For unknown reasons, she was discharged from military service and through regular recruitment channels, she joined Rhodes Island. She now serves as a drill instructor and defensive operator. She excels at using a specially-constructed shield for protection and at finding opportunities to strike enemies with her electric blade."
+  }
+}

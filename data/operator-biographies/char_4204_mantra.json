@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4204_mantra",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Mantra",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "70 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Sargon",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Apr 7",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Phidia",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "191cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Mantra\n[Gender] Female\n[Combat Experience] 70 years\n[Place of Birth] Sargon\n[Date of Birth] Apr 7\n[Race] Phidia\n[Height] 191cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Elite operator Mantra first joined Babel at Kal'tsit's invitation. She fought in the Kazdel Civil War and became one of Rhodes Island's first elite operators after the war.\nLong-time leader of the 3rd Special Operations Squad, Mantra's ability to help operators coordinate when radio communications are difficult or inadvisable makes her an indispensable part of many missions."
+  }
+}

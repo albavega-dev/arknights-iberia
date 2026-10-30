@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4177_brigid",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Brigid",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "3 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Feb 1",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Perro",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "170cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Brigid\n[Gender] Female\n[Combat Experience] 3 Years\n[Place of Birth] Victoria\n[Date of Birth] Feb 1\n[Race] Perro\n[Height] 170cm\n[Infection Status]\nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Brigid, a nomad. Said to be from one of Tara's ancient wandering tribes, who have lived on the plains and hills since time immemorial. They also serve as traditional couriers for Catastrophe warnings, mail, and other related tasks. At Operator Reed's recommendation, she has started working with Rhodes Island, receiving Oripathy treatment while taking part in battle as a sniper operator."
+  }
+}

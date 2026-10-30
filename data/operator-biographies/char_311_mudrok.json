@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_311_mudrok",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Mudrock",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "4 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazdel",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Sep 21",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Sarkaz",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "163cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": " Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Mudrock\n[Gender] Female\n[Combat Experience] 4 Years\n[Place of Birth] Kazdel\n[Date of Birth] Sep 21\n[Race] Sarkaz\n[Height] 163cm\n[Infection Status]\n Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Sarkaz mercenary Mudrock, formerly a part of the Reunion Movement, led her team far from Ursus after disagreements with the organization. She had no involvement with Reunion whatsoever during the incidents in Chernobog and Lungmen. Searching for a foothold to establish, Mudrock took her team towards Leithanien. After taking in a great number of Leithanian Infected there, Mudrock became a highly esteemed leader, and her team came to be known as the 'Mudrock Squad.' Despite Mudrock's multiple attempts to avoid conflict with other powers, her side was nevertheless drawn into constant disputes. So as to prevent any further meaningless sacrifice, Mudrock chose to head for Kazdel. She came into contact with elite operator Logos within Kazdel's borders, and left with the latter for Rhodes Island."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4117_ray",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Ray",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Rim Billiton",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul 14",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Cautus",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "170cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Ray\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Rim Billiton\n[Date of Birth] Jul 14\n[Race] Cautus\n[Height] 170cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Ray, a Rim Billitonian without stable employment who often works in mine safety and security, or as a 'pitsinker' in the local parlance. After running into Amiya, the Doctor, and Savage while they were revisiting old memories, she took the initiative to apply to Rhodes Island. As an operator aboard the landship, she participates in a variety of security, combat, and exploration missions."
+  }
+}

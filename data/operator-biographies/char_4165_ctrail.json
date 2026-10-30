@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4165_ctrail",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Contrail",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Mar 16",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Zalak",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "155cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Contrail\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Columbia\n[Date of Birth] Mar 16\n[Race] Zalak\n[Height] 155cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Contrail, a flying adventurer from Columbia. She travels extensively to conduct test flights, and is very knowledgeable when it comes to developing and improving flight equipment. She has come to Rhodes Island for Oripathy treatment, and provides technical support for Engineering's motorized equipment R&D projects."
+  }
+}

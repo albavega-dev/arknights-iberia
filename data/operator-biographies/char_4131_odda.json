@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4131_odda",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Odda",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "18 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazdel",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jan 1",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Sarkaz",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "168cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Odda\n[Gender] Male\n[Combat Experience] 18 Years\n[Place of Birth] Kazdel\n[Date of Birth] Jan 1\n[Race] Sarkaz\n[Height] 168cm\n[Infection Status]\nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Odda, once a member of Babel, now makes a living as a Messenger in Kazdel. He frequently visits Rhodes Island carrying letters and packages, and will occasionally accept field missions in the Kazdel region."
+  }
+}

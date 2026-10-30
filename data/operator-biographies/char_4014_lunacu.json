@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4014_lunacu",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Lunacub",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Siracusa",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Oct 3",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Lupo",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "148cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Lunacub\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Siracusa\n[Date of Birth] Oct 3\n[Race] Lupo\n[Height] 148cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Lunacub, a wandering hunter from the Siracusan wilderness, joined Rhodes Island after an introduction by Penguin Logistics. Serves as a guide for Rhodes Island's field operations in Siracusa and as a part-time Sniper Operator."
+  }
+}

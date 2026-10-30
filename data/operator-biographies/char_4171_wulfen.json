@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4171_wulfen",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Wulfenite",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Sargon",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Dec 1",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Phidia",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "159cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Wulfenite\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Sargon\n[Date of Birth] Dec 1\n[Race] Phidia\n[Height] 159cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Explorer, ore collector, and also a famous content creator on the video side of Columbia's intercity net. Contracted Oripathy due to inattentiveness on a geological excursion, and came to Rhodes Island seeking treatment. After some negotiation, she joined Rhodes Island as a specialist operator, using her ample geological knowledge and survival experience to support our teams on their many outdoor exploration missions."
+  }
+}

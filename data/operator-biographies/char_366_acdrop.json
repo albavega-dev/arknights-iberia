@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_366_acdrop",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Aciddrop",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "1 Year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Aug 13",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Liberi",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "150cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Aciddrop\n[Gender] Female\n[Combat Experience] 1 Year\n[Place of Birth] Columbia\n[Date of Birth] Aug 13\n[Race] Liberi\n[Height] 150cm\n[Infection Status] \nConfirmed infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "A street girl of Columbia, born to a normal working-class family. Her parents are both truck drivers and often work through the night, pushing Aciddrop out to the streets at a young age. From practicing skateboarding in her spare time after school to becoming a champion at local skateboarding tournaments, Aciddrop has become a renowned street icon throughout the city, and her success has drawn countless haters in the process. During a deliberate fight, Aciddrop was infected with Originium dust, later coming to Rhodes Island to seek treatment."
+  }
+}

@@ -7,6 +7,10 @@ Este documento recoge las fuentes de datos, recursos gráficos y herramientas ut
 - [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata): snapshots EN/CN utilizados por el pipeline.
 - [Arknights CDN](https://web.hycdn.cn/arknights/game/assets/char/portrait/): retratos por identificador `char_*`.
 
+## Anuncios oficiales
+
+- [Anuncio oficial de Hypergryph de la SideStory «昨日海»](https://ak.hypergryph.com/news/5101) (publicado el 3 de octubre de 2026): fecha CN 2026-10-09 de Clementia, Homebound y De Toledo, registrada como procedencia de cada operador (`cnReleaseDateProvenance`) en `data/operator-regional-manifest.json`.
+
 ## Wikis y documentación comunitaria
 
 - [Terra Wiki](https://arknights.wiki.gg/): contraste de nombres, fechas y relaciones.

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_322_lmlee",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Lee",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None (self-declared)",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Yan",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Oct 25",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Lung",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "193cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Lee\n[Gender] Male\n[Combat Experience] None (self-declared)\n[Place of Birth] Yan\n[Date of Birth] Oct 25\n[Race] Lung\n[Height] 193cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Private investigator, and founder of Lee's Detective Agency. Lee first encountered Rhodes Island during its expansion into Lungmen, and the two parties formed a business relationship thereafter. Has both provided information and consultation services on local Lungmen affairs, as well as recommended talents to Rhodes Island."
+  }
+}

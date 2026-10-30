@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_199_yak",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Matterhorn",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "6 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kjerag",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "May 19",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Forte",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "182cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Matterhorn\n[Gender] Male\n[Combat Experience] 6 years\n[Place of Birth] Kjerag\n[Date of Birth] May 19\n[Race] Forte\n[Height] 182cm\n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "A member of the Karlan Trade Co. LTD born in Kjerag. He is part of the cooperation agreement between the Karlan Trade Co. and Rhodes Island, but he also helps carry out missions for the latter as well."
+  }
+}

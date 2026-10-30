@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_220_grani",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Grani",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "2 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Dec. 1",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Kuranta",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "154cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Grani \n[Gender] Female \n[Combat Experience] 2 years \n[Place of Birth] Victoria \n[Date of Birth] Dec. 1 \n[Race] Kuranta \n[Height] 154cm \n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Grani, formerly of the Victorian Mounted Police, specializes in high mobility operations such as raids, mechanized warfare, and infiltration. \nNow works as a contract Operator providing support for all Rhodes Island op teams, as well as patrols of the island and its surrounding areas."
+  }
+}

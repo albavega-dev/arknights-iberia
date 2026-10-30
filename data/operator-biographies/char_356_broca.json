@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_356_broca",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Broca",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "5 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Siracusa",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Feb 4",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Feline",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "189cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Broca\n[Gender] Male\n[Combat Experience] 5 years\n[Place of Birth] Siracusa\n[Date of Birth] Feb 4\n[Race] Feline\n[Height] 189cm\n[Infection Status] \nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Broca, former Siracusan mafioso, later became a member of Chiave's gang.\nAfter a certain incident, he joined Rhodes Island along with the leader, Chiave, and now serves as a frontline attacker."
+  }
+}

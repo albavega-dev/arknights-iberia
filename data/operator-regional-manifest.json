@@ -1,5 +1,5 @@
 {
-  "manifestVersion": "2026-10-16.1",
+  "manifestVersion": "2026-10-30.1",
   "status": "research-only",
   "purpose": "Reviewed regional metadata for a future operator import. Not consumed by the application yet.",
   "comparison": {
@@ -29,7 +29,7 @@
     "limitations": [
       "CN-only is a regional snapshot difference, not an independent availability assertion.",
       "The snapshots are community-maintained and may not be captured at exactly the same time.",
-      "Names and dates below are community metadata and must be rechecked before import.",
+      "Names and dates below are community metadata and must be rechecked before import, except dates with their own cnReleaseDateProvenance.",
       "A missing Global record does not establish that an operator will never release globally."
     ]
   },
@@ -44,7 +44,7 @@
     { "id": "char_1015_aglna2", "nameEnglish": "Angelina the Mellow Wish", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-31", "globalReleaseDate": null },
     { "id": "char_1048_orchd2", "nameEnglish": "Violet Mizutsune Orchid", "nameStatus": "community-listed", "cnReleaseDate": "2026-05-31", "globalReleaseDate": null },
     { "id": "char_1049_catap2", "nameEnglish": "Zinogre S Catapult", "nameStatus": "community-listed", "cnReleaseDate": "2026-05-31", "globalReleaseDate": null },
-    { "id": "char_393_toledo", "nameEnglish": "De Toledo", "nameStatus": "community-listed", "cnReleaseDate": "2026-10-08", "globalReleaseDate": null },
+    { "id": "char_393_toledo", "nameEnglish": "De Toledo", "nameStatus": "community-listed", "cnReleaseDate": "2026-10-09", "globalReleaseDate": null, "cnReleaseDateProvenance": { "status": "verified", "source": "https://ak.hypergryph.com/news/5101" } },
     { "id": "char_4215_buddy", "nameEnglish": "Rhodes Island Recon", "nameStatus": "community-listed", "cnReleaseDate": "2026-05-31", "globalReleaseDate": null },
     { "id": "char_4217_makoto", "nameEnglish": "Makoto Yuki", "nameStatus": "community-listed", "cnReleaseDate": "2026-09-03", "globalReleaseDate": null },
     { "id": "char_4218_aigis", "nameEnglish": "Aigis", "nameStatus": "community-listed", "cnReleaseDate": "2026-09-03", "globalReleaseDate": null },
@@ -52,8 +52,8 @@
     { "id": "char_4220_kormr", "nameEnglish": "Koromaru", "nameStatus": "community-listed", "cnReleaseDate": "2026-09-03", "globalReleaseDate": null },
     { "id": "char_4229_aphris", "nameEnglish": "Aphrissa", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-09", "globalReleaseDate": null },
     { "id": "char_4230_mcnist", "nameEnglish": "Mechanist", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-16", "globalReleaseDate": null },
-    { "id": "char_4231_clemnt", "nameEnglish": "Clementia", "nameStatus": "community-listed", "cnReleaseDate": null, "globalReleaseDate": null },
-    { "id": "char_4232_hbound", "nameEnglish": "Homebound", "nameStatus": "community-listed", "cnReleaseDate": "2026-10-08", "globalReleaseDate": null },
+    { "id": "char_4231_clemnt", "nameEnglish": "Clementia", "nameStatus": "community-listed", "cnReleaseDate": "2026-10-09", "globalReleaseDate": null, "cnReleaseDateProvenance": { "status": "verified", "source": "https://ak.hypergryph.com/news/5101" } },
+    { "id": "char_4232_hbound", "nameEnglish": "Homebound", "nameStatus": "community-listed", "cnReleaseDate": "2026-10-09", "globalReleaseDate": null, "cnReleaseDateProvenance": { "status": "verified", "source": "https://ak.hypergryph.com/news/5101" } },
     { "id": "char_4234_pedro", "nameEnglish": "Pedro", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-09", "globalReleaseDate": null },
     { "id": "char_4235_thumpy", "nameEnglish": "Thumpy", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-31", "globalReleaseDate": null },
     { "id": "char_4236_tmslot", "nameEnglish": "Timeslot", "nameStatus": "community-listed", "cnReleaseDate": "2026-07-31", "globalReleaseDate": null },

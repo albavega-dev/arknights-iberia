@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_394_hadiya",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Hadiya",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "3 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul 22",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Caprinae",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "167cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Hadiya\n[Gender] Female\n[Combat Experience] 3 Years\n[Place of Birth] Columbia\n[Date of Birth] Jul 22\n[Race] Caprinae\n[Height] 167cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "The Sargonian-Columbian Hadiya is a descendant of the Qarnsayf, a legendary warrior tribe of the desert. She joined Rhodes Island in Sargon as part of her ambition to improve her combat techniques. She currently receives training and participates in field missions at the Sargonian branch office of Rhodes Island."
+  }
+}

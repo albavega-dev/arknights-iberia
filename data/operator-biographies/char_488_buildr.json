@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_488_buildr",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Poncirus",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Siesta",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Nov 21",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Liberi",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "155cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Poncirus\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Siesta\n[Date of Birth] Nov 21\n[Race] Liberi\n[Height] 155cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Poncirus, a civil engineer by training who has previously worked on the construction, renovation, and demolition of buildings in places such as Columbia and Siesta. Recommended to Rhodes Island by Dr. Ceylon, she is currently aboard Rhodes Island for Oripathy treatment. At the same time, she has entered into a cooperation agreement with Engineering and assists Rhodes Island with the refurbishment and renovation of its indoor spaces on a part-time basis."
+  }
+}

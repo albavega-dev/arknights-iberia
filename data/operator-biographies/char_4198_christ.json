@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4198_christ",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Miss.Christine",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Lady",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "35cm (sitting) 75cm (stretching, including tail, approximate)",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "We were unable to perform imaging on Miss.Christine or obtain a blood sample. Warfarin eventually abandoned any attempt to track Miss.Christine's infection status.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Miss.Christine\n[Gender] Lady\n[Combat Experience] Unknown\n[Place of Birth] Unknown\n[Date of Birth] Unknown\n[Race] Undisclosed\n[Height] 35cm (sitting) 75cm (stretching, including tail, approximate)\n[Infection Status]\nWe were unable to perform imaging on Miss.Christine or obtain a blood sample. Warfarin eventually abandoned any attempt to track Miss.Christine's infection status.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Miss.Christine is a beautiful creature who often appears by Phantom's side, and is suspected of being a Beast Aristocrat. The lady joined Rhodes Island of her own volition and currently has no assigned duties."
+  }
+}

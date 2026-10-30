@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4077_palico",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Terra Research Commission",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Terra Research Commission\n[Gender] Unknown\n[Combat Experience] Unknown\n[Place of Birth] Unknown\n[Date of Birth] Unknown\n[Race] Undisclosed\n[Height] Unknown\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "The Terra Research Commission is formed of three Felynes, and despite being officially established as the 'Felyne Special Operations Unit,' nevertheless retains its name due to the Scholar's fierce attachment to the 'Commission' title. The group contains a Scholar specializing in ecological research, an Artisan specializing in smithing, and a Palico with a wealth of hunting experience. While acting as a unit they specialize in pushing wooden carts. The Felynes are broadly popular owing to their lovable appearances, and presently undertake work responding to unusual foreign species."
+  }
+}

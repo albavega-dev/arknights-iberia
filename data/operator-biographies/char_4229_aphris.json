@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4229_aphris",
+  "region": "cn",
+  "storyTitle": "基础档案",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+    "path": "cn/gamedata/excel/handbook_info_table.json",
+    "sha256": "b6e6fa4cafe118b8c0342e7643a6103775f72c173a43467aeea22dfbee01d108"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "代号",
+      "value": "谬因",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "性别",
+      "value": "女",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "战斗经验",
+      "value": "没有战斗经验",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "出身地",
+      "value": "哥伦比亚",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "生日",
+      "value": "4月22日",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "种族",
+      "value": "菲林",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "身高",
+      "value": "165cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "矿石病感染情况",
+      "value": "参照医学检测报告，确认为非感染者。",
+      "state": "value"
+    }
+  ],
+  "originalText": "【代号】谬因\n【性别】女\n【战斗经验】没有战斗经验\n【出身地】哥伦比亚\n【生日】4月22日\n【种族】菲林\n【身高】165cm\n【矿石病感染情况】\n参照医学检测报告，确认为非感染者。",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "客观履历",
+    "text": "谬因，哥伦比亚人，常居玻利瓦尔。原哥伦比亚卢米内斯大学（拉乌尼达分校）副教授，在应用源石学、信息与计算科学领域造诣颇深。于玻利瓦尔大行军事件后辞去教学职务，现以术师干员身份供职于罗德岛。"
+  }
+}

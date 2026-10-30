@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_1030_noirc2",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Noir Corne",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "8 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Higashi",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Aug. 30",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Oni",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "180cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Infection confirmed by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Noir Corne\n[Gender] Male\n[Combat Experience] 8 years\n[Place of Birth] Higashi\n[Date of Birth] Aug. 30\n[Race] Oni\n[Height] 180cm\n[Infection Status]\nInfection confirmed by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "After the mission, Noir Corne has returned from Higashi clad in all-new equipment forged by the Felynes. Despite laying down the shield and picking up an imposing long sword, Noir Corne is still that most dependable rock, hitting the frontline to clear the way for his teammates."
+  }
+}

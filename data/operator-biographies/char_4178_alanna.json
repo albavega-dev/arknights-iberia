@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4178_alanna",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Alanna",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Rim Billiton",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Apr 17",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Savra",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "163cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Alanna\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Rim Billiton\n[Date of Birth] Apr 17\n[Race] Savra\n[Height] 163cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Alanna, former truck driver from Rim Billiton's Big Pillar. Proficient in operating and maintaining machinery, and currently works in Rhodes Island Repair Workshop No. 3 as she participates in R&D for all kinds of new equipment under Closure's supervision."
+  }
+}

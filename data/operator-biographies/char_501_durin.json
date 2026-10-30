@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_501_durin",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Durin",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "2 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Dec. 15",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Durin",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "131cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Durin\n[Gender] Female\n[Combat Experience] 2 years\n[Place of Birth] Undisclosed\n[Date of Birth] Dec. 15\n[Race] Durin\n[Height] 131cm\n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Durin serves on Rhodes Island Reserve Op Team A4. \nShe has a tremendous aptitude for Arts but is unable to fully realize her potential due to her physiology. \nExtremely narcoleptic, she is able to fall asleep at just about any place or time despite averaging more hours of sleep than most operators. Despite this, she makes very few mistakes in her work."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_202_demkni",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Saria",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "5 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "April 23",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Vouivre",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "174cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Saria \n[Gender] Female \n[Combat Experience] 5 years \n[Place of Birth] Columbia \n[Date of Birth] April 23 \n[Race] Vouivre \n[Height] 174cm \n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Saria was once the director of the Rhine Lab Defense Division. She has made contributions to the fields of life science, microbiology, and Originium Arts. At the same time, she has also proven herself formidable when it comes to demolition, protection, and anomaly containment missions.\nCurrently, she is working with Rhodes Island in various scientific fields and is negotiating a more in-depth cooperation plan with them."
+  }
+}

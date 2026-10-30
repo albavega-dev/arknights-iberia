@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_124_kroos",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Kroos",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "1 year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Rim Billiton",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "November 22",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Cautus",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "154cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Infection confirmed by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Kroos\n[Gender] Female \n[Combat Experience] 1 year\n[Place of Birth] Rim Billiton\n[Date of Birth] November 22\n[Race] Cautus\n[Height] 154cm\n[Infection Status] \nInfection confirmed by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Originally from Rim Billiton. Kroos also received her training from the Columbian Garrison at Holmegard with Fang and Beagle. She is calm and constantly smiling as she maintains a gentle demeanor. However, she sometimes breaks her facade, revealing a sharp-tongued, ferocious side."
+  }
+}

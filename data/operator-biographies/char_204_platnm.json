@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_204_platnm",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Platinum",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "6 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazimierz",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "February 13",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Kuranta",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "160cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Platinum\n[Gender] Female\n[Combat Experience] 6 years\n[Place of Birth] Kazimierz\n[Date of Birth] February 13\n[Race] Kuranta\n[Height] 160cm\n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Platinum was previously an assassin for the Kazimierz Armorless Union. The rest of her background is unknown. She has demonstrated considerable talent and special tactical accomplishments in high-mobility operations, clearance, and urban warfare.\nUnder the leadership of Dr. Kal'tsit, she is a Sniper Operator for Rhodes Island."
+  }
+}

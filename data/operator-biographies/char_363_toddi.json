@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_363_toddi",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Toddifons",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "2 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul 31",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Vouivre",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "168cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Toddifons\n[Gender] Female\n[Combat Experience] 2 Years\n[Place of Birth] Victoria\n[Date of Birth] Jul 31\n[Race] Vouivre\n[Height] 168cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "A dropout from the Cyr Military College of Victoria. Though not a professional soldier in formal service, she has undertaken systematic training and excels in all respects, most notably in siege tactics and creation of relevant weaponry.\nPresently with Rhodes Island, serving as a Sniper Operator and junior craftsman, principally responsible for long-distance destruction of enemy fortifications and artillery suppression."
+  }
+}

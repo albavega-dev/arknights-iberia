@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_476_blkngt",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Blacknight",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "6 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Rim Billiton",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Nov 2",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Savra",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "166cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Blacknight\n[Gender] Female\n[Combat Experience] 6 Years\n[Place of Birth] Rim Billiton\n[Date of Birth] Nov 2\n[Race] Savra\n[Height] 166cm\n[Infection Status]\nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Blacknight, bounty hunter, expert beast-tamer. Previously entered Yan territory on a commission, becoming familiar with Rhodes Island Operator Kroos in Shangshu City. Thereafter came to cooperate with Rhodes Island on referral from a local official, active on a variety of assignments within Yan's surroundings."
+  }
+}

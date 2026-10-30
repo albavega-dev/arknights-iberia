@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4088_hodrer",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Hoederer",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "21 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazdel",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Apr 22",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Sarkaz",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "185cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Hoederer\n[Gender] Male\n[Combat Experience] 21 Years\n[Place of Birth] Kazdel\n[Date of Birth] Apr 22\n[Race] Sarkaz\n[Height] 185cm\n[Infection Status]\nConfirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "The early career of former Sarkaz mercenary captain Hoederer is unclear. He participated in the transfer of Babel as part of the guard detail, leaving after Babel was dismantled. He was then spotted at Chernobog alongside Ines and W as a mercenary hired by Reunion, before disappearing after the Chernobog Incident. His next appearance was as a member of the Military Commission in Londinium. After obtaining certain key information, Hoederer left them and reestablished contact with Rhodes Island, once again signing a memorandum of strategic cooperation with us after discussions with Amiya."
+  }
+}

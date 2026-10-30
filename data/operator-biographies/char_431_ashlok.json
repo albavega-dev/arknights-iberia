@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_431_ashlok",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Ashlock",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "4 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazimierz",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Mar 20",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Zalak",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "164cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Ashlock\n[Gender] Female\n[Combat Experience] 4 Years\n[Place of Birth] Kazimierz\n[Date of Birth] Mar 20\n[Race] Zalak\n[Height] 164cm\n[Infection Status]\nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Member of Pinus Sylvestris Knightclub, Ashlock Knight Greynuty, joined Rhodes Island following the Kazimierz Major.\nFights with a handheld cannonlance and sturdy shield. Able to inflict casualties on faraway enemies, and can also hold the front, protecting other Operators."
+  }
+}

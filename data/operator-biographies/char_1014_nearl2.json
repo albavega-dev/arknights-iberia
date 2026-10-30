@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_1014_nearl2",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Nearl",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "8 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazimierz",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Apr 23",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Kuranta",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "171cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Nearl\n[Gender] Female\n[Combat Experience] 8 Years\n[Place of Birth] Kazimierz\n[Date of Birth] Apr 23\n[Race] Kuranta\n[Height] 171cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Nearl, the Radiant Knight of Kazimierz. Embodies extreme combat skill and personal military accomplishment in protecting allies, flexible engagement, annihilation and open-zone battle.\nAfter returning to Kazimierz and being crowned winner of the 24th Kazimierz Major, remained in Kazimierz to follow up on remaining affairs. Provides tactical support to the Rhodes Island Kawalerielki Branch Office as a collaborating operator, as well as assisting the landship with assorted operations in other regions in times of need."
+  }
+}

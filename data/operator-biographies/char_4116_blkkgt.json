@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4116_blkkgt",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Degenbrecher",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "25 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Leithanien",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jun 6",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Caprinae",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "182cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Degenbrecher\n[Gender] Female\n[Combat Experience] 25 Years\n[Place of Birth] Leithanien\n[Date of Birth] Jun 6\n[Race] Caprinae\n[Height] 182cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Former three-time champion of the Kazimierz Major and personal bodyguard to Enciodes, the president of Karlan Trade. Joined Rhodes Island indefinitely as an operator, as per a contract between the Doctor and Enciodes. \nCurrently active in various missions as a Guard, clearing paths for her team with her incomparable battle prowess. \n\nI've received some feedback that most missions with her feel more like camping trips. This is not the Doctor's fault—she does this on her own, and seems to quite enjoy it, too. Then there's no reason I should stop her, yes? \n——■■■"
+  }
+}

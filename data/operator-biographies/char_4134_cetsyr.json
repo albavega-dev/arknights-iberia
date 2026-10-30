@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4134_cetsyr",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Civilight Eterna",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazdel",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul 11",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "165cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Undisclosed",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Civilight Eterna\n[Gender] Female\n[Combat Experience] Undisclosed\n[Place of Birth] Kazdel\n[Date of Birth] Jul 11\n[Race] Undisclosed\n[Height] 165cm\n[Infection Status]\nUndisclosed",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Theresa, founder of the nomadic city of Kazdel, co-originator of the Military Commission of Kazdel, creator of the Babel organization, and former head of state of Kazdel. She's spearheaded medical, educational, and urban infrastructure projects, led the Sarkaz in repelling multiple invasions, and personally raised the bar of diplomacy work during her time in office. She passed away during the Kazdelian-Victorian War.\n(This personnel file is stored in a database sealed by the Rhodes Island HR Department.)"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_208_melan",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Melantha",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Half a year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "March 19",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Feline",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "161cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Infection confirmed by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Melantha\n[Gender] Female\n[Combat Experience] Half a year\n[Place of Birth] Victoria\n[Date of Birth] March 19\n[Race] Feline\n[Height] 161cm\n[Infection Status] \nInfection confirmed by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Melantha is the captain of Reserve Op Team A4 and a citizen of Victoria. Before she took up her current post, she was a typical jobless Infected. After an exceptional performance on her tests, she received an offer to join Rhodes Island."
+  }
+}

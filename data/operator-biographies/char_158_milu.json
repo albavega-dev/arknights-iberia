@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_158_milu",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Firewatch",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "5 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Unknown",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Elafia",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "158cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Firewatch \n[Gender] Female \n[Combat Experience] 5 years \n[Place of Birth] Unknown \n[Date of Birth] Unknown \n[Race] Elafia \n[Height] 158cm \n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Firewatch comes from unknown origins. She fought for many years on the border between Kazimierz and Ursus. It is suspected that she was a guerrilla during this time. She shows deep experience in asymmetric operations like ambushes, sniping, unconventional tactics, and mobile tactics.\nShe currently works as part of the Rhodes Island sniper group to provide protection services."
+  }
+}

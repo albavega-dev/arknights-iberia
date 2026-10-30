@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_274_astesi",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Astesia",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "No combat experience",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "July 10",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Liberi",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "165cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Infection confirmed by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Astesia\n[Gender] Female\n[Combat Experience] No combat experience\n[Place of Birth] Columbia\n[Date of Birth] July 10\n[Race] Liberi\n[Height] 165cm\n[Infection Status] \nInfection confirmed by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Astesia is a member of a Columbian occult organization, serving as a philology consultant for Rhine Lab as part of a cooperation agreement. After contracting sympathetic Oripathy, she and her sister came to Rhodes Island for treatment, where she qualified to become an operator. She uses unique sword skills to execute close range Arts attacks."
+  }
+}

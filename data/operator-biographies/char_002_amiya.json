@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_002_amiya",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Amiya",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "3 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Rim Billiton",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Dec. 23",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Cautus/Chimera",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "142cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Amiya \n[Gender] Female \n[Combat Experience] 3 years \n[Place of Birth] Rim Billiton \n[Date of Birth] Dec. 23 \n[Race] Cautus/Chimera \n[Height] 142cm \n[Infection Status] \nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "The public face of Rhodes Island and its top executive. Although Amiya appears to be a young and inexperienced girl, she is universally trusted and highly qualified for her position. \nAmiya now leads Rhodes Island in fighting for the future of the Infected and striving to exorcise the dark shadow of Originium from the land."
+  }
+}

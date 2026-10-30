@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_236_rope",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Rope",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "2 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Rim Billiton",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Apr. 4",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Cautus",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "155cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Infection confirmed by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Rope \n[Gender] Female \n[Combat Experience] 2 years \n[Place of Birth] Rim Billiton \n[Date of Birth] Apr. 4 \n[Race] Cautus \n[Height] 155cm \n[Infection Status] \nInfection confirmed by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Rope is a cat burglar from the slums of Lungmen, who got caught during a botched caper. Sent to Rhodes Island on a special recommendation from Madam Ch'en after Lungmen formed a partnership with Rhodes Island. \nResponsible for intelligence gathering. Uses a rope and grappling hook in combat to disorient the enemy."
+  }
+}

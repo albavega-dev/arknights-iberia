@@ -1,0 +1,73 @@
+{
+  "operatorId": "char_376_therex",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "unrecognized:Model",
+      "label": "Model",
+      "value": "Thermal-EX",
+      "state": "value"
+    },
+    {
+      "key": "genderAssignment",
+      "label": "Gender Assignment",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Time in Service",
+      "label": "Time in Service",
+      "value": "Less than 1 year",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Manufacturer",
+      "label": "Manufacturer",
+      "value": "Raythean",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Place of Production",
+      "label": "Place of Production",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Date of Release",
+      "label": "Date of Release",
+      "value": "Feb 15",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "160cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "Classified",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Inspection Report",
+      "label": "Inspection Report",
+      "value": "Small amount of wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Weapon system operational. Energy supply is full and functional. ECU in good condition.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Model] Thermal-EX \n[Gender Assignment] Male \n[Time in Service] Less than 1 year \n[Manufacturer] Raythean \n[Place of Production] Columbia \n[Date of Release] Feb 15 \n[Height] 160cm \n[Weight] Classified \n[Inspection Report] \nSmall amount of wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Weapon system operational. Energy supply is full and functional. ECU in good condition.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Thermal-EX (also known as THRM-EX) is a high-performance version of the Raythean Challenger™ Hellcat operating platform, jointly customized by Mayer and Closure. Between the two, Mayer was primarily responsible for the development and improvement of the weapon and energy supply systems. Thermal-EX is a rather peculiar presence and is extremely enthusiastic towards others, a characteristic that is beloved by some people and disliked by others. However, Thermal-EX remains undaunted, committed to using his incandescent personality to bring warmth to others in this frigid world. \n\nAs a new model, Thermal-EX's boasts a unique and aggressive appearance that can be somewhat intimidating. But he doesn't mind. After all, anyone can hear Thermal-EX's loud and warm greetings from a distance long before he's clearly visible. However, it seems like his vocabulary has been excessively bloated with words pertaining to 'hot'..."
+  }
+}

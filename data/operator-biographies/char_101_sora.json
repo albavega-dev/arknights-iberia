@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_101_sora",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Sora",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Unknown as requested by management agency",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Sep. 12",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Unknown as requested by management agency",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "155cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Sora\n[Gender] Female \n[Combat Experience] None \n[Place of Birth] Unknown as requested by management agency \n[Date of Birth] Sep. 12 \n[Race] Unknown as requested by management agency \n[Height] 155cm \n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "For reasons unknown, this active idol is currently boarding with Penguin Logistics. After Penguin Logistics formed a partnership with Rhodes Island, Sora also became a Rhodes Island Operator.\nShe is able to naturally channel her Originium Arts through her voice to support allies with her unique songs on the battlefield."
+  }
+}

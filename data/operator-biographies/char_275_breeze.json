@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_275_breeze",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Codename",
+      "value": "Breeze",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "1 year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "June 24",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Vulpo",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "162cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Originium Infection Condition",
+      "label": "Originium Infection Condition",
+      "value": "Infection confirmed by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Codename] Breeze\n[Gender] Female\n[Combat Experience] 1 year\n[Place of Birth] Victoria\n[Date of Birth] June 24\n[Race] Vulpo\n[Height] 162cm\n[Originium Infection Condition] \nInfection confirmed by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Grace Arizona, the only daughter of a noble branch family in Victoria. She came into contact with Rhodes Island during the course of her advanced medical techniques study, and applied for a job at Rhodes Island. She excels in pharmacology and clinical theory, and now provides emergency battlefield medic services for Rhodes Island."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_265_sophia",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Whislash",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Competition Knight Experience",
+      "label": "Competition Knight Experience",
+      "value": "4 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazimierz",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jun 28",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Kuranta",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "165cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Whislash\n[Gender] Female\n[Competition Knight Experience] 4 Years\n[Place of Birth] Kazimierz\n[Date of Birth] Jun 28\n[Race] Kuranta\n[Height] 165cm\n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Whislash Zofia, former competitive Kazimierz Knight. In family terms, Operators Nearl and Blemishine's aunt on their father's side. Has reached the Final 16 of the Majors before. Was left-handed in the past, but owing to some impairment, has switched to using her right hand. \nThough atrophied in combat compared to her peak, she holds unique insight and a rare talent in training others, currently folding herself into the Instructor lineup headed by Dobermann. Training Operators is her day-to-day priority, only joining any missions as required."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4202_haruka",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Haruka",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Higashi",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Oct 10",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Ægir",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "163cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Haruka\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Higashi\n[Date of Birth] Oct 10\n[Race] Ægir\n[Height] 163cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Haruka, born Haruka Shino, is a well-known entertainer in the Southern Court of Higashi, performing under the stage name Momoka Hanyuu. She was recommended to Rhodes Island by Operator Hoshiguma and acts as liaison between Rhodes Island and Higashi. She is being assigned to a number of field missions at her own request."
+  }
+}

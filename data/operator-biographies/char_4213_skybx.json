@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4213_skybx",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Skybox",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "7 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul 4",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Savra",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "184cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Skybox\n[Gender] Male\n[Combat Experience] 7 Years\n[Place of Birth] Columbia\n[Date of Birth] Jul 4\n[Race] Savra\n[Height] 184cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Gordon Tannen, born in Columbia, was promoted to Chief Inspector of the Columbian Bureau of Alcohol, Tobacco, Arts Units, and Originium following the Propeller Paradise Incident. He has also been restored to his position as Chief Executive of Propeller Paradise. He has entered into cooperation with Rhodes Island to secure legitimate channels for our Oripathy medicine to enter the Columbian market, while also representing Propeller Paradise in our joint aerospace research."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_282_catap",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Catapult",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "1 year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazimierz",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Aug. 8",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Kuranta",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "163cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Catapult \n[Gender] Female \n[Combat Experience] 1 year \n[Place of Birth] Kazimierz \n[Date of Birth] Aug. 8 \n[Race] Kuranta \n[Height] 163cm \n[Infection Status] \nOriginium crystals distributed across surface of body, confirmed Infected.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Originally a patient, she was accepted by Rhodes Island because she was found to be incredibly observant in examinations. Assigned to Reserve Op Team A6."
+  }
+}

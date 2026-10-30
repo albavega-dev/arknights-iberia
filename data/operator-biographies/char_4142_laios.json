@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4142_laios",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Laios",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Dungeoneering Experience",
+      "label": "Dungeoneering Experience",
+      "value": "4 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Northern Continent (Self-declared)",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Nov 26",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Tall-man (Self-declared)",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "185cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Laios\n[Gender] Male\n[Dungeoneering Experience] 4 years\n[Place of Birth] Northern Continent (Self-declared)\n[Date of Birth] Nov 26\n[Race] Tall-man (Self-declared)\n[Height] 185cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "The leader of Laios's party, with plenty of 'dungeoneering' experience (note: We also have no idea what this so-called 'dungeon' is). While his background is uncertain, his contributions are obvious, as he is always able to offer combat support during field operations."
+  }
+}

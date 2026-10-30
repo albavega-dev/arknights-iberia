@@ -1,0 +1,63 @@
+{
+  "operatorId": "char_281_popka",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "4 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Rim Billiton",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul. 2",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Cautus",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "1.44m",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected.",
+      "state": "value"
+    }
+  ],
+  "originalText": "`[Code Name] Popukar\n[Gender] Female \n[Combat Experience] 4 years \n[Place of Birth] Rim Billiton \n[Date of Birth] Jul. 2 \n[Race] Cautus \n[Height] 1.44m \n[Infection Status] \nOriginium crystals distributed across surface of body, confirmed Infected.",
+  "unrecognizedLines": [
+    "`[Code Name] Popukar"
+  ],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Initially a patient at Rhodes Island, Popukar requested and passed the trial to become an Operator for Rhodes Island. She was assigned to Reserve Op Team A6.\nShe possesses tremendous destructive power, becoming the team's heavy."
+  }
+}

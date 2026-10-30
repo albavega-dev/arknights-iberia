@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_120_hibisc",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Hibiscus",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "1 year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "June 21",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Sarkaz",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "153cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Infection confirmed by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Hibiscus\n[Gender] Female\n[Combat Experience] 1 year\n[Place of Birth] Victoria\n[Date of Birth] June 21\n[Race] Sarkaz\n[Height] 153cm\n[Infection Status] \nInfection confirmed by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Born in Londinium, Victoria, Hibiscus is the older twin sister of her fellow Operator, Lava. After contracting Oripathy, she came to Rhodes Island for treatment. While undergoing that treatment, she began to dream of helping others. Her passion for caring for others, as well as her hard work, have led Hibiscus to become a Rhodes Island Medic."
+  }
+}

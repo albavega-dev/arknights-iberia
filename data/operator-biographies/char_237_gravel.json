@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_237_gravel",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Gravel",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "4 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazimierz",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jan 20",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Zalak",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "156cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "No Originium crystals are visible on the surface of body. Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Gravel\n[Gender] Female\n[Combat Experience] 4 years\n[Place of Birth] Kazimierz\n[Date of Birth] Jan 20\n[Race] Zalak\n[Height] 156cm\n[Infection Status] \nNo Originium crystals are visible on the surface of body. Medical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "A Rank 4 Knight of Kazimierz, staying at Rhodes Island for undisclosed reasons. \nProficient in covert ops and assassinations, Gravel volunteered to be the Doctor's personal bodyguard."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_118_yuki",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Shirayuki",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "3 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Higashi",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul. 20",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Anaty",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "154cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Shirayuki\n[Gender] Female\n[Combat Experience] 3 years\n[Place of Birth] Higashi\n[Date of Birth] Jul. 20\n[Race] Anaty\n[Height] 154cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Formerly the personal bodyguard of Lady Fumizuki, wife of Lungmen's Chief Wei Yenwu, Shirayuki was sent to Rhodes Island to serve the Doctor in the same role, after the Lungmen Guard Department partnered with the company. She uses large shurikens as her weapons of choice, and is well-versed in covert ops and intelligence gathering. She protects the Doctor from behind the scenes."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_450_necras",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Necrass",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Oct 16",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Draco",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "172cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Necrass\n[Gender] Female\n[Combat Experience] Undisclosed\n[Place of Birth] Victoria\n[Date of Birth] Oct 16\n[Race] Draco\n[Height] 172cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Necrass, real name Eblana Dublinn, is the former Leader of Dublinn, an organization that no longer exists. After careful consideration, Rhodes Island has conditionally agreed to establish a degree of cooperation with her.\nAfter joint confirmation from the Medical and HR Departments, as well as the Doctor, all of Necrass's files have been moved to the high-clearance database."
+  }
+}

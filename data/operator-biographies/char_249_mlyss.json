@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_249_mlyss",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Muelsyse",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Nov 3",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Elf",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "169cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Muelsyse\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Undisclosed\n[Date of Birth] Nov 3\n[Race] Elf\n[Height] 169cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Muelsyse, Director of Rhine Lab's Ecological Section and a leading expert on life and environmental science in Columbia. She got in touch with Rhodes Island during the Trimounts incident, after which she entered into a long-term partnership agreement with us. She now works on multiple collaborative research projects with the Bioengineering Lab, as well as participating in relevant operations as a Vanguard operator."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_437_mizuki",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Mizuki",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Higashi",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Mar 22",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Ægir",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "161cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Mizuki\n[Gender] Male\n[Combat Experience] None\n[Place of Birth] Higashi\n[Date of Birth] Mar 22\n[Race] Ægir\n[Height] 161cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Mizuki came in contact with some of our operators in the Bolívarian city of Dossoles, and accompanied them back to the landship. After preliminary operator-related interviews and inspections, he was approved for a temporary stay.\nHis learning ability is rather exceptional, and at this stage, he is suitable for civilian work or and we may consider training him to become an operator. After further investigation and evaluation, he was approved for a long-term stay aboard the landship."
+  }
+}

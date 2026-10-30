@@ -9,11 +9,13 @@ export const statsDatasetContractVersion = "3";
 export const skillsDatasetContractVersion = "4";
 // Version 2 moves the trait to the stats files.
 export const modulesDatasetContractVersion = "2";
+export const biographiesDatasetContractVersion = "1";
 export type DatasetLimits = Readonly<{ fileBytes: number; totalBytes: number }>;
 // Each dataset declares its own limits (written into its index); this is the default and the one stats uses.
 export const datasetLimits: DatasetLimits = { fileBytes: 32_768, totalBytes: 6_000_000 };
 export const skillsDatasetLimits: DatasetLimits = { fileBytes: 65_536, totalBytes: 8_000_000 };
 export const modulesDatasetLimits: DatasetLimits = { fileBytes: 32_768, totalBytes: 4_000_000 };
+export const biographiesDatasetLimits: DatasetLimits = { fileBytes: 16_384, totalBytes: 1_500_000 };
 export const datasetWarningRatio = 0.9;
 
 export type DatasetSource = Readonly<{ repository: string; revision: string; path: string; sha256: string }>;

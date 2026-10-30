@@ -1,0 +1,73 @@
+{
+  "operatorId": "char_4188_confes",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "unrecognized:Serial Number",
+      "label": "Serial Number",
+      "value": "CONFESS-47",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Voice",
+      "label": "Voice",
+      "value": "Male Type 4",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Time in Service",
+      "label": "Time in Service",
+      "value": "4 years",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Manufacturer",
+      "label": "Manufacturer",
+      "value": "Laterano Faith Assistive Engineering Design Bureau",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Place of Production",
+      "label": "Place of Production",
+      "value": "Laterano",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Date of Release",
+      "label": "Date of Release",
+      "value": "Dec 24",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "230cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "Classified",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Inspection Results",
+      "label": "Inspection Results",
+      "value": "No damage on outer shell. Structure intact. Engine and chassis in good condition. ECU in good condition.\nExternal firearm loaded. Confessional database is up to date.\nMinor malfunction with language module. Core function is unaffected.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Serial Number] CONFESS-47\n[Voice] Male Type 4\n[Time in Service] 4 years\n[Manufacturer] Laterano Faith Assistive Engineering Design Bureau\n[Place of Production] Laterano\n[Date of Release] Dec 24\n[Height] 230cm\n[Weight] Classified\n[Inspection Results]\nNo damage on outer shell. Structure intact. Engine and chassis in good condition. ECU in good condition.\nExternal firearm loaded. Confessional database is up to date.\nMinor malfunction with language module. Core function is unaffected.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "1st-gen automated confessional developed by the Laterano Faith Assistive Engineering Design Bureau. It began as a stationary confessional fitted with a smart voice system, modified and fitted to a mobile chassis allowing it to move through Laterano and respond to the confession requests of citizens on the intercity net.\nThe classic form is the designer's taste, and gives the user an impression of simplicity and honesty.\nThe accuracy and response of the voice recognition system were improved, and new customization options were added, including voice types, cognition scope, and response tendencies, providing a more personalized confession experience.\nThe automated confessional CONFESS-47 (full serial in Curia records: LATERANO AUTOMATED CONFESSIONAL 047) joined Rhodes Island as a gift from the Lateran Curia and currently serves as an operator providing confession and other services to members of Rhodes Island."
+  }
+}

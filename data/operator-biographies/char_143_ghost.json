@@ -1,0 +1,73 @@
+{
+  "operatorId": "char_143_ghost",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Specter",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "7 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Ægir",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul. 27",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "162cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "??kg",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "No Originium crystals are visible on the surface of body, but confirmed Infected by medical examination.\nMore clinical research is required to fully diagnose Specter's Infection status.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Specter\n[Gender] Female \n[Combat Experience] 7 years \n[Place of Birth] Ægir \n[Date of Birth] Jul. 27 \n[Race] Undisclosed \n[Height] 162cm \n[Weight] ??kg \n[Infection Status] \nNo Originium crystals are visible on the surface of body, but confirmed Infected by medical examination.\nMore clinical research is required to fully diagnose Specter's Infection status.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Specter, true identity unknown, records missing. Demonstrated extraordinary ability in combating large creatures and destroying sturdy targets, speculated to correlate with extensive prior combat experience. \nNow stationed as a Guard at Rhodes Island."
+  }
+}

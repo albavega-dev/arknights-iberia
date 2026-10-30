@@ -1,0 +1,73 @@
+{
+  "operatorId": "char_4093_frston",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "unrecognized:Model",
+      "label": "Model",
+      "value": "Friston-3",
+      "state": "value"
+    },
+    {
+      "key": "genderAssignment",
+      "label": "Gender Assignment",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Time in Service",
+      "label": "Time in Service",
+      "value": "Less than 1 year",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Manufacturer",
+      "label": "Manufacturer",
+      "value": "Rhodes Island",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Place of Production",
+      "label": "Place of Production",
+      "value": "Rhodes Island",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Date of Release",
+      "label": "Date of Release",
+      "value": "Nov 13",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "145cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "Classified",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Inspection Results",
+      "label": "Inspection Results",
+      "value": "Small amount of wear on outer casing, structure intact, exceptional durability. Generator and chassis in good condition. Energy barrier systems operating normally, database up to date. Service normal. ECU in good condition.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Model] Friston-3\n[Gender Assignment] Male\n[Time in Service] Less than 1 year\n[Manufacturer] Rhodes Island\n[Place of Production] Rhodes Island\n[Date of Release] Nov 13\n[Height] 145cm\n[Weight] Classified\n[Inspection Results]\nSmall amount of wear on outer casing, structure intact, exceptional durability. Generator and chassis in good condition. Energy barrier systems operating normally, database up to date. Service normal. ECU in good condition.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Friston 3 is an S-C Model four-wheeled Operation Platform, the first product of the Rhodes Island Smart Operation platform R&D Team's efforts. Closure personally led the team throughout the development process, from concept design to assembly and testing. Friston-3 is also based on PRTS, achieving a new comprehensive standard for operation platforms, from the underlying source code to the external modules. He weighs less than the other retrofitted operation platforms on Rhodes Island, while being more versatile and stable, and currently participates in operations as a Defender Operator.\n[Classified Log]\nThe source code for Friston-3's core, compiled ideations, and other design details are temporarily unavailable to Operators, so please contact Closure directly if you have any questions."
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_486_takila",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Tequila",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "3 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Bolívar",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "May 15",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Perro",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "182cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Tequila\n[Gender] Male\n[Combat Experience] 3 Years\n[Place of Birth] Bolívar\n[Date of Birth] May 15\n[Race] Perro\n[Height] 182cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "The former deputy director of the International Trade Management Department of Dossoles, real name Ernesto Salas, was dismissed during the riots in Dossoles City. After that, he was recommended to Rhodes Island by Operator Ch'en, and joined after passing the test.\nHe was taken to Rhodes Island by a person who had clashed with him just a few days prior. Even in the face of such an embarrassing situation, he still behaved as if nothing had happened, maintaining a friendly and jovial social atmosphere along the way. Truly, Operator Tequila is a rare diplomatic talent fitting for one who serves the Mayor of Dossoles."
+  }
+}

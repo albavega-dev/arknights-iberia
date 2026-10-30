@@ -37,7 +37,7 @@ function validSource(source: unknown, path: string, issues: BundleIssue[]): sour
   if (typeof (source as Record<string, unknown>).sha256 !== "string" || !sha256.test(String((source as Record<string, unknown>).sha256))) issues.push(issue(`${path}.sha256`, "must be a SHA-256 hex value"));
   return true;
 }
-function validOperator(value: unknown, path: string, issues: BundleIssue[]): value is OperatorRecord {
+export function validOperator(value: unknown, path: string, issues: BundleIssue[]): value is OperatorRecord {
   if (!value || typeof value !== "object" || Array.isArray(value)) { issues.push(issue(path, "must be an object")); return false; }
   const item = value as Record<string, unknown>;
   if (typeof item.id !== "string" || !/^char_\S+$/u.test(item.id)) issues.push(issue(`${path}.id`, "must be a char_* ID"));

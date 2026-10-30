@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4143_sensi",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Senshi",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Dungeoneering Experience",
+      "label": "Dungeoneering Experience",
+      "value": "76 years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Izganda (Self-declared)",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Oct 2",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Dwarf (Self-declared)",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "140cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Senshi\n[Gender] Male\n[Dungeoneering Experience] 76 years\n[Place of Birth] Izganda (Self-declared)\n[Date of Birth] Oct 2\n[Race] Dwarf (Self-declared)\n[Height] 140cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Senshi is a member of Laios's party. He has ample experience in outdoor survival and a tenacious insistence on a proper diet. He serves as the group's cook.\nSenshi considers it his duty to provide healthy meals for the party. The cooking pots and knives he carries are made from precious materials."
+  }
+}

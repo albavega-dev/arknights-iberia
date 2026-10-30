@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_290_vigna",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Vigna",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "1 year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Kazdel",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Dec. 12",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Sarkaz",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "142cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Infection confirmed by medical report.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Vigna \n[Gender] Female \n[Combat Experience] 1 year \n[Place of Birth] Kazdel \n[Date of Birth] Dec. 12 \n[Race] Sarkaz \n[Height] 142cm \n[Infection Status] \nInfection confirmed by medical report.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Vigna is a Sarkaz that was admitted into Rhodes Island following a battery of screenings, showing good potential in skirmishes, raids, and coordinated combat. \nCurrently a Vanguard with an advance squad at Rhodes Island, with outstanding performance in both tactical raids and frontline combat."
+  }
+}

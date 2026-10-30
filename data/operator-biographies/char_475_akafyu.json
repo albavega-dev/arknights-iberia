@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_475_akafyu",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Akafuyu",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "8 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Higashi",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Mar 27",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Ægir",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "176cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Akafuyu\n[Gender] Female\n[Combat Experience] 8 Years\n[Place of Birth] Higashi\n[Date of Birth] Mar 27\n[Race] Ægir\n[Height] 176cm\n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Akafuyu, a swordsman from Higashi, is the successor of the Nobukage-ryu Iai-suemonogiri Kenpou. Aside from her mastery of traditional swordsmanship, she also possesses excellent modern combat and tactical abilities. Given how distinctively extraordinary she is as an individual, it will take some time for her to familiarize herself with Rhodes Island's combat style."
+  }
+}

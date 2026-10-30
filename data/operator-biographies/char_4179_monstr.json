@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4179_monstr",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Mon3tr",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Rhodes Island",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul 25",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Undisclosed",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "158cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Mon3tr\n[Gender] Female\n[Combat Experience] Undisclosed\n[Place of Birth] Rhodes Island\n[Date of Birth] Jul 25\n[Race] Undisclosed\n[Height] 158cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Mon3tr is profoundly knowledgeable in life sciences, Oripathy treatment, history and genealogy, and many other fields. She also possesses plentiful experience in mobile combat maneuvers, and offers much-needed assistance during Rhodes Island's rebuilding. Currently serves as a special consultant for the Medical, Engineering, and Field Operations departments."
+  }
+}

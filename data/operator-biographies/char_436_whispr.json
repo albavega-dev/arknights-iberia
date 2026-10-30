@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_436_whispr",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Whisperain",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Iberia",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Mar 6",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Ægir",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "169cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Whisperain\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Iberia\n[Date of Birth] Mar 6\n[Race] Ægir\n[Height] 169cm\n[Infection Status] Medical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "The Iberia-born roving doctor, Whisperain, never stays in one place for too long. Records of her work in the area remain all throughout Kazimierz, Sami and the like. Her patients appear to have received treatment from her while she passed by, and in her seemingly aimless wandering, she's rescued more than a few from the brink.  \nSince she administered treatment to a mid-mission team of Operators met by chance, she is now an ad hoc member of the Medical Department as an accompanying doctor, journeying together with Rhodes Island for the short-term."
+  }
+}

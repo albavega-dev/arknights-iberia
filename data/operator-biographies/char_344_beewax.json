@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_344_beewax",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Beeswax",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "None",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Sargon",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Sept 15",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Caprinae",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "157cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Beeswax\n[Gender] Female\n[Combat Experience] None\n[Place of Birth] Sargon\n[Date of Birth] Sept 15\n[Race] Caprinae\n[Height] 157cm\n[Infection Status] \nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Operator Beeswax, a member of an ancient tribe from the depths of the deserts of Sargon, contacted us of her own initiative and asked to board the ship in order to locate someone. After learning that the person of interest will not be returning to the ship for the time being, Miss Beeswax has applied to join and travel with Rhodes Island, waiting for the time she can reunite with relative. \nBeeswax has passed the entrance examination and has been given the official Operator status, and now serves as a Caster for Rhodes Island. This will be the first stop in her lengthy journey of discovery."
+  }
+}

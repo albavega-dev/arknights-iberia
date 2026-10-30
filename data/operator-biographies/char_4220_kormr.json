@@ -1,0 +1,64 @@
+{
+  "operatorId": "char_4220_kormr",
+  "region": "cn",
+  "storyTitle": "基础档案",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+    "path": "cn/gamedata/excel/handbook_info_table.json",
+    "sha256": "b6e6fa4cafe118b8c0342e7643a6103775f72c173a43467aeea22dfbee01d108"
+  },
+  "fields": [
+    {
+      "key": "name",
+      "label": "姓名",
+      "value": "虎狼丸",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "性别",
+      "value": "未录入",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:入学年级",
+      "label": "入学年级",
+      "value": "十一年级",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "出身地",
+      "value": "未录入",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "生日",
+      "value": "未录入",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "种族",
+      "value": "佩洛兽亲（据称）",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "身高",
+      "value": "未录入",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "矿石病感染情况",
+      "value": "参照医学检测报告，确认为非感染者。\n*贴在本页的便签之一：老师，虎狼丸也要进我们班的档案吗……\n*贴在本页的便签之二：挺有意义的。记一下吧。",
+      "state": "value"
+    }
+  ],
+  "originalText": "【姓名】虎狼丸\n【性别】未录入\n【入学年级】十一年级\n【出身地】未录入\n【生日】未录入\n【种族】佩洛兽亲（据称）\n【身高】未录入\n【矿石病感染情况】\n参照医学检测报告，确认为非感染者。\n\n*贴在本页的便签之一：老师，虎狼丸也要进我们班的档案吗……\n*贴在本页的便签之二：挺有意义的。记一下吧。",
+  "unrecognizedLines": [],
+  "profile": null
+}

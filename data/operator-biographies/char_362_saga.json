@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_362_saga",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Saga",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "2 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Higashi",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Dec 31",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Perro",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "164cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Medical tests have confirmed that no infection is present.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Saga\n[Gender] Female\n[Combat Experience] 2 Years\n[Place of Birth] Higashi\n[Date of Birth] Dec 31\n[Race] Perro\n[Height] 164cm\n[Infection Status]\nMedical tests have confirmed that no infection is present.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "A wandering monk from Higashi. Some holes in her background. Originally entered a Rhodes Island office by mistake; once inquiries showed she was interested in employment, she passed the exams and joined the company. Seems to have previously made links with Rhodes Island Operator Lava.\nMakes ample use of the naginata she carries with vigorous skill, and is active as a Vanguard Operator on the frontlines."
+  }
+}

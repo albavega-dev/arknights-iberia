@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_185_frncat",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Mousse",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Half a year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Victoria",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Aug. 19",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Feline",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "154cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Mousse \n[Gender] Female \n[Combat Experience] Half a year \n[Place of Birth] Victoria \n[Date of Birth] Aug. 19 \n[Race] Feline \n[Height] 154cm \n[Infection Status] \nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Mousse was an apprentice baker in Londinium, Victoria when she became infected with Oripathy. Her parents sent her to Rhodes Island for treatment. \nAt her request, Mousse was recruited as an Operator following psychological counseling and a battery of tests. Now a regular logistics staff member, she provides combat support."
+  }
+}

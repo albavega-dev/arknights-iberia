@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_212_ansel",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Ansel",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Male",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "Half a year",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Rim Billiton",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "January 31",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Cautus",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "163cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals have not been found on the surface of his body, confirming no infection.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Ansel\n[Gender] Male\n[Combat Experience] Half a year\n[Place of Birth] Rim Billiton\n[Date of Birth] January 31\n[Race] Cautus\n[Height] 163cm\n[Infection Status] \nOriginium crystals have not been found on the surface of his body, confirming no infection.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Ansel is a member of Reserve Op Team A4 and a citizen of Rim Billiton. Before officially taking up his post, he was a member of the Rhodes Island pharmaceuticals intern staff. After excelling on multiple tests, he was permitted to join the Rhodes Island medic team."
+  }
+}

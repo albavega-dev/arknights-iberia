@@ -29,6 +29,20 @@ export function operatorDatasetFile(operatorId: string, region: GameDataRegion, 
   return { operatorId, region, text, bytes: Buffer.byteLength(text), sha256: sha256(text) };
 }
 
+/** Writes a new directory next to the old one and swaps them, restoring the old one if the swap fails. */
+export async function replaceDirectory(directory: string, force: boolean, write: (partial: string) => Promise<void>): Promise<void> {
+  if (await exists(directory) && !force) throw new Error("Output exists; pass --force to overwrite");
+  const partial = `${directory}.${process.pid}.partial`;
+  const previous = `${directory}.${process.pid}.previous`;
+  await rm(partial, { recursive: true, force: true });
+  await mkdir(partial, { recursive: true });
+  try { await write(partial); } catch (error) { await rm(partial, { recursive: true, force: true }); throw error; }
+  const hadPrevious = await exists(directory);
+  if (hadPrevious) await rename(directory, previous);
+  try { await rename(partial, directory); } catch (error) { if (hadPrevious) await rename(previous, directory); await rm(partial, { recursive: true, force: true }); throw error; }
+  if (hadPrevious) await rm(previous, { recursive: true, force: true });
+}
+
 /**
  * Writes a dataset directory atomically: files go to a partial directory first, limits are checked before anything is
  * written, and the previous directory is only replaced (and restored on failure) once the new one is complete.
@@ -38,20 +52,11 @@ export async function writeDatasetDirectory(directory: string, dataset: string, 
   const indexText = serializeDatasetJson(index);
   const { errors, warnings } = checkDatasetLimits(index, Buffer.byteLength(indexText));
   if (errors.length) throw new Error(`${errors.join("; ")}; output not written`);
-  if (await exists(directory) && !options.force) throw new Error("Output exists; pass --force to overwrite");
-  const partial = `${directory}.${process.pid}.partial`;
-  const previous = `${directory}.${process.pid}.previous`;
-  await rm(partial, { recursive: true, force: true });
-  await mkdir(partial, { recursive: true });
-  try {
+  await replaceDirectory(directory, options.force, async (partial) => {
     for (const file of files) await writeFile(join(partial, datasetFileName(file.operatorId)), file.text, "utf8");
     for (const file of options.extras?.shared ?? []) await writeFile(join(partial, sharedFileName(file.name)), file.text, "utf8");
     await writeFile(join(partial, "index.json"), indexText, "utf8");
-  } catch (error) { await rm(partial, { recursive: true, force: true }); throw error; }
-  const hadPrevious = await exists(directory);
-  if (hadPrevious) await rename(directory, previous);
-  try { await rename(partial, directory); } catch (error) { if (hadPrevious) await rename(previous, directory); await rm(partial, { recursive: true, force: true }); throw error; }
-  if (hadPrevious) await rm(previous, { recursive: true, force: true });
+  });
   const entries = [...Object.values(index.operators), ...Object.values(index.shared ?? {})];
   return { index, totalBytes: Buffer.byteLength(indexText) + entries.reduce((sum, entry) => sum + entry.bytes, 0), warnings };
 }

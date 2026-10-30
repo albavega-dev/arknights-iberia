@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_1502_crosly",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Crownslayer",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "7 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Ursus",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Jul 22",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Reproba",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "161cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": "Originium crystals distributed across surface of body, confirmed Infected by medical examination.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Crownslayer\n[Gender] Female\n[Combat Experience] 7 Years\n[Place of Birth] Ursus\n[Date of Birth] Jul 22\n[Race] Reproba\n[Height] 161cm\n[Infection Status]\nOriginium crystals distributed across surface of body, confirmed Infected by medical examination.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Lyudmila Ilyinichna, a former Reunion squad leader who dealt in covert operations and assassinations, specializing in melee combat and breaking through defensive lines. She parted with Reunion in the wake of the Chernobog-Lungmen Incident, and approached Rhodes Island at the end of 1100. She is currently receiving Oripathy treatment while under supervision."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "operatorId": "char_4000_jnight",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "unrecognized:Model",
+      "label": "Model",
+      "value": "'Justice Knight'",
+      "state": "value"
+    },
+    {
+      "key": "genderAssignment",
+      "label": "Gender Assignment",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Time in Service",
+      "label": "Time in Service",
+      "value": "More than 4 years",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Manufacturer",
+      "label": "Manufacturer",
+      "value": "Raythean",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Place of Production",
+      "label": "Place of Production",
+      "value": "Columbia",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Date of Release",
+      "label": "Date of Release",
+      "value": "Jan 21",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "160cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "Classified",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Inspection Report",
+      "label": "Inspection Report",
+      "value": "Small amount of wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Auxiliary systems operating normally, targeting unit calibrated. Service normal. ECU in good condition.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Model] 'Justice Knight'\n[Gender Assignment] Female\n[Time in Service] More than 4 years\n[Manufacturer] Raythean\n[Place of Production] Columbia\n[Date of Release] Jan 21\n[Height] 160cm\n[Weight] Classified\n[Inspection Report] \nSmall amount of wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Auxiliary systems operating normally, targeting unit calibrated. Service normal. ECU in good condition.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "'Justice Knight' is a Raythean Exister-S1044 Model four-wheeled operation platform customized by a Kazimierzian engineer, later remodeled and upgraded by Mayer and Closure. Owing to its main searchlight function lacking use value, and its cover fire capacity being limited in its target market, its production has been halted. Before the Rhodes Island Engineering Department got their hands on her, 'Justice Knight' had already gone through a dozen modifications, big and small; her present capabilities are easily a far cry from the original model. Her old operating system and command memory data were damaged, unable to be recovered. After a swap for new core hardware and an expanded memory unit, an updated operating system plus additional artificial voice system, she is now hardly distinguishable from Raythean Industries's latest operation platforms. 'Justice Knight' is a member of Pinus Sylvestris Knightclub, and is currently authorized for use by Rhodes Island."
+  }
+}

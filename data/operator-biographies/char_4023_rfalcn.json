@@ -1,0 +1,67 @@
+{
+  "operatorId": "char_4023_rfalcn",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "codeName",
+      "label": "Code Name",
+      "value": "Kestrel",
+      "state": "value"
+    },
+    {
+      "key": "gender",
+      "label": "Gender",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "combatExperience",
+      "label": "Combat Experience",
+      "value": "20 Years",
+      "state": "value"
+    },
+    {
+      "key": "placeOfBirth",
+      "label": "Place of Birth",
+      "value": "Sargon",
+      "state": "value"
+    },
+    {
+      "key": "dateOfBirth",
+      "label": "Date of Birth",
+      "value": "Reported as Unknown",
+      "state": "value"
+    },
+    {
+      "key": "race",
+      "label": "Race",
+      "value": "Liberi",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "170cm",
+      "state": "value"
+    },
+    {
+      "key": "infectionStatus",
+      "label": "Infection Status",
+      "value": " Confirmed Infected by medical examination",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Code Name] Kestrel\n[Gender] Female\n[Combat Experience] 20 Years\n[Place of Birth] Sargon\n[Date of Birth] Reported as Unknown\n[Race] Liberi\n[Height] 170cm\n[Infection Status]\n Confirmed Infected by medical examination",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "Formerly a warrior of a Szubat-Arsalan tribe in Sargon, Kestrel and her siblings were enslaved by the local lord ameer's army. Encountering Rhodes Island personnel during her escape, she was able to return to the mines and rescue the other workers. She later joined Rhodes Island and is currently employed at the Sargonian branch, receiving treatment while participating in field missions."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "operatorId": "char_4136_phonor",
+  "region": "en",
+  "storyTitle": "Basic Info",
+  "source": {
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+    "path": "en/gamedata/excel/handbook_info_table.json",
+    "sha256": "07077cd529965c57da1f602028f1ceec81b43814af0d8f131dcbed92b04e0498"
+  },
+  "fields": [
+    {
+      "key": "unrecognized:Model",
+      "label": "Model",
+      "value": "PhonoR-0",
+      "state": "value"
+    },
+    {
+      "key": "genderAssignment",
+      "label": "Gender Assignment",
+      "value": "Female",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Time in Service",
+      "label": "Time in Service",
+      "value": "Less than 1 year",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Manufacturer",
+      "label": "Manufacturer",
+      "value": "Rhodes Island",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Place of Production",
+      "label": "Place of Production",
+      "value": "Rhodes Island",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Date of Release",
+      "label": "Date of Release",
+      "value": "Sep 2",
+      "state": "value"
+    },
+    {
+      "key": "height",
+      "label": "Height",
+      "value": "160cm",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Weight",
+      "label": "Weight",
+      "value": "Classified",
+      "state": "value"
+    },
+    {
+      "key": "unrecognized:Inspection Report",
+      "label": "Inspection Report",
+      "value": "Light wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Weapon systems operating normally. Energy storage fully charged and operating normally. Service normal. ECU in good condition.",
+      "state": "value"
+    }
+  ],
+  "originalText": "[Model] PhonoR-0\n[Gender Assignment] Female\n[Time in Service] Less than 1 year\n[Manufacturer] Rhodes Island\n[Place of Production] Rhodes Island\n[Date of Release] Sep 2\n[Height] 160cm\n[Weight] Classified\n[Inspection Report]\nLight wear on outer casing, structure intact, normal durability. Generator and chassis in good condition. Weapon systems operating normally. Energy storage fully charged and operating normally. Service normal. ECU in good condition.",
+  "unrecognizedLines": [],
+  "profile": {
+    "storyTitle": "Profile",
+    "text": "R&V Model witchcraft operation platform PhonoR-0, Rhodes Island's first and only intelligent operation platform equipped with a Banshee incantation Arts device. Unlike the customized Raythean Industries models, she was born from the unbreakable rapport between our most skilled operators and the Banshees. Compared to other wheeled operation platforms, the witchcraft-based components in her operating mechanisms, drive system, and core more closely resemble a mobile altar. Despite being the product of both cutting-edge technology and Sarkaz witchcraft, her basic specs are unimpressive, but she is easy to deploy and able to provide mid-mission assistance to operators. She currently participates in combat missions as a Supporter Operator."
+  }
+}
