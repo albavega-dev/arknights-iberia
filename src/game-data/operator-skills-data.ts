@@ -3,7 +3,7 @@ import "server-only";
 import indexData from "../../data/operator-skills/index.json";
 import iconsManifest from "../../data/operator-skill-icons-manifest.json";
 import type { GameDataRegion } from "./gamedata-revisions";
-import type { DatasetIndex } from "./operator-dataset";
+import { skillsDatasetContractVersion, validateDatasetIndex, type DatasetIndex } from "./operator-dataset";
 import { loadOperatorSkillsView, type OperatorSkillsView, type SkillsDatasetReaders, type StoredSkillsGlossary, type StoredSkillsProfile } from "./operator-skills-view";
 import { getBaseSkillIconPath, getMasteryIconPath, getRoomIconPath, getSkillIconPath, type SkillIconEntry, type SkillIconsManifest } from "./operator-skill-icons";
 
@@ -31,3 +31,5 @@ export const skillsDatasetReaders: SkillsDatasetReaders = {
 };
 
 export function loadSkillsView(operatorId: string, region: GameDataRegion): Promise<OperatorSkillsView | null> { return loadOperatorSkillsView(skillsDatasetReaders, operatorId, region); }
+
+export function skillsIndexErrors(): string[] { return validateDatasetIndex(index, skillsDatasetContractVersion); }
