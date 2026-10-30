@@ -15,7 +15,7 @@ const tables = {
   enHandbook: { handbookDict: Object.fromEntries(["char_a", "char_b"].map((id) => [id, { storyTextAudio: [{ storyTitle: "Basic Info", stories: [{ storyText: "[Race] Sarkaz" }] }] }])) },
   cnHandbook: { handbookDict: Object.fromEntries(["char_cn", "char_cn2"].map((id) => [id, { storyTextAudio: [{ storyTitle: "基础档案", stories: [{ storyText: "【种族】萨卡兹" }] }] }])) },
 };
-const release: ReleaseManifest = { coverage: { verifiedCnDates: 2, unverifiedCnDates: 0 }, operators: [{ id: "char_a", cnReleaseDate: "2020-01-01", source: "https://example.test/release" }, { id: "char_b", cnReleaseDate: "2020-02-02", source: "https://example.test/release" }] };
+const release: ReleaseManifest = { releaseDateStatus: "verified", coverage: { datedCnDates: 2, undatedCnDates: 0 }, operators: [{ id: "char_a", cnReleaseDate: "2020-01-01", source: "https://example.test/release" }, { id: "char_b", cnReleaseDate: "2020-02-02", source: "https://example.test/release" }] };
 const regional = (provenance: unknown = { status: "verified", source: "https://example.test/news" }): RegionalManifest => ({
   sources: { releaseTable: "https://example.test/regional" },
   operators: [
@@ -49,6 +49,14 @@ test("a per-operator provenance replaces the regional source of a CN release dat
   assert.deepEqual([byId.get("char_cn")?.cnReleaseDateStatus, byId.get("char_cn")?.cnReleaseDateSource], ["verified", "https://example.test/news"]);
   assert.deepEqual([byId.get("char_cn2")?.cnReleaseDateStatus, byId.get("char_cn2")?.cnReleaseDateSource], ["community-listed", "https://example.test/regional"]);
   assert.equal(byId.get("char_a")?.cnReleaseDateStatus, "verified");
+});
+
+test("Global operators take the CN release date status declared by the release manifest", () => {
+  const records = buildCatalogRecords(tables, { ...release, releaseDateStatus: "community-listed" }, regional(), hashes);
+  assert.deepEqual(records.operators.filter((operator) => !operator.cnOnly).map((operator) => operator.cnReleaseDateStatus), ["community-listed", "community-listed"]);
+  for (const releaseDateStatus of [undefined, "official"]) {
+    assert.throws(() => buildCatalogRecords(tables, { ...release, releaseDateStatus }, regional(), hashes), /invalid releaseDateStatus/);
+  }
 });
 
 test("an invalid provenance, or one on an entry without a date, is rejected", () => {

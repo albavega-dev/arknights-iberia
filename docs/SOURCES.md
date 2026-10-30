@@ -9,14 +9,22 @@ Este documento recoge las fuentes de datos, recursos gráficos y herramientas ut
 
 ## Anuncios oficiales
 
-- [Anuncio oficial de Hypergryph de la SideStory «昨日海»](https://ak.hypergryph.com/news/5101) (publicado el 3 de octubre de 2026): fecha CN 2026-10-09 de Clementia, Homebound y De Toledo, registrada como procedencia de cada operador (`cnReleaseDateProvenance`) en `data/operator-regional-manifest.json`.
+Fecha de lanzamiento: la fecha, en la hora oficial del servidor de cada región (CN UTC+8, Global UTC−7), del primer momento en que el operador puede obtenerse en el juego (banner, evento, tienda, reclutamiento o historia principal). Las fechas CN de los operadores solo CN se registran por operador (`cnReleaseDateProvenance`) en `data/operator-regional-manifest.json` con los anuncios oficiales de Hypergryph:
+
+- [SideStory «昨日海»](https://ak.hypergryph.com/news/5101): 2026-10-09, Clementia, Homebound y De Toledo.
+- [«泡影苍霆»](https://ak.hypergryph.com/news/0701): 2026-06-01, Violet Mizutsune Orchid, Zinogre S Catapult y Rhodes Island Recon.
+- [«丛林症结» y búsqueda «确定性混沌»](https://ak.hypergryph.com/news/9686): 2026-07-10, Aphrissa y Pedro.
+- [«夏日嘉年华» 2026](https://ak.hypergryph.com/news/8571): 2026-08-01, Angelina the Mellow Wish, Thumpy, Jacinta y Timeslot.
+- [«月行水上»](https://ak.hypergryph.com/news/9681): 2026-09-04, Makoto Yuki, Aigis, Yukari Takeba y Koromaru.
+
+Mechanist (2026-07-17) se registra con [PRTS](https://prts.wiki/w/%E6%9C%BA%E6%A2%B0%E5%B8%88) a falta de anuncio oficial localizado. Las fechas CN de los operadores Global (`data/operator-cn-release-manifest.json`) proceden de la tabla de lanzamientos de Terra Wiki y se marcan como datos comunitarios pendientes de revisión: esa tabla da la fecha CN un día antes que los anuncios oficiales y ya no se usa como fuente de fechas.
 
 ## Wikis y documentación comunitaria
 
-- [Terra Wiki](https://arknights.wiki.gg/): contraste de nombres, fechas y relaciones.
+- [Terra Wiki](https://arknights.wiki.gg/): contraste de nombres y relaciones; las fechas CN de los operadores Global proceden de su tabla de lanzamientos (pendientes de revisión, ver «Anuncios oficiales»).
   - Nombres oficiales en inglés de los modos y temas a los que se limitan algunos efectos de módulo, que los datos del juego no incluyen: [Integrated Strategies](https://arknights.wiki.gg/wiki/Integrated_Strategies) (también el tema Sui's Garden of Grotesqueries) y [Reclamation Algorithm](https://arknights.wiki.gg/wiki/Reclamation_Algorithm). Consultado el 29 de octubre de 2026; registrados con su fuente en `data/operator-module-modes.json`.
   - Iconos de atributos (categoría `Template icons`) y de potencial P2–P6 (`Potential_2.png` a `Potential_6.png`), copiados localmente en `public/assets/operator-stats/` y `public/assets/operator-potential/`.
-- [PRTS Wiki](https://prts.wiki/): referencia comunitaria para información CN.
+- [PRTS Wiki](https://prts.wiki/): referencia comunitaria para información CN y contraste de fechas CN por operador.
 
 ## Recursos gráficos
 

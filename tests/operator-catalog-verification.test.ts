@@ -27,6 +27,7 @@ const manifests: CatalogManifests = {
     { id: "char_001_a", name: "Alpha", cnReleaseDate: "2020-01-01", source: "https://example.test/release" },
     { id: "char_002_b", name: "Beta", cnReleaseDate: "2020-02-02", source: "https://example.test/release" },
   ],
+  globalReleaseStatus: "verified",
   regional: [
     { id: "char_900_c", nameEnglish: "Gamma", cnReleaseDate: "2026-05-05", globalReleaseDate: null },
     { id: "char_901_d", nameEnglish: "Delta", cnReleaseDate: null, globalReleaseDate: null },
@@ -119,6 +120,8 @@ describe("operator catalog verification", () => {
     assert.deepEqual(results.filter((item) => item.status !== "ok").map((item) => item.code), []);
     assert.deepEqual(find(results, "names").detail, { legacy: 0, current: 4, invalid: 0 });
     assert.deepEqual(find(results, "regional-metadata").detail, { legacy: 1, detailed: 3 });
+    const communityGlobal = verifyCatalog(input({ manifests: { ...manifests, globalReleaseStatus: "community-listed" }, operators: rows }));
+    assert.deepEqual(find(communityGlobal, "regional-metadata").failedIds, ["char_001_a", "char_002_b"]);
   });
 
   it("reports missing, extra and duplicated IDs", () => {

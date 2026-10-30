@@ -1,7 +1,12 @@
 {
-  "manifestVersion": "2026-10-16.1",
+  "manifestVersion": "2026-10-30.1",
   "status": "reviewed-community-data",
   "purpose": "CN release dates for the 415 Global operators; research manifest, consumed by the local import only after review.",
+  "releaseDateStatus": "community-listed",
+  "limitations": [
+    "Dates come from the Terra Wiki release table, which listed CN dates one day earlier than the official announcements or PRTS in 24 of 26 reviewed cases; they stay community-listed until each one is checked against the pinned snapshots, PRTS or an official announcement.",
+    "A release date is the calendar date, in CN server time (UTC+8), of the first moment the operator is obtainable: banner, event, shop, recruitment or main story."
+  ],
   "source": {
     "repository": "https://github.com/ArknightsAssets/ArknightsGamedata",
     "terraWikiReleaseTable": "https://arknights.wiki.gg/wiki/Operator/List/Release",
@@ -15,8 +20,8 @@
   },
   "coverage": {
     "operators": 415,
-    "verifiedCnDates": 415,
-    "unverifiedCnDates": 0
+    "datedCnDates": 415,
+    "undatedCnDates": 0
   },
   "operators": [
     {

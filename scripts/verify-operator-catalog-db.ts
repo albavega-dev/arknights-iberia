@@ -14,6 +14,7 @@ import {
   verifyCatalog,
   fingerprintColumns,
   type AppliedMigration,
+  type CatalogManifests,
   type CheckResult,
   type DatasetIndexes,
   type DbBiographyRow,
@@ -36,14 +37,24 @@ const writePrivileges = ["INSERT", "UPDATE", "DELETE", "TRUNCATE"] as const;
 type Options = { bundle?: string; details: boolean; files: boolean; fingerprint?: string };
 
 // Known differences between the catalog files and a database loaded with the earlier importer, which stored provenance
-// with other conventions, and the CN dates corrected from the official announcement. Anything else must match.
-const officialAnnouncement = "The official announcement (ak.hypergryph.com/news/5101) sets 2026-10-09";
+// with other conventions, and the CN-only dates corrected one day later from the official announcements (Mechanist from
+// PRTS). The database keeps the earlier community-listed date, or none for Clementia. Anything else must match.
 const filesExpectedDifferences: readonly ExpectedDifference[] = [
-  { column: "cn_release_date", operators: { char_393_toledo: "2026-10-08", char_4231_clemnt: null, char_4232_hbound: "2026-10-08" }, reason: `${officialAnnouncement}; the database keeps the earlier community-listed date or none` },
+  {
+    column: "cn_release_date",
+    operators: {
+      char_1015_aglna2: "2026-07-31", char_1048_orchd2: "2026-05-31", char_1049_catap2: "2026-05-31", char_393_toledo: "2026-10-08",
+      char_4215_buddy: "2026-05-31", char_4217_makoto: "2026-09-03", char_4218_aigis: "2026-09-03", char_4219_yukari: "2026-09-03",
+      char_4220_kormr: "2026-09-03", char_4229_aphris: "2026-07-09", char_4230_mcnist: "2026-07-16", char_4231_clemnt: null,
+      char_4232_hbound: "2026-10-08", char_4234_pedro: "2026-07-09", char_4235_thumpy: "2026-07-31", char_4236_tmslot: "2026-07-31",
+      char_4237_jcinta: "2026-07-31",
+    },
+    reason: "CN-only dates corrected to the official announcements (Mechanist to PRTS); the database keeps the earlier community-listed date or none",
+  },
   { column: "source_repository", operators: "all", reason: "The earlier importer stored the repository as a full URL" },
   { column: "source_data_version", operators: "all", reason: "The earlier importer stored the game data version instead of the snapshot revision" },
   { column: "cn_source_revision", operators: "global", reason: "The earlier importer also stored the CN revision on Global operators" },
-  { column: "regional_metadata_source", operators: "all", reason: "The earlier importer stored the metadata source as plain text" },
+  { column: "regional_metadata_source", operators: "all", reason: "The earlier importer stored the metadata source as plain text; the files also carry the per-operator CN date status and source" },
 ];
 
 function parseArguments(argv: readonly string[]): Options | undefined {
@@ -118,10 +129,16 @@ async function run(options: Options): Promise<number> {
     console.error(JSON.stringify({ status: "error", code: "bundle-invalid" }));
     return 2;
   }
-  const releaseManifest = await json<{ operators: GlobalManifestEntry[] }>("data/operator-cn-release-manifest.json");
+  const releaseManifest = await json<{ releaseDateStatus: unknown; operators: GlobalManifestEntry[] }>("data/operator-cn-release-manifest.json");
+  const globalReleaseStatus = releaseManifest.releaseDateStatus;
+  if (globalReleaseStatus !== "verified" && globalReleaseStatus !== "community-listed") {
+    console.error(JSON.stringify({ status: "error", code: "release-manifest-invalid" }));
+    return 2;
+  }
   const regionalManifest = await json<{ sources: { releaseTable: string }; operators: { id: string; nameEnglish?: string | null; cnReleaseDate: string | null; globalReleaseDate?: string | null; cnReleaseDateProvenance?: ReleaseDateProvenance }[] }>("data/operator-regional-manifest.json");
-  const manifests = {
+  const manifests: CatalogManifests = {
     global: releaseManifest.operators,
+    globalReleaseStatus,
     regional: regionalManifest.operators.map((entry) => ({ ...entry, nameEnglish: entry.nameEnglish ?? null, globalReleaseDate: entry.globalReleaseDate ?? null })),
     regionalReleaseSource: regionalManifest.sources.releaseTable,
   };
