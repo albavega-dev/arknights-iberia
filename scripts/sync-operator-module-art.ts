@@ -3,6 +3,7 @@ import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
 import { readFileSync } from "node:fs";
 import { dirname, join, sep } from "node:path";
 import { gitBlobSha } from "../src/game-data/git-blob";
+import { rawImageUrl, treeUrl } from "../src/game-data/github-requests";
 import { serializeDatasetJson } from "../src/game-data/operator-dataset";
 import { moduleArtConversion, moduleArtSource, moduleStageSources, type ModuleArtManifest } from "../src/game-data/operator-module-art";
 import { arg, exists, readJson, sha256 } from "./operator-dataset-io";
@@ -41,7 +42,7 @@ export function moduleArtInventory(profiles: readonly { modules: readonly { id: 
   return ids.sort((a, b) => a.localeCompare(b, "en"));
 }
 
-export const rawUrl = (path: string) => `https://raw.githubusercontent.com/${moduleArtSource.repository}/${moduleArtSource.revision}/${path}`;
+export const rawUrl = (path: string) => rawImageUrl(moduleArtSource.revision, path).toString();
 
 export async function convertModuleArt(sharp: Sharp, original: Buffer): Promise<Buffer> {
   const { maxSize, quality, alphaQuality, effort } = moduleArtConversion;
@@ -71,12 +72,11 @@ export function buildModuleArtManifest(art: ReadonlyMap<string, { original: File
 
 /** Blob hashes of equip/icon and equip/stage at the pinned revision, from the tree listing (no file is downloaded). */
 async function readTree(fetch: SyncDependencies["fetch"]): Promise<Map<string, string>> {
-  const api = `https://api.github.com/repos/${moduleArtSource.repository}/git/trees`;
   const json = async (url: string) => { const response = await fetch(url); if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`); return response.json() as Promise<{ tree: TreeEntry[]; truncated?: boolean }>; };
-  const root = await json(`${api}/${moduleArtSource.revision}`);
+  const root = await json(treeUrl(moduleArtSource.repository, moduleArtSource.revision).toString());
   const directory = root.tree.find((entry) => entry.path === moduleArtSource.directory && entry.type === "tree");
   if (!directory) throw new Error(`No ${moduleArtSource.directory} directory at ${moduleArtSource.revision}`);
-  const listing = await json(`${api}/${directory.sha}?recursive=1`);
+  const listing = await json(treeUrl(moduleArtSource.repository, directory.sha, true).toString());
   if (listing.truncated) throw new Error("Truncated tree listing");
   return new Map(listing.tree.filter((entry) => entry.type === "blob").map((entry) => [entry.path, entry.sha]));
 }
