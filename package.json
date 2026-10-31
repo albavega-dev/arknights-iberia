@@ -45,6 +45,8 @@
     "data:illustrations:sync": "tsx scripts/sync-operator-images.ts",
     "data:portraits:sync": "tsx scripts/sync-operator-portraits.ts",
     "data:avatars:sync": "tsx scripts/sync-operator-avatars.ts",
+    "data:og-images:generate": "tsx scripts/generate-operator-og-images.ts",
+    "data:og-images:check": "tsx scripts/generate-operator-og-images.ts --check",
     "data:limited:generate": "tsx scripts/generate-operator-limited-manifest.ts",
     "db:generate": "node --env-file=.env node_modules/drizzle-kit/bin.cjs generate",
     "ranges:verify-modules": "tsx scripts/verify-operator-module-ranges.ts",
