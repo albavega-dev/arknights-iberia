@@ -9,9 +9,9 @@ Las secciones marcadas con `sources:` se generan con `corepack pnpm docs:sources
 <!-- sources:revisions -->
 | Fuente | Uso | Revisión fijada |
 | --- | --- | --- |
-| [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata) | Datos del juego EN | [`3aaa25b`](https://github.com/ArknightsAssets/ArknightsGamedata/tree/3aaa25b649fed5dedad9527602826dc487ea07d8) |
-| [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata) | Datos del juego CN | [`e4888c5`](https://github.com/ArknightsAssets/ArknightsGamedata/tree/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842) |
-| [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata) | Fechas CN calculadas (`gacha_table`, `roguelike_topic_table`) | [`e4888c5`](https://github.com/ArknightsAssets/ArknightsGamedata/tree/e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842) |
+| [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata) | Datos del juego EN | [`409bce7`](https://github.com/ArknightsAssets/ArknightsGamedata/tree/409bce70516f2420af61b1fc5680da60e448ab99) |
+| [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata) | Datos del juego CN | [`84bbfbb`](https://github.com/ArknightsAssets/ArknightsGamedata/tree/84bbfbb4978f3545645264bf741356a64909439f) |
+| [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata) | Fechas CN calculadas (`gacha_table`, `roguelike_topic_table`) | [`84bbfbb`](https://github.com/ArknightsAssets/ArknightsGamedata/tree/84bbfbb4978f3545645264bf741356a64909439f) |
 | [Arknight-Images](https://github.com/PuppiizSunniiz/Arknight-Images) | Ilustraciones e iconos | [`1a41341`](https://github.com/PuppiizSunniiz/Arknight-Images/tree/1a41341cc634461a5abe3456722801a39b9a9d32) |
 | [ArknightsResource](https://github.com/fexli/ArknightsResource) | Índice de retratos | [`85b4488`](https://github.com/fexli/ArknightsResource/tree/85b44888ad619a05c5650a21d0ec74961d586182) |
 <!-- /sources:revisions -->
