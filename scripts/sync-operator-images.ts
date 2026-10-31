@@ -31,7 +31,7 @@ async function webpInfo(sharp: Sharp, data: Buffer): Promise<PngFile> {
 }
 
 /** Blob hashes of the source directories at the pinned revision, from tree listings (no file is downloaded). */
-async function readTree(fetch: SyncDependencies["fetch"]): Promise<Map<string, string>> {
+export async function readTree(fetch: SyncDependencies["fetch"], directories: readonly string[] = ["characters", "factions", "classes", "ui/subclass"]): Promise<Map<string, string>> {
   const json = async (url: string) => { const response = await fetch(url); if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`); return response.json() as Promise<{ tree: TreeEntry[]; truncated?: boolean }>; };
   const listings = new Map<string, TreeEntry[]>([["", (await json(treeUrl(operatorImageSource.repository, operatorImageSource.revision).toString())).tree]]);
   const listing = async (directory: string): Promise<TreeEntry[]> => {
@@ -47,7 +47,7 @@ async function readTree(fetch: SyncDependencies["fetch"]): Promise<Map<string, s
     return result.tree;
   };
   const blobs = new Map<string, string>();
-  for (const directory of ["characters", "factions", "classes", "ui/subclass"]) {
+  for (const directory of directories) {
     for (const entry of await listing(directory)) if (entry.type === "blob") blobs.set(`${directory}/${entry.path}`, entry.sha);
   }
   return blobs;
