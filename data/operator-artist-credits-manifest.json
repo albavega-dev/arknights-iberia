@@ -16554,25 +16554,41 @@
       "operatorName": "结城理",
       "source": {
         "site": "Terra Wiki",
-        "pageUrl": "https://arknights.wiki.gg/wiki/%E7%BB%93%E5%9F%8E%E7%90%86",
-        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=%E7%BB%93%E5%9F%8E%E7%90%86&prop=wikitext&redirects=1&format=json&formatversion=2",
-        "revision": null,
-        "revisionTimestamp": null,
-        "consultedAt": "2026-10-18T20:49:15.949Z"
+        "pageUrl": "https://arknights.wiki.gg/wiki/Makoto_Yuki",
+        "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Makoto+Yuki&prop=wikitext&redirects=1&format=json&formatversion=2",
+        "revision": 773866,
+        "revisionTimestamp": "2026-10-28T10:55:10Z",
+        "consultedAt": "2026-10-31T00:02:39.628Z"
       },
-      "status": "pending",
-      "general": [],
+      "status": "partial",
+      "general": [
+        {
+          "name": "Studio Montagne",
+          "evidence": "|illustrator = 〇亻(credited as \"Studio Montagne\" in-game)"
+        }
+      ],
       "variants": {
         "base": [],
         "elite2": []
       },
-      "credits": [],
       "outfits": [],
-      "error": {
-        "code": "missingtitle",
-        "info": "The page you specified doesn't exist.",
-        "docref": "See https://arknights.wiki.gg/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes."
-      }
+      "error": null,
+      "credits": [
+        {
+          "artist": "Studio Montagne",
+          "role": "unknown",
+          "status": "partial",
+          "source": {
+            "site": "Terra Wiki",
+            "pageUrl": "https://arknights.wiki.gg/wiki/Makoto_Yuki",
+            "apiUrl": "https://arknights.wiki.gg/api.php?action=parse&page=Makoto+Yuki&prop=wikitext&redirects=1&format=json&formatversion=2",
+            "revision": 773866,
+            "revisionTimestamp": "2026-10-28T10:55:10Z",
+            "consultedAt": "2026-10-31T00:02:39.628Z"
+          },
+          "evidence": "|illustrator = 〇亻(credited as \"Studio Montagne\" in-game)"
+        }
+      ]
     },
     {
       "operatorId": "char_4218_aigis",
