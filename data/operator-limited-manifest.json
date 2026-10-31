@@ -1,0 +1,116 @@
+{
+  "purpose": "Limited operators of the catalog: the limitedCharId of every LIMITED banner of the CN gacha table; collaboration operators are not included.",
+  "source": {
+    "region": "cn",
+    "repository": "ArknightsAssets/ArknightsGamedata",
+    "revision": "84bbfbb4978f3545645264bf741356a64909439f",
+    "path": "cn/gamedata/excel/gacha_table.json",
+    "field": "gachaPoolClient[gachaRuleType=LIMITED].limitParam.limitedCharId"
+  },
+  "operators": [
+    {
+      "id": "char_1012_skadi2",
+      "pool": "LIMITED_18_0_3"
+    },
+    {
+      "id": "char_1013_chen2",
+      "pool": "LIMITED_21_0_1"
+    },
+    {
+      "id": "char_1014_nearl2",
+      "pool": "LIMITED_23_0_1"
+    },
+    {
+      "id": "char_1015_aglna2",
+      "pool": "LIMITED_76_0_1"
+    },
+    {
+      "id": "char_1016_agoat2",
+      "pool": "LIMITED_41_0_1"
+    },
+    {
+      "id": "char_1023_ghost2",
+      "pool": "LIMITED_27_0_3"
+    },
+    {
+      "id": "char_1026_gvial2",
+      "pool": "LIMITED_30_0_1"
+    },
+    {
+      "id": "char_1028_texas2",
+      "pool": "LIMITED_33_0_1"
+    },
+    {
+      "id": "char_1035_wisdel",
+      "pool": "LIMITED_50_0_1"
+    },
+    {
+      "id": "char_1038_whitw2",
+      "pool": "LIMITED_56_0_1"
+    },
+    {
+      "id": "char_1041_angel2",
+      "pool": "LIMITED_61_0_1"
+    },
+    {
+      "id": "char_1044_hsgma2",
+      "pool": "LIMITED_64_0_1"
+    },
+    {
+      "id": "char_1045_svash2",
+      "pool": "LIMITED_67_0_1"
+    },
+    {
+      "id": "char_1052_kalts2",
+      "pool": "LIMITED_73_0_1"
+    },
+    {
+      "id": "char_113_cqbw",
+      "pool": "LIMITED_9_0_3"
+    },
+    {
+      "id": "char_2014_nian",
+      "pool": "LIMITED_16_0_1"
+    },
+    {
+      "id": "char_2015_dusk",
+      "pool": "LIMITED_16_0_4"
+    },
+    {
+      "id": "char_2023_ling",
+      "pool": "LIMITED_25_0_1"
+    },
+    {
+      "id": "char_2024_chyue",
+      "pool": "LIMITED_35_0_1"
+    },
+    {
+      "id": "char_2025_shu",
+      "pool": "LIMITED_47_0_1"
+    },
+    {
+      "id": "char_2026_yu",
+      "pool": "LIMITED_58_0_1"
+    },
+    {
+      "id": "char_2027_wang",
+      "pool": "LIMITED_70_0_1"
+    },
+    {
+      "id": "char_245_cello",
+      "pool": "LIMITED_44_0_1"
+    },
+    {
+      "id": "char_249_mlyss",
+      "pool": "LIMITED_38_0_1"
+    },
+    {
+      "id": "char_391_rosmon",
+      "pool": "LIMITED_14_0_1"
+    },
+    {
+      "id": "char_4058_pepe",
+      "pool": "LIMITED_53_0_1"
+    }
+  ]
+}

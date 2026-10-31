@@ -8,6 +8,7 @@ import { getOperatorPageTitle, resolveOperatorSlug } from "../../../game-data/op
 import { getOperatorTacticalEntry } from "../../../game-data/operator-tactical";
 import { getOperatorArtistCredit } from "../../../game-data/operator-artist-credits";
 import { getOperatorIllustrationAssets } from "../../../game-data/operator-illustrations-data";
+import { isOperatorLimited } from "../../../game-data/operator-limited-data";
 import { loadStatsProfile } from "../../../game-data/operator-stats-data";
 import { loadSkillsView } from "../../../game-data/operator-skills-data";
 import { loadModulesView } from "../../../game-data/operator-modules-data";
@@ -49,7 +50,7 @@ export default async function OperatorPage({ params }: OperatorPageProps) {
   return (
     <main className="operators-page" id="contenido">
       <div className="operator-detail-content">
-      <OperatorDetailData operator={operator} stats={stats} skills={skills} modules={modules} illustrations={getOperatorIllustrationAssets(operator.id)} biography={detailBiography.biography} tactical={getOperatorTacticalEntry(operator.id)} artistCredit={getOperatorArtistCredit(operator.id)} />
+      <OperatorDetailData operator={operator} stats={stats} skills={skills} modules={modules} illustrations={getOperatorIllustrationAssets(operator.id)} limited={isOperatorLimited(operator.id)} biography={detailBiography.biography} tactical={getOperatorTacticalEntry(operator.id)} artistCredit={getOperatorArtistCredit(operator.id)} />
       <footer className="operators-provenance">
         <p>Proyecto independiente de la comunidad, no afiliado oficialmente a Hypergryph, Yostar ni Gryphline. Arknights y sus elementos pertenecen a sus respectivos titulares.</p>
         <p className="operator-credit">Diseño y desarrollo web por <a href="https://albavega.vercel.app/" target="_blank" rel="noopener noreferrer">Alba Vega</a></p>

@@ -175,6 +175,52 @@ describe("OperatorDetailData image policy", () => {
     expect(document.querySelector(".operator-detail-illustration.is-elite2")).toBeInTheDocument();
   });
 
+  it("adds the sheen layer to the stars of limited operators only", () => {
+    const props = { biography: { status: "not-found", operatorId: operator.id, region: "en", revision: "test" }, tactical: null, artistCredit: null } as const;
+    const { rerender } = render(<OperatorDetailData operator={operator} {...props} />);
+    expect(screen.getByLabelText("Rareza: 5 estrellas")).not.toHaveClass("is-limited");
+    expect(document.querySelector(".operator-detail-rarity-sheen")).toBeNull();
+    rerender(<OperatorDetailData operator={operator} limited {...props} />);
+    expect(screen.getByLabelText("Rareza: 5 estrellas, operador limitado")).toHaveClass("is-limited");
+    expect(document.querySelectorAll(".operator-detail-rarity-sheen svg")).toHaveLength(5);
+  });
+
+  it("opens the illustration in a dialog and closes it with the button, Escape and a click outside", () => {
+    const showModal = vi.fn(function (this: HTMLDialogElement) { this.setAttribute("open", ""); });
+    const close = vi.fn(function (this: HTMLDialogElement) { this.removeAttribute("open"); this.dispatchEvent(new Event("close")); });
+    Object.assign(HTMLDialogElement.prototype, { showModal, close });
+    render(
+      <OperatorDetailData
+        operator={operator}
+        illustrations={{ base: "/assets/operator-illustrations/char_component_test_1.webp" }}
+        biography={{ status: "not-found", operatorId: operator.id, region: "en", revision: "test" }}
+        tactical={null}
+        artistCredit={null}
+      />,
+    );
+    const trigger = screen.getByRole("button", { name: "Ampliar ilustración E0 / E1 de Component Test" });
+    expect(trigger).toHaveAttribute("aria-haspopup", "dialog");
+    for (const closeWith of [
+      () => fireEvent.click(screen.getByRole("button", { name: "Cerrar ilustración ampliada" })),
+      () => fireEvent.click(document.querySelector(".operator-art-dialog-frame")!),
+      () => { const dialog = document.querySelector("dialog")!; dialog.removeAttribute("open"); fireEvent(dialog, new Event("close")); },
+    ]) {
+      fireEvent.click(trigger);
+      const dialog = document.querySelector("dialog");
+      expect(dialog).toHaveAttribute("open");
+      expect(dialog).toHaveAccessibleName("Ilustración E0 / E1 de Component Test");
+      const image = within(dialog!).getByRole("img", { name: "Ilustración E0 / E1 de Component Test", hidden: true });
+      expect(image).toHaveAttribute("src", "/assets/operator-illustrations/char_component_test_1.webp");
+      expect(image).toHaveAttribute("data-unoptimized", "true");
+      fireEvent.click(image);
+      expect(document.querySelector("dialog")).toHaveAttribute("open");
+      closeWith();
+      expect(document.querySelector("dialog")).toBeNull();
+      expect(trigger).toHaveFocus();
+    }
+    expect(showModal).toHaveBeenCalledTimes(3);
+  });
+
   it("renders the tactical tags heading and supplied tags", () => {
     render(
       <OperatorTacticalInfo

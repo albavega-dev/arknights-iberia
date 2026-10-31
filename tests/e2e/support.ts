@@ -11,7 +11,7 @@ import { filterOperators, getOperatorDisplayName, type OperatorFilters, type Ope
 
 // Expected values come from the versioned datasets, so the tests follow every data update. The files are read with
 // fs because the test loader needs import attributes for JSON modules.
-function readData<T>(relativePath: string): T {
+export function readData<T>(relativePath: string): T {
   return JSON.parse(readFileSync(path.join(process.cwd(), "data", relativePath), "utf8")) as T;
 }
 
@@ -71,13 +71,22 @@ function pngChunk(type: string, data: Buffer): Buffer {
   return Buffer.concat([length, body, crc]);
 }
 
+/** Transparent RGBA PNG of the given size. */
+export function transparentPng(width: number, height: number): Buffer {
+  const header = Buffer.alloc(13);
+  header.writeUInt32BE(width, 0);
+  header.writeUInt32BE(height, 4);
+  header.set([8, 6, 0, 0, 0], 8);
+  return Buffer.concat([
+    Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
+    pngChunk("IHDR", header),
+    pngChunk("IDAT", deflateSync(Buffer.alloc((width * 4 + 1) * height))),
+    pngChunk("IEND", Buffer.alloc(0)),
+  ]);
+}
+
 /** 1×1 transparent PNG served instead of every optimized or remote image. */
-const placeholderPng = Buffer.concat([
-  Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
-  pngChunk("IHDR", Buffer.from([0, 0, 0, 1, 0, 0, 0, 1, 8, 6, 0, 0, 0])),
-  pngChunk("IDAT", deflateSync(Buffer.from([0, 0, 0, 0, 0]))),
-  pngChunk("IEND", Buffer.alloc(0)),
-]);
+const placeholderPng = transparentPng(1, 1);
 
 type Diagnostics = { consoleErrors: string[]; serverErrors: string[]; missingFiles: string[]; blockedRequests: string[]; optimizerRequests: string[] };
 
