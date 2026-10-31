@@ -144,6 +144,16 @@ export const datasetRegistry = {
     changeChecks: ["operators"],
     assets: [],
   },
+  "operator-limited-manifest": {
+    description: "Limited operators of the catalog (LIMITED banners of the CN gacha table); the curated provenance check flags a change in a new revision",
+    outputs: ["data/operator-limited-manifest.json"],
+    generator: { script: "data:limited:generate", kind: "manual", rerunWhen: ["operators"] },
+    tables: [],
+    sources: ["data/operator-catalog"],
+    tests: ["tests/operator-limited.test.ts"],
+    changeChecks: [],
+    assets: [],
+  },
   "operator-global-updates": {
     description: "Global updates that set the NEW badge; proposed with data:global-update for the operators that arrive in Global",
     outputs: ["data/operator-global-updates.json"],
@@ -178,6 +188,7 @@ export const curatedProvenance = {
   "module-modes": { file: "data/operator-module-modes.json", tables: { cn: ["roguelike_topic_table"] }, backs: "field of each gamedata source (topics.rogue_6.name); the recorded table hash moves with the revision" },
   factions: { file: "data/operator-faction-manifest.json", tables: { en: ["character_table"] }, backs: "mainPower nationId, groupId and teamId of every operator in the EN table (generatedFrom names the EN revision only)" },
   "cn-release": { file: "data/operator-cn-release-manifest.json", tables: { en: ["character_table"], cn: ["gacha_table", "roguelike_topic_table"] }, backs: "EN name of every operator; openTime and detail of each cited banner; startTime of each cited Integrated Strategies topic" },
+  limited: { file: "data/operator-limited-manifest.json", tables: { cn: ["gacha_table"] }, backs: "limitedCharId and banner id of every LIMITED banner of gachaPoolClient" },
   regional: { file: "data/operator-regional-manifest.json", tables: { en: ["character_table"], cn: ["character_table"] }, backs: "playable operators of each region; playableCount and the informative skippedCount are recomputed" },
   tactical: { file: "data/operator-tactical-manifest.json", tables: { en: ["character_table", "range_table"], cn: ["character_table", "range_table"] }, backs: "position, tags, phase ranges and their grids of every operator; base and modified ranges of each module range" },
 } as const satisfies Record<string, CuratedProvenanceEntry>;
