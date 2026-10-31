@@ -26,6 +26,19 @@ export function getOperatorPublicSlug(operator: OperatorRecord, records: readonl
   return getOperatorPublicSlugs(records).get(operator.id) ?? normalizeOperatorSlugPart(getOperatorDisplayName(operator));
 }
 
+/**
+ * Operator of a slug: its public slug, the internal `operator-char-…` slug or a previous public slug (`previousSlugs`
+ * maps each one to its operator id). `redirect` is set when the slug is not the current public one.
+ */
+export function resolveOperatorSlug(slug: string, records: readonly OperatorRecord[], previousSlugs: ReadonlyMap<string, string>): { operator: OperatorRecord; publicSlug: string; redirect: boolean } | null {
+  const publicSlugs = getOperatorPublicSlugs(records);
+  const previousId = previousSlugs.get(slug);
+  const operator = records.find((record) => publicSlugs.get(record.id) === slug) ?? records.find((record) => record.slug === slug || record.id === previousId);
+  if (!operator) return null;
+  const publicSlug = publicSlugs.get(operator.id)!;
+  return { operator, publicSlug, redirect: publicSlug !== slug };
+}
+
 export function getOperatorPageTitle(operator: Pick<OperatorRecord, "name" | "globalName">): string {
   return `Operador - ${operator.globalName || operator.name}`;
 }

@@ -2,7 +2,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { validateBiography, type OperatorBiography } from "../src/game-data/operator-biography";
-import { catalogContractVersion, catalogDatasetName, catalogLimits, catalogOperator, validateOperatorCatalog, type OperatorCatalog } from "../src/game-data/operator-catalog";
+import { carryPreviousSlugs, catalogContractVersion, catalogDatasetName, catalogLimits, catalogOperator, validateOperatorCatalog, type CatalogOperator, type OperatorCatalog } from "../src/game-data/operator-catalog";
 import { biographiesDatasetContractVersion, biographiesDatasetLimits, datasetWarningRatio, serializeDatasetJson, validateDatasetIndex, type DatasetIndex, type DatasetLimits, type DatasetSource } from "../src/game-data/operator-dataset";
 import { arg, buildCatalogRecords, readCatalogTables, type CatalogRecords, type CatalogTableHashes, type RegionalManifest, type ReleaseManifest } from "./generate-operator-bundle";
 import { compareDatasets, exists, operatorDatasetFile, readJson, replaceDirectory, reportVerification, sha256, verificationMode, verifyUpdate, writeDatasetDirectory, type ComparableDataset } from "./operator-dataset-io";
@@ -21,10 +21,14 @@ export type CatalogGeneratorOptions = Readonly<{
   regionalManifest?: string;
   catalogLimits?: Readonly<{ fileBytes: number }>;
   biographiesLimits?: DatasetLimits;
+  /** Catalog whose previous slugs are kept and whose public slugs are compared; null for none. */
+  previousCatalog?: string | null;
 }>;
 
-export function buildCatalogDataset(records: CatalogRecords, limits: Readonly<{ fileBytes: number }> = catalogLimits): CatalogDataset {
-  const operators = records.operators.map((record) => catalogOperator(record, records.sources));
+type PreviousOperator = Parameters<typeof carryPreviousSlugs>[0][number];
+
+export function buildCatalogDataset(records: CatalogRecords, limits: Readonly<{ fileBytes: number }> = catalogLimits, previous: readonly PreviousOperator[] = []): CatalogDataset {
+  const operators: CatalogOperator[] = carryPreviousSlugs(previous, records.operators.map((record) => catalogOperator(record, records.sources)));
   const catalog: OperatorCatalog = { contractVersion: catalogContractVersion, dataset: catalogDatasetName, sources: records.sources, limits: { ...limits }, operators };
   const errors = validateOperatorCatalog(catalog);
   if (errors.length) throw new Error(`Invalid catalog: ${errors.join("; ")}`);
@@ -35,6 +39,20 @@ export function buildCatalogDataset(records: CatalogRecords, limits: Readonly<{ 
   const orphans = [...regions.keys()].filter((id) => !operators.some((operator) => operator.id === id));
   if (unmatched.length || orphans.length) throw new Error(`Biographies do not match the catalog: ${[...unmatched, ...orphans].join(", ")}`);
   return { catalog, biographies: { sources: records.biographySources, records: records.biographies } };
+}
+
+/**
+ * Operators of the catalog a regeneration replaces, read without checking its contract so that an older catalog still
+ * hands over its slugs. A missing file means no history.
+ */
+export async function readPreviousOperators(path: string | null): Promise<PreviousOperator[]> {
+  if (!path || !(await exists(path))) return [];
+  const catalog = await readJson(path) as { operators?: Partial<CatalogOperator>[] };
+  if (!Array.isArray(catalog.operators)) throw new Error(`Unreadable previous catalog: ${path}`);
+  return catalog.operators.map((operator) => {
+    if (typeof operator.id !== "string" || typeof operator.slug !== "string" || typeof operator.name !== "string") throw new Error(`Unreadable previous catalog: ${path}`);
+    return { id: operator.id, name: operator.name, cnName: operator.cnName ?? null, globalName: operator.globalName ?? null, slug: operator.slug, previousSlugs: Array.isArray(operator.previousSlugs) ? operator.previousSlugs : [] };
+  });
 }
 
 export async function readCatalogDataset(root: string): Promise<CatalogDataset> {
@@ -109,7 +127,8 @@ export async function main(argv: readonly string[] = process.argv, options: Cata
   const tables = await readCatalogTables(argv, options.hashes);
   const release = await readJson(options.releaseManifest ?? "data/operator-cn-release-manifest.json") as ReleaseManifest;
   const regional = await readJson(options.regionalManifest ?? "data/operator-regional-manifest.json") as RegionalManifest;
-  const dataset = buildCatalogDataset(buildCatalogRecords(tables, release, regional, options.hashes), options.catalogLimits);
+  const previous = await readPreviousOperators(options.previousCatalog === undefined ? join(catalogDirectory("data"), "index.json") : options.previousCatalog);
+  const dataset = buildCatalogDataset(buildCatalogRecords(tables, release, regional, options.hashes), options.catalogLimits, previous);
   if (mode) await verifyCatalogAgainst(arg("--verify-against", argv), dataset, console.log, argv);
   const result = await writeCatalogDataset(root, dataset, { force, biographiesLimits: options.biographiesLimits });
   for (const warning of result.warnings) console.warn(`Warning: ${warning}`);

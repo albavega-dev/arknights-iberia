@@ -5,6 +5,7 @@ import affiliationManifest from "../data/operator-affiliation-manifest.json";
 import { filterOperators, type OperatorRecord } from "../src/game-data/operators";
 import { normalizeCharacterTable } from "../src/game-data/operator-import";
 import { getOperatorAdditionalFactionIds } from "../src/game-data/operator-factions";
+import { gameDataRevisions } from "../src/game-data/gamedata-revisions";
 
 const record = (id: string, mainFactionId: string | null, additionalFactionIds?: readonly string[]): OperatorRecord => ({
   id, name: id, class: "Specialist", subClassId: null, rarity: 6, slug: id, cnOnly: false,
@@ -66,7 +67,7 @@ test("the first EN nationId batch covers the seven unambiguous regions", () => {
     ["faction:columbia", 8], ["faction:ursus", 2], ["faction:aegir", 1], ["faction:rhodes-island", 4], ["faction:karlan-trade", 4],
     ["faction:followers", 1], ["faction:glasgow", 1], ["faction:penguin-logistics", 1], ["faction:tara", 1], ["faction:babel", 1],
   ]);
-  const batch = affiliationManifest.associations.filter((entry) => entry.relation === "sub-power" && entry.affiliationId !== "faction:iberia");
+  const batch = affiliationManifest.associations.filter((entry) => entry.relation === "sub-power" && entry.affiliationId !== "faction:iberia" && entry.source.region === "en");
   assert.equal(batch.length, 86);
   for (const [affiliationId, count] of expected) assert.equal(batch.filter((entry) => entry.affiliationId === affiliationId).length, count);
   assert.equal(new Set(batch.map((entry) => entry.operatorId)).size, 81);
@@ -79,11 +80,24 @@ test("the first EN nationId batch covers the seven unambiguous regions", () => {
 });
 
 test("active affiliations contain only verified subPower relations", () => {
-  assert.equal(affiliationManifest.associations.length, 88);
+  assert.equal(affiliationManifest.associations.length, 97);
   assert.equal(affiliationManifest.associations.filter((entry) => entry.relation === "place-of-birth").length, 0);
   assert.equal(affiliationManifest.associations.every((entry) => entry.relation === "sub-power" && entry.status === "verified"), true);
-  assert.equal(new Set(affiliationManifest.associations.map((entry) => entry.operatorId)).size, 83);
-  assert.equal(new Set(affiliationManifest.associations.map((entry) => `${entry.operatorId}:${entry.affiliationId}:${entry.relation}`)).size, 88);
+  assert.equal(new Set(affiliationManifest.associations.map((entry) => entry.operatorId)).size, 92);
+  assert.equal(new Set(affiliationManifest.associations.map((entry) => `${entry.operatorId}:${entry.affiliationId}:${entry.relation}`)).size, 97);
+});
+
+test("the CN batch covers the CN-only operators from the pinned CN character table", () => {
+  const batch = affiliationManifest.associations.filter((entry) => entry.source.region === "cn");
+  assert.deepEqual(batch.map((entry) => `${entry.operatorId} ${entry.affiliationId}`), [
+    "char_1015_aglna2 faction:siracusa", "char_1048_orchd2 faction:columbia", "char_1049_catap2 faction:kazimierz",
+    "char_4217_makoto faction:laterano", "char_4218_aigis faction:laterano", "char_4219_yukari faction:laterano",
+    "char_4220_kormr faction:laterano", "char_4230_mcnist faction:columbia", "char_4231_clemnt faction:iberia",
+  ]);
+  for (const entry of batch) {
+    assert.equal(entry.sourceField, "character_table.json → subPower[].nationId");
+    assert.equal((entry.source as { revision?: string }).revision, gameDataRevisions.cn);
+  }
 });
 
 test("faction filtering matches main or verified additional affiliations without duplicates", () => {

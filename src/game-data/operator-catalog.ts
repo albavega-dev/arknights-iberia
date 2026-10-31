@@ -2,10 +2,11 @@ import type { GameDataRegion } from "./gamedata-revisions";
 import { validOperator, type BundleIssue } from "./operator-bundle";
 import type { DatasetSource } from "./operator-dataset";
 import type { OperatorRecord } from "./operators";
+import { getOperatorPublicSlugs } from "./operator-slugs";
 import { compareCodeUnits } from "./string-order";
 
 // Operator catalog: one file with every operator, ordered by id, and the provenance of each record.
-export const catalogContractVersion = "1";
+export const catalogContractVersion = "2";
 export const catalogDatasetName = "operator-catalog";
 export const catalogLimits = { fileBytes: 786_432 } as const;
 /** Regional metadata of an operator whose CN release date has no source. */
@@ -24,6 +25,8 @@ export type CatalogOperator = Readonly<{
   subClassId: string | null;
   rarity: OperatorRecord["rarity"];
   slug: string;
+  /** Public slugs the operator had before a name change, sorted; the site redirects them to the current one. */
+  previousSlugs: readonly string[];
   cnOnly: boolean;
   availabilityStatus: OperatorRecord["availabilityStatus"];
   cnReleaseDate: string | null;
@@ -50,8 +53,9 @@ export type OperatorCatalog = Readonly<{
   operators: readonly CatalogOperator[];
 }>;
 
-const catalogKeys = ["id", "name", "cnName", "globalName", "class", "subClassId", "rarity", "slug", "cnOnly", "availabilityStatus", "cnReleaseDate", "cnReleaseDateStatus", "cnReleaseDateSource", "globalReleaseDate", "mainPowerNationId", "mainPowerGroupId", "mainPowerTeamId", "mainFactionId", "sourceLocale", "sourceRepository", "sourceRevision", "sourceDataVersion", "cnSourceRevision", "regionalMetadataSource"].sort(compareCodeUnits);
+const catalogKeys = ["id", "name", "cnName", "globalName", "class", "subClassId", "rarity", "slug", "previousSlugs", "cnOnly", "availabilityStatus", "cnReleaseDate", "cnReleaseDateStatus", "cnReleaseDateSource", "globalReleaseDate", "mainPowerNationId", "mainPowerGroupId", "mainPowerTeamId", "mainFactionId", "sourceLocale", "sourceRepository", "sourceRevision", "sourceDataVersion", "cnSourceRevision", "regionalMetadataSource"].sort(compareCodeUnits);
 const sha256Pattern = /^[0-9a-f]{64}$/iu;
+const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/u;
 
 export function isReleaseDateProvenance(value: unknown): value is ReleaseDateProvenance {
   if (!value || typeof value !== "object" || Array.isArray(value)) return false;
@@ -64,7 +68,7 @@ export function regionalMetadataSource(record: Pick<OperatorRecord, "cnReleaseDa
 }
 
 /** Catalog record of an operator: the record itself plus the snapshot it comes from. */
-export function catalogOperator(record: OperatorRecord, sources: Readonly<Record<GameDataRegion, Pick<DatasetSource, "repository" | "revision">>>): CatalogOperator {
+export function catalogOperator(record: OperatorRecord, sources: Readonly<Record<GameDataRegion, Pick<DatasetSource, "repository" | "revision">>>, previousSlugs: readonly string[] = []): CatalogOperator {
   const region: GameDataRegion = record.cnOnly ? "cn" : "en";
   const source = sources[region];
   return {
@@ -76,6 +80,7 @@ export function catalogOperator(record: OperatorRecord, sources: Readonly<Record
     subClassId: record.subClassId,
     rarity: record.rarity,
     slug: record.slug,
+    previousSlugs: [...previousSlugs],
     cnOnly: record.cnOnly,
     availabilityStatus: record.availabilityStatus,
     cnReleaseDate: record.cnReleaseDate,
@@ -144,11 +149,47 @@ export function validateOperatorCatalog(value: unknown): string[] {
     if (position > 0 && catalog.operators![position - 1]!.id.localeCompare(id, "en") >= 0) errors.push(`Operators are not sorted by id at ${id}`);
     if (slugs.has(entry.slug)) errors.push(`Duplicate slug for ${id}`);
     slugs.add(entry.slug);
+    const previous: unknown = entry.previousSlugs;
+    if (!Array.isArray(previous) || !previous.every((slug) => typeof slug === "string" && slugPattern.test(slug))) errors.push(`Invalid previous slugs for ${id}`);
+    else if (previous.some((slug, index) => index > 0 && compareCodeUnits(previous[index - 1] as string, slug as string) >= 0)) errors.push(`Previous slugs of ${id} are not sorted and unique`);
     const source = catalog.sources?.[entry.cnOnly ? "cn" : "en"];
     if (!source) return;
     const expected = catalogOperator(entry, catalog.sources!);
     const provenance = (["sourceLocale", "sourceRepository", "sourceRevision", "sourceDataVersion", "cnSourceRevision", "regionalMetadataSource"] as const).filter((key) => entry[key] !== expected[key]);
     if (provenance.length) errors.push(`Provenance of ${id} does not match its source: ${provenance.join(", ")}`);
   });
+  if (errors.length) return errors;
+  // A previous slug must lead to one operator only, and never to a slug some operator uses now.
+  const current = new Set([...slugs, ...getOperatorPublicSlugs(catalog.operators.map(catalogOperatorRecord)).values()]);
+  const owners = new Map<string, string>();
+  for (const entry of catalog.operators) {
+    for (const slug of entry.previousSlugs) {
+      if (current.has(slug)) errors.push(`Previous slug ${slug} of ${entry.id} is in use`);
+      const owner = owners.get(slug);
+      if (owner) errors.push(`Previous slug ${slug} belongs to ${owner} and ${entry.id}`);
+      owners.set(slug, entry.id);
+    }
+  }
   return errors;
+}
+
+/**
+ * Previous slugs of the new catalog: those of the previous catalog plus the public slug of every operator whose public
+ * slug changed (a renamed operator, or the collision suffixes that a rename moves). Slugs in use again are dropped.
+ */
+export function carryPreviousSlugs(previous: readonly Pick<CatalogOperator, "id" | "name" | "cnName" | "globalName" | "slug" | "previousSlugs">[], next: readonly CatalogOperator[]): CatalogOperator[] {
+  const record = (operator: Pick<CatalogOperator, "id" | "name" | "cnName" | "globalName" | "slug">) => ({ ...operator, globalName: operator.globalName ?? null }) as OperatorRecord;
+  const before = getOperatorPublicSlugs(previous.map(record));
+  const after = getOperatorPublicSlugs(next.map(record));
+  const inUse = new Set([...next.map((operator) => operator.slug), ...after.values()]);
+  const kept = new Map(previous.map((operator) => [operator.id, operator.previousSlugs ?? []]));
+  const claimed = new Set<string>();
+  return next.map((operator) => {
+    const slugs = new Set(kept.get(operator.id) ?? []);
+    const old = before.get(operator.id);
+    if (old && old !== after.get(operator.id)) slugs.add(old);
+    const previousSlugs = [...slugs].filter((slug) => !inUse.has(slug) && !claimed.has(slug)).sort(compareCodeUnits);
+    for (const slug of previousSlugs) claimed.add(slug);
+    return { ...operator, previousSlugs };
+  });
 }

@@ -14,4 +14,9 @@ export function listCatalogOperators(): readonly CatalogOperator[] { return cata
 /** Operator records of the catalog, ordered by id. */
 export function listOperatorRecords(): readonly OperatorRecord[] { return records; }
 
+const previousSlugs: ReadonlyMap<string, string> = new Map(catalog.operators.flatMap((operator) => operator.previousSlugs.map((slug) => [slug, operator.id] as const)));
+
+/** Previous public slugs of the catalog, each with the id of its operator. */
+export function listPreviousSlugs(): ReadonlyMap<string, string> { return previousSlugs; }
+
 export function catalogErrors(): string[] { return validateOperatorCatalog(catalog); }

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import { cache } from "react";
 
-import { listOperatorRecords } from "../../../game-data/operator-catalog-data";
+import { listOperatorRecords, listPreviousSlugs } from "../../../game-data/operator-catalog-data";
 import { readOperatorBiography } from "../../../game-data/operator-biographies-data";
-import { getOperatorPageTitle, getOperatorPublicSlug, getOperatorPublicSlugs } from "../../../game-data/operator-slugs";
+import { getOperatorPageTitle, resolveOperatorSlug } from "../../../game-data/operator-slugs";
 import { getOperatorTacticalEntry } from "../../../game-data/operator-tactical";
 import { getOperatorArtistCredit } from "../../../game-data/operator-artist-credits";
 import { loadStatsProfile } from "../../../game-data/operator-stats-data";
@@ -17,9 +17,8 @@ type OperatorPageProps = { params: Promise<{ slug: string }> };
 
 const resolveOperator = cache((slug: string) => {
   const records = listOperatorRecords();
-  const publicSlugs = getOperatorPublicSlugs(records);
-  const operator = records.find((record) => record.slug === slug || publicSlugs.get(record.id) === slug);
-  return operator ? { operator, records, publicSlug: getOperatorPublicSlug(operator, records) } : null;
+  const resolved = resolveOperatorSlug(slug, records, listPreviousSlugs());
+  return resolved ? { ...resolved, records } : null;
 });
 
 export async function generateMetadata({ params }: OperatorPageProps): Promise<Metadata> {
@@ -37,8 +36,8 @@ export default async function OperatorPage({ params }: OperatorPageProps) {
   const { slug } = await params;
   const resolved = resolveOperator(slug);
   if (!resolved) notFound();
-  const { operator, records, publicSlug } = resolved;
-  if (operator.slug === slug && publicSlug !== slug) permanentRedirect(`/operators/${publicSlug}`);
+  const { operator, records, publicSlug, redirect } = resolved;
+  if (redirect) permanentRedirect(`/operators/${publicSlug}`);
   const detailBiography = await loadOperatorDetailBiography(slug, records, readOperatorBiography);
   if (detailBiography.status === "operator-not-found") notFound();
   const region = operator.cnOnly ? "cn" : "en";

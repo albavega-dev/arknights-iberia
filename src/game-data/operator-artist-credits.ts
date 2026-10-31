@@ -8,7 +8,7 @@ type ArtistEntry = { operatorId: string; status: "verified" | "partial" | "pendi
 const entries = new Map((artistCreditsManifest.entries as ArtistEntry[]).map((entry) => [entry.operatorId, entry]));
 function legacyCredits(entry: ArtistEntry): NormalizedCredit[] {
   return [...(entry.general ?? []), ...(entry.variants?.base ?? []), ...(entry.variants?.elite2 ?? [])]
-    .flatMap((credit) => credit.name.split(/\s*&\s*/)).map((artist) => ({ artist: artist.trim(), role: "unknown" as const, status: entry.status })).filter((credit) => credit.artist);
+    .flatMap((credit) => credit.name.split("&")).map((artist) => ({ artist: artist.trim(), role: "unknown" as const, status: entry.status })).filter((credit) => credit.artist);
 }
 function normalizedKey(value: string): string { return value.normalize("NFKC").replace(/\s+/g, " ").trim().toLocaleLowerCase(); }
 export function getOperatorArtistCredit(operatorId: string): OperatorArtistCreditGroup[] | null {

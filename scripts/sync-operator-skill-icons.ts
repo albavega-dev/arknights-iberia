@@ -1,9 +1,12 @@
-import { copyFile, mkdir, readdir, readFile, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
 import { imageRepository, imageRevision } from "../src/game-data/asset-revisions";
 import { gameDataSkillTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { baseSkillIconLocalName, baseSkillIconsSourceDirectory, masteryIconFiles, masteryIconsSourceDirectory, roomIconLocalName, roomIconSources, roomIconsSourceDirectory, skillIconLocalName, skillIconsContractVersion, resolveSkillIconSource, type SkillIconEntry, type SkillIconsManifest } from "../src/game-data/operator-skill-icons";
+import { gitBlobSha } from "../src/game-data/git-blob";
+import { rawImageUrl, treeUrl } from "../src/game-data/github-requests";
 import { serializeDatasetJson } from "../src/game-data/operator-dataset";
+import type { OperatorSkillsProfile } from "../src/game-data/operator-skills";
 import { arg, exists, readJson, sha256, tableFlag } from "./operator-dataset-io";
 import { readSkillsDataset } from "./generate-operator-skills";
 
@@ -14,7 +17,7 @@ const revisionPattern = /^[0-9a-f]{40}$/;
 
 export type SkillRecord = Readonly<{ region: GameDataRegion; skillId: string }>;
 export type BaseSkillRecord = Readonly<{ region: GameDataRegion; iconId: string }>;
-type SkillTable = Readonly<Record<string, { iconId?: string | null } | undefined>>;
+export type SkillTable = Readonly<Record<string, { iconId?: string | null } | undefined>>;
 export type PngFile = Readonly<{ bytes: number; sha256: string; width: number; height: number }>;
 
 export function pngInfo(data: Buffer): PngFile {
@@ -81,54 +84,132 @@ export function buildSkillIconsManifest(revision: string, resolved: ReturnType<t
   };
 }
 
-export async function main(argv: readonly string[] = process.argv): Promise<void> {
-  const revision = argv.includes("--revision") ? arg("--revision", argv) : imageRevision;
-  const sourceDir = arg("--source-dir", argv);
-  const skillsDir = arg("--skills-dir", argv);
+export type SyncDependencies = { fetch: (url: string) => Promise<Response> };
+type TreeEntry = { path: string; type: string; sha: string };
+
+/**
+ * Git blob id of every file directly inside each directory of the image repository at the pinned revision. Each level
+ * is listed on its own, so a large directory never needs a recursive (and possibly truncated) listing.
+ */
+export async function listImageDirectories(fetch: SyncDependencies["fetch"], revision: string, directories: readonly string[]): Promise<Map<string, Map<string, string>>> {
+  const listings = new Map<string, TreeEntry[]>();
+  const list = async (tree: string): Promise<TreeEntry[]> => {
+    const cached = listings.get(tree);
+    if (cached) return cached;
+    const url = treeUrl(imageRepository, tree).toString();
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`${url}: HTTP ${response.status}`);
+    const body = await response.json() as { tree?: TreeEntry[]; truncated?: boolean };
+    if (!Array.isArray(body.tree) || body.truncated) throw new Error(`${url}: incomplete tree listing`);
+    listings.set(tree, body.tree);
+    return body.tree;
+  };
+  const result = new Map<string, Map<string, string>>();
+  for (const directory of directories) {
+    let tree = revision;
+    for (const segment of directory.split("/")) {
+      const child = (await list(tree)).find((entry) => entry.path === segment && entry.type === "tree");
+      if (!child) throw new Error(`No ${directory} directory at ${revision}`);
+      tree = child.sha;
+    }
+    result.set(directory, new Map((await list(tree)).filter((entry) => entry.type === "blob").map((entry) => [entry.path, entry.sha])));
+  }
+  return result;
+}
+
+/** Source path ("skills/skill_icon_x.png") -> SHA-256 of every file a skill icons manifest lists. */
+export function recordedHashes(manifest: SkillIconsManifest | null): Map<string, string> {
+  if (!manifest) return new Map();
+  return new Map([manifest.icons, manifest.mastery, manifest.baseSkills, manifest.rooms].flatMap((group) => Object.values(group).map((entry) => [entry.source, entry.sha256] as const)));
+}
+
+const defaultDependencies: SyncDependencies = { fetch: (url) => fetch(url) };
+
+export type SkillIconsInput = Readonly<{
+  profiles: readonly OperatorSkillsProfile[];
+  skillTables: Readonly<Record<GameDataRegion, SkillTable>>;
+  /** The manifest being replaced: its SHA-256 must still match every file it lists. */
+  previous: SkillIconsManifest | null;
+  cacheDir: string | null;
+}>;
+export type SkillIconsOutput = Readonly<{ manifest: SkillIconsManifest; icons: Map<string, Buffer>; mastery: Map<string, Buffer>; baseSkills: Map<string, Buffer>; rooms: Map<string, Buffer> }>;
+
+/**
+ * Downloads the skill, mastery, base skill and room icons the catalog uses from Arknight-Images at the pinned revision
+ * (`imageRevision`). Each file is checked against the git blob id of the pinned tree and, when the previous manifest lists
+ * it, against its recorded SHA-256. Returns the manifest and the files under their local names.
+ */
+export async function collectSkillIcons(input: SkillIconsInput, dependencies: SyncDependencies = defaultDependencies): Promise<SkillIconsOutput> {
+  const revision = imageRevision;
+  const recorded = recordedHashes(input.previous);
+  const listings = await listImageDirectories(dependencies.fetch, revision, [skillIconsDirectory, masteryIconsSourceDirectory, baseSkillIconsSourceDirectory, roomIconsSourceDirectory]);
+  const inventory = (directory: string) => new Set([...listings.get(directory)!.keys()].filter((name) => name.endsWith(".png")));
+  const download = async (directory: string, name: string): Promise<Buffer> => {
+    const path = `${directory}/${name}`;
+    const blob = listings.get(directory)!.get(name);
+    if (!blob) throw new Error(`${path} is not in the pinned tree`);
+    const cached = input.cacheDir ? join(input.cacheDir, path) : null;
+    let data = cached && await exists(cached) ? await readFile(cached) : null;
+    if (!data || gitBlobSha(data) !== blob) {
+      const response = await dependencies.fetch(rawImageUrl(revision, path).toString());
+      if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);
+      data = Buffer.from(await response.arrayBuffer());
+      if (gitBlobSha(data) !== blob) throw new Error(`${path}: the download does not match the git blob hash`);
+      if (cached) { await mkdir(dirname(cached), { recursive: true }); await writeFile(cached, data); }
+    }
+    const expected = recorded.get(path);
+    if (expected && sha256(data) !== expected) throw new Error(`${path}: SHA-256 differs from the manifest`);
+    return data;
+  };
+  const downloadAll = async (directory: string, names: readonly string[]) => {
+    const files = new Map<string, Buffer>();
+    for (const name of names) files.set(name, await download(directory, name));
+    return files;
+  };
+  const infos = (files: ReadonlyMap<string, Buffer>) => new Map([...files].map(([name, data]) => [name, pngInfo(data)]));
+
+  const skills = input.profiles.flatMap((profile) => profile.skills.map((skill) => ({ region: profile.region as GameDataRegion, skillId: skill.skillId })));
+  const resolved = resolveCatalogIcons(skills, input.skillTables, inventory(skillIconsDirectory));
+  const files = await downloadAll(skillIconsDirectory, resolved.sources);
+  const masteryFiles = await downloadAll(masteryIconsSourceDirectory, masteryIconFiles);
+  const baseRecords = input.profiles.flatMap((profile) => profile.baseSkills.flatMap((slot) => slot.stages.map((stage) => ({ region: profile.region as GameDataRegion, iconId: stage.icon }))));
+  const baseResolved = resolveCatalogBaseIcons(baseRecords, inventory(baseSkillIconsSourceDirectory));
+  const baseFiles = await downloadAll(baseSkillIconsSourceDirectory, baseResolved.sources);
+  const roomFiles = await downloadAll(roomIconsSourceDirectory, Object.values(roomIconSources));
+  return {
+    manifest: buildSkillIconsManifest(revision, resolved, infos(files), infos(masteryFiles), { resolved: baseResolved, files: infos(baseFiles), roomFiles: infos(roomFiles) }),
+    icons: new Map([...files].map(([source, data]) => [skillIconLocalName(source), data])),
+    mastery: masteryFiles,
+    baseSkills: new Map([...baseFiles].map(([source, data]) => [baseSkillIconLocalName(source.slice(0, -".png".length)), data])),
+    rooms: new Map(Object.entries(roomIconSources).map(([room, source]) => [roomIconLocalName(room), roomFiles.get(source)!])),
+  };
+}
+
+export async function main(argv: readonly string[] = process.argv, dependencies: SyncDependencies = defaultDependencies): Promise<void> {
+  if (argv.includes("--revision")) throw new Error("The source revision is fixed: imageRevision in src/game-data/asset-revisions.ts");
   const outManifest = arg("--out-manifest", argv);
-  const outAssets = arg("--out-assets", argv);
-  const masteryDir = arg("--mastery-dir", argv);
-  const outMasteryAssets = arg("--out-mastery-assets", argv);
-  const baseSkillsDir = arg("--base-skills-dir", argv);
-  const outBaseSkillAssets = arg("--out-base-skill-assets", argv);
-  const roomsDir = arg("--rooms-dir", argv);
-  const outRoomAssets = arg("--out-room-assets", argv);
-  const force = argv.includes("--force");
-  const outputs = [outManifest, outAssets, outMasteryAssets, outBaseSkillAssets, outRoomAssets];
-  if ((await Promise.all(outputs.map(exists))).some(Boolean) && !force) throw new Error("Output exists; pass --force to overwrite");
+  const outDirectories = { icons: arg("--out-assets", argv), mastery: arg("--out-mastery-assets", argv), baseSkills: arg("--out-base-skill-assets", argv), rooms: arg("--out-room-assets", argv) };
+  if ((await Promise.all([outManifest, ...Object.values(outDirectories)].map(exists))).some(Boolean) && !argv.includes("--force")) throw new Error("Output exists; pass --force to overwrite");
   const skillTables = {} as Record<GameDataRegion, SkillTable>;
   for (const region of regions) {
     const path = arg(tableFlag(region, "skill_table"), argv);
     if (sha256(await readFile(path)) !== gameDataSkillTableHashes[region].skill_table) throw new Error(`Snapshot SHA-256 mismatch: ${tableFlag(region, "skill_table")}`);
     skillTables[region] = await readJson(path) as SkillTable;
   }
-  const { profiles } = await readSkillsDataset(skillsDir);
-  const skills = profiles.flatMap((profile) => profile.skills.map((skill) => ({ region: profile.region as GameDataRegion, skillId: skill.skillId })));
-  const inventory = new Set((await readdir(sourceDir)).filter((name) => name.endsWith(".png")));
-  const resolved = resolveCatalogIcons(skills, skillTables, inventory);
-  const files = new Map<string, PngFile>();
-  for (const source of resolved.sources) files.set(source, pngInfo(await readFile(join(sourceDir, source))));
-  const masteryFiles = new Map<string, PngFile>();
-  for (const file of masteryIconFiles) masteryFiles.set(file, pngInfo(await readFile(join(masteryDir, file))));
-  const baseRecords = profiles.flatMap((profile) => profile.baseSkills.flatMap((slot) => slot.stages.map((stage) => ({ region: profile.region as GameDataRegion, iconId: stage.icon }))));
-  const baseResolved = resolveCatalogBaseIcons(baseRecords, new Set((await readdir(baseSkillsDir)).filter((name) => name.endsWith(".png"))));
-  const baseFiles = new Map<string, PngFile>();
-  for (const source of baseResolved.sources) baseFiles.set(source, pngInfo(await readFile(join(baseSkillsDir, source))));
-  const roomFiles = new Map<string, PngFile>();
-  for (const source of Object.values(roomIconSources)) roomFiles.set(source, pngInfo(await readFile(join(roomsDir, source))));
-  const manifest = buildSkillIconsManifest(revision, resolved, files, masteryFiles, { resolved: baseResolved, files: baseFiles, roomFiles });
-  await mkdir(outAssets, { recursive: true });
-  for (const source of resolved.sources) await copyFile(join(sourceDir, source), join(outAssets, skillIconLocalName(source)));
-  await mkdir(outMasteryAssets, { recursive: true });
-  for (const file of masteryIconFiles) await copyFile(join(masteryDir, file), join(outMasteryAssets, file));
-  await mkdir(outBaseSkillAssets, { recursive: true });
-  for (const source of baseResolved.sources) await copyFile(join(baseSkillsDir, source), join(outBaseSkillAssets, baseSkillIconLocalName(source.slice(0, -".png".length))));
-  await mkdir(outRoomAssets, { recursive: true });
-  for (const [room, source] of Object.entries(roomIconSources)) await copyFile(join(roomsDir, source), join(outRoomAssets, roomIconLocalName(room)));
-  await writeFile(outManifest, serializeDatasetJson(manifest), "utf8");
-  const covered = { en: Object.keys(manifest.skills.en).length, cn: Object.keys(manifest.skills.cn).length };
-  console.log(`Copied ${resolved.sources.length} icons; skills with icon EN ${covered.en}, CN ${covered.cn}; without icon EN ${manifest.missing.en.length}, CN ${manifest.missing.cn.length}`);
-  console.log(`Copied ${baseResolved.sources.length} base skill icons (without file EN ${baseResolved.missing.en.length}, CN ${baseResolved.missing.cn.length}) and ${Object.keys(manifest.rooms).length} room icons`);
+  const output = await collectSkillIcons({
+    profiles: (await readSkillsDataset(arg("--skills-dir", argv))).profiles,
+    skillTables,
+    previous: await exists(outManifest) ? await readJson(outManifest) as SkillIconsManifest : null,
+    cacheDir: argv.includes("--cache-dir") ? arg("--cache-dir", argv) : null,
+  }, dependencies);
+  for (const [group, directory] of Object.entries(outDirectories) as [keyof typeof outDirectories, string][]) {
+    await mkdir(directory, { recursive: true });
+    for (const [name, data] of output[group]) await writeFile(join(directory, name), data);
+  }
+  await writeFile(outManifest, serializeDatasetJson(output.manifest), "utf8");
+  const { manifest } = output;
+  console.log(`Wrote ${output.icons.size} icons; skills with icon EN ${Object.keys(manifest.skills.en).length}, CN ${Object.keys(manifest.skills.cn).length}; without icon EN ${manifest.missing.en.length}, CN ${manifest.missing.cn.length}`);
+  console.log(`Wrote ${output.baseSkills.size} base skill icons (without file EN ${manifest.baseSkillsMissing.en.length}, CN ${manifest.baseSkillsMissing.cn.length}) and ${output.rooms.size} room icons`);
 }
 
 if (process.argv[1]?.endsWith("sync-operator-skill-icons.ts")) main().catch((error: unknown) => { console.error(error instanceof Error ? error.message : error); process.exitCode = 1; });

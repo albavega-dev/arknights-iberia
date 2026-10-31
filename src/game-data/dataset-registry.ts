@@ -112,7 +112,7 @@ export const datasetRegistry = {
     assets: ["module-art", "module-type-icons"],
   },
   "operator-catalog": {
-    description: "Operator catalog and biographies",
+    description: "Operator catalog and biographies; the generator keeps the previous slugs of the versioned catalog and adds the public slug of every renamed operator",
     outputs: ["data/operator-catalog", "data/operator-biographies"],
     generator: { script: "data:catalog:generate", kind: "update", outDir: "data", verifyAgainst: "data" },
     tables: ["character_table", "handbook_info_table"],
@@ -132,6 +132,16 @@ export const datasetRegistry = {
     changeChecks: ["ranges"],
     assets: [],
   },
+  "operator-new-manifests": {
+    description: "Name, CN date, faction, affiliations and artist credits of the operators new in CN; proposed and written with data:new-operators --write, then artists:normalize",
+    outputs: ["data/operator-regional-manifest.json", "data/operator-faction-manifest.json", "data/operator-affiliation-manifest.json", "data/operator-artist-credits-manifest.json"],
+    generator: { script: "data:new-operators", kind: "manual", rerunWhen: ["operators"] },
+    tables: ["character_table"],
+    sources: [],
+    tests: ["tests/new-operator-proposal.test.ts", "tests/operator-catalog-dataset-integrity.test.ts"],
+    changeChecks: ["operators"],
+    assets: [],
+  },
   "operator-global-updates": {
     description: "Global updates that set the NEW badge; proposed with data:global-update for the operators that arrive in Global",
     outputs: ["data/operator-global-updates.json"],
@@ -147,13 +157,9 @@ export type DatasetId = keyof typeof datasetRegistry;
 
 /** Curated inputs of data/ that no generator writes; listed so every file of data/ is accounted for. */
 export const curatedDataFiles = [
-  "data/operator-affiliation-manifest.json",
-  "data/operator-artist-credits-manifest.json",
   "data/operator-associated-ranges.json",
   "data/operator-cn-release-manifest.json",
-  "data/operator-faction-manifest.json",
   "data/operator-module-modes.json",
-  "data/operator-regional-manifest.json",
 ] as const;
 
 const entries = <T>(record: Readonly<Record<string, T>>) => Object.entries(record) as [string, T][];

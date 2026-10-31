@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
+import { firstParenthesis, illustratorFieldValue, replaceWikiLinks, stripTags, stripTrailingParenthesis } from "../src/game-data/wikitext";
 
 type Operator = { id: string; name: string };
 type ApiResponse = { parse?: { pageid: number; wikitext?: string | { "*": string } }; error?: { code?: string; info?: string } };
@@ -26,26 +27,25 @@ const pageOverrides: Record<string, string> = {
 };
 
 function sleep(ms: number): Promise<void> { return new Promise((resolve) => setTimeout(resolve, ms)); }
-function clean(value: string): string { return value.replace(/<[^>]+>/g, "").replace(/\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g, "$1").replace(/'{2,}/g, "").trim(); }
+function clean(value: string): string { return replaceWikiLinks(stripTags(value)).replace(/'{2,}/g, "").trim(); }
 function wikitextValue(value: string | { "*": string } | undefined): string | undefined { return typeof value === "string" ? value : value?.["*"]; }
 function extractSkinNames(wikitext: string): Set<string> {
   return new Set([...wikitext.matchAll(/^\|\s*skin\d+\s*=\s*(.+)$/gim)].map((match) => clean(match[1])));
 }
 function extractArtists(wikitext: string): { name: string; role?: string; evidence: string }[] {
-  const match = wikitext.match(/\|\s*illustrator\s*=([\s\S]*?)(?=\n\|[^\n=]+\s*=|\n}})/i);
-  if (!match) return [];
+  const field = illustratorFieldValue(wikitext);
+  if (field === undefined) return [];
   const skinNames = extractSkinNames(wikitext);
-  return match[1].split(/\r?\n/).map((line) => line.replace(/^\s*[*#]+\s*/, "").trim()).filter(Boolean)
+  return field.split(/\r?\n/).map((line) => line.replace(/^\s*[*#]+\s*/, "").trim()).filter(Boolean)
     .map((line) => {
-      const role = line.match(/\(([^)]*)\)/)?.[1];
+      const role = firstParenthesis(line);
       const namePart = line.split("{{", 1)[0];
-      return { name: clean(namePart.replace(/\s*\([^)]*\)\s*$/, "")), ...(role ? { role: clean(role) } : {}), evidence: `|illustrator = ${line}` };
+      return { name: clean(stripTrailingParenthesis(namePart)), ...(role ? { role: clean(role) } : {}), evidence: `|illustrator = ${line}` };
     })
     .filter((entry) => entry.name.length > 0 && (!entry.role || ![...skinNames].some((skin) => skin.localeCompare(entry.role!, undefined, { sensitivity: "accent" }) === 0)));
 }
 function extractIllustratorField(wikitext: string): string | null {
-  const match = wikitext.match(/\|\s*illustrator\s*=([\s\S]*?)(?=\n\|[^\n=]+\s*=|\n}})/i);
-  return match?.[1]?.trim() || null;
+  return illustratorFieldValue(wikitext)?.trim() || null;
 }
 function classify(artists: { evidence: string }[], pageFound: boolean): "verified" | "partial" | "pending" {
   if (!pageFound || artists.length === 0) return "pending";
@@ -186,7 +186,7 @@ async function main(): Promise<void> {
   console.log(JSON.stringify({ status: "ok", mode: allMode ? "all" : "sample", outputPath: allMode ? "data/operator-artist-credits-manifest.json" : outputPath, sampleSize: results.length, verified: results.filter((r) => r.status === "verified").length, partial: results.filter((r) => r.status === "partial").length, pending: results.filter((r) => r.status === "pending").length, errors: results.filter((r) => r.error).length }, null, 2));
 }
 
-export { applyRefreshPayload, extractArtists, extractIllustratorField };
+export { applyRefreshPayload, classify, extractArtists, extractIllustratorField, fetchPage, fetchRevision, isExplicitVariant, wikitextValue };
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((error) => { console.error(error instanceof Error ? error.message : String(error)); process.exitCode = 1; });
