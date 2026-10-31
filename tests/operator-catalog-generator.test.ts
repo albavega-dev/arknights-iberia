@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test, { mock } from "node:test";
 import { buildCatalogRecords, type CatalogTableHashes, type RegionalManifest, type ReleaseManifest } from "../scripts/generate-operator-bundle";
-import { biographiesDirectory, buildCatalogDataset, catalogDirectory, main, readCatalogDataset } from "../scripts/generate-operator-catalog";
+import { biographiesDirectory, buildCatalogDataset, catalogDirectory, main, readCatalogDataset, readPreviousOperators } from "../scripts/generate-operator-catalog";
 import { validateOperatorCatalog, type OperatorCatalog } from "../src/game-data/operator-catalog";
 import { compareCodeUnits } from "../src/game-data/string-order";
 
@@ -209,6 +209,27 @@ test("warns when the catalog reaches 90% of its limit", async () => {
     assert.deepEqual(warnings.filter((line) => line.startsWith("Warning: Catalog is")).length, 1);
   } finally {
     mock.restoreAll();
+    await rm(directory, { recursive: true, force: true });
+  }
+});
+
+test("the generator hands over the slugs of the catalog it replaces, from any contract", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "catalog-previous-"));
+  try {
+    assert.deepEqual(await readPreviousOperators(join(directory, "missing.json")), [], "no previous catalog, no history");
+    assert.deepEqual(await readPreviousOperators(null), []);
+    const old = join(directory, "old.json");
+    await writeFile(old, JSON.stringify({ contractVersion: "1", operators: [{ id: "char_a", name: "Alfa", cnName: "阿尔法", globalName: "Alfa", slug: "operator-char-a" }] }));
+    const previous = await readPreviousOperators(old);
+    assert.deepEqual(previous, [{ id: "char_a", name: "Alfa", cnName: "阿尔法", globalName: "Alfa", slug: "operator-char-a", previousSlugs: [] }]);
+    const { catalog } = buildCatalogDataset(buildCatalogRecords(tables, release, regional(), hashes), undefined, previous);
+    assert.deepEqual(catalog.operators.find((operator) => operator.id === "char_a")!.previousSlugs, ["alfa"], "Alfa became Alpha");
+    assert.ok(catalog.operators.filter((operator) => operator.id !== "char_a").every((operator) => operator.previousSlugs.length === 0));
+    for (const broken of [{}, { operators: [{ id: "char_a" }] }]) {
+      await writeFile(old, JSON.stringify(broken));
+      await assert.rejects(readPreviousOperators(old), /Unreadable previous catalog/);
+    }
+  } finally {
     await rm(directory, { recursive: true, force: true });
   }
 });

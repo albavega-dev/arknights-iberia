@@ -112,7 +112,7 @@ export const datasetRegistry = {
     assets: ["module-art", "module-type-icons"],
   },
   "operator-catalog": {
-    description: "Operator catalog and biographies",
+    description: "Operator catalog and biographies; the generator keeps the previous slugs of the versioned catalog and adds the public slug of every renamed operator",
     outputs: ["data/operator-catalog", "data/operator-biographies"],
     generator: { script: "data:catalog:generate", kind: "update", outDir: "data", verifyAgainst: "data" },
     tables: ["character_table", "handbook_info_table"],
