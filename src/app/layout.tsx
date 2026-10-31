@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { buildSiteMetadata, getSiteOrigin } from "../game-data/seo";
 import { SiteShell } from "./site-shell";
 
 const geistSans = Geist({
@@ -15,8 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arknights Iberia — Archivo de navegación",
-  description: "Web de recursos de Arknights en español.",
+  ...buildSiteMetadata(getSiteOrigin()),
   icons: {
     icon: "/assets/anchor.svg",
   },

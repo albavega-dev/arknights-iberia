@@ -22,9 +22,9 @@ test("uses names normally and adds deterministic suffixes only for collisions", 
   assert.equal(new Set(slugs.values()).size, records.length);
 });
 
-test("uses the Spanish operator prefix without translating the public name", () => {
-  assert.equal(getOperatorPageTitle({ name: "Ripresa", globalName: null }), "Operador - Ripresa");
-  assert.equal(getOperatorPageTitle({ name: "Nombre local", globalName: "Kal'tsit" }), "Operador - Kal'tsit");
+test("titles an operator page with its public name without translating it", () => {
+  assert.equal(getOperatorPageTitle({ name: "Ripresa", globalName: null }), "Ripresa: habilidades, módulos y estadísticas");
+  assert.equal(getOperatorPageTitle({ name: "Nombre local", globalName: "Kal'tsit" }), "Kal'tsit: habilidades, módulos y estadísticas");
 });
 
 test("normalizing keeps its results for edge cases and takes linear time on hostile input", () => {

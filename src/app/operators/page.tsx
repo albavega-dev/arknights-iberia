@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 
+import { listOperatorRecords } from "../../game-data/operator-catalog-data";
+import { buildCatalogMetadata } from "../../game-data/seo";
 import { OperatorsData } from "./operators-data";
 
-export const metadata: Metadata = {
-  title: "Operadores",
-  description: "Muestra pública y verificable del catálogo de operadores de Arknights Iberia.",
-};
+export function generateMetadata(): Metadata {
+  return buildCatalogMetadata(listOperatorRecords().length);
+}
 
 export default async function OperatorsPage() {
   return (

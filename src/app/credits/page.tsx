@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Atribuciones",
-};
+import { buildCreditsMetadata } from "../../game-data/seo";
+
+export const metadata: Metadata = buildCreditsMetadata();
 
 const sourceGroups = [
   {

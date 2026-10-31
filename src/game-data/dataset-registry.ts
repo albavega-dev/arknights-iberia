@@ -18,8 +18,8 @@ export type CoverageNeed = "catalogOperators" | "catalogSkillIcons" | "catalogMo
 
 export type AssetEntry = Readonly<{
   description: string;
-  /** Where the files come from: a repository and its directories, a CDN without revisions, or a wiki. */
-  source: Readonly<{ repository: string; directories: readonly string[] }> | Readonly<{ cdn: string }> | Readonly<{ wiki: string }>;
+  /** Where the files come from: a repository and its directories, a CDN without revisions, a wiki, or local files they are derived from. */
+  source: Readonly<{ repository: string; directories: readonly string[] }> | Readonly<{ cdn: string }> | Readonly<{ wiki: string }> | Readonly<{ derivedFrom: readonly string[] }>;
   /** Pinned revision: the constant that holds it, or the manifest field. */
   revision: string;
   /** Manifest that lists the files, when there is one. */
@@ -45,6 +45,7 @@ export const assetRegistry = {
   "class-icons": { description: "Class and subclass icons, copied as is", source: { repository: images, directories: ["classes", "ui"] }, revision: "imageRevision (asset-revisions.ts)", manifest: "data/operator-image-manifest.json", localDirectories: ["public/assets/operator-classes", "public/assets/operator-subclasses"], sync: "data:illustrations:sync", coverage: { reportKey: "missingSubclassIcons", need: "catalogSubclasses", path: (id) => `ui/subclass/sub_${id}_icon.png` } },
   "faction-logos": { description: "Faction logos, converted to WebP", source: { repository: images, directories: ["factions"] }, revision: "imageRevision (asset-revisions.ts)", manifest: "data/operator-image-manifest.json", localDirectories: ["public/assets/operator-factions"], sync: "data:illustrations:sync" },
   portraits: { description: "Operator portraits, converted to WebP; checked against the Content-MD5 of the CDN", source: { cdn: "https://web.hycdn.cn/arknights/game/assets/char/portrait/" }, revision: "none: Content-MD5 and ETag per file in the manifest", manifest: "data/operator-portrait-manifest.json", localDirectories: ["public/assets/operator-portraits"], sync: "data:portraits:sync" },
+  "og-images": { description: "JPEG previews (1200x630) of the E0 illustrations for Open Graph, and the shared site image; generated locally, the check fails when an illustration has none", source: { derivedFrom: ["public/assets/operator-illustrations", "public/assets/backgrounds/mystic-sea.png", "public/assets/anchor.svg"] }, revision: "none: derived from the local illustrations; SHA-256 of each source in the manifest", manifest: "data/operator-og-manifest.json", localDirectories: ["public/assets/operator-og-images"], sync: "data:og-images:generate" },
   "stat-icons": { description: "Attribute icons", source: { wiki: "https://arknights.wiki.gg" }, revision: "none: copied once", localDirectories: ["public/assets/operator-stats"], sync: "manual" },
   "potential-icons": { description: "Potential icons", source: { wiki: "https://arknights.wiki.gg" }, revision: "none: copied once", localDirectories: ["public/assets/operator-potential"], sync: "manual" },
 } as const satisfies Record<string, AssetEntry>;
@@ -127,7 +128,7 @@ export const datasetRegistry = {
     sources: [...catalogManifests, "data/operator-faction-manifest.json", "data/operator-affiliation-manifest.json"],
     tests: ["tests/operator-catalog-dataset-integrity.test.ts"],
     changeChecks: ["operators", "biographies"],
-    assets: ["illustrations", "avatars", "portraits", "class-icons", "faction-logos"],
+    assets: ["illustrations", "avatars", "portraits", "class-icons", "faction-logos", "og-images"],
   },
   "operator-tactical-manifest": {
     description: "Base and module ranges with their associated entities",

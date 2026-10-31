@@ -4,10 +4,12 @@ import { cache } from "react";
 
 import { listOperatorRecords, listPreviousSlugs } from "../../../game-data/operator-catalog-data";
 import { readOperatorBiography } from "../../../game-data/operator-biographies-data";
-import { getOperatorPageTitle, resolveOperatorSlug } from "../../../game-data/operator-slugs";
+import { resolveOperatorSlug } from "../../../game-data/operator-slugs";
+import { buildOperatorMetadata } from "../../../game-data/seo";
 import { getOperatorTacticalEntry } from "../../../game-data/operator-tactical";
 import { getOperatorArtistCredit } from "../../../game-data/operator-artist-credits";
 import { getOperatorIllustrationAssets } from "../../../game-data/operator-illustrations-data";
+import { getOperatorOgImageUrl } from "../../../game-data/operator-og-images-data";
 import { isOperatorLimited } from "../../../game-data/operator-limited-data";
 import { loadStatsProfile } from "../../../game-data/operator-stats-data";
 import { loadSkillsView } from "../../../game-data/operator-skills-data";
@@ -26,10 +28,7 @@ const resolveOperator = cache((slug: string) => {
 export async function generateMetadata({ params }: OperatorPageProps): Promise<Metadata> {
   const { slug } = await params;
   const resolved = resolveOperator(slug);
-  return {
-    title: resolved ? getOperatorPageTitle(resolved.operator) : "Operador - Arknights Iberia",
-    description: "Ficha pública de operador a partir de datos importados.",
-  };
+  return buildOperatorMetadata(resolved, getOperatorOgImageUrl);
 }
 
 export const dynamic = "force-dynamic";
