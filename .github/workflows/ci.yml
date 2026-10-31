@@ -134,6 +134,76 @@ jobs:
         shell: bash
         run: git diff --check
 
+  e2e:
+    name: End-to-end tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      CI: true
+      NEXT_TELEMETRY_DISABLED: 1
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+
+      - name: Enable Corepack and pnpm for cache setup
+        shell: bash
+        run: |
+          corepack enable
+          corepack prepare pnpm@12.11.2 --activate
+
+      - name: Set up Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 22.22.2
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        shell: bash
+        run: corepack pnpm install --frozen-lockfile
+
+      - name: Read Playwright version
+        id: playwright
+        shell: bash
+        run: echo "version=$(node -p 'require("@playwright/test/package.json").version')" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@caa296126883cff596d87d8935842f9db880ef25 # v5.1.0
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-${{ steps.playwright.outputs.version }}
+
+      - name: Install Chromium
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        shell: bash
+        run: corepack pnpm exec playwright install --with-deps chromium
+
+      - name: Install Chromium system dependencies
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        shell: bash
+        run: corepack pnpm exec playwright install-deps chromium
+
+      - name: Production build
+        shell: bash
+        run: corepack pnpm build
+
+      - name: Playwright (desktop and mobile)
+        shell: bash
+        run: corepack pnpm test:e2e
+
+      - name: Upload Playwright screenshots and traces
+        if: failure()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+        with:
+          name: playwright-artifacts
+          path: artifacts
+          retention-days: 7
+          if-no-files-found: ignore
+
   sonar:
     name: SonarQube Analysis
     needs: quality

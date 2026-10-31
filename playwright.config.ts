@@ -20,6 +20,16 @@ export default defineConfig({
     video: "off",
     ignoreHTTPSErrors: false,
   },
+  // Without PLAYWRIGHT_BASE_URL the tests run against `next start` on the existing production build.
+  webServer: process.env.PLAYWRIGHT_BASE_URL
+    ? undefined
+    : {
+        command: "corepack pnpm start --hostname 127.0.0.1 --port 3103",
+        url: "http://127.0.0.1:3103/api/health",
+        reuseExistingServer: !process.env.CI,
+        timeout: 60_000,
+        env: { NEXT_TELEMETRY_DISABLED: "1" },
+      },
   projects: [
     { name: "desktop", use: { ...devices["Desktop Chrome"], browserName: "chromium" } },
     { name: "mobile", use: { ...devices["iPhone 13"], browserName: "chromium" } },
