@@ -2,6 +2,7 @@
 
 import { useState, type ReactNode } from "react";
 import Image from "next/image";
+import { assetPath } from "../../../game-data/asset-paths";
 import { formatNumber } from "../../../game-data/number-format";
 import { highlightChangedNumbers, modulePotentials, talentChangesAt, visibleModules, type ModuleLevelView, type ModuleModeEffectsView, type ModuleTalentChangeView, type ModuleTraitChangeView, type OperatorModulesView, type OperatorModuleView, type TraitStageView } from "../../../game-data/operator-modules-view";
 import { moduleModeNames } from "../../../game-data/operator-module-modes";
@@ -38,7 +39,7 @@ function AttributeLine({ attributes, previous, label }: { attributes: Record<str
 }
 
 function PotentialChoices({ potentials, selected, onSelect }: { potentials: number[]; selected: number; onSelect: (potential: number) => void }) {
-  return <fieldset className="operator-module-potentials"><legend className="sr-only">Potencial</legend><div className="operator-stats-choice-list operator-stats-potential-choices">{potentials.map((value) => <button type="button" key={value} className={`operator-stats-light-choice operator-pointer-light${selected === value ? " is-active" : ""}`} aria-label={`Potencial ${value}`} aria-pressed={selected === value} onClick={() => onSelect(selected === value ? 1 : value)} onMouseMove={followPointer}><Image src={`/assets/operator-potential/potential-${value}.png`} alt="" width={36} height={34} unoptimized /></button>)}</div></fieldset>;
+  return <fieldset className="operator-module-potentials"><legend className="sr-only">Potencial</legend><div className="operator-stats-choice-list operator-stats-potential-choices">{potentials.map((value) => <button type="button" key={value} className={`operator-stats-light-choice operator-pointer-light${selected === value ? " is-active" : ""}`} aria-label={`Potencial ${value}`} aria-pressed={selected === value} onClick={() => onSelect(selected === value ? 1 : value)} onMouseMove={followPointer}><Image src={assetPath("operator-potential", `potential-${value}.png`)} alt="" width={36} height={34} unoptimized /></button>)}</div></fieldset>;
 }
 
 const sameTalent = (a: ModuleTalentChangeView, b: ModuleTalentChangeView) => a.token === b.token && a.index === b.index && (a.index !== null || a.name === b.name);
@@ -67,7 +68,7 @@ function TraitChanges({ changes, glossary, module }: { changes: ModuleTraitChang
 
 /** Level icon from the game (modules always have levels 1–3), with the number for assistive technology. */
 function LevelHeading({ level }: { level: number }) {
-  return <h4 className="operator-module-level-heading"><Image src={`/assets/operator-module-stages/stage-${level}.png`} alt="" width={174} height={160} unoptimized /><span className="sr-only">Nivel {level}</span></h4>;
+  return <h4 className="operator-module-level-heading"><Image src={assetPath("operator-module-stages", `stage-${level}.png`)} alt="" width={174} height={160} unoptimized /><span className="sr-only">Nivel {level}</span></h4>;
 }
 
 /** The three levels side by side, one below another in narrow cards; `render` gets the level and the one before it. */

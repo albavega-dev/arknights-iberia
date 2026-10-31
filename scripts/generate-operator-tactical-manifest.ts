@@ -1,4 +1,5 @@
 import { gameDataRepository, gameDataRevisions } from "../src/game-data/gamedata-revisions";
+import { assetPath } from "../src/game-data/asset-paths";
 import { compareCodeUnits } from "../src/game-data/string-order";
 import { readFile, writeFile } from "node:fs/promises";
 import { readCatalog } from "./operator-dataset-io";
@@ -117,7 +118,7 @@ for (const { id } of rows) {
       modifiedRangeId,
       rangeKey: `module:${equipment.type.toLowerCase()}-${id.split("_").slice(2).join("_")}`,
       grids: coordinates,
-      iconUrl: `/assets/operator-modules/${equipment.icon}.png`,
+      iconUrl: assetPath("operator-modules", `${equipment.icon}.png`),
       evidenceUrl: `https://arknights.wiki.gg/wiki/${encodeURIComponent(name.replaceAll(" ", "_")).replaceAll("'", "%27")}`,
       source: { region: profile.region, revision: enRevision },
     });

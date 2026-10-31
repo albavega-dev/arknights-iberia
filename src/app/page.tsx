@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { assetPath } from "../game-data/asset-paths";
 import { LandingSeparator } from "./landing-separator";
 
 export const metadata: Metadata = { title: "Arknights Iberia" };
@@ -115,11 +116,11 @@ export default function Home() {
             <h2 id="contact-title">Contacto</h2>
             <nav className="landing-contact" aria-label="Contacto de la comunidad">
               <a href="https://discord.gg/stCK4AS8SM" target="_blank" rel="noopener noreferrer">
-                <img className="landing-contact-logo" src="/assets/contact/discord.svg" alt="" aria-hidden="true" />
+                <img className="landing-contact-logo" src={assetPath("contact", "discord.svg")} alt="" aria-hidden="true" />
                 <span>Discord de la comunidad</span>
               </a>
               <a href="https://x.com/ArknightsIberia" target="_blank" rel="noopener noreferrer">
-                <img className="landing-contact-logo" src="/assets/contact/x.svg" alt="" aria-hidden="true" />
+                <img className="landing-contact-logo" src={assetPath("contact", "x.svg")} alt="" aria-hidden="true" />
                 <span>Twitter de la comunidad</span>
               </a>
             </nav>

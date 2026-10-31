@@ -4,6 +4,7 @@ import { useId, useLayoutEffect, useRef, useState, type CSSProperties, type Focu
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import { Play, Timer, Zap, type LucideIcon } from "lucide-react";
+import { assetPath } from "../../../game-data/asset-paths";
 import { formatNumber } from "../../../game-data/number-format";
 import { getTacticalRangeDefinition, type OperatorTacticalEntry, type TacticalRangeDefinition } from "../../../game-data/operator-tactical";
 import type { BaseSkillStageView, OperatorBaseSkillView, OperatorSkillRangeView, OperatorSkillsView, OperatorSkillView, OperatorTalentView, SkillLevelView, SkillTermView, TalentStageView } from "../../../game-data/operator-skills-view";
@@ -231,7 +232,7 @@ function BaseSkillIcon({ stage, slot }: { stage: BaseSkillStageView; slot: numbe
 
 /** Promotion icon of the Stats elite selector, plus the level when it is above 1; the text label is for assistive technology. */
 function UnlockIcon({ unlock }: { unlock: SkillUnlock }) {
-  return <><span className="operator-base-skill-unlock-icon"><Image src={`/assets/operator-elite/elite-${unlock.elite}.png`} alt="" width={40} height={40} unoptimized /></span>{unlock.level > 1 ? <span className="operator-base-skill-unlock-level" aria-hidden="true">Nv. {unlock.level}</span> : null}</>;
+  return <><span className="operator-base-skill-unlock-icon"><Image src={assetPath("operator-elite", `elite-${unlock.elite}.png`)} alt="" width={40} height={40} unoptimized /></span>{unlock.level > 1 ? <span className="operator-base-skill-unlock-level" aria-hidden="true">Nv. {unlock.level}</span> : null}</>;
 }
 
 /** Unlock of each stage as a radio group, with the same keys as the level selector; a single stage keeps a fixed tag. */

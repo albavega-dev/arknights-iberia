@@ -1,10 +1,11 @@
 "use client";
 import { useMemo, useState } from "react";
+import { assetPath } from "../../../game-data/asset-paths";
 import { getAssociatedRanges, getConfirmedModuleRanges, getTacticalRangeDefinition, type OperatorTacticalEntry, type TacticalAssociatedRange } from "../../../game-data/operator-tactical";
 import { OperatorControlButton } from "../operator-control-button";
 import { RangeGrid, getRangeGridEnvelope } from "../range-grid";
 const phaseLabels = ["Élite 0", "Élite 1", "Élite 2"];
-const phaseIconPaths = ["/assets/operator-elite/elite-0.png", "/assets/operator-elite/elite-1.png", "/assets/operator-elite/elite-2.png"];
+const phaseIconPaths = [0, 1, 2].map((phase) => assetPath("operator-elite", `elite-${phase}.png`));
 const positionLabels: Record<string, string> = { MELEE: "Melee", RANGED: "Ranged" };
 type Cell = { row: number; col: number };
 function geometrySignature(grid: readonly Cell[]): string { return [{ row: 0, col: 0 }, ...grid].filter((cell, index, cells) => cells.findIndex((candidate) => candidate.row === cell.row && candidate.col === cell.col) === index).sort((left, right) => left.row - right.row || left.col - right.col).map((cell) => `${cell.row}:${cell.col}`).join("|"); }
