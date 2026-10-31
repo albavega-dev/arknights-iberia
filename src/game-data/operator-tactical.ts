@@ -1,5 +1,6 @@
 import tacticalManifest from "../../data/operator-tactical-manifest.json";
 import associatedRanges from "../../data/operator-associated-ranges.json";
+import { assetPath } from "./asset-paths";
 import { gameDataRevisions } from "./gamedata-revisions";
 
 export type TacticalPhase = Readonly<{ phase: number; rangeId: string | null; rangeKey: string | null }>;
@@ -78,8 +79,8 @@ export function getTacticalRangeDefinition(rangeKey: string | null): TacticalRan
 }
 
 const confirmedModuleRanges: Readonly<Record<string, readonly TacticalModuleRange[]>> = {
-  char_1034_jesca2: [{ moduleId: "uniequip_003_jesca2", moduleName: "SPT-Y", level: 1, rangeKey: "module:spt-y", grids: sentryProtectorModuleGrids, iconUrl: "/assets/operator-modules/spt-y.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Jessica_the_Liberated" }],
-  char_4194_rmixer: [{ moduleId: "uniequip_003_rmixer", moduleName: "SPT-Y", level: 1, rangeKey: "module:spt-y", grids: sentryProtectorModuleGrids, iconUrl: "/assets/operator-modules/spt-y.png", evidenceUrl: "https://arknights.wiki.gg/wiki/Sankta_Miksaparato" }],
+  char_1034_jesca2: [{ moduleId: "uniequip_003_jesca2", moduleName: "SPT-Y", level: 1, rangeKey: "module:spt-y", grids: sentryProtectorModuleGrids, iconUrl: assetPath("operator-modules", "spt-y.png"), evidenceUrl: "https://arknights.wiki.gg/wiki/Jessica_the_Liberated" }],
+  char_4194_rmixer: [{ moduleId: "uniequip_003_rmixer", moduleName: "SPT-Y", level: 1, rangeKey: "module:spt-y", grids: sentryProtectorModuleGrids, iconUrl: assetPath("operator-modules", "spt-y.png"), evidenceUrl: "https://arknights.wiki.gg/wiki/Sankta_Miksaparato" }],
 };
 
 export function getConfirmedModuleRanges(operatorId: string): readonly TacticalModuleRange[] {

@@ -1,3 +1,4 @@
+import { assetPath } from "./asset-paths";
 import { isOperatorId, type DatasetIndex, type DatasetSource } from "./operator-dataset";
 import type { GameDataRegion } from "./gamedata-revisions";
 import { moduleDescriptions, traitDescriptions, type ModuleLevel, type ModuleRegion, type OperatorModulesProfile, type TraitStage } from "./operator-modules";
@@ -52,7 +53,7 @@ export type OperatorModulesView = {
 };
 export type StoredModulesProfile = Omit<OperatorModulesProfile, "region"> & { region: string };
 
-const iconPath = (icon: string) => `/assets/operator-modules/${icon}.png`;
+const iconPath = (icon: string) => assetPath("operator-modules", `${icon}.png`);
 
 function effectsView(effects: Pick<ModuleLevel, "traits" | "talents">): Pick<ModuleLevelView, "traits" | "talents"> {
   return {

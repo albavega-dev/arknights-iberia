@@ -1,3 +1,4 @@
+import { assetPath } from "./asset-paths";
 import { imageRepository, imageRevision } from "./asset-revisions";
 import type { SkillIconView } from "./operator-skills-view";
 
@@ -19,12 +20,12 @@ export const moduleArtConversion: ModuleArtManifest["conversion"] = { format: "w
 /** Level icons: source file under `equip/stage/` by local file name. */
 export const moduleStageSources: Readonly<Record<string, string>> = { "stage-1.png": "img_stg1.png", "stage-2.png": "img_stg2.png", "stage-3.png": "img_stg3.png" };
 
-export const moduleArtDirectory = "/assets/operator-modules-art";
+export const moduleArtDirectory = "operator-modules-art";
 
 /** Illustration of a module, or null when the manifest has none. */
 export function moduleArtResolver(manifest: Pick<ModuleArtManifest, "art">): (moduleId: string) => SkillIconView | null {
   return (moduleId) => {
     const entry = manifest.art[`${moduleId}.webp`];
-    return entry ? { src: `${moduleArtDirectory}/${moduleId}.webp`, width: entry.converted.width, height: entry.converted.height } : null;
+    return entry ? { src: assetPath(moduleArtDirectory, `${moduleId}.webp`), width: entry.converted.width, height: entry.converted.height } : null;
   };
 }
