@@ -1213,9 +1213,13 @@
   }
 }
 .operator-art-dialog {
-  width: 100vw;
+  --operator-art-dialog-gap-x: clamp(1rem, 4vw, 3rem);
+  --operator-art-dialog-gap-y: 4rem;
+  position: fixed;
+  inset: 0;
+  width: 100%;
   max-width: none;
-  height: 100dvh;
+  height: 100%;
   max-height: none;
   margin: 0;
   padding: 0;
@@ -1239,18 +1243,23 @@
   }
 }
 .operator-art-dialog-frame {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  padding: clamp(3.5rem, 6vw, 4rem) clamp(1rem, 4vw, 3rem);
+  padding: var(--operator-art-dialog-gap-y) var(--operator-art-dialog-gap-x);
   box-sizing: border-box;
 }
 .operator-art-dialog-image {
+  display: block;
+  flex: 0 1 auto;
   width: auto;
   max-width: min(100%, 1280px);
   height: auto;
   max-height: 100%;
+  min-width: 0;
+  min-height: 0;
   object-fit: contain;
   cursor: default;
 }

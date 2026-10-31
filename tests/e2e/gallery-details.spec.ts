@@ -1,6 +1,6 @@
 import type { Page } from "@playwright/test";
 import type { LimitedManifest } from "../../src/game-data/operator-limited";
-import { displayName, expect, expectedCount, newOperatorIds, openCatalog, publicSlugs, readData, records, test, uniquelySearchable } from "./support";
+import { displayName, expect, expectedCount, newOperatorIds, openCatalog, publicSlugs, readData, records, test, transparentPng, uniquelySearchable } from "./support";
 
 const globalOperators = records.filter((operator) => !operator.cnOnly);
 const limitedIds = new Set(readData<LimitedManifest>("operator-limited-manifest.json").operators.map((operator) => operator.id));
@@ -118,6 +118,42 @@ test.describe("detalles de la ficha", () => {
     await dialog.getByRole("button", { name: "Cerrar ilustración ampliada" }).click();
     await expect(dialog).toBeHidden();
     await expect(trigger).toBeFocused();
+  });
+
+  test("la ilustración ampliada cabe entera en la ventana con cualquier proporción y resolución", async ({ page }, testInfo) => {
+    const viewports = testInfo.project.name === "mobile"
+      ? [[390, 844], [844, 390], [320, 568], [568, 320]]
+      : [[1920, 1080], [1366, 768], [1280, 600], [1024, 1366]];
+    const shapes = [[600, 2400], [2400, 500], [1280, 1280]] as const;
+    let shape: readonly [number, number] = shapes[0];
+    await page.route(`**/assets/operator-illustrations/${limited.id}_1.webp`, (route) => route.fulfill({ status: 200, contentType: "image/png", headers: { "cache-control": "no-store" }, body: transparentPng(...shape) }));
+    for (const current of shapes) {
+      shape = current;
+      await page.goto(`/operators/${publicSlugs.get(limited.id)}`);
+      for (const [width, height] of viewports) {
+        await page.setViewportSize({ width: width!, height: height! });
+        await page.getByRole("button", { name: /^Ampliar ilustración/ }).click();
+        const image = page.locator("dialog[open] img");
+        await expect.poll(() => image.evaluate((element: HTMLImageElement) => element.complete && element.naturalWidth)).toBe(current[0]);
+        const layout = await page.evaluate(() => {
+          const box = (element: Element) => { const { left, top, right, bottom, width, height } = element.getBoundingClientRect(); return { left, top, right, bottom, width, height }; };
+          const image = document.querySelector("dialog[open] img")!;
+          const close = document.querySelector(".operator-art-dialog-close")!;
+          const button = box(close);
+          return { image: box(image), button, width: document.documentElement.clientWidth, height: window.innerHeight, onTop: Boolean(document.elementFromPoint(button.left + button.width / 2, button.top + button.height / 2)?.closest(".operator-art-dialog-close")) };
+        });
+        const where = `${current.join("×")} en ${width}×${height}`;
+        expect(layout.image.left, where).toBeGreaterThanOrEqual(8);
+        expect(layout.image.right, where).toBeLessThanOrEqual(layout.width - 8);
+        expect(layout.image.top, where).toBeGreaterThanOrEqual(layout.button.bottom);
+        expect(layout.image.bottom, where).toBeLessThanOrEqual(layout.height - 8);
+        expect(Math.abs(layout.image.width / layout.image.height - current[0] / current[1]) / (current[0] / current[1]), where).toBeLessThan(0.02);
+        expect(layout.button.top >= 0 && layout.button.right <= layout.width && layout.onTop, where).toBe(true);
+        expect(await horizontalOverflow(page), where).toBeLessThanOrEqual(0);
+        await page.keyboard.press("Escape");
+        await expect(page.locator("dialog[open]")).toHaveCount(0);
+      }
+    }
   });
 
   test("los créditos listan el CDN de retratos entre los recursos gráficos", async ({ page }) => {
