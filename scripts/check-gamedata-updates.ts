@@ -10,12 +10,14 @@
 import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, stat, writeFile } from "node:fs/promises";
 import { isAbsolute, join, relative, resolve } from "node:path";
-import { portraitDirectory, portraitRepository, imageRepository, imageRevision } from "../src/game-data/asset-revisions";
+import { imageRepository, imageRevision } from "../src/game-data/asset-revisions";
 import {
   assetChangesByDirectory, assetCoverage, changedAssetPaths, skillIconNames, catalogModuleIds, changedBlobs, compareFileLimit, diffKeyed, diffModules, diffOperators, diffSkills,
   diffBaseSkills, exitCodeFor, handbookEntries, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds,
-  redact, resolvedSkillGaps, revisionStatus, skillIdsOf, usedRangeIds, compareRoster, type CompareFile,
+  redact, resolvedSkillGaps, revisionStatus, skillIdsOf, subClassIdsOf, usedRangeIds, compareRoster, type CompareFile,
 } from "../src/game-data/gamedata-diff";
+import { portraitChanges, portraitUrl, type PortraitHead, type PortraitManifest } from "../src/game-data/operator-portraits";
+import { pool } from "./sync-operator-images";
 import { gameDataRepository, gameDataRevisions, pinnedGameDataTableHashes, type GameDataRegion } from "../src/game-data/gamedata-revisions";
 import { directoryBlobs, fetchBytes, github, token } from "./github-api";
 import { compareUrl, contentsUrl, gameDataDirectory, latestCommitUrl, rawGameDataUrl, treeUrl } from "../src/game-data/github-requests";
@@ -75,11 +77,18 @@ async function revisionsLevel() {
   const imageHead = await latestCommit(imageRepository);
   const imageFiles = await compareFiles(imageRepository, imageRevision, imageHead);
   const images = { ...revisionStatus(imageRevision, imageHead), byDirectory: assetChangesByDirectory(imageFiles, imageDirectories), changedPaths: changedAssetPaths(imageFiles, imageDirectories), listMayBeIncomplete: mayBeTruncated(imageFiles) };
-  const portraitManifest = await readJson<{ source: { directoryTreeSha: string } }>("data/operator-portrait-manifest.json");
-  const root = await github<{ name: string; sha: string }[]>(contentsUrl(portraitRepository, "main"));
-  const treeSha = root.find((entry) => entry.name === portraitDirectory)?.sha;
-  if (!treeSha) throw new Error(`${portraitRepository} has no ${portraitDirectory} directory`);
-  const portraits = revisionStatus(portraitManifest.source.directoryTreeSha, treeSha);
+  // The portrait CDN has no revisions: a HEAD request per catalog operator compares its Content-MD5 with the manifest.
+  const portraitManifest = await readJson<PortraitManifest>("data/operator-portrait-manifest.json");
+  const catalogIds = [...idsOf(await readJson("data/operator-cn-release-manifest.json")), ...idsOf(await readJson("data/operator-regional-manifest.json"))];
+  const heads = new Map(await pool(catalogIds, 8, async (id): Promise<[string, PortraitHead]> => {
+    try {
+      const response = await fetch(portraitUrl(id), { method: "HEAD" });
+      return [id, { status: response.status, contentMd5: response.headers.get("content-md5") }];
+    } catch {
+      return [id, { status: 0, contentMd5: null }];
+    }
+  }));
+  const portraits = portraitChanges(portraitManifest, catalogIds, heads);
   return { latest, latestBlobs, gamedata, images, portraits, imageHead };
 }
 
@@ -183,6 +192,7 @@ async function tablesLevel(revisions: Awaited<ReturnType<typeof revisionsLevel>>
       catalogOperators: regions.flatMap((region) => scope[region]),
       catalogSkillIcons: regions.flatMap((region) => skillIconNames(results[region].skillAfter, skillIdsOf(results[region].charAfter, scope[region]))),
       catalogModules: regions.flatMap((region) => catalogModuleIds(results[region].uniAfter, scope[region], { withInitial: false })),
+      catalogSubclasses: [...new Set(regions.flatMap((region) => subClassIdsOf(results[region].charAfter, scope[region])))],
     };
     assets = assetCoverage(paths, registryCoverage().map((coverage) => ({ reportKey: coverage.reportKey, ids: needs[coverage.need], path: coverage.path })));
   }

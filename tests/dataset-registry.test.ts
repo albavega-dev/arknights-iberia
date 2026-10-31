@@ -19,12 +19,13 @@ test("every table a dataset reads is pinned in both regions, and every compariso
 });
 
 test("the registry keeps the image directories and coverage checks of the update check", () => {
-  assert.deepEqual(registryImageDirectories(imageRepository), ["characters", "skills", "equip", "ui"]);
+  assert.deepEqual(registryImageDirectories(imageRepository), ["characters", "skills", "equip", "ui", "classes", "factions"]);
   assert.deepEqual(registryImageDirectories("nobody/nothing"), []);
   assert.deepEqual(registryCoverage().map((coverage) => [coverage.reportKey, coverage.need, coverage.path("x")]), [
     ["missingIllustrations", "catalogOperators", "characters/x_1.png"],
     ["missingSkillIcons", "catalogSkillIcons", "skills/skill_icon_x.png"],
     ["missingModuleArt", "catalogModules", "equip/icon/x.png"],
+    ["missingSubclassIcons", "catalogSubclasses", "ui/subclass/sub_x_icon.png"],
   ]);
 });
 

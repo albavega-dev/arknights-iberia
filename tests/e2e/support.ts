@@ -79,22 +79,23 @@ const placeholderPng = Buffer.concat([
   pngChunk("IEND", Buffer.alloc(0)),
 ]);
 
-type Diagnostics = { consoleErrors: string[]; serverErrors: string[]; blockedRequests: string[]; optimizerRequests: string[] };
+type Diagnostics = { consoleErrors: string[]; serverErrors: string[]; missingFiles: string[]; blockedRequests: string[]; optimizerRequests: string[] };
 
 /**
- * Only the local server is reachable: remote images get a local placeholder (the server never fetches the upstream
- * image), any other external request is aborted and reported, and any `/_next/image` request fails the test.
+ * Only the local server is reachable: every image is a local file, so any external request (images included) is aborted
+ * and reported, a missing local file is reported, and any `/_next/image` request fails the test.
  */
 export const test = base.extend<{ diagnostics: Diagnostics }>({
   diagnostics: [async ({ page, baseURL }, provide) => {
     const origin = new URL(baseURL!).origin;
-    const diagnostics: Diagnostics = { consoleErrors: [], serverErrors: [], blockedRequests: [], optimizerRequests: [] };
+    const diagnostics: Diagnostics = { consoleErrors: [], serverErrors: [], missingFiles: [], blockedRequests: [], optimizerRequests: [] };
     await page.route("**/*", async (route) => {
       const url = new URL(route.request().url());
-      const isImage = route.request().resourceType() === "image";
-      if (url.origin === origin && url.pathname === "/_next/image") diagnostics.optimizerRequests.push(url.href);
-      if (url.origin === origin && url.pathname !== "/_next/image") return route.continue();
-      if (url.origin === origin || isImage) return route.fulfill({ status: 200, contentType: "image/png", body: placeholderPng });
+      if (url.origin === origin && url.pathname === "/_next/image") {
+        diagnostics.optimizerRequests.push(url.href);
+        return route.fulfill({ status: 200, contentType: "image/png", body: placeholderPng });
+      }
+      if (url.origin === origin) return route.continue();
       diagnostics.blockedRequests.push(url.href);
       return route.abort("blockedbyclient");
     });
@@ -104,10 +105,12 @@ export const test = base.extend<{ diagnostics: Diagnostics }>({
     page.on("pageerror", (error) => diagnostics.consoleErrors.push(error.message));
     page.on("response", (response) => {
       if (response.status() >= 500) diagnostics.serverErrors.push(`${response.status()} ${new URL(response.url()).pathname}`);
+      else if (response.status() >= 400 && new URL(response.url()).pathname.startsWith("/assets/")) diagnostics.missingFiles.push(`${response.status()} ${new URL(response.url()).pathname}`);
     });
     await provide(diagnostics);
     expect(diagnostics.consoleErrors, "console errors").toEqual([]);
     expect(diagnostics.serverErrors, "server errors").toEqual([]);
+    expect(diagnostics.missingFiles, "missing local files").toEqual([]);
     expect(diagnostics.blockedRequests, "external requests").toEqual([]);
     expect(diagnostics.optimizerRequests, "image optimizer requests").toEqual([]);
   }, { auto: true }],

@@ -7,8 +7,7 @@ export type SourcesInput = {
   releaseRevision: string;
   imageRepository: string;
   imageRevision: string;
-  portraitRepository: string;
-  portraitRevision: string;
+  portraitCdn: string;
   regional: readonly { nameEnglish: string; cnReleaseDate: string | null; cnReleaseDateProvenance?: { status: string; source: string } }[];
   cnReleases: readonly { status: string; source: string }[];
   globalUpdates: readonly { name: string; opensAt: string; operatorIds: readonly string[]; sourceUrl: string; status: string }[];
@@ -34,7 +33,7 @@ function revisionsBlock(input: SourcesInput): string {
     `| [${data.split("/")[1]}](${github(data)}) | Datos del juego CN | ${commit(data, input.gameDataRevisions.cn)} |`,
     `| [${data.split("/")[1]}](${github(data)}) | Fechas CN calculadas (\`gacha_table\`, \`roguelike_topic_table\`) | ${commit(data, input.releaseRevision)} |`,
     `| [${input.imageRepository.split("/")[1]}](${github(input.imageRepository)}) | Ilustraciones e iconos | ${commit(input.imageRepository, input.imageRevision)} |`,
-    `| [${input.portraitRepository.split("/")[1]}](${github(input.portraitRepository)}) | Índice de retratos | ${commit(input.portraitRepository, input.portraitRevision)} |`,
+    `| [${new URL(input.portraitCdn).host}](${input.portraitCdn}) | Retratos | Sin revisiones: \`Content-MD5\` y ETag de cada archivo en \`data/operator-portrait-manifest.json\` |`,
   ].join("\n");
 }
 

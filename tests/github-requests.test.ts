@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { afterEach, describe, it } from "node:test";
-import { imageRepository, portraitRepository } from "../src/game-data/asset-revisions";
+import { imageRepository } from "../src/game-data/asset-revisions";
 import { gitBlobSha } from "../src/game-data/git-blob";
 import {
   assertGitHubUrl, compareUrl, contentsUrl, gameDataDirectory, gameDataDirectorySegments, gameDataRegion, gameDataTable, gameDataTables, gitObjectId, latestCommitUrl,
@@ -32,8 +32,8 @@ describe("validated values", () => {
 
   it("accepts only the repositories of the project", () => {
     assert.deepEqual(repositorySegments(gameDataRepository), gameDataRepository.split("/"));
-    for (const repository of [imageRepository, portraitRepository]) assert.equal(repositorySegments(repository).join("/"), repository);
-    for (const value of ["ArknightsAssets/Other", "ArknightsAssets/ArknightsGamedata/..", "evil/ArknightsGamedata", `${gameDataRepository}/`, ...malicious]) assert.throws(() => repositorySegments(value), /Repository not allowed/);
+    assert.equal(repositorySegments(imageRepository).join("/"), imageRepository);
+    for (const value of ["fexli/ArknightsResource", "ArknightsAssets/Other", "ArknightsAssets/ArknightsGamedata/..", "evil/ArknightsGamedata", `${gameDataRepository}/`, ...malicious]) assert.throws(() => repositorySegments(value), /Repository not allowed/);
   });
 
   it("accepts only the tables directories", () => {
@@ -49,7 +49,6 @@ describe("built URLs", () => {
     assert.equal(compareUrl(imageRepository, commit, other, 2).href, `https://api.github.com/repos/${imageRepository}/compare/${commit}...${other}?per_page=100&page=2`);
     assert.equal(treeUrl(gameDataRepository, commit).href, `https://api.github.com/repos/${gameDataRepository}/git/trees/${commit}`);
     assert.equal(treeUrl(imageRepository, commit, true).href, `https://api.github.com/repos/${imageRepository}/git/trees/${commit}?recursive=1`);
-    assert.equal(contentsUrl(portraitRepository, "main").href, `https://api.github.com/repos/${portraitRepository}/contents?ref=main`);
     assert.equal(contentsUrl(gameDataRepository, commit, "cn/gamedata/excel").href, `https://api.github.com/repos/${gameDataRepository}/contents/cn/gamedata/excel?ref=${commit}`);
     assert.equal(rawGameDataUrl(commit, "en", "skill_table").href, `https://raw.githubusercontent.com/${gameDataRepository}/${commit}/en/gamedata/excel/skill_table.json`);
   });
@@ -59,6 +58,7 @@ describe("built URLs", () => {
       assert.throws(() => compareUrl(imageRepository, value, other, 1));
       assert.throws(() => treeUrl(gameDataRepository, value));
       assert.throws(() => contentsUrl(gameDataRepository, value));
+      assert.throws(() => contentsUrl(imageRepository, "main"), /Invalid git object id/);
       assert.throws(() => latestCommitUrl(gameDataRepository, value));
       assert.throws(() => rawGameDataUrl(commit, value as "en", "skill_table"));
       assert.throws(() => rawGameDataUrl(commit, "en", value));

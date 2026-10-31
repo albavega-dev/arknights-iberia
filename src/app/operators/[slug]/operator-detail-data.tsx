@@ -8,7 +8,7 @@ import type { OperatorArtistCreditGroup } from "../../../game-data/operator-arti
 import { formatNumber, formatPercent } from "../../../game-data/number-format";
 import { assetPath, assetsRoot } from "../../../game-data/asset-paths";
 import { getOperatorArchetypeName } from "../../../game-data/operator-archetypes";
-import { getOperatorClassIconUrl, getOperatorIllustrationAssets, getOperatorSubclassIconUrl } from "../../../game-data/operator-assets";
+import { getOperatorClassIconUrl, getOperatorSubclassIconUrl, type OperatorIllustrationAssets } from "../../../game-data/operator-assets";
 import type { BiographyReadResult } from "../../../game-data/operator-biography";
 import { OperatorTacticalInfo } from "./operator-tactical-info";
 import { OperatorSkillsPanel, OperatorTalentsPanel, type StatsTrait, type TalentModuleEffect, type TalentSelection } from "./operator-skills-panel";
@@ -23,12 +23,11 @@ import { calculateOperatorStats, displayStatLabels, formatModuleTypeLabel, getRe
 
 function Image(props: ComponentProps<typeof NextImage>) {
   const source = typeof props.src === "string" ? props.src : "";
-  const isSmallStaticAsset = source.startsWith(`${assetsRoot}/operator-`);
   return (
     <NextImage
       {...props}
       quality={75}
-      unoptimized={isSmallStaticAsset || source.includes("/classes/") || source.includes("/ui/subclass/")}
+      unoptimized={source.startsWith(`${assetsRoot}/operator-`)}
     />
   );
 }
@@ -168,7 +167,7 @@ function VisualStatsPanel({ stats, skills, modules, showCnModules, onShowCnModul
   return <div className="operator-stats-content"><div className="operator-stats-calculator"><div className="operator-stats-attributes"><h2 className="operator-stats-heading">Élite {elite} nivel {result?.level}</h2><section className="operator-stats-card" aria-label="Estadísticas calculadas">{statKeys.length ? <dl>{statKeys.map((key) => <div key={key}><dt>{key === "attackSpeed" ? "Velocidad de ataque" : displayStatLabels[key] ?? key}</dt><dd>{formatNumber(result!.calculated[key])}</dd></div>)}</dl> : <p>No hay atributos calculables para esta fase.</p>}</section></div><div className="operator-stats-selectors">{modules?.hasCnModules ? <CnModulesToggle checked={showCnModules} onChange={onShowCnModulesChange} /> : null}<section className="operator-stats-controls" aria-label="Configuración de estadísticas"><fieldset><div className="operator-stats-choice-list">{stats.phases.map((item) => <button type="button" key={item.phase} className={`operator-stats-light-choice operator-pointer-light${elite === item.phase ? " is-active" : ""}`} aria-label={`Élite ${item.phase}`} aria-pressed={elite === item.phase} onClick={() => chooseElite(item.phase)} onMouseMove={followPointer}><Image src={assetPath("operator-elite", `elite-${item.phase}.png`)} alt="" width={40} height={40} /></button>)}</div></fieldset><label htmlFor="stats-level">Nivel <output>{level} / {phase?.maxLevel ?? 1}</output></label><input id="stats-level" type="range" min={1} max={phase?.maxLevel ?? 1} value={level} onChange={(event) => setLevel(Number(event.target.value))} /><label htmlFor="stats-trust">Confianza <output>{formatPercent(trust)}</output></label><input id="stats-trust" type="range" min={0} max={100} value={trust} onChange={(event) => setTrust(Number(event.target.value))} /><fieldset><legend className="sr-only">Potencial</legend><div className="operator-stats-choice-list operator-stats-potential-choices">{potentialOptions.map((value) => <button type="button" key={value} className={`operator-stats-light-choice operator-pointer-light${potential === value ? " is-active" : ""}`} aria-label={`Potencial ${value}`} aria-pressed={potential === value} onClick={() => setPotential((current) => current === value ? 0 : value)} onMouseMove={followPointer}><Image src={assetPath("operator-potential", `potential-${value}.png`)} alt="" width={36} height={34} /></button>)}</div></fieldset>{relevantModules.length ? <fieldset><legend>Módulo</legend><div className="operator-stats-choice-list">{relevantModules.map((module) => { const tacticalModule = tacticalModules.find((item) => item.moduleId === module.uniEquipId); const label = module.moduleType || tacticalModule?.moduleName || module.uniEquipId; const icon = module.moduleType ? simplifiedModuleIcons[module.moduleType] : undefined; return <OperatorControlButton appearance="naval" type="button" key={module.uniEquipId} size="compact" className={`operator-filter-button operator-stats-module-button is-text${moduleId === module.uniEquipId ? " is-active" : ""}`} aria-label={`${label}: ${module.name}`} title={module.name} aria-pressed={moduleId === module.uniEquipId} onClick={() => { if (moduleId === module.uniEquipId) { setModuleId("none"); setModuleLevel(null); } else { setModuleId(module.uniEquipId); setModuleLevel(module.levels[0]?.level ?? null); } }}>{icon ? <Image src={icon} alt="" width={24} height={24} /> : null}<span>{formatModuleTypeLabel(label)}</span></OperatorControlButton>; })}</div></fieldset> : null}{selectedModule ? <fieldset><div className="operator-stats-choice-list">{selectedModule.levels.map((item) => <OperatorControlButton appearance="naval" type="button" key={item.level} size="compact" className={`operator-filter-button is-text${moduleLevel === item.level ? " is-active" : ""}`} aria-label={`Etapa de módulo ${item.level}`} aria-pressed={moduleLevel === item.level} onClick={() => setModuleLevel(item.level)}>{item.level}</OperatorControlButton>)}</div></fieldset> : null}</section></div><StatsTalents skills={skills} trait={trait} selection={talentSelection} moduleEffect={talentModuleEffect(modules, selectedModule?.uniEquipId, moduleLevel, talentSelection.potential)} /></div><details className="operator-stats-approximate"><summary>Cálculo aproximado</summary><p>Los niveles intermedios usan interpolación provisional, el redondeo sigue pendiente de verificación y los efectos especiales no se convierten a estadísticas numéricas.</p></details></div>;
 }
 
-export function OperatorDetailData({ operator, stats = null, skills = null, modules = null, biography, tactical, artistCredit }: { operator: OperatorRecord; stats?: OperatorStatsProfile | null; skills?: OperatorSkillsView | null; modules?: OperatorModulesView | null; biography: BiographyReadResult; tactical: OperatorTacticalEntry | null; artistCredit: OperatorArtistCreditGroup[] | null }) {
+export function OperatorDetailData({ operator, stats = null, skills = null, modules = null, illustrations: illustrationAssets = null, biography, tactical, artistCredit }: { operator: OperatorRecord; stats?: OperatorStatsProfile | null; skills?: OperatorSkillsView | null; modules?: OperatorModulesView | null; illustrations?: OperatorIllustrationAssets | null; biography: BiographyReadResult; tactical: OperatorTacticalEntry | null; artistCredit: OperatorArtistCreditGroup[] | null }) {
   const displayName = getOperatorDisplayName(operator);
   const tabId = useId();
   const [selectedTab, setSelectedTab] = useState<TabLabel>("Estadísticas");
@@ -177,7 +176,6 @@ export function OperatorDetailData({ operator, stats = null, skills = null, modu
   // Shared by the Modules tab and the Stats module selector.
   const [showCnModules, setShowCnModules] = useState(false);
   const activeTab = visibleTabs.includes(selectedTab) ? selectedTab : "Estadísticas";
-  const illustrationAssets = getOperatorIllustrationAssets(operator.id);
   const availableIllustrationCount = Number(Boolean(illustrationAssets?.base)) + Number(Boolean(illustrationAssets?.elite2));
   const [artVariant, setArtVariant] = useState<"base" | "elite2">(illustrationAssets?.base ? "base" : "elite2");
   const [failedVariants, setFailedVariants] = useState<{ base: boolean; elite2: boolean }>({ base: false, elite2: false });

@@ -13,7 +13,7 @@ Las secciones marcadas con `sources:` se generan con `corepack pnpm docs:sources
 | [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata) | Datos del juego CN | [`84bbfbb`](https://github.com/ArknightsAssets/ArknightsGamedata/tree/84bbfbb4978f3545645264bf741356a64909439f) |
 | [ArknightsGamedata](https://github.com/ArknightsAssets/ArknightsGamedata) | Fechas CN calculadas (`gacha_table`, `roguelike_topic_table`) | [`84bbfbb`](https://github.com/ArknightsAssets/ArknightsGamedata/tree/84bbfbb4978f3545645264bf741356a64909439f) |
 | [Arknight-Images](https://github.com/PuppiizSunniiz/Arknight-Images) | Ilustraciones e iconos | [`1a41341`](https://github.com/PuppiizSunniiz/Arknight-Images/tree/1a41341cc634461a5abe3456722801a39b9a9d32) |
-| [ArknightsResource](https://github.com/fexli/ArknightsResource) | Índice de retratos | [`85b4488`](https://github.com/fexli/ArknightsResource/tree/85b44888ad619a05c5650a21d0ec74961d586182) |
+| [web.hycdn.cn](https://web.hycdn.cn/arknights/game/assets/char/portrait/) | Retratos | Sin revisiones: `Content-MD5` y ETag de cada archivo en `data/operator-portrait-manifest.json` |
 <!-- /sources:revisions -->
 
 ## Datos del juego

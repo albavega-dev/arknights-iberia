@@ -4,7 +4,7 @@ import { describe, it } from "node:test";
 import {
   assetChangesByDirectory, assetCoverage, baseSkillFingerprints, buildingEntries, diffBaseSkills, catalogModuleIds, changedAssetPaths, changedBlobs, compareRoster, diffKeyed, diffModules, diffOperators,
   diffSkills, exitCodeFor, fingerprint, handbookEntries, isPlayable, mayBeTruncated, missingLabels, newGlossaryTerms, playableOperatorIds, redact,
-  resolvedSkillGaps, revisionStatus, skillIconNames, skillIdsOf, stableJson, usedRangeIds,
+  resolvedSkillGaps, revisionStatus, skillIconNames, skillIdsOf, stableJson, subClassIdsOf, usedRangeIds,
 } from "../src/game-data/gamedata-diff";
 import { gitBlobSha } from "../src/game-data/git-blob";
 
@@ -84,6 +84,7 @@ describe("existing operators", () => {
   it("collects skill ids and range ids of the given operators", () => {
     const table = { char_1: operator({ skills: [{ skillId: "s2" }, { skillId: 4 }, { skillId: "s1" }], phases: [{ rangeId: "2-1" }, { rangeId: "" }, {}] }), char_2: operator({ skills: null, phases: null }) };
     assert.deepEqual(skillIdsOf(table, ["char_1", "char_2", "char_x"]), ["s1", "s2"]);
+    assert.deepEqual(subClassIdsOf({ char_1: { subProfessionId: "lord" }, char_2: { subProfessionId: "bard" }, char_3: { subProfessionId: "lord" }, char_4: {} }, ["char_1", "char_2", "char_3", "char_4", "char_x"]), ["bard", "lord"]);
     assert.deepEqual(usedRangeIds(table, ["char_1", "char_2", "char_x"]), ["2-1"]);
   });
 });
