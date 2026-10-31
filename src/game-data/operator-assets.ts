@@ -2,8 +2,10 @@ import type { OperatorClass } from "./operators";
 import { assetPath } from "./asset-paths";
 import { classIconFile, factionLogoFile, factionLogoFiles, illustrationFile, isOperatorId, isSubclassId, operatorImageDirectories, subclassIconFile } from "./operator-images";
 import { portraitDirectory } from "./operator-portraits";
+import { avatarDirectory, avatarFile } from "./operator-avatars";
 
-// Local copies under public/assets, written by data:illustrations:sync and data:portraits:sync for the catalog operators.
+// Local copies under public/assets, written by data:illustrations:sync, data:avatars:sync and data:portraits:sync for the
+// catalog operators.
 export type OperatorPortraitAsset = Readonly<{
   url: string;
   objectPosition: string;
@@ -18,6 +20,10 @@ export type OperatorIllustrationAssets = Readonly<{
 export function getOperatorPortraitAsset(operatorId: string): OperatorPortraitAsset | null {
   if (!isOperatorId(operatorId)) return null;
   return { url: assetPath(portraitDirectory, `${operatorId}.webp`), objectPosition: "50% 50%", scale: 1 };
+}
+
+export function getOperatorAvatarUrl(operatorId: string): string | null {
+  return isOperatorId(operatorId) ? assetPath(avatarDirectory, avatarFile(operatorId)) : null;
 }
 
 /** Local E0 illustration of an operator and its E2 one when the manifest lists it; null without an E0 illustration. */

@@ -6,7 +6,7 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { ArrowDown, ArrowUp, ChevronDown, RotateCcw } from "lucide-react";
+import { ArrowDown, ArrowUp, ChevronDown, Grid3x3, RectangleVertical, RotateCcw } from "lucide-react";
 import {
   filterOperators,
   getOperatorDisplayName,
@@ -18,6 +18,7 @@ import {
   type OperatorSortKey,
 } from "../../game-data/operators";
 import {
+  getOperatorAvatarUrl,
   getOperatorClassIconUrl,
   getOperatorFactionIconUrl,
   getOperatorPortraitAsset,
@@ -63,7 +64,10 @@ type CatalogFilterState = Readonly<{
   mainFactionId: string | "all";
   sortKey: OperatorSortKey;
   sortDirection: OperatorSortDirection;
+  view: CatalogView;
 }>;
+
+type CatalogView = "portraits" | "avatars";
 
 const validSortKeys: readonly OperatorSortKey[] = ["name", "cnReleaseDate", "rarity"];
 const validSortDirections: readonly OperatorSortDirection[] = ["asc", "desc"];
@@ -108,6 +112,7 @@ function readCatalogState(params: URLSearchParams, records: readonly OperatorRec
     mainFactionId,
     sortKey,
     sortDirection,
+    view: params.get("view") === "avatars" ? "avatars" : "portraits",
   };
 }
 
@@ -121,7 +126,17 @@ function catalogStateToParams(state: CatalogFilterState): string {
   if (state.mainFactionId !== "all") params.set("faction", state.mainFactionId);
   if (state.sortKey !== "cnReleaseDate") params.set("sort", state.sortKey);
   if (state.sortDirection !== "desc") params.set("dir", state.sortDirection);
+  if (state.view !== "portraits") params.set("view", state.view);
   return params.toString();
+}
+
+function operatorCardLabel(
+  operator: OperatorRecord,
+  displayName: string,
+  classLabel: string,
+  badge: ReturnType<typeof operatorCardBadge>,
+): string {
+  return `${displayName}, ${classLabel}, ${operator.rarity} estrellas${operator.cnOnly ? ", exclusivo CN, próximamente en Global" : ""}${badge === "new" ? ", operador nuevo" : ""}. Ver ficha`;
 }
 
 const OperatorCard = memo(function OperatorCard({
@@ -141,7 +156,7 @@ const OperatorCard = memo(function OperatorCard({
     <Link
       className={`operator-card rarity-${operator.rarity}${operator.cnOnly ? " is-cn-only" : ""}`}
       href={`/operators/${operator.slug}`}
-      aria-label={`${displayName}, ${classLabel}, ${operator.rarity} estrellas${operator.cnOnly ? ", exclusivo CN, pr\u00F3ximamente en Global" : ""}${badge === "new" ? ", operador nuevo" : ""}. Ver ficha`}
+      aria-label={operatorCardLabel(operator, displayName, classLabel, badge)}
     >
       <span className="operator-card-art" aria-hidden="true">
         {!portraitFailed && portrait ? (
@@ -180,6 +195,41 @@ const OperatorCard = memo(function OperatorCard({
             <span className="sr-only">{operator.rarity} estrellas</span>
           </span>
         </span>
+      </span>
+    </Link>
+  );
+});
+
+const OperatorAvatar = memo(function OperatorAvatar({
+  operator,
+  classLabel,
+  isNew,
+}: {
+  operator: OperatorRecord;
+  classLabel: string;
+  isNew: boolean;
+}) {
+  const [avatarFailed, setAvatarFailed] = useState(false);
+  const avatarUrl = getOperatorAvatarUrl(operator.id);
+  const displayName = getOperatorDisplayName(operator);
+  const badge = operatorCardBadge(operator, isNew);
+  return (
+    <Link
+      className={`operator-avatar rarity-${operator.rarity}${operator.cnOnly ? " is-cn-only" : ""}${badge ? ` is-${badge}` : ""}`}
+      href={`/operators/${operator.slug}`}
+      aria-label={operatorCardLabel(operator, displayName, classLabel, badge)}
+    >
+      <span className="operator-avatar-art" aria-hidden="true">
+        {!avatarFailed && avatarUrl ? (
+          <Image src={avatarUrl} alt="" fill sizes="88px" onError={() => setAvatarFailed(true)} />
+        ) : null}
+        <span className="operator-avatar-class">
+          <Image src={getOperatorClassIconUrl(operator.class)} alt="" fill sizes="18px" />
+        </span>
+        {badge ? <span className="operator-avatar-badge" /> : null}
+      </span>
+      <span className="operator-avatar-name" aria-hidden="true">
+        {displayName}
       </span>
     </Link>
   );
@@ -235,11 +285,14 @@ function AnimatedOperatorGrid({
   operators,
   allOperators,
   newOperatorIds,
+  view,
 }: {
   operators: readonly OperatorRecord[];
   allOperators: readonly OperatorRecord[];
   newOperatorIds: ReadonlySet<string>;
+  view: CatalogView;
 }) {
+  const Tile = view === "avatars" ? OperatorAvatar : OperatorCard;
   const gridRef = useRef<HTMLUListElement>(null);
   const animationCycle = operators.map((operator) => operator.id).join(",");
   const initialAnimationCycle = useRef(animationCycle);
@@ -264,10 +317,10 @@ function AnimatedOperatorGrid({
   }, [animationCycle]);
 
   return (
-    <ul ref={gridRef} className="operators-gallery">
+    <ul ref={gridRef} className={`operators-gallery${view === "avatars" ? " is-avatars" : ""}`}>
       {operators.map((operator, index) => (
         <li key={operator.id} style={{ "--operator-entry-index": Math.min(index, 7) } as CSSProperties}>
-          <OperatorCard
+          <Tile
             operator={{ ...operator, slug: getOperatorPublicSlug(operator, allOperators) }}
             classLabel={classLabels[operator.class]}
             isNew={newOperatorIds.has(operator.id)}
@@ -509,6 +562,7 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
   const [mainFactionId, setMainFactionId] = useState<string | "all">(initialState.mainFactionId);
   const [sortKey, setSortKey] = useState<OperatorSortKey>(initialState.sortKey);
   const [sortDirection, setSortDirection] = useState<OperatorSortDirection>(initialState.sortDirection);
+  const [view, setView] = useState<CatalogView>(initialState.view);
   const isDefaultCnReleaseOrder = !searchParamsText.includes("sort=") && !searchParamsText.includes("dir=");
   const lastUrlState = useRef(searchParamsText);
   const commitState = useCallback(
@@ -521,6 +575,7 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
       setMainFactionId(next.mainFactionId);
       setSortKey(next.sortKey);
       setSortDirection(next.sortDirection);
+      setView(next.view);
       const nextParams = catalogStateToParams(next);
       const nextUrl = nextParams ? `?${nextParams}` : "/operators";
       lastUrlState.current = nextParams;
@@ -539,8 +594,11 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
     setMainFactionId(next.mainFactionId);
     setSortKey(next.sortKey);
     setSortDirection(next.sortDirection);
+    setView(next.view);
     lastUrlState.current = searchParamsText;
   }, [catalogRecords, searchParamsText]);
+  const update = (patch: Partial<CatalogFilterState>) =>
+    commitState({ query, className, subClassIds, rarities, includeCnOnly, mainFactionId, sortKey, sortDirection, view, ...patch });
   const visible = useMemo(
     () =>
       sortOperators(
@@ -593,49 +651,30 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
   );
   const toggleClass = (nextClass: OperatorClass) => {
     const next = className === nextClass ? null : nextClass;
-    commitState({
-      query,
+    update({
       className: next,
       subClassIds: next
         ? subClassIds.filter((id) =>
             catalogRecords.some((operator) => operator.class === next && operator.subClassId === id),
           )
         : [],
-      rarities,
-      includeCnOnly,
-      mainFactionId,
-      sortKey,
-      sortDirection,
     });
   };
   const toggleRarity = (nextRarity: 1 | 2 | 3 | 4 | 5 | 6) =>
-    commitState({
-      query,
-      className,
-      subClassIds,
+    update({
       rarities: rarities.includes(nextRarity)
         ? rarities.filter((value) => value !== nextRarity)
         : [...rarities, nextRarity],
-      includeCnOnly,
-      mainFactionId,
-      sortKey,
-      sortDirection,
     });
   const toggleSubClass = (nextSubClass: string) =>
-    commitState({
-      query,
-      className,
+    update({
       subClassIds: subClassIds.includes(nextSubClass)
         ? subClassIds.filter((value) => value !== nextSubClass)
         : [...subClassIds, nextSubClass],
-      rarities,
-      includeCnOnly,
-      mainFactionId,
-      sortKey,
-      sortDirection,
     });
+  // The view is not a filter: resetting keeps it.
   const resetFilters = () =>
-    commitState({
+    update({
       query: "",
       className: null,
       subClassIds: [],
@@ -657,16 +696,7 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
               type="search"
               value={query}
               onChange={(event) =>
-                commitState({
-                  query: event.target.value,
-                  className,
-                  subClassIds,
-                  rarities,
-                  includeCnOnly,
-                  mainFactionId,
-                  sortKey,
-                  sortDirection,
-                })
+                update({ query: event.target.value })
               }
               placeholder="Nombre del operador"
             />
@@ -688,28 +718,10 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
                 ]}
                 direction={sortDirection}
                 onValueChange={(next) =>
-                  commitState({
-                    query,
-                    className,
-                    subClassIds,
-                    rarities,
-                    includeCnOnly,
-                    mainFactionId,
-                    sortKey: next as OperatorSortKey,
-                    sortDirection,
-                  })
+                  update({ sortKey: next as OperatorSortKey })
                 }
                 onDirectionChange={() =>
-                  commitState({
-                    query,
-                    className,
-                    subClassIds,
-                    rarities,
-                    includeCnOnly,
-                    mainFactionId,
-                    sortKey,
-                    sortDirection: sortDirection === "asc" ? "desc" : "asc",
-                  })
+                  update({ sortDirection: sortDirection === "asc" ? "desc" : "asc" })
                 }
               />
             </div>
@@ -723,16 +735,7 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
               widthReference="Todas las facciones"
               options={[["all", "Todas las facciones"], ...factions]}
               onValueChange={(next) =>
-                commitState({
-                  query,
-                  className,
-                  subClassIds,
-                  rarities,
-                  includeCnOnly,
-                  mainFactionId: next,
-                  sortKey,
-                  sortDirection,
-                })
+                update({ mainFactionId: next })
               }
               searchable
             />
@@ -796,30 +799,41 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
               type="button"
               className={`operators-cn-toggle${includeCnOnly ? " is-active" : ""}`}
               aria-pressed={includeCnOnly}
-              onClick={() =>
-                commitState({
-                  query,
-                  className,
-                  subClassIds,
-                  rarities,
-                  includeCnOnly: !includeCnOnly,
-                  mainFactionId,
-                  sortKey,
-                  sortDirection,
-                })
-              }
+              onClick={() => update({ includeCnOnly: !includeCnOnly })}
             >
               <span>Incluir exclusivos CN</span>
               <span className="operators-cn-switch" aria-hidden="true">
                 <span className="operators-cn-switch-thumb" />
               </span>
             </button>
+            <div className="operators-view-switch" role="group" aria-label="Vista de la biblioteca">
+              {(
+                [
+                  ["portraits", "Vista de retratos", RectangleVertical],
+                  ["avatars", "Vista de avatares", Grid3x3],
+                ] as const
+              ).map(([value, label, Icon]) => (
+                <OperatorControlButton
+                  key={value}
+                  type="button"
+                  size="compact"
+                  appearance="naval"
+                  className={`operator-filter-button${view === value ? " is-active" : ""}`}
+                  aria-pressed={view === value}
+                  aria-label={label}
+                  title={label}
+                  onClick={() => update({ view: value })}
+                >
+                  <Icon size={18} strokeWidth={1.8} aria-hidden="true" />
+                </OperatorControlButton>
+              ))}
+            </div>
           </div>
         </fieldset>
       </div>
       <section className="operators-results" aria-label="Operadores filtrados">
         {visible.length ? (
-          <AnimatedOperatorGrid operators={visible} allOperators={catalogRecords} newOperatorIds={newOperatorIds} />
+          <AnimatedOperatorGrid operators={visible} allOperators={catalogRecords} newOperatorIds={newOperatorIds} view={view} />
         ) : (
           <p className="operators-empty" role="status">
             No se encontraron operadores que coincidan con la combinación de filtros seleccionada.

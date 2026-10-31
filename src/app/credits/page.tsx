@@ -12,10 +12,6 @@ const sourceGroups = [
         name: "ArknightsGamedata",
         href: "https://github.com/ArknightsAssets/ArknightsGamedata",
       },
-      {
-        name: "Arknights CDN",
-        href: "https://web.hycdn.cn/arknights/game/assets/char/portrait/",
-      },
     ],
   },
   {
@@ -37,6 +33,10 @@ const sourceGroups = [
       {
         name: "Arknight-Images",
         href: "https://github.com/PuppiizSunniiz/Arknight-Images",
+      },
+      {
+        name: "Arknights CDN",
+        href: "https://web.hycdn.cn/arknights/game/assets/char/portrait/",
       },
       {
         name: "PRTS Design",

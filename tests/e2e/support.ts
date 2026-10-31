@@ -11,7 +11,7 @@ import { filterOperators, getOperatorDisplayName, type OperatorFilters, type Ope
 
 // Expected values come from the versioned datasets, so the tests follow every data update. The files are read with
 // fs because the test loader needs import attributes for JSON modules.
-function readData<T>(relativePath: string): T {
+export function readData<T>(relativePath: string): T {
   return JSON.parse(readFileSync(path.join(process.cwd(), "data", relativePath), "utf8")) as T;
 }
 
