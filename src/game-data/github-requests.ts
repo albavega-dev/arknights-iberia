@@ -1,4 +1,4 @@
-import { imageRepository, portraitRepository } from "./asset-revisions";
+import { imageRepository } from "./asset-revisions";
 import { gameDataRepository, pinnedGameDataTableHashes, type GameDataRegion } from "./gamedata-revisions";
 import { compareCodeUnits } from "./string-order";
 
@@ -8,7 +8,7 @@ import { compareCodeUnits } from "./string-order";
 export const githubApiHost = "api.github.com";
 export const githubRawHost = "raw.githubusercontent.com";
 
-const repositories: ReadonlySet<string> = new Set([gameDataRepository, imageRepository, portraitRepository]);
+const repositories: ReadonlySet<string> = new Set([gameDataRepository, imageRepository]);
 export const gameDataTables: readonly string[] = Object.keys({ ...pinnedGameDataTableHashes("en"), ...pinnedGameDataTableHashes("cn") }).sort(compareCodeUnits);
 
 const objectIdPattern = /^[0-9a-f]{40}$/;
@@ -75,10 +75,9 @@ export function treeUrl(repository: string, tree: string, recursive = false): UR
   return githubUrl(githubApiHost, ["repos", ...repositorySegments(repository), "git", "trees", gitObjectId(tree)], recursive ? { recursive: "1" } : {});
 }
 
-/** Repository listing at a commit, or at the head of main (the portrait repository is followed by its directory tree id). */
+/** Repository listing at a commit. */
 export function contentsUrl(repository: string, ref: string, directory?: string): URL {
-  const checkedRef = ref === "main" ? ref : gitObjectId(ref);
-  return githubUrl(githubApiHost, ["repos", ...repositorySegments(repository), "contents", ...(directory === undefined ? [] : gameDataDirectorySegments(directory))], { ref: checkedRef });
+  return githubUrl(githubApiHost, ["repos", ...repositorySegments(repository), "contents", ...(directory === undefined ? [] : gameDataDirectorySegments(directory))], { ref: gitObjectId(ref) });
 }
 
 /**

@@ -139,6 +139,14 @@ export function skillIdsOf(characterTable: unknown, ids: readonly string[]): str
   return sorted(result);
 }
 
+/** Subclass ids (subProfessionId) of the operators. */
+export function subClassIdsOf(characterTable: unknown, ids: readonly string[]): string[] {
+  const table = asDict(characterTable);
+  const result = new Set<string>();
+  for (const id of ids) { const subClassId = asDict(table[id]).subProfessionId; if (typeof subClassId === "string" && subClassId) result.add(subClassId); }
+  return sorted(result);
+}
+
 /** Icon names of the skills: the table's iconId when it has one, the skill id otherwise. */
 export function skillIconNames(skillTable: unknown, skillIds: readonly string[]): string[] {
   const table = asDict(skillTable);

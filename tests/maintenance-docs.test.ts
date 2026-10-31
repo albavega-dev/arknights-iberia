@@ -9,7 +9,7 @@ import { draft, insertEntry, main as newsMain, newsEntry, spanishDate } from "..
 
 const input = (overrides: Partial<SourcesInput> = {}): SourcesInput => ({
   gameDataRepository: "Owner/Data", gameDataRevisions: { en: "a".repeat(40), cn: "b".repeat(40) }, releaseRevision: "c".repeat(40),
-  imageRepository: "Owner/Images", imageRevision: "d".repeat(40), portraitRepository: "Owner/Portraits", portraitRevision: "e".repeat(40),
+  imageRepository: "Owner/Images", imageRevision: "d".repeat(40), portraitCdn: "https://cdn.example/portraits/",
   regional: [
     { nameEnglish: "Beta", cnReleaseDate: "2026-09-01", cnReleaseDateProvenance: { status: "verified", source: "https://ak.hypergryph.com/news/2" } },
     { nameEnglish: "Alpha", cnReleaseDate: "2026-08-01", cnReleaseDateProvenance: { status: "verified", source: "https://ak.hypergryph.com/news/1" } },
@@ -33,7 +33,7 @@ test("the generated blocks follow the revisions and the manifests, keeping hand-
   const text = `# Fuentes\n\n${blocks(["revisions"])}\n\nTexto.\n\n<!-- sources:cn-only-dates -->\n- [SideStory «Título»](https://ak.hypergryph.com/news/2): viejo.\n<!-- /sources:cn-only-dates -->\n\n${blocks(["cn-dates", "global-updates"])}\n`;
   const rendered = renderSources(text, input());
   assert.match(rendered, /\| \[Data\]\(https:\/\/github\.com\/Owner\/Data\) \| Datos del juego EN \| \[`aaaaaaa`\]\(https:\/\/github\.com\/Owner\/Data\/tree\/a{40}\) \|/);
-  assert.match(rendered, /\| \[Portraits\]\(https:\/\/github\.com\/Owner\/Portraits\) \| Índice de retratos \| \[`eeeeeee`\]/);
+  assert.match(rendered, /\| \[cdn\.example\]\(https:\/\/cdn\.example\/portraits\/\) \| Retratos \| Sin revisiones: `Content-MD5` y ETag/);
   assert.ok(rendered.includes("<!-- sources:cn-only-dates -->\n- [news/1](https://ak.hypergryph.com/news/1): 2026-08-01, Alpha.\n- [SideStory «Título»](https://ak.hypergryph.com/news/2): 2026-09-01, Beta y Gamma.\n- Delta (2026-07-01): [PRTS](https://prts.wiki/w/D), `community-listed`, a falta de anuncio oficial localizado.\n<!-- /sources:cn-only-dates -->"));
   assert.match(rendered, /Datos del juego \(`verified`, 1 operadores\)/);
   assert.match(rendered, /Anuncios oficiales de Hypergryph \(`verified`, 2 operadores\): \[news\/9\]\(https:\/\/ak\.hypergryph\.com\/news\/9\)\./);

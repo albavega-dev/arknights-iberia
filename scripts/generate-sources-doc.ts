@@ -6,7 +6,8 @@
  * With --check it writes nothing and exits with 1 when the document is out of date.
  */
 import { readFile, writeFile } from "node:fs/promises";
-import { imageRepository, imageRevision, portraitRepository, portraitRevision } from "../src/game-data/asset-revisions";
+import { imageRepository, imageRevision } from "../src/game-data/asset-revisions";
+import { portraitSource } from "../src/game-data/operator-portraits";
 import { gameDataRepository, gameDataRevisions } from "../src/game-data/gamedata-revisions";
 import { renderSources, type SourcesInput } from "../src/game-data/sources-doc";
 
@@ -18,7 +19,7 @@ export async function sourcesInput(root = "."): Promise<SourcesInput> {
   const updates = await readJson<{ updates: SourcesInput["globalUpdates"] }>(`${root}/data/operator-global-updates.json`);
   return {
     gameDataRepository, gameDataRevisions, releaseRevision: releases.source.gameDataRevision,
-    imageRepository, imageRevision, portraitRepository, portraitRevision,
+    imageRepository, imageRevision, portraitCdn: portraitSource.url,
     regional: regional.operators, cnReleases: releases.operators, globalUpdates: updates.updates,
   };
 }

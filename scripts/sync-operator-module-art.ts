@@ -20,18 +20,18 @@ type SharpImage = {
   metadata(): Promise<{ width?: number; height?: number }>;
 };
 export type Sharp = (input: Buffer) => SharpImage;
-export type SyncDependencies = { fetch: (url: string) => Promise<Response>; sharp: () => Sharp };
+export type SyncDependencies = { fetch: (url: string, init?: RequestInit) => Promise<Response>; sharp: () => Sharp };
 type TreeEntry = { path: string; type: string; sha: string };
 type FileInfo = PngFile;
 
 /** sharp is not a dependency of the project: it is the copy Next.js installs, and its version must match the fixed conversion. */
-export function loadSharp(): Sharp {
+export function loadSharp(tool: string = moduleArtConversion.tool): Sharp {
   const fromNext = createRequire(createRequire(import.meta.url).resolve("next/package.json"));
   // The package does not export its package.json: read it next to the resolved entry point.
   const entry = fromNext.resolve("sharp");
   const marker = `${sep}node_modules${sep}sharp${sep}`;
   const { version } = JSON.parse(readFileSync(join(entry.slice(0, entry.lastIndexOf(marker) + marker.length), "package.json"), "utf8")) as { version: string };
-  if (`sharp ${version}` !== moduleArtConversion.tool) throw new Error(`Found sharp ${version}; the conversion is fixed to ${moduleArtConversion.tool}`);
+  if (`sharp ${version}` !== tool) throw new Error(`Found sharp ${version}; the conversion is fixed to ${tool}`);
   return fromNext("sharp") as Sharp;
 }
 

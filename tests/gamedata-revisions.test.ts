@@ -2,10 +2,10 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { describe, it } from "node:test";
 
-import { portraitRevision } from "../src/game-data/asset-revisions";
 import {
   gameDataBuildingTableHashes, gameDataReleaseTableHashes, gameDataRevisions, gameDataSkillTableHashes, gameDataTableHashes, pinnedGameDataTableHashes,
 } from "../src/game-data/gamedata-revisions";
+import { portraitConversion, portraitSource, type PortraitManifest } from "../src/game-data/operator-portraits";
 
 describe("GameData pinned revisions", () => {
   it("pins full 40-character commits for both regions", () => {
@@ -46,8 +46,9 @@ describe("GameData pinned revisions", () => {
 });
 
 describe("portrait manifest", () => {
-  it("records the pinned portrait commit", async () => {
-    const manifest = JSON.parse(await readFile("data/operator-portrait-manifest.json", "utf8")) as { source: { commit: string } };
-    assert.equal(manifest.source.commit, portraitRevision);
+  it("records the CDN and the fixed conversion", async () => {
+    const manifest = JSON.parse(await readFile("data/operator-portrait-manifest.json", "utf8")) as Pick<PortraitManifest, "source" | "conversion">;
+    assert.deepEqual(manifest.source, portraitSource);
+    assert.deepEqual(manifest.conversion, portraitConversion);
   });
 });
