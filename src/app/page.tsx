@@ -131,10 +131,17 @@ export default function Home() {
           <div className="landing-section-content">
             <h2 id="news-title">Novedades</h2>
             <article className="landing-news-entry">
-              <h3>30 de octubre de 2026 - 0.2.1</h3>
+              <h3>31 de octubre de 2026 - 0.2.1</h3>
               <ul>
                 <li>La web sirve ahora todo su contenido desde datos versionados, sin depender de una base de datos externa.</li>
                 <li>Revisadas y corregidas fechas de salida de operadores en CN.</li>
+                <li>Añadidos y corregidos créditos de ilustración y afiliaciones de varios operadores.</li>
+                <li>Los nombres de los operadores exclusivos de CN siguen ahora los datos del juego.</li>
+                <li>Mejoras internas de mantenimiento y de pruebas automáticas.</li>
+              </ul>
+              <h4 className="landing-news-category">Errores corregidos:</h4>
+              <ul>
+                <li>Corregidas las ilustraciones E0/E2, los retratos y los iconos que no se mostraban en la web publicada.</li>
               </ul>
             </article>
             <article className="landing-news-entry">

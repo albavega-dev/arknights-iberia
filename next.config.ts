@@ -2,29 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   agentRules: false,
+  // The Vercel free plan has no image transformations left: every image is served as is, never through /_next/image.
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "raw.githubusercontent.com",
-        pathname: "/PuppiizSunniiz/Arknight-Images/main/**",
-      },
-      {
-        protocol: "https",
-        hostname: "web.hycdn.cn",
-        pathname: "/arknights/game/assets/char/portrait/**",
-      },
-      {
-        protocol: "https",
-        hostname: "static.wikia.nocookie.net",
-        pathname: "/mrfz/images/**",
-      },
-      {
-        protocol: "https",
-        hostname: "raw.githubusercontent.com",
-        pathname: "/PuppiizSunniiz/Arknight-Images/**",
-      },
-    ],
+    unoptimized: true,
   },
 };
 
