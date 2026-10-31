@@ -1,6 +1,6 @@
 import type { Page } from "@playwright/test";
 import type { LimitedManifest } from "../../src/game-data/operator-limited";
-import { displayName, expect, expectedCount, newOperatorIds, openCatalog, publicSlugs, readData, records, test, transparentPng, uniquelySearchable } from "./support";
+import { displayName, expect, expectedCount, expectHydrated, newOperatorIds, openCatalog, publicSlugs, readData, records, test, transparentPng, uniquelySearchable } from "./support";
 
 const globalOperators = records.filter((operator) => !operator.cnOnly);
 const limitedIds = new Set(readData<LimitedManifest>("operator-limited-manifest.json").operators.map((operator) => operator.id));
@@ -30,6 +30,7 @@ test.describe("vista por avatares", () => {
     await expect(page).toHaveURL(/view=avatars/);
 
     const controls = page.getByRole("search", { name: "Buscar y filtrar operadores" });
+    await expectHydrated(page, "catalog");
     await controls.getByRole("button", { name: "Restablecer filtros" }).click();
     await expect(avatars(page)).toHaveCount(expectedCount({}));
     await expect(page).toHaveURL(/\/operators\?view=avatars$/);
@@ -43,6 +44,7 @@ test.describe("vista por avatares", () => {
   test("solo muestra el avatar, la clase y el indicador; el nombre aparece al enfocar", async ({ page }) => {
     await page.goto("/operators?view=avatars&cn=1");
     await expect(avatars(page).first()).toBeVisible();
+    await expectHydrated(page, "catalog");
     const first = avatars(page).first();
     const name = first.locator(".operator-avatar-name");
     await expect(name).toBeHidden();
@@ -97,6 +99,7 @@ test.describe("detalles de la ficha", () => {
     const trigger = page.getByRole("button", { name: `Ampliar ilustración E0 / E1 de ${displayName(limited)}` });
     const dialog = page.getByRole("dialog", { name: `Ilustración E0 / E1 de ${displayName(limited)}` });
 
+    await expectHydrated(page, "site");
     await trigger.click();
     await expect(dialog).toBeVisible();
     const image = dialog.getByRole("img");
@@ -130,6 +133,7 @@ test.describe("detalles de la ficha", () => {
     for (const current of shapes) {
       shape = current;
       await page.goto(`/operators/${publicSlugs.get(limited.id)}`);
+      await expectHydrated(page, "site");
       for (const [width, height] of viewports) {
         await page.setViewportSize({ width: width!, height: height! });
         await page.getByRole("button", { name: /^Ampliar ilustración/ }).click();

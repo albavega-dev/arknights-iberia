@@ -16,6 +16,7 @@ export default defineConfig({
       reporter: ["text", "lcov"],
       reportsDirectory: "coverage/components",
       include: [
+        "src/app/hydration-marker.tsx",
         "src/app/operators/[slug]/operator-detail-data.tsx",
         "src/app/operators/[slug]/operator-tactical-info.tsx",
         "src/app/operators/[slug]/operator-skills-panel.tsx",

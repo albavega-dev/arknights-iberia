@@ -131,7 +131,17 @@ export function operatorCards(page: Page): Locator {
   return page.getByRole("region", { name: "Operadores filtrados" }).locator("a.operator-card");
 }
 
+/**
+ * Waits until the application marks a part of the page as hydrated (`site` for the layout and the operator pages,
+ * `catalog` for the catalog, which hydrates later inside its Suspense boundary). Before that, the server HTML is already
+ * visible but clicks and typing do not reach the event handlers and are lost.
+ */
+export async function expectHydrated(page: Page, scope: "site" | "catalog"): Promise<void> {
+  await expect(page.locator("html")).toHaveAttribute("data-hydrated", new RegExp(`(^| )${scope}( |$)`));
+}
+
 export async function openCatalog(page: Page, query = ""): Promise<void> {
   await page.goto(`/operators${query}`);
   await expect(operatorCards(page).first()).toBeVisible();
+  await expectHydrated(page, "catalog");
 }

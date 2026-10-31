@@ -29,6 +29,7 @@ import {
   getOperatorFactionName,
   getOperatorMainFactionId,
 } from "../../game-data/operator-factions";
+import { HydrationMarker } from "../hydration-marker";
 import { getOperatorArchetypeName } from "../../game-data/operator-archetypes";
 import { getOperatorPublicSlug } from "../../game-data/operator-slugs";
 import { OperatorControlButton } from "./operator-control-button";
@@ -687,6 +688,7 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
 
   return (
     <>
+      <HydrationMarker scope="catalog" />
       <div className="operators-controls" role="search" aria-label="Buscar y filtrar operadores">
         <div className="operators-primary-controls">
           <div className="operators-search-field">

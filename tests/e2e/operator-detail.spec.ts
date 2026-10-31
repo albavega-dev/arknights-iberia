@@ -1,4 +1,4 @@
-import { catalogOperators, displayName, expect, openCatalog, operatorCards, publicSlugs, readModules, records, test, uniquelySearchable } from "./support";
+import { catalogOperators, displayName, expect, expectHydrated, openCatalog, operatorCards, publicSlugs, readModules, records, test, uniquelySearchable } from "./support";
 
 const globalOperators = records.filter((operator) => !operator.cnOnly);
 const withModules = globalOperators.find((operator) => readModules(operator.id).some((module) => module.region === "en") && uniquelySearchable(operator))!;
@@ -10,6 +10,7 @@ test.describe("fichas de operador", () => {
   test("se abre desde el catálogo y recorre sus pestañas", async ({ page }) => {
     await openCatalog(page);
     await page.getByRole("searchbox", { name: "Buscar" }).fill(displayName(withModules));
+    await expect(operatorCards(page)).toHaveCount(1);
     await operatorCards(page).first().click();
     await expect(page).toHaveURL(`/operators/${publicSlugs.get(withModules.id)}`);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(displayName(withModules));
@@ -36,6 +37,7 @@ test.describe("fichas de operador", () => {
     test.skip(!withCnModule, "ningún operador Global tiene módulos solo de CN");
     const modules = readModules(withCnModule!.id);
     await page.goto(`/operators/${publicSlugs.get(withCnModule!.id)}`);
+    await expectHydrated(page, "site");
     await page.getByRole("tab", { name: "Módulos" }).click();
     const cards = page.locator(".operator-module-card");
     await expect(cards).toHaveCount(modules.filter((module) => module.region === "en").length);
@@ -48,6 +50,7 @@ test.describe("fichas de operador", () => {
   test("una ficha exclusiva CN muestra su biografía CN", async ({ page }) => {
     test.skip(!cnOnly, "el catálogo no tiene exclusivos CN");
     await page.goto(`/operators/${publicSlugs.get(cnOnly!.id)}`);
+    await expectHydrated(page, "site");
     await page.getByRole("tab", { name: "Expediente" }).click();
     await expect(page.locator(".operator-detail-status")).toContainText("CN");
     expect(await page.locator(".operator-record-content").innerText()).toMatch(/[㐀-鿿]/u);
