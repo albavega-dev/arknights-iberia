@@ -1,10 +1,10 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import test from "node:test";
 
 import { normalizeCharacterTable, normalizeOperator } from "../src/game-data/operator-import";
-import { filterOperators, getOperatorDisplayName, sortOperators } from "../src/game-data/operators";
-import { getOperatorPortraitAsset, getOperatorSubclassIconUrl } from "../src/game-data/operator-assets";
+import { filterOperators, getOperatorDisplayName, sortOperators, type OperatorClass } from "../src/game-data/operators";
+import { getOperatorClassIconUrl, getOperatorFactionIconUrl, getOperatorPortraitAsset, getOperatorSubclassIconUrl, illustrationAssetsFrom } from "../src/game-data/operator-assets";
 import { mergeCnReleaseDate } from "../src/game-data/release-date";
 import { buildNameDryRun } from "../scripts/dry-run-operator-names";
 import { applyRegionalDisplayNames } from "../src/game-data/operator-regional-names";
@@ -146,7 +146,8 @@ test("filters by subclass and resolves its verified icon path", () => {
     { ...normalizeOperator("char_medic", record({ profession: "MEDIC", subProfessionId: "physician" }))!, cnOnly: false, availabilityStatus: "global-snapshot" as const, cnReleaseDate: null, globalReleaseDate: null },
   ];
   assert.deepEqual(filterOperators(records, { query: "", className: "Guard", subClassIds: ["swordmaster"], rarities: [], includeCnOnly: true, mainFactionId: "all" }).map((item) => item.id), ["char_guard"]);
-  assert.equal(getOperatorSubclassIconUrl("swordmaster"), "https://raw.githubusercontent.com/PuppiizSunniiz/Arknight-Images/main/ui/subclass/sub_swordmaster_icon.png");
+  assert.equal(getOperatorSubclassIconUrl("swordmaster"), "/assets/operator-subclasses/swordmaster.png");
+  assert.equal(getOperatorSubclassIconUrl("../x"), null);
   assert.equal(getOperatorSubclassIconUrl(null), null);
 });
 
@@ -288,12 +289,33 @@ test("prioritizes CN-only records before Global records only for date sorting", 
 test("resolves verified portraits by original operator ID and preserves fallback", () => {
   const irene = getOperatorPortraitAsset("char_4009_irene");
   assert.ok(irene);
-  assert.equal(irene.url, "https://web.hycdn.cn/arknights/game/assets/char/portrait/char_4009_irene.png");
+  assert.equal(irene.url, "/assets/operator-portraits/char_4009_irene.webp");
   assert.equal(getOperatorPortraitAsset("operator-char-4009-irene"), null);
-  assert.equal(getOperatorPortraitAsset("char_4231_clemnt")?.url, "https://web.hycdn.cn/arknights/game/assets/char/portrait/char_4231_clemnt.png");
-  assert.equal(getOperatorPortraitAsset("char_4217_makoto")?.url, "https://web.hycdn.cn/arknights/game/assets/char/portrait/char_4217_makoto.png");
-  assert.equal(getOperatorPortraitAsset("char_4235_thumpy")?.url, "https://web.hycdn.cn/arknights/game/assets/char/portrait/char_4235_thumpy.png");
-  assert.equal(getOperatorPortraitAsset("char_4051_akkord")?.url, "https://web.hycdn.cn/arknights/game/assets/char/portrait/char_4051_akkord.png");
-  assert.equal(getOperatorPortraitAsset("char_1015_aglna2")?.url, "https://web.hycdn.cn/arknights/game/assets/char/portrait/char_1015_aglna2.png");
-  assert.equal(getOperatorPortraitAsset("char_2027_wang")?.url, "https://web.hycdn.cn/arknights/game/assets/char/portrait/char_2027_wang.png");
+  assert.equal(getOperatorPortraitAsset("char_4231_clemnt")?.url, "/assets/operator-portraits/char_4231_clemnt.webp");
+  assert.equal(getOperatorPortraitAsset("char_4217_makoto")?.url, "/assets/operator-portraits/char_4217_makoto.webp");
+  assert.equal(getOperatorPortraitAsset("char_4235_thumpy")?.url, "/assets/operator-portraits/char_4235_thumpy.webp");
+  assert.equal(getOperatorPortraitAsset("char_4051_akkord")?.url, "/assets/operator-portraits/char_4051_akkord.webp");
+  assert.equal(getOperatorPortraitAsset("char_1015_aglna2")?.url, "/assets/operator-portraits/char_1015_aglna2.webp");
+  assert.equal(getOperatorPortraitAsset("char_2027_wang")?.url, "/assets/operator-portraits/char_2027_wang.webp");
+});
+
+test("every image path of the catalog operators is a local file of public/", async () => {
+  const catalog = JSON.parse(await readFile("data/operator-catalog/index.json", "utf8")) as { operators: { id: string; class: OperatorClass; subClassId: string; mainFactionId: string | null }[] };
+  const manifest = JSON.parse(await readFile("data/operator-image-manifest.json", "utf8")) as { illustrations: Record<string, unknown> };
+  const paths = new Set<string>();
+  let elite2 = 0;
+  for (const operator of catalog.operators) {
+    const illustrations = illustrationAssetsFrom(manifest.illustrations, operator.id);
+    assert.ok(illustrations, `${operator.id} has an E0 illustration`);
+    if (illustrations.elite2) { elite2++; paths.add(illustrations.elite2); }
+    for (const path of [illustrations.base, getOperatorPortraitAsset(operator.id)?.url, getOperatorClassIconUrl(operator.class), getOperatorSubclassIconUrl(operator.subClassId), getOperatorFactionIconUrl(operator.mainFactionId)]) if (path) paths.add(path);
+  }
+  for (const path of paths) {
+    assert.match(path, /^\/assets\/operator-[a-z]+\/[a-z0-9_-]+\.(webp|png)$/);
+    assert.ok(await stat(`public${path}`).then(() => true, () => false), `public${path} exists`);
+  }
+  assert.equal(elite2, 398);
+  assert.equal(illustrationAssetsFrom(manifest.illustrations, "char_none"), null);
+  assert.equal(illustrationAssetsFrom(manifest.illustrations, "../x"), null);
+  assert.equal(getOperatorFactionIconUrl("faction:unknown"), null);
 });

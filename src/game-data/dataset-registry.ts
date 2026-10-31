@@ -36,7 +36,6 @@ const images = "PuppiizSunniiz/Arknight-Images";
 
 export const assetRegistry = {
   illustrations: { description: "Operator illustrations (E0 and E2), converted to WebP", source: { repository: images, directories: ["characters"] }, revision: "imageRevision (asset-revisions.ts)", manifest: "data/operator-image-manifest.json", localDirectories: ["public/assets/operator-illustrations"], sync: "data:illustrations:sync", coverage: { reportKey: "missingIllustrations", need: "catalogOperators", path: (id) => `characters/${id}_1.png` } },
-  "illustration-links": { description: "Links to the illustrations at the source, still used by the operator pages until they switch to the local copies", source: { repository: images, directories: ["characters"] }, revision: "imageRevision (asset-revisions.ts)", manifest: "data/operator-illustration-manifest.json", localDirectories: [], sync: "assets:generate-illustrations" },
   "skill-icons": { description: "Combat skill icons", source: { repository: images, directories: ["skills"] }, revision: "imageRevision (asset-revisions.ts)", manifest: "data/operator-skill-icons-manifest.json", localDirectories: ["public/assets/operator-skills"], sync: "data:skill-icons:sync", coverage: { reportKey: "missingSkillIcons", need: "catalogSkillIcons", path: (id) => `skills/skill_icon_${id}.png` } },
   "module-art": { description: "Module illustrations and level icons", source: { repository: images, directories: ["equip"] }, revision: "imageRevision (asset-revisions.ts)", manifest: "data/operator-module-art-manifest.json", localDirectories: ["public/assets/operator-modules-art", "public/assets/operator-module-stages"], sync: "data:module-art:sync", coverage: { reportKey: "missingModuleArt", need: "catalogModules", path: (id) => `equip/icon/${id}.png` } },
   "module-type-icons": { description: "Module type icons", source: { repository: images, directories: ["equip"] }, revision: "imageRevision (asset-revisions.ts)", localDirectories: ["public/assets/operator-modules"], sync: "manual" },
@@ -122,7 +121,7 @@ export const datasetRegistry = {
     sources: [...catalogManifests, "data/operator-faction-manifest.json", "data/operator-affiliation-manifest.json"],
     tests: ["tests/operator-catalog-dataset-integrity.test.ts"],
     changeChecks: ["operators", "biographies"],
-    assets: ["illustrations", "illustration-links", "portraits", "class-icons", "faction-logos"],
+    assets: ["illustrations", "portraits", "class-icons", "faction-logos"],
   },
   "operator-tactical-manifest": {
     description: "Base and module ranges with their associated entities",

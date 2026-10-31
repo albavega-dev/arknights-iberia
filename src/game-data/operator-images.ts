@@ -49,6 +49,14 @@ export const factionLogoFiles: Readonly<Record<string, string>> = {
 const operatorIdPattern = /^char_[a-z0-9_]+$/;
 const subclassIdPattern = /^[a-z0-9]+$/;
 
+/** Local file names, shared by the sync and the site. */
+export const illustrationFile = (operatorId: string, variant: "base" | "elite2") => `${operatorId}_${variant === "base" ? 1 : 2}.webp`;
+export const factionLogoFile = (factionId: string) => `${factionId.slice("faction:".length)}.webp`;
+export const classIconFile = (operatorClass: OperatorClass) => `${operatorClass.toLowerCase()}.png`;
+export const subclassIconFile = (subClassId: string) => `${subClassId}.png`;
+export const isOperatorId = (value: string) => operatorIdPattern.test(value);
+export const isSubclassId = (value: string) => subclassIdPattern.test(value);
+
 /** One file to fetch: its path in the image repository and its local file name. */
 export type ImageItem = Readonly<{ source: string; local: string }>;
 export type OperatorImageInventory = Readonly<{
@@ -66,16 +74,16 @@ export function operatorImageInventory(operators: readonly { id: string; class: 
   const byName = (a: ImageItem, b: ImageItem) => (a.local < b.local ? -1 : a.local > b.local ? 1 : 0);
   const illustrations: ImageItem[] = [];
   for (const id of ids) {
-    if (!operatorIdPattern.test(id)) throw new Error(`Invalid operator id: ${JSON.stringify(id)}`);
-    illustrations.push({ source: `characters/${id}_1.png`, local: `${id}_1.webp` });
-    if (tree.has(`characters/${id}_2.png`)) illustrations.push({ source: `characters/${id}_2.png`, local: `${id}_2.webp` });
+    if (!isOperatorId(id)) throw new Error(`Invalid operator id: ${JSON.stringify(id)}`);
+    illustrations.push({ source: `characters/${id}_1.png`, local: illustrationFile(id, "base") });
+    if (tree.has(`characters/${id}_2.png`)) illustrations.push({ source: `characters/${id}_2.png`, local: illustrationFile(id, "elite2") });
   }
   const subclassIds = [...new Set(operators.map((operator) => operator.subClassId))];
-  for (const id of subclassIds) if (!subclassIdPattern.test(id)) throw new Error(`Invalid subclass id: ${JSON.stringify(id)}`);
+  for (const id of subclassIds) if (!isSubclassId(id)) throw new Error(`Invalid subclass id: ${JSON.stringify(id)}`);
   return {
     illustrations: illustrations.sort(byName),
-    factions: Object.entries(factionLogoFiles).map(([id, file]) => ({ source: `factions/${file}`, local: `${id.slice("faction:".length)}.webp` })).sort(byName),
-    classes: Object.entries(classIconFiles).map(([name, file]) => ({ source: `classes/${file}`, local: `${name.toLowerCase()}.png` })).sort(byName),
-    subclasses: subclassIds.map((id) => ({ source: `ui/subclass/sub_${id}_icon.png`, local: `${id}.png` })).sort(byName),
+    factions: Object.entries(factionLogoFiles).map(([id, file]) => ({ source: `factions/${file}`, local: factionLogoFile(id) })).sort(byName),
+    classes: (Object.entries(classIconFiles) as [OperatorClass, string][]).map(([name, file]) => ({ source: `classes/${file}`, local: classIconFile(name) })).sort(byName),
+    subclasses: subclassIds.map((id) => ({ source: `ui/subclass/sub_${id}_icon.png`, local: subclassIconFile(id) })).sort(byName),
   };
 }

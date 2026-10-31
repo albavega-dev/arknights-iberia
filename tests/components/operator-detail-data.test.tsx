@@ -146,6 +146,7 @@ describe("OperatorDetailData image policy", () => {
     render(
       <OperatorDetailData
         operator={operatorWithIllustrations}
+        illustrations={{ base: "/assets/operator-illustrations/char_002_amiya_1.webp", elite2: "/assets/operator-illustrations/char_002_amiya_2.webp" }}
         biography={{ status: "not-found", operatorId: operatorWithIllustrations.id, region: "en", revision: "test" }}
         tactical={null}
         artistCredit={null}
@@ -160,13 +161,14 @@ describe("OperatorDetailData image policy", () => {
     expect(loadingArt).toHaveAttribute("aria-busy", "true");
     const preload = document.querySelector(".operator-detail-illustration-preload");
     expect(preload).toBeInTheDocument();
-    expect(preload).toHaveAttribute("data-unoptimized", "false");
+    expect(preload).toHaveAttribute("data-unoptimized", "true");
 
     fireEvent.load(preload!);
 
     const eliteTwo = document.querySelector(".operator-detail-illustration.is-elite2");
     expect(eliteTwo).toBeInTheDocument();
-    expect(eliteTwo).toHaveAttribute("data-unoptimized", "false");
+    expect(eliteTwo).toHaveAttribute("src", "/assets/operator-illustrations/char_002_amiya_2.webp");
+    expect(eliteTwo).toHaveAttribute("data-unoptimized", "true");
     expect(loadingArt).toHaveAttribute("aria-busy", "true");
 
     fireEvent.load(eliteTwo!);

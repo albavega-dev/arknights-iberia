@@ -151,7 +151,6 @@ const OperatorCard = memo(function OperatorCard({
             alt=""
             fill
             sizes="(max-width: 440px) 145px, (max-width: 900px) 170px, 170px"
-            referrerPolicy="no-referrer"
             style={{ objectPosition: portrait.objectPosition, transform: `scale(${portrait.scale})` }}
             onError={() => setPortraitFailed(true)}
           />
@@ -216,7 +215,7 @@ function FilterButton({
           alt=""
           width={22}
           height={22}
-          unoptimized={iconUrl.includes("/classes/") || iconUrl.includes("/ui/subclass/")}
+          unoptimized
         />
       ) : (
         <span aria-hidden="true">{rarity ? `${rarity}${String.fromCharCode(9733)}` : "Todas"}</span>
