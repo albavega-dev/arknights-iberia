@@ -36,7 +36,7 @@ test("every revision recorded in a curated file is the pinned one of its region"
 });
 
 test("every file of data/ that cites GameData is generated from the pinned revisions or registered as curated", async () => {
-  const generated = new Set((Object.values(datasetRegistry) as DatasetEntry[]).filter((entry) => entry.generator.kind === "update").flatMap((entry) => entry.outputs));
+  const generated = new Set((Object.values(datasetRegistry) as DatasetEntry[]).filter((entry) => entry.generator.kind !== "manual").flatMap((entry) => entry.outputs));
   const curated = new Set<string>(ids.map((id) => curatedProvenance[id].file));
   for (const name of await readdir("data")) {
     const path = `data/${name}`;

@@ -57,14 +57,19 @@ export type DatasetEntry = Readonly<{
   generator: Readonly<{
     /** Package script. */
     script: string;
-    /** "update" generators take --out-dir, --verify-against, --update, --report and --approve; "manual" ones are run by hand. */
-    kind: "update" | "manual";
+    /**
+     * "update" generators take --out-dir, --verify-against, --update, --report and --approve; "derived" ones are rerun by
+     * data:regenerate after them, from the snapshots and the regenerated datasets; "manual" ones are run by hand.
+     */
+    kind: "update" | "derived" | "manual";
     /** --out-dir, relative to the output root (the repository root for a real update). */
     outDir?: string;
     /** --verify-against, the versioned reference. */
     verifyAgainst?: string;
     /** When a manual generator has to run again. */
     rerunWhen?: readonly ChangeCheck[];
+    /** Snapshot tables a derived generator reads, per region; unlike `tables`, they may be pinned in one region only. */
+    snapshotTables?: Readonly<Partial<Record<"en" | "cn", readonly string[]>>>;
   }>;
   /** GameData tables, read from the snapshot of each region. */
   tables: readonly string[];
@@ -145,9 +150,9 @@ export const datasetRegistry = {
     assets: [],
   },
   "operator-limited-manifest": {
-    description: "Limited operators of the catalog (LIMITED banners of the CN gacha table); the curated provenance check flags a change in a new revision",
+    description: "Limited operators of the catalog (LIMITED banners of the CN gacha table), regenerated with every update",
     outputs: ["data/operator-limited-manifest.json"],
-    generator: { script: "data:limited:generate", kind: "manual", rerunWhen: ["operators"] },
+    generator: { script: "data:limited:generate", kind: "derived", snapshotTables: { cn: ["gacha_table"] } },
     tables: [],
     sources: ["data/operator-catalog"],
     tests: ["tests/operator-limited.test.ts"],
@@ -188,7 +193,6 @@ export const curatedProvenance = {
   "module-modes": { file: "data/operator-module-modes.json", tables: { cn: ["roguelike_topic_table"] }, backs: "field of each gamedata source (topics.rogue_6.name); the recorded table hash moves with the revision" },
   factions: { file: "data/operator-faction-manifest.json", tables: { en: ["character_table"] }, backs: "mainPower nationId, groupId and teamId of every operator in the EN table (generatedFrom names the EN revision only)" },
   "cn-release": { file: "data/operator-cn-release-manifest.json", tables: { en: ["character_table"], cn: ["gacha_table", "roguelike_topic_table"] }, backs: "EN name of every operator; openTime and detail of each cited banner; startTime of each cited Integrated Strategies topic" },
-  limited: { file: "data/operator-limited-manifest.json", tables: { cn: ["gacha_table"] }, backs: "limitedCharId and banner id of every LIMITED banner of gachaPoolClient" },
   regional: { file: "data/operator-regional-manifest.json", tables: { en: ["character_table"], cn: ["character_table"] }, backs: "playable operators of each region; playableCount and the informative skippedCount are recomputed" },
   tactical: { file: "data/operator-tactical-manifest.json", tables: { en: ["character_table", "range_table"], cn: ["character_table", "range_table"] }, backs: "position, tags, phase ranges and their grids of every operator; base and modified ranges of each module range" },
 } as const satisfies Record<string, CuratedProvenanceEntry>;

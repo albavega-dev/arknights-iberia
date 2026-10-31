@@ -1,11 +1,12 @@
 import assert from "node:assert/strict";
-import { mkdtemp, mkdir, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 import { datasetRegistry, type DatasetId } from "../src/game-data/dataset-registry";
 import { compareCodeUnits } from "../src/game-data/string-order";
-import { exitCodeFor, generatorArguments, regenerate, runners, snapshotHashes, type SnapshotHashes } from "../scripts/regenerate-datasets";
+import { sha256 } from "../scripts/operator-dataset-io";
+import { derivedRunners, exitCodeFor, generatorArguments, regenerate, runners, snapshotHashes, snapshotRevisions, type DerivedContext, type SnapshotHashes } from "../scripts/regenerate-datasets";
 import type { FileOutcome } from "../scripts/reverify-curated-provenance";
 
 const snapshots = { en: "snap/en", cn: "snap/cn" };
@@ -15,6 +16,11 @@ const file = (status: FileOutcome["status"]): FileOutcome => ({ id: "regional", 
 test("there is a runner for every update-mode dataset of the registry and for nothing else", () => {
   const update = (Object.entries(datasetRegistry) as [DatasetId, { generator: { kind: string } }][]).filter(([, entry]) => entry.generator.kind === "update").map(([id]) => id);
   assert.deepEqual(Object.keys(runners).sort(compareCodeUnits), update.sort(compareCodeUnits));
+});
+
+test("there is a derived runner for every derived dataset of the registry", () => {
+  const derived = (Object.entries(datasetRegistry) as [DatasetId, { generator: { kind: string } }][]).filter(([, entry]) => entry.generator.kind === "derived").map(([id]) => id);
+  assert.deepEqual(Object.keys(derivedRunners).sort(compareCodeUnits), derived.sort(compareCodeUnits));
 });
 
 test("generator arguments come from the registry entry", () => {
@@ -41,14 +47,21 @@ test("regeneration runs every dataset, uses approved reports and sorts the outco
       if (outcome === "fail") throw new Error("Snapshot SHA-256 mismatch");
     };
     const lines: string[] = [];
-    const outcomes = await regenerate([`--en-snapshot=a`, `--cn-snapshot=b`, `--out-root=${directory}`, `--report-dir=r`, `--approve-dir=${approveDir}`], { "operator-stats": fake("ok"), "operator-skills": fake("ok"), "operator-modules": fake("pending"), "operator-catalog": fake("fail") }, (line) => lines.push(line), async () => [file("current"), file("updated")]);
-    assert.deepEqual(outcomes.map((item) => [item.id, item.status]), [["curated-provenance", "written"], ["operator-stats", "written"], ["operator-skills", "written"], ["operator-modules", "pending"], ["operator-catalog", "failed"]]);
+    const derived: DerivedContext[] = [];
+    const outcomes = await regenerate([`--en-snapshot=a`, `--cn-snapshot=b`, `--out-root=${directory}`, `--report-dir=r`, `--approve-dir=${approveDir}`], { "operator-stats": fake("ok"), "operator-skills": fake("ok"), "operator-modules": fake("pending"), "operator-catalog": fake("fail") }, (line) => lines.push(line), async () => [file("current"), file("updated")], { "operator-limited-manifest": async (context) => { derived.push(context); } });
+    assert.deepEqual(outcomes.map((item) => [item.id, item.status]), [["curated-provenance", "written"], ["operator-stats", "written"], ["operator-skills", "written"], ["operator-modules", "pending"], ["operator-catalog", "failed"], ["operator-limited-manifest", "written"]]);
+    assert.equal(derived.length, 1, "derived datasets run after the update-mode ones");
+    assert.deepEqual([derived[0]!.snapshots, derived[0]!.outRoot, derived[0]!.hashes], [{ en: "a", cn: "b" }, directory, undefined]);
+    assert.equal(await derived[0]!.input("data/operator-catalog/index.json"), "data/operator-catalog/index.json", "the versioned catalog when none was generated");
+    assert.ok(!lines.some((line) => line.startsWith("operator-limited-manifest: run")), "a derived dataset is not listed as manual");
     assert.ok(seen["data:skills:generate"]!.includes("--approve"), "an approved report is passed");
     assert.ok(!seen["data:stats:generate"]!.includes("--approve"), "and only when it exists");
     assert.ok(lines.includes("=== operator-skills (approved report)"));
     assert.ok(lines.some((line) => line.startsWith("operator-tactical-manifest: run scripts/generate-operator-tactical-manifest.ts by hand when modules or ranges change")));
     assert.ok(lines.includes("operator-global-updates: run data:global-update by hand"));
     assert.equal(exitCodeFor(outcomes), 1);
+    const failing = await regenerate(["--en-snapshot=a", "--cn-snapshot=b", `--out-root=${directory}`, "--report-dir=r", "--only=operator-limited-manifest"], runners, () => undefined, async () => [], { "operator-limited-manifest": async () => { throw new Error("The CN gacha table does not match the pinned SHA-256"); } });
+    assert.deepEqual(failing, [{ id: "operator-limited-manifest", status: "failed", message: "The CN gacha table does not match the pinned SHA-256" }]);
     assert.equal(exitCodeFor(outcomes.slice(0, 4)), 2);
     assert.equal(exitCodeFor(outcomes.slice(0, 3)), 0);
     const curated = async (status: FileOutcome["status"]) => (await regenerate(["--en-snapshot=a", "--cn-snapshot=b", `--out-root=${directory}`, "--report-dir=r", "--only=curated-provenance"], runners, () => undefined, async () => [file("current"), file(status)]));
@@ -74,7 +87,7 @@ test("snapshot hashes come from the snapshot manifests, and only for an output o
   try {
     for (const region of ["en", "cn"]) {
       await mkdir(join(directory, region));
-      await writeFile(join(directory, region, "manifest.json"), JSON.stringify({ region, files: [{ table: "character_table", sha256: `${region.toUpperCase()}1` }] }), "utf8");
+      await writeFile(join(directory, region, "manifest.json"), JSON.stringify({ region, revision: region[0]!.repeat(40), files: [{ table: "character_table", sha256: `${region.toUpperCase()}1` }] }), "utf8");
     }
     const regionsOf = { en: join(directory, "en"), cn: join(directory, "cn") };
     assert.deepEqual(await snapshotHashes(regionsOf), { en: { character_table: "EN1" }, cn: { character_table: "CN1" } });
@@ -93,4 +106,30 @@ test("each runner passes the snapshot hashes its generator expects", async () =>
     await assert.rejects(runners[id](["node", "x"], hashes, manifests), /Missing/, `${id} reaches its generator with the snapshot hashes`);
     await assert.rejects(runners[id](["node", "x"], undefined, manifests), /Missing/, `${id} reaches its generator with the pinned hashes`);
   }
+});
+
+test("the limited manifest is derived from the CN snapshot and the generated catalog", async () => {
+  const directory = await mkdtemp(join(tmpdir(), "regenerate-derived-"));
+  try {
+    const gacha = JSON.stringify({ gachaPoolClient: [{ gachaPoolId: "LIMITED_1", gachaRuleType: "LIMITED", limitParam: { limitedCharId: "char_1_a" } }] });
+    const snapshotsOf = { en: join(directory, "en"), cn: join(directory, "cn") };
+    for (const region of ["en", "cn"] as const) {
+      await mkdir(snapshotsOf[region]);
+      await writeFile(join(snapshotsOf[region], "manifest.json"), JSON.stringify({ region, revision: region[0]!.repeat(40), files: [] }), "utf8");
+    }
+    await writeFile(join(snapshotsOf.cn, "gacha_table.json"), gacha, "utf8");
+    const outRoot = join(directory, "out");
+    await mkdir(join(outRoot, "data/operator-catalog"), { recursive: true });
+    await writeFile(join(outRoot, "data/operator-catalog/index.json"), JSON.stringify({ operators: [{ id: "char_1_a" }] }), "utf8");
+    const revisions = await snapshotRevisions(snapshotsOf);
+    assert.deepEqual(revisions, { en: "e".repeat(40), cn: "c".repeat(40) });
+    const hashes: SnapshotHashes = { en: {}, cn: { gacha_table: sha256(gacha) } };
+    const input = async (path: string) => join(outRoot, path);
+    await assert.rejects(derivedRunners["operator-limited-manifest"]({ snapshots: snapshotsOf, outRoot, revisions, input }), /pinned SHA-256/, "without snapshot hashes the pinned hash applies");
+    await derivedRunners["operator-limited-manifest"]({ snapshots: snapshotsOf, outRoot, hashes, revisions, input });
+    const written = JSON.parse(await readFile(join(outRoot, "data/operator-limited-manifest.json"), "utf8")) as { source: { revision: string }; operators: unknown[] };
+    assert.deepEqual([written.source.revision, written.operators], ["c".repeat(40), [{ id: "char_1_a", pool: "LIMITED_1" }]]);
+    await writeFile(join(snapshotsOf.en, "manifest.json"), JSON.stringify({ region: "en", files: [] }), "utf8");
+    await assert.rejects(snapshotRevisions(snapshotsOf), /en snapshot manifest has no revision/);
+  } finally { await rm(directory, { recursive: true, force: true }); }
 });

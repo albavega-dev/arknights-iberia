@@ -42,9 +42,11 @@ test("the generator checks the pinned hash and keeps only the catalog operators"
   await writeFile(file("gacha.json"), bytes);
   await writeFile(file("catalog.json"), JSON.stringify({ operators: [{ id: "char_1_a" }] }));
   const argv = ["node", "generate", "--cn-gacha", file("gacha.json"), "--catalog", file("catalog.json"), "--out", file("out.json")];
-  await assert.rejects(main(argv, "0".repeat(64)), /does not match the pinned SHA-256/);
-  await main(argv, sha256(bytes));
+  await assert.rejects(main(argv, { expectedHash: "0".repeat(64) }), /does not match the pinned SHA-256/);
+  await main(argv, { expectedHash: sha256(bytes) });
   const written = JSON.parse(await readFile(file("out.json"), "utf8")) as LimitedManifest;
   assert.deepEqual(written.operators, [{ id: "char_1_a", pool: "LIMITED_1" }]);
   assert.equal(written.source.revision, gameDataRevisions.cn);
+  await main([...argv.slice(0, -1), file("nested/out.json")], { expectedHash: sha256(bytes), revision: "a".repeat(40) });
+  assert.equal((JSON.parse(await readFile(file("nested/out.json"), "utf8")) as LimitedManifest).source.revision, "a".repeat(40), "a snapshot revision not pinned yet");
 });

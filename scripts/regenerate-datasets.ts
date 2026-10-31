@@ -9,13 +9,15 @@
  * outside the repository. A dataset with an approved report in --approve-dir is written with --approve.
  * First, the curated files that record a GameData revision are re-verified (curated-provenance): an identical backed
  * value moves the revision, a different one waits for review like a pending dataset. The generators then read the CN
- * release and regional manifests from --out-root when that step rewrote them there.
+ * release and regional manifests from --out-root when that step rewrote them there. Last, the derived datasets are
+ * rewritten from the snapshots and the catalog just generated (or the versioned one), without approval.
  * Exit code: 0 every dataset written, 2 some changes wait for approval, 1 a generator failed.
  */
 import { readFile, stat } from "node:fs/promises";
 import { isAbsolute, join, relative, resolve } from "node:path";
 import { datasetRegistry, datasetTableFlag, type DatasetEntry, type DatasetId } from "../src/game-data/dataset-registry";
 import { main as generateCatalog } from "./generate-operator-catalog";
+import { main as generateLimited } from "./generate-operator-limited-manifest";
 import { main as generateModules } from "./generate-operator-modules";
 import { main as generateSkills } from "./generate-operator-skills";
 import { main as generateStats } from "./generate-operator-stats";
@@ -24,9 +26,13 @@ import { provenanceExitCode, reverifyCuratedProvenance, type FileOutcome } from 
 type Region = "en" | "cn";
 export type SnapshotHashes = Record<Region, Record<string, string>>;
 type UpdateId = { [K in DatasetId]: (typeof datasetRegistry)[K]["generator"]["kind"] extends "update" ? K : never }[DatasetId];
+type DerivedId = { [K in DatasetId]: (typeof datasetRegistry)[K]["generator"]["kind"] extends "derived" ? K : never }[DatasetId];
 export type Manifests = Readonly<{ releaseManifest: string; regionalManifest: string }>;
 type Runner = (argv: string[], hashes: SnapshotHashes | undefined, manifests: Manifests) => Promise<void>;
 export type ProvenanceStep = (argv: readonly string[], log: (line: string) => void) => Promise<readonly FileOutcome[]>;
+/** Snapshots, output root and, for a snapshot not pinned yet, its hashes and revisions. */
+export type DerivedContext = Readonly<{ snapshots: Record<Region, string>; outRoot: string; hashes?: SnapshotHashes; revisions?: Record<Region, string>; input: (path: string) => Promise<string> }>;
+type DerivedRunner = (context: DerivedContext) => Promise<void>;
 const provenanceId = "curated-provenance";
 
 const pick = (hashes: SnapshotHashes, tables: readonly string[]) => Object.fromEntries((["en", "cn"] as const).map((region) => [region, Object.fromEntries(tables.map((table) => [table, hashes[region][table]]))])) as never;
@@ -37,6 +43,14 @@ export const runners: Record<UpdateId, Runner> = {
   "operator-skills": (argv, hashes, manifests) => generateSkills(argv, { ...manifests, ...(hashes ? { expectedHashes: pick(hashes, datasetRegistry["operator-skills"].tables) } : {}) }),
   "operator-modules": (argv, hashes, manifests) => generateModules(argv, { ...manifests, ...(hashes ? { expectedHashes: pick(hashes, datasetRegistry["operator-modules"].tables) } : {}) }),
   "operator-catalog": (argv, hashes, manifests) => generateCatalog(argv, { ...manifests, ...(hashes ? { hashes: { character: { en: hashes.en.character_table!, cn: hashes.cn.character_table! }, handbook: { en: hashes.en.handbook_info_table!, cn: hashes.cn.handbook_info_table! } } } : {}) }),
+};
+
+/** The generator of each derived dataset; the type requires one for every "derived" entry of the registry. */
+export const derivedRunners: Record<DerivedId, DerivedRunner> = {
+  "operator-limited-manifest": async ({ snapshots, outRoot, hashes, revisions, input }) => {
+    const out = join(outRoot, datasetRegistry["operator-limited-manifest"].outputs[0]);
+    await generateLimited(["node", datasetRegistry["operator-limited-manifest"].generator.script, "--cn-gacha", join(snapshots.cn, "gacha_table.json"), "--catalog", await input("data/operator-catalog/index.json"), "--out", out], { expectedHash: hashes?.cn.gacha_table, revision: revisions?.cn });
+  },
 };
 
 const flag = (name: string, argv: readonly string[]) => argv.find((item) => item.startsWith(`--${name}=`))?.slice(name.length + 3);
@@ -52,31 +66,42 @@ export function generatorArguments(id: DatasetId, options: Readonly<{ snapshots:
   return ["node", entry.generator.script, ...tables, "--out-dir", join(options.outRoot, outDir), "--force", "--verify-against", verifyAgainst, "--update", "--report", join(options.reportDir, `${id}.json`), ...(options.approve ? ["--approve", options.approve] : [])];
 }
 
+type SnapshotManifest = { region?: string; revision?: string; files?: { table: string; sha256: string }[] };
+const snapshotManifest = async (snapshots: Record<Region, string>, region: Region): Promise<SnapshotManifest> => {
+  const manifest = JSON.parse(await readFile(join(snapshots[region], "manifest.json"), "utf8")) as SnapshotManifest;
+  if (manifest.region !== region || !Array.isArray(manifest.files)) throw new Error(`${region} snapshot has no valid manifest`);
+  return manifest;
+};
+
 export async function snapshotHashes(snapshots: Record<Region, string>): Promise<SnapshotHashes> {
-  const read = async (region: Region) => {
-    const manifest = JSON.parse(await readFile(join(snapshots[region], "manifest.json"), "utf8")) as { region?: string; files?: { table: string; sha256: string }[] };
-    if (manifest.region !== region || !Array.isArray(manifest.files)) throw new Error(`${region} snapshot has no valid manifest`);
-    return Object.fromEntries(manifest.files.map((file) => [file.table, file.sha256]));
-  };
+  const read = async (region: Region) => Object.fromEntries((await snapshotManifest(snapshots, region)).files!.map((file) => [file.table, file.sha256]));
+  return { en: await read("en"), cn: await read("cn") };
+}
+
+export async function snapshotRevisions(snapshots: Record<Region, string>): Promise<Record<Region, string>> {
+  const read = async (region: Region) => { const { revision } = await snapshotManifest(snapshots, region); if (!revision) throw new Error(`${region} snapshot manifest has no revision`); return revision; };
   return { en: await read("en"), cn: await read("cn") };
 }
 
 export type DatasetOutcome = { id: DatasetId | typeof provenanceId; status: "written" | "pending" | "failed"; message?: string };
 
-export async function regenerate(argv: readonly string[], run: Record<UpdateId, Runner> = runners, log: (line: string) => void = console.log, provenance: ProvenanceStep = reverifyCuratedProvenance): Promise<DatasetOutcome[]> {
+export async function regenerate(argv: readonly string[], run: Record<UpdateId, Runner> = runners, log: (line: string) => void = console.log, provenance: ProvenanceStep = reverifyCuratedProvenance, derive: Record<DerivedId, DerivedRunner> = derivedRunners): Promise<DatasetOutcome[]> {
   const snapshots = { en: required("en-snapshot", argv), cn: required("cn-snapshot", argv) };
   const outRoot = required("out-root", argv);
   const reportDir = required("report-dir", argv);
   const approveDir = flag("approve-dir", argv);
   const only = flag("only", argv)?.split(",").filter(Boolean);
   const ids = (Object.keys(run) as UpdateId[]).filter((id) => !only || only.includes(id));
-  const unknown = only?.filter((id) => !(id in run) && id !== provenanceId) ?? [];
+  const derivedIds = (Object.keys(derive) as DerivedId[]).filter((id) => !only || only.includes(id));
+  const unknown = only?.filter((id) => !(id in run) && !(id in derive) && id !== provenanceId) ?? [];
   if (unknown.length) throw new Error(`Not an update-mode dataset: ${unknown.join(", ")}`);
   let hashes: SnapshotHashes | undefined;
+  let revisions: Record<Region, string> | undefined;
   if (argv.includes("--snapshot-hashes")) {
     const rel = relative(process.cwd(), resolve(outRoot));
     if (rel === "" || (!rel.startsWith("..") && !isAbsolute(rel))) throw new Error("--snapshot-hashes needs an output root outside the repository");
     hashes = await snapshotHashes(snapshots);
+    revisions = await snapshotRevisions(snapshots);
   }
   const outcomes: DatasetOutcome[] = [];
   if (!only || only.includes(provenanceId)) {
@@ -102,6 +127,15 @@ export async function regenerate(argv: readonly string[], run: Record<UpdateId, 
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       outcomes.push({ id, status: message.startsWith("Changes pending approval") ? "pending" : "failed", message });
+    }
+  }
+  for (const id of derivedIds) {
+    log(`=== ${id}`);
+    try {
+      await derive[id]({ snapshots, outRoot, hashes, revisions, input: manifest });
+      outcomes.push({ id, status: "written" });
+    } catch (error) {
+      outcomes.push({ id, status: "failed", message: error instanceof Error ? error.message : String(error) });
     }
   }
   for (const outcome of outcomes) log(`${outcome.id}: ${outcome.status}${outcome.message ? ` (${outcome.message})` : ""}`);

@@ -19,7 +19,6 @@ import { dirname, join } from "node:path";
 import { curatedProvenance, type CuratedProvenanceId } from "../src/game-data/dataset-registry";
 import { gameDataRevisions, pinnedGameDataTableHashes } from "../src/game-data/gamedata-revisions";
 import { compareCodeUnits } from "../src/game-data/string-order";
-import { limitedOperatorsFrom } from "../src/game-data/operator-limited";
 import { playable } from "./verify-operator-regional-sets";
 
 type Region = "en" | "cn";
@@ -85,9 +84,6 @@ export const reverifiers: Record<CuratedProvenanceId, Reverifier> = {
       });
       return [...names, ...cited];
     },
-  },
-  limited: {
-    references: (json) => [{ region: "cn", revision: text(object(json.source).revision), label: "LIMITED banners", value: async (read) => limitedOperatorsFrom(await read("gacha_table")) }],
   },
   regional: {
     references: (json) => (["en", "cn"] as const).map((region) => ({ region, revision: text(object(object(json.comparison)[region]).revision), label: `${region} playable operators`, value: playableIds })),
