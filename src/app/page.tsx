@@ -1,8 +1,5 @@
-import type { Metadata } from "next";
 import { assetPath } from "../game-data/asset-paths";
 import { LandingSeparator } from "./landing-separator";
-
-export const metadata: Metadata = { title: "Arknights Iberia" };
 
 const roadmap = [
   {

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ogSiteImageUrl } from "../game-data/operator-og-images";
+import { getSiteOrigin, previewImage, siteDescription, siteName, siteTitle } from "../game-data/seo";
 import { SiteShell } from "./site-shell";
 
 const geistSans = Geist({
@@ -15,8 +17,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arknights Iberia — Archivo de navegación",
-  description: "Web de recursos de Arknights en español.",
+  metadataBase: new URL(getSiteOrigin()),
+  title: { default: `${siteTitle} | ${siteName}`, template: `%s | ${siteName}` },
+  description: siteDescription,
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", siteName, locale: "es_ES", title: `${siteTitle} | ${siteName}`, description: siteDescription, url: "/", images: [previewImage(ogSiteImageUrl())] },
+  twitter: { card: "summary_large_image", title: `${siteTitle} | ${siteName}`, description: siteDescription, images: [ogSiteImageUrl()] },
   icons: {
     icon: "/assets/anchor.svg",
   },

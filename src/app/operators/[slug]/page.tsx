@@ -5,9 +5,11 @@ import { cache } from "react";
 import { listOperatorRecords, listPreviousSlugs } from "../../../game-data/operator-catalog-data";
 import { readOperatorBiography } from "../../../game-data/operator-biographies-data";
 import { getOperatorPageTitle, resolveOperatorSlug } from "../../../game-data/operator-slugs";
+import { buildPageMetadata, getOperatorPageDescription } from "../../../game-data/seo";
 import { getOperatorTacticalEntry } from "../../../game-data/operator-tactical";
 import { getOperatorArtistCredit } from "../../../game-data/operator-artist-credits";
 import { getOperatorIllustrationAssets } from "../../../game-data/operator-illustrations-data";
+import { getOperatorOgImageUrl } from "../../../game-data/operator-og-images-data";
 import { isOperatorLimited } from "../../../game-data/operator-limited-data";
 import { loadStatsProfile } from "../../../game-data/operator-stats-data";
 import { loadSkillsView } from "../../../game-data/operator-skills-data";
@@ -26,10 +28,13 @@ const resolveOperator = cache((slug: string) => {
 export async function generateMetadata({ params }: OperatorPageProps): Promise<Metadata> {
   const { slug } = await params;
   const resolved = resolveOperator(slug);
-  return {
-    title: resolved ? getOperatorPageTitle(resolved.operator) : "Operador - Arknights Iberia",
-    description: "Ficha pública de operador a partir de datos importados.",
-  };
+  if (!resolved) return { title: "Operador no encontrado" };
+  return buildPageMetadata({
+    title: getOperatorPageTitle(resolved.operator),
+    description: getOperatorPageDescription(resolved.operator),
+    path: `/operators/${resolved.publicSlug}`,
+    image: getOperatorOgImageUrl(resolved.operator.id),
+  });
 }
 
 export const dynamic = "force-dynamic";

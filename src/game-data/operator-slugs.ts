@@ -39,6 +39,7 @@ export function resolveOperatorSlug(slug: string, records: readonly OperatorReco
   return { operator, publicSlug, redirect: publicSlug !== slug };
 }
 
+/** Document title of an operator page, before the site template. */
 export function getOperatorPageTitle(operator: Pick<OperatorRecord, "name" | "globalName">): string {
-  return `Operador - ${operator.globalName || operator.name}`;
+  return `${operator.globalName || operator.name}: habilidades, módulos y estadísticas`;
 }
