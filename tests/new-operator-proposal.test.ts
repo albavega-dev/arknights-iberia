@@ -197,10 +197,13 @@ test("the script proposes from the detection report and writes only what is reso
 test("PRTS down, unknown roles and empty input are handled without guessing", async () => {
   const { directory, table } = await fixture();
   try {
-    const down = await propose(["--cn-character=" + table, "--ids=char_new"], fetchers({ prts: async () => { throw new Error("connect timeout"); }, artists: async (item: NewOperator) => artistEntry(item.id, "partial", "credited as X in-game") }), directory);
+    const down = await propose(["--cn-character=" + table, "--ids=char_new"], fetchers({ prts: async () => { throw new Error("connect timeout"); }, artists: async (item: NewOperator) => artistEntry(item.id, "partial", "guest artist of an event") }), directory);
     assert.equal(down.sources.prts, "unavailable: connect timeout");
     assert.equal(down.regional[0]!.cnReleaseDate, "2026-11-01", "the wiki event date");
     assert.deepEqual(down.unresolved.map((item) => item.reason), ["credits with a role the normalization does not know"]);
+    const inGame = await propose(["--cn-character=" + table, "--ids=char_new"], fetchers({ artists: async (item: NewOperator) => artistEntry(item.id, "partial", "credited as Studio Montagne in-game") }), directory);
+    assert.deepEqual(inGame.unresolved, [], "a credited-as-in-game note resolves by itself");
+    assert.equal(inGame.artistCredits.length, 1);
     const noPage = await propose(["--cn-character=" + table, "--ids=char_new"], fetchers({ terra: async () => [] }), directory);
     assert.deepEqual(noPage.unresolved.map((item) => item.field), ["artistCredits"], "the name comes from the game data and the date from PRTS");
     assert.equal(noPage.regional[0]!.nameEnglish, "Newcomer");
