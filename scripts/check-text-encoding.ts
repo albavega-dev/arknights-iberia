@@ -18,15 +18,29 @@ async function trackedFiles(): Promise<string[]> {
   return stdout.split("\0").filter(Boolean).filter((file) => textExtensions.has(extname(file).toLowerCase()));
 }
 
+/**
+ * Text files to inspect from `git status --porcelain -z`: deleted files no longer exist, and a rename or copy entry is
+ * followed by its original path as a separate field, which is skipped.
+ */
+export function changedTextFiles(status: string): string[] {
+  const files = new Set<string>();
+  const fields = status.split("\0");
+  for (let index = 0; index < fields.length; index++) {
+    const entry = fields[index]!;
+    if (entry.length < 4) continue;
+    const code = entry.slice(0, 2);
+    const file = entry.slice(3);
+    if (code.includes("R") || code.includes("C")) index++;
+    if (code.includes("D")) continue;
+    if (textExtensions.has(extname(file).toLowerCase())) files.add(file);
+  }
+  return [...files];
+}
+
 async function changedFiles(): Promise<string[]> {
   try {
-    const { stdout } = await execFileAsync("git", ["status", "--short", "-z"], { cwd: root });
-  const files = new Set<string>();
-  for (const entry of stdout.split("\0").filter(Boolean)) {
-    const file = entry.slice(3).trim();
-    if (file && textExtensions.has(extname(file).toLowerCase())) files.add(file);
-  }
-    return [...files];
+    const { stdout } = await execFileAsync("git", ["status", "--porcelain", "-z"], { cwd: root });
+    return changedTextFiles(stdout);
   } catch {
     return allTextFiles(root);
   }
@@ -64,8 +78,9 @@ async function selfTest(): Promise<void> {
 }
 
 const args = new Set(process.argv.slice(2));
-if (args.has("--self-test")) await selfTest();
-else {
+const isMain = process.argv[1]?.endsWith("check-text-encoding.ts") ?? false;
+if (isMain && args.has("--self-test")) await selfTest();
+else if (isMain) {
   const files = args.has("--all") ? await allTextFiles(root) : args.has("--changed") ? await changedFiles() : await trackedFiles();
   const findings = (await Promise.all(files.map(inspect))).flat();
   for (const finding of findings) console.error(`${finding.kind}: ${finding.file}:${finding.line}: ${finding.text}`);
