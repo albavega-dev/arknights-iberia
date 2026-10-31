@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test, { mock } from "node:test";
 import { cnOnlyName, isLatinName, mainPowerKey, proposeAffiliations, proposeFactions, proposeRegionalEntries, terraCnStartToDate, type Affiliation, type FactionEntry, type NewOperator, type PrtsOperator, type TerraOperator } from "../src/game-data/new-operator-proposal.js";
+import { gameDataRevisions } from "../src/game-data/gamedata-revisions.js";
 import { fetchArtists, fetchPrts, fetchTerra, main, oneLine, propose, writeProposal, type NewOperatorProposal } from "../scripts/propose-new-operators.js";
 
 const power = (nationId: string | null, groupId: string | null = null, teamId: string | null = null) => ({ nationId, groupId, teamId });
@@ -162,14 +163,14 @@ test("the script proposes from the detection report and writes only what is reso
     const proposal = JSON.parse(lines[0]!) as NewOperatorProposal;
     assert.deepEqual(proposal.sources, { prts: "ok", terraWiki: "ok" });
     assert.deepEqual(proposal.regional.map((entry) => [entry.id, entry.nameEnglish, entry.cnReleaseDate]), [["char_new", "Newcomer", "2026-11-01"]]);
-    assert.deepEqual(proposal.affiliations.map((entry) => [entry.operatorId, entry.affiliationId, entry.source.revision]), [["char_new", "faction:iberia", "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"]]);
+    assert.deepEqual(proposal.affiliations.map((entry) => [entry.operatorId, entry.affiliationId, entry.source.revision]), [["char_new", "faction:iberia", gameDataRevisions.cn]]);
     assert.deepEqual(proposal.unresolved.map((item) => [item.id, item.field]), [["char_odd", "cnReleaseDate"], ["char_odd", "mainFactionId"], ["char_odd", "artistCredits"]]);
     const regional = await readFile(join(directory, "data/operator-regional-manifest.json"), "utf8");
     assert.match(regional, /"char_4237_jcinta", .* \} \},\n {4}\{ "id": "char_new", "nameEnglish": "Newcomer", .* \} \}\n {2}\]\n\}\n$/, "sorted by id, one line each");
     const factions = JSON.parse(await readFile(join(directory, "data/operator-faction-manifest.json"), "utf8")) as { operators: { id: string }[] };
     assert.equal(factions.operators.at(-1)!.id, "char_new");
     const affiliations = await readFile(join(directory, "data/operator-affiliation-manifest.json"), "utf8");
-    assert.ok(affiliations.endsWith(`,\n    { "operatorId": "char_new", "affiliationId": "faction:iberia", "relation": "sub-power", "sourceField": "character_table.json → subPower[].nationId", "sourceValue": "iberia", "source": { "repository": "ArknightsAssets/ArknightsGamedata", "region": "cn", "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842", "path": "cn/gamedata/excel/character_table.json" }, "status": "verified" }\n  ]\n}\n`));
+    assert.ok(affiliations.endsWith(`,\n    { "operatorId": "char_new", "affiliationId": "faction:iberia", "relation": "sub-power", "sourceField": "character_table.json → subPower[].nationId", "sourceValue": "iberia", "source": { "repository": "ArknightsAssets/ArknightsGamedata", "region": "cn", "revision": "${gameDataRevisions.cn}", "path": "cn/gamedata/excel/character_table.json" }, "status": "verified" }\n  ]\n}\n`));
     const credits = JSON.parse(await readFile(join(directory, "data/operator-artist-credits-manifest.json"), "utf8")) as { entries: { operatorId: string }[] };
     assert.deepEqual(credits.entries.slice(-1).map((entry) => entry.operatorId), ["char_new"]);
     const files = async () => Promise.all(["regional", "faction", "affiliation", "artist-credits"].map((name) => readFile(join(directory, "data", `operator-${name}-manifest.json`), "utf8")));
