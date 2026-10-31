@@ -29,9 +29,49 @@ function roleFor(artist: Artist): { role: NormalizedCredit["role"]; variant?: No
   return { role: "unknown" };
 }
 
+const inGameSuffix = " in-game";
+const creditedMarker = "credited as ";
+
+/**
+ * Splits a role such as `Skin name; credited as "Studio Montagne" in-game` into the name the game credits and what
+ * comes before it (a skin name, or nothing). Null when the role has no such note. Plain string scanning, so the cost
+ * stays linear on any wiki text.
+ */
+export function inGameCredit(role: string): { credited: string; rest: string } | null {
+  const trimmed = role.trim();
+  const lower = trimmed.toLowerCase();
+  if (!lower.endsWith(inGameSuffix)) return null;
+  const start = lower.lastIndexOf(creditedMarker);
+  if (start === -1) return null;
+  const before = trimmed.slice(0, start).trimEnd();
+  if (before && !before.endsWith(";") && !before.endsWith(",")) return null;
+  let credited = trimmed.slice(start + creditedMarker.length, trimmed.length - inGameSuffix.length).trim();
+  if (credited.length > 1 && credited.startsWith('"') && credited.endsWith('"')) credited = credited.slice(1, -1).trim();
+  if (!credited) return null;
+  return { credited, rest: before.slice(0, before ? -1 : 0).trim() };
+}
+
+/**
+ * Credit of a line whose wiki note says how the game credits it: the game's name is the credit, and the name the wiki
+ * gives stays in the note and the evidence. Without anything else it is the operator art; with a skin name in italics,
+ * the art of that skin.
+ */
+function inGameClassification(artist: Artist, inGame: { credited: string; rest: string }): Omit<NormalizedCredit, "status" | "source" | "evidence"> {
+  const notes = `Terra Wiki attributes this art to ${artist.name}; the game credits ${inGame.credited}.`;
+  if (!inGame.rest) return { artist: inGame.credited, role: "operator-illustration", notes };
+  if (artist.evidence.includes(`''${inGame.rest}`)) return { artist: inGame.credited, role: "promotional-art", outfit: inGame.rest, notes };
+  return { artist: inGame.credited, ...roleFor({ ...artist, role: inGame.rest }), notes };
+}
+
 export function creditsFor(entry: ArtistCreditEntry): NormalizedCredit[] {
   const credits: NormalizedCredit[] = [];
   const add = (artist: Artist, variant?: "base" | "elite2") => {
+    const inGame = artist.role ? inGameCredit(artist.role) : null;
+    if (inGame) {
+      const credit = inGameClassification(artist, inGame);
+      credits.push({ ...credit, ...(variant && !credit.variant ? { variant } : {}), status: entry.status, source: entry.source, evidence: artist.evidence });
+      return;
+    }
     const classification = roleFor(artist);
     for (const name of splitExplicitArtists(artist.name, artist.evidence)) {
       credits.push({ artist: name, ...classification, ...(variant && !classification.variant ? { variant } : {}), status: entry.status, source: entry.source, evidence: artist.evidence });
