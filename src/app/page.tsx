@@ -131,6 +131,15 @@ export default function Home() {
           <div className="landing-section-content">
             <h2 id="news-title">Novedades</h2>
             <article className="landing-news-entry">
+              <h3>31 de octubre de 2026 - 0.2.2</h3>
+              <ul>
+                <li>Las ilustraciones, los retratos y los iconos de los operadores se alojan ahora en la propia web, y las fichas cargan más rápido.</li>
+                <li><strong>Nueva vista por avatares</strong> en la biblioteca de operadores.</li>
+                <li>Las ilustraciones E0/E2 de las fichas se pueden ampliar al pulsarlas.</li>
+                <li>Las estrellas de los operadores limitados tienen un efecto especial.</li>
+              </ul>
+            </article>
+            <article className="landing-news-entry">
               <h3>31 de octubre de 2026 - 0.2.1</h3>
               <ul>
                 <li>La web sirve ahora todo su contenido desde datos versionados, sin depender de una base de datos externa.</li>
