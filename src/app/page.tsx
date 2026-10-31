@@ -130,12 +130,6 @@ export default function Home() {
           <div className="landing-section-content">
             <h2 id="news-title">Novedades</h2>
             <article className="landing-news-entry">
-              <h3>31 de octubre de 2026 - Actualización de datos</h3>
-              <ul>
-                <li>Actualizados los datos de los operadores con la última versión del juego.</li>
-              </ul>
-            </article>
-            <article className="landing-news-entry">
               <h3>30 de octubre de 2026 - 0.2.1</h3>
               <ul>
                 <li>La web sirve ahora todo su contenido desde datos versionados, sin depender de una base de datos externa.</li>
