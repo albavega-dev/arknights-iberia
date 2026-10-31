@@ -29,8 +29,8 @@ Fecha de lanzamiento: la fecha, en la hora oficial del servidor de cada región 
 - [«泡影苍霆»](https://ak.hypergryph.com/news/0701): 2026-06-01, Violet Mizutsune Orchid, Zinogre S Catapult y Rhodes Island Recon.
 - [«丛林症结» y búsqueda «确定性混沌»](https://ak.hypergryph.com/news/9686): 2026-07-10, Aphrissa y Pedro.
 - [«夏日嘉年华» 2026](https://ak.hypergryph.com/news/8571): 2026-08-01, Angelina the Mellow Wish, Thumpy, Timeslot y Jacinta.
-- [«月行水上»](https://ak.hypergryph.com/news/9681): 2026-09-04, Makoto Yuki, Aigis, Yukari Takeba y Koromaru.
-- [SideStory «昨日海»](https://ak.hypergryph.com/news/5101): 2026-10-09, De Toledo, Clementia y Homebound.
+- [«月行水上»](https://ak.hypergryph.com/news/9681): 2026-09-04, Makoto Yuki, Aegis, Yukari Takeba y Koromaru.
+- [SideStory «昨日海»](https://ak.hypergryph.com/news/5101): 2026-10-09, de Toledo, Clementia y Homebound.
 - Mechanist (2026-07-17): [PRTS](https://prts.wiki/w/%E6%9C%BA%E6%A2%B0%E5%B8%88), `community-listed`, a falta de anuncio oficial localizado.
 <!-- /sources:cn-only-dates -->
 

@@ -44,3 +44,13 @@ test("a slug resolves to its operator, and only the current public slug needs no
   assert.equal(resolveOperatorSlug("nobody", records, previous), null);
   assert.equal(resolveOperatorSlug("gone", records, new Map([["gone", "char_missing"]])), null);
 });
+
+test("in the versioned catalog, /operators/aigis leads to /operators/aegis", async () => {
+  const catalog = JSON.parse(await readFile("data/operator-catalog/index.json", "utf8")) as OperatorCatalog;
+  const records = catalog.operators.map(catalogOperatorRecord);
+  const previous = new Map(catalog.operators.flatMap((entry) => entry.previousSlugs.map((slug) => [slug, entry.id] as const)));
+  assert.deepEqual(previous, new Map([["aigis", "char_4218_aigis"]]));
+  const resolved = resolveOperatorSlug("aigis", records, previous);
+  assert.deepEqual([resolved?.operator.id, resolved?.publicSlug, resolved?.redirect], ["char_4218_aigis", "aegis", true]);
+  assert.equal(resolveOperatorSlug("de-toledo", records, previous)?.redirect, false, "De Toledo keeps its slug");
+});

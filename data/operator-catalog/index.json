@@ -6069,7 +6069,7 @@
     },
     {
       "id": "char_393_toledo",
-      "name": "De Toledo",
+      "name": "de Toledo",
       "cnName": "德·托莱多",
       "globalName": null,
       "class": "Supporter",
@@ -9849,14 +9849,16 @@
     },
     {
       "id": "char_4218_aigis",
-      "name": "Aigis",
+      "name": "Aegis",
       "cnName": "埃癸斯",
       "globalName": null,
       "class": "Sniper",
       "subClassId": "skybreaker",
       "rarity": 5,
       "slug": "operator-char-4218-aigis",
-      "previousSlugs": [],
+      "previousSlugs": [
+        "aigis"
+      ],
       "cnOnly": true,
       "availabilityStatus": "cn-snapshot-candidate",
       "cnReleaseDate": "2026-09-04",
