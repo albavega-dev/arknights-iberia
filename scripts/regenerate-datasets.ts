@@ -2,11 +2,14 @@
  * Regenerates every dataset of the registry in update mode (--verify-against --update) from two snapshots.
  *
  *   pnpm data:regenerate --en-snapshot=<dir> --cn-snapshot=<dir> --out-root=<dir> --report-dir=<dir>
- *     [--approve-dir=<dir>] [--only=operator-skills,...] [--snapshot-hashes]
+ *     [--approve-dir=<dir>] [--only=operator-skills,...,curated-provenance] [--snapshot-hashes] [--previous-snapshots=<dir>]
  *
  * --out-root is the repository root for a real update. --snapshot-hashes takes the expected table hashes from the
  * snapshot manifests instead of gamedata-revisions.ts, for a dry run before pinning; it requires an output root
  * outside the repository. A dataset with an approved report in --approve-dir is written with --approve.
+ * First, the curated files that record a GameData revision are re-verified (curated-provenance): an identical backed
+ * value moves the revision, a different one waits for review like a pending dataset. The generators then read the CN
+ * release and regional manifests from --out-root when that step rewrote them there.
  * Exit code: 0 every dataset written, 2 some changes wait for approval, 1 a generator failed.
  */
 import { readFile, stat } from "node:fs/promises";
@@ -16,20 +19,24 @@ import { main as generateCatalog } from "./generate-operator-catalog";
 import { main as generateModules } from "./generate-operator-modules";
 import { main as generateSkills } from "./generate-operator-skills";
 import { main as generateStats } from "./generate-operator-stats";
+import { provenanceExitCode, reverifyCuratedProvenance, type FileOutcome } from "./reverify-curated-provenance";
 
 type Region = "en" | "cn";
 export type SnapshotHashes = Record<Region, Record<string, string>>;
 type UpdateId = { [K in DatasetId]: (typeof datasetRegistry)[K]["generator"]["kind"] extends "update" ? K : never }[DatasetId];
-type Runner = (argv: string[], hashes?: SnapshotHashes) => Promise<void>;
+export type Manifests = Readonly<{ releaseManifest: string; regionalManifest: string }>;
+type Runner = (argv: string[], hashes: SnapshotHashes | undefined, manifests: Manifests) => Promise<void>;
+export type ProvenanceStep = (argv: readonly string[], log: (line: string) => void) => Promise<readonly FileOutcome[]>;
+const provenanceId = "curated-provenance";
 
 const pick = (hashes: SnapshotHashes, tables: readonly string[]) => Object.fromEntries((["en", "cn"] as const).map((region) => [region, Object.fromEntries(tables.map((table) => [table, hashes[region][table]]))])) as never;
 
 /** The generator of each dataset in update mode; the type requires one for every "update" entry of the registry. */
 export const runners: Record<UpdateId, Runner> = {
-  "operator-stats": (argv, hashes) => generateStats(argv, hashes ? { expectedHashes: pick(hashes, datasetRegistry["operator-stats"].tables) } : {}),
-  "operator-skills": (argv, hashes) => generateSkills(argv, hashes ? { expectedHashes: pick(hashes, datasetRegistry["operator-skills"].tables) } : {}),
-  "operator-modules": (argv, hashes) => generateModules(argv, hashes ? { expectedHashes: pick(hashes, datasetRegistry["operator-modules"].tables) } : {}),
-  "operator-catalog": (argv, hashes) => generateCatalog(argv, hashes ? { hashes: { character: { en: hashes.en.character_table!, cn: hashes.cn.character_table! }, handbook: { en: hashes.en.handbook_info_table!, cn: hashes.cn.handbook_info_table! } } } : {}),
+  "operator-stats": (argv, hashes, manifests) => generateStats(argv, { ...manifests, ...(hashes ? { expectedHashes: pick(hashes, datasetRegistry["operator-stats"].tables) } : {}) }),
+  "operator-skills": (argv, hashes, manifests) => generateSkills(argv, { ...manifests, ...(hashes ? { expectedHashes: pick(hashes, datasetRegistry["operator-skills"].tables) } : {}) }),
+  "operator-modules": (argv, hashes, manifests) => generateModules(argv, { ...manifests, ...(hashes ? { expectedHashes: pick(hashes, datasetRegistry["operator-modules"].tables) } : {}) }),
+  "operator-catalog": (argv, hashes, manifests) => generateCatalog(argv, { ...manifests, ...(hashes ? { hashes: { character: { en: hashes.en.character_table!, cn: hashes.cn.character_table! }, handbook: { en: hashes.en.handbook_info_table!, cn: hashes.cn.handbook_info_table! } } } : {}) }),
 };
 
 const flag = (name: string, argv: readonly string[]) => argv.find((item) => item.startsWith(`--${name}=`))?.slice(name.length + 3);
@@ -54,16 +61,16 @@ export async function snapshotHashes(snapshots: Record<Region, string>): Promise
   return { en: await read("en"), cn: await read("cn") };
 }
 
-export type DatasetOutcome = { id: DatasetId; status: "written" | "pending" | "failed"; message?: string };
+export type DatasetOutcome = { id: DatasetId | typeof provenanceId; status: "written" | "pending" | "failed"; message?: string };
 
-export async function regenerate(argv: readonly string[], run: Record<UpdateId, Runner> = runners, log: (line: string) => void = console.log): Promise<DatasetOutcome[]> {
+export async function regenerate(argv: readonly string[], run: Record<UpdateId, Runner> = runners, log: (line: string) => void = console.log, provenance: ProvenanceStep = reverifyCuratedProvenance): Promise<DatasetOutcome[]> {
   const snapshots = { en: required("en-snapshot", argv), cn: required("cn-snapshot", argv) };
   const outRoot = required("out-root", argv);
   const reportDir = required("report-dir", argv);
   const approveDir = flag("approve-dir", argv);
   const only = flag("only", argv)?.split(",").filter(Boolean);
   const ids = (Object.keys(run) as UpdateId[]).filter((id) => !only || only.includes(id));
-  const unknown = only?.filter((id) => !(id in run)) ?? [];
+  const unknown = only?.filter((id) => !(id in run) && id !== provenanceId) ?? [];
   if (unknown.length) throw new Error(`Not an update-mode dataset: ${unknown.join(", ")}`);
   let hashes: SnapshotHashes | undefined;
   if (argv.includes("--snapshot-hashes")) {
@@ -72,12 +79,25 @@ export async function regenerate(argv: readonly string[], run: Record<UpdateId, 
     hashes = await snapshotHashes(snapshots);
   }
   const outcomes: DatasetOutcome[] = [];
+  if (!only || only.includes(provenanceId)) {
+    log(`=== ${provenanceId}`);
+    try {
+      const files = await provenance(argv, log);
+      const code = provenanceExitCode(files);
+      const waiting = files.filter((file) => file.status !== "current" && file.status !== "updated").map((file) => `${file.id} ${file.status}`);
+      outcomes.push({ id: provenanceId, status: code === 1 ? "failed" : code === 2 ? "pending" : "written", ...(waiting.length ? { message: waiting.join(", ") } : {}) });
+    } catch (error) {
+      outcomes.push({ id: provenanceId, status: "failed", message: error instanceof Error ? error.message : String(error) });
+    }
+  }
+  const manifest = async (path: string) => (await exists(join(outRoot, path)) ? join(outRoot, path) : path);
+  const manifests = { releaseManifest: await manifest("data/operator-cn-release-manifest.json"), regionalManifest: await manifest("data/operator-regional-manifest.json") };
   for (const id of ids) {
     const approvedReport = approveDir ? join(approveDir, `${id}.json`) : undefined;
     const approve = approvedReport && await exists(approvedReport) ? approvedReport : undefined;
     log(`=== ${id}${approve ? " (approved report)" : ""}`);
     try {
-      await run[id](generatorArguments(id, { snapshots, outRoot, reportDir, approve }), hashes);
+      await run[id](generatorArguments(id, { snapshots, outRoot, reportDir, approve }), hashes, manifests);
       outcomes.push({ id, status: "written" });
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);

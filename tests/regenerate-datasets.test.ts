@@ -6,8 +6,11 @@ import test from "node:test";
 import { datasetRegistry, type DatasetId } from "../src/game-data/dataset-registry";
 import { compareCodeUnits } from "../src/game-data/string-order";
 import { exitCodeFor, generatorArguments, regenerate, runners, snapshotHashes, type SnapshotHashes } from "../scripts/regenerate-datasets";
+import type { FileOutcome } from "../scripts/reverify-curated-provenance";
 
 const snapshots = { en: "snap/en", cn: "snap/cn" };
+const manifests = { releaseManifest: "data/operator-cn-release-manifest.json", regionalManifest: "data/operator-regional-manifest.json" };
+const file = (status: FileOutcome["status"]): FileOutcome => ({ id: "regional", file: "data/operator-regional-manifest.json", status, moved: [], differences: [] });
 
 test("there is a runner for every update-mode dataset of the registry and for nothing else", () => {
   const update = (Object.entries(datasetRegistry) as [DatasetId, { generator: { kind: string } }][]).filter(([, entry]) => entry.generator.kind === "update").map(([id]) => id);
@@ -38,16 +41,25 @@ test("regeneration runs every dataset, uses approved reports and sorts the outco
       if (outcome === "fail") throw new Error("Snapshot SHA-256 mismatch");
     };
     const lines: string[] = [];
-    const outcomes = await regenerate([`--en-snapshot=a`, `--cn-snapshot=b`, `--out-root=${directory}`, `--report-dir=r`, `--approve-dir=${approveDir}`], { "operator-stats": fake("ok"), "operator-skills": fake("ok"), "operator-modules": fake("pending"), "operator-catalog": fake("fail") }, (line) => lines.push(line));
-    assert.deepEqual(outcomes.map((item) => [item.id, item.status]), [["operator-stats", "written"], ["operator-skills", "written"], ["operator-modules", "pending"], ["operator-catalog", "failed"]]);
+    const outcomes = await regenerate([`--en-snapshot=a`, `--cn-snapshot=b`, `--out-root=${directory}`, `--report-dir=r`, `--approve-dir=${approveDir}`], { "operator-stats": fake("ok"), "operator-skills": fake("ok"), "operator-modules": fake("pending"), "operator-catalog": fake("fail") }, (line) => lines.push(line), async () => [file("current"), file("updated")]);
+    assert.deepEqual(outcomes.map((item) => [item.id, item.status]), [["curated-provenance", "written"], ["operator-stats", "written"], ["operator-skills", "written"], ["operator-modules", "pending"], ["operator-catalog", "failed"]]);
     assert.ok(seen["data:skills:generate"]!.includes("--approve"), "an approved report is passed");
     assert.ok(!seen["data:stats:generate"]!.includes("--approve"), "and only when it exists");
     assert.ok(lines.includes("=== operator-skills (approved report)"));
     assert.ok(lines.some((line) => line.startsWith("operator-tactical-manifest: run scripts/generate-operator-tactical-manifest.ts by hand when modules or ranges change")));
     assert.ok(lines.includes("operator-global-updates: run data:global-update by hand"));
     assert.equal(exitCodeFor(outcomes), 1);
-    assert.equal(exitCodeFor(outcomes.slice(0, 3)), 2);
-    assert.equal(exitCodeFor(outcomes.slice(0, 2)), 0);
+    assert.equal(exitCodeFor(outcomes.slice(0, 4)), 2);
+    assert.equal(exitCodeFor(outcomes.slice(0, 3)), 0);
+    const curated = async (status: FileOutcome["status"]) => (await regenerate(["--en-snapshot=a", "--cn-snapshot=b", `--out-root=${directory}`, "--report-dir=r", "--only=curated-provenance"], runners, () => undefined, async () => [file("current"), file(status)]));
+    assert.deepEqual(await curated("pending"), [{ id: "curated-provenance", status: "pending", message: "regional pending" }], "a changed value waits for review");
+    assert.deepEqual((await curated("failed")).map((item) => item.status), ["failed"]);
+    assert.deepEqual(await regenerate(["--en-snapshot=a", "--cn-snapshot=b", `--out-root=${directory}`, "--report-dir=r", "--only=curated-provenance"], runners, () => undefined, async () => { throw new Error("no snapshot"); }), [{ id: "curated-provenance", status: "failed", message: "no snapshot" }]);
+    const received: string[] = [];
+    await mkdir(join(directory, "data"), { recursive: true });
+    await writeFile(join(directory, "data/operator-cn-release-manifest.json"), "{}", "utf8");
+    await regenerate(["--en-snapshot=a", "--cn-snapshot=b", `--out-root=${directory}`, "--report-dir=r", "--only=operator-stats"], { ...runners, "operator-stats": async (_argv, _hashes, paths) => { received.push(paths.releaseManifest, paths.regionalManifest); } }, () => undefined);
+    assert.deepEqual(received, [join(directory, "data/operator-cn-release-manifest.json"), "data/operator-regional-manifest.json"], "generators read the manifests the provenance step rewrote under --out-root");
     const odd = await regenerate(["--en-snapshot=a", "--cn-snapshot=b", `--out-root=${directory}`, "--report-dir=r", "--only=operator-stats"], { ...runners, "operator-stats": async () => { throw "broken"; } }, () => undefined);
     assert.deepEqual(odd, [{ id: "operator-stats", status: "failed", message: "broken" }]);
     const only = await regenerate(["--en-snapshot=a", "--cn-snapshot=b", `--out-root=${directory}`, "--report-dir=r", "--only=operator-stats"], { ...runners, "operator-stats": fake("ok") }, () => undefined);
@@ -78,7 +90,7 @@ test("snapshot hashes come from the snapshot manifests, and only for an output o
 test("each runner passes the snapshot hashes its generator expects", async () => {
   const hashes: SnapshotHashes = { en: { character_table: "E", handbook_info_table: "EH" }, cn: { character_table: "C", handbook_info_table: "CH" } };
   for (const id of Object.keys(runners) as (keyof typeof runners)[]) {
-    await assert.rejects(runners[id](["node", "x"], hashes), /Missing/, `${id} reaches its generator with the snapshot hashes`);
-    await assert.rejects(runners[id](["node", "x"]), /Missing/, `${id} reaches its generator with the pinned hashes`);
+    await assert.rejects(runners[id](["node", "x"], hashes, manifests), /Missing/, `${id} reaches its generator with the snapshot hashes`);
+    await assert.rejects(runners[id](["node", "x"], undefined, manifests), /Missing/, `${id} reaches its generator with the pinned hashes`);
   }
 });

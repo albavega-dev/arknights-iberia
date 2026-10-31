@@ -3,35 +3,35 @@
   "source": {
     "repository": "ArknightsAssets/ArknightsGamedata",
     "en": {
-      "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+      "revision": "409bce70516f2420af61b1fc5680da60e448ab99",
       "characterPath": "en/gamedata/excel/character_table.json",
       "rangePath": "en/gamedata/excel/range_table.json"
     },
     "cn": {
-      "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+      "revision": "84bbfbb4978f3545645264bf741356a64909439f",
       "characterPath": "cn/gamedata/excel/character_table.json",
       "rangePath": "cn/gamedata/excel/range_table.json"
     }
   },
   "moduleRanges": [
-    { "operatorId": "char_1011_lava2", "uniEquipId": "uniequip_002_lava2", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-lava2", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Lava_the_Purgatory", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_1013_chen2", "uniEquipId": "uniequip_002_chen2", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-chen2", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Ch%27en_the_Holungday", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_109_fmout", "uniEquipId": "uniequip_002_fmout", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-fmout", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Gitano", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_128_plosis", "uniEquipId": "uniequip_002_plosis", "moduleType": "RIN-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "y-2", "modifiedRangeId": "y-3", "rangeKey": "module:rin-x-plosis", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/rin-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Ptilopsis", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_179_cgbird", "uniEquipId": "uniequip_002_cgbird", "moduleType": "RIN-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "y-2", "modifiedRangeId": "y-3", "rangeKey": "module:rin-x-cgbird", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/rin-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Nightingale", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_2015_dusk", "uniEquipId": "uniequip_002_dusk", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-dusk", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Dusk", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_213_mostma", "uniEquipId": "uniequip_003_mostma", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-mostma", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Mostima", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_275_breeze", "uniEquipId": "uniequip_002_breeze", "moduleType": "RIN-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "y-2", "modifiedRangeId": "y-3", "rangeKey": "module:rin-x-breeze", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/rin-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Breeze", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_279_excu", "uniEquipId": "uniequip_002_excu", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-excu", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Executor", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_346_aosta", "uniEquipId": "uniequip_002_aosta", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-aosta", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Aosta", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_373_lionhd", "uniEquipId": "uniequip_002_lionhd", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-lionhd", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Leonhardt", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_4016_kazema", "uniEquipId": "uniequip_002_kazema", "moduleType": "PUM-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "1-1", "modifiedRangeId": "x-4", "rangeKey": "module:pum-x-kazema", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/pum-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Kazemaru", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_4107_vrdant", "uniEquipId": "uniequip_002_vrdant", "moduleType": "PUM-Y", "level": 1, "mechanism": "rangeId", "baseRangeId": "1-1", "modifiedRangeId": "x-4", "rangeKey": "module:pum-y-vrdant", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/pum-y.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Verdant", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_4124_iana", "uniEquipId": "uniequip_002_iana", "moduleType": "PUM-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "1-1", "modifiedRangeId": "x-1", "rangeKey": "module:pum-x-iana", "grids": [{ "row": 2, "col": 0 }, { "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 0, "col": -2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -2, "col": 0 }], "iconUrl": "/assets/operator-modules/pum-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Iana", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_4163_rosesa", "uniEquipId": "uniequip_002_rosesa", "moduleType": "RIN-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "y-2", "modifiedRangeId": "y-3", "rangeKey": "module:rin-x-rosesa", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/rin-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Rose_Salt", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_4164_tecno", "uniEquipId": "uniequip_002_tecno", "moduleType": "SOC-Y", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-1", "modifiedRangeId": "3-18", "rangeKey": "module:soc-y-tecno", "grids": [{ "row": 2, "col": 0 }, { "row": 2, "col": 1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }, { "row": -2, "col": 0 }, { "row": -2, "col": 1 }], "iconUrl": "/assets/operator-modules/soc-y.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Tecno", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_4203_kichi", "uniEquipId": "uniequip_002_kichi", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-kichi", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Kichisei", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } },
-    { "operatorId": "char_440_pinecn", "uniEquipId": "uniequip_002_pinecn", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-pinecn", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Pinecone", "source": { "region": "en", "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8" } }
+    { "operatorId": "char_1011_lava2", "uniEquipId": "uniequip_002_lava2", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-lava2", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Lava_the_Purgatory", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_1013_chen2", "uniEquipId": "uniequip_002_chen2", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-chen2", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Ch%27en_the_Holungday", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_109_fmout", "uniEquipId": "uniequip_002_fmout", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-fmout", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Gitano", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_128_plosis", "uniEquipId": "uniequip_002_plosis", "moduleType": "RIN-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "y-2", "modifiedRangeId": "y-3", "rangeKey": "module:rin-x-plosis", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/rin-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Ptilopsis", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_179_cgbird", "uniEquipId": "uniequip_002_cgbird", "moduleType": "RIN-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "y-2", "modifiedRangeId": "y-3", "rangeKey": "module:rin-x-cgbird", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/rin-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Nightingale", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_2015_dusk", "uniEquipId": "uniequip_002_dusk", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-dusk", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Dusk", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_213_mostma", "uniEquipId": "uniequip_003_mostma", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-mostma", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Mostima", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_275_breeze", "uniEquipId": "uniequip_002_breeze", "moduleType": "RIN-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "y-2", "modifiedRangeId": "y-3", "rangeKey": "module:rin-x-breeze", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/rin-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Breeze", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_279_excu", "uniEquipId": "uniequip_002_excu", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-excu", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Executor", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_346_aosta", "uniEquipId": "uniequip_002_aosta", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-aosta", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Aosta", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_373_lionhd", "uniEquipId": "uniequip_002_lionhd", "moduleType": "SPC-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-6", "modifiedRangeId": "3-1", "rangeKey": "module:spc-x-lionhd", "grids": [{ "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/spc-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Leonhardt", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_4016_kazema", "uniEquipId": "uniequip_002_kazema", "moduleType": "PUM-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "1-1", "modifiedRangeId": "x-4", "rangeKey": "module:pum-x-kazema", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/pum-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Kazemaru", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_4107_vrdant", "uniEquipId": "uniequip_002_vrdant", "moduleType": "PUM-Y", "level": 1, "mechanism": "rangeId", "baseRangeId": "1-1", "modifiedRangeId": "x-4", "rangeKey": "module:pum-y-vrdant", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/pum-y.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Verdant", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_4124_iana", "uniEquipId": "uniequip_002_iana", "moduleType": "PUM-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "1-1", "modifiedRangeId": "x-1", "rangeKey": "module:pum-x-iana", "grids": [{ "row": 2, "col": 0 }, { "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 0, "col": -2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -2, "col": 0 }], "iconUrl": "/assets/operator-modules/pum-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Iana", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_4163_rosesa", "uniEquipId": "uniequip_002_rosesa", "moduleType": "RIN-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "y-2", "modifiedRangeId": "y-3", "rangeKey": "module:rin-x-rosesa", "grids": [{ "row": 1, "col": -1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": -1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": -1 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }], "iconUrl": "/assets/operator-modules/rin-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Rose_Salt", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_4164_tecno", "uniEquipId": "uniequip_002_tecno", "moduleType": "SOC-Y", "level": 1, "mechanism": "rangeId", "baseRangeId": "3-1", "modifiedRangeId": "3-18", "rangeKey": "module:soc-y-tecno", "grids": [{ "row": 2, "col": 0 }, { "row": 2, "col": 1 }, { "row": 1, "col": 0 }, { "row": 1, "col": 1 }, { "row": 1, "col": 2 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": 0, "col": 2 }, { "row": 0, "col": 3 }, { "row": -1, "col": 0 }, { "row": -1, "col": 1 }, { "row": -1, "col": 2 }, { "row": -2, "col": 0 }, { "row": -2, "col": 1 }], "iconUrl": "/assets/operator-modules/soc-y.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Tecno", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_4203_kichi", "uniEquipId": "uniequip_002_kichi", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-kichi", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Kichisei", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } },
+    { "operatorId": "char_440_pinecn", "uniEquipId": "uniequip_002_pinecn", "moduleType": "RPR-X", "level": 1, "mechanism": "rangeId", "baseRangeId": "2-5", "modifiedRangeId": "1-3", "rangeKey": "module:rpr-x-pinecn", "grids": [{ "row": 1, "col": 1 }, { "row": 0, "col": 0 }, { "row": 0, "col": 1 }, { "row": -1, "col": 1 }], "iconUrl": "/assets/operator-modules/rpr-x.png", "evidenceUrl": "https://arknights.wiki.gg/wiki/Pinecone", "source": { "region": "en", "revision": "409bce70516f2420af61b1fc5680da60e448ab99" } }
   ],
   "rangeDefinitions": {
     "cn:0-1": {
@@ -2049,7 +2049,7 @@
       "id": "char_002_amiya",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2077,7 +2077,7 @@
       "id": "char_003_kalts",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2106,7 +2106,7 @@
       "id": "char_009_12fce",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2124,7 +2124,7 @@
       "id": "char_010_chen",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2153,7 +2153,7 @@
       "id": "char_017_huang",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2182,7 +2182,7 @@
       "id": "char_1011_lava2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2210,7 +2210,7 @@
       "id": "char_1012_skadi2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2240,7 +2240,7 @@
       "id": "char_1013_chen2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2269,7 +2269,7 @@
       "id": "char_1014_nearl2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2297,7 +2297,7 @@
       "id": "char_1015_aglna2",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "MELEE",
       "tags": [
@@ -2327,7 +2327,7 @@
       "id": "char_1016_agoat2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2355,7 +2355,7 @@
       "id": "char_1019_siege2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2384,7 +2384,7 @@
       "id": "char_101_sora",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2413,7 +2413,7 @@
       "id": "char_1020_reed2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2443,7 +2443,7 @@
       "id": "char_1021_kroos2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2471,7 +2471,7 @@
       "id": "char_1022_flwr2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2500,7 +2500,7 @@
       "id": "char_1023_ghost2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2529,7 +2529,7 @@
       "id": "char_1024_hbisc2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2557,7 +2557,7 @@
       "id": "char_1026_gvial2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2587,7 +2587,7 @@
       "id": "char_1027_greyy2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2616,7 +2616,7 @@
       "id": "char_1028_texas2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2645,7 +2645,7 @@
       "id": "char_1029_yato2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2674,7 +2674,7 @@
       "id": "char_102_texas",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2703,7 +2703,7 @@
       "id": "char_1030_noirc2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2732,7 +2732,7 @@
       "id": "char_1031_slent2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2762,7 +2762,7 @@
       "id": "char_1032_excu2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2790,7 +2790,7 @@
       "id": "char_1033_swire2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2819,7 +2819,7 @@
       "id": "char_1034_jesca2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2849,7 +2849,7 @@
       "id": "char_1035_wisdel",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2877,7 +2877,7 @@
       "id": "char_1036_fang2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -2906,7 +2906,7 @@
       "id": "char_1038_whitw2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2935,7 +2935,7 @@
       "id": "char_1039_thorn2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2965,7 +2965,7 @@
       "id": "char_103_angel",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -2993,7 +2993,7 @@
       "id": "char_1040_blaze2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3023,7 +3023,7 @@
       "id": "char_1041_angel2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3052,7 +3052,7 @@
       "id": "char_1042_phatm2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3081,7 +3081,7 @@
       "id": "char_1043_leizi2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3110,7 +3110,7 @@
       "id": "char_1044_hsgma2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3139,7 +3139,7 @@
       "id": "char_1045_svash2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3168,7 +3168,7 @@
       "id": "char_1046_sbell2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3197,7 +3197,7 @@
       "id": "char_1047_halo2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3227,7 +3227,7 @@
       "id": "char_1048_orchd2",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "RANGED",
       "tags": [
@@ -3256,7 +3256,7 @@
       "id": "char_1049_catap2",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "MELEE",
       "tags": [
@@ -3286,7 +3286,7 @@
       "id": "char_1050_chen3",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3315,7 +3315,7 @@
       "id": "char_1051_headb2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3344,7 +3344,7 @@
       "id": "char_1052_kalts2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3374,7 +3374,7 @@
       "id": "char_106_franka",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3403,7 +3403,7 @@
       "id": "char_107_liskam",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3432,7 +3432,7 @@
       "id": "char_108_silent",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3460,7 +3460,7 @@
       "id": "char_109_fmout",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3488,7 +3488,7 @@
       "id": "char_110_deepcl",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3516,7 +3516,7 @@
       "id": "char_112_siege",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3545,7 +3545,7 @@
       "id": "char_113_cqbw",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3574,7 +3574,7 @@
       "id": "char_115_headbr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3603,7 +3603,7 @@
       "id": "char_117_myrrh",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3631,7 +3631,7 @@
       "id": "char_118_yuki",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3660,7 +3660,7 @@
       "id": "char_120_hibisc",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3683,7 +3683,7 @@
       "id": "char_121_lava",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3706,7 +3706,7 @@
       "id": "char_122_beagle",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3729,7 +3729,7 @@
       "id": "char_123_fang",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3752,7 +3752,7 @@
       "id": "char_124_kroos",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3775,7 +3775,7 @@
       "id": "char_126_shotst",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3804,7 +3804,7 @@
       "id": "char_127_estell",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3833,7 +3833,7 @@
       "id": "char_128_plosis",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3862,7 +3862,7 @@
       "id": "char_129_bluep",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3890,7 +3890,7 @@
       "id": "char_130_doberm",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3919,7 +3919,7 @@
       "id": "char_131_flameb",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -3948,7 +3948,7 @@
       "id": "char_133_mm",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -3977,7 +3977,7 @@
       "id": "char_134_ifrit",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4006,7 +4006,7 @@
       "id": "char_135_halo",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4034,7 +4034,7 @@
       "id": "char_136_hsguma",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4063,7 +4063,7 @@
       "id": "char_137_brownb",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4091,7 +4091,7 @@
       "id": "char_140_whitew",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4120,7 +4120,7 @@
       "id": "char_141_nights",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4149,7 +4149,7 @@
       "id": "char_143_ghost",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4178,7 +4178,7 @@
       "id": "char_144_red",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4207,7 +4207,7 @@
       "id": "char_145_prove",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4235,7 +4235,7 @@
       "id": "char_147_shining",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4264,7 +4264,7 @@
       "id": "char_148_nearl",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4293,7 +4293,7 @@
       "id": "char_149_scave",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4322,7 +4322,7 @@
       "id": "char_1502_crosly",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4350,7 +4350,7 @@
       "id": "char_150_snakek",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4378,7 +4378,7 @@
       "id": "char_151_myrtle",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4407,7 +4407,7 @@
       "id": "char_154_morgan",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4435,7 +4435,7 @@
       "id": "char_155_tiger",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4464,7 +4464,7 @@
       "id": "char_157_dagda",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4493,7 +4493,7 @@
       "id": "char_158_milu",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4522,7 +4522,7 @@
       "id": "char_159_peacok",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4553,7 +4553,7 @@
       "id": "char_163_hpsts",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4583,7 +4583,7 @@
       "id": "char_164_nightm",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4613,7 +4613,7 @@
       "id": "char_166_skfire",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4642,7 +4642,7 @@
       "id": "char_171_bldsk",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4671,7 +4671,7 @@
       "id": "char_172_svrash",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4700,7 +4700,7 @@
       "id": "char_173_slchan",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4729,7 +4729,7 @@
       "id": "char_174_slbell",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4757,7 +4757,7 @@
       "id": "char_179_cgbird",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4786,7 +4786,7 @@
       "id": "char_180_amgoat",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4815,7 +4815,7 @@
       "id": "char_181_flower",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4843,7 +4843,7 @@
       "id": "char_183_skgoat",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4871,7 +4871,7 @@
       "id": "char_185_frncat",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4899,7 +4899,7 @@
       "id": "char_187_ccheal",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4927,7 +4927,7 @@
       "id": "char_188_helage",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -4956,7 +4956,7 @@
       "id": "char_190_clour",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -4984,7 +4984,7 @@
       "id": "char_192_falco",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5008,7 +5008,7 @@
       "id": "char_193_frostl",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5037,7 +5037,7 @@
       "id": "char_194_leto",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5066,7 +5066,7 @@
       "id": "char_195_glassb",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5095,7 +5095,7 @@
       "id": "char_196_sunbr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5124,7 +5124,7 @@
       "id": "char_197_poca",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5153,7 +5153,7 @@
       "id": "char_198_blackd",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5182,7 +5182,7 @@
       "id": "char_199_yak",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5210,7 +5210,7 @@
       "id": "char_2012_typhon",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5238,7 +5238,7 @@
       "id": "char_2013_cerber",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5267,7 +5267,7 @@
       "id": "char_2014_nian",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5296,7 +5296,7 @@
       "id": "char_2015_dusk",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5326,7 +5326,7 @@
       "id": "char_201_moeshd",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5355,7 +5355,7 @@
       "id": "char_2023_ling",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5385,7 +5385,7 @@
       "id": "char_2024_chyue",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5413,7 +5413,7 @@
       "id": "char_2025_shu",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5443,7 +5443,7 @@
       "id": "char_2026_yu",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5472,7 +5472,7 @@
       "id": "char_2027_wang",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5501,7 +5501,7 @@
       "id": "char_202_demkni",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5531,7 +5531,7 @@
       "id": "char_204_platnm",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5559,7 +5559,7 @@
       "id": "char_206_gnosis",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5587,7 +5587,7 @@
       "id": "char_208_melan",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5611,7 +5611,7 @@
       "id": "char_209_ardign",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5634,7 +5634,7 @@
       "id": "char_210_stward",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5657,7 +5657,7 @@
       "id": "char_211_adnach",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5680,7 +5680,7 @@
       "id": "char_212_ansel",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5703,7 +5703,7 @@
       "id": "char_213_mostma",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5733,7 +5733,7 @@
       "id": "char_214_kafka",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5762,7 +5762,7 @@
       "id": "char_215_mantic",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5791,7 +5791,7 @@
       "id": "char_218_cuttle",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5820,7 +5820,7 @@
       "id": "char_219_meteo",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5849,7 +5849,7 @@
       "id": "char_220_grani",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5878,7 +5878,7 @@
       "id": "char_222_bpipe",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5907,7 +5907,7 @@
       "id": "char_225_haak",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -5936,7 +5936,7 @@
       "id": "char_226_hmau",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5965,7 +5965,7 @@
       "id": "char_230_savage",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -5994,7 +5994,7 @@
       "id": "char_235_jesica",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6023,7 +6023,7 @@
       "id": "char_236_rope",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6051,7 +6051,7 @@
       "id": "char_237_gravel",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6080,7 +6080,7 @@
       "id": "char_240_wyvern",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6103,7 +6103,7 @@
       "id": "char_241_panda",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6132,7 +6132,7 @@
       "id": "char_242_otter",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6161,7 +6161,7 @@
       "id": "char_243_waaifu",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6190,7 +6190,7 @@
       "id": "char_245_cello",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6219,7 +6219,7 @@
       "id": "char_248_mgllan",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6249,7 +6249,7 @@
       "id": "char_249_mlyss",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6278,7 +6278,7 @@
       "id": "char_250_phatom",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6308,7 +6308,7 @@
       "id": "char_252_bibeak",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6337,7 +6337,7 @@
       "id": "char_253_greyy",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6366,7 +6366,7 @@
       "id": "char_254_vodfox",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6394,7 +6394,7 @@
       "id": "char_258_podego",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6423,7 +6423,7 @@
       "id": "char_260_durnar",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6452,7 +6452,7 @@
       "id": "char_261_sddrag",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6481,7 +6481,7 @@
       "id": "char_263_skadi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6510,7 +6510,7 @@
       "id": "char_264_f12yin",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6539,7 +6539,7 @@
       "id": "char_265_sophia",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6568,7 +6568,7 @@
       "id": "char_271_spikes",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6596,7 +6596,7 @@
       "id": "char_272_strong",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6625,7 +6625,7 @@
       "id": "char_274_astesi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6654,7 +6654,7 @@
       "id": "char_275_breeze",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6683,7 +6683,7 @@
       "id": "char_277_sqrrel",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6711,7 +6711,7 @@
       "id": "char_278_orchid",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6734,7 +6734,7 @@
       "id": "char_279_excu",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6762,7 +6762,7 @@
       "id": "char_281_popka",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6786,7 +6786,7 @@
       "id": "char_282_catap",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6809,7 +6809,7 @@
       "id": "char_283_midn",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6832,7 +6832,7 @@
       "id": "char_284_spot",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6856,7 +6856,7 @@
       "id": "char_285_medic2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6875,7 +6875,7 @@
       "id": "char_286_cast3",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6894,7 +6894,7 @@
       "id": "char_289_gyuki",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6923,7 +6923,7 @@
       "id": "char_290_vigna",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -6952,7 +6952,7 @@
       "id": "char_291_aglina",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -6982,7 +6982,7 @@
       "id": "char_293_thorns",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7011,7 +7011,7 @@
       "id": "char_294_ayer",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7040,7 +7040,7 @@
       "id": "char_297_hamoni",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7068,7 +7068,7 @@
       "id": "char_298_susuro",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7096,7 +7096,7 @@
       "id": "char_300_phenxi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7124,7 +7124,7 @@
       "id": "char_301_cutter",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7153,7 +7153,7 @@
       "id": "char_302_glaze",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7182,7 +7182,7 @@
       "id": "char_304_zebra",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7211,7 +7211,7 @@
       "id": "char_306_leizi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7239,7 +7239,7 @@
       "id": "char_308_swire",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7268,7 +7268,7 @@
       "id": "char_311_mudrok",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7298,7 +7298,7 @@
       "id": "char_322_lmlee",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7328,7 +7328,7 @@
       "id": "char_325_bison",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7356,7 +7356,7 @@
       "id": "char_326_glacus",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7385,7 +7385,7 @@
       "id": "char_328_cammou",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7414,7 +7414,7 @@
       "id": "char_332_archet",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7442,7 +7442,7 @@
       "id": "char_333_sidero",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7471,7 +7471,7 @@
       "id": "char_336_folivo",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7500,7 +7500,7 @@
       "id": "char_337_utage",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7529,7 +7529,7 @@
       "id": "char_338_iris",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7557,7 +7557,7 @@
       "id": "char_340_shwaz",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7585,7 +7585,7 @@
       "id": "char_341_sntlla",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7614,7 +7614,7 @@
       "id": "char_343_tknogi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7643,7 +7643,7 @@
       "id": "char_344_beewax",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7672,7 +7672,7 @@
       "id": "char_345_folnic",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7701,7 +7701,7 @@
       "id": "char_346_aosta",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7729,7 +7729,7 @@
       "id": "char_347_jaksel",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7757,7 +7757,7 @@
       "id": "char_348_ceylon",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7785,7 +7785,7 @@
       "id": "char_349_chiave",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7814,7 +7814,7 @@
       "id": "char_350_surtr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7842,7 +7842,7 @@
       "id": "char_355_ethan",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7871,7 +7871,7 @@
       "id": "char_356_broca",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7900,7 +7900,7 @@
       "id": "char_358_lisa",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7930,7 +7930,7 @@
       "id": "char_362_saga",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -7959,7 +7959,7 @@
       "id": "char_363_toddi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -7987,7 +7987,7 @@
       "id": "char_365_aprl",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8015,7 +8015,7 @@
       "id": "char_366_acdrop",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8043,7 +8043,7 @@
       "id": "char_367_swllow",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8071,7 +8071,7 @@
       "id": "char_369_bena",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8100,7 +8100,7 @@
       "id": "char_373_lionhd",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8129,7 +8129,7 @@
       "id": "char_376_therex",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8148,7 +8148,7 @@
       "id": "char_377_gdglow",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8176,7 +8176,7 @@
       "id": "char_378_asbest",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8205,7 +8205,7 @@
       "id": "char_379_sesa",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8234,7 +8234,7 @@
       "id": "char_381_bubble",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8262,7 +8262,7 @@
       "id": "char_383_snsant",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8291,7 +8291,7 @@
       "id": "char_385_finlpp",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8320,7 +8320,7 @@
       "id": "char_388_mint",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8349,7 +8349,7 @@
       "id": "char_391_rosmon",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8377,7 +8377,7 @@
       "id": "char_393_toledo",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "RANGED",
       "tags": [
@@ -8405,7 +8405,7 @@
       "id": "char_394_hadiya",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8435,7 +8435,7 @@
       "id": "char_4000_jnight",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8454,7 +8454,7 @@
       "id": "char_4004_pudd",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8482,7 +8482,7 @@
       "id": "char_4006_melnte",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8511,7 +8511,7 @@
       "id": "char_4009_irene",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8541,7 +8541,7 @@
       "id": "char_400_weedy",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8571,7 +8571,7 @@
       "id": "char_4010_etlchi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8600,7 +8600,7 @@
       "id": "char_4011_lessng",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8628,7 +8628,7 @@
       "id": "char_4013_kjera",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8657,7 +8657,7 @@
       "id": "char_4014_lunacu",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8686,7 +8686,7 @@
       "id": "char_4015_spuria",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8715,7 +8715,7 @@
       "id": "char_4016_kazema",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8744,7 +8744,7 @@
       "id": "char_4017_puzzle",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8773,7 +8773,7 @@
       "id": "char_4019_ncdeer",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8802,7 +8802,7 @@
       "id": "char_401_elysm",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8831,7 +8831,7 @@
       "id": "char_4023_rfalcn",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8860,7 +8860,7 @@
       "id": "char_4025_aprot2",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8889,7 +8889,7 @@
       "id": "char_4026_vulpis",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -8918,7 +8918,7 @@
       "id": "char_4027_heyak",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8947,7 +8947,7 @@
       "id": "char_402_tuye",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -8975,7 +8975,7 @@
       "id": "char_4031_liesel",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9004,7 +9004,7 @@
       "id": "char_4032_provs",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9033,7 +9033,7 @@
       "id": "char_4036_forcer",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9062,7 +9062,7 @@
       "id": "char_4037_demetr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9091,7 +9091,7 @@
       "id": "char_4039_horn",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9120,7 +9120,7 @@
       "id": "char_4040_rockr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9148,7 +9148,7 @@
       "id": "char_4041_chnut",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9176,7 +9176,7 @@
       "id": "char_4042_lumen",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9205,7 +9205,7 @@
       "id": "char_4043_erato",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9234,7 +9234,7 @@
       "id": "char_4045_heidi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9263,7 +9263,7 @@
       "id": "char_4046_ebnhlz",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9291,7 +9291,7 @@
       "id": "char_4047_pianst",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9320,7 +9320,7 @@
       "id": "char_4048_doroth",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9349,7 +9349,7 @@
       "id": "char_4051_akkord",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9378,7 +9378,7 @@
       "id": "char_4052_surfer",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9407,7 +9407,7 @@
       "id": "char_4054_malist",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9435,7 +9435,7 @@
       "id": "char_4055_bgsnow",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9463,7 +9463,7 @@
       "id": "char_4056_titi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9493,7 +9493,7 @@
       "id": "char_4058_pepe",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9522,7 +9522,7 @@
       "id": "char_405_absin",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9550,7 +9550,7 @@
       "id": "char_4062_totter",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9578,7 +9578,7 @@
       "id": "char_4063_quartz",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9606,7 +9606,7 @@
       "id": "char_4064_mlynar",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9635,7 +9635,7 @@
       "id": "char_4065_judge",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9664,7 +9664,7 @@
       "id": "char_4066_highmo",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9692,7 +9692,7 @@
       "id": "char_4067_lolxh",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9720,7 +9720,7 @@
       "id": "char_4071_peper",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9748,7 +9748,7 @@
       "id": "char_4072_ironmn",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9777,7 +9777,7 @@
       "id": "char_4077_palico",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9795,7 +9795,7 @@
       "id": "char_4078_bdhkgt",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9824,7 +9824,7 @@
       "id": "char_4079_haini",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9852,7 +9852,7 @@
       "id": "char_4080_lin",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9881,7 +9881,7 @@
       "id": "char_4081_warmy",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -9910,7 +9910,7 @@
       "id": "char_4082_qiubai",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9939,7 +9939,7 @@
       "id": "char_4083_chimes",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9967,7 +9967,7 @@
       "id": "char_4087_ines",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -9996,7 +9996,7 @@
       "id": "char_4088_hodrer",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10024,7 +10024,7 @@
       "id": "char_4091_ulika",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10042,7 +10042,7 @@
       "id": "char_4093_frston",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10061,7 +10061,7 @@
       "id": "char_4098_vvana",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10090,7 +10090,7 @@
       "id": "char_4100_caper",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10118,7 +10118,7 @@
       "id": "char_4102_threye",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10146,7 +10146,7 @@
       "id": "char_4104_coldst",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10174,7 +10174,7 @@
       "id": "char_4105_almond",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10202,7 +10202,7 @@
       "id": "char_4106_bryota",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10231,7 +10231,7 @@
       "id": "char_4107_vrdant",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10260,7 +10260,7 @@
       "id": "char_4109_baslin",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10289,7 +10289,7 @@
       "id": "char_4110_delphn",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10317,7 +10317,7 @@
       "id": "char_4114_harold",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10345,7 +10345,7 @@
       "id": "char_4116_blkkgt",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10375,7 +10375,7 @@
       "id": "char_4117_ray",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10403,7 +10403,7 @@
       "id": "char_4119_wanqin",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10432,7 +10432,7 @@
       "id": "char_411_tomimi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10461,7 +10461,7 @@
       "id": "char_4121_zuole",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10490,7 +10490,7 @@
       "id": "char_4122_grabds",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10519,7 +10519,7 @@
       "id": "char_4123_ela",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10549,7 +10549,7 @@
       "id": "char_4124_iana",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10578,7 +10578,7 @@
       "id": "char_4125_rdoc",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10607,7 +10607,7 @@
       "id": "char_4126_fuze",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10636,7 +10636,7 @@
       "id": "char_4130_luton",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10665,7 +10665,7 @@
       "id": "char_4131_odda",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10694,7 +10694,7 @@
       "id": "char_4132_ascln",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10723,7 +10723,7 @@
       "id": "char_4133_logos",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10751,7 +10751,7 @@
       "id": "char_4134_cetsyr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10781,7 +10781,7 @@
       "id": "char_4136_phonor",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10800,7 +10800,7 @@
       "id": "char_4137_udflow",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10830,7 +10830,7 @@
       "id": "char_4138_narant",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10858,7 +10858,7 @@
       "id": "char_4139_papyrs",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10886,7 +10886,7 @@
       "id": "char_4140_lasher",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10915,7 +10915,7 @@
       "id": "char_4141_marcil",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -10945,7 +10945,7 @@
       "id": "char_4142_laios",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -10974,7 +10974,7 @@
       "id": "char_4143_sensi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11003,7 +11003,7 @@
       "id": "char_4144_chilc",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11032,7 +11032,7 @@
       "id": "char_4145_ulpia",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11061,7 +11061,7 @@
       "id": "char_4146_nymph",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11091,7 +11091,7 @@
       "id": "char_4147_mitm",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11120,7 +11120,7 @@
       "id": "char_4148_philae",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11149,7 +11149,7 @@
       "id": "char_4151_tinman",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11178,7 +11178,7 @@
       "id": "char_4155_talr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11207,7 +11207,7 @@
       "id": "char_415_flint",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11235,7 +11235,7 @@
       "id": "char_4162_cathy",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11264,7 +11264,7 @@
       "id": "char_4163_rosesa",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11293,7 +11293,7 @@
       "id": "char_4164_tecno",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11321,7 +11321,7 @@
       "id": "char_4165_ctrail",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11350,7 +11350,7 @@
       "id": "char_4166_varkis",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11379,7 +11379,7 @@
       "id": "char_416_zumama",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11409,7 +11409,7 @@
       "id": "char_4171_wulfen",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11438,7 +11438,7 @@
       "id": "char_4172_xingzh",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11467,7 +11467,7 @@
       "id": "char_4173_nowell",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11495,7 +11495,7 @@
       "id": "char_4177_brigid",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11523,7 +11523,7 @@
       "id": "char_4178_alanna",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11552,7 +11552,7 @@
       "id": "char_4179_monstr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11582,7 +11582,7 @@
       "id": "char_4182_oblvns",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11610,7 +11610,7 @@
       "id": "char_4183_mortis",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11639,7 +11639,7 @@
       "id": "char_4184_dolris",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11668,7 +11668,7 @@
       "id": "char_4185_amoris",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11698,7 +11698,7 @@
       "id": "char_4186_tmoris",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11727,7 +11727,7 @@
       "id": "char_4187_graceb",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11756,7 +11756,7 @@
       "id": "char_4188_confes",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11775,7 +11775,7 @@
       "id": "char_4191_tippi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11804,7 +11804,7 @@
       "id": "char_4193_lemuen",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11833,7 +11833,7 @@
       "id": "char_4194_rmixer",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11863,7 +11863,7 @@
       "id": "char_4195_radian",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11893,7 +11893,7 @@
       "id": "char_4196_reckpr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11921,7 +11921,7 @@
       "id": "char_4198_christ",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -11950,7 +11950,7 @@
       "id": "char_4199_makiri",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -11979,7 +11979,7 @@
       "id": "char_4202_haruka",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12009,7 +12009,7 @@
       "id": "char_4203_kichi",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12037,7 +12037,7 @@
       "id": "char_4204_mantra",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12067,7 +12067,7 @@
       "id": "char_4207_branch",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -12096,7 +12096,7 @@
       "id": "char_4208_wintim",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -12125,7 +12125,7 @@
       "id": "char_420_flamtl",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -12154,7 +12154,7 @@
       "id": "char_4211_snhunt",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12183,7 +12183,7 @@
       "id": "char_4212_nasti",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -12212,7 +12212,7 @@
       "id": "char_4213_skybx",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12240,7 +12240,7 @@
       "id": "char_4214_cairn",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -12269,7 +12269,7 @@
       "id": "char_4215_buddy",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "RANGED",
       "tags": [
@@ -12288,7 +12288,7 @@
       "id": "char_4217_makoto",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "MELEE",
       "tags": [
@@ -12318,7 +12318,7 @@
       "id": "char_4218_aigis",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "RANGED",
       "tags": [
@@ -12346,7 +12346,7 @@
       "id": "char_4219_yukari",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "RANGED",
       "tags": [
@@ -12375,7 +12375,7 @@
       "id": "char_421_crow",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -12403,7 +12403,7 @@
       "id": "char_4220_kormr",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "MELEE",
       "tags": [
@@ -12422,7 +12422,7 @@
       "id": "char_4221_ju",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12450,7 +12450,7 @@
       "id": "char_4222_taraxa",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12478,7 +12478,7 @@
       "id": "char_4223_botany",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12506,7 +12506,7 @@
       "id": "char_4224_turdus",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12534,7 +12534,7 @@
       "id": "char_4225_tanya",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -12563,7 +12563,7 @@
       "id": "char_4226_veen",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12591,7 +12591,7 @@
       "id": "char_4227_gallus",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12610,7 +12610,7 @@
       "id": "char_4228_closur",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12639,7 +12639,7 @@
       "id": "char_4229_aphris",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "RANGED",
       "tags": [
@@ -12668,7 +12668,7 @@
       "id": "char_422_aurora",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -12697,7 +12697,7 @@
       "id": "char_4230_mcnist",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "MELEE",
       "tags": [
@@ -12727,7 +12727,7 @@
       "id": "char_4231_clemnt",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "MELEE",
       "tags": [
@@ -12756,7 +12756,7 @@
       "id": "char_4232_hbound",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "RANGED",
       "tags": [
@@ -12785,7 +12785,7 @@
       "id": "char_4234_pedro",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "RANGED",
       "tags": [
@@ -12814,7 +12814,7 @@
       "id": "char_4235_thumpy",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "MELEE",
       "tags": [
@@ -12843,7 +12843,7 @@
       "id": "char_4236_tmslot",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "RANGED",
       "tags": [
@@ -12871,7 +12871,7 @@
       "id": "char_4237_jcinta",
       "source": {
         "region": "cn",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842"
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f"
       },
       "position": "MELEE",
       "tags": [
@@ -12900,7 +12900,7 @@
       "id": "char_423_blemsh",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -12930,7 +12930,7 @@
       "id": "char_426_billro",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12959,7 +12959,7 @@
       "id": "char_427_vigil",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -12988,7 +12988,7 @@
       "id": "char_430_fartth",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13016,7 +13016,7 @@
       "id": "char_431_ashlok",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13045,7 +13045,7 @@
       "id": "char_433_windft",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13074,7 +13074,7 @@
       "id": "char_436_whispr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13102,7 +13102,7 @@
       "id": "char_437_mizuki",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13131,7 +13131,7 @@
       "id": "char_440_pinecn",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13160,7 +13160,7 @@
       "id": "char_445_wscoot",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13188,7 +13188,7 @@
       "id": "char_446_aroma",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13217,7 +13217,7 @@
       "id": "char_449_glider",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13245,7 +13245,7 @@
       "id": "char_450_necras",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13274,7 +13274,7 @@
       "id": "char_451_robin",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13303,7 +13303,7 @@
       "id": "char_452_bstalk",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13332,7 +13332,7 @@
       "id": "char_455_nothin",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13361,7 +13361,7 @@
       "id": "char_456_ash",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13389,7 +13389,7 @@
       "id": "char_457_blitz",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13418,7 +13418,7 @@
       "id": "char_458_rfrost",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13447,7 +13447,7 @@
       "id": "char_459_tachak",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13476,7 +13476,7 @@
       "id": "char_464_cement",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13504,7 +13504,7 @@
       "id": "char_466_qanik",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13533,7 +13533,7 @@
       "id": "char_469_indigo",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13562,7 +13562,7 @@
       "id": "char_472_pasngr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13590,7 +13590,7 @@
       "id": "char_473_mberry",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13618,7 +13618,7 @@
       "id": "char_474_glady",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13648,7 +13648,7 @@
       "id": "char_475_akafyu",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13677,7 +13677,7 @@
       "id": "char_476_blkngt",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13706,7 +13706,7 @@
       "id": "char_478_kirara",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13735,7 +13735,7 @@
       "id": "char_479_sleach",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13764,7 +13764,7 @@
       "id": "char_484_robrta",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13793,7 +13793,7 @@
       "id": "char_485_pallas",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13822,7 +13822,7 @@
       "id": "char_486_takila",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13850,7 +13850,7 @@
       "id": "char_487_bobb",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13878,7 +13878,7 @@
       "id": "char_488_buildr",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13907,7 +13907,7 @@
       "id": "char_489_serum",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13936,7 +13936,7 @@
       "id": "char_491_humus",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -13965,7 +13965,7 @@
       "id": "char_492_quercu",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -13994,7 +13994,7 @@
       "id": "char_493_firwhl",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -14023,7 +14023,7 @@
       "id": "char_494_vendla",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -14051,7 +14051,7 @@
       "id": "char_496_wildmn",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -14080,7 +14080,7 @@
       "id": "char_497_ctable",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -14109,7 +14109,7 @@
       "id": "char_498_inside",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -14137,7 +14137,7 @@
       "id": "char_499_kaitou",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -14166,7 +14166,7 @@
       "id": "char_500_noirc",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -14184,7 +14184,7 @@
       "id": "char_501_durin",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [
@@ -14202,7 +14202,7 @@
       "id": "char_502_nblade",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "MELEE",
       "tags": [
@@ -14220,7 +14220,7 @@
       "id": "char_503_rang",
       "source": {
         "region": "en",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8"
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99"
       },
       "position": "RANGED",
       "tags": [

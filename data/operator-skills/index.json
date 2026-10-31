@@ -4,80 +4,80 @@
   "sources": {
     "en": {
       "repository": "ArknightsAssets/ArknightsGamedata",
-      "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+      "revision": "409bce70516f2420af61b1fc5680da60e448ab99",
       "path": "en/gamedata/excel/skill_table.json",
-      "sha256": "C70AAB798F37A07C5D1BB30D0E596260F8FC2458773A33A573660E1144C58900"
+      "sha256": "1F4B1BA220A2ABB11A06FDA66B715695EBE1B56F4C6C1583E33A4E20C4B81F0A"
     },
     "cn": {
       "repository": "ArknightsAssets/ArknightsGamedata",
-      "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+      "revision": "84bbfbb4978f3545645264bf741356a64909439f",
       "path": "cn/gamedata/excel/skill_table.json",
-      "sha256": "A3B1A5680421BA32465211E3876475E1AAD116CFCCC63755352AE667559A6E88"
+      "sha256": "0E134340D77DFF0404011F6419277FEDD7F93693778DD2B1F1AD3C1AE29F5F06"
     }
   },
   "tables": {
     "en": {
       "character_table": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99",
         "path": "en/gamedata/excel/character_table.json",
-        "sha256": "DDAC29AF8BF303D3DFDD92EC7D6C822605EABD0625AE544B97434DE517F9E7C3"
+        "sha256": "CA0663517EC917AEC88A11A41D1B38611EAC29A5B5353DABC459B0102591D9E4"
       },
       "skill_table": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99",
         "path": "en/gamedata/excel/skill_table.json",
-        "sha256": "C70AAB798F37A07C5D1BB30D0E596260F8FC2458773A33A573660E1144C58900"
+        "sha256": "1F4B1BA220A2ABB11A06FDA66B715695EBE1B56F4C6C1583E33A4E20C4B81F0A"
       },
       "range_table": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99",
         "path": "en/gamedata/excel/range_table.json",
         "sha256": "A98344D688A8933C4DD7DDAAE3CB76C4347295359A18B60B918042CC2542D9D9"
       },
       "gamedata_const": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99",
         "path": "en/gamedata/excel/gamedata_const.json",
-        "sha256": "F45652A5C0DAB05A9774C286B9E21655569D24B809C1678BAE3D15D08A97CACD"
+        "sha256": "4A8DEF16D1F6125B0C8FCDF2451AEBAC8AA27BFED784D1B9B5F5A3EBCC35231D"
       },
       "building_data": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "3aaa25b649fed5dedad9527602826dc487ea07d8",
+        "revision": "409bce70516f2420af61b1fc5680da60e448ab99",
         "path": "en/gamedata/excel/building_data.json",
-        "sha256": "A46851367F3844E3EFB37C9C540BA0AE55A8F5D46360F2B24CD4AE44DDC152C4"
+        "sha256": "9D07CDBCD1BA466E6329756D9500CC1AF9405B55B5D31E797A13B8857FCD8EF1"
       }
     },
     "cn": {
       "character_table": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f",
         "path": "cn/gamedata/excel/character_table.json",
-        "sha256": "12652FA249763EA1D1F8F147F2EFE6A98EFEE593F38DBEF471DDBC9A234B70E5"
+        "sha256": "F199EF7ED94A8CE4AF05DAE6657B3E340F85CAB5F6EA010D2F394696F49E91F5"
       },
       "skill_table": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f",
         "path": "cn/gamedata/excel/skill_table.json",
-        "sha256": "A3B1A5680421BA32465211E3876475E1AAD116CFCCC63755352AE667559A6E88"
+        "sha256": "0E134340D77DFF0404011F6419277FEDD7F93693778DD2B1F1AD3C1AE29F5F06"
       },
       "range_table": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f",
         "path": "cn/gamedata/excel/range_table.json",
         "sha256": "A98344D688A8933C4DD7DDAAE3CB76C4347295359A18B60B918042CC2542D9D9"
       },
       "gamedata_const": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f",
         "path": "cn/gamedata/excel/gamedata_const.json",
-        "sha256": "DA2F59B8213AFBF7E1F745A092B48B0106A5D1B8903B9D73DC2883918B688231"
+        "sha256": "2FBA9C59C47E1D2173EEED074F87EEA844D9226FAE406DA3D6D3DE3D21E637EB"
       },
       "building_data": {
         "repository": "ArknightsAssets/ArknightsGamedata",
-        "revision": "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+        "revision": "84bbfbb4978f3545645264bf741356a64909439f",
         "path": "cn/gamedata/excel/building_data.json",
-        "sha256": "824CB228DD44697B469ECAE907ED835C74DA32068589CB52F352D4D32EB0F0F9"
+        "sha256": "15556552590AE1A5D1AC82C2008199448318F364C9ADB0F4747438E17675E824"
       }
     }
   },
@@ -2363,14 +2363,14 @@
     "char_4231_clemnt": {
       "region": "cn",
       "file": "char_4231_clemnt.json",
-      "bytes": 18260,
-      "sha256": "7E8070AA0E88EB8558744A6348577CA95B87A2C44018FCCF2FD34249752569D4"
+      "bytes": 18280,
+      "sha256": "FEBA888C9007E68F78D36EA183012796AC5F77B300A5FCDD7C4AEE1F89F2413B"
     },
     "char_4232_hbound": {
       "region": "cn",
       "file": "char_4232_hbound.json",
       "bytes": 13986,
-      "sha256": "2B3C35962EE83317C4CBE5F5AE4E194B55D0983D3EE57C62B8C243DE8110B737"
+      "sha256": "E2BBB493C83A81DCD457B774E9383E0308DFB6AC3E7AFD3C0D771DEE44BB7193"
     },
     "char_4234_pedro": {
       "region": "cn",

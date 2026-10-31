@@ -2,21 +2,22 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { describe, it } from "node:test";
 
+import { gameDataRevisions } from "../src/game-data/gamedata-revisions";
 import { gitBlobSha } from "../src/game-data/git-blob";
 import { isFullCommit, parseTableList, snapshotDirectoryName, snapshotFile, snapshotManifest, snapshotMismatches, snapshotUrl, tablesFromReport } from "../src/game-data/gamedata-snapshot";
 
-const commit = "3aaa25b649fed5dedad9527602826dc487ea07d8";
+const commit = gameDataRevisions.en;
 const report = (status: Record<string, unknown>) => ({ findings: { revisions: { gamedata: { en: status } } } });
 
 describe("snapshot naming and table lists", () => {
   it("names the directory after the region and the short commit", () => {
-    assert.equal(snapshotDirectoryName("cn", commit), "cn-3aaa25b");
+    assert.equal(snapshotDirectoryName("cn", commit), `cn-${commit.slice(0, 7)}`);
     assert.equal(snapshotUrl(commit, "en", "skill_table"), `https://raw.githubusercontent.com/ArknightsAssets/ArknightsGamedata/${commit}/en/gamedata/excel/skill_table.json`);
   });
 
   it("accepts only full commits and plain table names", () => {
     assert.equal(isFullCommit(commit), true);
-    assert.equal(isFullCommit("3aaa25b"), false);
+    assert.equal(isFullCommit(commit.slice(0, 7)), false);
     assert.deepEqual(parseTableList("a_table, b_table,a_table"), ["a_table", "b_table"]);
     assert.throws(() => parseTableList("../secret"), /Invalid table names/);
     assert.throws(() => parseTableList(" , "), /empty/);

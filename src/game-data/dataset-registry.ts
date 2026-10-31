@@ -162,6 +162,25 @@ export const curatedDataFiles = [
   "data/operator-module-modes.json",
 ] as const;
 
+export type CuratedProvenanceEntry = Readonly<{
+  file: string;
+  /** Tables the recorded revisions point to, per region. */
+  tables: Readonly<Partial<Record<"en" | "cn", readonly string[]>>>;
+  /** Value each recorded revision backs; data:regenerate moves the revision when that value is identical in the new one. */
+  backs: string;
+}>;
+
+/** Curated files of data/ that record the GameData revision they were checked against (scripts/reverify-curated-provenance.ts). */
+export const curatedProvenance = {
+  affiliations: { file: "data/operator-affiliation-manifest.json", tables: { en: ["character_table"], cn: ["character_table"] }, backs: "subPower[] field named by sourceField of each association" },
+  "module-modes": { file: "data/operator-module-modes.json", tables: { cn: ["roguelike_topic_table"] }, backs: "field of each gamedata source (topics.rogue_6.name); the recorded table hash moves with the revision" },
+  factions: { file: "data/operator-faction-manifest.json", tables: { en: ["character_table"] }, backs: "mainPower nationId, groupId and teamId of every operator in the EN table (generatedFrom names the EN revision only)" },
+  "cn-release": { file: "data/operator-cn-release-manifest.json", tables: { en: ["character_table"], cn: ["gacha_table", "roguelike_topic_table"] }, backs: "EN name of every operator; openTime and detail of each cited banner; startTime of each cited Integrated Strategies topic" },
+  regional: { file: "data/operator-regional-manifest.json", tables: { en: ["character_table"], cn: ["character_table"] }, backs: "playable operators of each region; playableCount and the informative skippedCount are recomputed" },
+  tactical: { file: "data/operator-tactical-manifest.json", tables: { en: ["character_table", "range_table"], cn: ["character_table", "range_table"] }, backs: "position, tags, phase ranges and their grids of every operator; base and modified ranges of each module range" },
+} as const satisfies Record<string, CuratedProvenanceEntry>;
+export type CuratedProvenanceId = keyof typeof curatedProvenance;
+
 const entries = <T>(record: Readonly<Record<string, T>>) => Object.entries(record) as [string, T][];
 const unique = <T>(values: readonly T[]) => [...new Set(values)];
 

@@ -5,18 +5,18 @@ export const gameDataRepository = "ArknightsAssets/ArknightsGamedata";
 
 // Pinned GameData commits shared by the stats manifest, the operator bundle and tactical data.
 export const gameDataRevisions: Readonly<Record<GameDataRegion, string>> = {
-  en: "3aaa25b649fed5dedad9527602826dc487ea07d8",
-  cn: "e4888c5b4d9b57aa3bfd4d109ae70f74cf3b7842",
+  en: "409bce70516f2420af61b1fc5680da60e448ab99",
+  cn: "84bbfbb4978f3545645264bf741356a64909439f",
 };
 
 export const gameDataTableHashes: Readonly<Record<GameDataRegion, Readonly<Record<GameDataTable, string>>>> = {
   en: {
-    character_table: "DDAC29AF8BF303D3DFDD92EC7D6C822605EABD0625AE544B97434DE517F9E7C3",
+    character_table: "CA0663517EC917AEC88A11A41D1B38611EAC29A5B5353DABC459B0102591D9E4",
     uniequip_table: "211A60007795D0337A6D55ADE85AA2038EA0842957038324829F9E78A99579ED",
     battle_equip_table: "B34715324F31C601ED0D45A7C7945091EF0FDFC2F7FBD9C7D39C8A89CD89B502",
   },
   cn: {
-    character_table: "12652FA249763EA1D1F8F147F2EFE6A98EFEE593F38DBEF471DDBC9A234B70E5",
+    character_table: "F199EF7ED94A8CE4AF05DAE6657B3E340F85CAB5F6EA010D2F394696F49E91F5",
     uniequip_table: "D4E9D6A404117ED695EBCFFDDDF329BE61A389AD6679D1E5DFF23BB121FC9F61",
     battle_equip_table: "1E52FEC685F1D3C193F3AAA64A47E94D41F5C191C61D5EDA86A958F832B0719E",
   },
@@ -26,14 +26,14 @@ export type GameDataSkillTable = "skill_table" | "range_table" | "gamedata_const
 
 export const gameDataSkillTableHashes: Readonly<Record<GameDataRegion, Readonly<Record<GameDataSkillTable, string>>>> = {
   en: {
-    skill_table: "C70AAB798F37A07C5D1BB30D0E596260F8FC2458773A33A573660E1144C58900",
+    skill_table: "1F4B1BA220A2ABB11A06FDA66B715695EBE1B56F4C6C1583E33A4E20C4B81F0A",
     range_table: "A98344D688A8933C4DD7DDAAE3CB76C4347295359A18B60B918042CC2542D9D9",
-    gamedata_const: "F45652A5C0DAB05A9774C286B9E21655569D24B809C1678BAE3D15D08A97CACD",
+    gamedata_const: "4A8DEF16D1F6125B0C8FCDF2451AEBAC8AA27BFED784D1B9B5F5A3EBCC35231D",
   },
   cn: {
-    skill_table: "A3B1A5680421BA32465211E3876475E1AAD116CFCCC63755352AE667559A6E88",
+    skill_table: "0E134340D77DFF0404011F6419277FEDD7F93693778DD2B1F1AD3C1AE29F5F06",
     range_table: "A98344D688A8933C4DD7DDAAE3CB76C4347295359A18B60B918042CC2542D9D9",
-    gamedata_const: "DA2F59B8213AFBF7E1F745A092B48B0106A5D1B8903B9D73DC2883918B688231",
+    gamedata_const: "2FBA9C59C47E1D2173EEED074F87EEA844D9226FAE406DA3D6D3DE3D21E637EB",
   },
 };
 
@@ -41,8 +41,8 @@ export const gameDataSkillTableHashes: Readonly<Record<GameDataRegion, Readonly<
 export type GameDataBuildingTable = "building_data";
 
 export const gameDataBuildingTableHashes: Readonly<Record<GameDataRegion, Readonly<Record<GameDataBuildingTable, string>>>> = {
-  en: { building_data: "A46851367F3844E3EFB37C9C540BA0AE55A8F5D46360F2B24CD4AE44DDC152C4" },
-  cn: { building_data: "824CB228DD44697B469ECAE907ED835C74DA32068589CB52F352D4D32EB0F0F9" },
+  en: { building_data: "9D07CDBCD1BA466E6329756D9500CC1AF9405B55B5D31E797A13B8857FCD8EF1" },
+  cn: { building_data: "15556552590AE1A5D1AC82C2008199448318F364C9ADB0F4747438E17675E824" },
 };
 
 // Trust frames: favor points and their trust percentage.
@@ -67,8 +67,8 @@ export type GameDataReleaseTable = "gacha_table" | "roguelike_topic_table";
 export const gameDataReleaseTableHashes: Readonly<Record<GameDataRegion, Readonly<Partial<Record<GameDataReleaseTable, string>>>>> = {
   en: {},
   cn: {
-    gacha_table: "40F7CFEE04EA9DDC48D717F64EA9EB0C608514A2D94FC3F0800A1B93F7EE98AF",
-    roguelike_topic_table: "9C9B9527A3B22A8776A3554117506623EBEBAE7DFF2E688B12F7C0864DD19850",
+    gacha_table: "206C273D2E7DB0C82A29B448450224C43EBD10104DC004301798AE17FE0D0748",
+    roguelike_topic_table: "A923AE051FAD0215DD79CBB488B479522A85A8ADB794B879AD147C7C26E6743C",
   },
 };
 

@@ -87,8 +87,9 @@ export function revisionChanges(reference: unknown, generated: unknown, changes 
   return changes;
 }
 
+/** Applies the paired changes to every value; a full commit inside a longer string (a source URL) changes too. */
 export function applyRevisionChanges(value: unknown, changes: ReadonlyMap<string, string | null>): unknown {
-  if (typeof value === "string") return changes.get(value) ?? value;
+  if (typeof value === "string") return changes.get(value) ?? value.replace(/\b[0-9a-f]{40}\b/g, (commit) => changes.get(commit) ?? commit);
   if (Array.isArray(value)) return value.map((item) => applyRevisionChanges(item, changes));
   if (isRecord(value)) return Object.fromEntries(Object.entries(value).map(([name, item]) => [name, applyRevisionChanges(item, changes)]));
   return value;
