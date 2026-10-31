@@ -23,7 +23,7 @@ function args(argv: readonly string[]): { en?: string; cn?: string; error?: stri
   if (!values["--en-snapshot"] || !values["--cn-snapshot"] || argv.length !== 4) return { error: "missing-arguments" };
   return { en: values["--en-snapshot"], cn: values["--cn-snapshot"] };
 }
-function playable(value: SnapshotRecord): boolean { return value.isNotObtainable === false && typeof value.name === "string" && value.name.trim() !== "" && typeof value.profession === "string" && professions.has(value.profession) && Array.isArray(value.phases) && /^TIER_[1-6]$/u.test(String(value.rarity)); }
+export function playable(value: SnapshotRecord): boolean { return value.isNotObtainable === false && typeof value.name === "string" && value.name.trim() !== "" && typeof value.profession === "string" && professions.has(value.profession) && Array.isArray(value.phases) && /^TIER_[1-6]$/u.test(String(value.rarity)); }
 function ids(value: unknown): { readonly ids: readonly string[]; readonly duplicates: number } | undefined {
   if (!value || typeof value !== "object" || Array.isArray(value)) return undefined;
   const result: string[] = []; const seen = new Set<string>(); let duplicates = 0;

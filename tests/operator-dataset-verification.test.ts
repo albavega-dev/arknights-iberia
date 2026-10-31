@@ -73,6 +73,14 @@ describe("revision changes", () => {
     assert.deepEqual(applyRevisionChanges({ list: ["h1", "a", 3] }, changes), { list: ["h3", "a", 3] });
   });
 
+  it("changes a full commit inside a source URL, unless it is ambiguous", () => {
+    const [from, to, other] = ["1", "2", "3"].map((digit) => digit.repeat(40)) as [string, string, string];
+    const url = (commit: string) => `https://github.com/Owner/Data/blob/${commit}/cn/gamedata/excel/gacha_table.json#NORM_0_1_1`;
+    assert.equal(applyRevisionChanges(url(from), new Map([[from, to]])), url(to));
+    assert.equal(applyRevisionChanges(url(from), new Map([[from, null]])), url(from));
+    assert.equal(applyRevisionChanges(url(other), new Map([[from, to]])), url(other));
+  });
+
   it("expects the revision inside profiles and shared files only with revisionChange", () => {
     const reference = dataset({ profiles: [{ operatorId: "char_a", region: "en", source: { revision: "a" }, skills: [1] } as never], shared: { "glossary-en": { revision: "a" } } });
     const generated = dataset({ sources: { en: { revision: "b" } }, profiles: [{ operatorId: "char_a", region: "en", source: { revision: "b" }, skills: [1] } as never], shared: { "glossary-en": { revision: "b" } } });
