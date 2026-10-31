@@ -81,6 +81,19 @@ export function contentsUrl(repository: string, ref: string, directory?: string)
   return githubUrl(githubApiHost, ["repos", ...repositorySegments(repository), "contents", ...(directory === undefined ? [] : gameDataDirectorySegments(directory))], { ref: checkedRef });
 }
 
+/**
+ * A file of the image repository at a commit. File names come from tree listings and may hold characters such as "&",
+ * so each segment is only checked for separators, control characters and dot segments, then encoded.
+ */
+export function rawImageUrl(commit: string, path: string): URL {
+  const segments = path.split("/");
+  for (const segment of segments) {
+    if (!segment || segment === "." || segment === ".." || /[\\\u0000-\u001f\u007f]/u.test(segment)) throw new Error(`Invalid image path: ${JSON.stringify(path)}`);
+  }
+  const url = new URL(`https://${githubRawHost}/${[...repositorySegments(imageRepository), gitObjectId(commit), ...segments].map(encodeURIComponent).join("/")}`);
+  return assertGitHubUrl(url, githubRawHost);
+}
+
 export function rawGameDataUrl(commit: string, region: GameDataRegion, table: string): URL {
   return githubUrl(githubRawHost, [...repositorySegments(gameDataRepository), gitObjectId(commit), ...gameDataDirectorySegments(gameDataDirectory(region)), `${gameDataTable(table)}.json`]);
 }
