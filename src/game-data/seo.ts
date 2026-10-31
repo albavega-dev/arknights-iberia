@@ -1,9 +1,9 @@
 import type { Metadata, MetadataRoute } from "next";
 
+import { getOperatorPageTitle, getOperatorPublicSlugs } from "./operator-slugs";
 import { getOperatorArchetypeName } from "./operator-archetypes";
 import { compareCodeUnits } from "./string-order";
 import { ogConversion, ogSiteImageUrl } from "./operator-og-images";
-import { getOperatorPublicSlugs } from "./operator-slugs";
 import { getOperatorDisplayName, type OperatorRecord } from "./operators";
 
 export const siteName = "Arknights Iberia";
@@ -50,6 +50,42 @@ export function getOperatorPageDescription(operator: Pick<OperatorRecord, "name"
 
 export function getCatalogPageDescription(operatorCount: number): string {
   return `Catálogo de ${operatorCount} operadores de Arknights en español: filtra por clase, arquetipo, rareza y facción y consulta sus habilidades, módulos y estadísticas.`;
+}
+
+/** Metadata of the root layout, inherited by every page that does not replace it. */
+export function buildSiteMetadata(origin: string): Metadata {
+  const title = `${siteTitle} | ${siteName}`;
+  return {
+    metadataBase: new URL(origin),
+    title: { default: title, template: `%s | ${siteName}` },
+    description: siteDescription,
+    alternates: { canonical: "/" },
+    openGraph: { type: "website", siteName, locale: "es_ES", title, description: siteDescription, url: "/", images: [previewImage(ogSiteImageUrl())] },
+    twitter: { card: "summary_large_image", title, description: siteDescription, images: [ogSiteImageUrl()] },
+  };
+}
+
+export function buildCatalogMetadata(operatorCount: number): Metadata {
+  return buildPageMetadata({ title: "Operadores de Arknights en español", description: getCatalogPageDescription(operatorCount), path: "/operators" });
+}
+
+export function buildCreditsMetadata(): Metadata {
+  return buildPageMetadata({
+    title: "Atribuciones",
+    description: "Fuentes de datos, wikis, recursos gráficos y bibliotecas en los que se apoya Arknights Iberia, con su autoría y licencias.",
+    path: "/credits",
+  });
+}
+
+/** Metadata of an operator page; an unknown slug gets a plain title because the page answers 404. */
+export function buildOperatorMetadata(resolved: Readonly<{ operator: OperatorRecord; publicSlug: string }> | null, imageUrlOf: (operatorId: string) => string): Metadata {
+  if (!resolved) return { title: "Operador no encontrado" };
+  return buildPageMetadata({
+    title: getOperatorPageTitle(resolved.operator),
+    description: getOperatorPageDescription(resolved.operator),
+    path: `/operators/${resolved.publicSlug}`,
+    image: imageUrlOf(resolved.operator.id),
+  });
 }
 
 /** Crawlers that collect content to train AI models; answering assistants and search engines stay allowed. */

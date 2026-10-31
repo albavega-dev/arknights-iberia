@@ -4,8 +4,8 @@ import { cache } from "react";
 
 import { listOperatorRecords, listPreviousSlugs } from "../../../game-data/operator-catalog-data";
 import { readOperatorBiography } from "../../../game-data/operator-biographies-data";
-import { getOperatorPageTitle, resolveOperatorSlug } from "../../../game-data/operator-slugs";
-import { buildPageMetadata, getOperatorPageDescription } from "../../../game-data/seo";
+import { resolveOperatorSlug } from "../../../game-data/operator-slugs";
+import { buildOperatorMetadata } from "../../../game-data/seo";
 import { getOperatorTacticalEntry } from "../../../game-data/operator-tactical";
 import { getOperatorArtistCredit } from "../../../game-data/operator-artist-credits";
 import { getOperatorIllustrationAssets } from "../../../game-data/operator-illustrations-data";
@@ -28,13 +28,7 @@ const resolveOperator = cache((slug: string) => {
 export async function generateMetadata({ params }: OperatorPageProps): Promise<Metadata> {
   const { slug } = await params;
   const resolved = resolveOperator(slug);
-  if (!resolved) return { title: "Operador no encontrado" };
-  return buildPageMetadata({
-    title: getOperatorPageTitle(resolved.operator),
-    description: getOperatorPageDescription(resolved.operator),
-    path: `/operators/${resolved.publicSlug}`,
-    image: getOperatorOgImageUrl(resolved.operator.id),
-  });
+  return buildOperatorMetadata(resolved, getOperatorOgImageUrl);
 }
 
 export const dynamic = "force-dynamic";

@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 
-import { buildPageMetadata } from "../../game-data/seo";
+import { buildCreditsMetadata } from "../../game-data/seo";
 
-export const metadata: Metadata = buildPageMetadata({
-  title: "Atribuciones",
-  description: "Fuentes de datos, wikis, recursos gráficos y bibliotecas en los que se apoya Arknights Iberia, con su autoría y licencias.",
-  path: "/credits",
-});
+export const metadata: Metadata = buildCreditsMetadata();
 
 const sourceGroups = [
   {

@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 
 import { listOperatorRecords } from "../../game-data/operator-catalog-data";
-import { buildPageMetadata, getCatalogPageDescription } from "../../game-data/seo";
+import { buildCatalogMetadata } from "../../game-data/seo";
 import { OperatorsData } from "./operators-data";
 
 export function generateMetadata(): Metadata {
-  return buildPageMetadata({ title: "Operadores de Arknights en español", description: getCatalogPageDescription(listOperatorRecords().length), path: "/operators" });
+  return buildCatalogMetadata(listOperatorRecords().length);
 }
 
 export default async function OperatorsPage() {

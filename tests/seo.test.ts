@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import type { OperatorRecord } from "../src/game-data/operators";
-import { aiTrainingCrawlers, buildPageMetadata, buildRobots, buildSitemap, getCatalogPageDescription, getOperatorPageDescription, getSiteOrigin } from "../src/game-data/seo";
+import { aiTrainingCrawlers, buildCatalogMetadata, buildCreditsMetadata, buildOperatorMetadata, buildPageMetadata, buildRobots, buildSiteMetadata, buildSitemap, getCatalogPageDescription, getOperatorPageDescription, getSiteOrigin } from "../src/game-data/seo";
 
 const operator = (id: string, name: string, extra: Partial<OperatorRecord> = {}): OperatorRecord => ({ id, name, class: "Caster", subClassId: "corecaster", rarity: 6, slug: `operator-${id}`, cnOnly: false, availabilityStatus: "global-snapshot", cnReleaseDate: null, globalReleaseDate: null, mainPowerNationId: null, mainPowerGroupId: null, mainPowerTeamId: null, mainFactionId: null, ...extra });
 
@@ -53,4 +53,33 @@ test("sitemap lists the pages and one entry per public operator slug without dat
   assert.ok(urls.includes("https://example.test/operators/ch-en"));
   assert.equal(new Set(urls).size, urls.length);
   assert.ok(buildSitemap("https://example.test", records).every((entry) => entry.lastModified === undefined));
+});
+
+test("the layout metadata sets the origin, the title template and the site preview for every page", () => {
+  const metadata = buildSiteMetadata("https://example.test");
+  assert.equal(String(metadata.metadataBase), "https://example.test/");
+  assert.deepEqual(metadata.title, { default: "Arknights en español: operadores, habilidades y módulos | Arknights Iberia", template: "%s | Arknights Iberia" });
+  assert.equal(metadata.alternates?.canonical, "/");
+  assert.equal((metadata.openGraph as { locale: string }).locale, "es_ES");
+  assert.deepEqual((metadata.twitter as { images: string[] }).images, ["/assets/operator-og-images/site.jpg"]);
+});
+
+test("the catalog and attribution pages have their own titles, descriptions and canonical paths", () => {
+  const catalog = buildCatalogMetadata(432);
+  assert.equal(catalog.title, "Operadores de Arknights en español");
+  assert.match(String(catalog.description), /432 operadores/);
+  assert.equal(catalog.alternates?.canonical, "/operators");
+  const credits = buildCreditsMetadata();
+  assert.equal(credits.title, "Atribuciones");
+  assert.equal(credits.alternates?.canonical, "/credits");
+  assert.notEqual(credits.description, catalog.description);
+});
+
+test("an operator page uses the public slug and the preview of that operator, and an unknown slug only a title", () => {
+  const amiya = operator("char_002_amiya", "Amiya");
+  const metadata = buildOperatorMetadata({ operator: amiya, publicSlug: "amiya" }, (id) => `/assets/operator-og-images/${id}.jpg`);
+  assert.equal(metadata.title, "Amiya: habilidades, módulos y estadísticas");
+  assert.equal(metadata.alternates?.canonical, "/operators/amiya");
+  assert.deepEqual((metadata.twitter as { images: string[] }).images, ["/assets/operator-og-images/char_002_amiya.jpg"]);
+  assert.deepEqual(buildOperatorMetadata(null, () => assert.fail("no image without an operator")), { title: "Operador no encontrado" });
 });

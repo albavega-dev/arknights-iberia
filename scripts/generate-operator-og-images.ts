@@ -9,9 +9,9 @@ import { loadSharp } from "./sync-operator-module-art";
 // that are new or changed are converted; the rest are checked against the manifest. `--check` converts nothing: it fails
 // when an illustration has no preview or a file differs from the manifest.
 
-const assetsRoot = "public/assets";
-const manifestPath = "data/operator-og-manifest.json";
-const siteSources = { background: `${assetsRoot}/backgrounds/mystic-sea.png`, mark: `${assetsRoot}/anchor.svg` };
+const assetsPath = "public/assets";
+const manifestFile = "data/operator-og-manifest.json";
+const siteSources = { background: `${assetsPath}/backgrounds/mystic-sea.png`, mark: `${assetsPath}/anchor.svg` };
 const { width, height, quality } = ogConversion;
 
 type SharpImage = {
@@ -42,13 +42,18 @@ async function convertSite(sharp: SharpFactory, background: Buffer, mark: Buffer
   return sharp(base).composite([{ input: icon, left: Math.round((width - size) / 2), top: Math.round((height - size) / 2) }]).jpeg({ quality, mozjpeg: true }).toBuffer();
 }
 
-export async function main(argv: readonly string[] = process.argv): Promise<void> {
+export type GenerateResult = Readonly<{ converted: number; kept: number; removed: number }>;
+
+/** `root` is the repository root; the tests point it to a folder with a few small images. */
+export async function main(argv: readonly string[] = process.argv, root = ".", loadSharpFactory: () => SharpFactory = () => loadSharp(ogConversion.tool) as unknown as SharpFactory): Promise<GenerateResult> {
   const check = argv.includes("--check");
+  const assetsRoot = join(root, assetsPath);
+  const manifestPath = join(root, manifestFile);
   const outDirectory = join(assetsRoot, ogImageDirectory);
   const illustrations = ogInventory(await readdir(join(assetsRoot, ogIllustrationDirectory)));
   const previous = await exists(manifestPath) ? await readJson(manifestPath) as OperatorOgManifest : null;
   const problems: string[] = [];
-  const sharp = check ? null : loadSharp(ogConversion.tool) as unknown as SharpFactory;
+  const sharp = check ? null : loadSharpFactory();
   const images: OperatorOgManifest["images"] = {};
   let converted = 0;
   for (const id of illustrations) {
@@ -66,8 +71,8 @@ export async function main(argv: readonly string[] = process.argv): Promise<void
     images[file] = { source, sourceSha256: sha256(sourceData), converted: { bytes: data.length, sha256: sha256(data) } };
     converted++;
   }
-  const background = await readFile(siteSources.background);
-  const mark = await readFile(siteSources.mark);
+  const background = await readFile(join(root, siteSources.background));
+  const mark = await readFile(join(root, siteSources.mark));
   const siteSourcesSha = { [siteSources.background]: sha256(background), [siteSources.mark]: sha256(mark) };
   const siteTarget = join(outDirectory, ogSiteImageFile);
   const siteCurrent = previous && await exists(siteTarget) ? await readFile(siteTarget) : null;
@@ -88,12 +93,14 @@ export async function main(argv: readonly string[] = process.argv): Promise<void
     for (const name of orphans) problems.push(`${name}: has no illustration`);
     if (problems.length > 0) throw new Error(`Open Graph previews out of date:\n${problems.join("\n")}`);
     console.log(`OK: ${illustrations.length} operator previews and the site image`);
-    return;
+    return { converted: 0, kept: illustrations.length + 1, removed: 0 };
   }
   for (const name of orphans) await rm(join(outDirectory, name));
   const manifest: OperatorOgManifest = { contractVersion: "1", conversion: { ...ogConversion }, images, site: site! };
   await writeFile(manifestPath, serializeDatasetJson(manifest), "utf8");
-  console.log(`Converted ${converted}, kept ${illustrations.length + 1 - converted}, removed ${orphans.length}`);
+  const result = { converted, kept: illustrations.length + 1 - converted, removed: orphans.length };
+  console.log(`Converted ${result.converted}, kept ${result.kept}, removed ${result.removed}`);
+  return result;
 }
 
 if (process.argv[1]?.endsWith("generate-operator-og-images.ts")) main().catch((error: unknown) => { console.error(error instanceof Error ? error.message : error); process.exitCode = 1; });
