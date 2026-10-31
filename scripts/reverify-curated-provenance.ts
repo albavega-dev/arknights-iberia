@@ -10,7 +10,7 @@
  *
  * Previous snapshots are <region>-<commit7> directories under --previous-snapshots (default: the parent of
  * --en-snapshot), checked against the manifest.json of that directory. --snapshot-hashes takes the new revision and
- * hashes from the manifest.json of each new snapshot instead of gamedata-revisions.ts. data:regenerate runs it after
+ * hashes from the manifest.json of each new snapshot instead of gamedata-revisions.ts. data:regenerate runs it before
  * the generators. Exit code: 0 every file current, 2 some differences wait for review, 1 a check failed.
  */
 import { createHash } from "node:crypto";
