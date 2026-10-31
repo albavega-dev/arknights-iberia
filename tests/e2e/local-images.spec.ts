@@ -3,7 +3,7 @@ import path from "node:path";
 
 import type { Locator } from "@playwright/test";
 
-import { expect, openCatalog, operatorCards, publicSlugs, records, test } from "./support";
+import { expect, expectHydrated, openCatalog, operatorCards, publicSlugs, records, test } from "./support";
 
 // Every image is a local copy under /assets; the fixture of support.ts already fails on any external request.
 const manifest = JSON.parse(readFileSync(path.join(process.cwd(), "data", "operator-image-manifest.json"), "utf8")) as { illustrations: Record<string, unknown> };
@@ -12,10 +12,13 @@ const withElite2 = records.find((operator) => !operator.cnOnly && operator.subCl
 /** Every image of the locator is a local file that the browser decoded. */
 async function expectLocalImages(images: Locator, directory: string): Promise<void> {
   await expect(images.first()).toBeVisible();
-  await expect.poll(() => images.evaluateAll((items, prefix) => items.every((item) => {
+  await expect.poll(() => images.evaluateAll((items, prefix) => items.map((item) => {
     const image = item as HTMLImageElement;
-    return new URL(image.currentSrc || image.src).pathname.startsWith(prefix) && image.complete && image.naturalWidth > 0;
-  }), `/assets/${directory}/`)).toBe(true);
+    const loaded = image.complete && image.naturalWidth > 0;
+    // Images load lazily: one outside the viewport (frequent on mobile) only loads once it is scrolled into view.
+    if (!loaded) image.scrollIntoView({ block: "nearest" });
+    return new URL(image.currentSrc || image.src).pathname.startsWith(prefix) && loaded;
+  }).every(Boolean), `/assets/${directory}/`)).toBe(true);
 }
 
 const illustrationPath = (variant: 1 | 2) => new RegExp(`/assets/operator-illustrations/${withElite2.id}_${variant}\\.webp$`);
@@ -40,6 +43,7 @@ test.describe("imágenes locales", () => {
     await expectLocalImages(illustration, "operator-illustrations");
     await expect(illustration).toHaveAttribute("src", illustrationPath(1));
 
+    await expectHydrated(page, "site");
     await page.getByRole("button", { name: "E2", exact: true }).click();
     const elite2 = page.locator("img.operator-detail-illustration.is-elite2");
     await expectLocalImages(elite2, "operator-illustrations");
