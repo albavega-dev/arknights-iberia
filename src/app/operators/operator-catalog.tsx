@@ -151,6 +151,7 @@ const OperatorCard = memo(function OperatorCard({
             alt=""
             fill
             sizes="(max-width: 440px) 145px, (max-width: 900px) 170px, 170px"
+            referrerPolicy="no-referrer"
             style={{ objectPosition: portrait.objectPosition, transform: `scale(${portrait.scale})` }}
             onError={() => setPortraitFailed(true)}
           />
