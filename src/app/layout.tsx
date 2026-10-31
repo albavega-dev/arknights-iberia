@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { buildSiteMetadata, getSiteOrigin } from "../game-data/seo";
+import { HydrationMarker } from "./hydration-marker";
 import { SiteShell } from "./site-shell";
 
 const geistSans = Geist({
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body><SiteShell>{children}</SiteShell></body>
+      <body><SiteShell>{children}</SiteShell><HydrationMarker scope="site" /></body>
     </html>
   );
 }
