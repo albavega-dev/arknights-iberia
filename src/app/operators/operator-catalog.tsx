@@ -4,7 +4,7 @@ import { compareCodeUnits } from "../../game-data/string-order";
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { ArrowDown, ArrowUp, ChevronDown, Grid3x3, RectangleVertical, RotateCcw } from "lucide-react";
 import {
@@ -129,6 +129,10 @@ function catalogStateToParams(state: CatalogFilterState): string {
   if (state.sortDirection !== "desc") params.set("dir", state.sortDirection);
   if (state.view !== "portraits") params.set("view", state.view);
   return params.toString();
+}
+
+function locationParams(): string {
+  return new URLSearchParams(window.location.search).toString();
 }
 
 function operatorCardLabel(
@@ -539,7 +543,6 @@ function OperatorOptionPopover({
 }
 
 export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: readonly OperatorRecord[]; newOperatorIds: readonly string[] }) {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const searchParamsText = searchParams.toString();
   const catalogRecords = useMemo(
@@ -564,28 +567,28 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
   const [sortKey, setSortKey] = useState<OperatorSortKey>(initialState.sortKey);
   const [sortDirection, setSortDirection] = useState<OperatorSortDirection>(initialState.sortDirection);
   const [view, setView] = useState<CatalogView>(initialState.view);
-  const isDefaultCnReleaseOrder = !searchParamsText.includes("sort=") && !searchParamsText.includes("dir=");
+  const isDefaultCnReleaseOrder = sortKey === "cnReleaseDate" && sortDirection === "desc";
   const lastUrlState = useRef(searchParamsText);
-  const commitState = useCallback(
-    (next: CatalogFilterState) => {
-      setQuery(next.query);
-      setClassName(next.className);
-      setSubClassIds(next.subClassIds);
-      setRarities(next.rarities);
-      setIncludeCnOnly(next.includeCnOnly);
-      setMainFactionId(next.mainFactionId);
-      setSortKey(next.sortKey);
-      setSortDirection(next.sortDirection);
-      setView(next.view);
-      const nextParams = catalogStateToParams(next);
-      const nextUrl = nextParams ? `?${nextParams}` : "/operators";
-      lastUrlState.current = nextParams;
-      router.replace(nextUrl, { scroll: false });
-    },
-    [router],
-  );
+  const commitState = useCallback((next: CatalogFilterState) => {
+    setQuery(next.query);
+    setClassName(next.className);
+    setSubClassIds(next.subClassIds);
+    setRarities(next.rarities);
+    setIncludeCnOnly(next.includeCnOnly);
+    setMainFactionId(next.mainFactionId);
+    setSortKey(next.sortKey);
+    setSortDirection(next.sortDirection);
+    setView(next.view);
+    const nextParams = catalogStateToParams(next);
+    lastUrlState.current = nextParams;
+    // The filters run on the client, so the URL is updated without a server request. Next.js syncs
+    // useSearchParams from history.replaceState in a transition, after the local state.
+    window.history.replaceState(null, "", nextParams ? `?${nextParams}` : "/operators");
+  }, []);
   useEffect(() => {
-    if (lastUrlState.current === searchParamsText) return;
+    // A lagging sync of an earlier replaceState must not undo newer local changes: only a URL that is
+    // also the current location (a link to /operators, back or forward) is read back.
+    if (lastUrlState.current === searchParamsText || locationParams() !== searchParamsText) return;
     const next = readCatalogState(new URLSearchParams(searchParamsText), catalogRecords);
     setQuery(next.query);
     setClassName(next.className);
