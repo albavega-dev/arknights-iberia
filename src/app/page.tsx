@@ -131,7 +131,7 @@ export default function Home() {
           <div className="landing-section-content">
             <h2 id="news-title">Novedades</h2>
             <article className="landing-news-entry">
-              <h3>5 de noviembre de 2026 - 0.2.2</h3>
+              <h3>6 de noviembre de 2026 - 0.2.2</h3>
               <ul>
                 <li>Las ilustraciones, los retratos y los iconos de los operadores se alojan ahora en la propia web, y las fichas cargan más rápido.</li>
                 <li><strong>Nueva vista por avatares</strong> en la biblioteca de operadores.</li>

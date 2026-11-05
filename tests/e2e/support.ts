@@ -109,10 +109,11 @@ export const test = base.extend<{ diagnostics: Diagnostics }>({
       return route.abort("blockedbyclient");
     });
     page.on("console", (message) => {
-      if (message.type() === "error") diagnostics.consoleErrors.push(message.text());
+      // Errors in the Permissions-Policy header, such as an unrecognized feature, are logged as warnings.
+      if (message.type() === "error" || /permissions-policy/i.test(message.text())) diagnostics.consoleErrors.push(message.text());
     });
     page.on("pageerror", (error) => diagnostics.consoleErrors.push(error.message));
-    // Report-only violations are logged at the info level, so they are turned into console errors.
+    // Each violation is reported with its directive and blocked URI, whatever the level of the browser's own message.
     await page.addInitScript(() => {
       document.addEventListener("securitypolicyviolation", (event) => console.error(`Content Security Policy violation (${event.disposition}): ${event.effectiveDirective} ${event.blockedURI}`));
     });

@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   agentRules: false,
   poweredByHeader: false,
   async headers() {
-    return securityHeaderRules(process.env.NODE_ENV === "development");
+    return securityHeaderRules();
   },
   // The Vercel free plan has no image transformations left: every image is served as is, never through /_next/image.
   images: {
