@@ -41,4 +41,38 @@ test.describe("SEO y cabeceras de seguridad", () => {
     const response = await request.get(new URL(image!).pathname);
     expect(response.headers()["content-type"]).toBe("image/jpeg");
   });
+
+  test("la portada, el catálogo y la ficha publican JSON-LD válido de schema.org", async ({ page }) => {
+    const jsonLd = async (path: string) => {
+      await page.goto(path);
+      const blocks = await page.locator('script[type="application/ld+json"]').allTextContents();
+      return blocks.map((text) => JSON.parse(text));
+    };
+    const [site] = await jsonLd("/");
+    expect(site).toMatchObject({ "@context": "https://schema.org", "@type": "WebSite", name: "Arknights Iberia", inLanguage: "es" });
+    expect(site.url).toMatch(/^https?:\/\/[^/]+\/$/);
+    expect(site.potentialAction).toBeUndefined();
+    const [catalog] = await jsonLd("/operators");
+    expect(catalog["@type"]).toBe("BreadcrumbList");
+    expect(catalog.itemListElement.map((item: { name: string }) => item.name)).toEqual(["Inicio", "Operadores"]);
+    const [detail] = await jsonLd("/operators/amiya");
+    expect(detail["@type"]).toBe("BreadcrumbList");
+    expect(detail.itemListElement.map((item: { position: number; name: string }) => [item.position, item.name])).toEqual([[1, "Inicio"], [2, "Operadores"], [3, "Amiya"]]);
+    expect(detail.itemListElement[2].item).toMatch(/\/operators\/amiya$/);
+  });
+
+  test("un slug inexistente y una ruta desconocida devuelven 404 con la página en español", async ({ page, diagnostics }) => {
+    for (const path of ["/operators/no-existe-este-operador", "/ruta-que-no-existe"]) {
+      const response = await page.goto(path);
+      expect(response?.status(), path).toBe(404);
+      // The 404 document itself is reported as a failed resource.
+      diagnostics.consoleErrors.splice(0);
+      await expect(page.getByRole("heading", { level: 1 })).toContainText("Esta ruta no llega a ningún puerto");
+      await expect(page.locator('link[rel="canonical"]')).toHaveCount(0);
+      await expect(page.locator('meta[property^="og:"], meta[name^="twitter:"]')).toHaveCount(0);
+      const robots = await page.locator('meta[name="robots"]').evaluateAll((tags) => tags.map((tag) => tag.getAttribute("content")));
+      expect(robots.length, path).toBeGreaterThan(0);
+      expect(robots.every((content) => /noindex/.test(content ?? "")), path).toBe(true);
+    }
+  });
 });

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 
 import { listOperatorRecords } from "../../game-data/operator-catalog-data";
-import { buildCatalogMetadata } from "../../game-data/seo";
+import { buildCatalogBreadcrumbJsonLd, buildCatalogMetadata, getSiteOrigin } from "../../game-data/seo";
+import { JsonLd } from "../json-ld";
 import { OperatorsData } from "./operators-data";
 
 export function generateMetadata(): Metadata {
@@ -12,6 +13,7 @@ export function generateMetadata(): Metadata {
 export default async function OperatorsPage() {
   return (
     <main className="operators-page" id="contenido">
+      <JsonLd data={buildCatalogBreadcrumbJsonLd(getSiteOrigin())} />
       <div className="operators-content">
         <header className="operators-heading">
           <h1>Operadores</h1>

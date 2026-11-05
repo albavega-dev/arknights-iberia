@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import type { OperatorRecord } from "../src/game-data/operators";
-import { aiTrainingCrawlers, buildCatalogMetadata, buildCreditsMetadata, buildOperatorMetadata, buildPageMetadata, buildRobots, buildSiteMetadata, buildSitemap, getCatalogPageDescription, getOperatorPageDescription, getSiteOrigin } from "../src/game-data/seo";
+import { aiTrainingCrawlers, buildNotFoundMetadata, buildBreadcrumbJsonLd, buildCatalogBreadcrumbJsonLd, buildOperatorBreadcrumbJsonLd, buildWebSiteJsonLd, serializeJsonLd, buildCatalogMetadata, buildCreditsMetadata, buildOperatorMetadata, buildPageMetadata, buildRobots, buildSiteMetadata, buildSitemap, getCatalogPageDescription, getOperatorPageDescription, getSiteOrigin } from "../src/game-data/seo";
 
 const operator = (id: string, name: string, extra: Partial<OperatorRecord> = {}): OperatorRecord => ({ id, name, class: "Caster", subClassId: "corecaster", rarity: 6, slug: `operator-${id}`, cnOnly: false, availabilityStatus: "global-snapshot", cnReleaseDate: null, globalReleaseDate: null, mainPowerNationId: null, mainPowerGroupId: null, mainPowerTeamId: null, mainFactionId: null, ...extra });
 
@@ -81,5 +81,48 @@ test("an operator page uses the public slug and the preview of that operator, an
   assert.equal(metadata.title, "Amiya: habilidades, módulos y estadísticas");
   assert.equal(metadata.alternates?.canonical, "/operators/amiya");
   assert.deepEqual((metadata.twitter as { images: string[] }).images, ["/assets/operator-og-images/char_002_amiya.jpg"]);
-  assert.deepEqual(buildOperatorMetadata(null, () => assert.fail("no image without an operator")), { title: "Operador no encontrado" });
+  assert.deepEqual(buildOperatorMetadata(null, () => assert.fail("no image without an operator")), buildNotFoundMetadata("Operador no encontrado"));
+});
+
+test("describes the site as a WebSite without a search action", () => {
+  const data = buildWebSiteJsonLd("https://example.test");
+  assert.equal(data["@context"], "https://schema.org");
+  assert.equal(data["@type"], "WebSite");
+  assert.equal(data.url, "https://example.test/");
+  assert.equal(data.inLanguage, "es");
+  assert.equal("potentialAction" in data, false);
+});
+
+test("builds breadcrumbs with consecutive positions and absolute URLs", () => {
+  const data = buildBreadcrumbJsonLd("https://example.test", [{ name: "A", path: "/" }, { name: "B", path: "/b" }]);
+  assert.equal(data["@type"], "BreadcrumbList");
+  assert.deepEqual(data.itemListElement, [
+    { "@type": "ListItem", position: 1, name: "A", item: "https://example.test/" },
+    { "@type": "ListItem", position: 2, name: "B", item: "https://example.test/b" },
+  ]);
+  assert.deepEqual(buildCatalogBreadcrumbJsonLd("https://example.test").itemListElement.map((item) => item.name), ["Inicio", "Operadores"]);
+  const trail = buildOperatorBreadcrumbJsonLd("https://example.test", operator("char_1", "Eyjafjalla"), "eyjafjalla").itemListElement;
+  assert.deepEqual(trail.map((item) => [item.position, item.name, item.item]), [
+    [1, "Inicio", "https://example.test/"],
+    [2, "Operadores", "https://example.test/operators"],
+    [3, "Eyjafjalla", "https://example.test/operators/eyjafjalla"],
+  ]);
+});
+
+test("serialises JSON-LD as valid JSON that cannot close the script element", () => {
+  const data = { "@context": "https://schema.org", name: "</script><b>x" };
+  const text = serializeJsonLd(data);
+  assert.doesNotMatch(text, /</);
+  assert.deepEqual(JSON.parse(text), data);
+});
+
+test("the 404 metadata is not indexable and drops the canonical and the previews of the layout", () => {
+  const metadata = buildNotFoundMetadata();
+  assert.equal(metadata.title, "Página no encontrada");
+  assert.equal(typeof metadata.description, "string");
+  assert.equal(metadata.alternates, null);
+  assert.equal(metadata.openGraph, null);
+  assert.equal(metadata.twitter, null);
+  assert.deepEqual(metadata.robots, { index: false, follow: false });
+  assert.equal(buildNotFoundMetadata("Operador no encontrado").title, "Operador no encontrado");
 });

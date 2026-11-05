@@ -1,4 +1,6 @@
 import { assetPath } from "../game-data/asset-paths";
+import { buildWebSiteJsonLd, getSiteOrigin } from "../game-data/seo";
+import { JsonLd } from "./json-ld";
 import { LandingSeparator } from "./landing-separator";
 
 const roadmap = [
@@ -43,6 +45,7 @@ const roadmap = [
 export default function Home() {
   return (
     <main className="landing-main" id="contenido">
+      <JsonLd data={buildWebSiteJsonLd(getSiteOrigin())} />
       <header className="landing-hero">
         <div>
           <h1>Arknights Iberia</h1>

@@ -1391,3 +1391,61 @@ h2 {
     margin-top: 4rem;
   }
 }
+.not-found-main {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 70vh;
+  place-items: center;
+  overflow: clip;
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 4vw, 3rem);
+  background: #191e21;
+}
+.not-found-main::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(25, 30, 33, 0.35) 0%, rgba(25, 30, 33, 0.9) 70%, #191e21 100%),
+    url("/assets/backgrounds/mystic-sea.png") 62% 24% / cover no-repeat;
+  content: "";
+  filter: blur(2px);
+  opacity: 0.85;
+  pointer-events: none;
+}
+.not-found-content {
+  display: grid;
+  width: min(100%, 640px);
+  justify-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+.not-found-beacon {
+  width: 56px;
+  height: 56px;
+  background: var(--color-brass);
+  -webkit-mask: url("/assets/mainpage/nav/lighthouse.png") center / contain no-repeat;
+  mask: url("/assets/mainpage/nav/lighthouse.png") center / contain no-repeat;
+}
+.not-found-code {
+  margin: 0;
+  color: var(--color-brass);
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.not-found-content h1 {
+  margin: 0;
+  color: #e2dbcc;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+.not-found-lead {
+  max-width: 52ch;
+  margin: 0;
+  color: #e2dbcc;
+  line-height: 1.6;
+}
