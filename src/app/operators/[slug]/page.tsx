@@ -5,7 +5,8 @@ import { cache } from "react";
 import { listOperatorRecords, listPreviousSlugs } from "../../../game-data/operator-catalog-data";
 import { readOperatorBiography } from "../../../game-data/operator-biographies-data";
 import { resolveOperatorSlug } from "../../../game-data/operator-slugs";
-import { buildOperatorMetadata } from "../../../game-data/seo";
+import { buildOperatorBreadcrumbJsonLd, buildOperatorMetadata, getSiteOrigin } from "../../../game-data/seo";
+import { JsonLd } from "../../json-ld";
 import { getOperatorTacticalEntry } from "../../../game-data/operator-tactical";
 import { getOperatorArtistCredit } from "../../../game-data/operator-artist-credits";
 import { getOperatorIllustrationAssets } from "../../../game-data/operator-illustrations-data";
@@ -48,6 +49,7 @@ export default async function OperatorPage({ params }: Readonly<OperatorPageProp
 
   return (
     <main className="operators-page" id="contenido">
+      <JsonLd data={buildOperatorBreadcrumbJsonLd(getSiteOrigin(), operator, publicSlug)} />
       <div className="operator-detail-content">
       <OperatorDetailData operator={operator} stats={stats} skills={skills} modules={modules} illustrations={getOperatorIllustrationAssets(operator.id)} limited={isOperatorLimited(operator.id)} biography={detailBiography.biography} tactical={getOperatorTacticalEntry(operator.id)} artistCredit={getOperatorArtistCredit(operator.id)} />
       <footer className="operators-provenance">

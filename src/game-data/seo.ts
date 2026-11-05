@@ -108,3 +108,42 @@ export function buildSitemap(origin: string, records: readonly OperatorRecord[])
   const paths = ["/", "/operators", "/credits", ...[...getOperatorPublicSlugs(records).values()].sort(compareCodeUnits).map((slug) => `/operators/${slug}`)];
   return paths.map((path) => ({ url: `${origin}${path === "/" ? "" : path}` }));
 }
+
+type BreadcrumbStep = Readonly<{ name: string; path: string }>;
+
+/** `WebSite` of schema.org for the home page; it has no `SearchAction` because the site has no search reachable by URL. */
+export function buildWebSiteJsonLd(origin: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: siteName,
+    url: `${origin}/`,
+    inLanguage: "es",
+    description: siteDescription,
+  } as const;
+}
+
+/** `BreadcrumbList` of schema.org; positions start at 1 and every item has an absolute URL. */
+export function buildBreadcrumbJsonLd(origin: string, steps: readonly BreadcrumbStep[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: steps.map((step, index) => ({ "@type": "ListItem", position: index + 1, name: step.name, item: `${origin}${step.path}` })),
+  } as const;
+}
+
+const homeStep: BreadcrumbStep = { name: "Inicio", path: "/" };
+const catalogStep: BreadcrumbStep = { name: "Operadores", path: "/operators" };
+
+export function buildCatalogBreadcrumbJsonLd(origin: string) {
+  return buildBreadcrumbJsonLd(origin, [homeStep, catalogStep]);
+}
+
+export function buildOperatorBreadcrumbJsonLd(origin: string, operator: Parameters<typeof getOperatorDisplayName>[0], publicSlug: string) {
+  return buildBreadcrumbJsonLd(origin, [homeStep, catalogStep, { name: getOperatorDisplayName(operator), path: `/operators/${publicSlug}` }]);
+}
+
+/** Serialises JSON-LD for an inline script; `<` is escaped so no string can close the script element. */
+export function serializeJsonLd(data: object): string {
+  return JSON.stringify(data).replaceAll("<", "\\u003c");
+}
