@@ -40,7 +40,7 @@ jobs:
           expected_sha256="551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb"
           tmp_dir="${RUNNER_TEMP}/gitleaks-${version}"
           mkdir -p "$tmp_dir"
-          curl --fail --silent --show-error --location "$url" --output "$tmp_dir/$archive"
+          curl --fail --silent --show-error --proto "=https" --tlsv1.2 --location "$url" --output "$tmp_dir/$archive"
           echo "$expected_sha256  $tmp_dir/$archive" | sha256sum --check --status
           tar --extract --file "$tmp_dir/$archive" --directory "$tmp_dir" gitleaks
           chmod 0755 "$tmp_dir/gitleaks"

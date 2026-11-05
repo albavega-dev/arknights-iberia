@@ -96,6 +96,11 @@ const eslintConfig = defineConfig([
     "next-env.d.ts",
     // Generated output.
     "coverage/**",
+    "artifacts/**",
+    "test-results/**",
+    "playwright-report/**",
+    ".playwright-mcp/**",
+    ".vercel/**",
   ]),
   {
     // sort() without a comparator compares items as strings; require an explicit one.
