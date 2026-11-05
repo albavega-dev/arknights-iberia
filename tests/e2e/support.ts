@@ -112,6 +112,10 @@ export const test = base.extend<{ diagnostics: Diagnostics }>({
       if (message.type() === "error") diagnostics.consoleErrors.push(message.text());
     });
     page.on("pageerror", (error) => diagnostics.consoleErrors.push(error.message));
+    // Report-only violations are logged at the info level, so they are turned into console errors.
+    await page.addInitScript(() => {
+      document.addEventListener("securitypolicyviolation", (event) => console.error(`Content Security Policy violation (${event.disposition}): ${event.effectiveDirective} ${event.blockedURI}`));
+    });
     page.on("response", (response) => {
       if (response.status() >= 500) diagnostics.serverErrors.push(`${response.status()} ${new URL(response.url()).pathname}`);
       else if (response.status() >= 400 && new URL(response.url()).pathname.startsWith("/assets/")) diagnostics.missingFiles.push(`${response.status()} ${new URL(response.url()).pathname}`);
