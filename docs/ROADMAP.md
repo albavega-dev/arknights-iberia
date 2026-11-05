@@ -1,6 +1,6 @@
 # Hoja de ruta
 
-La versión 0.2.1 mantiene las fichas de operador completas de la 0.2.0 (estadísticas, habilidades, rasgo, talentos y módulos) y sirve todo el contenido desde datos versionados. Las siguientes mejoras se incorporarán de forma gradual.
+La versión 0.2.2 aloja en el propio sitio todas las imágenes de los operadores, añade la vista por avatares, las ilustraciones ampliables y el brillo de las estrellas de los limitados, y refuerza el SEO y la seguridad. Las siguientes mejoras se incorporarán de forma gradual.
 
 La hoja de ruta describe objetivos públicos y no promete fechas ni disponibilidad.
 
@@ -14,12 +14,17 @@ La hoja de ruta describe objetivos públicos y no promete fechas ni disponibilid
 - Habilidades de combate y de base (0.2.0): niveles, maestrías, alcances y explicaciones del glosario.
 - Módulos (0.2.0): tres niveles, ilustraciones y su efecto en estadísticas y talentos.
 - Contenido servido desde datos versionados (0.2.1), sin base de datos externa, y fechas de salida de operadores en CN revisadas.
+- Ilustraciones, retratos, avatares e iconos de los operadores alojados en el propio sitio en formato WebP (0.2.2), sin depender de servidores externos.
+- Vista por avatares en la biblioteca de operadores (0.2.2).
+- Ilustraciones E0/E2 ampliables en las fichas (0.2.2).
+- Brillo en las estrellas de los operadores limitados (0.2.2).
+- SEO y seguridad (0.2.2): metadatos, mapa del sitio, datos estructurados, página 404 en español, cabeceras de seguridad y política de seguridad de contenido.
 
 ## Próximas mejoras
 
+- Retirar el código de base de datos y de autenticación que ya no se usa (0.2.3).
 - Completar las fichas individuales con voces, skins y otros detalles.
 - Mejorar cobertura de fechas y relaciones de operadores.
-- Alojar en el propio sitio las ilustraciones y los retratos de los operadores en formato WebP, para que las fichas pesen menos y no dependan de servidores externos.
 - Revisar estabilidad y condiciones de recursos externos.
 - Publicar más documentación reproducible para colaboradores.
 
