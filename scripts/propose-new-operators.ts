@@ -155,7 +155,7 @@ export async function propose(argv: readonly string[], fetchers: Fetchers = defa
 /** One-line JSON with spaces, the style of the regional and affiliation manifests. */
 export function oneLine(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(oneLine).join(", ")}]`;
-  if (value && typeof value === "object") return `{ ${Object.entries(value).map(([key, item]) => `${JSON.stringify(key)}: ${oneLine(item)}`).join(", ")} }`;
+  if (value && typeof value === "object") return `{ ${Object.entries(value).map(([key, item]) => JSON.stringify(key) + ": " + oneLine(item)).join(", ")} }`;
   return JSON.stringify(value);
 }
 
@@ -201,7 +201,7 @@ export async function writeProposal(proposal: NewOperatorProposal, root = "."): 
 
   const operators = [...regional.operators, ...newRegional].sort((a, b) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0));
   const head = regionalText.slice(0, regionalText.indexOf('"operators": [') + '"operators": ['.length);
-  await writeFile(regionalPath, `${head}\n${operators.map((entry) => `    ${oneLine(entry)}`).join(",\n")}${closing}`, "utf8");
+  await writeFile(regionalPath, `${head}\n${operators.map((entry) => "    " + oneLine(entry)).join(",\n")}${closing}`, "utf8");
   await writeFile(factionPath, `${JSON.stringify({ ...factions, operators: [...factions.operators, ...newFactions] }, null, 2)}\n`, "utf8");
   await writeFile(creditsPath, `${JSON.stringify({ ...credits, entries }, null, 2)}\n`, "utf8");
   const added = newAffiliations.map((entry) => `,\n    ${oneLine(entry)}`).join("");

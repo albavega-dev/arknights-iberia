@@ -129,9 +129,9 @@ moduleRanges.sort((a, b) => compareCodeUnits(a.operatorId, b.operatorId) || comp
 // One entry per line, as in the committed file, so that module ranges stay easy to review.
 const inline = (value: unknown): string => Array.isArray(value)
   ? `[${value.map(inline).join(", ")}]`
-  : value && typeof value === "object" ? `{ ${Object.entries(value).map(([key, item]) => `"${key}": ${inline(item)}`).join(", ")} }` : JSON.stringify(value);
+  : value && typeof value === "object" ? `{ ${Object.entries(value).map(([key, item]) => '"' + key + '": ' + inline(item)).join(", ")} }` : JSON.stringify(value);
 const moduleRangesMarker = "__MODULE_RANGES__";
-const moduleRangesText = `[\n${moduleRanges.map((entry) => `    ${inline(entry)}`).join(",\n")}\n  ]`;
+const moduleRangesText = `[\n${moduleRanges.map((entry) => "    " + inline(entry)).join(",\n")}\n  ]`;
 
 const report = {
   audited: rows.length,

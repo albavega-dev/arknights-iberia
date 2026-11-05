@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useLayoutEffect, useRef, useState, type CSSProperties, type FocusEvent, type KeyboardEvent, type ReactNode } from "react";
+import { Fragment, useId, useLayoutEffect, useRef, useState, type CSSProperties, type FocusEvent, type KeyboardEvent, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import Image from "next/image";
 import { Play, Timer, Zap, type LucideIcon } from "lucide-react";
@@ -50,7 +50,7 @@ export type GlossaryContext = { terms: Record<string, SkillTermView>; openId: st
 export function SkillDescription({ nodes, glossary }: { nodes: readonly SkillDescriptionNode[]; glossary?: GlossaryContext }): ReactNode {
   return nodes.map((node, index) => {
     switch (node.type) {
-      case "text": return node.text;
+      case "text": return <Fragment key={index}>{node.text}</Fragment>;
       case "lineBreak": return <br key={index} />;
       case "value": return <span key={index} className={`operator-skill-value${node.changed ? " is-changed" : ""}`}>{node.display}</span>;
       case "unknownMarker": return <span key={index} className="operator-skill-unknown">{node.text}</span>;
@@ -82,7 +82,7 @@ function placePanel(trigger: HTMLElement, panel: HTMLElement) {
 }
 
 /** A term that toggles its explanation; the panel is portalled out of the card, whose container query would trap `position: fixed`. */
-function GlossaryTerm({ termId, term, tone, glossary, children }: { termId: string; term: SkillTermView; tone: SkillDescriptionTone; glossary: GlossaryContext; children: ReactNode }) {
+function GlossaryTerm({ termId, term, tone, glossary, children }: Readonly<{ termId: string; term: SkillTermView; tone: SkillDescriptionTone; glossary: GlossaryContext; children: ReactNode }>) {
   const id = useId();
   const triggerRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
@@ -126,13 +126,13 @@ function GlossaryTerm({ termId, term, tone, glossary, children }: { termId: stri
   </>;
 }
 
-function SkillIcon({ skill }: { skill: OperatorSkillView }) {
+function SkillIcon({ skill }: Readonly<{ skill: OperatorSkillView }>) {
   const [failed, setFailed] = useState(false);
   if (!skill.icon || failed) return <span className="operator-skill-icon is-fallback" aria-hidden="true" data-testid="skill-icon-fallback">S{skill.slot}</span>;
   return <Image className="operator-skill-icon" src={skill.icon.src} alt="" width={64} height={64} unoptimized onError={() => setFailed(true)} />;
 }
 
-function SkillLevelSelector({ skill, selected, onSelect }: { skill: OperatorSkillView; selected: number; onSelect: (index: number) => void }) {
+function SkillLevelSelector({ skill, selected, onSelect }: Readonly<{ skill: OperatorSkillView; selected: number; onSelect: (index: number) => void }>) {
   const id = useId();
   const groups = (["level", "mastery"] as const).map((group) => skill.levels.filter((level) => level.group === group)).filter((levels) => levels.length);
   const move = (event: KeyboardEvent<HTMLButtonElement>) => {
@@ -151,20 +151,20 @@ function SkillLevelSelector({ skill, selected, onSelect }: { skill: OperatorSkil
   })}</div>)}</div></div>;
 }
 
-function SkillLevelsTable({ skill, id, name }: { skill: OperatorSkillView; id: string; name: string }) {
+function SkillLevelsTable({ skill, id, name }: Readonly<{ skill: OperatorSkillView; id: string; name: string }>) {
   return <div className="operator-skill-table-scroll" id={id} role="region" aria-label={`Tabla de niveles de ${name}`} tabIndex={0}><table className="operator-skill-table"><caption className="sr-only">Valores por nivel de S{skill.slot}</caption><thead><tr><th scope="col">Nivel</th><th scope="col">SP inicial</th><th scope="col">Coste de SP</th><th scope="col">Duración</th></tr></thead><tbody>{skill.levels.map((level) => <tr key={level.index}><th scope="row">{level.label}</th>{levelValues(skill, level).map((value) => <td key={value.label}>{value.text}</td>)}</tr>)}</tbody></table></div>;
 }
 
 type OperatorRange = TacticalRangeDefinition | null;
 
 /** The skill's own range, otherwise the operator range; neither has a heading. */
-function SkillRange({ view, level, operatorRange }: { view: OperatorSkillsView; level: SkillLevelView; operatorRange: OperatorRange }) {
+function SkillRange({ view, level, operatorRange }: Readonly<{ view: OperatorSkillsView; level: SkillLevelView; operatorRange: OperatorRange }>) {
   const own = level.rangeId ? view.ranges[level.rangeId] : undefined;
   if (own) return <div className="operator-skill-range"><RangeGrid grids={own.grids} /></div>;
   return operatorRange ? <div className="operator-skill-range"><RangeGrid grids={operatorRange.grids} /></div> : null;
 }
 
-function SkillCard({ view, skill, operatorRange, glossary }: { view: OperatorSkillsView; skill: OperatorSkillView; operatorRange: OperatorRange; glossary: Omit<GlossaryContext, "terms"> }) {
+function SkillCard({ view, skill, operatorRange, glossary }: Readonly<{ view: OperatorSkillsView; skill: OperatorSkillView; operatorRange: OperatorRange; glossary: Omit<GlossaryContext, "terms"> }>) {
   const id = useId();
   const [selected, setSelected] = useState(skill.defaultLevelIndex);
   const [expanded, setExpanded] = useState(false);
@@ -218,25 +218,25 @@ function roomTagStyle(color: string): { className: string; style?: CSSProperties
   return { className: dark ? "is-dark-text" : "is-light-text", style: { "--base-room-color": color } as CSSProperties };
 }
 
-function RoomTag({ stage }: { stage: BaseSkillStageView }) {
+function RoomTag({ stage }: Readonly<{ stage: BaseSkillStageView }>) {
   const room = roomNames[stage.room] ?? { name: stage.room };
   const { className, style } = roomTagStyle(stage.color);
   return <span className={`operator-skill-tag operator-base-skill-room ${className}`} style={style}><span className="sr-only">Sala </span>{stage.roomIcon ? <Image src={stage.roomIcon.src} alt="" width={stage.roomIcon.width} height={stage.roomIcon.height} unoptimized /> : null}<span lang={room.lang}>{room.name}</span></span>;
 }
 
-function BaseSkillIcon({ stage, slot }: { stage: BaseSkillStageView; slot: number }) {
+function BaseSkillIcon({ stage, slot }: Readonly<{ stage: BaseSkillStageView; slot: number }>) {
   const [failed, setFailed] = useState(false);
   if (!stage.icon || failed) return <span className="operator-skill-icon is-fallback" aria-hidden="true" data-testid="skill-icon-fallback">B{slot}</span>;
   return <Image className="operator-skill-icon" src={stage.icon.src} alt="" width={stage.icon.width} height={stage.icon.height} unoptimized onError={() => setFailed(true)} />;
 }
 
 /** Promotion icon of the Stats elite selector, plus the level when it is above 1; the text label is for assistive technology. */
-function UnlockIcon({ unlock }: { unlock: SkillUnlock }) {
+function UnlockIcon({ unlock }: Readonly<{ unlock: SkillUnlock }>) {
   return <><span className="operator-base-skill-unlock-icon"><Image src={assetPath("operator-elite", `elite-${unlock.elite}.png`)} alt="" width={40} height={40} unoptimized /></span>{unlock.level > 1 ? <span className="operator-base-skill-unlock-level" aria-hidden="true">Nv. {unlock.level}</span> : null}</>;
 }
 
 /** Unlock of each stage as a radio group, with the same keys as the level selector; a single stage keeps a fixed tag. */
-function BaseStageSelector({ slot, selected, onSelect }: { slot: OperatorBaseSkillView; selected: number; onSelect: (index: number) => void }) {
+function BaseStageSelector({ slot, selected, onSelect }: Readonly<{ slot: OperatorBaseSkillView; selected: number; onSelect: (index: number) => void }>) {
   const id = useId();
   if (slot.stages.length === 1) return <span className="operator-base-skill-unlock"><span className="sr-only">Desbloqueo {unlockLabel(slot.stages[0].unlock)}</span><UnlockIcon unlock={slot.stages[0].unlock} /></span>;
   const last = slot.stages.length - 1;
@@ -251,7 +251,7 @@ function BaseStageSelector({ slot, selected, onSelect }: { slot: OperatorBaseSki
 }
 
 /** One slot showing one stage at a time, the highest by default; each stage replaces the previous one. */
-function BaseSkillCard({ slot, glossary }: { slot: OperatorBaseSkillView; glossary: Omit<GlossaryContext, "terms"> }) {
+function BaseSkillCard({ slot, glossary }: Readonly<{ slot: OperatorBaseSkillView; glossary: Omit<GlossaryContext, "terms"> }>) {
   const id = useId();
   const [selected, setSelected] = useState(slot.stages.length - 1);
   const stage = slot.stages[selected];
@@ -261,7 +261,7 @@ function BaseSkillCard({ slot, glossary }: { slot: OperatorBaseSkillView; glossa
   </article>;
 }
 
-export function OperatorSkillsPanel({ view, tactical }: { view: OperatorSkillsView | null; tactical: OperatorTacticalEntry | null }) {
+export function OperatorSkillsPanel({ view, tactical }: Readonly<{ view: OperatorSkillsView | null; tactical: OperatorTacticalEntry | null }>) {
   // One open explanation across every card, combat and base; the panels are portalled into the skills container.
   const [openId, setOpenId] = useState<string | null>(null);
   const [layer, setLayer] = useState<HTMLElement | null>(null);
@@ -302,7 +302,7 @@ export type StatsTrait = { stages: TraitStageView[]; terms: Record<string, Skill
  * The trait at the selection: the last stage whose unlock and potential it meets (the first stage is always unlocked). A module
  * that replaces the trait marks the card with its tone; the parts it appends follow the trait in the module tone.
  */
-function TraitCard({ trait, selection, glossary, moduleEffect }: { trait: StatsTrait; selection: TalentSelection; glossary: Omit<GlossaryContext, "terms">; moduleEffect?: TalentModuleEffect }) {
+function TraitCard({ trait, selection, glossary, moduleEffect }: Readonly<{ trait: StatsTrait; selection: TalentSelection; glossary: Omit<GlossaryContext, "terms">; moduleEffect?: TalentModuleEffect }>) {
   const id = useId();
   const stage = trait.stages.findLast((item) => unlockAtOrBelow(item.unlock, selection) && item.potential <= selection.potential) ?? trait.stages[0];
   const changes = moduleEffect?.traits ?? [];
@@ -320,7 +320,7 @@ function TraitCard({ trait, selection, glossary, moduleEffect }: { trait: StatsT
 }
 
 /** The module tone marks the name; the text names the module for assistive technology and on hover. */
-function ModuleTalentCard({ change, effect, glossary }: { change: ModuleTalentChangeView; effect: TalentModuleEffect; glossary: Omit<GlossaryContext, "terms"> }) {
+function ModuleTalentCard({ change, effect, glossary }: Readonly<{ change: ModuleTalentChangeView; effect: TalentModuleEffect; glossary: Omit<GlossaryContext, "terms"> }>) {
   const id = useId();
   const range = change.rangeId ? effect.ranges[change.rangeId] : undefined;
   const label = `${change.index === null ? "Añadido" : "Modificado"} por el módulo ${formatModuleTypeLabel(effect.type)}`;
@@ -331,7 +331,7 @@ function ModuleTalentCard({ change, effect, glossary }: { change: ModuleTalentCh
 }
 
 /** A locked talent keeps its place, dimmed, with the name and requirement of its first stage; an unlocked one shows the module change, if any. */
-function TalentCard({ view, talent, selection, glossary, moduleEffect }: { view: OperatorSkillsView; talent: OperatorTalentView; selection: TalentSelection; glossary: Omit<GlossaryContext, "terms">; moduleEffect?: TalentModuleEffect }) {
+function TalentCard({ view, talent, selection, glossary, moduleEffect }: Readonly<{ view: OperatorSkillsView; talent: OperatorTalentView; selection: TalentSelection; glossary: Omit<GlossaryContext, "terms">; moduleEffect?: TalentModuleEffect }>) {
   const id = useId();
   const stage = talentStageFor(talent, selection);
   const change = stage ? moduleEffect?.changes.find((item) => item.index === talent.index) : undefined;
@@ -350,7 +350,7 @@ function TalentCard({ view, talent, selection, glossary, moduleEffect }: { view:
 }
 
 /** Trait and talent cards driven by the Stats selection; talents the selected module adds follow the operator's own. */
-export function OperatorTalentsPanel({ view, trait, selection, moduleEffect }: { view: OperatorSkillsView | null; trait?: StatsTrait; selection: TalentSelection; moduleEffect?: TalentModuleEffect }) {
+export function OperatorTalentsPanel({ view, trait, selection, moduleEffect }: Readonly<{ view: OperatorSkillsView | null; trait?: StatsTrait; selection: TalentSelection; moduleEffect?: TalentModuleEffect }>) {
   const [openId, setOpenId] = useState<string | null>(null);
   const [layer, setLayer] = useState<HTMLElement | null>(null);
   const glossary = { openId, setOpenId, layer };

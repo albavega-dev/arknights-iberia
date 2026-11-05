@@ -138,9 +138,9 @@ export async function regenerate(argv: readonly string[], run: Record<UpdateId, 
       outcomes.push({ id, status: "failed", message: error instanceof Error ? error.message : String(error) });
     }
   }
-  for (const outcome of outcomes) log(`${outcome.id}: ${outcome.status}${outcome.message ? ` (${outcome.message})` : ""}`);
+  for (const outcome of outcomes) log(`${outcome.id}: ${outcome.status}${outcome.message ? " (" + outcome.message + ")" : ""}`);
   for (const [id, entry] of Object.entries(datasetRegistry) as [DatasetId, DatasetEntry][]) {
-    if (entry.generator.kind === "manual") log(`${id}: run ${entry.generator.script} by hand${entry.generator.rerunWhen?.length ? ` when ${entry.generator.rerunWhen.join(" or ")} change` : ""}`);
+    if (entry.generator.kind === "manual") log(`${id}: run ${entry.generator.script} by hand${entry.generator.rerunWhen?.length ? " when " + entry.generator.rerunWhen.join(" or ") + " change" : ""}`);
   }
   return outcomes;
 }

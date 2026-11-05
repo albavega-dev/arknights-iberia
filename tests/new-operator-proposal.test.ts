@@ -130,7 +130,7 @@ const cnTable = {
   char_new: { name: "新", appellation: "Newcomer", mainPower: power("rhodes"), subPower: [power("iberia")] },
   char_odd: { name: "怪", appellation: "Odd", mainPower: power("nowhere"), subPower: null },
 };
-const artistEntry = (id: string, status: "partial" | "pending", role?: string) => ({ operatorId: id, operatorName: id, source: {}, status, general: status === "pending" ? [] : [{ name: "Someone", ...(role ? { role } : {}), evidence: `|illustrator = Someone${role ? ` (${role})` : ""}` }], variants: { base: [], elite2: [] }, outfits: [], error: null });
+const artistEntry = (id: string, status: "partial" | "pending", role?: string) => ({ operatorId: id, operatorName: id, source: {}, status, general: status === "pending" ? [] : [{ name: "Someone", ...(role ? { role } : {}), evidence: `|illustrator = Someone${role ? " (" + role + ")" : ""}` }], variants: { base: [], elite2: [] }, outfits: [], error: null });
 
 async function fixture(): Promise<{ directory: string; table: string; report: string }> {
   const directory = await mkdtemp(join(tmpdir(), "new-operator-proposal-"));

@@ -282,7 +282,7 @@ describe("OperatorDetailData image policy", () => {
 
     expect(phaseButtons[0]).toHaveAttribute("aria-pressed", "false");
     expect(phaseButtons[1]).toHaveAttribute("aria-pressed", "true");
-    expect(screen.getAllByLabelText("Casilla alcanzable").length).not.toBe(initialReachableCells);
+    expect(screen.getAllByLabelText("Casilla alcanzable")).not.toHaveLength(initialReachableCells);
   });
 
   it("selects the confirmed SPC-X module and changes its active range", () => {
@@ -312,7 +312,7 @@ describe("OperatorDetailData image policy", () => {
 
     expect(moduleButton).toHaveAttribute("aria-pressed", "true");
     expect(phaseButton).toHaveAttribute("aria-pressed", "false");
-    expect(screen.getAllByLabelText("Casilla alcanzable").length).not.toBe(phaseReachableCells);
+    expect(screen.getAllByLabelText("Casilla alcanzable")).not.toHaveLength(phaseReachableCells);
   });
 
   it("switches between Tactical Anchor Point associated states", () => {

@@ -11,7 +11,7 @@ const destinations = [
   { href: "/credits", label: "Atribuciones" },
 ] as const;
 
-export function SiteShell({ children }: { children: ReactNode }) {
+export function SiteShell({ children }: Readonly<{ children: ReactNode }>) {
   const [expanded, setExpanded] = useState(true);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();

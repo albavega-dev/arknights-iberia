@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: OperatorPageProps): Promise<M
 
 export const dynamic = "force-dynamic";
 
-export default async function OperatorPage({ params }: OperatorPageProps) {
+export default async function OperatorPage({ params }: Readonly<OperatorPageProps>) {
   const { slug } = await params;
   const resolved = resolveOperator(slug);
   if (!resolved) notFound();

@@ -27,8 +27,6 @@ export type BiographyRegionCounts = {
   readonly total: number;
 };
 
-export type BiographyProfileCounts = BiographyRegionCounts;
-
 export type BiographyFieldCoverage = {
   readonly present: number;
   readonly empty: number;
@@ -48,7 +46,7 @@ export type BiographyPreflightReport = {
   readonly errors: readonly BiographyPreflightDiagnostic[];
   readonly warnings: readonly BiographyPreflightDiagnostic[];
   readonly fieldCoverage: Readonly<Record<string, BiographyFieldCoverage>>;
-  readonly profileCoverage: BiographyProfileCounts;
+  readonly profileCoverage: BiographyRegionCounts;
 };
 
 export type BiographyImportPlan = {

@@ -4,7 +4,7 @@ import { compareCodeUnits } from "../../game-data/string-order";
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { ArrowDown, ArrowUp, ChevronDown, Grid3x3, RectangleVertical, RotateCcw } from "lucide-react";
 import {
@@ -54,13 +54,15 @@ const operatorClasses: OperatorClass[] = [
   "Supporter",
   "Specialist",
 ];
-const rarityOptions: Array<1 | 2 | 3 | 4 | 5 | 6> = [6, 5, 4, 3, 2, 1];
+type Rarity = OperatorRecord["rarity"];
+
+const rarityOptions: Rarity[] = [6, 5, 4, 3, 2, 1];
 
 type CatalogFilterState = Readonly<{
   query: string;
   className: OperatorClass | null;
   subClassIds: string[];
-  rarities: Array<1 | 2 | 3 | 4 | 5 | 6>;
+  rarities: Rarity[];
   includeCnOnly: boolean;
   mainFactionId: string | "all";
   sortKey: OperatorSortKey;
@@ -89,9 +91,9 @@ function readCatalogState(params: URLSearchParams, records: readonly OperatorRec
     .split(",")
     .map(Number)
     .filter(
-      (value, index, values): value is 1 | 2 | 3 | 4 | 5 | 6 =>
+      (value, index, values): value is Rarity =>
         [1, 2, 3, 4, 5, 6].includes(value) && values.indexOf(value) === index,
-    ) as Array<1 | 2 | 3 | 4 | 5 | 6>;
+    ) as Rarity[];
   const factionParam = params.get("faction");
   const validFactions = new Set(
     records.map((operator) => operator.mainFactionId).filter((value): value is string => Boolean(value)),
@@ -129,6 +131,10 @@ function catalogStateToParams(state: CatalogFilterState): string {
   if (state.sortDirection !== "desc") params.set("dir", state.sortDirection);
   if (state.view !== "portraits") params.set("view", state.view);
   return params.toString();
+}
+
+function locationParams(): string {
+  return new URLSearchParams(window.location.search).toString();
 }
 
 function operatorCardLabel(
@@ -216,7 +222,7 @@ const OperatorAvatar = memo(function OperatorAvatar({
   const badge = operatorCardBadge(operator, isNew);
   return (
     <Link
-      className={`operator-avatar rarity-${operator.rarity}${operator.cnOnly ? " is-cn-only" : ""}${badge ? ` is-${badge}` : ""}`}
+      className={`operator-avatar rarity-${operator.rarity}${operator.cnOnly ? " is-cn-only" : ""}${badge ? " is-" + badge : ""}`}
       href={`/operators/${operator.slug}`}
       aria-label={operatorCardLabel(operator, displayName, classLabel, badge)}
     >
@@ -242,19 +248,19 @@ function FilterButton({
   onClick,
   iconUrl,
   rarity,
-}: {
+}: Readonly<{
   active: boolean;
   label: string;
   onClick: () => void;
   iconUrl?: string | null;
   rarity?: number;
-}) {
+}>) {
   return (
     <OperatorControlButton
       type="button"
       size="compact"
       appearance="naval"
-      className={`operator-filter-button${!iconUrl ? " is-text" : ""}${rarity ? ` rarity-${rarity}` : ""}${active ? " is-active" : ""}`}
+      className={`operator-filter-button${!iconUrl ? " is-text" : ""}${rarity ? " rarity-" + rarity : ""}${active ? " is-active" : ""}`}
       aria-pressed={active}
       aria-label={label}
       title={label}
@@ -276,7 +282,7 @@ function FilterButton({
   );
 }
 
-function OptionIcon({ iconUrl }: { iconUrl?: string | null }) {
+function OptionIcon({ iconUrl }: Readonly<{ iconUrl?: string | null }>) {
   const [failed, setFailed] = useState(false);
   if (!iconUrl || failed) return null;
   return <Image src={iconUrl} alt="" width={24} height={24} onError={() => setFailed(true)} />;
@@ -287,12 +293,12 @@ function AnimatedOperatorGrid({
   allOperators,
   newOperatorIds,
   view,
-}: {
+}: Readonly<{
   operators: readonly OperatorRecord[];
   allOperators: readonly OperatorRecord[];
   newOperatorIds: ReadonlySet<string>;
   view: CatalogView;
-}) {
+}>) {
   const Tile = view === "avatars" ? OperatorAvatar : OperatorCard;
   const gridRef = useRef<HTMLUListElement>(null);
   const animationCycle = operators.map((operator) => operator.id).join(",");
@@ -358,7 +364,7 @@ function OperatorOptionPopover({
   direction,
   onDirectionChange,
   searchable = false,
-}: {
+}: Readonly<{
   id: string;
   labelId: string;
   value: string;
@@ -368,7 +374,7 @@ function OperatorOptionPopover({
   direction?: OperatorSortDirection;
   onDirectionChange?: () => void;
   searchable?: boolean;
-}) {
+}>) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -538,8 +544,7 @@ function OperatorOptionPopover({
   );
 }
 
-export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: readonly OperatorRecord[]; newOperatorIds: readonly string[] }) {
-  const router = useRouter();
+export function OperatorCatalog({ records, newOperatorIds: newIds }: Readonly<{ records: readonly OperatorRecord[]; newOperatorIds: readonly string[] }>) {
   const searchParams = useSearchParams();
   const searchParamsText = searchParams.toString();
   const catalogRecords = useMemo(
@@ -558,34 +563,34 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
   const [query, setQuery] = useState(initialState.query);
   const [className, setClassName] = useState<OperatorClass | null>(initialState.className);
   const [subClassIds, setSubClassIds] = useState<string[]>(initialState.subClassIds);
-  const [rarities, setRarities] = useState<Array<1 | 2 | 3 | 4 | 5 | 6>>(initialState.rarities);
+  const [rarities, setRarities] = useState<Rarity[]>(initialState.rarities);
   const [includeCnOnly, setIncludeCnOnly] = useState(initialState.includeCnOnly);
   const [mainFactionId, setMainFactionId] = useState<string | "all">(initialState.mainFactionId);
   const [sortKey, setSortKey] = useState<OperatorSortKey>(initialState.sortKey);
   const [sortDirection, setSortDirection] = useState<OperatorSortDirection>(initialState.sortDirection);
   const [view, setView] = useState<CatalogView>(initialState.view);
-  const isDefaultCnReleaseOrder = !searchParamsText.includes("sort=") && !searchParamsText.includes("dir=");
+  const isDefaultCnReleaseOrder = sortKey === "cnReleaseDate" && sortDirection === "desc";
   const lastUrlState = useRef(searchParamsText);
-  const commitState = useCallback(
-    (next: CatalogFilterState) => {
-      setQuery(next.query);
-      setClassName(next.className);
-      setSubClassIds(next.subClassIds);
-      setRarities(next.rarities);
-      setIncludeCnOnly(next.includeCnOnly);
-      setMainFactionId(next.mainFactionId);
-      setSortKey(next.sortKey);
-      setSortDirection(next.sortDirection);
-      setView(next.view);
-      const nextParams = catalogStateToParams(next);
-      const nextUrl = nextParams ? `?${nextParams}` : "/operators";
-      lastUrlState.current = nextParams;
-      router.replace(nextUrl, { scroll: false });
-    },
-    [router],
-  );
+  const commitState = useCallback((next: CatalogFilterState) => {
+    setQuery(next.query);
+    setClassName(next.className);
+    setSubClassIds(next.subClassIds);
+    setRarities(next.rarities);
+    setIncludeCnOnly(next.includeCnOnly);
+    setMainFactionId(next.mainFactionId);
+    setSortKey(next.sortKey);
+    setSortDirection(next.sortDirection);
+    setView(next.view);
+    const nextParams = catalogStateToParams(next);
+    lastUrlState.current = nextParams;
+    // The filters run on the client, so the URL is updated without a server request. Next.js syncs
+    // useSearchParams from history.replaceState in a transition, after the local state.
+    window.history.replaceState(null, "", nextParams ? `?${nextParams}` : "/operators");
+  }, []);
   useEffect(() => {
-    if (lastUrlState.current === searchParamsText) return;
+    // A lagging sync of an earlier replaceState must not undo newer local changes: only a URL that is
+    // also the current location (a link to /operators, back or forward) is read back.
+    if (lastUrlState.current === searchParamsText || locationParams() !== searchParamsText) return;
     const next = readCatalogState(new URLSearchParams(searchParamsText), catalogRecords);
     setQuery(next.query);
     setClassName(next.className);
@@ -661,7 +666,7 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
         : [],
     });
   };
-  const toggleRarity = (nextRarity: 1 | 2 | 3 | 4 | 5 | 6) =>
+  const toggleRarity = (nextRarity: Rarity) =>
     update({
       rarities: rarities.includes(nextRarity)
         ? rarities.filter((value) => value !== nextRarity)

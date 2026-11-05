@@ -81,7 +81,7 @@ export function operatorImageInventory(operators: readonly { id: string; class: 
   const subclassIds = [...new Set(operators.map((operator) => operator.subClassId))];
   for (const id of subclassIds) if (!isSubclassId(id)) throw new Error(`Invalid subclass id: ${JSON.stringify(id)}`);
   return {
-    illustrations: illustrations.sort(byName),
+    illustrations: illustrations.toSorted(byName),
     factions: Object.entries(factionLogoFiles).map(([id, file]) => ({ source: `factions/${file}`, local: factionLogoFile(id) })).sort(byName),
     classes: (Object.entries(classIconFiles) as [OperatorClass, string][]).map(([name, file]) => ({ source: `classes/${file}`, local: classIconFile(name) })).sort(byName),
     subclasses: subclassIds.map((id) => ({ source: `ui/subclass/sub_${id}_icon.png`, local: subclassIconFile(id) })).sort(byName),

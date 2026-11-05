@@ -31,9 +31,9 @@ export const operators = pgTable("operators", {
   cnSourceRevision: text("cn_source_revision"),
   regionalMetadataSource: text("regional_metadata_source"),
   importedAt: timestamp("imported_at", { withTimezone: true }).notNull(),
-}, (table) => ({
-  slugIndex: uniqueIndex("operators_slug_unique").on(table.slug),
-}));
+}, (table) => [
+  uniqueIndex("operators_slug_unique").on(table.slug),
+]);
 
 export const operatorBiographies = pgTable("operator_biographies", {
   operatorId: text("operator_id").notNull().references(() => operators.id, { onDelete: "restrict" }),
@@ -49,9 +49,9 @@ export const operatorBiographies = pgTable("operator_biographies", {
   profileStoryTitle: text("profile_story_title"),
   profileText: text("profile_text"),
   importedAt: timestamp("imported_at", { withTimezone: true }).notNull(),
-}, (table) => ({
-  primaryKey: primaryKey({ columns: [table.operatorId, table.region, table.sourceRevision] }),
-  revisionIndex: index("operator_biographies_region_revision_idx").on(table.region, table.sourceRevision),
-  regionCheck: check("operator_biographies_region_check", sql`${table.region} in ('en', 'cn')`),
-  sha256Check: check("operator_biographies_sha256_check", sql`${table.sourceSha256} ~ '^[0-9a-fA-F]{64}$'`),
-}));
+}, (table) => [
+  primaryKey({ columns: [table.operatorId, table.region, table.sourceRevision] }),
+  index("operator_biographies_region_revision_idx").on(table.region, table.sourceRevision),
+  check("operator_biographies_region_check", sql`${table.region} in ('en', 'cn')`),
+  check("operator_biographies_sha256_check", sql`${table.sourceSha256} ~ '^[0-9a-fA-F]{64}$'`),
+]);

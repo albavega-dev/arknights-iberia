@@ -64,7 +64,7 @@ test("Passenger (EN): talent changes by potential and a Limited Modality module"
 test("Shu (EN) adds her CN-only module with its CN texts and CN glossary, and offers the CN switch", async () => {
   glossaryReads.length = 0;
   const view = await load("char_2025_shu");
-  assert.deepEqual(glossaryReads.sort(compareCodeUnits), ["cn", "en"]);
+  assert.deepEqual(glossaryReads.toSorted(compareCodeUnits), ["cn", "en"]);
   assert.equal(view.hasCnModules, true);
   assert.deepEqual(view.modules.map((module) => [module.type, module.region, module.name]), [["GUA-X", "en", "On Architecture of Time"], ["GUA-Y", "cn", "好时节"]]);
   assert.equal(view.modules[1].levels[1].talents[0].name, "天有四时");

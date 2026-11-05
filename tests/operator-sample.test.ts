@@ -137,7 +137,7 @@ test("Terra Wiki faction manifest has stable unique assignments", async () => {
   assert.equal(manifest.operators.filter((operator) => operator.mainFactionId !== null).length, 430);
   assert.equal(new Set(manifest.operators.map((operator) => operator.id)).size, 432);
   assert.equal(new Set(manifest.factions.map((faction) => faction.id)).size, 45);
-  assert.deepEqual(manifest.policy.pendingManualReview.sort(compareCodeUnits), ["char_4000_jnight", "char_4218_aigis"]);
+  assert.deepEqual(manifest.policy.pendingManualReview.toSorted(compareCodeUnits), ["char_4000_jnight", "char_4218_aigis"]);
 });
 
 test("filters by subclass and resolves its verified icon path", () => {

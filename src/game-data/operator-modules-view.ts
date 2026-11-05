@@ -111,7 +111,7 @@ export function modulePotentials(module: OperatorModuleView): number[] {
  */
 export function talentChangesAt(changes: readonly ModuleTalentChangeView[], potential: number): ModuleTalentChangeView[] {
   const byTalent = new Map<string, ModuleTalentChangeView>();
-  for (const change of changes) if (change.potential <= potential) byTalent.set(`${change.token}:${change.index ?? `added:${change.name}`}`, change);
+  for (const change of changes) if (change.potential <= potential) byTalent.set(`${change.token}:${change.index ?? "added:" + change.name}`, change);
   return [...byTalent.values()];
 }
 

@@ -123,7 +123,7 @@ describe("keyed collections", () => {
     assert.deepEqual(diffBaseSkills(building("x"), moved, ids).modified, ["b"], "and a change of assignment");
     const unknown = building("x"); unknown.chars.b = { buffChar: [{ buffData: [stage("t[999]")] }] };
     assert.deepEqual(diffBaseSkills(building("x"), unknown, ids).modified, ["b"], "a stage whose buff is missing still has a fingerprint");
-    const { d, ...withoutD } = building("x").chars; void d;
+    const { d, ...withoutD } = building("x").chars;
     assert.deepEqual(diffBaseSkills(building("x"), { ...building("x"), chars: withoutD }, ids), { added: [], modified: [], removed: ["d"] });
     assert.deepEqual(Object.keys(baseSkillFingerprints(building("x"), ["a", "z"])), ["a"], "only catalog operators present in the table");
   });

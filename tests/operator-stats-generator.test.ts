@@ -129,7 +129,7 @@ test("stats generator verifies against contract 1 and 2 manifests without the tr
   try {
     await main(argv, options);
     const generated: StatsDataset = await readStatsDataset(output);
-    const withoutTrait = generated.profiles.map(({ trait, ...profile }) => { void trait; return profile; });
+    const withoutTrait = generated.profiles.map(({ trait, ...profile }) => profile);
     const legacy = { contractVersion: "1", profiles: [...withoutTrait.map((profile) => ({ ...profile, source: generated.sources[profile.region as GameDataRegion], modules: profile.modules.map((module) => ({ ...module, moduleSourceRegion: "preferred" })) })), { operatorId: "char_a", region: "cn", profiles: [] }] };
     assert.deepEqual(compareStatsManifests(legacy, generated), { identical: 3, differences: [], missing: [], ignored: 1, removed: ["char_a/cn"], sources: [], shared: [] });
     assert.equal(compareStatsManifests(generated, generated).identical, 3);

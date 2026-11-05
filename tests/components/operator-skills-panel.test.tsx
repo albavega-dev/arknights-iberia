@@ -9,6 +9,7 @@ import { OperatorSkillsPanel, OperatorTalentsPanel, type TalentSelection } from 
 import type { OperatorTacticalEntry } from "../../src/game-data/operator-tactical";
 import type { BaseSkillStageView, OperatorBaseSkillView, OperatorSkillsView, OperatorSkillView, OperatorTalentView, SkillLevelLabel, SkillLevelView, TalentStageView } from "../../src/game-data/operator-skills-view";
 import type { SkillDescriptionNode } from "../../src/game-data/skill-description";
+import type { SkillUnlock } from "../../src/game-data/operator-skills";
 
 const labels: SkillLevelLabel[] = ["1", "2", "3", "4", "5", "6", "7", "M1", "M2", "M3"];
 const level = (index: number, overrides: Partial<SkillLevelView> = {}): SkillLevelView => ({
@@ -16,7 +17,7 @@ const level = (index: number, overrides: Partial<SkillLevelView> = {}): SkillLev
   description: [{ type: "text", text: `Descripción ${labels[index]}` }], ...overrides,
 });
 const skill = (slot: 1 | 2 | 3, count: number, overrides: Partial<OperatorSkillView> = {}, levelOverrides: Partial<SkillLevelView> = {}): OperatorSkillView => ({
-  slot, skillId: `skchr_test_${slot}`, activation: "manual", spRecovery: "time", unlock: { elite: (slot - 1) as 0 | 1 | 2, level: 1 }, icon: null,
+  slot, skillId: `skchr_test_${slot}`, activation: "manual", spRecovery: "time", unlock: { elite: (slot - 1) as SkillUnlock["elite"], level: 1 }, icon: null,
   levels: Array.from({ length: count }, (_, index) => level(index, { name: `Habilidad ${slot}`, ...levelOverrides })), defaultLevelIndex: count - 1, terms: {}, ...overrides,
 });
 const source = { repository: "test", revision: "test", path: "skill_table.json", sha256: "test" };
@@ -412,7 +413,7 @@ describe("OperatorSkillsPanel", () => {
 });
 
 describe("OperatorTalentsPanel", () => {
-  const stage = (name: string, elite: 0 | 1 | 2, potential = 1, overrides: Partial<TalentStageView> = {}): TalentStageView => ({
+  const stage = (name: string, elite: SkillUnlock["elite"], potential = 1, overrides: Partial<TalentStageView> = {}): TalentStageView => ({
     name, unlock: { elite, level: 1 }, potential, rangeId: null, description: [{ type: "text", text: `Efecto de ${name}` }], ...overrides,
   });
   const talent = (index: number, stages: TalentStageView[], terms: OperatorTalentView["terms"] = {}): OperatorTalentView => ({ index, stages, terms });
@@ -430,7 +431,7 @@ describe("OperatorTalentsPanel", () => {
   });
 
   it("follows the promotion of the selection (SilverAsh the Reignfrost)", () => {
-    const list = [talent(0, [0, 1, 2].map((elite) => stage("Open Game", elite as 0 | 1 | 2, 1, { description: [{ type: "text", text: `E${elite}` }] })))];
+    const list = [talent(0, [0, 1, 2].map((elite) => stage("Open Game", elite as SkillUnlock["elite"], 1, { description: [{ type: "text", text: `E${elite}` }] })))];
     const { rerender } = talents(list);
     expect(card("Open Game")).toHaveTextContent("E2");
     rerender(<OperatorTalentsPanel view={talentsView(list)} selection={{ elite: 1, level: 1, potential: 1 }} />);

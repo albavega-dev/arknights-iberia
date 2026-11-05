@@ -28,7 +28,7 @@ export async function main(argv: readonly string[] = process.argv, options: Limi
   if (errors.length) throw new Error(errors.join("; "));
   await mkdir(dirname(arg("--out", argv)), { recursive: true });
   await writeFile(arg("--out", argv), serializeDatasetJson(manifest), "utf8");
-  console.log(`Wrote ${manifest.operators.length} limited operators${skipped.length ? `; not in the catalog yet: ${skipped.join(", ")}` : ""}`);
+  console.log(`Wrote ${manifest.operators.length} limited operators${skipped.length ? "; not in the catalog yet: " + skipped.join(", ") : ""}`);
   return manifest;
 }
 

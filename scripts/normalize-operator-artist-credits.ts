@@ -14,10 +14,10 @@ function splitExplicitArtists(name: string, evidence: string): string[] {
   return linkedArtists.length > 1 ? linkedArtists : [name.trim()];
 }
 
-function roleFor(artist: Artist): { role: NormalizedCredit["role"]; variant?: NormalizedCredit["variant"]; outfit?: string; notes?: string } {
+function roleFor(artist: Artist): { role: NormalizedCredit["role"]; variant?: NonNullable<NormalizedCredit["variant"]>; outfit?: string; notes?: string } {
   const evidence = artist.evidence;
   const role = artist.role ?? "";
-  const design = role.match(/original design(?: by (.*))?/i);
+  const design = /original design(?: by (.*))?/i.exec(role);
   if (design) return design[1]
     ? { role: "operator-illustration", notes: `Original design credited to ${design[1]}.` }
     : { role: "original-design" };

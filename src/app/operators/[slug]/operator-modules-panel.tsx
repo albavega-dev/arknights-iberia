@@ -14,7 +14,7 @@ import { SkillDescription, type GlossaryContext } from "./operator-skills-panel"
 type Glossary = Omit<GlossaryContext, "terms">;
 
 /** Switch shared by the Modules tab and the Stats module selector, styled as the one of the operator library. */
-export function CnModulesToggle({ checked, onChange }: { checked: boolean; onChange: (checked: boolean) => void }) {
+export function CnModulesToggle({ checked, onChange }: Readonly<{ checked: boolean; onChange: (checked: boolean) => void }>) {
   return <button type="button" className={`operators-cn-toggle operator-modules-cn-toggle${checked ? " is-active" : ""}`} aria-pressed={checked} onClick={() => onChange(!checked)}><span>Incluir módulos CN</span><span className="operators-cn-switch" aria-hidden="true"><span className="operators-cn-switch-thumb" /></span></button>;
 }
 
@@ -32,20 +32,20 @@ function attributeRank(key: string): number {
 }
 
 /** Attributes as compact text, one per line, such as "ATK +76"; values that differ from the previous level are highlighted. */
-function AttributeLine({ attributes, previous, label }: { attributes: Record<string, number>; previous?: Record<string, number>; label?: string }) {
+function AttributeLine({ attributes, previous, label }: Readonly<{ attributes: Record<string, number>; previous?: Record<string, number>; label?: string }>) {
   const keys = Object.keys(attributes).sort((a, b) => attributeRank(a) - attributeRank(b));
   if (!keys.length) return null;
   return <ul className="operator-module-attributes" aria-label={label}>{label ? <li className="operator-module-attributes-label" aria-hidden="true">{label}</li> : null}{keys.map((key) => <li key={key}>{attributeLabels[key] ?? key} <span className={`operator-skill-value${previous && previous[key] !== attributes[key] ? " is-changed" : ""}`}>{signed(attributes[key])}</span></li>)}</ul>;
 }
 
-function PotentialChoices({ potentials, selected, onSelect }: { potentials: number[]; selected: number; onSelect: (potential: number) => void }) {
+function PotentialChoices({ potentials, selected, onSelect }: Readonly<{ potentials: number[]; selected: number; onSelect: (potential: number) => void }>) {
   return <fieldset className="operator-module-potentials"><legend className="sr-only">Potencial</legend><div className="operator-stats-choice-list operator-stats-potential-choices">{potentials.map((value) => <button type="button" key={value} className={`operator-stats-light-choice operator-pointer-light${selected === value ? " is-active" : ""}`} aria-label={`Potencial ${value}`} aria-pressed={selected === value} onClick={() => onSelect(selected === value ? 1 : value)} onMouseMove={followPointer}><Image src={assetPath("operator-potential", `potential-${value}.png`)} alt="" width={36} height={34} unoptimized /></button>)}</div></fieldset>;
 }
 
 const sameTalent = (a: ModuleTalentChangeView, b: ModuleTalentChangeView) => a.token === b.token && a.index === b.index && (a.index !== null || a.name === b.name);
 
 /** A talent change; numbers that differ from the same talent at the previous level are highlighted. */
-function TalentChange({ change, previous, glossary, view }: { change: ModuleTalentChangeView; previous?: ModuleTalentChangeView; glossary: GlossaryContext; view: OperatorModulesView }) {
+function TalentChange({ change, previous, glossary, view }: Readonly<{ change: ModuleTalentChangeView; previous?: ModuleTalentChangeView; glossary: GlossaryContext; view: OperatorModulesView }>) {
   const range = change.rangeId ? view.ranges[change.rangeId] : undefined;
   return <div className="operator-module-talent">
     <h5>{change.name}{change.index === null ? <span className="operator-skill-tag operator-module-tag">Nuevo talento</span> : null}</h5>
@@ -67,12 +67,12 @@ function TraitChanges({ changes, glossary, module }: { changes: ModuleTraitChang
 }
 
 /** Level icon from the game (modules always have levels 1–3), with the number for assistive technology. */
-function LevelHeading({ level }: { level: number }) {
+function LevelHeading({ level }: Readonly<{ level: number }>) {
   return <h4 className="operator-module-level-heading"><Image src={assetPath("operator-module-stages", `stage-${level}.png`)} alt="" width={174} height={160} unoptimized /><span className="sr-only">Nivel {level}</span></h4>;
 }
 
 /** The three levels side by side, one below another in narrow cards; `render` gets the level and the one before it. */
-function LevelColumns({ module, render }: { module: OperatorModuleView; render: (level: ModuleLevelView, previous: ModuleLevelView | undefined) => ReactNode }) {
+function LevelColumns({ module, render }: Readonly<{ module: OperatorModuleView; render: (level: ModuleLevelView, previous: ModuleLevelView | undefined) => ReactNode }>) {
   return <div className="operator-module-levels">{module.levels.map((level, index) => <section key={level.level} className="operator-module-level" aria-label={`Nivel ${level.level}`}><LevelHeading level={level.level} />{render(level, module.levels[index - 1]) ?? <p className="operator-module-note" aria-label="Sin cambios">—</p>}</section>)}</div>;
 }
 
@@ -99,7 +99,7 @@ function baseTraitAt(trait: TraitStageView[], potential: number): TraitStageView
   return trait.findLast((stage) => stage.potential <= potential) ?? trait.at(-1);
 }
 
-function ModuleTrait({ view, module, potential, glossary }: { view: OperatorModulesView; module: OperatorModuleView; potential: number; glossary: Glossary }) {
+function ModuleTrait({ view, module, potential, glossary }: Readonly<{ view: OperatorModulesView; module: OperatorModuleView; potential: number; glossary: Glossary }>) {
   const groups = traitGroups(module);
   if (!groups.length) return null;
   const base = baseTraitAt(view.trait, potential);
@@ -113,7 +113,7 @@ function ModuleTrait({ view, module, potential, glossary }: { view: OperatorModu
   })}</section>;
 }
 
-function ModuleRange({ view, module }: { view: OperatorModulesView; module: OperatorModuleView }) {
+function ModuleRange({ view, module }: Readonly<{ view: OperatorModulesView; module: OperatorModuleView }>) {
   const ranges = [...new Set(module.levels.flatMap((level) => level.rangeId ? [level.rangeId] : []))].flatMap((id) => view.ranges[id] ? [view.ranges[id]] : []);
   if (!ranges.length) return null;
   return <section className="operator-module-section"><h4>Alcance</h4><div className="operator-module-ranges">{ranges.map((range, index) => <div className="operator-skill-range" key={index}><RangeGrid grids={range.grids} /></div>)}</div></section>;
@@ -129,7 +129,7 @@ function tokenEffects(level: ModuleLevelView, potential: number) {
   };
 }
 
-function ModuleToken({ view, module, potential, glossary }: { view: OperatorModulesView; module: OperatorModuleView; potential: number; glossary: GlossaryContext }) {
+function ModuleToken({ view, module, potential, glossary }: Readonly<{ view: OperatorModulesView; module: OperatorModuleView; potential: number; glossary: GlossaryContext }>) {
   const effects = module.levels.map((level) => tokenEffects(level, potential));
   if (!effects.some((item) => item.attributes.length || item.traits.length || item.talents.length)) return null;
   const tokenIds = [...new Set(effects.flatMap((item) => item.attributes.map(([id]) => id)))];
@@ -183,7 +183,7 @@ function ModuleModes({ view, module, potential, glossary }: { view: OperatorModu
   }} /></section>);
 }
 
-function ModuleCard({ view, module, glossary }: { view: OperatorModulesView; module: OperatorModuleView; glossary: Glossary }) {
+function ModuleCard({ view, module, glossary }: Readonly<{ view: OperatorModulesView; module: OperatorModuleView; glossary: Glossary }>) {
   const potentials = modulePotentials(module);
   const [potential, setPotential] = useState(1);
   const moduleGlossary = { ...glossary, terms: module.terms };
@@ -211,7 +211,7 @@ function ModuleCard({ view, module, glossary }: { view: OperatorModulesView; mod
 }
 
 /** Every module of the operator, one below another, with the CN switch next to the section title. */
-export function OperatorModulesPanel({ view, showCnModules, onShowCnModulesChange }: { view: OperatorModulesView; showCnModules: boolean; onShowCnModulesChange: (show: boolean) => void }) {
+export function OperatorModulesPanel({ view, showCnModules, onShowCnModulesChange }: Readonly<{ view: OperatorModulesView; showCnModules: boolean; onShowCnModulesChange: (show: boolean) => void }>) {
   // One open explanation across the cards; the panels are portalled into the modules container.
   const [openId, setOpenId] = useState<string | null>(null);
   const [layer, setLayer] = useState<HTMLElement | null>(null);

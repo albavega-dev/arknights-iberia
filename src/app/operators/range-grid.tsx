@@ -20,7 +20,7 @@ type RangeGridProps = {
   envelope?: RangeGridEnvelope;
 };
 
-export function RangeGrid({ grids, label, alternativeLabels = [], envelope = getRangeGridEnvelope(grids) }: RangeGridProps) {
+export function RangeGrid({ grids, label, alternativeLabels = [], envelope = getRangeGridEnvelope(grids) }: Readonly<RangeGridProps>) {
   const coordinates = new Set(grids.map((cell) => `${cell.row}:${cell.col}`));
   const cells = [];
   for (let row = envelope.maxRow; row >= envelope.minRow; row -= 1) for (let col = envelope.minCol; col <= envelope.maxCol; col += 1) {

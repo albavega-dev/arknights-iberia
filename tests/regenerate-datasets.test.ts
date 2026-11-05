@@ -15,12 +15,12 @@ const file = (status: FileOutcome["status"]): FileOutcome => ({ id: "regional", 
 
 test("there is a runner for every update-mode dataset of the registry and for nothing else", () => {
   const update = (Object.entries(datasetRegistry) as [DatasetId, { generator: { kind: string } }][]).filter(([, entry]) => entry.generator.kind === "update").map(([id]) => id);
-  assert.deepEqual(Object.keys(runners).sort(compareCodeUnits), update.sort(compareCodeUnits));
+  assert.deepEqual(Object.keys(runners).sort(compareCodeUnits), update.toSorted(compareCodeUnits));
 });
 
 test("there is a derived runner for every derived dataset of the registry", () => {
   const derived = (Object.entries(datasetRegistry) as [DatasetId, { generator: { kind: string } }][]).filter(([, entry]) => entry.generator.kind === "derived").map(([id]) => id);
-  assert.deepEqual(Object.keys(derivedRunners).sort(compareCodeUnits), derived.sort(compareCodeUnits));
+  assert.deepEqual(Object.keys(derivedRunners).sort(compareCodeUnits), derived.toSorted(compareCodeUnits));
 });
 
 test("generator arguments come from the registry entry", () => {
