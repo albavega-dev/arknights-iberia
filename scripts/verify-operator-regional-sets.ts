@@ -41,7 +41,9 @@ function manifestSourceValid(value: Manifest, region: "en" | "cn"): boolean {
 function provenanceCounts(value: Manifest): { readonly declared: number; readonly invalid: number } { const declared = (value.operators ?? []).filter((item) => item.cnReleaseDateProvenance !== undefined); return { declared: declared.length, invalid: declared.filter((item) => !isReleaseDateProvenance(item.cnReleaseDateProvenance) || typeof item.cnReleaseDate !== "string").length }; }
 function difference(left: readonly string[], right: readonly string[]): number { const set = new Set(right); return left.filter((id) => !set.has(id)).length; }
 
-export async function verifyRegionalSets(argv: readonly string[], io: Io = { read: (path) => readFile(path), stdout: (value) => process.stdout.write(value), stderr: (value) => process.stderr.write(value) }): Promise<number> {
+const defaultIo: Io = { read: (path) => readFile(path), stdout: (value) => process.stdout.write(value), stderr: (value) => process.stderr.write(value) };
+
+export async function verifyRegionalSets(argv: readonly string[], io: Io = defaultIo): Promise<number> {
   const parsed = args(argv); if (parsed.error) { io.stderr(json(failure(parsed.error))); return 2; }
   try {
     const [enBytes, cnBytes, globalBytes, regionalBytes] = await Promise.all([io.read(parsed.en!), io.read(parsed.cn!), io.read("data/operator-cn-release-manifest.json"), io.read("data/operator-regional-manifest.json")]);
