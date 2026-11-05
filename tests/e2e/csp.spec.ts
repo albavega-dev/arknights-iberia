@@ -5,13 +5,14 @@ import type { Page } from "@playwright/test";
 
 import { displayName, expect, expectHydrated, openCatalog, publicSlugs, readModules, records, test } from "./support";
 
-const header = "content-security-policy-report-only";
+const header = "content-security-policy";
 const hasGlossaryTerms = (operatorId: string) => readFileSync(path.join(process.cwd(), "data", "operator-skills", `${operatorId}.json`), "utf8").includes("<$");
 const operator = records.find((record) => !record.cnOnly && readModules(record.id).some((module) => module.region === "en") && hasGlossaryTerms(record.id))!;
 
 /**
  * Collects every browser message about the policy, at any level (violations, ignored or invalid directives), and every
- * document served without it. The shared fixture also turns violations into console errors in every test.
+ * document served without it or with the toolbar sources of preview deployments. The shared fixture also turns
+ * violations into console errors in every test.
  */
 function watchPolicy(page: Page): string[] {
   const messages: string[] = [];
@@ -19,7 +20,10 @@ function watchPolicy(page: Page): string[] {
     if (/content security policy/i.test(message.text())) messages.push(`${message.type()}: ${message.text()}`);
   });
   page.on("response", (response) => {
-    if (response.request().resourceType() === "document" && !response.headers()[header]) messages.push(`missing ${header}: ${response.url()}`);
+    if (response.request().resourceType() !== "document") return;
+    const policy = response.headers()[header];
+    if (!policy) messages.push(`missing ${header}: ${response.url()}`);
+    else if (policy.includes("vercel")) messages.push(`preview sources in ${header}: ${response.url()}`);
   });
   return messages;
 }
