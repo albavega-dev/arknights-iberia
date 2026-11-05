@@ -77,9 +77,21 @@ export function buildCreditsMetadata(): Metadata {
   });
 }
 
-/** Metadata of an operator page; an unknown slug gets a plain title because the page answers 404. */
+/** Metadata of a page that answers 404: own title and description, not indexable, and none of the canonical or previews of the layout. */
+export function buildNotFoundMetadata(title = "Página no encontrada"): Metadata {
+  return {
+    title,
+    description: "La página que buscas no existe o ha cambiado de sitio.",
+    alternates: null,
+    openGraph: null,
+    twitter: null,
+    robots: { index: false, follow: false },
+  };
+}
+
+/** Metadata of an operator page; an unknown slug gets the 404 metadata because the page answers 404. */
 export function buildOperatorMetadata(resolved: Readonly<{ operator: OperatorRecord; publicSlug: string }> | null, imageUrlOf: (operatorId: string) => string): Metadata {
-  if (!resolved) return { title: "Operador no encontrado" };
+  if (!resolved) return buildNotFoundMetadata("Operador no encontrado");
   return buildPageMetadata({
     title: getOperatorPageTitle(resolved.operator),
     description: getOperatorPageDescription(resolved.operator),
