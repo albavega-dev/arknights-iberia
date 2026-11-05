@@ -104,7 +104,7 @@ test.describe("catálogo de operadores", () => {
     await expect(labelled).toHaveCount(newOperatorIds.size);
     const expectedNames = records.filter((operator) => newOperatorIds.has(operator.id)).map(displayName).sort(compareCodeUnits);
     const names = await labelled.locator(".operator-card-info strong").allInnerTexts();
-    expect(names.sort(compareCodeUnits)).toEqual(expectedNames);
+    expect(names.toSorted(compareCodeUnits)).toEqual(expectedNames);
     await expect(page.locator("a.operator-card.is-cn-only .operator-card-new")).toHaveCount(0);
   });
 });

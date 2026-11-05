@@ -85,7 +85,7 @@ test("only Pepe, Raidian and Mcnist show effects limited to a game mode, tagged 
   const { index } = await readIndex(directory);
   const found: string[] = [];
   for (const profile of await readProfiles(index)) for (const item of profile.modules) for (const level of item.levels) for (const mode of level.modes ?? []) found.push(`${item.id} ${level.level} ${mode.gameTag ?? "-"} ${mode.mapTag ?? "-"}`);
-  assert.deepEqual(found.sort(compareCodeUnits), [
+  assert.deepEqual(found.toSorted(compareCodeUnits), [
     "uniequip_002_mcnist 1 - rogue_6", "uniequip_002_mcnist 2 - rogue_6", "uniequip_002_mcnist 3 - rogue_6",
     "uniequip_003_pepe 2 sandbox -", "uniequip_003_pepe 3 sandbox -",
     "uniequip_003_radian 1 - rogue_yan", "uniequip_003_radian 2 - rogue_yan", "uniequip_003_radian 2 roguelike rogue_yan", "uniequip_003_radian 3 - rogue_yan", "uniequip_003_radian 3 roguelike rogue_yan",

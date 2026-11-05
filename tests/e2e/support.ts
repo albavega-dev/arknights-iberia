@@ -23,7 +23,7 @@ export const publicSlugs = getOperatorPublicSlugs(records);
 /** Global operators of the latest Global update already opened. */
 export const newOperatorIds: ReadonlySet<string> = (() => {
   const opened = readData<GlobalUpdatesManifest>("operator-global-updates.json").updates.filter((update) => Date.parse(update.opensAt) <= Date.now());
-  const latest = opened.sort((a, b) => Date.parse(a.opensAt) - Date.parse(b.opensAt)).at(-1);
+  const latest = opened.toSorted((a, b) => Date.parse(a.opensAt) - Date.parse(b.opensAt)).at(-1);
   const globalIds = new Set(records.filter((operator) => !operator.cnOnly).map((operator) => operator.id));
   return new Set((latest?.operatorIds ?? []).filter((id) => globalIds.has(id)));
 })();

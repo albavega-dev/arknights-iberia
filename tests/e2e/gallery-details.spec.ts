@@ -70,7 +70,7 @@ test.describe("vista por avatares", () => {
     const [viewsBox, toggleBox] = [await views.boundingBox(), await toggle.boundingBox()];
     expect(Math.abs(viewsBox!.y + viewsBox!.height / 2 - (toggleBox!.y + toggleBox!.height / 2))).toBeLessThan(2);
 
-    const rarity = (await first.getAttribute("class"))!.match(/rarity-\d/)![0];
+    const rarity = /rarity-\d/.exec((await first.getAttribute("class"))!)![0];
     const avatarStrip = await first.locator(".operator-avatar-art").evaluate((element) => getComputedStyle(element, "::after").backgroundImage);
     await views.getByRole("button", { name: "Vista de retratos" }).click();
     const cardStrip = await page.locator(`a.operator-card.${rarity}`).first().evaluate((element) => getComputedStyle(element, "::before").backgroundImage);
