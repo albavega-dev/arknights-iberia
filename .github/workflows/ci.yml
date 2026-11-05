@@ -207,6 +207,8 @@ jobs:
   sonar:
     name: SonarQube Analysis
     needs: quality
+    # The SonarQube Cloud free plan only analyzes pull requests and the main branch.
+    if: github.event_name == 'pull_request' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
     runs-on: ubuntu-24.04
     env:
       CI: true
