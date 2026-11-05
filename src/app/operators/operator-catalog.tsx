@@ -54,13 +54,15 @@ const operatorClasses: OperatorClass[] = [
   "Supporter",
   "Specialist",
 ];
-const rarityOptions: Array<1 | 2 | 3 | 4 | 5 | 6> = [6, 5, 4, 3, 2, 1];
+type Rarity = OperatorRecord["rarity"];
+
+const rarityOptions: Rarity[] = [6, 5, 4, 3, 2, 1];
 
 type CatalogFilterState = Readonly<{
   query: string;
   className: OperatorClass | null;
   subClassIds: string[];
-  rarities: Array<1 | 2 | 3 | 4 | 5 | 6>;
+  rarities: Rarity[];
   includeCnOnly: boolean;
   mainFactionId: string | "all";
   sortKey: OperatorSortKey;
@@ -89,9 +91,9 @@ function readCatalogState(params: URLSearchParams, records: readonly OperatorRec
     .split(",")
     .map(Number)
     .filter(
-      (value, index, values): value is 1 | 2 | 3 | 4 | 5 | 6 =>
+      (value, index, values): value is Rarity =>
         [1, 2, 3, 4, 5, 6].includes(value) && values.indexOf(value) === index,
-    ) as Array<1 | 2 | 3 | 4 | 5 | 6>;
+    ) as Rarity[];
   const factionParam = params.get("faction");
   const validFactions = new Set(
     records.map((operator) => operator.mainFactionId).filter((value): value is string => Boolean(value)),
@@ -220,7 +222,7 @@ const OperatorAvatar = memo(function OperatorAvatar({
   const badge = operatorCardBadge(operator, isNew);
   return (
     <Link
-      className={`operator-avatar rarity-${operator.rarity}${operator.cnOnly ? " is-cn-only" : ""}${badge ? ` is-${badge}` : ""}`}
+      className={`operator-avatar rarity-${operator.rarity}${operator.cnOnly ? " is-cn-only" : ""}${badge ? " is-" + badge : ""}`}
       href={`/operators/${operator.slug}`}
       aria-label={operatorCardLabel(operator, displayName, classLabel, badge)}
     >
@@ -246,19 +248,19 @@ function FilterButton({
   onClick,
   iconUrl,
   rarity,
-}: {
+}: Readonly<{
   active: boolean;
   label: string;
   onClick: () => void;
   iconUrl?: string | null;
   rarity?: number;
-}) {
+}>) {
   return (
     <OperatorControlButton
       type="button"
       size="compact"
       appearance="naval"
-      className={`operator-filter-button${!iconUrl ? " is-text" : ""}${rarity ? ` rarity-${rarity}` : ""}${active ? " is-active" : ""}`}
+      className={`operator-filter-button${!iconUrl ? " is-text" : ""}${rarity ? " rarity-" + rarity : ""}${active ? " is-active" : ""}`}
       aria-pressed={active}
       aria-label={label}
       title={label}
@@ -280,7 +282,7 @@ function FilterButton({
   );
 }
 
-function OptionIcon({ iconUrl }: { iconUrl?: string | null }) {
+function OptionIcon({ iconUrl }: Readonly<{ iconUrl?: string | null }>) {
   const [failed, setFailed] = useState(false);
   if (!iconUrl || failed) return null;
   return <Image src={iconUrl} alt="" width={24} height={24} onError={() => setFailed(true)} />;
@@ -291,12 +293,12 @@ function AnimatedOperatorGrid({
   allOperators,
   newOperatorIds,
   view,
-}: {
+}: Readonly<{
   operators: readonly OperatorRecord[];
   allOperators: readonly OperatorRecord[];
   newOperatorIds: ReadonlySet<string>;
   view: CatalogView;
-}) {
+}>) {
   const Tile = view === "avatars" ? OperatorAvatar : OperatorCard;
   const gridRef = useRef<HTMLUListElement>(null);
   const animationCycle = operators.map((operator) => operator.id).join(",");
@@ -362,7 +364,7 @@ function OperatorOptionPopover({
   direction,
   onDirectionChange,
   searchable = false,
-}: {
+}: Readonly<{
   id: string;
   labelId: string;
   value: string;
@@ -372,7 +374,7 @@ function OperatorOptionPopover({
   direction?: OperatorSortDirection;
   onDirectionChange?: () => void;
   searchable?: boolean;
-}) {
+}>) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -542,7 +544,7 @@ function OperatorOptionPopover({
   );
 }
 
-export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: readonly OperatorRecord[]; newOperatorIds: readonly string[] }) {
+export function OperatorCatalog({ records, newOperatorIds: newIds }: Readonly<{ records: readonly OperatorRecord[]; newOperatorIds: readonly string[] }>) {
   const searchParams = useSearchParams();
   const searchParamsText = searchParams.toString();
   const catalogRecords = useMemo(
@@ -561,7 +563,7 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
   const [query, setQuery] = useState(initialState.query);
   const [className, setClassName] = useState<OperatorClass | null>(initialState.className);
   const [subClassIds, setSubClassIds] = useState<string[]>(initialState.subClassIds);
-  const [rarities, setRarities] = useState<Array<1 | 2 | 3 | 4 | 5 | 6>>(initialState.rarities);
+  const [rarities, setRarities] = useState<Rarity[]>(initialState.rarities);
   const [includeCnOnly, setIncludeCnOnly] = useState(initialState.includeCnOnly);
   const [mainFactionId, setMainFactionId] = useState<string | "all">(initialState.mainFactionId);
   const [sortKey, setSortKey] = useState<OperatorSortKey>(initialState.sortKey);
@@ -664,7 +666,7 @@ export function OperatorCatalog({ records, newOperatorIds: newIds }: { records: 
         : [],
     });
   };
-  const toggleRarity = (nextRarity: 1 | 2 | 3 | 4 | 5 | 6) =>
+  const toggleRarity = (nextRarity: Rarity) =>
     update({
       rarities: rarities.includes(nextRarity)
         ? rarities.filter((value) => value !== nextRarity)
