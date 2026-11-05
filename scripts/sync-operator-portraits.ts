@@ -80,7 +80,7 @@ export async function main(argv: readonly string[] = process.argv, dependencies:
     source: { ...portraitSource },
     conversion: { ...portraitConversion },
     portraits: Object.fromEntries(entries.filter((entry) => entry !== null)),
-    missing: missing.sort(compareCodeUnits),
+    missing: missing.toSorted(compareCodeUnits),
   };
   await mkdir(outDir, { recursive: true });
   for (const name of (await readdir(outDir)).filter((name) => !converted.has(name))) await rm(join(outDir, name));

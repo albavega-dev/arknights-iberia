@@ -16,7 +16,7 @@ export function getOperatorPublicSlugs(records: readonly OperatorRecord[]): Read
   for (const [base, group] of groups) {
     [...group].sort((a, b) => a.id.localeCompare(b.id, "en")).forEach((operator, index) => {
       const needsSuffix = reservedSlugs.has(base) || group.length > 1;
-      result.set(operator.id, needsSuffix ? `${base}-${index === 0 ? "" : `${index + 1}-`}${normalizeOperatorSlugPart(operator.id)}`.replace("--", "-") : base);
+      result.set(operator.id, needsSuffix ? `${base}-${index === 0 ? "" : index + 1 + "-"}${normalizeOperatorSlugPart(operator.id)}`.replace("--", "-") : base);
     });
   }
   return result;

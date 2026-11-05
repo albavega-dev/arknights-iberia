@@ -14,7 +14,7 @@ export function stableJson(value: unknown): string {
   if (Array.isArray(value)) return `[${value.map(stableJson).join(",")}]`;
   if (value && typeof value === "object") {
     const entries = Object.entries(value as Dict).sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0));
-    return `{${entries.map(([key, item]) => `${JSON.stringify(key)}:${stableJson(item)}`).join(",")}}`;
+    return `{${entries.map(([key, item]) => JSON.stringify(key) + ":" + stableJson(item)).join(",")}}`;
   }
   return JSON.stringify(value) ?? "null";
 }

@@ -34,7 +34,7 @@ export type DatasetIndex = Readonly<{
 }>;
 export type DatasetFile = Readonly<{ operatorId: string; region: GameDataRegion; text: string; bytes: number; sha256: string }>;
 export type DatasetSharedFile = Readonly<{ name: string; text: string; bytes: number; sha256: string }>;
-export type DatasetExtras = Readonly<{ tables?: DatasetIndex["tables"]; shared?: readonly DatasetSharedFile[]; limits?: DatasetLimits; contractVersion?: string }>;
+export type DatasetExtras = Readonly<{ tables?: NonNullable<DatasetIndex["tables"]>; shared?: readonly DatasetSharedFile[]; limits?: DatasetLimits; contractVersion?: string }>;
 
 const operatorIdPattern = /^char_[a-z0-9_]+$/;
 const sharedNamePattern = /^[a-z0-9]+(-[a-z0-9]+)*$/;

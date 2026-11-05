@@ -65,8 +65,8 @@ export type OperatorModulesProfile = {
 
 type SourceUnlock = { phase?: string; level?: number };
 type SourceBlackboard = SkillBlackboardEntry[] | Record<string, never> | null | undefined;
-type SourceTraitCandidate = { unlockCondition?: SourceUnlock; requiredPotentialRank?: number; blackboard?: SourceBlackboard; overrideDescripton?: string | null; additionalDescription?: string | null; rangeId?: string | null };
-type SourceTalentCandidate = { talentIndex: number; displayRangeId?: boolean; unlockCondition?: SourceUnlock; requiredPotentialRank?: number; name?: string | null; upgradeDescription?: string | null; rangeId?: string | null; blackboard?: SourceBlackboard; isHideTalent?: boolean };
+type SourceTraitCandidate = { unlockCondition?: SourceUnlock; requiredPotentialRank?: number; blackboard?: Exclude<SourceBlackboard, undefined>; overrideDescripton?: string | null; additionalDescription?: string | null; rangeId?: string | null };
+type SourceTalentCandidate = { talentIndex: number; displayRangeId?: boolean; unlockCondition?: SourceUnlock; requiredPotentialRank?: number; name?: string | null; upgradeDescription?: string | null; rangeId?: string | null; blackboard?: Exclude<SourceBlackboard, undefined>; isHideTalent?: boolean };
 type SourcePart = { target: string; isToken: boolean; validInGameTag?: string | null; validInMapTag?: string | null; addOrOverrideTalentDataBundle?: { candidates?: SourceTalentCandidate[] | null }; overrideTraitDataBundle?: { candidates?: SourceTraitCandidate[] | null } };
 type SourcePhase = { equipLevel: number; parts: SourcePart[]; attributeBlackboard: SkillBlackboardEntry[]; tokenAttributeBlackboard?: Record<string, SkillBlackboardEntry[]> };
 type SourceEquip = {

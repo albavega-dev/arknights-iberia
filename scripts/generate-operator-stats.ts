@@ -36,7 +36,7 @@ export function buildStatsDataset(input: Readonly<Record<GameDataRegion, Readonl
     if (missing.length) throw new Error(`Catalog operators missing from the ${region} character table: ${missing.join(", ")}`);
     const characters = input[region].character_table as Record<string, Parameters<typeof buildOperatorTrait>[1]>;
     const withTraits = extracted.map((profile) => ({ ...profile, trait: buildOperatorTrait(profile.operatorId, characters[profile.operatorId]!) }));
-    for (const profile of attachModuleStats(withTraits, input[region].uniequip_table, input[region].battle_equip_table, region)) { const { source, ...rest } = profile; void source; profiles.push(rest); }
+    for (const profile of attachModuleStats(withTraits, input[region].uniequip_table, input[region].battle_equip_table, region)) { const { source, ...rest } = profile; profiles.push(rest); }
   }
   profiles.sort((a, b) => a.operatorId.localeCompare(b.operatorId, "en"));
   return { contractVersion: statsDatasetContractVersion, sources, profiles };
@@ -67,7 +67,7 @@ export async function readStatsDataset(directory: string): Promise<StatsDataset>
 // module enrichment of contract 1 wrote moduleSourceRegion "preferred" for the profile region; contracts before 3 have no trait,
 // which is then left out of the comparison so the rest of each profile must stay identical.
 function comparableReference(profile: Record<string, unknown>, region: GameDataRegion): Record<string, unknown> {
-  const { source, ...rest } = profile; void source;
+  const { source, ...rest } = profile;
   const modules = Array.isArray(rest.modules) ? rest.modules.map((module: Record<string, unknown>) => module.moduleSourceRegion === "preferred" ? { ...module, moduleSourceRegion: region } : module) : rest.modules;
   return { ...rest, modules };
 }

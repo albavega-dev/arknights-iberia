@@ -84,7 +84,7 @@ export function utcOffset(offset: string): string {
   const match = /^([+-])(\d{2}):(\d{2})$/.exec(offset);
   if (!match) throw new Error(`Unreadable UTC offset: ${offset}`);
   const [, sign, hours, minutes] = match as unknown as [string, string, string, string];
-  return `UTC${sign === "-" ? "−" : "+"}${Number(hours)}${minutes === "00" ? "" : `:${minutes}`}`;
+  return `UTC${sign === "-" ? "−" : "+"}${Number(hours)}${minutes === "00" ? "" : ":" + minutes}`;
 }
 
 function globalUpdatesBlock(input: SourcesInput): string {

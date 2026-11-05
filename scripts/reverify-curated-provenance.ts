@@ -220,7 +220,7 @@ export async function reverifyCuratedProvenance(argv: readonly string[], log: (l
   await mkdir(reportDir, { recursive: true });
   await writeFile(join(reportDir, "curated-provenance.json"), `${JSON.stringify({ revisions: resolved.revisions, files: outcomes }, null, 2)}\n`, "utf8");
   for (const outcome of outcomes) {
-    log(`curated ${outcome.id}: ${outcome.status}${outcome.moved.length ? ` (${outcome.moved.join("; ")})` : ""}${outcome.message ? ` (${outcome.message})` : ""}`);
+    log(`curated ${outcome.id}: ${outcome.status}${outcome.moved.length ? " (" + outcome.moved.join("; ") + ")" : ""}${outcome.message ? " (" + outcome.message + ")" : ""}`);
     for (const difference of outcome.differences) log(`  ${difference.region} ${difference.label}: ${JSON.stringify(difference.previous)} -> ${JSON.stringify(difference.current)}`);
   }
   return outcomes;

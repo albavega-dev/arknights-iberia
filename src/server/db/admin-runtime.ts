@@ -32,7 +32,7 @@ export function readAdminEnvFile(filePath: string): Record<string, string> {
   for (const raw of text.split(/\r?\n/u)) {
     const line = raw.trim();
     if (!line || line.startsWith("#")) continue;
-    const match = /^([A-Za-z_][A-Za-z0-9_]*)=(.*)$/u.exec(line);
+    const match = /^([A-Za-z_]\w*)=(.*)$/u.exec(line);
     if (!match) throw new Error("Administrative env file has invalid syntax");
     const [, key, value] = match;
     if (values[key] !== undefined) throw new Error("Administrative env file has duplicate keys");

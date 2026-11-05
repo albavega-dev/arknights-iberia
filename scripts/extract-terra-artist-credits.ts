@@ -30,7 +30,7 @@ function sleep(ms: number): Promise<void> { return new Promise((resolve) => setT
 function clean(value: string): string { return replaceWikiLinks(stripTags(value)).replace(/'{2,}/g, "").trim(); }
 function wikitextValue(value: string | { "*": string } | undefined): string | undefined { return typeof value === "string" ? value : value?.["*"]; }
 function extractSkinNames(wikitext: string): Set<string> {
-  return new Set([...wikitext.matchAll(/^\|\s*skin\d+\s*=\s*(.+)$/gim)].map((match) => clean(match[1])));
+  return new Set([...wikitext.matchAll(/^\|\s*skin\d+\s*=[ \t]*(\S.*)$/gim)].map((match) => clean(match[1])));
 }
 function extractArtists(wikitext: string): { name: string; role?: string; evidence: string }[] {
   const field = illustratorFieldValue(wikitext);

@@ -2,10 +2,9 @@ import type { TraitStage } from "./operator-modules";
 
 export type StatsRegion = "en" | "cn";
 
-export type StatValue = number;
 export type StatKeyframe = Readonly<{
   level: number;
-  attributes: Readonly<Record<string, StatValue>>;
+  attributes: Readonly<Record<string, number>>;
 }>;
 
 export type OperatorStatsProfile = Readonly<{
@@ -17,7 +16,7 @@ export type OperatorStatsProfile = Readonly<{
     maxLevel: number;
     keyframes: readonly StatKeyframe[];
   }>[];
-  favorKeyframes: readonly Readonly<{ level: number; attributes: Readonly<Record<string, StatValue>> }>[];
+  favorKeyframes: readonly Readonly<{ level: number; attributes: Readonly<Record<string, number>> }>[];
   potentialRanks: readonly Readonly<{ rank: number; effects: readonly unknown[] }>[];
   modules: readonly OperatorModuleStats[];
   /** Trait stages from character_table, with their unlock and potential; the generator fills them for catalog operators. */
@@ -107,6 +106,12 @@ export function extractOperatorStatsProfiles(table: unknown, region: StatsRegion
   });
 }
 
+/** Talent and trait descriptions that a module phase adds or overrides. */
+function moduleSpecialEffects(parts: unknown): string[] {
+  if (!Array.isArray(parts)) return [];
+  return (parts as unknown[]).flatMap((part) => { const p = part as Record<string, unknown>; const bundles = [p.addOrOverrideTalentDataBundle, p.overrideTraitDataBundle]; return bundles.flatMap((bundle) => { const b = bundle as Record<string, unknown> | null; const candidates = b && Array.isArray(b.candidates) ? b.candidates as unknown[] : []; return candidates.flatMap((candidate) => { const c = candidate as Record<string, unknown>; return typeof c.additionalDescription === "string" && c.additionalDescription ? [c.additionalDescription] : typeof c.upgradeDescription === "string" && c.upgradeDescription ? [c.upgradeDescription] : []; }); }); });
+}
+
 export function attachModuleStats(profiles: readonly OperatorStatsProfile[], uniequipTable: unknown, battleTable: unknown, region: StatsRegion): OperatorStatsProfile[] {
   if (!uniequipTable || typeof uniequipTable !== "object" || !battleTable || typeof battleTable !== "object") throw new Error("Module tables must be objects");
   const root = uniequipTable as Record<string, unknown>;
@@ -123,7 +128,7 @@ export function attachModuleStats(profiles: readonly OperatorStatsProfile[], uni
       const levels = record.phases.flatMap((phase) => {
         const item = phase as Record<string, unknown>;
         const attrs = Array.isArray(item.attributeBlackboard) ? Object.fromEntries((item.attributeBlackboard as unknown[]).flatMap((entry) => { const attribute = entry as Record<string, unknown>; return typeof attribute.key === "string" && typeof attribute.value === "number" ? [[attribute.key, attribute.value]] : []; })) : {};
-        const specialEffects = Array.isArray(item.parts) ? (item.parts as unknown[]).flatMap((part) => { const p = part as Record<string, unknown>; const bundles = [p.addOrOverrideTalentDataBundle, p.overrideTraitDataBundle]; return bundles.flatMap((bundle) => { const b = bundle as Record<string, unknown> | null; const candidates = b && Array.isArray(b.candidates) ? b.candidates as unknown[] : []; return candidates.flatMap((candidate) => { const c = candidate as Record<string, unknown>; return typeof c.additionalDescription === "string" && c.additionalDescription ? [c.additionalDescription] : typeof c.upgradeDescription === "string" && c.upgradeDescription ? [c.upgradeDescription] : []; }); }); }) : [];
+        const specialEffects = moduleSpecialEffects(item.parts);
         return typeof item.equipLevel === "number" ? [{ level: item.equipLevel, attributes: attrs, specialEffects: [...new Set(specialEffects)] }] : [];
       });
       const moduleType = typeof metadata.typeName1 === "string" && typeof metadata.typeName2 === "string" ? `${metadata.typeName1}-${metadata.typeName2}` : value;

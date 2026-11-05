@@ -104,7 +104,7 @@ async function readPrivileges(client: Client): Promise<Record<string, boolean>> 
 async function readSchemaColumns(client: Client): Promise<Record<string, string[]>> {
   const { rows } = await client.query("SELECT table_name, column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name = ANY($1)", [Object.keys(tables)]);
   const actual: Record<string, string[]> = {};
-  for (const row of rows) (actual[row.table_name] ??= []).push(row.column_name);
+  for (const row of rows) actual[row.table_name] = [...(actual[row.table_name] ?? []), row.column_name];
   return actual;
 }
 

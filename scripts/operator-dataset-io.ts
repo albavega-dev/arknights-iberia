@@ -176,7 +176,7 @@ export async function verifyUpdate(sections: readonly UpdateSection[], argv: rea
     const changes = report.update[label]!;
     log(`${label} (update): ${verification.identical} identical, ${changes.operators.length} different, ${changes.added.length} added, ${changes.removed.length} removed`);
     log(changes.revision.length ? `  expected revision change in: ${changes.revision.join(", ")}` : "  no revision change");
-    for (const { operatorId, fields } of changes.operators) log(`  ${operatorId}: ${fields.slice(0, fieldsShown).join(", ")}${fields.length > fieldsShown ? ` and ${fields.length - fieldsShown} more fields` : ""}`);
+    for (const { operatorId, fields } of changes.operators) log(`  ${operatorId}: ${fields.slice(0, fieldsShown).join(", ")}${fields.length > fieldsShown ? " and " + (fields.length - fieldsShown) + " more fields" : ""}`);
     if (changes.added.length) log(`  added (missing from the reference): ${changes.added.join(", ")}`);
     if (changes.removed.length) log(`  removed (only in the reference): ${changes.removed.join(", ")}`);
     if (changes.shared.length) log(`  shared files that change: ${changes.shared.join(", ")}`);

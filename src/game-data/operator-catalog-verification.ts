@@ -248,8 +248,7 @@ function checkBiographies(expected: Map<string, ExpectedOperator>, rows: readonl
   for (const row of rows) {
     const item = expected.get(row.operator_id);
     const key = `${row.operator_id}\u0000${row.region}`;
-    if (!item) failed.push(row.operator_id);
-    else if (row.region !== item.region || row.source_revision !== sources.revisions[item.region] || row.source_sha256.toLowerCase() !== sources.handbookHashes[item.region].toLowerCase() || row.source_repository !== sources.repository) failed.push(row.operator_id);
+    if (!item || row.region !== item.region || row.source_revision !== sources.revisions[item.region] || row.source_sha256.toLowerCase() !== sources.handbookHashes[item.region].toLowerCase() || row.source_repository !== sources.repository) failed.push(row.operator_id);
     if (keys.has(key)) failed.push(row.operator_id);
     keys.add(key);
     perOperator.set(row.operator_id, (perOperator.get(row.operator_id) ?? 0) + 1);

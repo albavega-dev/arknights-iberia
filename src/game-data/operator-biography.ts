@@ -97,7 +97,7 @@ export function extractBiography(
   const unrecognizedLines: string[] = [];
   let lastField: BiographyField | undefined;
   for (const line of story.storyText.split(/\r?\n/)) {
-    const match = region === "en" ? /^\[([^\]]+)\]\s*(.*)$/.exec(line) : /^【([^】]+)】\s*(.*)$/.exec(line);
+    const match = region === "en" ? /^\[([^\]]+)\](.*)$/.exec(line) : /^【([^】]+)】(.*)$/.exec(line);
     if (!match) {
       if (line.trim() && lastField) {
         const value = lastField.value ? `${lastField.value}\n${line}` : line;
