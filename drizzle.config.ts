@@ -5,7 +5,7 @@ const database = readMigrationDatabaseConfig(process.env);
 
 export default defineConfig({
   dialect: "postgresql",
-  schema: ["./src/server/db/schema.ts", "./src/server/db/auth-schema.ts"],
+  schema: "./src/server/db/schema.ts",
   out: "./db/migrations",
   dbCredentials: {
     host: database.host,

@@ -128,11 +128,6 @@ const eslintConfig = defineConfig([
     rules: { "sonarjs/hashing": "off" },
   },
   {
-    // Local development mail server without TLS.
-    files: ["src/server/auth/local-email.ts"],
-    rules: { "sonarjs/no-clear-text-protocols": "off" },
-  },
-  {
     // Fixtures: rejected URLs, container addresses, exact expected values and mutable fake classes.
     files: ["tests/**"],
     rules: {
