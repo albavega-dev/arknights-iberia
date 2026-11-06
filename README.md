@@ -9,19 +9,15 @@ La beta actual incluye un catálogo consultable de operadores, búsqueda, filtro
 - Node.js 20.9 o posterior.
 - Next.js 16.4 con App Router.
 - TypeScript estricto, ESLint y pnpm mediante Corepack.
-- PostgreSQL para las rutas que consultan el catálogo.
 
 ## Inicio rápido
 
 ```powershell
 corepack pnpm install --frozen-lockfile
-Copy-Item .env.example .env
 corepack pnpm dev
 ```
 
-Configurar `.env` únicamente con valores locales. No publicar credenciales ni archivos `.env`. La aplicación queda disponible en `http://localhost:3000`.
-
-Una base PostgreSQL vacía necesita las migraciones y un conjunto de datos compatible antes de mostrar el catálogo. No se incluyen snapshots ni bundles reales en este repositorio.
+La aplicación queda disponible en `http://localhost:3000`. Todo el contenido se sirve desde los archivos JSON versionados en `data/`: no hace falta base de datos ni variables de entorno. Los snapshots de GameData no se incluyen en este repositorio.
 
 ## Datos de las fichas
 

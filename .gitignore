@@ -34,7 +34,7 @@ yarn-error.log*
 .playwright-mcp/
 /artifacts/
 
-# local environment secrets; only the empty-password template is tracked
+# local environment secrets; only the empty template is tracked
 .env*
 !.env.example
 
