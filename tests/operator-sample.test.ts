@@ -6,9 +6,7 @@ import { normalizeCharacterTable, normalizeOperator } from "../src/game-data/ope
 import { filterOperators, getOperatorDisplayName, sortOperators, type OperatorClass } from "../src/game-data/operators";
 import { getOperatorClassIconUrl, getOperatorFactionIconUrl, getOperatorPortraitAsset, getOperatorSubclassIconUrl, illustrationAssetsFrom } from "../src/game-data/operator-assets";
 import { mergeCnReleaseDate } from "../src/game-data/release-date";
-import { buildNameDryRun } from "../scripts/dry-run-operator-names";
 import { applyRegionalDisplayNames } from "../src/game-data/operator-regional-names";
-import { buildNameProposals, validateKnownLegacyCnNames, validateNameBackfill } from "../scripts/backfill-operator-names";
 import { compareCodeUnits } from "../src/game-data/string-order";
 
 const record = (overrides: Record<string, unknown> = {}) => ({
@@ -77,42 +75,6 @@ test("keeps the primary English name visible while retaining Chinese search", ()
   const operator = { ...normalizeOperator("char_cn", record({ name: "English Name" }))!, cnName: "中文名称", globalName: null };
   assert.equal(getOperatorDisplayName(operator), "English Name");
   assert.deepEqual(filterOperators([operator], { query: "中文", className: null, subClassIds: [], rarities: [], includeCnOnly: true, mainFactionId: "all" }).map((item) => item.id), ["char_cn"]);
-  assert.doesNotThrow(() => validateKnownLegacyCnNames([{ id: "char_cn", name: "English Name", slug: "char-cn", cn_only: true, availability_status: "cn-snapshot-candidate", cn_name: "Legacy English", global_name: null }], { operators: [{ id: "char_cn", nameEnglish: "Legacy English" }] }));
-  assert.throws(() => validateKnownLegacyCnNames([{ id: "char_cn", name: "English Name", slug: "char-cn", cn_only: true, availability_status: "cn-snapshot-candidate", cn_name: "Unexpected", global_name: null }], { operators: [{ id: "char_cn", nameEnglish: "Legacy English" }] }));
-});
-
-test("name dry-run reports regional proposals, missing IDs and visible changes", () => {
-  const report = buildNameDryRun(
-    [
-      { id: "char_global", name: "Old Name", cn_name: "CN Name", global_name: null },
-      { id: "char_cn", name: "CN Only", cn_name: null, global_name: null },
-      { id: "char_missing", name: "Unclassified", cn_name: null, global_name: null },
-    ],
-    {
-      char_global: record({ name: "Global Name" }),
-      char_cn: record({ name: "CN Source Name" }),
-    },
-    { char_global: record({ name: "Nombre CN" }), char_cn: record({ name: "Nombre CN-only" }) },
-    { comparison: { cn: { revision: "cn-test" } }, operators: [{ id: "char_cn", nameEnglish: "CN Manifest Name" }] },
-    { repository: "https://example.test", enRevision: "en-test", cnRevision: "cn-test", enSnapshot: "en.json", cnSnapshot: "cn.json", regionalManifest: "regional.json" },
-  );
-  assert.equal(report.totals.current, 3);
-  assert.equal(report.totals.changes, 1);
-  assert.equal(report.totals.missing, 1);
-  assert.equal(report.totals.conflicts, 1);
-  assert.equal(report.rows.find((row) => row.id === "char_global")?.visibleAfter, "Global Name");
-  assert.equal(report.rows.find((row) => row.id === "char_cn")?.proposedCnName, "Nombre CN-only");
-  assert.equal(report.rows.find((row) => row.id === "char_cn")?.status, "change");
-});
-
-test("name backfill validates complete, non-conflicting proposals and rejects conflicts", () => {
-  const en = Object.fromEntries(Array.from({ length: 415 }, (_, index) => [`char_${index}`, record({ name: `Global ${index}` })]));
-  const regional = { operators: Array.from({ length: 17 }, (_, index) => ({ id: `cn_${index}`, nameEnglish: `CN ${index}` })) };
-  const cn = Object.fromEntries(Array.from({ length: 432 }, (_, index) => [`char_${index}`, record({ name: `CN ${index}` })]));
-  const proposals = buildNameProposals(en, cn, regional);
-  assert.equal(proposals.length, 432);
-  validateNameBackfill(proposals.map((proposal) => ({ id: proposal.id, name: proposal.globalName ?? proposal.cnName!, slug: proposal.id, cn_only: Boolean(proposal.cnName), availability_status: "global-snapshot", cn_name: null, global_name: null })), proposals);
-  assert.throws(() => validateNameBackfill([{ id: proposals[0].id, name: "x", slug: "x", cn_only: false, availability_status: "global-snapshot", cn_name: "wrong", global_name: null }], proposals), /Expected 432/);
 });
 
 test("uses OR within multi-select archetype and rarity groups", () => {

@@ -193,5 +193,3 @@ export function selectCurrentBiographies(records: readonly OperatorBiography[], 
     missing,
   };
 }
-
-/** Future Drizzle mapping: operatorId -> operators.id; source and fields map to operator_biographies columns/JSONB. */

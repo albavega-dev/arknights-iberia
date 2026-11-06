@@ -249,6 +249,6 @@ jobs:
             -Dsonar.organization=alba-vega
             -Dsonar.projectKey=alba-vega_arknights-iberia
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info,coverage/components/lcov.info
-            -Dsonar.exclusions=public/assets/**,data/**,db/migrations/**,coverage/**
+            -Dsonar.exclusions=public/assets/**,data/**,coverage/**
             -Dsonar.qualitygate.wait=true
             -Dsonar.qualitygate.timeout=300
